@@ -1,21 +1,25 @@
 ## To do
 
-1. 调整
+This project is under construction. In order to facilitate me to do something, I put todo first
 
--   导出入口文件和 themejs | 入口文件 import 合并配置的 js | themejs import 合并配置的 js √
--   目录调整
+1. Adjustment
 
-2. class awescnb
+-   Create a js to merge default and user configurations √
+-   Not import options in entrance √
+-   Themejs import user options from mergejs √
+-   Organize directory √
 
--   nprogress 控制加载(installed todo -> 显示隐藏 )
--   live2d (find a npm package)
--   click (find a npm package)
--   整理 awescnb css 文件
--   bodyBackground √
--   themeColor √
--   设置网站图标标题 √
--   音乐播放器 √
--   hideLoading √
+2. themes / awescnb (common class)
+
+-   set NProgress 控制加载(installed todo -> 显示隐藏 )
+-   Set live2d (find a npm package)
+-   Set click special effects (find a npm package)
+-   Organize awescnb css 文件
+-   Set body background include color & image √
+-   Set theme color √
+-   Set favicon & website title √
+-   Build Aplayer √
+-   Hide loading √
 
 ## What is this
 
@@ -32,15 +36,18 @@
 
 ## How to run
 
-main.js if prod to load themejs ->
+If prod to load themejs in main.js ->
 
-themejs extends awescnb ->
+Themejs extends awescnb ->
 
-import mergejs to get options in themejs ->
+Import mergejs to get options in themejs ->
 
-to do something from custom theme in theme js.
+To do something for customimg the theme in the theme js.
 
 ## Run the build
+
+-   `npm start`
+-   `npm run build`
 
 **Run locally**
 
@@ -56,22 +63,23 @@ new HtmlWebpackPlugin({
 }),
 ```
 
--   `npm start`
--   `npm run build`
-
-
-
 ## Contributing
 
-1. Fork it!
-2. Create your feature branch: git checkout -b your-new-feature
-3. Commit your changes: git commit -m 'Add some feature'
-4. Push to the branch: git push origin your-new-feature
-5. Submit a pull request
+1. Welcome to fork it!
+2. Create your feature branch: git checkout -b your-new-feature.
+3. Commit your changes: git commit -m 'Add some feature'.
+4. Push to the branch: git push origin your-new-feature.
+5. Submit a pull request.
 
-## concat
+## License
 
--   QQ 群: 541802647
+Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
+
+## contact
+
+-   QQ: 923665892
+-   QQ group: 541802647
+-   wechat: wx923665892
 
 ## Thanks
 
