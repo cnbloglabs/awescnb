@@ -16,4 +16,4 @@ const live2dModels = {
     玉藻前: '玉藻前/16.json',
 }
 
-export { live2dModels }
+export default live2dModels

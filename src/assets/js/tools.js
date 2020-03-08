@@ -1,19 +1,30 @@
+import urls from '@/constants/urls'
 
-// 这里有许多的公共的方法供所有主题使用
-import { urls } from '@/constants/urls'
 /**
- * @description
+ * @description 加载 model json
+ * @param {Array} files [{name: '', type: 'js | css | jsCDN | cssCDN'}]
+ * @param {Function} callback 回调函数 只能走一个
+ */
+// 加载插件
+const loadModel = (name, callback = function() {}) => {
+    $.getScript('https://guangzan.gitee.io/awescnb/assets/js/' + name + '.min.js', () => {
+        callback()
+    })
+}
+
+/**
+ * @description 加载文件
  * @param {Array} files [{name: '', type: 'js | css | jsCDN | cssCDN'}]
  * @param {Function} callback 回调函数 只能走一个
  */
 
 const loadFiles = (files, callback = function() {}) => {
-    const repositoriesUrl = urls.repositories.package + '/assets'
+    const repositoriesUrl = urls.repositories.package
     for (let i = 0; i < files.length; i++) {
         const name = files[i].name
         const type = files[i].type
         const cssUrl = repositoriesUrl + '/css/' + name + '.css'
-        const jsUrl = repositoriesUrl + name + '.min.js'
+        const jsUrl = `${repositoriesUrl}/${name}.min.js`
         const actions = {
             css: () => {
                 $('head').append(`<link rel="stylesheet" href="${cssUrl}">`)
@@ -202,4 +213,5 @@ export {
     iconInSvg,
     pageName,
     userAgent,
+    loadModel,
 }

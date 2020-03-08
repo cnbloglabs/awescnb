@@ -1,4 +1,4 @@
-import { defaultOptions } from '@/constants/default'
+import defaultOptions from '@/constants/default'
 let userOptions
 $.extend({
     awesCnb: options => {
@@ -13,7 +13,6 @@ if (process.env.NODE_ENV === 'development') {
     $.awesCnb()
 }
 
-console.log('merge options');
+// console.log('merge options');
 
-
-export { userOptions }
+export default userOptions

@@ -17,4 +17,4 @@ const urls = {
         github: 'https://github.com/github923665892',
     },
 }
-export { urls }
+export default urls

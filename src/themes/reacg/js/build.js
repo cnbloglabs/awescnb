@@ -1,4 +1,4 @@
-import { userOptions } from '@/assets/js/merge'
+const userOptions = window.userOptions
 
 // 设置网站图标标题
 const setHtmlTitleIcon = () => {

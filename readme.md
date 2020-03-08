@@ -1,26 +1,3 @@
-## To do
-
-This project is under construction. In order to facilitate me to do something, I put todo first
-
-1. Adjustment
-
--   Create a js to merge default and user configurations √
--   Not import options in entrance √
--   Themejs import user options from mergejs √
--   Organize directory √
-
-2. themes / awescnb (common class)
-
--   set NProgress (installed)
--   Set live2d (find a npm package)
--   Set click special effects (find a npm package)
--   Organize awescnb / css
--   Set body background include color & image √
--   Set theme color √
--   Set favicon & website title √
--   Build Aplayer √
--   Hide loading √
-
 ## What is this
 
 [awescnb1.0](https://gitee.com/guangzan/awescnb)
@@ -29,6 +6,7 @@ This project is under construction. In order to facilitate me to do something, I
 
 -   v2 use webpack v1 use gulp
 -   V2 generates fewer files after packaging but Larger volume
+-   v2 local debugging
 
 ## Usage
 
@@ -43,6 +21,31 @@ Themejs extends awescnb ->
 Import mergejs to get options in themejs ->
 
 To do something for customimg the theme in the theme js.
+
+## To do
+
+1. Adjustment
+
+-   Create a js to merge default and user configurations √
+-   Not import options in entrance √
+-   Themejs import user options from mergejs x
+-   Organize directory √
+-   window.useroptions √
+-   Common plugins move to / plugins
+-   According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large)
+
+2. themes / awescnb (common class)
+
+-   set NProgress (installed)
+-   Set live2d √
+-   Organize common css
+-   Set click special effects √
+-   Set body background include color & image √
+-   Set theme color √
+-   Set favicon & website title √
+-   Build Aplayer √
+-   Hide loading √
+-   Import cnblog.common.css in the dev environment √
 
 ## Run the build
 
@@ -83,5 +86,6 @@ Integrate or build upon it for free in your personal or commercial projects. Don
 
 ## Thanks
 
--   [NProgress]()
+-   [NProgress](http://ricostacruz.com/nprogress/)
+-   [typed.js](https://github.com/mattboldt/typed.js)
 -   ...

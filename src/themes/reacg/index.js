@@ -1,5 +1,5 @@
 import './css/index.css'
-import { AwesCnb } from '@/themes/awescnb'
+import AwesCnb from '@/themes/awescnb'
 
 class Reacg extends AwesCnb {
     constructor() {

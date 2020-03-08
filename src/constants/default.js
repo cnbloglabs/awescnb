@@ -3,13 +3,13 @@ const defaultOptions = {
         name: 'reacg',
         color: '#FFB3CC',
         qrcode: '',
-        title: 'Test title',
+        title: 'awescnb2.0',
         favicon: '', //'https://guangzan.gitee.io/awescnb/assets/images/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground: 'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',
     },
     loader: {
-        enable: true
+        enable: true,
     },
     bodyBackground: {
         enable: true,
@@ -46,7 +46,7 @@ const defaultOptions = {
         enable: true,
     },
     live2d: {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         model: 'random',
@@ -60,7 +60,7 @@ const defaultOptions = {
         url: 'https://gitee.com/guangzan/awescnb',
     },
     click: {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         auto: false,
@@ -110,4 +110,4 @@ const defaultOptions = {
     ],
 }
 
-export { defaultOptions }
+export default defaultOptions
