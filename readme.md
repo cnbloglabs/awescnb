@@ -11,10 +11,10 @@ This project is under construction. In order to facilitate me to do something, I
 
 2. themes / awescnb (common class)
 
--   set NProgress 控制加载(installed todo -> 显示隐藏 )
+-   set NProgress (installed)
 -   Set live2d (find a npm package)
 -   Set click special effects (find a npm package)
--   Organize awescnb css 文件
+-   Organize awescnb / css
 -   Set body background include color & image √
 -   Set theme color √
 -   Set favicon & website title √
