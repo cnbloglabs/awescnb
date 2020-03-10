@@ -61,9 +61,6 @@ entry:{
 -   `npm i` Installation dependency
 -   `npm start` Local development
 
-templates 文件夹用来存放博客园的 html, 运行 `npm start` 默认启动的是博客园首页,如果你要启动其他页面请更改
-config / webpack.dev.js
-
 The Templates folder is used to store the HTML of the cnblog. Running 'npm start' will start the index.html. If you want to start other pages, please change it config / webpack.dev.js
 
 ```js
