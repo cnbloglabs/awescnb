@@ -4,9 +4,9 @@
 
 ## Differences between v1 and v2?
 
--   v2 use webpack v1 use gulp
+-   V2 use webpack v1 use gulp
 -   V2 generates fewer files after packaging but Larger volume
--   v2 local debugging
+-   V2 local debugging
 
 ## Usage
 
@@ -30,9 +30,9 @@ To do something for customimg the theme in the theme js.
 -   Not import options in entrance √
 -   Themejs import user options from mergejs x
 -   Organize directory √
--   window.useroptions √
+-   Window.useroptions √
 -   Common plugins move to / plugins
--   According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large)
+-   According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large) x
 
 2. themes / awescnb (common class)
 
@@ -49,6 +49,7 @@ To do something for customimg the theme in the theme js.
 
 ## Run the build
 
+-   `npm i`
 -   `npm start`
 -   `npm run build`
 
