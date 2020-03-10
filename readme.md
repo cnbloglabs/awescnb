@@ -8,6 +8,19 @@ You can use it to create a cnblog theme of your own, support local debugging, an
 -   V2 generates fewer files after packaging but Larger volume.
 -   V2 can be debugged locally.
 
+## Why use
+
+If you install it on your blog, you can quickly switch to another theme. If you want to use it to create a theme, you can use the sealed features in just a few lines of code, including but not limited to
+
+-   NProgress
+-   live2d
+-   music player
+-   theme color
+-   body background
+-   set click effects
+-   custom website title and favicon
+-   ...
+
 ## Install
 
 [awescnb](https://www.cnblogs.com/guangzan/p/12256583.html)
@@ -39,6 +52,11 @@ class Demo extends AwesCnb {
     constructor() {
         super()
         super.init()
+        this.init()
+    }
+
+    init() {
+        this.hideLoading()
     }
     // to do something
 }
@@ -67,7 +85,7 @@ The Templates folder is used to store the HTML of the cnblog. Running 'npm start
 new HtmlWebpackPlugin({
     filename: 'index.html',
 -   template: 'src/templates/index.html',
-+   template: 'src/templates/post.html', // 或者其他页面
++   template: 'src/templates/post.html', // Or other pages
     inject: 'body',
 }),
 ```
@@ -93,6 +111,7 @@ new HtmlWebpackPlugin({
 -   barrage
 -   back2top -> simple / complex
 -   icons
+-   show user avatar of comment list
 
 ### themes / awescnb (common class)
 
