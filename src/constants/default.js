@@ -8,11 +8,8 @@ const defaultOptions = {
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground: 'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',
     },
-    loader: {
-        enable: true,
-    },
     bodyBackground: {
-        enable: true,
+        enable: false,
         type: 'color',
         value: 'rgb(253, 230, 224)',
         opacity: 1,
@@ -74,7 +71,7 @@ const defaultOptions = {
         position: 'left',
     },
     musicPlayer: {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         autoplay: false,
@@ -89,7 +86,7 @@ const defaultOptions = {
         ],
     },
     topProgress: {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         background: '#FFB3CC',

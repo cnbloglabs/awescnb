@@ -1,14 +1,9 @@
 import '@/assets/css/common.css'
-import {
-    setHtmlTitleIcon,
-    setTopProgress,
-    setLive2d,
-    setMusicPlayer,
-    setThemeColor,
-    setBodyBackground,
-    hideLoading,
-    setClickEffects,
-} from './build'
+import setLive2d from './plugins/live2d'
+import setMusicPlayer from './plugins/player'
+import setTopProgress from './plugins/progress'
+import { setClickEffects } from './plugins/click'
+import { setHtmlTitleIcon, setThemeColor, setBodyBackground, hideLoading } from './build'
 
 const userOptions = window.userOptions
 

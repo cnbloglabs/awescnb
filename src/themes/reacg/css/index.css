@@ -1,3 +1,13 @@
+/* progress */
+#nprogress .bar {
+    background: var(--themeColor) !important;
+}
+
+#nprogress .bar .peg {
+    box-shadow: 0 0 10px var(--themeColor), 0 0 5px var(--themeColor);
+}
+/* /progress */
+
 /* :root {
   --dark-background-g: #333;
   --dark-background-w: #555;
@@ -82,13 +92,6 @@ body::-webkit-scrollbar-track {
     overflow: hidden;
     color: inherit;
 }
-
-/* progress */
-#nprogress .bar {
-    background: var(--themeColor) !important;
-}
-
-/* /progress */
 
 .mode-change,
 .mode-change #catalog,

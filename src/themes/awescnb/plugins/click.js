@@ -1,6 +1,7 @@
 import anime from 'animejs/lib/anime.es.js'
 
 const options = window.userOptions.click
+
 $('body').append(`<canvas class="fireworks"></canvas>`)
 window.human = false
 var canvasEl = document.querySelector('.fireworks')
@@ -12,6 +13,7 @@ var tap = 'ontouchstart' in window || navigator.msMaxTouchPoints ? 'touchstart' 
 var colors = options.color || ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
 function setCanvasSize() {
+    if (!options.enable) return
     canvasEl.style.position = 'fixed'
     canvasEl.style.top = 0
     canvasEl.width = window.innerWidth * 2
@@ -151,6 +153,5 @@ if (options.auto) {
     autoClick()
 }
 window.addEventListener('resize', setCanvasSize, false)
-// setCanvasSize()
 
-export default setCanvasSize
+export { setCanvasSize as setClickEffects }

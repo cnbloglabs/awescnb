@@ -1,5 +1,3 @@
-
-
 const icons = {
     // ----
     dig: '#ac-dig', //推荐
