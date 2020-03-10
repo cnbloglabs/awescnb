@@ -102,7 +102,7 @@ new HtmlWebpackPlugin({
 -   Common plugins move to / plugins
 -   According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large) x
 
-### / plugins (common plugins)
+### plugins (common plugins)
 
 -   lineNumbers
 -   highLight
