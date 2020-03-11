@@ -12,7 +12,6 @@ module.exports = {
     resolve: {
         alias: {
             '@': path.resolve('src'),
-            // api: process.env.NODE_ENV === 'production' ? './api.js' : './api-dev.js',
         },
     },
 }

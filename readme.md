@@ -4,22 +4,22 @@ You can use it to create a cnblog theme of your own, support local debugging, an
 
 ## Differences between v1 and v2?
 
--   V2 use webpack, v1 use gulp.
--   V2 generates fewer files after packaging but Larger volume.
--   V2 can be debugged locally.
+- V2 use webpack, v1 use gulp.
+- V2 generates fewer files after packaging but Larger volume.
+- V2 can be debugged locally.
 
 ## Why use
 
 If you install it on your blog, you can quickly switch to another theme. If you want to use it to create a theme, you can use the sealed features in just a few lines of code, including but not limited to
 
--   NProgress
--   live2d
--   music player
--   theme color
--   body background
--   set click effects
--   custom website title and favicon
--   ...
+- NProgress
+- live2d
+- music player
+- theme color
+- body background
+- set click effects
+- custom website title and favicon
+- ...
 
 ## Install
 
@@ -49,16 +49,16 @@ import './index.css'
 import AwesCnb from '@/themes/awescnb'
 
 class Demo extends AwesCnb {
-    constructor() {
-        super()
-        super.init()
-        this.init()
-    }
+  constructor() {
+    super()
+    super.init()
+    this.init()
+  }
 
-    init() {
-        this.hideLoading()
-    }
-    // to do something
+  init() {
+    this.hideLoading()
+  }
+  // to do something
 }
 
 new Demo()
@@ -76,8 +76,8 @@ entry:{
 
 6. Run command
 
--   `npm i` Installation dependency
--   `npm start` Local development
+- `npm i` Installation dependency
+- `npm start` Local development
 
 The Templates folder is used to store the HTML of the cnblog. Running 'npm start' will start the index.html. If you want to start other pages, please change it config / webpack.dev.js
 
@@ -94,48 +94,63 @@ new HtmlWebpackPlugin({
 
 ### Adjustment
 
--   Create a js to merge default and user configurations √
--   Not import options in entrance √
--   Themejs import user options from mergejs x
--   Organize directory √
--   Window.useroptions √
--   Common plugins move to / plugins
--   According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large) x
+- Create a js to merge default and user configurations √
+- Not import options in entrance √
+- Themejs import user options from mergejs x
+- Organize directory √
+- Window.useroptions √
+- Common plugins move to / plugins
+- According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large) x
+- Use eslint √
+- Use prettier √
+- Use stylelint
+- Use babel
+- Open sourcemap
+
+// 这里需要全局安装最主要的两个 node 模块，主要是要让 ide 编辑器能够读取全局环境来调用这 2 个模块
+npm install eslint prettier -g --save-dev
+
+// 这个是为了 eslint 跟 prettier 可以联合使用
+npm install --save-dev eslint-plugin-prettier
+// 这个是为了让 eslint 跟 prettier 兼容，关闭 prettier 跟 eslint 冲突的 rules
+npm install --save-dev eslint-config-prettier
+
+- Test in cnblog
 
 ### plugins (common plugins)
 
--   lineNumbers
--   highLight
--   catalog
--   postSignature
--   barrage
--   back2top -> simple / complex
--   icons
--   show user avatar of comment list
+- lineNumbers
+- highLight
+- catalog
+- postSignature
+- barrage
+- back2top -> simple / complex
+- icons
+- show user avatar of comment list
 
 ### themes / awescnb (common class)
 
--   set NProgress (installed) √
+- set NProgress (installed) √
 
 If you do not use nprogress to walk through the hide loading func, if you use nprogress, you will not walk through the hideloading func in nprogress
 
--   Organize common css √
--   Set live2d √
--   Set click special effects √
--   Set body background include color & image √
--   Set theme color √
--   Set favicon & website title √
--   Build Aplayer √
--   Hide loading √
--   Import cnblog.common.css in the dev environment √
--   imagebox
+- Organize common css √
+- Set live2d √
+- Set click special effects √
+- Set body background include color & image √
+- Set theme color √
+- Set favicon & website title √
+- Build Aplayer √
+- Hide loading √
+- Import cnblog.common.css in the dev environment √
+- imagebox
 
 ### themes / reacg (Theme created by user)
 
--   qrcode
--   avatar
--   github
--   links
+- qrcode
+- avatar
+- github
+- links
 
 ## License
 
@@ -143,12 +158,12 @@ Integrate or build upon it for free in your personal or commercial projects. Don
 
 ## contact
 
--   QQ: 923665892
--   QQ group: 541802647
--   wechat: wx923665892
+- QQ: 923665892
+- QQ group: 541802647
+- wechat: wx923665892
 
 ## Thanks
 
--   [NProgress](http://ricostacruz.com/nprogress/)
--   [typed.js](https://github.com/mattboldt/typed.js)
--   ...
+- [NProgress](http://ricostacruz.com/nprogress/)
+- [typed.js](https://github.com/mattboldt/typed.js)
+- ...

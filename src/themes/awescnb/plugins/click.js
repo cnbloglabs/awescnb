@@ -9,7 +9,10 @@ var ctx = canvasEl.getContext('2d')
 var numberOfParticules = 30
 var pointerX = 0
 var pointerY = 0
-var tap = 'ontouchstart' in window || navigator.msMaxTouchPoints ? 'touchstart' : 'mousedown'
+var tap =
+    'ontouchstart' in window || navigator.msMaxTouchPoints
+        ? 'touchstart'
+        : 'mousedown'
 var colors = options.color || ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
 function setCanvasSize() {
@@ -132,7 +135,7 @@ document.addEventListener(
         updateCoords(e)
         animateParticules(pointerX, pointerY)
     },
-    false
+    false,
 )
 
 var centerX = window.innerWidth / 2
@@ -142,7 +145,7 @@ function autoClick() {
     if (window.human) return
     animateParticules(
         anime.random(centerX - 50, centerX + 50),
-        anime.random(centerY - 50, centerY + 50)
+        anime.random(centerY - 50, centerY + 50),
     )
     anime({
         duration: 200,

@@ -3,13 +3,15 @@ import setLive2d from './plugins/live2d'
 import setMusicPlayer from './plugins/player'
 import setTopProgress from './plugins/progress'
 import { setClickEffects } from './plugins/click'
-import { setHtmlTitleIcon, setThemeColor, setBodyBackground, hideLoading } from './build'
-
-const userOptions = window.userOptions
+import {
+    setHtmlTitleIcon,
+    setThemeColor,
+    setBodyBackground,
+    hideLoading,
+} from './build'
 
 class AwesCnb {
     constructor() {
-        this.defaultOptions = userOptions
         this.hideLoading = hideLoading
         this.setThemeColor = setThemeColor
         this.setHtmlTitleIcon = setHtmlTitleIcon

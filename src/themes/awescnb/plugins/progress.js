@@ -3,10 +3,9 @@ import env from '@/constants/env'
 import { pageName, userAgent } from '@/assets/js/tools'
 import '../../../../node_modules/nprogress/nprogress.css'
 
-const options = window.userOptions.topProgress
-
 // 顶部进度条 x
 const setTopProgress = () => {
+    const options = window.userOptions.topProgress
     if (!options.enable) return
     if (options.page !== pageName() && options.page !== 'all') return
     if (options.agent !== userAgent() && options.agent !== 'all') return
@@ -31,7 +30,7 @@ const setTopProgress = () => {
         }
 
         const handler = {
-            set(target, key, value) {
+            set(target, key) {
                 console.log(target[key])
                 NProgress.done()
             },

@@ -1,18 +1,6 @@
 import urls from '@/constants/urls'
 
 /**
- * @description 加载 model json
- * @param {Array} files [{name: '', type: 'js | css | jsCDN | cssCDN'}]
- * @param {Function} callback 回调函数 只能走一个
- */
-// 加载插件
-const loadModel = (name, callback = function() {}) => {
-    $.getScript('https://guangzan.gitee.io/awescnb/assets/js/' + name + '.min.js', () => {
-        callback()
-    })
-}
-
-/**
  * @description 加载文件
  * @param {Array} files [{name: '', type: 'js | css | jsCDN | cssCDN'}]
  * @param {Function} callback 回调函数 只能走一个
@@ -156,11 +144,6 @@ const getRandomNum = (max, min) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-// 隐藏loading
-const hideLoading = () => {
-    $('#loading').fadeOut(800)
-}
-
 // 文章内容是否存在标题
 // 文章是否有可用来生成目录的标题
 const hasPostTitle = () => {
@@ -209,9 +192,8 @@ export {
     getRandomColor,
     getClientRect,
     getRandomNum,
-    hideLoading,
     iconInSvg,
     pageName,
     userAgent,
-    loadModel,
+    hasPostTitle,
 }

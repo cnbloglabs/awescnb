@@ -1,4 +1,5 @@
 import defaultOptions from '@/constants/default'
+import env from '@/constants/env'
 let userOptions
 $.extend({
     awesCnb: options => {
@@ -9,7 +10,7 @@ $.extend({
     },
 })
 
-if (process.env.NODE_ENV === 'development') {
+if (env === 'dev') {
     $.awesCnb()
 }
 
