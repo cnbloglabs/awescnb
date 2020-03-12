@@ -1,4 +1,4 @@
-import '@/assets/css/common.css'
+import './css/index.css'
 import setLive2d from './plugins/live2d'
 import setMusicPlayer from './plugins/player'
 import setTopProgress from './plugins/progress'

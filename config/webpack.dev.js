@@ -10,15 +10,34 @@ module.exports = merge(baseWebpackConfig, {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                        },
+                    },
+                    'postcss-loader',
+                ],
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'eslint-loader',
-                options: {
-                    cache: true,
-                },
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env'],
+                        },
+                    },
+                    {
+                        loader: 'eslint-loader',
+                        options: {
+                            cache: true,
+                        },
+                    },
+                ],
             },
         ],
     },

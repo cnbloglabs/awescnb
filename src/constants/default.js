@@ -57,7 +57,7 @@ const defaultOptions = {
         url: 'https://gitee.com/guangzan/awescnb',
     },
     click: {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         auto: false,

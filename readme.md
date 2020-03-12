@@ -1,72 +1,78 @@
-## What is this
+## 这是什么
 
-You can use it to create a cnblog theme of your own, support local debugging, and share the created themes with others. You can refer to [awescnb1.0](https://gitee.com/guangzan/awescnb)
+1. 你可以安装这些主题在你的博客园.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
 
-## Differences between v1 and v2?
+2. 你可以使用它创建自己的博客园主题.最后打包生成的 yourtheme.js 文件,可以供你自己使用.
 
-- V2 use webpack, v1 use gulp.
-- V2 generates fewer files after packaging but Larger volume.
-- V2 can be debugged locally.
+3. 你可以使用它创建一个博客园皮肤.将你创建的皮肤贡献给项目,园友就能够切换到你的皮肤了.
 
-## Why use
+## 在博客园安装这个皮肤
 
-If you install it on your blog, you can quickly switch to another theme. If you want to use it to create a theme, you can use the sealed features in just a few lines of code, including but not limited to
+## 目录
 
-- NProgress
-- live2d
-- music player
-- theme color
-- body background
-- set click effects
-- custom website title and favicon
-- ...
+```
+├─config  webpack配置
+└─src
+    │  main.js 项目入口
+    ├─assets 静态文件
+    ├─constants 常量
+    │      default.js  默认配置
+    │      elements.js 博客园常用标签class\id
+    │      env.js 环境变量
+    │
+    ├─plugins 公共插件
+    │
+    ├─templates 博客园html
+    │
+    └─themes
+        ├─awescnb 其他皮肤继承的 class
+        │  │  index.js
+        │
+        └─reacg 新增的皮肤
+            │  index.js
+```
 
-## Install
+## 创建新的皮肤
 
-[awescnb](https://www.cnblogs.com/guangzan/p/12256583.html)
-
-## How to run
-
-Main.js load the corresponding JS according to your configured theme name.
-
-## Contributing
-
-1. Welcome to fork it!
-2. Create your feature branch: git checkout -b your-new-feature.
-3. Commit your changes: git commit -m 'Add some feature'.
-4. Push to the branch: git push origin your-new-feature.
-5. Submit a pull request.
-
-## How to start
-
-1. Create a new folder under the themes folder, such as demo.
-2. Create index.js in the demo folder.
-3. Create index.css in the demo folder.
-4. Paste the following code in demo / index.js.
+1. 在 themes 文件夹下创建一个新文件夹,比如 demo.
+2. 在 demo 文件夹中创建 index.js.
+3. 在 demo 文件夹中创建 index.css.
+4. 在 demo/index.js 中粘贴以下代码.
 
 ```js
 import './index.css'
 import AwesCnb from '@/themes/awescnb'
 
 class Demo extends AwesCnb {
-  constructor() {
-    super()
-    super.init()
-    this.init()
-  }
+    constructor() {
+        super()
+        super.init()
+        this.init()
+    }
 
-  init() {
-    this.hideLoading()
-  }
-  // to do something
+    init() {
+        this.hideLoading()
+    }
+    // to do something
 }
 
 new Demo()
 ```
 
-5. Open `config / webpack.base.js` and make the following changes:
+&nbsp;&nbsp;用它来创建一个博客园主题,只需要继承包含这些插件的 class( awescnb ).就可以继承包括但不限于下面这些插件.或者也可以不继承这个 class 单独使用你需要的插件. 即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
 
-```
+-   头部进度条
+-   看板娘(模型)
+-   音乐播放器
+-   主题色
+-   自定义背景图片或颜色
+-   华丽的点击特效
+-   自定义网站图标和标题
+-   ...
+
+5. 打开`config / webpack.base.js`并进行以下更改：
+
+```js
 entry:{
     index: './src/main.js',
     reacg: './src/themes/reacg/index.js',
@@ -74,12 +80,12 @@ entry:{
 },
 ```
 
-6. Run command
+6. 运行命令
 
-- `npm i` Installation dependency
-- `npm start` Local development
+-   `npm i` 安装依赖项
+-   `npm start` 进行本地开发
 
-The Templates folder is used to store the HTML of the cnblog. Running 'npm start' will start the index.html. If you want to start other pages, please change it config / webpack.dev.js
+Templates 文件夹用于存储博客园的 HTML。运行`npm start`将在本地启动博客园首页。如果您想启动其他页面，请更改 config/webpack.dev.js
 
 ```js
 new HtmlWebpackPlugin({
@@ -90,80 +96,70 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-## To do
+## 贡献
 
-### Adjustment
+1. fork 这个仓库.
+2. `git checkout -b your-new-feature`创建您的功能分支.
+3. `git commit -m 'Add some featureCommit` 提交您的代码.
+4. `git push origin your-new-feature` 推送到分支.
+5. 提交一个 a pull request.
 
-- Create a js to merge default and user configurations √
-- Not import options in entrance √
-- Themejs import user options from mergejs x
-- Organize directory √
-- Window.useroptions √
-- Common plugins move to / plugins
-- According to process.env.NODE_ENV to load http files (Otherwise, the volume is too large) x
-- Use eslint √
-- Use prettier √
-- Use stylelint
-- Use babel
-- Open sourcemap
+## 计划
 
-// 这里需要全局安装最主要的两个 node 模块，主要是要让 ide 编辑器能够读取全局环境来调用这 2 个模块
-npm install eslint prettier -g --save-dev
+### 调整
 
-// 这个是为了 eslint 跟 prettier 可以联合使用
-npm install --save-dev eslint-plugin-prettier
-// 这个是为了让 eslint 跟 prettier 兼容，关闭 prettier 跟 eslint 冲突的 rules
-npm install --save-dev eslint-config-prettier
+-   merge.js √
+-   在入口引入 merge √
+-   themejs 从 mergejs 导入用户选项 x
+-   组织目录 √
+-   Window.useroptions √
+-   调整 plugins 位置 √
+-   根据 env 加载 http 文件 x
+-   eslint √
+-   prettier √
+-   stylelint x
+-   babel √
+-   autoprefixer √
+-   postcss-import √
+-   cssnano √
+-   sourcemap
+-   在博客园中测试
 
-- Test in cnblog
+### 通用插件
 
-### plugins (common plugins)
+-   代码行号
+-   代码高亮
+-   文章目录
+-   文章底部签名
+-   弹幕
+-   返回顶部
+-   图标
+-   显示评论列表的用户头像
 
-- lineNumbers
-- highLight
-- catalog
-- postSignature
-- barrage
-- back2top -> simple / complex
-- icons
-- show user avatar of comment list
+### class awescnb
 
-### themes / awescnb (common class)
+-   NProgress √
+-   组织常用 css √
+-   live2d √
+-   点击特效 √
+-   背景包括颜色和图像 √
+-   主题颜色 √
+-   favicon 和网站标题 √
+-   音乐播放器 √
+-   隐藏 loading √
+-   在开发环境中导入 cnblog.common.css √
+-   图片灯箱
 
-- set NProgress (installed) √
+### reacg
 
-If you do not use nprogress to walk through the hide loading func, if you use nprogress, you will not walk through the hideloading func in nprogress
+-   自定义二维码
 
-- Organize common css √
-- Set live2d √
-- Set click special effects √
-- Set body background include color & image √
-- Set theme color √
-- Set favicon & website title √
-- Build Aplayer √
-- Hide loading √
-- Import cnblog.common.css in the dev environment √
-- imagebox
+## 联系
 
-### themes / reacg (Theme created by user)
-
-- qrcode
-- avatar
-- github
-- links
+-   QQ:923665892
+-   QQ 群：541802647
+-   微信：wx923665892
 
 ## License
 
 Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
-
-## contact
-
-- QQ: 923665892
-- QQ group: 541802647
-- wechat: wx923665892
-
-## Thanks
-
-- [NProgress](http://ricostacruz.com/nprogress/)
-- [typed.js](https://github.com/mattboldt/typed.js)
-- ...
