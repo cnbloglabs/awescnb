@@ -6,7 +6,7 @@ import { loadFiles } from '@/assets/js/tools'
 window.userOptions = userOptions
 
 if (env === 'dev') {
-    import('@/assets/css/blog-common.min.css')
+    import('@/assets/dev/blog-common.min.css')
 } else {
     loadFiles([
         {

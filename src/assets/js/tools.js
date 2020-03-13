@@ -36,6 +36,7 @@ const loadFiles = (files, callback = function() {}) => {
     }
 }
 
+
 /**
  * @description 防抖函数
  * @param {Function} func 传入的函数
@@ -57,15 +58,6 @@ const debounce = (func, wait, immediate) => {
         timeout = setTimeout(later, wait)
         if (callNow) func.apply(context, args)
     }
-}
-
-/**
- * @description 指定icon插入svg
- * @param {String} icon xlink:href 的值
- * @returns svg标签
- */
-const iconInSvg = icon => {
-    return `<svg class="icon" aria-hidden="true"><use xlink:href="${icon}"></use></svg>`
 }
 
 /**
@@ -122,7 +114,14 @@ const getRandomColor = type => {
  * @returns top, bottom, left, right, height, width
  */
 const getClientRect = client => {
-    const { top, bottom, left, right, height, width } = client.getBoundingClientRect()
+    const {
+        top,
+        bottom,
+        left,
+        right,
+        height,
+        width,
+    } = client.getBoundingClientRect()
     return {
         top,
         bottom,
@@ -148,7 +147,7 @@ const getRandomNum = (max, min) => {
 // 文章是否有可用来生成目录的标题
 const hasPostTitle = () => {
     return $(
-        '#cnblogs_post_body>h1,#cnblogs_post_body>h2,#cnblogs_post_body>h3,#cnblogs_post_body>h4'
+        '#cnblogs_post_body>h1,#cnblogs_post_body>h2,#cnblogs_post_body>h3,#cnblogs_post_body>h4',
     ).length === 0
         ? false
         : true
@@ -192,7 +191,6 @@ export {
     getRandomColor,
     getClientRect,
     getRandomNum,
-    iconInSvg,
     pageName,
     userAgent,
     hasPostTitle,

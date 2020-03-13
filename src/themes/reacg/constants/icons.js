@@ -1,5 +1,4 @@
 const icons = {
-    // ----
     dig: '#ac-dig', //推荐
     view: '#ac-view', //看
     search: '#ac-search', //搜索
@@ -24,8 +23,8 @@ const icons = {
     dark: '#ac-dark', //夜间模式
     light: '#ac-light', //白天
     look: '#ac-look',
+    //count -> 20
     food: {
-        //count -> 20
         pistachio: '#ac-food-pistachio',
         mochi: '#ac-food-mochi',
         cashew: '#ac-food-cashew',
@@ -49,4 +48,4 @@ const icons = {
     },
 }
 
-export { icons }
+export default icons

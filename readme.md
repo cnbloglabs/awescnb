@@ -44,36 +44,36 @@
 4. 在 demo/index.js 中粘贴以下代码.
 
 ```js
-import "./index.css"; // 引入创建好的 样式文件
-import AwesCnb from "@/themes/awescnb"; // 引入公共的类
+import './index.css' // 引入创建好的 样式文件
+import AwesCnb from '@/themes/awescnb' // 引入公共的类
 
 class Demo extends AwesCnb {
-  constructor() {
-    super();
-    super.init(); // 初始化父类的插件
-    this.init();
-  }
+    constructor() {
+        super()
+        super.init() // 初始化父类的插件
+        this.init()
+    }
 
-  init() {
-    this.hideLoading();
-  }
-  // to do something
+    init() {
+        this.hideLoading()
+    }
+    // to do something
 }
 
-new Demo();
+new Demo()
 ```
 
 &nbsp;&nbsp;用它来创建一个博客园主题,只需要继承 class(awescnb). 就可以继承包括但不限于下面这些插件.或者不继承单独使用你需要的插件.
 即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
 
-- 头部进度条
-- 看板娘(3D 模型)
-- 音乐播放器
-- 主题色
-- 自定义背景图片或颜色
-- 华丽的点击特效
-- 自定义网站图标和标题
-- ...
+-   头部进度条
+-   看板娘(3D 模型)
+-   音乐播放器
+-   主题色
+-   自定义背景图片或颜色
+-   华丽的点击特效
+-   自定义网站图标和标题
+-   ...
 
 5. 打开`config / webpack.base.js`并进行以下更改：
 
@@ -87,8 +87,8 @@ entry:{
 
 6. 运行命令
 
-- `npm i` 安装项目依赖
-- `npm start` 进行本地开发
+-   `npm i` 安装项目依赖
+-   `npm start` 进行本地开发
 
 templates 文件夹用于存储博客园的 HTML,使用 `HtmlWebpackPlugin` 将制定的 html 注入 index.html。
 运行`npm start`将在本地启动博客园首页。如果您想启动其他页面，请更改 `config/webpack.dev.js`.
@@ -102,7 +102,7 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-- `npm run build` 打包
+-   `npm run build` 打包
 
 项目打包会生成两个 js 文件在 dist 文件夹下.
 一个是 theme.js, 你可以把它放到你的博客中自己使用.
@@ -145,14 +145,16 @@ new HtmlWebpackPlugin({
 
 **通用备选插件**
 
+-   自定义 body 背景图片\背景色透明度 √
+-   图片灯箱 √
 -   代码行号
 -   代码高亮
 -   文章目录
 -   文章底部签名
 -   弹幕
 -   返回顶部
--   图标
--   显示评论列表的用户头像
+
+
 
 **class awescnb**
 
@@ -166,11 +168,16 @@ new HtmlWebpackPlugin({
 -   音乐播放器 √
 -   隐藏 loading √
 -   在开发环境中导入 cnblog.common.css √
--   图片灯箱
+-   显示评论列表的用户头像
+
 
 **reacg**
 
 -   自定义二维码
+-   icons √
+-   footer √
+-   移动端菜单 √
+-   图标 √
 
 ## 联系
 
