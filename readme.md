@@ -116,11 +116,10 @@ new HtmlWebpackPlugin({
 
 ## 贡献
 
-1. fork 这个仓库.
-2. `git checkout -b your-new-feature`创建您的功能分支.
-3. `git commit -m 'Add some featureCommit` 提交您的代码.
-4. `git push origin your-new-feature` 推送到分支.
-5. 提交一个 a pull request.
+1. Fork  主仓库到自己账号成为副本仓库
+2. 在副本仓库完成代码贡献（添加、删除、修改代码等等）
+3. 将副本修改的内容给主仓库提交 PR ( Pull Requests )
+4. 审核你提交的代码，并决定是否合并
 
 ## 计划
 
@@ -142,6 +141,7 @@ new HtmlWebpackPlugin({
 -   cssnano √
 -   sourcemap
 -   在博客园中测试
+-   打包多出一个 js
 
 **通用备选插件**
 

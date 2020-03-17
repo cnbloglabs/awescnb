@@ -36,7 +36,6 @@ const loadFiles = (files, callback = function() {}) => {
     }
 }
 
-
 /**
  * @description 防抖函数
  * @param {Function} func 传入的函数

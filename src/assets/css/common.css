@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+html,
 body {
-    background-color: #000;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none !important;
+}
+
+ol,
+ul {
+    list-style: none;
 }

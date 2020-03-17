@@ -1,7 +1,6 @@
 import { pageName, userAgent } from '@/assets/js/tools'
 import APlayer from 'APlayer'
-import '../../../../node_modules/aplayer/dist/aplayer.min.css'
-
+import 'aplayer/dist/aplayer.min.css'
 // 音乐播放器
 const setMusicPlayer = () => {
     const options = window.userOptions.musicPlayer

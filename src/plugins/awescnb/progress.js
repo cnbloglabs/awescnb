@@ -1,7 +1,7 @@
 import NProgress from 'NProgress'
 import env from '@/constants/env'
 import { pageName, userAgent } from '@/assets/js/tools'
-import '../../../../node_modules/nprogress/nprogress.css'
+import 'nprogress/nprogress.css'
 
 // 顶部进度条 x
 const setTopProgress = () => {

@@ -1,8 +1,8 @@
-import './css/index.css'
-import setLive2d from './plugins/live2d'
-import setMusicPlayer from './plugins/player'
-import setTopProgress from './plugins/progress'
-import { setClickEffects } from './plugins/click'
+import '@/assets/css/common.css'
+import setLive2d from '@/plugins/awescnb/live2d'
+import setMusicPlayer from '@/plugins/awescnb/player'
+import setTopProgress from '@/plugins/awescnb/progress'
+import { setClickEffects } from '@/plugins/awescnb/click'
 import {
     setHtmlTitleIcon,
     setThemeColor,
