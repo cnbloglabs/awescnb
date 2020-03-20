@@ -5,6 +5,9 @@ import userOptions from '@/assets/js/merge'
 window.userOptions = userOptions
 window.opts = userOptions
 
+console.log(userOptions)
+
+
 if (env === 'dev') {
     // 如果使用import()打包会多生成一个js文件
     // import('./assets/dev/blog-common.min.css')
