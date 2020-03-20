@@ -14,6 +14,6 @@ if (env === 'dev') {
     $.awesCnb()
 }
 
-// console.log('merge options');
+console.log('merge options')
 
 export default userOptions

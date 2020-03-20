@@ -9,6 +9,9 @@ import {
     setBodyBackground,
     hideLoading,
 } from './build'
+// import userOptions from '@/assets/js/merge'
+// window.userOptions = userOptions
+// window.opts = userOptions
 
 class AwesCnb {
     constructor() {

@@ -105,8 +105,19 @@ new HtmlWebpackPlugin({
 -   `npm run build` 打包
 
 项目打包会生成两个 js 文件在 dist 文件夹下.
-一个是 theme.js, 你可以把它放到你的博客中自己使用.
-一个是 index.js, 这个文件是用来根据用户所选的主题加载对应的 theme.js.
+
+-   theme.js, 你可以把它放到你的博客中自己使用.
+-   index.js, 这个文件是用来根据用户所选的主题加载对应的 theme.js.
+
+你需要把这两个文件都引入主题才能生效.如果你想只用 themejs,你需要在 themes/awescnb/indexjs 中加入以下代码:
+
+```js
+import userOptions from '@/assets/js/merge'
+window.userOptions = userOptions
+window.opts = userOptions
+```
+
+这样你就能单独使用打包好的 themejs 文件.
 
 ## 在博客园安装这个皮肤
 
@@ -116,7 +127,7 @@ new HtmlWebpackPlugin({
 
 ## 贡献
 
-1. Fork  主仓库到自己账号成为副本仓库
+1. Fork 主仓库到自己账号成为副本仓库
 2. 在副本仓库完成代码贡献（添加、删除、修改代码等等）
 3. 将副本修改的内容给主仓库提交 PR ( Pull Requests )
 4. 审核你提交的代码，并决定是否合并
@@ -140,8 +151,8 @@ new HtmlWebpackPlugin({
 -   postcss-import √
 -   cssnano √
 -   sourcemap
--   在博客园中测试
--   打包多出一个 js
+-   bug 打包多出一个 js
+-   可单独打包一个 themejs
 
 **通用备选插件**
 
@@ -153,8 +164,6 @@ new HtmlWebpackPlugin({
 -   文章底部签名
 -   弹幕
 -   返回顶部
-
-
 
 **class awescnb**
 
@@ -169,7 +178,6 @@ new HtmlWebpackPlugin({
 -   隐藏 loading √
 -   在开发环境中导入 cnblog.common.css √
 -   显示评论列表的用户头像
-
 
 **reacg**
 

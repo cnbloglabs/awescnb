@@ -1,5 +1,7 @@
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
 module.exports = merge(baseWebpackConfig, {
     mode: 'production',
     module: {
@@ -30,4 +32,5 @@ module.exports = merge(baseWebpackConfig, {
             },
         ],
     },
+    plugins: [new CleanWebpackPlugin()],
 })
