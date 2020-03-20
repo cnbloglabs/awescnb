@@ -126,7 +126,7 @@
 
 首先你需要将[项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
 
-1. 创建基本文件
+1. **创建基本文件**
 
 - 在 themes 文件夹下创建一个新文件夹,比如 demo.
 
@@ -169,7 +169,7 @@ new Demo()
 
 或者不继承单独使用你需要的插件.即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
 
-2. 更改配置以你的启动主题
+2. **更改配置以你的启动主题**
 
 打开`config / webpack.base.js`并进行以下更改：
 
@@ -181,7 +181,7 @@ entry:{
 },
 ```
 
-3. 在本地启动
+3. **在本地启动**
 
 -   `npm i` 安装项目依赖
 -   `npm start` 进行本地开发
@@ -198,7 +198,7 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-4. 打包
+4. **打包**
 
 
 -   `npm run build` 打包
@@ -270,7 +270,7 @@ window.opts = userOptions
 -   隐藏 loading √
 -   在开发环境中导入 cnblog.common.css √
 
-**reacg**()
+**reacg**(示例皮肤)
 
 -   自定义二维码
 -   icons √
