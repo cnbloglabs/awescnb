@@ -6,7 +6,7 @@ module.exports = {
         reacg: './src/themes/reacg/index.js',
     },
     output: {
-        filename: '[name].min.js',
+        filename: '[name].js',
         path: path.join(__dirname, '..', 'dist'),
     },
     resolve: {

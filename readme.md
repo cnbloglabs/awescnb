@@ -39,7 +39,7 @@
 5.复制如下 js 粘贴到 **博客侧边栏公告（支持 HTML 代码） （支持 JS 代码）** 没开通 js 权限请先开通.
 
 ```js
-  <script src="https://guangzan.gitee.io/awescnb2.0/index.min.js"></script>
+  <script src="https://guangzan.gitee.io/awescnb2.0/index.js"></script>
   <script>$.awesCnb({
                // 在这里写入配置
                // 什么都不写代表使用默认配置

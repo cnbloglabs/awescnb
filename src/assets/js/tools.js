@@ -12,7 +12,7 @@ const loadFiles = (files, callback = function() {}) => {
         const name = files[i].name
         const type = files[i].type
         const cssUrl = repositoriesUrl + '/css/' + name + '.css'
-        const jsUrl = `${repositoriesUrl}/${name}.min.js`
+        const jsUrl = `${repositoriesUrl}/${name}.js`
         const actions = {
             css: () => {
                 $('head').append(`<link rel="stylesheet" href="${cssUrl}">`)
