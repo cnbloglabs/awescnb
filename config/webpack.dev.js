@@ -45,7 +45,7 @@ module.exports = merge(baseWebpackConfig, {
         host: '127.0.0.1',
         port: 8080,
         contentBase: path.join(__dirname, 'dist'),
-        open: false,
+        open: true,
         hot: false,
         disableHostCheck: true,
         proxy: {},

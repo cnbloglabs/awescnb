@@ -8,6 +8,60 @@
 
 3. 你可以使用它创建一个博客园皮肤.并将它贡献给项目,园友就能够切换到你的皮肤了.
 
+## 安装
+
+1.你的博客首页 -> 管理 -> 设置  
+
+2.设置博客默认皮肤为 **Custom**  
+
+3.复制如下 css 粘贴到 **页面定制 CSS**
+
+```css
+:root{--sk-size:60px;--sk-color:#ffb3cc}
+#loading{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;justify-content:center;align-items:center;background-image:url(https://guangzan.gitee.io/awescnb/assets/images/background/cell.gif);z-index:99999}
+.sk-fold{width:var(--sk-size);height:var(--sk-size);position:relative;transform:rotateZ(45deg)}
+.sk-fold-cube{float:left;width:50%;height:50%;position:relative;transform:scale(1.1)}
+.sk-fold-cube:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--sk-color);animation:sk-fold 2.4s infinite linear both;transform-origin:100% 100%}
+.sk-fold-cube:nth-child(2){transform:scale(1.1) rotateZ(90deg)}
+.sk-fold-cube:nth-child(4){transform:scale(1.1) rotateZ(180deg)}
+.sk-fold-cube:nth-child(3){transform:scale(1.1) rotateZ(270deg)}
+.sk-fold-cube:nth-child(2):before{animation-delay:.3s}
+.sk-fold-cube:nth-child(4):before{animation-delay:.6s}
+.sk-fold-cube:nth-child(3):before{animation-delay:.9s}
+@keyframes sk-fold{
+0%,10%{transform:perspective(140px) rotateX(-180deg);opacity:0}
+25%,75%{transform:perspective(140px) rotateX(0);opacity:1}
+100%,90%{transform:perspective(140px) rotateY(180deg);opacity:0}}
+```
+
+4.<input type="checkbox" checked="checked" /> 禁用默认 css 样式  
+
+5.复制如下 js 粘贴到 **博客侧边栏公告（支持 HTML 代码） （支持 JS 代码）** 没开通 js 权限请先开通.
+
+```js
+  <script src="https://guangzan.gitee.io/awescnb2.0/index.min.js"></script>
+  <script>$.awesCnb({
+               // 在这里写入配置
+               // 什么都不写代表使用默认配置
+          });
+  </script>
+```
+
+6.复制如下 html 粘贴到 **页首 HTML**.
+
+```html
+<div id="loading">
+  <div class="sk-fold">
+    <div class="sk-fold-cube"></div>
+    <div class="sk-fold-cube"></div>
+    <div class="sk-fold-cube"></div>
+    <div class="sk-fold-cube"></div>
+  </div>
+</div>
+```
+
+7.保存.
+
 ## 目录
 
 这里只简单的罗列基本的项目目录,让你清楚它是怎么运行的.如果你有问题或建议欢迎交流.
@@ -121,9 +175,7 @@ window.opts = userOptions
 
 ## 在博客园安装这个皮肤
 
-在使用 webpack 构建这个项目之前, 上个版本使用 gulp 构建. 因为这个版本的皮肤正在从上个版本迁移.
-所以如果你想安装皮肤, 请先使用上个版本的.跳转到上个版本的[项目](https://gitee.com/guangzan/awescnb)安装皮肤.
-上个版本的皮肤提供了大量的可选配置,安装后你可以在博客园->设置页面自定义你的博客.参考[配置文档](https://guangzan.gitee.io/awescnb-docs)
+
 
 ## 贡献
 

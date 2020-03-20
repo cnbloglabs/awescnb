@@ -1,4 +1,10 @@
-import {pageName,userAgent, hasPostTitle } from '@/assets/js/tools'
+import {
+    pageName,
+    userAgent,
+    hasPostTitle,
+    throttle,
+    getClientRect,
+} from '@/assets/js/tools'
 
 // 只触发一次向上或向下,如果又重新反向滚动则再触发一次
 function scrollOnce() {
@@ -47,12 +53,11 @@ function setCatalogToggle() {
     if (userAgent() !== 'pc') return
 
     var p = 0,
-        t = 0,
-        that = this
+        t = 0
     $(window).scroll(
-        that.throttle(
+        throttle(
             function() {
-                const bottom = that.getClientRect(
+                const bottom = getClientRect(
                     document.querySelector('#sideBarMain'),
                 ).bottom
                 if (bottom <= 0) {
@@ -83,9 +88,8 @@ function setActiveCatalogTitle() {
     if (pageName() !== 'post') return
     if (userAgent() !== 'pc') return
 
-    var that = this
     $(window).scroll(
-        that.throttle(
+        throttle(
             function() {
                 for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
                     const titleId = $($('#catalog ul li')[i])
@@ -95,7 +99,7 @@ function setActiveCatalogTitle() {
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (that.getClientRect(postTitle).top <= 10) {
+                    if (getClientRect(postTitle).top <= 10) {
                         if (
                             $($('#catalog ul li')[i]).hasClass('catalog-active')
                         )
