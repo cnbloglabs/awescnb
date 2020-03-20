@@ -9,6 +9,7 @@ module.exports = merge(baseWebpackConfig, {
             {
                 test: /\.css$/,
                 use: [
+                    'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
@@ -26,6 +27,12 @@ module.exports = merge(baseWebpackConfig, {
                         loader: 'babel-loader',
                         options: {
                             presets: ['@babel/preset-env'],
+                        },
+                    },
+                    {
+                        loader: 'eslint-loader',
+                        options: {
+                            cache: true,
                         },
                     },
                 ],
