@@ -33,4 +33,7 @@ module.exports = merge(baseWebpackConfig, {
         ],
     },
     plugins: [new CleanWebpackPlugin()],
+    externals: {
+        jquery: 'window.jquery',
+    },
 })
