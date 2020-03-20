@@ -24,7 +24,7 @@
 
 通过 webpack 构建, 可以在本地启动服务调试 css 和 js, 并且集成了大量博客园皮肤插件,使你快速构建一款博客园皮肤.
 
-1. 你可以使用它快速创建自己的博客园皮肤.最后打包生成的 js 文件,供你自己使用.
+1. 你可以使用它快速创建自己的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
 
 2. 你可以使用它创建一个博客园皮肤.并将它贡献给项目,园友就能够切换到你的皮肤了.
 
@@ -126,10 +126,15 @@
 
 首先你需要将[项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
 
-1. 在 themes 文件夹下创建一个新文件夹,比如 demo.
-2. 在 demo 文件夹中创建 index.js.
-3. 在 demo 文件夹中创建 index.css. 皮肤样式
-4. 在 demo/index.js 中粘贴以下代码.
+1. 创建基本文件
+
+- 在 themes 文件夹下创建一个新文件夹,比如 demo.
+
+- 在 demo 文件夹中创建 index.js.
+
+- 在 demo 文件夹中创建 index.css. 皮肤样式
+
+- 在 demo/index.js 中粘贴以下代码.
 
 ```js
 import './index.css' // 引入你的样式文件
@@ -164,7 +169,9 @@ new Demo()
 
 或者不继承单独使用你需要的插件.即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
 
-5. 打开`config / webpack.base.js`并进行以下更改：
+2. 更改配置以你的启动主题
+
+打开`config / webpack.base.js`并进行以下更改：
 
 ```js
 entry:{
@@ -174,7 +181,7 @@ entry:{
 },
 ```
 
-6. 在本地启动
+3. 在本地启动
 
 -   `npm i` 安装项目依赖
 -   `npm start` 进行本地开发
@@ -191,7 +198,7 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-7. 打包
+4. 打包
 
 
 -   `npm run build` 打包
