@@ -1,5 +1,5 @@
 import defaultOptions from '@/constants/default'
-import env from '@/constants/env'
+
 let userOptions
 $.extend({
     awesCnb: options => {
@@ -10,10 +10,8 @@ $.extend({
     },
 })
 
-if (env === 'dev') {
-    $.awesCnb()
-}
+$.awesCnb()
 
-console.log('merge options',$, userOptions)
+console.log('merge options', $, userOptions)
 
 export default userOptions

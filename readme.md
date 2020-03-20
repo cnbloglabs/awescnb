@@ -109,7 +109,7 @@ new HtmlWebpackPlugin({
 -   theme.js, 你可以把它放到你的博客中自己使用.
 -   index.js, 这个文件是用来根据用户所选的主题加载对应的 theme.js.
 
-你需要把这两个文件都引入主题才能生效.如果你想只用 themejs,你需要在 themes/awescnb/indexjs 中加入以下代码:
+> 如果你想只用 theme.js, 你需要在 themes/awescnb/indexjs 中加入以下代码.
 
 ```js
 import userOptions from '@/assets/js/merge'
