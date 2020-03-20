@@ -36,7 +36,7 @@ function setCatalog() {
     })
 
     $($catalogContainer.append($ulContainer)).appendTo('#sideBar')
-    this.setCatalogPosition()
+    setCatalogPosition()
 }
 
 // 目录固定方式
@@ -58,7 +58,6 @@ function setCatalogPosition() {
 
 function catalog() {
     setCatalog()
-    setCatalogPosition()
 }
 
 export default catalog

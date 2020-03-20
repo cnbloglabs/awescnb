@@ -1,18 +1,44 @@
+<p align="center">
+  <img src='https://guangzan.gitee.io/imagehost/awescnb/logo.png' />
+</p>
+
+# Awescnb
+
+  <img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg">
+  <img src="https://img.shields.io/badge/-jquery-lightgrey">
+  <img src="https://img.shields.io/badge/-gulp-orange">
+  <img src="https://img.shields.io/badge/-live2D-yellow">
+  <img src="https://img.shields.io/badge/-anime-red">
+  <img src="https://img.shields.io/badge/-APlayer-informational">
+  <img src="https://img.shields.io/badge/-flexible-success">
+  <img src="https://img.shields.io/badge/-highlight-yellowgreen">
+  <img src="https://img.shields.io/badge/-linenumber-important">
+  <img src="https://img.shields.io/badge/-scrollgress-critical">
+  <img src="https://img.shields.io/badge/-music-informational">
+  <img src="https://img.shields.io/badge/-custom-ff69b4">
+  <img src="https://img.shields.io/badge/-responsive-9cf">
+
+> **Awescnb**, awesome cnblog 使博客园看起来更好。
+
 ## 简介
 
-干巴巴写一个博客园皮肤不是一件容易的事. 因为你无法像用前端框架写代码那样在本地调试你的 js, 所以我用空闲时间写了这个小项目.
+通过 webpack 构建, 可以在本地启动服务调试 css 和 js, 并且集成了大量博客园皮肤插件,使你快速构建一款博客园皮肤.
 
-1. 你可以使用它创建自己的博客园皮肤.最后打包生成的 js 文件,供你自己使用.
+1. 你可以使用它快速创建自己的博客园皮肤.最后打包生成的 js 文件,供你自己使用.
 
-2. 你可以安装这个项目中的皮肤在你的博客园.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
+2. 你可以使用它创建一个博客园皮肤.并将它贡献给项目,园友就能够切换到你的皮肤了.
 
-3. 你可以使用它创建一个博客园皮肤.并将它贡献给项目,园友就能够切换到你的皮肤了.
+3. 你可以安装这个项目中的皮肤在你的博客园.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
+
+**切换效果展示:**
+
+文件较大，为了节省流量，[点击](https://guangzan.gitee.io/imagehost/blog/themechange.gif)跳转查看.
 
 ## 安装
 
-1.你的博客首页 -> 管理 -> 设置  
+1.你的博客首页 -> 管理 -> 设置
 
-2.设置博客默认皮肤为 **Custom**  
+2.设置博客默认皮肤为 **Custom**
 
 3.复制如下 css 粘贴到 **页面定制 CSS**
 
@@ -34,33 +60,35 @@
 100%,90%{transform:perspective(140px) rotateY(180deg);opacity:0}}
 ```
 
-4.<input type="checkbox" checked="checked" /> 禁用默认 css 样式  
+4.<input type="checkbox" checked="checked" /> 禁用默认 css 样式
 
-5.复制如下 js 粘贴到 **博客侧边栏公告（支持 HTML 代码） （支持 JS 代码）** 没开通 js 权限请先开通.
+5.复制如下 js 粘贴到 **博客侧边栏公告** 如没开通 js 权限请先开通.
 
 ```js
-  <script src="https://guangzan.gitee.io/awescnb2.0/index.js"></script>
-  <script>$.awesCnb({
-               // 在这里写入配置
-               // 什么都不写代表使用默认配置
-          });
-  </script>
+<script src="https://guangzan.gitee.io/awescnb2.0/index.js"></script>
+<script>$.awesCnb({
+              // 在这里写入配置
+              // 什么都不写代表使用默认配置
+        });
+</script>
 ```
 
 6.复制如下 html 粘贴到 **页首 HTML**.
 
 ```html
 <div id="loading">
-  <div class="sk-fold">
-    <div class="sk-fold-cube"></div>
-    <div class="sk-fold-cube"></div>
-    <div class="sk-fold-cube"></div>
-    <div class="sk-fold-cube"></div>
-  </div>
+    <div class="sk-fold">
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+    </div>
 </div>
 ```
 
 7.保存.
+
+> 如果你想继续定制化一些功能, [点我](https://guangzan.gitee.io/awescnb-docs) 跳转到宝宝都能看懂的文档.
 
 ## 目录
 
@@ -88,6 +116,12 @@
             │  index.js
 ```
 
+## 命令
+
+-   `npm install`
+-   `npm start`
+-   `npm run build`
+
 ## 创建新的皮肤
 
 首先你需要将[项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
@@ -98,7 +132,7 @@
 4. 在 demo/index.js 中粘贴以下代码.
 
 ```js
-import './index.css' // 引入创建好的 样式文件
+import './index.css' // 引入你的样式文件
 import AwesCnb from '@/themes/awescnb' // 引入公共的类
 
 class Demo extends AwesCnb {
@@ -117,8 +151,7 @@ class Demo extends AwesCnb {
 new Demo()
 ```
 
-&nbsp;&nbsp;用它来创建一个博客园主题,只需要继承 class(awescnb). 就可以继承包括但不限于下面这些插件.或者不继承单独使用你需要的插件.
-即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
+&nbsp;&nbsp;继承 class(awescnb)代表继承包括但不限于下面这些插件.
 
 -   头部进度条
 -   看板娘(3D 模型)
@@ -128,6 +161,8 @@ new Demo()
 -   华丽的点击特效
 -   自定义网站图标和标题
 -   ...
+
+或者不继承单独使用你需要的插件.即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
 
 5. 打开`config / webpack.base.js`并进行以下更改：
 
@@ -139,7 +174,7 @@ entry:{
 },
 ```
 
-6. 运行命令
+6. 在本地启动
 
 -   `npm i` 安装项目依赖
 -   `npm start` 进行本地开发
@@ -156,11 +191,14 @@ new HtmlWebpackPlugin({
 }),
 ```
 
+7. 打包
+
+
 -   `npm run build` 打包
 
-项目打包会生成两个 js 文件在 dist 文件夹下.
+项目打包会在 dist 文件夹下生成两个 js 文件:
 
--   theme.js, 你可以把它放到你的博客中自己使用.
+-   theme.js, 你的主题导入的所有依赖都会打包成这个文件
 -   index.js, 这个文件是用来根据用户所选的主题加载对应的 theme.js.
 
 > 如果你想只用 theme.js, 你需要在 themes/awescnb/indexjs 中加入以下代码.
@@ -171,11 +209,7 @@ window.userOptions = userOptions
 window.opts = userOptions
 ```
 
-这样你就能单独使用打包好的 themejs 文件.
-
-## 在博客园安装这个皮肤
-
-
+这样你就能单独使用打包好的 themejs 文件. 不然, 你需要在你的博客园中引入以上两个文件才能安装你构建的皮肤.
 
 ## 贡献
 
@@ -184,9 +218,11 @@ window.opts = userOptions
 3. 将副本修改的内容给主仓库提交 PR ( Pull Requests )
 4. 审核你提交的代码，并决定是否合并
 
+> 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
+
 ## 计划
 
-**调整**
+**项目调整**
 
 -   merge.js √
 -   在入口引入 merge √
@@ -202,9 +238,9 @@ window.opts = userOptions
 -   autoprefixer √
 -   postcss-import √
 -   cssnano √
+-   bug 打包多出一个 js √
+-   可单独打包一个 themejs √
 -   sourcemap
--   bug 打包多出一个 js
--   可单独打包一个 themejs
 
 **通用备选插件**
 
@@ -212,10 +248,7 @@ window.opts = userOptions
 -   图片灯箱 √
 -   代码行号
 -   代码高亮
--   文章目录
--   文章底部签名
 -   弹幕
--   返回顶部
 
 **class awescnb**
 
@@ -229,21 +262,33 @@ window.opts = userOptions
 -   音乐播放器 √
 -   隐藏 loading √
 -   在开发环境中导入 cnblog.common.css √
--   显示评论列表的用户头像
 
-**reacg**
+**reacg**()
 
 -   自定义二维码
 -   icons √
 -   footer √
 -   移动端菜单 √
 -   图标 √
+-   自定义 body 背景图片\背景色透明度 √
+-   图片灯箱 √
+-   代码行号 √
+-   代码高亮 √
+-   文章目录 √
+-   文章底部签名 √
+-   弹幕 √
+-   返回顶部 √
+-   ... √
 
 ## 联系
 
 -   QQ：923665892
--   QQ 群：541802647
+-   QQ 群：541802647 (活跃)
 -   微信：wx923665892
+
+## Thanks
+
+-   [GShang](https://www.cnblogs.com/gshang/)
 
 ## License
 

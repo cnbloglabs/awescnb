@@ -54,7 +54,7 @@ module.exports = merge(baseWebpackConfig, {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'src/templates/index.html',
+            template: 'src/templates/post.html',
             inject: 'body',
         }),
         new webpack.HotModuleReplacementPlugin({}),
