@@ -10,7 +10,7 @@ const defaultOptions = {
             'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',
     },
     charts: {
-        enable: false
+        enable: false,
     },
     bodyBackground: {
         enable: false,
@@ -23,7 +23,7 @@ const defaultOptions = {
         enable: true,
     },
     barrage: {
-        enable: true,
+        enable: false,
         opacity: 0.5,
         colors: [
             '#FE0302',
@@ -40,11 +40,12 @@ const defaultOptions = {
             '#CC0273',
         ],
         barrages: [],
-        indexBarrages: [],
+        indexBarrages: ['awescnb2.0正式上线', '有问题请反馈', '速度解决'],
         postPageBarrages: [],
     },
     back2top: {
         enable: true,
+        type: 'complex',
     },
     live2d: {
         enable: false,
@@ -61,7 +62,7 @@ const defaultOptions = {
         url: 'https://gitee.com/guangzan/awescnb',
     },
     click: {
-        enable: false,
+        enable: true,
         page: 'all',
         agent: 'pc',
         auto: false,
@@ -75,7 +76,7 @@ const defaultOptions = {
         position: 'left',
     },
     musicPlayer: {
-        enable: false,
+        enable: true,
         page: 'all',
         agent: 'pc',
         autoplay: false,
@@ -90,7 +91,7 @@ const defaultOptions = {
         ],
     },
     topProgress: {
-        enable: false,
+        enable: true,
         page: 'all',
         agent: 'pc',
         background: '#FFB3CC',
@@ -101,7 +102,7 @@ const defaultOptions = {
         content: ['转载请附上原文链接，谢谢！'],
     },
     highLight: {
-        type: 'atomOneDark',
+        type: 'github',
     },
     links: [
         {

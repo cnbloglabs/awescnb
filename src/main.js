@@ -1,4 +1,3 @@
-import 'lib-flexible/flexible.js'
 import env from '@/constants/env'
 import { loadFiles } from '@/assets/js/tools'
 const userOptions = require('@/assets/js/merge')

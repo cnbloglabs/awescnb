@@ -2,8 +2,9 @@ import { userAgent } from '@/assets/js/tools'
 import { iconInSvg } from '../utils/tools'
 import icons from '../constants/icons'
 
- const options = window.opts.back2top
+const options = window.opts.back2top
 
+//  滚动计算
 function compute() {
     const percentScrolled = (
         ($(document).scrollTop() /

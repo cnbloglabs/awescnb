@@ -1,5 +1,5 @@
 import setBodyBackground from '@/plugins/background'
-import barrage from '@/plugins/barrage'
+import { shootInitial } from '@/plugins/barrage'
 import imageBox from '@/plugins/imageBox'
 import setLive2d from '@/plugins/live2d'
 import setMusicPlayer from '@/plugins/player'
@@ -11,7 +11,7 @@ function plugins() {
     setIcons()
     setBodyBackground()
     imageBox()
-    barrage()
+    shootInitial()
     setLive2d()
     setMusicPlayer()
     setTopProgress()

@@ -1,9 +1,9 @@
 import icons from '../constants/icons'
 import { iconInSvg } from '../utils/tools'
+import { shootCustom } from '@/plugins/barrage'
 
 // mode 初始化和点击切换
 function mode() {
-    const enableBarrage = window.opts.barrage.enable
     const isNight = new Date().getHours() > 19
     const $modeIcon = `<div id='mode-change'>${
         isNight ? iconInSvg(icons.dark) : iconInSvg(icons.light)
@@ -11,9 +11,9 @@ function mode() {
 
     $('#navigator').prepend($modeIcon)
 
-    // if (isNight && localStorage.modeType !== 'dark') {
-    //     shootBarrage(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
-    // }
+    if (isNight && localStorage.modeType !== 'dark') {
+        shootCustom(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
+    }
 
     localStorage.modeType === 'dark'
         ? changeModeToggle('dark')
@@ -23,12 +23,10 @@ function mode() {
         $('body').addClass('mode-change')
         if ($('#mode-dark').length > 0) {
             changeModeToggle('light')
-            if (!enableBarrage) return
-            // shootBarrage(['已成功切换为亮色模式 🌕'])
+            shootCustom(['已成功切换为亮色模式 🌕'])
         } else {
             changeModeToggle('dark')
-            if (!enableBarrage) return
-            // shootBarrage(['已成功切换为暗色模式 ✨'])
+            shootCustom(['已成功切换为暗色模式 ✨'])
         }
     })
 }
@@ -39,12 +37,8 @@ function mode() {
  */
 function changeModeToggle(mode = 'light') {
     const $dark = `<style id='mode-dark'>:root {--dark-background-g: #333;--dark-background-w: #555;--dark-background-e: #7c7c7c;--dark-text-0: #ccc;--dark-text-3: #ccc;--dark-text-4: #c0c0c0;--dark-text-5: #999;--dark-text-9: #7c7c7c;--dark-text-a: #000;}</style>`
-    const $darkIcon = `<div id='mode-change'>${iconInSvg(
-        icons.dark,
-    )}</div>`
-    const $lightIcon = `<div id='mode-change'>${iconInSvg(
-        icons.light,
-    )}</div>`
+    const $darkIcon = `<div id='mode-change'>${iconInSvg(icons.dark)}</div>`
+    const $lightIcon = `<div id='mode-change'>${iconInSvg(icons.light)}</div>`
 
     if (mode === 'dark') {
         $('head').append($dark)

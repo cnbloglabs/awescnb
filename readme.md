@@ -263,7 +263,8 @@ new HtmlWebpackPlugin({
 -   文章底部签名 √
 -   弹幕 √
 -   返回顶部 √
--   ... √
+-   签名 √
+-   bug -> themeColor double 
 
 ## Contact
 

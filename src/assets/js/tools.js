@@ -134,7 +134,7 @@ const getRandomColor = type => {
  * @param {Object} client document对象
  * @returns top, bottom, left, right, height, width
  */
-const getClientRect = client => {
+const getClientRect = el => {
     const {
         top,
         bottom,
@@ -142,7 +142,7 @@ const getClientRect = client => {
         right,
         height,
         width,
-    } = client.getBoundingClientRect()
+    } = el.getBoundingClientRect()
     return {
         top,
         bottom,

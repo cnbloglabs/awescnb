@@ -7,20 +7,16 @@ import {
 
 const options = window.opts.barrage
 
-//设置弹幕盒子
-function setBarrage() {
-    if (!options.enable) return
-    $('body').append(`<div id='barrage-wrap'></div>`)
-}
-
 /**
  * @description 发送弹幕
  * @param {Array} textList 弹幕列表
  */
 function shootBarrage(textList) {
     if (!options.enable) return
+    if (!document.querySelector('#barrage-wrap'))
+        $('body').append(`<div id='barrage-wrap'></div>`)
     const $wrap = document.querySelector('#barrage-wrap')
-    const rect = getClientRect()($wrap)
+    const rect = getClientRect($wrap)
     const wrapWidth = rect.right - rect.left
     const wrapHeight = rect.bottom - rect.top
 
@@ -37,7 +33,7 @@ function shootBarrage(textList) {
         $wrap.appendChild($barrage)
         const roll = timer => {
             const now = +new Date()
-            const rect = getClientRect()($barrage)
+            const rect = getClientRect($barrage)
             let left = $barrage.offsetLeft
             roll.last = roll.last || now
             roll.timer = roll.timer || timer
@@ -57,10 +53,9 @@ function shootBarrage(textList) {
     })
 }
 
-// 发送自定义随笔页首页弹幕
-function customBarrage() {
-    if (!options.enable) return
-
+// 发送预定义弹幕
+// 随笔页首页
+function shootInitial() {
     if (options.barrages.length !== 0) {
         setTimeout(() => {
             shootBarrage(options.barrages)
@@ -80,11 +75,10 @@ function customBarrage() {
     }
 }
 
-// --------   弹幕 end -----
-
-function barrage() {
-    setBarrage()
-    customBarrage()
+// 发送自定义弹幕
+// 类似消息弹窗
+function shootCustom(list) {
+    shootBarrage(list)
 }
 
-export default barrage
+export { shootInitial, shootCustom }

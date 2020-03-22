@@ -2,7 +2,9 @@ import anime from 'animejs/lib/anime.es.js'
 
 const options = window.opts.click
 
-$('body').append(`<canvas class="fireworks"></canvas>`)
+$('body').append(
+    `<canvas class="fireworks" style="pointer-events:none"></canvas>`,
+)
 
 window.human = false
 var canvasEl = document.querySelector('.fireworks')

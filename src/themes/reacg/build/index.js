@@ -13,9 +13,9 @@ import btns from './btns'
 import comments from './comments'
 import back2top from './back2top'
 import themeColor from './themeColor'
+import signature from './signature'
 
 function build() {
-    footer()
     mobileMenu()
     mode()
     color()
@@ -30,6 +30,8 @@ function build() {
     comments()
     back2top()
     themeColor()
+    signature()
+    footer()
 }
 
 export default build
