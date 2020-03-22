@@ -1,6 +1,13 @@
-.syntaxhighlighter a,.syntaxhighlighter div,.syntaxhighlighter code,.syntaxhighlighter table,.syntaxhighlighter table td,.syntaxhighlighter table tr,.syntaxhighlighter table tbody,.syntaxhighlighter table thead,.syntaxhighlighter table caption,.syntaxhighlighter textarea {
-    -moz-border-radius: 0 0 0 0 !important;
-    -webkit-border-radius: 0 0 0 0 !important;
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
     background: none !important;
     border: 0 !important;
     bottom: auto !important;
@@ -19,12 +26,13 @@
     vertical-align: baseline !important;
     width: auto !important;
     box-sizing: content-box !important;
-    font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;
+    font-family: 'Consolas', 'Bitstream Vera Sans Mono', 'Courier New', Courier,
+        monospace !important;
     font-weight: normal !important;
     font-style: normal !important;
     font-size: 1em !important;
     min-height: inherit !important;
-    min-height: auto !important
+    min-height: auto !important;
 }
 
 .syntaxhighlighter {
@@ -32,40 +40,40 @@
     margin: 1em 0 1em 0 !important;
     position: relative !important;
     overflow: auto !important;
-    font-size: 1em !important
+    font-size: 1em !important;
 }
 
 .syntaxhighlighter.source {
-    overflow: hidden !important
+    overflow: hidden !important;
 }
 
 .syntaxhighlighter .bold {
-    font-weight: bold !important
+    font-weight: bold !important;
 }
 
 .syntaxhighlighter .italic {
-    font-style: italic !important
+    font-style: italic !important;
 }
 
 .syntaxhighlighter .line {
-    white-space: pre !important
+    white-space: pre !important;
 }
 
 .syntaxhighlighter table {
-    width: 100% !important
+    width: 100% !important;
 }
 
 .syntaxhighlighter table caption {
     text-align: left !important;
-    padding: .5em 0 .5em 1em !important
+    padding: 0.5em 0 0.5em 1em !important;
 }
 
 .syntaxhighlighter table td.code {
-    width: 100% !important
+    width: 100% !important;
 }
 
 .syntaxhighlighter table td.code .container {
-    position: relative !important
+    position: relative !important;
 }
 
 .syntaxhighlighter table td.code .container textarea {
@@ -79,50 +87,51 @@
     background: #fff !important;
     padding-left: 1em !important;
     overflow: hidden !important;
-    white-space: pre !important
+    white-space: pre !important;
 }
 
 .syntaxhighlighter table td.gutter .line {
     text-align: right !important;
-    padding: 0 .5em 0 1em !important
+    padding: 0 0.5em 0 1em !important;
 }
 
 .syntaxhighlighter table td.code .line {
-    padding: 0 1em !important
+    padding: 0 1em !important;
 }
 
-.syntaxhighlighter.nogutter td.code .container textarea,.syntaxhighlighter.nogutter td.code .line {
-    padding-left: 0 !important
+.syntaxhighlighter.nogutter td.code .container textarea,
+.syntaxhighlighter.nogutter td.code .line {
+    padding-left: 0 !important;
 }
 
 .syntaxhighlighter.show {
-    display: block !important
+    display: block !important;
 }
 
 .syntaxhighlighter.collapsed table {
-    display: none !important
+    display: none !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar {
-    padding: .1em .8em 0 .8em !important;
+    padding: 0.1em 0.8em 0 0.8em !important;
     font-size: 1em !important;
     position: static !important;
     width: auto !important;
-    height: auto !important
+    height: auto !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar span {
     display: inline !important;
-    margin-right: 1em !important
+    margin-right: 1em !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar span a {
     padding: 0 !important;
-    display: none !important
+    display: none !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar span a.expandSource {
-    display: inline !important
+    display: inline !important;
 }
 
 .syntaxhighlighter .toolbar {
@@ -132,409 +141,436 @@
     width: 11px !important;
     height: 11px !important;
     font-size: 10px !important;
-    z-index: 10 !important
+    z-index: 10 !important;
 }
 
 .syntaxhighlighter .toolbar span.title {
-    display: inline !important
+    display: inline !important;
 }
 
 .syntaxhighlighter .toolbar a {
     display: block !important;
     text-align: center !important;
     text-decoration: none !important;
-    padding-top: 1px !important
+    padding-top: 1px !important;
 }
 
 .syntaxhighlighter .toolbar a.expandSource {
-    display: none !important
+    display: none !important;
 }
 
 .syntaxhighlighter.ie {
-    font-size: .9em !important;
-    padding: 1px 0 1px 0 !important
+    font-size: 0.9em !important;
+    padding: 1px 0 1px 0 !important;
 }
 
 .syntaxhighlighter.ie .toolbar {
-    line-height: 8px !important
+    line-height: 8px !important;
 }
 
 .syntaxhighlighter.ie .toolbar a {
-    padding-top: 0 !important
+    padding-top: 0 !important;
 }
 
-.syntaxhighlighter.printing .line.alt1 .content,.syntaxhighlighter.printing .line.alt2 .content,.syntaxhighlighter.printing .line.highlighted .number,.syntaxhighlighter.printing .line.highlighted.alt1 .content,.syntaxhighlighter.printing .line.highlighted.alt2 .content {
-    background: none !important
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+    background: none !important;
 }
 
 .syntaxhighlighter.printing .line .number {
-    color: #bbb !important
+    color: #bbb !important;
 }
 
 .syntaxhighlighter.printing .line .content {
-    color: #000 !important
+    color: #000 !important;
 }
 
 .syntaxhighlighter.printing .toolbar {
-    display: none !important
+    display: none !important;
 }
 
 .syntaxhighlighter.printing a {
-    text-decoration: none !important
+    text-decoration: none !important;
 }
 
-.syntaxhighlighter.printing .plain,.syntaxhighlighter.printing .plain a {
-    color: #000 !important
+.syntaxhighlighter.printing .plain,
+.syntaxhighlighter.printing .plain a {
+    color: #000 !important;
 }
 
-.syntaxhighlighter.printing .comments,.syntaxhighlighter.printing .comments a {
-    color: #008200 !important
+.syntaxhighlighter.printing .comments,
+.syntaxhighlighter.printing .comments a {
+    color: #008200 !important;
 }
 
-.syntaxhighlighter.printing .string,.syntaxhighlighter.printing .string a {
-    color: #00f !important
+.syntaxhighlighter.printing .string,
+.syntaxhighlighter.printing .string a {
+    color: #00f !important;
 }
 
 .syntaxhighlighter.printing .keyword {
     color: #069 !important;
-    font-weight: bold !important
+    font-weight: bold !important;
 }
 
 .syntaxhighlighter.printing .preprocessor {
-    color: #808080 !important
+    color: #808080 !important;
 }
 
 .syntaxhighlighter.printing .variable {
-    color: #a70 !important
+    color: #a70 !important;
 }
 
 .syntaxhighlighter.printing .value {
-    color: #090 !important
+    color: #090 !important;
 }
 
 .syntaxhighlighter.printing .functions {
-    color: #ff1493 !important
+    color: #ff1493 !important;
 }
 
 .syntaxhighlighter.printing .constants {
-    color: #06c !important
+    color: #06c !important;
 }
 
 .syntaxhighlighter.printing .script {
-    font-weight: bold !important
+    font-weight: bold !important;
 }
 
-.syntaxhighlighter.printing .color1,.syntaxhighlighter.printing .color1 a {
-    color: #808080 !important
+.syntaxhighlighter.printing .color1,
+.syntaxhighlighter.printing .color1 a {
+    color: #808080 !important;
 }
 
-.syntaxhighlighter.printing .color2,.syntaxhighlighter.printing .color2 a {
-    color: #ff1493 !important
+.syntaxhighlighter.printing .color2,
+.syntaxhighlighter.printing .color2 a {
+    color: #ff1493 !important;
 }
 
-.syntaxhighlighter.printing .color3,.syntaxhighlighter.printing .color3 a {
-    color: #f00 !important
+.syntaxhighlighter.printing .color3,
+.syntaxhighlighter.printing .color3 a {
+    color: #f00 !important;
 }
 
-.syntaxhighlighter.printing .break,.syntaxhighlighter.printing .break a {
-    color: #000 !important
+.syntaxhighlighter.printing .break,
+.syntaxhighlighter.printing .break a {
+    color: #000 !important;
 }
 
 .syntaxhighlighter {
-    background-color: #fff !important
+    background-color: #fff !important;
 }
 
 .syntaxhighlighter .line.alt1 {
-    background-color: #fff !important
+    background-color: #fff !important;
 }
 
-.syntaxhighlighter .line.highlighted.alt1,.syntaxhighlighter .line.highlighted.alt2 {
-    background-color: #e0e0e0 !important
+.syntaxhighlighter .line.highlighted.alt1,
+.syntaxhighlighter .line.highlighted.alt2 {
+    background-color: #e0e0e0 !important;
 }
 
 .syntaxhighlighter .line.highlighted.number {
-    color: #000 !important
+    color: #000 !important;
 }
 
 .syntaxhighlighter table caption {
-    color: #000 !important
+    color: #000 !important;
 }
 
 .syntaxhighlighter .gutter {
-    color: #afafaf !important
+    color: #afafaf !important;
 }
 
 .syntaxhighlighter .gutter .line {
-    border-right: 3px solid #6ce26c !important
+    border-right: 3px solid #6ce26c !important;
 }
 
 .syntaxhighlighter .gutter .line.highlighted {
     background-color: #6ce26c !important;
-    color: #fff !important
+    color: #fff !important;
 }
 
 .syntaxhighlighter.printing .line .content {
-    border: none !important
+    border: none !important;
 }
 
 .syntaxhighlighter.collapsed {
-    overflow: visible !important
+    overflow: visible !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar {
     color: #00f !important;
     background: #fff !important;
-    border: 1px solid #6ce26c !important
+    border: 1px solid #6ce26c !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar a {
-    color: #00f !important
+    color: #00f !important;
 }
 
 .syntaxhighlighter.collapsed .toolbar a:hover {
-    color: #f00 !important
+    color: #f00 !important;
 }
 
 .syntaxhighlighter .toolbar {
     color: #fff !important;
     background: #6ce26c !important;
-    border: none !important
+    border: none !important;
 }
 
 .syntaxhighlighter .toolbar a {
-    color: #fff !important
+    color: #fff !important;
 }
 
 .syntaxhighlighter .toolbar a:hover {
-    color: #000 !important
+    color: #000 !important;
 }
 
-.syntaxhighlighter .plain,.syntaxhighlighter .plain a {
-    color: #000 !important
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a {
+    color: #000 !important;
 }
 
-.syntaxhighlighter .comments,.syntaxhighlighter .comments a {
-    color: #008200 !important
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a {
+    color: #008200 !important;
 }
 
-.syntaxhighlighter .string,.syntaxhighlighter .string a {
-    color: #00f !important
+.syntaxhighlighter .string,
+.syntaxhighlighter .string a {
+    color: #00f !important;
 }
 
 .syntaxhighlighter .keyword {
-    color: #069 !important
+    color: #069 !important;
 }
 
 .syntaxhighlighter .preprocessor {
-    color: #808080 !important
+    color: #808080 !important;
 }
 
 .syntaxhighlighter .variable {
-    color: #a70 !important
+    color: #a70 !important;
 }
 
 .syntaxhighlighter .value {
-    color: #090 !important
+    color: #090 !important;
 }
 
 .syntaxhighlighter .functions {
-    color: #ff1493 !important
+    color: #ff1493 !important;
 }
 
 .syntaxhighlighter .constants {
-    color: #06c !important
+    color: #06c !important;
 }
 
 .syntaxhighlighter .script {
     font-weight: bold !important;
     color: #069 !important;
-    background-color: none !important
+    background-color: none !important;
 }
 
-.syntaxhighlighter .color1,.syntaxhighlighter .color1 a {
-    color: #808080 !important
+.syntaxhighlighter .color1,
+.syntaxhighlighter .color1 a {
+    color: #808080 !important;
 }
 
-.syntaxhighlighter .color2,.syntaxhighlighter .color2 a {
-    color: #ff1493 !important
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a {
+    color: #ff1493 !important;
 }
 
-.syntaxhighlighter .color3,.syntaxhighlighter .color3 a {
-    color: #f00 !important
+.syntaxhighlighter .color3,
+.syntaxhighlighter .color3 a {
+    color: #f00 !important;
 }
 
 .syntaxhighlighter .keyword {
-    font-weight: bold !important
+    font-weight: bold !important;
 }
 
 .syntaxhighlighter code {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap !important;
     white-space: -pre-wrap;
-    white-space: -o-pre-wrap
+    white-space: -o-pre-wrap;
 }
 
 .syntaxhighlighter .line {
     white-space: normal !important;
-    line-height: 1.8em !important
+    line-height: 1.8em !important;
 }
 
 .syntaxhighlighter code {
-    line-height: 1.8em !important
+    line-height: 1.8em !important;
 }
 
 .syntaxhighlighter .toolbar {
-    display: none
+    display: none;
 }
 
 .syntaxhighlighter.collapsed .toolbar {
     display: block;
     background: #f5f5f5 !important;
     border: 1px solid #ccc !important;
-    padding: .5em .8em .5em .8em !important
+    padding: 0.5em 0.8em 0.5em 0.8em !important;
 }
 
 .syntaxhighlighter table td.code {
-    width: auto !important
+    width: auto !important;
 }
 
 .syntaxhighlighter .line.alt2 {
-    background-color: #f4f4f4 !important
+    background-color: #f4f4f4 !important;
 }
 
 .syntaxhighlighter .gutter {
-    width: 35px !important
+    width: 35px !important;
 }
 
 .syntaxhighlighter .gutter .line {
-    border-right: 2px solid #6ce26c !important
+    border-right: 2px solid #6ce26c !important;
 }
 
 .syntaxhighlighter table td.gutter .line {
-    padding: 0 .5em 0 .5em !important;
-    text-align: right !important
+    padding: 0 0.5em 0 0.5em !important;
+    text-align: right !important;
 }
 
 .syntaxhighlighter .keyword {
     font-weight: normal !important;
-    color: #00f !important
+    color: #00f !important;
 }
 
-.syntaxhighlighter a,.syntaxhighlighter div,.syntaxhighlighter code,.syntaxhighlighter table,.syntaxhighlighter table td,.syntaxhighlighter table tr,.syntaxhighlighter table tbody,.syntaxhighlighter table thead,.syntaxhighlighter table caption,.syntaxhighlighter textarea {
-    font-size: 12px !important
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    font-size: 12px !important;
 }
 
-.sh-gutter .line,.sh-gutter code {
-    white-space: nowrap !important
+.sh-gutter .line,
+.sh-gutter code {
+    white-space: nowrap !important;
 }
 
 body {
-    font-family: Helvetica,Verdana,Arial,sans-serif
+    font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 
-input[type=button] {
-    -webkit-appearance: button
+input[type='button'] {
+    -webkit-appearance: button;
 }
 
 img {
-    border: 0
+    border: 0;
 }
 
 .ThumbNail img {
-    width: 100%
+    width: 100%;
 }
 
 .blog_topic {
     margin-top: 10px;
-    margin-left: 2em
+    margin-left: 2em;
 }
 
 #blog_post_info_block {
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 #BlogPostCategory {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #EntryTag {
-    margin-top: 0 !important
+    margin-top: 0 !important;
 }
 
 .topicListFooter {
     text-align: right;
     margin-right: 10px;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 #divRefreshComments {
     text-align: right;
     margin-right: 10px;
     margin-bottom: 5px;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .commentTextBox {
-    Width: 480px;
-    height: 220px
+    width: 480px;
+    height: 220px;
 }
 
 .commenttb {
-    width: 320px
+    width: 320px;
 }
 
 .tb_comment_name {
-    width: 200px
+    width: 200px;
 }
 
 #MyIng {
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .ing_title {
     font-weight: bold;
-    text-align: center
+    text-align: center;
 }
 
 .ing_body {
     margin-top: 5px;
     margin-bottom: 5px;
-    word-break: break-all
+    word-break: break-all;
 }
 
 .ing_date {
     text-align: center;
     color: #808080;
-    font-size: 11px
+    font-size: 11px;
 }
 
 .ing_footer {
     text-align: right;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 #divNewMsg {
     margin-top: 2px;
-    text-align: center
+    text-align: center;
 }
 
 .commentform table td input {
-    margin: 2px auto
+    margin: 2px auto;
 }
 
-.sendMsg2This:link,.sendMsg2This:visited,.sendMsg2This:active {
+.sendMsg2This:link,
+.sendMsg2This:visited,
+.sendMsg2This:active {
     font-size: 12px;
     text-decoration: none;
     /* background: url('/images/icoMsg.gif') no-repeat top left; */
-    padding-left: 20px
+    padding-left: 20px;
 }
 
-.sendMsg2This:hover {
-    /* background: url('/images/icoMsg.gif') no-repeat bottom left */
-}
 
 .RecentComment {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .cnblogs_code {
@@ -545,28 +581,28 @@ img {
     padding: 5px;
     overflow: auto;
     margin: 5px 0;
-    color: #000
+    color: #000;
 }
 
 span.cnblogs_code {
-    padding: 3px
+    padding: 3px;
 }
 
 .cnblogs_code div {
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
 }
 
 .cnblogs_code pre {
     font-family: Courier New !important;
     font-size: 12px !important;
     word-wrap: break-word;
-    white-space: pre-wrap
+    white-space: pre-wrap;
 }
 
 .cnblogs_code span {
     font-family: Courier New !important;
     font-size: 12px !important;
-    line-height: 1.5 !important
+    line-height: 1.5 !important;
 }
 
 .cnblogs_code_Collapse {
@@ -575,7 +611,7 @@ span.cnblogs_code {
     border-left: #808080 1px solid;
     border-bottom: #808080 1px solid;
     background-color: #fff;
-    padding: 2px
+    padding: 2px;
 }
 
 .cnblogs_code_collapse {
@@ -584,70 +620,75 @@ span.cnblogs_code {
     border-left: #808080 1px solid;
     border-bottom: #808080 1px solid;
     background-color: #fff;
-    padding: 2px
+    padding: 2px;
 }
 
 .cnblogs_code_hide {
-    display: none
+    display: none;
 }
 
 .code_img_closed {
     vertical-align: middle;
-    padding-right: 5px
+    padding-right: 5px;
 }
 
 .code_img_opened {
     vertical-align: middle;
-    padding-right: 5px
+    padding-right: 5px;
 }
 
 .cnblogs_code_open {
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .codeLineNumber {
     -moz-user-select: none;
     color: #008080;
-    padding-right: 10px
+    padding-right: 10px;
 }
 
 .cnblogs_code ol {
     margin-left: 0;
-    color: #008080
+    color: #008080;
 }
 
 .cnblogs_code ol li {
-    list-style-image: none
+    list-style-image: none;
 }
 
 .cnblogs_code ol li span {
-    color: #000
+    color: #000;
 }
 
-.cnblogs_code_toolbar a:hover,.cnblogs_code_toolbar a:link,.cnblogs_code_toolbar a:visited,.cnblogs_code_toolbar a:active,.cnblogs_code_toolbar a:link img,.cnblogs_code_toolbar a:visited img {
+.cnblogs_code_toolbar a:hover,
+.cnblogs_code_toolbar a:link,
+.cnblogs_code_toolbar a:visited,
+.cnblogs_code_toolbar a:active,
+.cnblogs_code_toolbar a:link img,
+.cnblogs_code_toolbar a:visited img {
     background-color: #f5f5f5 !important;
-    border: none !important
+    border: none !important;
 }
 
 .desc_img {
     float: right;
-    max-height: 200px
+    max-height: 200px;
 }
 
 .MsoNormal {
     font-size: 13px;
-    line-height: 150%
+    line-height: 150%;
 }
 
 .div_my_zzk {
     margin-top: 5px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .input_my_zzk {
     width: 100px;
     vertical-align: middle;
-    height: 20px
+    height: 20px;
 }
 
 input.btn_my_zzk {
@@ -655,12 +696,12 @@ input.btn_my_zzk {
     height: 22px;
     font-size: 12px;
     padding-left: 5px;
-    padding-right: 5px
+    padding-right: 5px;
 }
 
 pre {
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 pre {
@@ -668,12 +709,12 @@ pre {
     white-space: -moz-pre-wrap !important;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 .divPostCommentBox {
     float: left;
-    width: 500px
+    width: 500px;
 }
 
 .CommentBoxNav {
@@ -681,37 +722,40 @@ pre {
     float: right;
     margin-top: 20px;
     line-height: 120%;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .comment_pager {
     text-align: left;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 .comment_pager_current {
-    color: #f00
+    color: #f00;
 }
 
 .dp-highlighter {
-    font-family: "Consolas","Courier New",Courier,mono,serif;
+    font-family: 'Consolas', 'Courier New', Courier, mono, serif;
     font-size: 12px;
     overflow: auto;
     margin: 18px 0 18px 0 !important;
-    word-break: break-word
+    word-break: break-word;
 }
 
-.dp-highlighter ol,.dp-highlighter ol li,.dp-highlighter ol li span {
+.dp-highlighter ol,
+.dp-highlighter ol li,
+.dp-highlighter ol li span {
     margin: 0;
     padding: 0;
-    border: none
+    border: none;
 }
 
-.dp-highlighter a,.dp-highlighter a:hover {
+.dp-highlighter a,
+.dp-highlighter a:hover {
     background: none;
     border: none;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 .dp-highlighter ol {
@@ -719,15 +763,17 @@ pre {
     background-color: #fff;
     margin: 0 0 1px 45px !important;
     padding: 0 !important;
-    color: #5c5c5c
+    color: #5c5c5c;
 }
 
-.dp-highlighter.nogutter ol,.dp-highlighter.nogutter ol li {
+.dp-highlighter.nogutter ol,
+.dp-highlighter.nogutter ol li {
     list-style: none !important;
-    margin-left: 0 !important
+    margin-left: 0 !important;
 }
 
-.dp-highlighter ol li,.dp-highlighter .columns div {
+.dp-highlighter ol li,
+.dp-highlighter .columns div {
     list-style: decimal-leading-zero;
     list-style-position: outside !important;
     border-left: 3px solid #6ce26c;
@@ -735,69 +781,70 @@ pre {
     color: #5c5c5c;
     padding: 0 3px 0 10px !important;
     margin: 0 !important;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
-.dp-highlighter.nogutter ol li,.dp-highlighter.nogutter .columns div {
-    border: 0
+.dp-highlighter.nogutter ol li,
+.dp-highlighter.nogutter .columns div {
+    border: 0;
 }
 
 .dp-highlighter .columns {
     background-color: #f8f8f8;
     color: #808080;
     overflow: hidden;
-    width: 100%
+    width: 100%;
 }
 
 .dp-highlighter .columns div {
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 .dp-highlighter ol li.alt {
     background-color: #fff;
-    color: inherit
+    color: inherit;
 }
 
 .dp-highlighter ol li span {
     color: #000;
-    background-color: inherit
+    background-color: inherit;
 }
 
 .dp-highlighter.collapsed ol {
-    margin: 0
+    margin: 0;
 }
 
 .dp-highlighter.collapsed ol li {
-    display: none
+    display: none;
 }
 
 .dp-highlighter.printing {
-    border: none
+    border: none;
 }
 
 .dp-highlighter.printing .tools {
-    display: none !important
+    display: none !important;
 }
 
 .dp-highlighter.printing li {
-    display: list-item !important
+    display: list-item !important;
 }
 
 .dp-highlighter .tools {
     padding: 3px 8px 3px 10px;
-    font: 9px Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
     color: #c0c0c0;
     background-color: #f8f8f8;
     padding-bottom: 10px;
-    border-left: 3px solid #6ce26c
+    border-left: 3px solid #6ce26c;
 }
 
 .dp-highlighter.nogutter .tools {
-    border-left: 0
+    border-left: 0;
 }
 
 .dp-highlighter.collapsed .tools {
-    border-bottom: 0
+    border-bottom: 0;
 }
 
 .dp-highlighter .tools a {
@@ -805,88 +852,89 @@ pre {
     color: #a0a0a0;
     background-color: inherit;
     text-decoration: none;
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 .dp-highlighter .tools a:hover {
     color: #f00;
     background-color: inherit;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .dp-about {
     background-color: #fff;
     color: #333;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .dp-about table {
     width: 100%;
     height: 100%;
     font-size: 11px;
-    font-family: Tahoma,Verdana,Arial,sans-serif !important
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
 }
 
 .dp-about td {
     padding: 10px;
-    vertical-align: top
+    vertical-align: top;
 }
 
 .dp-about .copy {
     border-bottom: 1px solid #aca899;
-    height: 95%
+    height: 95%;
 }
 
 .dp-about .title {
     color: #f00;
     background-color: inherit;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .dp-about .para {
-    margin: 0 0 4px 0
+    margin: 0 0 4px 0;
 }
 
 .dp-about .footer {
     background-color: #eceadb;
     color: #333;
     border-top: 1px solid #fff;
-    text-align: right
+    text-align: right;
 }
 
 .dp-about .close {
     font-size: 11px;
-    font-family: Tahoma,Verdana,Arial,sans-serif !important;
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
     background-color: #eceadb;
     color: #333;
     width: 60px;
-    height: 22px
+    height: 22px;
 }
 
-.dp-highlighter .comment,.dp-highlighter .comments {
+.dp-highlighter .comment,
+.dp-highlighter .comments {
     color: #008200;
-    background-color: inherit
+    background-color: inherit;
 }
 
 .dp-highlighter .string {
     color: #00f;
-    background-color: inherit
+    background-color: inherit;
 }
 
 .dp-highlighter .keyword {
     color: #069;
     font-weight: bold;
-    background-color: inherit
+    background-color: inherit;
 }
 
 .dp-highlighter .preprocessor {
     color: #808080;
-    background-color: inherit
+    background-color: inherit;
 }
 
 #digg_block {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 #author_profile {
@@ -896,15 +944,17 @@ pre {
     margin-bottom: 10px;
     color: #000;
     margin-left: 0;
-    font-size: 12px
+    font-size: 12px;
 }
 
-#author_profile a:link,#author_profile a:visited,#author_profile a:acitve {
-    text-decoration: none
+#author_profile a:link,
+#author_profile a:visited,
+#author_profile a:acitve {
+    text-decoration: none;
 }
 
 #author_profile a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .author_avatar {
@@ -913,17 +963,17 @@ pre {
     margin-right: 5px;
     padding-top: 5px;
     padding-left: 2px;
-    border: 0
+    border: 0;
 }
 
 .author_profile_title {
     font-weight: bold;
-    color: #666
+    color: #666;
 }
 
 .author_profile_info {
     float: left;
-    line-height: 18px
+    line-height: 18px;
 }
 
 #div_digg {
@@ -933,7 +983,7 @@ pre {
     font-size: 12px;
     width: 125px;
     text-align: center;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .diggit {
@@ -944,13 +994,13 @@ pre {
     text-align: center;
     cursor: pointer;
     margin-top: 2px;
-    padding-top: 5px
+    padding-top: 5px;
 }
 
 .diggnum {
     font-size: 14px;
     color: #075db3;
-    font-family: Verdana
+    font-family: Verdana;
 }
 
 .buryit {
@@ -962,64 +1012,66 @@ pre {
     text-align: center;
     cursor: pointer;
     margin-top: 2px;
-    padding-top: 5px
+    padding-top: 5px;
 }
 
 .burynum {
     font-size: 14px;
     color: #075db3;
-    font-family: Verdana
+    font-family: Verdana;
 }
 
 .diggword {
     margin-top: 5px;
     margin-left: 0;
     font-size: 12px;
-    color: #808080
+    color: #808080;
 }
 
 a.digg_gray:link {
     color: #808080;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 a.digg_gray:visited {
     color: #808080;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 a.digg_gray:hover {
     color: #f00;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 a.digg_gray:active {
     color: #808080;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
-a.site_hot:visited,a.site_hot:active,a.site_hot:link {
+a.site_hot:visited,
+a.site_hot:active,
+a.site_hot:link {
     color: #f00;
-    text-decoration: none
+    text-decoration: none;
 }
 
 a.site_hot:hover {
     color: #f00;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .ad_bottom_text {
-    line-height: 150%
+    line-height: 150%;
 }
 
 #profile_block {
     margin-top: 5px;
     line-height: 1.5;
-    text-align: left
+    text-align: left;
 }
 
 .ing_date {
-    color: #808080
+    color: #808080;
 }
 
 .bq_post_comment {
@@ -1027,69 +1079,71 @@ a.site_hot:hover {
     font-style: normal;
     line-height: 180%;
     border: 1px solid #ddd;
-    padding: 10px
+    padding: 10px;
 }
 
 .bq_post_comment img {
     max-width: 400px;
-    max-height: 300px
+    max-height: 300px;
 }
 
 .blog_comment_body {
     word-wrap: break-word;
-    overflow-wrap: break-word
+    overflow-wrap: break-word;
 }
 
 .blog_comment_body li {
     margin-left: 28px;
-    list-style: disc
+    list-style: disc;
 }
 
 .blog_comment_body img {
     max-width: 400px;
-    max-height: 300px
+    max-height: 300px;
 }
 
 #post_next_prev {
     line-height: 1.8;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .post_next_prev_date {
-    color: #808080
+    color: #808080;
 }
 
 #post_next_prev a.p_n_p_prefix:link {
-    text-decoration: none
+    text-decoration: none;
 }
 
 #post_next_prev a.p_n_p_prefix:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 #side_ing_block {
     line-height: 1.5;
-    overflow: hidden
+    overflow: hidden;
 }
 
 #side_ing_block ul li {
     /* background-image: url(//static.cnblogs.com/images/icon_voice.gif); */
     background-repeat: no-repeat;
-    padding: 0 0 0 20px
+    padding: 0 0 0 20px;
 }
 
-a.ing_lnk:link,a.ing_lnk:active,a.ing_lnk:visited {
+a.ing_lnk:link,
+a.ing_lnk:active,
+a.ing_lnk:visited {
     color: #808080;
     text-decoration: none;
-    border: 0
+    border: 0;
 }
 
 .itnews {
-    line-height: 150%
+    line-height: 150%;
 }
 
 .job_offer_list {
-    line-height: 150%
+    line-height: 150%;
 }
 
 blockquote {
@@ -1100,36 +1154,36 @@ blockquote {
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #cnblogs_post_body blockquote ul {
-    margin-left: 25px
+    margin-left: 25px;
 }
 
 .c_ad_block {
     margin-top: 10px;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 #grade_flag {
-    font-size: 12px
+    font-size: 12px;
 }
 
 .c_b_p_desc {
     word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .c_b_p_desc_readmore {
-    padding-left: 5px
+    padding-left: 5px;
 }
 
 .c_b_p_link_desc {
     margin-top: 2px;
-    word-break: break-word
+    word-break: break-word;
 }
 
 #green_channel {
@@ -1139,11 +1193,10 @@ blockquote {
     border: #c0c0c0 1px dashed;
     font-size: 12px;
     width: 350px;
-    text-align: center
+    text-align: center;
 }
 
 #green_channel a {
-    /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAYAAABIdFAMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNo8zjsOxCAMBFB/KEAUFFR0Cbng3nQPw68ArZdAlOZppPFIBhH5EAB8b+Tlt9MYQ6i1BuqFaq1CKSVcxZ2Acs6406KUgpt5/LCKuVgz5BDCSb13ZO99ZOdcZGvt4mJjzMVKqcha68iIePB86GAiOv8CDADlIUQBs7MD3wAAAABJRU5ErkJggg%3D%3D) repeat-x; */
     display: inline-block;
     padding: 3px 8px;
     color: #fff;
@@ -1151,51 +1204,40 @@ blockquote {
     font-weight: bold;
     cursor: pointer;
     margin-right: 10px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 10px;
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
-    text-shadow: 0 -1px 1px rgba(0,0,0,.25);
-    vertical-align: middle
-}
-
-#green_channel a:hover {
-    /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpi/v//vwMTAwPDfzjBgMpFI/7hFSOT9Y8qRuF3JLoHAQIMAHYtMmRA+CugAAAAAElFTkSuQmCC) */
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    vertical-align: middle;
 }
 
 #green_channel #green_channel_digg {
-    background-color: #2daebf
+    background-color: #2daebf;
 }
 
 #green_channel #green_channel_follow {
-    background-color: #e33100
+    background-color: #e33100;
 }
 
 #green_channel #green_channel_favorite {
-    background-color: #ffb515
+    background-color: #ffb515;
 }
 
 #green_channel #green_channel_contact {
     background-color: #eee;
     color: #555;
-    display: none
+    display: none;
 }
 
 #green_channel #green_channel_weibo img {
     vertical-align: middle;
     border: none;
     margin-left: 5px;
-    box-shadow: none
+    box-shadow: none;
 }
 
-#green_channel #green_channel_weibo,#green_channel #green_channel_wechat {
+#green_channel #green_channel_weibo,
+#green_channel #green_channel_wechat {
     background: none;
     padding: 3px 2px;
-    -moz-border-radius: none;
-    -webkit-border-radius: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    text-shadow: none
+    text-shadow: none;
 }
 
 #green_channel #green_channel_wechat img {
@@ -1204,121 +1246,127 @@ blockquote {
     border: medium none;
     box-shadow: none;
     margin-left: 5px;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 #cnblogs_post_body {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 #cnblogs_post_body ul {
     margin-left: 30px;
-    padding-left: 0
+    padding-left: 0;
 }
 
 #cnblogs_post_body ol {
-    padding-left: 40px
+    padding-left: 40px;
 }
 
 #cnblogs_post_body ol li {
-    list-style-type: decimal
+    list-style-type: decimal;
 }
 
 #cnblogs_post_body ul li {
-    list-style-type: disc
+    list-style-type: disc;
 }
 
 #cnblogs_post_body ul ul li {
-    list-style-type: circle
+    list-style-type: circle;
 }
 
-#cnblogs_post_body table,.cnblogs-post-body table {
+#cnblogs_post_body table,
+.cnblogs-post-body table {
     border: 1px solid #c0c0c0;
     border-collapse: collapse;
-    word-break: break-word
+    word-break: break-word;
 }
 
-#cnblogs_post_body th,.cnblogs-post-body th {
-    background-color: #fafafa
+#cnblogs_post_body th,
+.cnblogs-post-body th {
+    background-color: #fafafa;
 }
 
-#cnblogs_post_body th,#cnblogs_post_body td,.cnblogs-post-body th,.cnblogs-post-body td {
+#cnblogs_post_body th,
+#cnblogs_post_body td,
+.cnblogs-post-body th,
+.cnblogs-post-body td {
     border: 1px solid #c0c0c0;
     border-collapse: collapse;
     padding: 8px 14px;
-    min-width: 50px
+    min-width: 50px;
 }
 
 #cnblogs_post_body img {
     max-width: 100% !important;
-    height: auto
+    height: auto;
 }
 
 .ad_text_commentbox {
     margin-top: 5px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 a.comment_uploadimg_a {
-    font-size: 12px
+    font-size: 12px;
 }
 
 #ad_t2 {
     margin-top: 5px;
-    line-height: 1.8
+    line-height: 1.8;
 }
 
 #ad_t2 a {
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 #opt_under_post {
-    line-height: 1.8
+    line-height: 1.8;
 }
 
 #opt_under_post a {
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 #ad_under_comment2 {
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 #ad_under_comment2 img {
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .recent_comment_author {
     text-align: right;
-    margin-right: 4px
+    margin-right: 4px;
 }
 
-#HistoryToday,.recomm-block {
+#HistoryToday,
+.recomm-block {
     max-width: 600px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .recomm-block {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 #cnblogs_t5 {
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .cnblogs_code_toolbar {
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .cnblogs_code_toolbar span {
-    padding-right: 5px
+    padding-right: 5px;
 }
 
 input::-moz-focus-inner {
     border: 0;
-    padding: 0
+    padding: 0;
 }
 
 .comment_btn {
@@ -1326,44 +1374,44 @@ input::-moz-focus-inner {
     width: 68px;
     margin: 0;
     padding: 0;
-    line-height: 22px
+    line-height: 22px;
 }
 
 #commentbox_opt a {
-    padding-left: 10px
+    padding-left: 10px;
 }
 
 #taglist_title {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #taglist td {
-    padding: 5px 20px 5px 10px
+    padding: 5px 20px 5px 10px;
 }
 
 .Cal {
-    width: 100%
+    width: 100%;
 }
 
 .CalTitle {
-    width: 100%
+    width: 100%;
 }
 
 .new-comment-block {
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .new-comment-block img {
     max-width: 400px;
-    max-height: 300px
+    max-height: 300px;
 }
 
 .new-comment-title span {
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .new-comment-title a {
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .pager {
@@ -1371,7 +1419,7 @@ input::-moz-focus-inner {
     margin: 10px 0;
     text-align: center;
     color: #2e6ab1;
-    line-height: 200%
+    line-height: 200%;
 }
 
 .pager a {
@@ -1379,7 +1427,7 @@ input::-moz-focus-inner {
     color: #2e6ab1;
     margin: 0 2px;
     padding: 2px 5px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .pager span.current {
@@ -1388,148 +1436,156 @@ input::-moz-focus-inner {
     color: #fff;
     font-weight: bold;
     margin: 0 2px;
-    padding: 2px 5px
+    padding: 2px 5px;
 }
 
 .comment_vote {
-    text-align: right
+    text-align: right;
 }
 
 .comment_vote a {
     text-decoration: none !important;
-    padding-left: 10px
+    padding-left: 10px;
 }
 
 .comment_actions a {
-    padding-right: 10px
+    padding-right: 10px;
 }
 
 .comment_actions a:last-child {
-    padding-right: 0
+    padding-right: 0;
 }
 
 .recent_comment_body {
     white-space: pre-wrap;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 #taglist_main {
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 #taglist_main #taglist .small {
-    font-size: 12px
+    font-size: 12px;
 }
 
 #taglist_title_wrap {
     margin-left: auto;
     margin-right: auto;
-    text-align: center
+    text-align: center;
 }
 
 #cnblogs_post_body {
-    word-break: break-word
+    word-break: break-word;
 }
 
 #cnblogs_post_body p {
     margin: 10px auto;
-    text-indent: 0
+    text-indent: 0;
 }
 
-#cnblogs_post_body h1,.blog_comment_body h1 {
+#cnblogs_post_body h1,
+.blog_comment_body h1 {
     font-size: 28px;
     font-weight: bold;
     line-height: 1.5;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
-#cnblogs_post_body h2,.blog_comment_body h2 {
+#cnblogs_post_body h2,
+.blog_comment_body h2 {
     font-size: 21px;
     font-weight: bold;
     line-height: 1.5;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
-#cnblogs_post_body h3,.blog_comment_body h4 {
+#cnblogs_post_body h3,
+.blog_comment_body h4 {
     font-size: 16px;
     font-weight: bold;
     line-height: 1.5;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
-#cnblogs_post_body h4,.blog_comment_body h4 {
+#cnblogs_post_body h4,
+.blog_comment_body h4 {
     font-size: 14px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
-#cnblogs_post_body h5,.blog_comment_body h5 {
+#cnblogs_post_body h5,
+.blog_comment_body h5 {
     font-size: 12px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
-#cnblogs_post_body h6,.blog_comment_body h6 {
+#cnblogs_post_body h6,
+.blog_comment_body h6 {
     font-size: 11px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 #div_digg .diggnum {
-    line-height: 1.5em !important
+    line-height: 1.5em !important;
 }
 
 #div_digg .burynum {
-    line-height: 1.5em !important
+    line-height: 1.5em !important;
 }
 
-#green_channel a:link,#green_channel a:visited,#green_channel a:active {
+#green_channel a:link,
+#green_channel a:visited,
+#green_channel a:active {
     color: #fff !important;
-    border: none !important
+    border: none !important;
 }
 
 #myposts .myposts_title {
-    font-size: 15px
+    font-size: 15px;
 }
 
 #myposts {
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 #myposts .pager {
     text-align: right;
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 #myposts .PostList {
     margin-right: 20px;
     margin-top: 10px;
-    font-size: 13px
+    font-size: 13px;
 }
 
 #myposts .postTitle2 {
-    font-size: 13px
+    font-size: 13px;
 }
 
 #myposts .postDesc2 {
-    font-size: 12px
+    font-size: 12px;
 }
 
 #myposts .postText2 {
     font-size: 13px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 #blog-news {
-    overflow: hidden
+    overflow: hidden;
 }
 
 #MySignature {
-    display: none
+    display: none;
 }
 
 pre.prettyprint code {
-    font-family: "Courier New",sans-serif !important;
+    font-family: 'Courier New', sans-serif !important;
     font-size: 12px !important;
     line-height: 20px;
     background-color: #f5f5f5 !important;
@@ -1539,47 +1595,49 @@ pre.prettyprint code {
     line-height: 1.8;
     margin: 1px 5px;
     vertical-align: middle;
-    display: inline-block
+    display: inline-block;
 }
 
 .mermaid {
-    white-space: pre-wrap
+    white-space: pre-wrap;
 }
 
-#cnblogs_post_body img[id^=uploading_image_] {
-    display: none
+#cnblogs_post_body img[id^='uploading_image_'] {
+    display: none;
 }
 
 #comment_form_container {
-    visibility: hidden
+    visibility: hidden;
 }
 
 #commentform_title {
     /* background-image: url(//static.cnblogs.com/images/icon_addcomment.gif); */
     background-repeat: no-repeat;
     padding: 0 0 0 25px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-div.commentform input.author,div.commentform input.email,div.commentform input.url {
+div.commentform input.author,
+div.commentform input.email,
+div.commentform input.url {
     /* background-image: url(//static.cnblogs.com/images/icon_form.gif); */
     background-repeat: no-repeat;
     border: 1px solid #ccc;
     padding: 4px 4px 4px 30px;
     width: 300px;
-    font-size: 13px
+    font-size: 13px;
 }
 
 div.commentform input.author {
-    background-position: 3px -3px
+    background-position: 3px -3px;
 }
 
 div.commentform input.email {
-    background-position: 3px -33px
+    background-position: 3px -33px;
 }
 
 div.commentform input.url {
-    background-position: 3px -63px
+    background-position: 3px -63px;
 }
 
 .comment_textarea {
@@ -1589,8 +1647,8 @@ div.commentform input.url {
     border: 1px solid #ddd;
     width: 600px;
     border-radius: 3px;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    margin-bottom: 10px
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    margin-bottom: 10px;
 }
 
 div.commentform textarea {
@@ -1602,12 +1660,13 @@ div.commentform textarea {
     outline: none;
     font-size: 13px;
     border: none;
-    font-family: 'PingFang SC','Helvetica Neue','Helvetica','Arial',sans-serif;
-    padding: 8px 0
+    font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'Arial',
+        sans-serif;
+    padding: 8px 0;
 }
 
 #tbCommentBodyPreview {
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .comment_preview {
@@ -1615,29 +1674,31 @@ div.commentform textarea {
     min-height: 150px;
     box-sizing: border-box;
     border: none;
-    padding: 0
+    padding: 0;
 }
 
-.comment_preview p,div.commentform p {
-    margin: 10px 0
+.comment_preview p,
+div.commentform p {
+    margin: 10px 0;
 }
 
-.commentbox_footer,.commentbox_title {
+.commentbox_footer,
+.commentbox_title {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
 .commentbox_title {
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
 }
 
 .commentbox_footer {
     border-top: 1px solid #d2d2d2;
     padding-top: 10px;
-    display: none
+    display: none;
 }
 
 .commentbox_tab {
@@ -1646,29 +1707,30 @@ div.commentform textarea {
     line-height: 28px;
     cursor: pointer;
     padding: 0 5px 0 5px;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     text-align: center;
-    color: #707070
+    color: #707070;
 }
 
-.commentbox_tab:hover,.commentbox_tab.active {
+.commentbox_tab:hover,
+.commentbox_tab.active {
     border-bottom: 2px solid #367cc2;
-    color: #000
+    color: #000;
 }
 
 .commentbox_title_left {
-    display: flex
+    display: flex;
 }
 
 .commentbox_title_right {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 textarea#tbCommentBody::placeholder {
-    color: #a9a9a9
+    color: #a9a9a9;
 }
 
 .login_tips {
@@ -1676,29 +1738,29 @@ textarea#tbCommentBody::placeholder {
     background-repeat: no-repeat;
     margin-top: 10px;
     padding: 0 0 10px 25px;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .login_tips a {
-    text-decoration: underline !important
+    text-decoration: underline !important;
 }
 
 .clear {
-    clear: both
+    clear: both;
 }
 
 .comment_quote {
     padding: 5px 5px 5px 5px;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
 }
 
-.comment_quote legend+br {
-    display: none
+.comment_quote legend + br {
+    display: none;
 }
 
 .comment_icon {
     cursor: pointer;
-    padding: 0 0 0 20px
+    padding: 0 0 0 20px;
 }
 
 .comment_option {
@@ -1707,17 +1769,17 @@ textarea#tbCommentBody::placeholder {
     border: none;
     outline: none;
     color: #808080;
-    fill: gray
+    fill: gray;
 }
 
 .comment_option:hover {
     fill: black;
-    color: #000
+    color: #000;
 }
 
 .inline_middle {
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .comment_svg {
@@ -1725,337 +1787,202 @@ textarea#tbCommentBody::placeholder {
     vertical-align: middle;
     width: 18px;
     height: 18px;
-    fill: gray
+    fill: gray;
 }
 
 .comment_svg_stroke {
-    stroke: gray
+    stroke: gray;
 }
 
 .comment_svg_stroke:hover {
-    stroke: black
+    stroke: black;
 }
 
 .comment_svg:hover {
-    fill: black
+    fill: black;
 }
 
 #comment_nav {
-    text-align: right
+    text-align: right;
 }
 
 #comment_nav a {
-    padding-left: 10px
+    padding-left: 10px;
 }
 
 .ad_commentbox_up {
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .ad_commentbox_up a {
-    padding-left: 10px
+    padding-left: 10px;
 }
-/*
-@font-face {
-    font-family: 'KaTeX_AMS';
-    src: url(fonts/KaTeX_AMS-Regular.woff2) format('woff2'),url(fonts/KaTeX_AMS-Regular.woff) format('woff'),url(fonts/KaTeX_AMS-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Caligraphic';
-    src: url(fonts/KaTeX_Caligraphic-Bold.woff2) format('woff2'),url(fonts/KaTeX_Caligraphic-Bold.woff) format('woff'),url(fonts/KaTeX_Caligraphic-Bold.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Caligraphic';
-    src: url(fonts/KaTeX_Caligraphic-Regular.woff2) format('woff2'),url(fonts/KaTeX_Caligraphic-Regular.woff) format('woff'),url(fonts/KaTeX_Caligraphic-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Fraktur';
-    src: url(fonts/KaTeX_Fraktur-Bold.woff2) format('woff2'),url(fonts/KaTeX_Fraktur-Bold.woff) format('woff'),url(fonts/KaTeX_Fraktur-Bold.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Fraktur';
-    src: url(fonts/KaTeX_Fraktur-Regular.woff2) format('woff2'),url(fonts/KaTeX_Fraktur-Regular.woff) format('woff'),url(fonts/KaTeX_Fraktur-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Main';
-    src: url(fonts/KaTeX_Main-Bold.woff2) format('woff2'),url(fonts/KaTeX_Main-Bold.woff) format('woff'),url(fonts/KaTeX_Main-Bold.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Main';
-    src: url(fonts/KaTeX_Main-BoldItalic.woff2) format('woff2'),url(fonts/KaTeX_Main-BoldItalic.woff) format('woff'),url(fonts/KaTeX_Main-BoldItalic.ttf) format('truetype');
-    font-weight: bold;
-    font-style: italic
-}
-
-@font-face {
-    font-family: 'KaTeX_Main';
-    src: url(fonts/KaTeX_Main-Italic.woff2) format('woff2'),url(fonts/KaTeX_Main-Italic.woff) format('woff'),url(fonts/KaTeX_Main-Italic.ttf) format('truetype');
-    font-weight: normal;
-    font-style: italic
-}
-
-@font-face {
-    font-family: 'KaTeX_Main';
-    src: url(fonts/KaTeX_Main-Regular.woff2) format('woff2'),url(fonts/KaTeX_Main-Regular.woff) format('woff'),url(fonts/KaTeX_Main-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Math';
-    src: url(fonts/KaTeX_Math-BoldItalic.woff2) format('woff2'),url(fonts/KaTeX_Math-BoldItalic.woff) format('woff'),url(fonts/KaTeX_Math-BoldItalic.ttf) format('truetype');
-    font-weight: bold;
-    font-style: italic
-}
-
-@font-face {
-    font-family: 'KaTeX_Math';
-    src: url(fonts/KaTeX_Math-Italic.woff2) format('woff2'),url(fonts/KaTeX_Math-Italic.woff) format('woff'),url(fonts/KaTeX_Math-Italic.ttf) format('truetype');
-    font-weight: normal;
-    font-style: italic
-}
-
-@font-face {
-    font-family: 'KaTeX_SansSerif';
-    src: url(fonts/KaTeX_SansSerif-Bold.woff2) format('woff2'),url(fonts/KaTeX_SansSerif-Bold.woff) format('woff'),url(fonts/KaTeX_SansSerif-Bold.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_SansSerif';
-    src: url(fonts/KaTeX_SansSerif-Italic.woff2) format('woff2'),url(fonts/KaTeX_SansSerif-Italic.woff) format('woff'),url(fonts/KaTeX_SansSerif-Italic.ttf) format('truetype');
-    font-weight: normal;
-    font-style: italic
-}
-
-@font-face {
-    font-family: 'KaTeX_SansSerif';
-    src: url(fonts/KaTeX_SansSerif-Regular.woff2) format('woff2'),url(fonts/KaTeX_SansSerif-Regular.woff) format('woff'),url(fonts/KaTeX_SansSerif-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Script';
-    src: url(fonts/KaTeX_Script-Regular.woff2) format('woff2'),url(fonts/KaTeX_Script-Regular.woff) format('woff'),url(fonts/KaTeX_Script-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Size1';
-    src: url(fonts/KaTeX_Size1-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size1-Regular.woff) format('woff'),url(fonts/KaTeX_Size1-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Size2';
-    src: url(fonts/KaTeX_Size2-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size2-Regular.woff) format('woff'),url(fonts/KaTeX_Size2-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Size3';
-    src: url(fonts/KaTeX_Size3-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size3-Regular.woff) format('woff'),url(fonts/KaTeX_Size3-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Size4';
-    src: url(fonts/KaTeX_Size4-Regular.woff2) format('woff2'),url(fonts/KaTeX_Size4-Regular.woff) format('woff'),url(fonts/KaTeX_Size4-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'KaTeX_Typewriter';
-    src: url(fonts/KaTeX_Typewriter-Regular.woff2) format('woff2'),url(fonts/KaTeX_Typewriter-Regular.woff) format('woff'),url(fonts/KaTeX_Typewriter-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal
-} */
-
 .katex {
-    font: normal 1.21em KaTeX_Main,Times New Roman,serif;
+    font: normal 1.21em KaTeX_Main, Times New Roman, serif;
     line-height: 1.2;
     text-indent: 0;
-    text-rendering: auto
+    text-rendering: auto;
 }
 
 .katex * {
-    -ms-high-contrast-adjust: none !important
+    -ms-high-contrast-adjust: none !important;
 }
 
 .katex .katex-version::after {
-    content: "0.11.1"
+    content: '0.11.1';
 }
 
 .katex .katex-mathml {
     position: absolute;
-    clip: rect(1px,1px,1px,1px);
+    clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
     border: 0;
     height: 1px;
     width: 1px;
-    overflow: hidden
+    overflow: hidden;
 }
 
-.katex .katex-html>.newline {
-    display: block
+.katex .katex-html > .newline {
+    display: block;
 }
 
 .katex .base {
     position: relative;
     display: inline-block;
     white-space: nowrap;
-    width: min-content
+    width: min-content;
 }
 
 .katex .strut {
-    display: inline-block
+    display: inline-block;
 }
 
 .katex .textbf {
-    font-weight: bold
+    font-weight: bold;
 }
 
 .katex .textit {
-    font-style: italic
+    font-style: italic;
 }
 
 .katex .textrm {
-    font-family: KaTeX_Main
+    font-family: KaTeX_Main;
 }
 
 .katex .textsf {
-    font-family: KaTeX_SansSerif
+    font-family: KaTeX_SansSerif;
 }
 
 .katex .texttt {
-    font-family: KaTeX_Typewriter
+    font-family: KaTeX_Typewriter;
 }
 
 .katex .mathdefault {
     font-family: KaTeX_Math;
-    font-style: italic
+    font-style: italic;
 }
 
 .katex .mathit {
     font-family: KaTeX_Main;
-    font-style: italic
+    font-style: italic;
 }
 
 .katex .mathrm {
-    font-style: normal
+    font-style: normal;
 }
 
 .katex .mathbf {
     font-family: KaTeX_Main;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .katex .boldsymbol {
     font-family: KaTeX_Math;
     font-weight: bold;
-    font-style: italic
+    font-style: italic;
 }
 
 .katex .amsrm {
-    font-family: KaTeX_AMS
+    font-family: KaTeX_AMS;
 }
 
-.katex .mathbb,.katex .textbb {
-    font-family: KaTeX_AMS
+.katex .mathbb,
+.katex .textbb {
+    font-family: KaTeX_AMS;
 }
 
 .katex .mathcal {
-    font-family: KaTeX_Caligraphic
+    font-family: KaTeX_Caligraphic;
 }
 
-.katex .mathfrak,.katex .textfrak {
-    font-family: KaTeX_Fraktur
+.katex .mathfrak,
+.katex .textfrak {
+    font-family: KaTeX_Fraktur;
 }
 
 .katex .mathtt {
-    font-family: KaTeX_Typewriter
+    font-family: KaTeX_Typewriter;
 }
 
-.katex .mathscr,.katex .textscr {
-    font-family: KaTeX_Script
+.katex .mathscr,
+.katex .textscr {
+    font-family: KaTeX_Script;
 }
 
-.katex .mathsf,.katex .textsf {
-    font-family: KaTeX_SansSerif
-}
-
-.katex .mathboldsf,.katex .textboldsf {
+.katex .mathsf,
+.katex .textsf {
     font-family: KaTeX_SansSerif;
-    font-weight: bold
 }
 
-.katex .mathitsf,.katex .textitsf {
+.katex .mathboldsf,
+.katex .textboldsf {
     font-family: KaTeX_SansSerif;
-    font-style: italic
+    font-weight: bold;
+}
+
+.katex .mathitsf,
+.katex .textitsf {
+    font-family: KaTeX_SansSerif;
+    font-style: italic;
 }
 
 .katex .mainrm {
     font-family: KaTeX_Main;
-    font-style: normal
+    font-style: normal;
 }
 
 .katex .vlist-t {
     display: inline-table;
-    table-layout: fixed
+    table-layout: fixed;
 }
 
 .katex .vlist-r {
-    display: table-row
+    display: table-row;
 }
 
 .katex .vlist {
     display: table-cell;
     vertical-align: bottom;
-    position: relative
+    position: relative;
 }
 
-.katex .vlist>span {
+.katex .vlist > span {
     display: block;
     height: 0;
-    position: relative
+    position: relative;
 }
 
-.katex .vlist>span>span {
-    display: inline-block
+.katex .vlist > span > span {
+    display: inline-block;
 }
 
-.katex .vlist>span>.pstrut {
+.katex .vlist > span > .pstrut {
     overflow: hidden;
-    width: 0
+    width: 0;
 }
 
 .katex .vlist-t2 {
-    margin-right: -2px
+    margin-right: -2px;
 }
 
 .katex .vlist-s {
@@ -2063,652 +1990,787 @@ textarea#tbCommentBody::placeholder {
     vertical-align: bottom;
     font-size: 1px;
     width: 2px;
-    min-width: 2px
+    min-width: 2px;
 }
 
 .katex .msupsub {
-    text-align: left
+    text-align: left;
 }
 
-.katex .mfrac>span>span {
-    text-align: center
+.katex .mfrac > span > span {
+    text-align: center;
 }
 
 .katex .mfrac .frac-line {
     display: inline-block;
     width: 100%;
-    border-bottom-style: solid
+    border-bottom-style: solid;
 }
 
-.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .underline .underline-line,.katex .hline,.katex .hdashline,.katex .rule {
-    min-height: 1px
+.katex .mfrac .frac-line,
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline,
+.katex .hdashline,
+.katex .rule {
+    min-height: 1px;
 }
 
 .katex .mspace {
-    display: inline-block
+    display: inline-block;
 }
 
-.katex .llap,.katex .rlap,.katex .clap {
+.katex .llap,
+.katex .rlap,
+.katex .clap {
     width: 0;
-    position: relative
+    position: relative;
 }
 
-.katex .llap>.inner,.katex .rlap>.inner,.katex .clap>.inner {
-    position: absolute
+.katex .llap > .inner,
+.katex .rlap > .inner,
+.katex .clap > .inner {
+    position: absolute;
 }
 
-.katex .llap>.fix,.katex .rlap>.fix,.katex .clap>.fix {
-    display: inline-block
+.katex .llap > .fix,
+.katex .rlap > .fix,
+.katex .clap > .fix {
+    display: inline-block;
 }
 
-.katex .llap>.inner {
-    right: 0
+.katex .llap > .inner {
+    right: 0;
 }
 
-.katex .rlap>.inner,.katex .clap>.inner {
-    left: 0
+.katex .rlap > .inner,
+.katex .clap > .inner {
+    left: 0;
 }
 
-.katex .clap>.inner>span {
+.katex .clap > .inner > span {
     margin-left: -50%;
-    margin-right: 50%
+    margin-right: 50%;
 }
 
 .katex .rule {
     display: inline-block;
     border: solid 0;
-    position: relative
+    position: relative;
 }
 
-.katex .overline .overline-line,.katex .underline .underline-line,.katex .hline {
+.katex .overline .overline-line,
+.katex .underline .underline-line,
+.katex .hline {
     display: inline-block;
     width: 100%;
-    border-bottom-style: solid
+    border-bottom-style: solid;
 }
 
 .katex .hdashline {
     display: inline-block;
     width: 100%;
-    border-bottom-style: dashed
+    border-bottom-style: dashed;
 }
 
-.katex .sqrt>.root {
-    margin-left: .27777778em;
-    margin-right: -.55555556em
+.katex .sqrt > .root {
+    margin-left: 0.27777778em;
+    margin-right: -0.55555556em;
 }
 
-.katex .sizing.reset-size1.size1,.katex .fontsize-ensurer.reset-size1.size1 {
-    font-size: 1em
+.katex .sizing.reset-size1.size1,
+.katex .fontsize-ensurer.reset-size1.size1 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size1.size2,.katex .fontsize-ensurer.reset-size1.size2 {
-    font-size: 1.2em
+.katex .sizing.reset-size1.size2,
+.katex .fontsize-ensurer.reset-size1.size2 {
+    font-size: 1.2em;
 }
 
-.katex .sizing.reset-size1.size3,.katex .fontsize-ensurer.reset-size1.size3 {
-    font-size: 1.4em
+.katex .sizing.reset-size1.size3,
+.katex .fontsize-ensurer.reset-size1.size3 {
+    font-size: 1.4em;
 }
 
-.katex .sizing.reset-size1.size4,.katex .fontsize-ensurer.reset-size1.size4 {
-    font-size: 1.6em
+.katex .sizing.reset-size1.size4,
+.katex .fontsize-ensurer.reset-size1.size4 {
+    font-size: 1.6em;
 }
 
-.katex .sizing.reset-size1.size5,.katex .fontsize-ensurer.reset-size1.size5 {
-    font-size: 1.8em
+.katex .sizing.reset-size1.size5,
+.katex .fontsize-ensurer.reset-size1.size5 {
+    font-size: 1.8em;
 }
 
-.katex .sizing.reset-size1.size6,.katex .fontsize-ensurer.reset-size1.size6 {
-    font-size: 2em
+.katex .sizing.reset-size1.size6,
+.katex .fontsize-ensurer.reset-size1.size6 {
+    font-size: 2em;
 }
 
-.katex .sizing.reset-size1.size7,.katex .fontsize-ensurer.reset-size1.size7 {
-    font-size: 2.4em
+.katex .sizing.reset-size1.size7,
+.katex .fontsize-ensurer.reset-size1.size7 {
+    font-size: 2.4em;
 }
 
-.katex .sizing.reset-size1.size8,.katex .fontsize-ensurer.reset-size1.size8 {
-    font-size: 2.88em
+.katex .sizing.reset-size1.size8,
+.katex .fontsize-ensurer.reset-size1.size8 {
+    font-size: 2.88em;
 }
 
-.katex .sizing.reset-size1.size9,.katex .fontsize-ensurer.reset-size1.size9 {
-    font-size: 3.456em
+.katex .sizing.reset-size1.size9,
+.katex .fontsize-ensurer.reset-size1.size9 {
+    font-size: 3.456em;
 }
 
-.katex .sizing.reset-size1.size10,.katex .fontsize-ensurer.reset-size1.size10 {
-    font-size: 4.148em
+.katex .sizing.reset-size1.size10,
+.katex .fontsize-ensurer.reset-size1.size10 {
+    font-size: 4.148em;
 }
 
-.katex .sizing.reset-size1.size11,.katex .fontsize-ensurer.reset-size1.size11 {
-    font-size: 4.976em
+.katex .sizing.reset-size1.size11,
+.katex .fontsize-ensurer.reset-size1.size11 {
+    font-size: 4.976em;
 }
 
-.katex .sizing.reset-size2.size1,.katex .fontsize-ensurer.reset-size2.size1 {
-    font-size: .83333333em
+.katex .sizing.reset-size2.size1,
+.katex .fontsize-ensurer.reset-size2.size1 {
+    font-size: 0.83333333em;
 }
 
-.katex .sizing.reset-size2.size2,.katex .fontsize-ensurer.reset-size2.size2 {
-    font-size: 1em
+.katex .sizing.reset-size2.size2,
+.katex .fontsize-ensurer.reset-size2.size2 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size2.size3,.katex .fontsize-ensurer.reset-size2.size3 {
-    font-size: 1.16666667em
+.katex .sizing.reset-size2.size3,
+.katex .fontsize-ensurer.reset-size2.size3 {
+    font-size: 1.16666667em;
 }
 
-.katex .sizing.reset-size2.size4,.katex .fontsize-ensurer.reset-size2.size4 {
-    font-size: 1.33333333em
+.katex .sizing.reset-size2.size4,
+.katex .fontsize-ensurer.reset-size2.size4 {
+    font-size: 1.33333333em;
 }
 
-.katex .sizing.reset-size2.size5,.katex .fontsize-ensurer.reset-size2.size5 {
-    font-size: 1.5em
+.katex .sizing.reset-size2.size5,
+.katex .fontsize-ensurer.reset-size2.size5 {
+    font-size: 1.5em;
 }
 
-.katex .sizing.reset-size2.size6,.katex .fontsize-ensurer.reset-size2.size6 {
-    font-size: 1.66666667em
+.katex .sizing.reset-size2.size6,
+.katex .fontsize-ensurer.reset-size2.size6 {
+    font-size: 1.66666667em;
 }
 
-.katex .sizing.reset-size2.size7,.katex .fontsize-ensurer.reset-size2.size7 {
-    font-size: 2em
+.katex .sizing.reset-size2.size7,
+.katex .fontsize-ensurer.reset-size2.size7 {
+    font-size: 2em;
 }
 
-.katex .sizing.reset-size2.size8,.katex .fontsize-ensurer.reset-size2.size8 {
-    font-size: 2.4em
+.katex .sizing.reset-size2.size8,
+.katex .fontsize-ensurer.reset-size2.size8 {
+    font-size: 2.4em;
 }
 
-.katex .sizing.reset-size2.size9,.katex .fontsize-ensurer.reset-size2.size9 {
-    font-size: 2.88em
+.katex .sizing.reset-size2.size9,
+.katex .fontsize-ensurer.reset-size2.size9 {
+    font-size: 2.88em;
 }
 
-.katex .sizing.reset-size2.size10,.katex .fontsize-ensurer.reset-size2.size10 {
-    font-size: 3.45666667em
+.katex .sizing.reset-size2.size10,
+.katex .fontsize-ensurer.reset-size2.size10 {
+    font-size: 3.45666667em;
 }
 
-.katex .sizing.reset-size2.size11,.katex .fontsize-ensurer.reset-size2.size11 {
-    font-size: 4.14666667em
+.katex .sizing.reset-size2.size11,
+.katex .fontsize-ensurer.reset-size2.size11 {
+    font-size: 4.14666667em;
 }
 
-.katex .sizing.reset-size3.size1,.katex .fontsize-ensurer.reset-size3.size1 {
-    font-size: .71428571em
+.katex .sizing.reset-size3.size1,
+.katex .fontsize-ensurer.reset-size3.size1 {
+    font-size: 0.71428571em;
 }
 
-.katex .sizing.reset-size3.size2,.katex .fontsize-ensurer.reset-size3.size2 {
-    font-size: .85714286em
+.katex .sizing.reset-size3.size2,
+.katex .fontsize-ensurer.reset-size3.size2 {
+    font-size: 0.85714286em;
 }
 
-.katex .sizing.reset-size3.size3,.katex .fontsize-ensurer.reset-size3.size3 {
-    font-size: 1em
+.katex .sizing.reset-size3.size3,
+.katex .fontsize-ensurer.reset-size3.size3 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size3.size4,.katex .fontsize-ensurer.reset-size3.size4 {
-    font-size: 1.14285714em
+.katex .sizing.reset-size3.size4,
+.katex .fontsize-ensurer.reset-size3.size4 {
+    font-size: 1.14285714em;
 }
 
-.katex .sizing.reset-size3.size5,.katex .fontsize-ensurer.reset-size3.size5 {
-    font-size: 1.28571429em
+.katex .sizing.reset-size3.size5,
+.katex .fontsize-ensurer.reset-size3.size5 {
+    font-size: 1.28571429em;
 }
 
-.katex .sizing.reset-size3.size6,.katex .fontsize-ensurer.reset-size3.size6 {
-    font-size: 1.42857143em
+.katex .sizing.reset-size3.size6,
+.katex .fontsize-ensurer.reset-size3.size6 {
+    font-size: 1.42857143em;
 }
 
-.katex .sizing.reset-size3.size7,.katex .fontsize-ensurer.reset-size3.size7 {
-    font-size: 1.71428571em
+.katex .sizing.reset-size3.size7,
+.katex .fontsize-ensurer.reset-size3.size7 {
+    font-size: 1.71428571em;
 }
 
-.katex .sizing.reset-size3.size8,.katex .fontsize-ensurer.reset-size3.size8 {
-    font-size: 2.05714286em
+.katex .sizing.reset-size3.size8,
+.katex .fontsize-ensurer.reset-size3.size8 {
+    font-size: 2.05714286em;
 }
 
-.katex .sizing.reset-size3.size9,.katex .fontsize-ensurer.reset-size3.size9 {
-    font-size: 2.46857143em
+.katex .sizing.reset-size3.size9,
+.katex .fontsize-ensurer.reset-size3.size9 {
+    font-size: 2.46857143em;
 }
 
-.katex .sizing.reset-size3.size10,.katex .fontsize-ensurer.reset-size3.size10 {
-    font-size: 2.96285714em
+.katex .sizing.reset-size3.size10,
+.katex .fontsize-ensurer.reset-size3.size10 {
+    font-size: 2.96285714em;
 }
 
-.katex .sizing.reset-size3.size11,.katex .fontsize-ensurer.reset-size3.size11 {
-    font-size: 3.55428571em
+.katex .sizing.reset-size3.size11,
+.katex .fontsize-ensurer.reset-size3.size11 {
+    font-size: 3.55428571em;
 }
 
-.katex .sizing.reset-size4.size1,.katex .fontsize-ensurer.reset-size4.size1 {
-    font-size: .625em
+.katex .sizing.reset-size4.size1,
+.katex .fontsize-ensurer.reset-size4.size1 {
+    font-size: 0.625em;
 }
 
-.katex .sizing.reset-size4.size2,.katex .fontsize-ensurer.reset-size4.size2 {
-    font-size: .75em
+.katex .sizing.reset-size4.size2,
+.katex .fontsize-ensurer.reset-size4.size2 {
+    font-size: 0.75em;
 }
 
-.katex .sizing.reset-size4.size3,.katex .fontsize-ensurer.reset-size4.size3 {
-    font-size: .875em
+.katex .sizing.reset-size4.size3,
+.katex .fontsize-ensurer.reset-size4.size3 {
+    font-size: 0.875em;
 }
 
-.katex .sizing.reset-size4.size4,.katex .fontsize-ensurer.reset-size4.size4 {
-    font-size: 1em
+.katex .sizing.reset-size4.size4,
+.katex .fontsize-ensurer.reset-size4.size4 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size4.size5,.katex .fontsize-ensurer.reset-size4.size5 {
-    font-size: 1.125em
+.katex .sizing.reset-size4.size5,
+.katex .fontsize-ensurer.reset-size4.size5 {
+    font-size: 1.125em;
 }
 
-.katex .sizing.reset-size4.size6,.katex .fontsize-ensurer.reset-size4.size6 {
-    font-size: 1.25em
+.katex .sizing.reset-size4.size6,
+.katex .fontsize-ensurer.reset-size4.size6 {
+    font-size: 1.25em;
 }
 
-.katex .sizing.reset-size4.size7,.katex .fontsize-ensurer.reset-size4.size7 {
-    font-size: 1.5em
+.katex .sizing.reset-size4.size7,
+.katex .fontsize-ensurer.reset-size4.size7 {
+    font-size: 1.5em;
 }
 
-.katex .sizing.reset-size4.size8,.katex .fontsize-ensurer.reset-size4.size8 {
-    font-size: 1.8em
+.katex .sizing.reset-size4.size8,
+.katex .fontsize-ensurer.reset-size4.size8 {
+    font-size: 1.8em;
 }
 
-.katex .sizing.reset-size4.size9,.katex .fontsize-ensurer.reset-size4.size9 {
-    font-size: 2.16em
+.katex .sizing.reset-size4.size9,
+.katex .fontsize-ensurer.reset-size4.size9 {
+    font-size: 2.16em;
 }
 
-.katex .sizing.reset-size4.size10,.katex .fontsize-ensurer.reset-size4.size10 {
-    font-size: 2.5925em
+.katex .sizing.reset-size4.size10,
+.katex .fontsize-ensurer.reset-size4.size10 {
+    font-size: 2.5925em;
 }
 
-.katex .sizing.reset-size4.size11,.katex .fontsize-ensurer.reset-size4.size11 {
-    font-size: 3.11em
+.katex .sizing.reset-size4.size11,
+.katex .fontsize-ensurer.reset-size4.size11 {
+    font-size: 3.11em;
 }
 
-.katex .sizing.reset-size5.size1,.katex .fontsize-ensurer.reset-size5.size1 {
-    font-size: .55555556em
+.katex .sizing.reset-size5.size1,
+.katex .fontsize-ensurer.reset-size5.size1 {
+    font-size: 0.55555556em;
 }
 
-.katex .sizing.reset-size5.size2,.katex .fontsize-ensurer.reset-size5.size2 {
-    font-size: .66666667em
+.katex .sizing.reset-size5.size2,
+.katex .fontsize-ensurer.reset-size5.size2 {
+    font-size: 0.66666667em;
 }
 
-.katex .sizing.reset-size5.size3,.katex .fontsize-ensurer.reset-size5.size3 {
-    font-size: .77777778em
+.katex .sizing.reset-size5.size3,
+.katex .fontsize-ensurer.reset-size5.size3 {
+    font-size: 0.77777778em;
 }
 
-.katex .sizing.reset-size5.size4,.katex .fontsize-ensurer.reset-size5.size4 {
-    font-size: .88888889em
+.katex .sizing.reset-size5.size4,
+.katex .fontsize-ensurer.reset-size5.size4 {
+    font-size: 0.88888889em;
 }
 
-.katex .sizing.reset-size5.size5,.katex .fontsize-ensurer.reset-size5.size5 {
-    font-size: 1em
+.katex .sizing.reset-size5.size5,
+.katex .fontsize-ensurer.reset-size5.size5 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size5.size6,.katex .fontsize-ensurer.reset-size5.size6 {
-    font-size: 1.11111111em
+.katex .sizing.reset-size5.size6,
+.katex .fontsize-ensurer.reset-size5.size6 {
+    font-size: 1.11111111em;
 }
 
-.katex .sizing.reset-size5.size7,.katex .fontsize-ensurer.reset-size5.size7 {
-    font-size: 1.33333333em
+.katex .sizing.reset-size5.size7,
+.katex .fontsize-ensurer.reset-size5.size7 {
+    font-size: 1.33333333em;
 }
 
-.katex .sizing.reset-size5.size8,.katex .fontsize-ensurer.reset-size5.size8 {
-    font-size: 1.6em
+.katex .sizing.reset-size5.size8,
+.katex .fontsize-ensurer.reset-size5.size8 {
+    font-size: 1.6em;
 }
 
-.katex .sizing.reset-size5.size9,.katex .fontsize-ensurer.reset-size5.size9 {
-    font-size: 1.92em
+.katex .sizing.reset-size5.size9,
+.katex .fontsize-ensurer.reset-size5.size9 {
+    font-size: 1.92em;
 }
 
-.katex .sizing.reset-size5.size10,.katex .fontsize-ensurer.reset-size5.size10 {
-    font-size: 2.30444444em
+.katex .sizing.reset-size5.size10,
+.katex .fontsize-ensurer.reset-size5.size10 {
+    font-size: 2.30444444em;
 }
 
-.katex .sizing.reset-size5.size11,.katex .fontsize-ensurer.reset-size5.size11 {
-    font-size: 2.76444444em
+.katex .sizing.reset-size5.size11,
+.katex .fontsize-ensurer.reset-size5.size11 {
+    font-size: 2.76444444em;
 }
 
-.katex .sizing.reset-size6.size1,.katex .fontsize-ensurer.reset-size6.size1 {
-    font-size: .5em
+.katex .sizing.reset-size6.size1,
+.katex .fontsize-ensurer.reset-size6.size1 {
+    font-size: 0.5em;
 }
 
-.katex .sizing.reset-size6.size2,.katex .fontsize-ensurer.reset-size6.size2 {
-    font-size: .6em
+.katex .sizing.reset-size6.size2,
+.katex .fontsize-ensurer.reset-size6.size2 {
+    font-size: 0.6em;
 }
 
-.katex .sizing.reset-size6.size3,.katex .fontsize-ensurer.reset-size6.size3 {
-    font-size: .7em
+.katex .sizing.reset-size6.size3,
+.katex .fontsize-ensurer.reset-size6.size3 {
+    font-size: 0.7em;
 }
 
-.katex .sizing.reset-size6.size4,.katex .fontsize-ensurer.reset-size6.size4 {
-    font-size: .8em
+.katex .sizing.reset-size6.size4,
+.katex .fontsize-ensurer.reset-size6.size4 {
+    font-size: 0.8em;
 }
 
-.katex .sizing.reset-size6.size5,.katex .fontsize-ensurer.reset-size6.size5 {
-    font-size: .9em
+.katex .sizing.reset-size6.size5,
+.katex .fontsize-ensurer.reset-size6.size5 {
+    font-size: 0.9em;
 }
 
-.katex .sizing.reset-size6.size6,.katex .fontsize-ensurer.reset-size6.size6 {
-    font-size: 1em
+.katex .sizing.reset-size6.size6,
+.katex .fontsize-ensurer.reset-size6.size6 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size6.size7,.katex .fontsize-ensurer.reset-size6.size7 {
-    font-size: 1.2em
+.katex .sizing.reset-size6.size7,
+.katex .fontsize-ensurer.reset-size6.size7 {
+    font-size: 1.2em;
 }
 
-.katex .sizing.reset-size6.size8,.katex .fontsize-ensurer.reset-size6.size8 {
-    font-size: 1.44em
+.katex .sizing.reset-size6.size8,
+.katex .fontsize-ensurer.reset-size6.size8 {
+    font-size: 1.44em;
 }
 
-.katex .sizing.reset-size6.size9,.katex .fontsize-ensurer.reset-size6.size9 {
-    font-size: 1.728em
+.katex .sizing.reset-size6.size9,
+.katex .fontsize-ensurer.reset-size6.size9 {
+    font-size: 1.728em;
 }
 
-.katex .sizing.reset-size6.size10,.katex .fontsize-ensurer.reset-size6.size10 {
-    font-size: 2.074em
+.katex .sizing.reset-size6.size10,
+.katex .fontsize-ensurer.reset-size6.size10 {
+    font-size: 2.074em;
 }
 
-.katex .sizing.reset-size6.size11,.katex .fontsize-ensurer.reset-size6.size11 {
-    font-size: 2.488em
+.katex .sizing.reset-size6.size11,
+.katex .fontsize-ensurer.reset-size6.size11 {
+    font-size: 2.488em;
 }
 
-.katex .sizing.reset-size7.size1,.katex .fontsize-ensurer.reset-size7.size1 {
-    font-size: .41666667em
+.katex .sizing.reset-size7.size1,
+.katex .fontsize-ensurer.reset-size7.size1 {
+    font-size: 0.41666667em;
 }
 
-.katex .sizing.reset-size7.size2,.katex .fontsize-ensurer.reset-size7.size2 {
-    font-size: .5em
+.katex .sizing.reset-size7.size2,
+.katex .fontsize-ensurer.reset-size7.size2 {
+    font-size: 0.5em;
 }
 
-.katex .sizing.reset-size7.size3,.katex .fontsize-ensurer.reset-size7.size3 {
-    font-size: .58333333em
+.katex .sizing.reset-size7.size3,
+.katex .fontsize-ensurer.reset-size7.size3 {
+    font-size: 0.58333333em;
 }
 
-.katex .sizing.reset-size7.size4,.katex .fontsize-ensurer.reset-size7.size4 {
-    font-size: .66666667em
+.katex .sizing.reset-size7.size4,
+.katex .fontsize-ensurer.reset-size7.size4 {
+    font-size: 0.66666667em;
 }
 
-.katex .sizing.reset-size7.size5,.katex .fontsize-ensurer.reset-size7.size5 {
-    font-size: .75em
+.katex .sizing.reset-size7.size5,
+.katex .fontsize-ensurer.reset-size7.size5 {
+    font-size: 0.75em;
 }
 
-.katex .sizing.reset-size7.size6,.katex .fontsize-ensurer.reset-size7.size6 {
-    font-size: .83333333em
+.katex .sizing.reset-size7.size6,
+.katex .fontsize-ensurer.reset-size7.size6 {
+    font-size: 0.83333333em;
 }
 
-.katex .sizing.reset-size7.size7,.katex .fontsize-ensurer.reset-size7.size7 {
-    font-size: 1em
+.katex .sizing.reset-size7.size7,
+.katex .fontsize-ensurer.reset-size7.size7 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size7.size8,.katex .fontsize-ensurer.reset-size7.size8 {
-    font-size: 1.2em
+.katex .sizing.reset-size7.size8,
+.katex .fontsize-ensurer.reset-size7.size8 {
+    font-size: 1.2em;
 }
 
-.katex .sizing.reset-size7.size9,.katex .fontsize-ensurer.reset-size7.size9 {
-    font-size: 1.44em
+.katex .sizing.reset-size7.size9,
+.katex .fontsize-ensurer.reset-size7.size9 {
+    font-size: 1.44em;
 }
 
-.katex .sizing.reset-size7.size10,.katex .fontsize-ensurer.reset-size7.size10 {
-    font-size: 1.72833333em
+.katex .sizing.reset-size7.size10,
+.katex .fontsize-ensurer.reset-size7.size10 {
+    font-size: 1.72833333em;
 }
 
-.katex .sizing.reset-size7.size11,.katex .fontsize-ensurer.reset-size7.size11 {
-    font-size: 2.07333333em
+.katex .sizing.reset-size7.size11,
+.katex .fontsize-ensurer.reset-size7.size11 {
+    font-size: 2.07333333em;
 }
 
-.katex .sizing.reset-size8.size1,.katex .fontsize-ensurer.reset-size8.size1 {
-    font-size: .34722222em
+.katex .sizing.reset-size8.size1,
+.katex .fontsize-ensurer.reset-size8.size1 {
+    font-size: 0.34722222em;
 }
 
-.katex .sizing.reset-size8.size2,.katex .fontsize-ensurer.reset-size8.size2 {
-    font-size: .41666667em
+.katex .sizing.reset-size8.size2,
+.katex .fontsize-ensurer.reset-size8.size2 {
+    font-size: 0.41666667em;
 }
 
-.katex .sizing.reset-size8.size3,.katex .fontsize-ensurer.reset-size8.size3 {
-    font-size: .48611111em
+.katex .sizing.reset-size8.size3,
+.katex .fontsize-ensurer.reset-size8.size3 {
+    font-size: 0.48611111em;
 }
 
-.katex .sizing.reset-size8.size4,.katex .fontsize-ensurer.reset-size8.size4 {
-    font-size: .55555556em
+.katex .sizing.reset-size8.size4,
+.katex .fontsize-ensurer.reset-size8.size4 {
+    font-size: 0.55555556em;
 }
 
-.katex .sizing.reset-size8.size5,.katex .fontsize-ensurer.reset-size8.size5 {
-    font-size: .625em
+.katex .sizing.reset-size8.size5,
+.katex .fontsize-ensurer.reset-size8.size5 {
+    font-size: 0.625em;
 }
 
-.katex .sizing.reset-size8.size6,.katex .fontsize-ensurer.reset-size8.size6 {
-    font-size: .69444444em
+.katex .sizing.reset-size8.size6,
+.katex .fontsize-ensurer.reset-size8.size6 {
+    font-size: 0.69444444em;
 }
 
-.katex .sizing.reset-size8.size7,.katex .fontsize-ensurer.reset-size8.size7 {
-    font-size: .83333333em
+.katex .sizing.reset-size8.size7,
+.katex .fontsize-ensurer.reset-size8.size7 {
+    font-size: 0.83333333em;
 }
 
-.katex .sizing.reset-size8.size8,.katex .fontsize-ensurer.reset-size8.size8 {
-    font-size: 1em
+.katex .sizing.reset-size8.size8,
+.katex .fontsize-ensurer.reset-size8.size8 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size8.size9,.katex .fontsize-ensurer.reset-size8.size9 {
-    font-size: 1.2em
+.katex .sizing.reset-size8.size9,
+.katex .fontsize-ensurer.reset-size8.size9 {
+    font-size: 1.2em;
 }
 
-.katex .sizing.reset-size8.size10,.katex .fontsize-ensurer.reset-size8.size10 {
-    font-size: 1.44027778em
+.katex .sizing.reset-size8.size10,
+.katex .fontsize-ensurer.reset-size8.size10 {
+    font-size: 1.44027778em;
 }
 
-.katex .sizing.reset-size8.size11,.katex .fontsize-ensurer.reset-size8.size11 {
-    font-size: 1.72777778em
+.katex .sizing.reset-size8.size11,
+.katex .fontsize-ensurer.reset-size8.size11 {
+    font-size: 1.72777778em;
 }
 
-.katex .sizing.reset-size9.size1,.katex .fontsize-ensurer.reset-size9.size1 {
-    font-size: .28935185em
+.katex .sizing.reset-size9.size1,
+.katex .fontsize-ensurer.reset-size9.size1 {
+    font-size: 0.28935185em;
 }
 
-.katex .sizing.reset-size9.size2,.katex .fontsize-ensurer.reset-size9.size2 {
-    font-size: .34722222em
+.katex .sizing.reset-size9.size2,
+.katex .fontsize-ensurer.reset-size9.size2 {
+    font-size: 0.34722222em;
 }
 
-.katex .sizing.reset-size9.size3,.katex .fontsize-ensurer.reset-size9.size3 {
-    font-size: .40509259em
+.katex .sizing.reset-size9.size3,
+.katex .fontsize-ensurer.reset-size9.size3 {
+    font-size: 0.40509259em;
 }
 
-.katex .sizing.reset-size9.size4,.katex .fontsize-ensurer.reset-size9.size4 {
-    font-size: .46296296em
+.katex .sizing.reset-size9.size4,
+.katex .fontsize-ensurer.reset-size9.size4 {
+    font-size: 0.46296296em;
 }
 
-.katex .sizing.reset-size9.size5,.katex .fontsize-ensurer.reset-size9.size5 {
-    font-size: .52083333em
+.katex .sizing.reset-size9.size5,
+.katex .fontsize-ensurer.reset-size9.size5 {
+    font-size: 0.52083333em;
 }
 
-.katex .sizing.reset-size9.size6,.katex .fontsize-ensurer.reset-size9.size6 {
-    font-size: .5787037em
+.katex .sizing.reset-size9.size6,
+.katex .fontsize-ensurer.reset-size9.size6 {
+    font-size: 0.5787037em;
 }
 
-.katex .sizing.reset-size9.size7,.katex .fontsize-ensurer.reset-size9.size7 {
-    font-size: .69444444em
+.katex .sizing.reset-size9.size7,
+.katex .fontsize-ensurer.reset-size9.size7 {
+    font-size: 0.69444444em;
 }
 
-.katex .sizing.reset-size9.size8,.katex .fontsize-ensurer.reset-size9.size8 {
-    font-size: .83333333em
+.katex .sizing.reset-size9.size8,
+.katex .fontsize-ensurer.reset-size9.size8 {
+    font-size: 0.83333333em;
 }
 
-.katex .sizing.reset-size9.size9,.katex .fontsize-ensurer.reset-size9.size9 {
-    font-size: 1em
+.katex .sizing.reset-size9.size9,
+.katex .fontsize-ensurer.reset-size9.size9 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size9.size10,.katex .fontsize-ensurer.reset-size9.size10 {
-    font-size: 1.20023148em
+.katex .sizing.reset-size9.size10,
+.katex .fontsize-ensurer.reset-size9.size10 {
+    font-size: 1.20023148em;
 }
 
-.katex .sizing.reset-size9.size11,.katex .fontsize-ensurer.reset-size9.size11 {
-    font-size: 1.43981481em
+.katex .sizing.reset-size9.size11,
+.katex .fontsize-ensurer.reset-size9.size11 {
+    font-size: 1.43981481em;
 }
 
-.katex .sizing.reset-size10.size1,.katex .fontsize-ensurer.reset-size10.size1 {
-    font-size: .24108004em
+.katex .sizing.reset-size10.size1,
+.katex .fontsize-ensurer.reset-size10.size1 {
+    font-size: 0.24108004em;
 }
 
-.katex .sizing.reset-size10.size2,.katex .fontsize-ensurer.reset-size10.size2 {
-    font-size: .28929605em
+.katex .sizing.reset-size10.size2,
+.katex .fontsize-ensurer.reset-size10.size2 {
+    font-size: 0.28929605em;
 }
 
-.katex .sizing.reset-size10.size3,.katex .fontsize-ensurer.reset-size10.size3 {
-    font-size: .33751205em
+.katex .sizing.reset-size10.size3,
+.katex .fontsize-ensurer.reset-size10.size3 {
+    font-size: 0.33751205em;
 }
 
-.katex .sizing.reset-size10.size4,.katex .fontsize-ensurer.reset-size10.size4 {
-    font-size: .38572806em
+.katex .sizing.reset-size10.size4,
+.katex .fontsize-ensurer.reset-size10.size4 {
+    font-size: 0.38572806em;
 }
 
-.katex .sizing.reset-size10.size5,.katex .fontsize-ensurer.reset-size10.size5 {
-    font-size: .43394407em
+.katex .sizing.reset-size10.size5,
+.katex .fontsize-ensurer.reset-size10.size5 {
+    font-size: 0.43394407em;
 }
 
-.katex .sizing.reset-size10.size6,.katex .fontsize-ensurer.reset-size10.size6 {
-    font-size: .48216008em
+.katex .sizing.reset-size10.size6,
+.katex .fontsize-ensurer.reset-size10.size6 {
+    font-size: 0.48216008em;
 }
 
-.katex .sizing.reset-size10.size7,.katex .fontsize-ensurer.reset-size10.size7 {
-    font-size: .57859209em
+.katex .sizing.reset-size10.size7,
+.katex .fontsize-ensurer.reset-size10.size7 {
+    font-size: 0.57859209em;
 }
 
-.katex .sizing.reset-size10.size8,.katex .fontsize-ensurer.reset-size10.size8 {
-    font-size: .69431051em
+.katex .sizing.reset-size10.size8,
+.katex .fontsize-ensurer.reset-size10.size8 {
+    font-size: 0.69431051em;
 }
 
-.katex .sizing.reset-size10.size9,.katex .fontsize-ensurer.reset-size10.size9 {
-    font-size: .83317261em
+.katex .sizing.reset-size10.size9,
+.katex .fontsize-ensurer.reset-size10.size9 {
+    font-size: 0.83317261em;
 }
 
-.katex .sizing.reset-size10.size10,.katex .fontsize-ensurer.reset-size10.size10 {
-    font-size: 1em
+.katex .sizing.reset-size10.size10,
+.katex .fontsize-ensurer.reset-size10.size10 {
+    font-size: 1em;
 }
 
-.katex .sizing.reset-size10.size11,.katex .fontsize-ensurer.reset-size10.size11 {
-    font-size: 1.19961427em
+.katex .sizing.reset-size10.size11,
+.katex .fontsize-ensurer.reset-size10.size11 {
+    font-size: 1.19961427em;
 }
 
-.katex .sizing.reset-size11.size1,.katex .fontsize-ensurer.reset-size11.size1 {
-    font-size: .20096463em
+.katex .sizing.reset-size11.size1,
+.katex .fontsize-ensurer.reset-size11.size1 {
+    font-size: 0.20096463em;
 }
 
-.katex .sizing.reset-size11.size2,.katex .fontsize-ensurer.reset-size11.size2 {
-    font-size: .24115756em
+.katex .sizing.reset-size11.size2,
+.katex .fontsize-ensurer.reset-size11.size2 {
+    font-size: 0.24115756em;
 }
 
-.katex .sizing.reset-size11.size3,.katex .fontsize-ensurer.reset-size11.size3 {
-    font-size: .28135048em
+.katex .sizing.reset-size11.size3,
+.katex .fontsize-ensurer.reset-size11.size3 {
+    font-size: 0.28135048em;
 }
 
-.katex .sizing.reset-size11.size4,.katex .fontsize-ensurer.reset-size11.size4 {
-    font-size: .32154341em
+.katex .sizing.reset-size11.size4,
+.katex .fontsize-ensurer.reset-size11.size4 {
+    font-size: 0.32154341em;
 }
 
-.katex .sizing.reset-size11.size5,.katex .fontsize-ensurer.reset-size11.size5 {
-    font-size: .36173633em
+.katex .sizing.reset-size11.size5,
+.katex .fontsize-ensurer.reset-size11.size5 {
+    font-size: 0.36173633em;
 }
 
-.katex .sizing.reset-size11.size6,.katex .fontsize-ensurer.reset-size11.size6 {
-    font-size: .40192926em
+.katex .sizing.reset-size11.size6,
+.katex .fontsize-ensurer.reset-size11.size6 {
+    font-size: 0.40192926em;
 }
 
-.katex .sizing.reset-size11.size7,.katex .fontsize-ensurer.reset-size11.size7 {
-    font-size: .48231511em
+.katex .sizing.reset-size11.size7,
+.katex .fontsize-ensurer.reset-size11.size7 {
+    font-size: 0.48231511em;
 }
 
-.katex .sizing.reset-size11.size8,.katex .fontsize-ensurer.reset-size11.size8 {
-    font-size: .57877814em
+.katex .sizing.reset-size11.size8,
+.katex .fontsize-ensurer.reset-size11.size8 {
+    font-size: 0.57877814em;
 }
 
-.katex .sizing.reset-size11.size9,.katex .fontsize-ensurer.reset-size11.size9 {
-    font-size: .69453376em
+.katex .sizing.reset-size11.size9,
+.katex .fontsize-ensurer.reset-size11.size9 {
+    font-size: 0.69453376em;
 }
 
-.katex .sizing.reset-size11.size10,.katex .fontsize-ensurer.reset-size11.size10 {
-    font-size: .83360129em
+.katex .sizing.reset-size11.size10,
+.katex .fontsize-ensurer.reset-size11.size10 {
+    font-size: 0.83360129em;
 }
 
-.katex .sizing.reset-size11.size11,.katex .fontsize-ensurer.reset-size11.size11 {
-    font-size: 1em
+.katex .sizing.reset-size11.size11,
+.katex .fontsize-ensurer.reset-size11.size11 {
+    font-size: 1em;
 }
 
 .katex .delimsizing.size1 {
-    font-family: KaTeX_Size1
+    font-family: KaTeX_Size1;
 }
 
 .katex .delimsizing.size2 {
-    font-family: KaTeX_Size2
+    font-family: KaTeX_Size2;
 }
 
 .katex .delimsizing.size3 {
-    font-family: KaTeX_Size3
+    font-family: KaTeX_Size3;
 }
 
 .katex .delimsizing.size4 {
-    font-family: KaTeX_Size4
+    font-family: KaTeX_Size4;
 }
 
-.katex .delimsizing.mult .delim-size1>span {
-    font-family: KaTeX_Size1
+.katex .delimsizing.mult .delim-size1 > span {
+    font-family: KaTeX_Size1;
 }
 
-.katex .delimsizing.mult .delim-size4>span {
-    font-family: KaTeX_Size4
+.katex .delimsizing.mult .delim-size4 > span {
+    font-family: KaTeX_Size4;
 }
 
 .katex .nulldelimiter {
     display: inline-block;
-    width: .12em
+    width: 0.12em;
 }
 
 .katex .delimcenter {
-    position: relative
+    position: relative;
 }
 
 .katex .op-symbol {
-    position: relative
+    position: relative;
 }
 
 .katex .op-symbol.small-op {
-    font-family: KaTeX_Size1
+    font-family: KaTeX_Size1;
 }
 
 .katex .op-symbol.large-op {
-    font-family: KaTeX_Size2
+    font-family: KaTeX_Size2;
 }
 
-.katex .op-limits>.vlist-t {
-    text-align: center
+.katex .op-limits > .vlist-t {
+    text-align: center;
 }
 
-.katex .accent>.vlist-t {
-    text-align: center
+.katex .accent > .vlist-t {
+    text-align: center;
 }
 
 .katex .accent .accent-body {
-    position: relative
+    position: relative;
 }
 
 .katex .accent .accent-body:not(.accent-full) {
-    width: 0
+    width: 0;
 }
 
 .katex .overlay {
-    display: block
+    display: block;
 }
 
 .katex .mtable .vertical-separator {
     display: inline-block;
-    min-width: 1px
+    min-width: 1px;
 }
 
 .katex .mtable .arraycolsep {
-    display: inline-block
+    display: inline-block;
 }
 
-.katex .mtable .col-align-c>.vlist-t {
-    text-align: center
+.katex .mtable .col-align-c > .vlist-t {
+    text-align: center;
 }
 
-.katex .mtable .col-align-l>.vlist-t {
-    text-align: left
+.katex .mtable .col-align-l > .vlist-t {
+    text-align: left;
 }
 
-.katex .mtable .col-align-r>.vlist-t {
-    text-align: right
+.katex .mtable .col-align-r > .vlist-t {
+    text-align: right;
 }
 
 .katex .svg-align {
-    text-align: left
+    text-align: left;
 }
 
 .katex svg {
@@ -2726,11 +2788,11 @@ textarea#tbCommentBody::placeholder {
     stroke-miterlimit: 4;
     stroke-dasharray: none;
     stroke-dashoffset: 0;
-    stroke-opacity: 1
+    stroke-opacity: 1;
 }
 
 .katex svg path {
-    stroke: none
+    stroke: none;
 }
 
 .katex img {
@@ -2738,169 +2800,194 @@ textarea#tbCommentBody::placeholder {
     min-width: 0;
     min-height: 0;
     max-width: none;
-    max-height: none
+    max-height: none;
 }
 
 .katex .stretchy {
     width: 100%;
     display: block;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
-.katex .stretchy::before,.katex .stretchy::after {
-    content: ""
+.katex .stretchy::before,
+.katex .stretchy::after {
+    content: '';
 }
 
 .katex .hide-tail {
     width: 100%;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .katex .halfarrow-left {
     position: absolute;
     left: 0;
     width: 50.2%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .katex .halfarrow-right {
     position: absolute;
     right: 0;
     width: 50.2%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .katex .brace-left {
     position: absolute;
     left: 0;
     width: 25.1%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .katex .brace-center {
     position: absolute;
     left: 25%;
     width: 50%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .katex .brace-right {
     position: absolute;
     right: 0;
     width: 25.1%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .katex .x-arrow-pad {
-    padding: 0 .5em
+    padding: 0 0.5em;
 }
 
-.katex .x-arrow,.katex .mover,.katex .munder {
-    text-align: center
+.katex .x-arrow,
+.katex .mover,
+.katex .munder {
+    text-align: center;
 }
 
 .katex .boxpad {
-    padding: 0 .3em 0 .3em
+    padding: 0 0.3em 0 0.3em;
 }
 
-.katex .fbox,.katex .fcolorbox {
+.katex .fbox,
+.katex .fcolorbox {
     box-sizing: border-box;
-    border: .04em solid
+    border: 0.04em solid;
 }
 
 .katex .cancel-pad {
-    padding: 0 .2em 0 .2em
+    padding: 0 0.2em 0 0.2em;
 }
 
 .katex .cancel-lap {
-    margin-left: -.2em;
-    margin-right: -.2em
+    margin-left: -0.2em;
+    margin-right: -0.2em;
 }
 
 .katex .sout {
     border-bottom-style: solid;
-    border-bottom-width: .08em
+    border-bottom-width: 0.08em;
 }
 
 .katex-display {
     display: block;
     margin: 1em 0;
-    text-align: center
+    text-align: center;
 }
 
-.katex-display>.katex {
+.katex-display > .katex {
     display: block;
     text-align: center;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
-.katex-display>.katex>.katex-html {
+.katex-display > .katex > .katex-html {
     display: block;
-    position: relative
+    position: relative;
 }
 
-.katex-display>.katex>.katex-html>.tag {
+.katex-display > .katex > .katex-html > .tag {
     position: absolute;
-    right: 0
+    right: 0;
 }
 
-.katex-display.leqno>.katex>.katex-html>.tag {
+.katex-display.leqno > .katex > .katex-html > .tag {
     left: 0;
-    right: auto
+    right: auto;
 }
 
-.katex-display.fleqn>.katex {
-    text-align: left
+.katex-display.fleqn > .katex {
+    text-align: left;
 }
 
-.cnblogs-markdown .hljs,.cnblogs-post-body .hljs {
+.cnblogs-markdown .hljs,
+.cnblogs-post-body .hljs {
     display: block;
     overflow-x: auto;
-    padding: .5em;
+    padding: 0.5em;
     background: #fff;
-    color: #000
+    color: #000;
 }
 
-.hljs-comment,.hljs-quote,.hljs-variable {
-    color: #008000
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+    color: #008000;
 }
 
-.hljs-keyword,.hljs-selector-tag,.hljs-built_in,.hljs-name,.hljs-tag {
-    color: #00f
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+    color: #00f;
 }
 
-.hljs-string,.hljs-title,.hljs-section,.hljs-attribute,.hljs-literal,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-addition {
-    color: #a31515
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+    color: #a31515;
 }
 
-.hljs-deletion,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-meta {
-    color: #2b91af
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+    color: #2b91af;
 }
 
 .hljs-doctag {
-    color: #808080
+    color: #808080;
 }
 
 .hljs-attr {
-    color: #f00
+    color: #f00;
 }
 
-.hljs-symbol,.hljs-bullet,.hljs-link {
-    color: #00b0e8
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+    color: #00b0e8;
 }
 
 .hljs-emphasis {
-    font-style: italic
+    font-style: italic;
 }
 
 .hljs-strong {
-    font-weight: bold
+    font-weight: bold;
 }
 
-.cnblogs-markdown code,.cnblogs-post-body code {
-    font-family: "Courier New",sans-serif !important;
+.cnblogs-markdown code,
+.cnblogs-post-body code {
+    font-family: 'Courier New', sans-serif !important;
     font-size: 12px !important;
     line-height: 20px;
     background-color: #f5f5f5 !important;
@@ -2910,38 +2997,39 @@ textarea#tbCommentBody::placeholder {
     line-height: 1.8;
     margin: 1px 5px;
     vertical-align: middle;
-    display: inline-block
+    display: inline-block;
 }
 
-.cnblogs-markdown pre code,.cnblogs-post-body pre code {
+.cnblogs-markdown pre code,
+.cnblogs-post-body pre code {
     display: block;
     margin: auto;
-    vertical-align: auto;
     height: auto;
     line-height: 1.5;
-    padding: 5px !important
+    padding: 5px !important;
 }
 
-.cnblogs-markdown .hljs,.cnblogs-post-body .hljs {
-    font-family: "Courier New",sans-serif!important;
+.cnblogs-markdown .hljs,
+.cnblogs-post-body .hljs {
+    font-family: 'Courier New', sans-serif !important;
     font-size: 12px !important;
-    line-height: 1.5!important;
-    padding: 5px !important
+    line-height: 1.5 !important;
+    padding: 5px !important;
 }
 
 .cnblogs-markdown pre {
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .dropdown-menu a {
     color: #08c;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .typeahead {
     z-index: 1051;
-    margin-top: 2px
+    margin-top: 2px;
 }
 
 .dropdown-menu {
@@ -2955,34 +3043,36 @@ textarea#tbCommentBody::placeholder {
     margin: 2px 0 0;
     list-style: none;
     background-color: #fff;
-    text-shadow: none
+    text-shadow: none;
 }
 
-.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus {
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
     color: #fff;
     text-decoration: none;
     outline: 0;
     background-color: #4078c0;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',endColorstr='#ff0077b3',GradientType=0)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',endColorstr='#ff0077b3',GradientType=0);
 }
 
-.dropdown-menu>li>a {
+.dropdown-menu > li > a {
     display: block;
     padding: 3px 10px;
     clear: both;
     font-weight: normal;
     line-height: 20px;
     color: #333;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .mention_name {
-    font-size: 12px
+    font-size: 12px;
 }
 
 .mention_username {
     font-size: 12px;
-    color: #999
+    color: #999;
 }
 
 .mention_image {
@@ -2992,14 +3082,14 @@ textarea#tbCommentBody::placeholder {
     -moz-border-radius: 3px;
     border-radius: 3px;
     width: 20px;
-    height: 20px
+    height: 20px;
 }
 
 .active .mention_username {
-    color: #fff
+    color: #fff;
 }
 
-.dropdown-menu>.tips {
+.dropdown-menu > .tips {
     color: #fff;
     text-decoration: none;
     outline: 0;
@@ -3008,7 +3098,7 @@ textarea#tbCommentBody::placeholder {
     font-size: 12px;
     padding: 3px 5px;
     clear: both;
-    line-height: 20px
+    line-height: 20px;
 }
 
 /*!
@@ -3021,36 +3111,38 @@ textarea#tbCommentBody::placeholder {
  * For details, see: http://www.gnu.org/licenses/lgpl-2.1.html
  */
 .ui-dialog {
-    *zoom:1;_float: left;
+    *zoom: 1;
+    _float: left;
     position: relative;
     background-color: #fff;
     border: 1px solid #999;
     border-radius: 6px;
     outline: 0;
     background-clip: padding-box;
-    font-family: Helvetica,arial,sans-serif;
+    font-family: Helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.428571429;
     color: #333;
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
-    -webkit-transition: -webkit-transform .15s ease-in-out,opacity .15s ease-in-out;
-    transition: transform .15s ease-in-out,opacity .15s ease-in-out
+    -webkit-transition: -webkit-transform 0.15s ease-in-out,
+        opacity 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
 }
 
 .ui-popup-show .ui-dialog {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1)
+    transform: scale(1);
 }
 
 .ui-popup-focus .ui-dialog {
-    box-shadow: 0 0 8px rgba(0,0,0,.1)
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .ui-popup-modal .ui-dialog {
-    box-shadow: 0 0 8px rgba(0,0,0,.1),0 0 256px rgba(255,255,255,.3)
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 256px rgba(255, 255, 255, 0.3);
 }
 
 .ui-dialog-grid {
@@ -3059,19 +3151,21 @@ textarea#tbCommentBody::placeholder {
     border: 0 none;
     border-collapse: collapse;
     border-spacing: 0;
-    background: transparent
+    background: transparent;
 }
 
-.ui-dialog-header,.ui-dialog-body,.ui-dialog-footer {
+.ui-dialog-header,
+.ui-dialog-body,
+.ui-dialog-footer {
     padding: 0;
     border: 0 none;
     text-align: left;
-    background: transparent
+    background: transparent;
 }
 
 .ui-dialog-header {
     white-space: nowrap;
-    border-bottom: 1px solid #e5e5e5
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .ui-dialog-close {
@@ -3087,22 +3181,23 @@ textarea#tbCommentBody::placeholder {
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: .2;
+    opacity: 0.2;
     filter: alpha(opacity=20);
     cursor: pointer;
     background: transparent;
     _background: #fff;
     border: 0;
-    -webkit-appearance: none
+    -webkit-appearance: none;
 }
 
-.ui-dialog-close:hover,.ui-dialog-close:focus {
+.ui-dialog-close:hover,
+.ui-dialog-close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
     outline: 0;
-    opacity: .5;
-    filter: alpha(opacity=50)
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
 .ui-dialog-title {
@@ -3114,24 +3209,25 @@ textarea#tbCommentBody::placeholder {
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: bold;
-    cursor: default
+    cursor: default;
 }
 
 .ui-dialog-body {
     padding: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .ui-dialog-content {
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    *zoom:1;*display: inline;
-    text-align: left
+    *zoom: 1;
+    *display: inline;
+    text-align: left;
 }
 
 .ui-dialog-footer {
-    padding: 0 20px 20px 20px
+    padding: 0 20px 20px 20px;
 }
 
 .ui-dialog-statusbar {
@@ -3141,25 +3237,26 @@ textarea#tbCommentBody::placeholder {
     line-height: 1.428571429;
     font-size: 14px;
     color: #888;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .ui-dialog-statusbar label:hover {
-    color: #333
+    color: #333;
 }
 
-.ui-dialog-statusbar input,.ui-dialog-statusbar .label {
-    vertical-align: middle
+.ui-dialog-statusbar input,
+.ui-dialog-statusbar .label {
+    vertical-align: middle;
 }
 
 .ui-dialog-button {
     float: right;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
-.ui-dialog-footer button+button {
+.ui-dialog-footer button + button {
     margin-bottom: 0;
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .ui-dialog-footer button {
@@ -3183,90 +3280,107 @@ textarea#tbCommentBody::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
-    user-select: none
+    user-select: none;
 }
 
 .ui-dialog-footer button:focus {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px
+    outline-offset: -2px;
 }
 
-.ui-dialog-footer button:hover,.ui-dialog-footer button:focus {
+.ui-dialog-footer button:hover,
+.ui-dialog-footer button:focus {
     color: #333;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .ui-dialog-footer button:active {
     background-image: none;
     outline: 0;
-    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.125)
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 .ui-dialog-footer button[disabled] {
     pointer-events: none;
     cursor: not-allowed;
-    opacity: .65;
+    opacity: 0.65;
     filter: alpha(opacity=65);
     -webkit-box-shadow: none;
-    box-shadow: none
+    box-shadow: none;
 }
 
 .ui-dialog-footer button {
     color: #333;
     background-color: #fff;
-    border-color: #ccc
+    border-color: #ccc;
 }
 
-.ui-dialog-footer button:hover,.ui-dialog-footer button:focus,.ui-dialog-footer button:active {
+.ui-dialog-footer button:hover,
+.ui-dialog-footer button:focus,
+.ui-dialog-footer button:active {
     color: #333;
     background-color: #ebebeb;
-    border-color: #adadad
+    border-color: #adadad;
 }
 
 .ui-dialog-footer button:active {
-    background-image: none
+    background-image: none;
 }
 
-.ui-dialog-footer button[disabled],.ui-dialog-footer button[disabled]:hover,.ui-dialog-footer button[disabled]:focus,.ui-dialog-footer button[disabled]:active {
+.ui-dialog-footer button[disabled],
+.ui-dialog-footer button[disabled]:hover,
+.ui-dialog-footer button[disabled]:focus,
+.ui-dialog-footer button[disabled]:active {
     background-color: #fff;
-    border-color: #ccc
+    border-color: #ccc;
 }
 
 .ui-dialog-footer button.ui-dialog-autofocus {
     color: #fff;
     background-color: #428bca;
-    border-color: #357ebd
+    border-color: #357ebd;
 }
 
-.ui-dialog-footer button.ui-dialog-autofocus:hover,.ui-dialog-footer button.ui-dialog-autofocus:focus,.ui-dialog-footer button.ui-dialog-autofocus:active {
+.ui-dialog-footer button.ui-dialog-autofocus:hover,
+.ui-dialog-footer button.ui-dialog-autofocus:focus,
+.ui-dialog-footer button.ui-dialog-autofocus:active {
     color: #fff;
     background-color: #3276b1;
-    border-color: #285e8e
+    border-color: #285e8e;
 }
 
 .ui-dialog-footer button.ui-dialog-autofocus:active {
-    background-image: none
+    background-image: none;
 }
 
-.ui-popup-top-left .ui-dialog,.ui-popup-top .ui-dialog,.ui-popup-top-right .ui-dialog {
-    top: -8px
+.ui-popup-top-left .ui-dialog,
+.ui-popup-top .ui-dialog,
+.ui-popup-top-right .ui-dialog {
+    top: -8px;
 }
 
-.ui-popup-bottom-left .ui-dialog,.ui-popup-bottom .ui-dialog,.ui-popup-bottom-right .ui-dialog {
-    top: 8px
+.ui-popup-bottom-left .ui-dialog,
+.ui-popup-bottom .ui-dialog,
+.ui-popup-bottom-right .ui-dialog {
+    top: 8px;
 }
 
-.ui-popup-left-top .ui-dialog,.ui-popup-left .ui-dialog,.ui-popup-left-bottom .ui-dialog {
-    left: -8px
+.ui-popup-left-top .ui-dialog,
+.ui-popup-left .ui-dialog,
+.ui-popup-left-bottom .ui-dialog {
+    left: -8px;
 }
 
-.ui-popup-right-top .ui-dialog,.ui-popup-right .ui-dialog,.ui-popup-right-bottom .ui-dialog {
-    left: 8px
+.ui-popup-right-top .ui-dialog,
+.ui-popup-right .ui-dialog,
+.ui-popup-right-bottom .ui-dialog {
+    left: 8px;
 }
 
-.ui-dialog-arrow-a,.ui-dialog-arrow-b {
+.ui-dialog-arrow-a,
+.ui-dialog-arrow-b {
     position: absolute;
     display: none;
     width: 0;
@@ -3274,130 +3388,159 @@ textarea#tbCommentBody::placeholder {
     overflow: hidden;
     _color: #ff3fff;
     _filter: chroma(color=#ff3fff);
-    border: 8px dashed transparent
+    border: 8px dashed transparent;
 }
 
-.ui-popup-follow .ui-dialog-arrow-a,.ui-popup-follow .ui-dialog-arrow-b {
-    display: block
+.ui-popup-follow .ui-dialog-arrow-a,
+.ui-popup-follow .ui-dialog-arrow-b {
+    display: block;
 }
 
-.ui-popup-top-left .ui-dialog-arrow-a,.ui-popup-top .ui-dialog-arrow-a,.ui-popup-top-right .ui-dialog-arrow-a {
+.ui-popup-top-left .ui-dialog-arrow-a,
+.ui-popup-top .ui-dialog-arrow-a,
+.ui-popup-top-right .ui-dialog-arrow-a {
     bottom: -16px;
-    border-top: 8px solid #7c7c7c
+    border-top: 8px solid #7c7c7c;
 }
 
-.ui-popup-top-left .ui-dialog-arrow-b,.ui-popup-top .ui-dialog-arrow-b,.ui-popup-top-right .ui-dialog-arrow-b {
+.ui-popup-top-left .ui-dialog-arrow-b,
+.ui-popup-top .ui-dialog-arrow-b,
+.ui-popup-top-right .ui-dialog-arrow-b {
     bottom: -15px;
-    border-top: 8px solid #fff
+    border-top: 8px solid #fff;
 }
 
-.ui-popup-top-left .ui-dialog-arrow-a,.ui-popup-top-left .ui-dialog-arrow-b {
-    left: 15px
+.ui-popup-top-left .ui-dialog-arrow-a,
+.ui-popup-top-left .ui-dialog-arrow-b {
+    left: 15px;
 }
 
-.ui-popup-top .ui-dialog-arrow-a,.ui-popup-top .ui-dialog-arrow-b {
+.ui-popup-top .ui-dialog-arrow-a,
+.ui-popup-top .ui-dialog-arrow-b {
     left: 50%;
-    margin-left: -8px
-}
-
-.ui-popup-top-right .ui-dialog-arrow-a,.ui-popup-top-right .ui-dialog-arrow-b {
-    right: 15px
-}
-
-.ui-popup-bottom-left .ui-dialog-arrow-a,.ui-popup-bottom .ui-dialog-arrow-a,.ui-popup-bottom-right .ui-dialog-arrow-a {
-    top: -16px;
-    border-bottom: 8px solid #7c7c7c
-}
-
-.ui-popup-bottom-left .ui-dialog-arrow-b,.ui-popup-bottom .ui-dialog-arrow-b,.ui-popup-bottom-right .ui-dialog-arrow-b {
-    top: -15px;
-    border-bottom: 8px solid #fff
-}
-
-.ui-popup-bottom-left .ui-dialog-arrow-a,.ui-popup-bottom-left .ui-dialog-arrow-b {
-    left: 15px
-}
-
-.ui-popup-bottom .ui-dialog-arrow-a,.ui-popup-bottom .ui-dialog-arrow-b {
     margin-left: -8px;
-    left: 50%
 }
 
-.ui-popup-bottom-right .ui-dialog-arrow-a,.ui-popup-bottom-right .ui-dialog-arrow-b {
-    right: 15px
+.ui-popup-top-right .ui-dialog-arrow-a,
+.ui-popup-top-right .ui-dialog-arrow-b {
+    right: 15px;
 }
 
-.ui-popup-left-top .ui-dialog-arrow-a,.ui-popup-left .ui-dialog-arrow-a,.ui-popup-left-bottom .ui-dialog-arrow-a {
+.ui-popup-bottom-left .ui-dialog-arrow-a,
+.ui-popup-bottom .ui-dialog-arrow-a,
+.ui-popup-bottom-right .ui-dialog-arrow-a {
+    top: -16px;
+    border-bottom: 8px solid #7c7c7c;
+}
+
+.ui-popup-bottom-left .ui-dialog-arrow-b,
+.ui-popup-bottom .ui-dialog-arrow-b,
+.ui-popup-bottom-right .ui-dialog-arrow-b {
+    top: -15px;
+    border-bottom: 8px solid #fff;
+}
+
+.ui-popup-bottom-left .ui-dialog-arrow-a,
+.ui-popup-bottom-left .ui-dialog-arrow-b {
+    left: 15px;
+}
+
+.ui-popup-bottom .ui-dialog-arrow-a,
+.ui-popup-bottom .ui-dialog-arrow-b {
+    margin-left: -8px;
+    left: 50%;
+}
+
+.ui-popup-bottom-right .ui-dialog-arrow-a,
+.ui-popup-bottom-right .ui-dialog-arrow-b {
+    right: 15px;
+}
+
+.ui-popup-left-top .ui-dialog-arrow-a,
+.ui-popup-left .ui-dialog-arrow-a,
+.ui-popup-left-bottom .ui-dialog-arrow-a {
     right: -16px;
-    border-left: 8px solid #7c7c7c
+    border-left: 8px solid #7c7c7c;
 }
 
-.ui-popup-left-top .ui-dialog-arrow-b,.ui-popup-left .ui-dialog-arrow-b,.ui-popup-left-bottom .ui-dialog-arrow-b {
+.ui-popup-left-top .ui-dialog-arrow-b,
+.ui-popup-left .ui-dialog-arrow-b,
+.ui-popup-left-bottom .ui-dialog-arrow-b {
     right: -15px;
-    border-left: 8px solid #fff
+    border-left: 8px solid #fff;
 }
 
-.ui-popup-left-top .ui-dialog-arrow-a,.ui-popup-left-top .ui-dialog-arrow-b {
-    top: 15px
+.ui-popup-left-top .ui-dialog-arrow-a,
+.ui-popup-left-top .ui-dialog-arrow-b {
+    top: 15px;
 }
 
-.ui-popup-left .ui-dialog-arrow-a,.ui-popup-left .ui-dialog-arrow-b {
+.ui-popup-left .ui-dialog-arrow-a,
+.ui-popup-left .ui-dialog-arrow-b {
     margin-top: -8px;
-    top: 50%
+    top: 50%;
 }
 
-.ui-popup-left-bottom .ui-dialog-arrow-a,.ui-popup-left-bottom .ui-dialog-arrow-b {
-    bottom: 15px
+.ui-popup-left-bottom .ui-dialog-arrow-a,
+.ui-popup-left-bottom .ui-dialog-arrow-b {
+    bottom: 15px;
 }
 
-.ui-popup-right-top .ui-dialog-arrow-a,.ui-popup-right .ui-dialog-arrow-a,.ui-popup-right-bottom .ui-dialog-arrow-a {
+.ui-popup-right-top .ui-dialog-arrow-a,
+.ui-popup-right .ui-dialog-arrow-a,
+.ui-popup-right-bottom .ui-dialog-arrow-a {
     left: -16px;
-    border-right: 8px solid #7c7c7c
+    border-right: 8px solid #7c7c7c;
 }
 
-.ui-popup-right-top .ui-dialog-arrow-b,.ui-popup-right .ui-dialog-arrow-b,.ui-popup-right-bottom .ui-dialog-arrow-b {
+.ui-popup-right-top .ui-dialog-arrow-b,
+.ui-popup-right .ui-dialog-arrow-b,
+.ui-popup-right-bottom .ui-dialog-arrow-b {
     left: -15px;
-    border-right: 8px solid #fff
+    border-right: 8px solid #fff;
 }
 
-.ui-popup-right-top .ui-dialog-arrow-a,.ui-popup-right-top .ui-dialog-arrow-b {
-    top: 15px
+.ui-popup-right-top .ui-dialog-arrow-a,
+.ui-popup-right-top .ui-dialog-arrow-b {
+    top: 15px;
 }
 
-.ui-popup-right .ui-dialog-arrow-a,.ui-popup-right .ui-dialog-arrow-b {
+.ui-popup-right .ui-dialog-arrow-a,
+.ui-popup-right .ui-dialog-arrow-b {
     margin-top: -8px;
-    top: 50%
+    top: 50%;
 }
 
-.ui-popup-right-bottom .ui-dialog-arrow-a,.ui-popup-right-bottom .ui-dialog-arrow-b {
-    bottom: 15px
+.ui-popup-right-bottom .ui-dialog-arrow-a,
+.ui-popup-right-bottom .ui-dialog-arrow-b {
+    bottom: 15px;
 }
 
 @-webkit-keyframes ui-dialog-loading {
     0% {
-        -webkit-transform: rotate(0deg)
+        -webkit-transform: rotate(0deg);
     }
 
     100% {
-        -webkit-transform: rotate(360deg)
+        -webkit-transform: rotate(360deg);
     }
 }
 
 @keyframes ui-dialog-loading {
     0% {
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
 .ui-dialog-loading {
-    vertical-align: middle;
     position: relative;
     display: block;
-    *zoom:1;*display: inline;
+    *zoom: 1;
+    *display: inline;
     overflow: hidden;
     width: 32px;
     height: 32px;
@@ -3405,7 +3548,7 @@ textarea#tbCommentBody::placeholder {
     margin: -16px auto 0 auto;
     font-size: 0;
     text-indent: -999em;
-    color: #666
+    color: #666;
 }
 
 .ui-dialog-loading {
@@ -3413,7 +3556,7 @@ textarea#tbCommentBody::placeholder {
     text-indent: 0\9;
     line-height: 32px\9;
     text-align: center\9;
-    font-size: 12px\9
+    font-size: 12px\9;
 }
 
 .ui-dialog-loading::after {
@@ -3423,10 +3566,12 @@ textarea#tbCommentBody::placeholder {
     height: 3px;
     margin: 14.5px 0 0 14.5px;
     border-radius: 100%;
-    box-shadow: 0 -10px 0 1px #ccc,10px 0 #ccc,0 10px #ccc,-10px 0 #ccc,-7px -7px 0 .5px #ccc,7px -7px 0 1.5px #ccc,7px 7px #ccc,-7px 7px #ccc;
+    box-shadow: 0 -10px 0 1px #ccc, 10px 0 #ccc, 0 10px #ccc, -10px 0 #ccc,
+        -7px -7px 0 0.5px #ccc, 7px -7px 0 1.5px #ccc, 7px 7px #ccc,
+        -7px 7px #ccc;
     -webkit-transform: rotate(360deg);
     -webkit-animation: ui-dialog-loading 1.5s infinite linear;
     transform: rotate(360deg);
     animation: ui-dialog-loading 1.5s infinite linear;
-    display: none\9
+    display: none\9;
 }

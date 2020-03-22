@@ -1,5 +1,4 @@
 import { loadFiles } from '../utils/tools'
-import { script } from '../constants/urls'
 import { pageName } from '@/assets/js/tools'
 
 // 设置代码行号
@@ -10,7 +9,7 @@ function linenumbers() {
     loadFiles(
         [
             {
-                name: script.lineNumbers,
+                name: 'lineNumbers',
                 type: 'js',
             },
         ],

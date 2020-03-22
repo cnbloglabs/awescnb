@@ -205,7 +205,7 @@ new HtmlWebpackPlugin({
 
 > 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
 
-## 计划
+## To do
 
 **项目调整**
 
@@ -265,7 +265,7 @@ new HtmlWebpackPlugin({
 -   返回顶部 √
 -   ... √
 
-## 联系
+## Contact
 
 -   QQ：923665892
 -   QQ 群：541802647 (活跃)

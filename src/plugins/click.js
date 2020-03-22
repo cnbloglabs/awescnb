@@ -1,7 +1,7 @@
 import anime from 'animejs/lib/anime.es.js'
 
 const options = window.opts.click
-console.log(window.opts)
+
 $('body').append(`<canvas class="fireworks"></canvas>`)
 
 window.human = false

@@ -1,3 +1,5 @@
+import env from '@/constants/env'
+
 const opts = window.opts
 const constants = {
     install: '安装皮肤: https://gitee.com/guangzan/awescnb',
@@ -14,6 +16,7 @@ function hideLoading() {
 
 // 控制台打印
 function printing() {
+    if (env === 'dev') return
     const { install, qqGroup } = constants
     console.log(install)
     console.log(qqGroup)

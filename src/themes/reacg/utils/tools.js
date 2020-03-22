@@ -7,6 +7,7 @@ import { repositories } from '../constants/urls'
  */
 function loadFiles(files, callback = function() {}) {
     const repositoriesUrl = repositories.package + '/assets'
+    
     for (let i = 0; i < files.length; i++) {
         const name = files[i].name
         const type = files[i].type
