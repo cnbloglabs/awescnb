@@ -48,15 +48,9 @@ module.exports = merge(baseWebpackConfig, {
             analyzerHost: '127.0.0.1',
             analyzerPort: 8888,
             reportFilename: 'report.html',
-            // 模块大小默认显示在报告中。
-            // 应该是`stat`，`parsed`或者`gzip`中的一个。
             defaultSizes: 'parsed',
-            // 在默认浏览器中自动打开报告
             openAnalyzer: true,
-            // 如果为true，则Webpack Stats JSON文件将在bundle输出目录中生成
             generateStatsFile: false,
-            // 如果`generateStatsFile`为`true`，将会生成Webpack Stats JSON文件的名字。
-            // 相对于捆绑输出目录。
             statsFilename: 'stats.json',
             statsOptions: null,
             logLevel: 'info',

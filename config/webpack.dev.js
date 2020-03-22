@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
+    devtool: 'eval-source-map',
     module: {
         rules: [
             {

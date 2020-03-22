@@ -143,7 +143,7 @@ import AwesCnb from '@/themes/awescnb' // 引入公共的类
 class Demo extends AwesCnb {
     constructor() {
         super()
-        super.init() // 初始化父类的插件
+        super.init()
         this.init()
     }
 
@@ -156,20 +156,7 @@ class Demo extends AwesCnb {
 new Demo()
 ```
 
-&nbsp;&nbsp;继承 class(awescnb)代表继承包括但不限于下面这些插件.
-
--   头部进度条
--   看板娘(3D 模型)
--   音乐播放器
--   主题色
--   自定义背景图片或颜色
--   华丽的点击特效
--   自定义网站图标和标题
--   ...
-
-或者不继承单独使用你需要的插件.即使你继承了所有插件, 它们也能在博客园设置页面快速开启和关闭.
-
-2. **更改配置以你的启动主题**
+1. **更改配置以你的启动主题**
 
 打开`config / webpack.base.js`并进行以下更改：
 
@@ -208,7 +195,6 @@ new HtmlWebpackPlugin({
 -   theme.js 你的主题导入的所有依赖都会打包成这个文件
 -   index.js 这个文件是用来根据用户所选的主题加载对应的 theme.js.
 
-
 > 如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 theme.js 即可.
 
 ## 贡献
@@ -216,7 +202,6 @@ new HtmlWebpackPlugin({
 1. Fork 主仓库到自己账号成为副本仓库
 2. 在副本仓库完成代码贡献（添加、删除、修改代码等等）
 3. 将副本修改的内容给主仓库提交 PR ( Pull Requests )
-4. 审核你提交的代码，并决定是否合并
 
 > 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
 
@@ -239,8 +224,8 @@ new HtmlWebpackPlugin({
 -   postcss-import √
 -   cssnano √
 -   bug 打包多出一个 js √
--   可单独打包一个 themejs √
--   sourcemap
+-   可单独使用 themejs √
+-   sourcemap √
 
 **通用备选插件**
 
