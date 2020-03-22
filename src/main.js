@@ -1,6 +1,6 @@
 import env from '@/constants/env'
-import { loadFiles } from '@/assets/js/tools'
-const userOptions = require('@/assets/js/merge')
+import { loadFiles } from '@/assets/utils/tools'
+const userOptions = require('@/assets/utils/merge')
 
 window.opts = userOptions
 // console.log(window.opts)

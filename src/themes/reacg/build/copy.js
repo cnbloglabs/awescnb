@@ -1,4 +1,4 @@
-import { pageName } from '@/assets/js/tools'
+import { pageName } from '@/assets/utils/tools'
 
 
 // 代码块复制按钮

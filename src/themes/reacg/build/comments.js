@@ -1,4 +1,4 @@
-import { pageName } from '@/assets/js/tools'
+import { pageName } from '@/assets/utils/tools'
 
 // 显示评论列表头像
 function setCommentListAvatars() {

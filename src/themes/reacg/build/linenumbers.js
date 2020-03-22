@@ -1,5 +1,5 @@
 import { loadFiles } from '../utils/tools'
-import { pageName } from '@/assets/js/tools'
+import { pageName } from '@/assets/utils/tools'
 
 // 设置代码行号
 function linenumbers() {

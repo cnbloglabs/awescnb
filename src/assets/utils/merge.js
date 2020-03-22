@@ -12,6 +12,6 @@ $.extend({
 
 $.awesCnb()
 
-console.log('merge options')
+// console.log('merge options')
 
 module.exports = { ...userOptions } // common js

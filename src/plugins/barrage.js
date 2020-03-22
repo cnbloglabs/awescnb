@@ -3,7 +3,7 @@ import {
     getClientRect,
     getRandomNum,
     getRandomColor,
-} from '@/assets/js/tools'
+} from '@/assets/utils/tools'
 
 const options = window.opts.barrage
 

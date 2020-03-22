@@ -1,5 +1,5 @@
-import { pageName, userAgent } from '@/assets/js/tools'
-import { getRandomProperty } from '@/assets/js/tools'
+import { pageName, userAgent } from '@/assets/utils/tools'
+import { getRandomProperty } from '@/assets/utils/tools'
 import live2dModels from '@/constants/live2dModels'
 
 // 看板娘

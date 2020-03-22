@@ -102,7 +102,7 @@ const defaultOptions = {
         content: ['转载请附上原文链接，谢谢！'],
     },
     highLight: {
-        type: 'github',
+        type: 'atomOneDark',
     },
     links: [
         {

@@ -4,7 +4,7 @@ import {
     hasPostTitle,
     throttle,
     getClientRect,
-} from '@/assets/js/tools'
+} from '@/assets/utils/tools'
 
 // 只触发一次向上或向下,如果又重新反向滚动则再触发一次
 function scrollOnce() {

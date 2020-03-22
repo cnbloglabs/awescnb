@@ -1,4 +1,4 @@
-import { getRandomColor } from '@/assets/js/tools'
+import { getRandomColor } from '@/assets/utils/tools'
 
     // 设置主题色
    function color() {

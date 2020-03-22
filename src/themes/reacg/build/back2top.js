@@ -1,4 +1,4 @@
-import { userAgent } from '@/assets/js/tools'
+import { userAgent } from '@/assets/utils/tools'
 import { iconInSvg } from '../utils/tools'
 import icons from '../constants/icons'
 

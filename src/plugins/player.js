@@ -1,10 +1,12 @@
-import { pageName, userAgent } from '@/assets/js/tools'
-import APlayer from 'APlayer'
+import { pageName, userAgent } from '@/assets/utils/tools'
+// import APlayer from 'APlayer'
 import 'aplayer/dist/aplayer.min.css'
+console.log = () => {}
+const APlayer = require('APlayer')
+
 // 音乐播放器
 const setMusicPlayer = () => {
     const options = window.opts.musicPlayer
-
     if (!options.enable) return
     if (options.page !== pageName() && options.page !== 'all') return
     if (options.agent !== userAgent() && options.agent !== 'all') return

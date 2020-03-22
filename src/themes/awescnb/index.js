@@ -1,7 +1,7 @@
 import '@/assets/css/common.css'
 
 if (!window.opts) {
-    const { userOptions } = require('@/assets/js/merge')
+    const { userOptions } = require('@/assets/utils/merge')
     window.opts = userOptions
 }
 

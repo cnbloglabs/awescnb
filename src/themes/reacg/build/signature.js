@@ -1,4 +1,4 @@
-import { pageName } from '@/assets/js/tools'
+import { pageName } from '@/assets/utils/tools'
 const opts = window.opts.postSignature
 
 // 设置随笔签名

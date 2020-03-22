@@ -1,4 +1,4 @@
-import { pageName } from '@/assets/js/tools'
+import { pageName } from '@/assets/utils/tools'
 const opts = window.opts.highLight
 // 设置代码高亮
 function highlight() {
@@ -15,10 +15,7 @@ function highlight() {
         atomOneLight,
         github,
     }
-
-    console.log(actions[type])
     
-
     $('head').append(actions[type])
 }
 

@@ -6,7 +6,7 @@
 
 import NProgress from 'NProgress'
 import env from '@/constants/env'
-import { pageName, userAgent } from '@/assets/js/tools'
+import { pageName, userAgent } from '@/assets/utils/tools'
 import 'nprogress/nprogress.css'
 
 const opts = window.opts

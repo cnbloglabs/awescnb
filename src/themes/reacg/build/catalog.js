@@ -1,4 +1,4 @@
-import { pageName, hasPostTitle, userAgent } from '@/assets/js/tools'
+import { pageName, hasPostTitle, userAgent } from '@/assets/utils/tools'
 
 const options = window.opts.catalog
 

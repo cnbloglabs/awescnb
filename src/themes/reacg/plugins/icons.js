@@ -1,5 +1,5 @@
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, getRandomProperty } from '@/assets/js/tools'
+import { pageName, getRandomProperty } from '@/assets/utils/tools'
 import { loadFiles, iconInSvg } from '../utils/tools'
 import { CDN } from '../constants/urls'
 import icons from '../constants/icons'

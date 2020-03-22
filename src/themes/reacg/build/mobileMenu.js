@@ -1,4 +1,4 @@
-import { userAgent } from '@/assets/js/tools'
+import { userAgent } from '@/assets/utils/tools'
 
 // 设置移动端菜单按钮
 function mobileMenu() {
