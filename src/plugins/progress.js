@@ -1,11 +1,5 @@
-// 顶部进度条
-// 除了好看没啥意义
-// 因为整个js加载了才会执行start
-// 那么 DOM 早就加载完了
-// 与cnblog机制有关
-
+// import env from '@/constants/env'
 import NProgress from 'NProgress'
-import env from '@/constants/env'
 import { pageName, userAgent } from '@/assets/utils/tools'
 import 'nprogress/nprogress.css'
 
@@ -26,11 +20,11 @@ const setTopProgress = () => {
 
     NProgress.start()
 
-    if (env === 'dev') {
-        setTimeout(() => {
-            NProgress.done()
-        }, 1000)
-    }
+    // if (env === 'dev') {
+    setTimeout(() => {
+        NProgress.done()
+    }, 1000)
+    // }
 }
 
 export default setTopProgress

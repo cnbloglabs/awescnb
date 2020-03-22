@@ -9,7 +9,8 @@
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
-        "hljs": "readonly"
+        "hljs": "readonly",
+        "loadlive2d": "readonly"
     },
     "parser": "babel-eslint",
     "parserOptions": {

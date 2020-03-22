@@ -6,10 +6,6 @@ const repositories = {
 
 const CDN = {
     icon: '//at.alicdn.com/t/font_1595820_cqb197x9339.js',
-    live2d: {
-        url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
-        version: '1.7',
-    },
 }
 
 export { repositories, CDN }

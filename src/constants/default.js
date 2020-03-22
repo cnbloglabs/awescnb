@@ -23,7 +23,7 @@ const defaultOptions = {
         enable: true,
     },
     barrage: {
-        enable: false,
+        enable: true,
         opacity: 0.5,
         colors: [
             '#FE0302',
@@ -48,7 +48,7 @@ const defaultOptions = {
         type: 'complex',
     },
     live2d: {
-        enable: false,
+        enable: true,
         page: 'all',
         agent: 'pc',
         model: 'random',
@@ -84,7 +84,7 @@ const defaultOptions = {
             {
                 name: '红色高跟鞋',
                 artist: '李瑨瑶',
-                url: `https://guangzan.gitee.io/awescnb/assets/music/红色高跟鞋.mp3`,
+                url: `https://guangzan.gitee.io/imagehost/awescnb/music/红色高跟鞋.mp3`,
                 cover:
                     '//p2.music.126.net/ww7gcJ_erzPa8jgZesmTOA==/109951163271403502.jpg?param=90y90',
             },
