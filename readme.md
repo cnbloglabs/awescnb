@@ -235,6 +235,7 @@ new HtmlWebpackPlugin({
 -   可单独使用 themejs √
 -   sourcemap √
 -   测试单个文件
+-   优化 templates
 
 **通用备选插件**
 
