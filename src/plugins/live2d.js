@@ -4,7 +4,7 @@ import live2dModels from '@/constants/live2dModels'
 
 // 看板娘
 const setLive2d = () => {
-    const options = window.userOptions.live2d
+    const options = window.opts.live2d
     if (!options.enable) return
     if (options.page !== pageName() && options.page !== 'all') return
     if (options.agent !== userAgent() && options.agent !== 'all') return

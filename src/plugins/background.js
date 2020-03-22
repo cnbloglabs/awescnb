@@ -1,4 +1,4 @@
-const config = window.userOptions
+const config = window.opts
 
 // 设置页面背景色
 function setBodyBackground() {

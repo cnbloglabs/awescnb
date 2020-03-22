@@ -9,6 +9,9 @@ const defaultOptions = {
         headerBackground:
             'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',
     },
+    charts: {
+        enable: false
+    },
     bodyBackground: {
         enable: false,
         type: 'color',

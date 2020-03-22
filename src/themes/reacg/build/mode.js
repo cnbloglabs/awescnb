@@ -3,7 +3,7 @@ import { iconInSvg } from '../utils/tools'
 
 // mode 初始化和点击切换
 function mode() {
-    const enableBarrage = window.userOptions.barrage.enable
+    const enableBarrage = window.opts.barrage.enable
     const isNight = new Date().getHours() > 19
     const $modeIcon = `<div id='mode-change'>${
         isNight ? iconInSvg(icons.dark) : iconInSvg(icons.light)
@@ -11,9 +11,9 @@ function mode() {
 
     $('#navigator').prepend($modeIcon)
 
-    if (isNight && localStorage.modeType !== 'dark') {
-        this.shootBarrage(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
-    }
+    // if (isNight && localStorage.modeType !== 'dark') {
+    //     shootBarrage(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
+    // }
 
     localStorage.modeType === 'dark'
         ? changeModeToggle('dark')
@@ -24,11 +24,11 @@ function mode() {
         if ($('#mode-dark').length > 0) {
             changeModeToggle('light')
             if (!enableBarrage) return
-            // this.shootBarrage(['已成功切换为亮色模式 🌕'])
+            // shootBarrage(['已成功切换为亮色模式 🌕'])
         } else {
             changeModeToggle('dark')
             if (!enableBarrage) return
-            // this.shootBarrage(['已成功切换为暗色模式 ✨'])
+            // shootBarrage(['已成功切换为暗色模式 ✨'])
         }
     })
 }

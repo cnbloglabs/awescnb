@@ -1,6 +1,6 @@
 import message from '../constants/message'
 
-const options = window.userOptions
+const options = window.opts
 
 // 设置footer
 function footer() {

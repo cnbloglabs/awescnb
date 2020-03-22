@@ -3,7 +3,7 @@ import APlayer from 'APlayer'
 import 'aplayer/dist/aplayer.min.css'
 // 音乐播放器
 const setMusicPlayer = () => {
-    const options = window.userOptions.musicPlayer
+    const options = window.opts.musicPlayer
 
     if (!options.enable) return
     if (options.page !== pageName() && options.page !== 'all') return

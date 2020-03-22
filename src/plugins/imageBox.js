@@ -4,7 +4,7 @@ import '../../node_modules/baguettebox.js/dist/baguetteBox.css'
 
 // 设置图片灯箱
 function imagebox() {
-    const options = window.userOptions.imagebox
+    const options = window.opts.imagebox
     if (!options.enable) return
     if (pageName() !== 'post') return
     

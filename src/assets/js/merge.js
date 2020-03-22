@@ -12,6 +12,6 @@ $.extend({
 
 $.awesCnb()
 
-console.log('merge options', $, userOptions)
+console.log('merge options')
 
-export default userOptions
+module.exports = { ...userOptions } // common js

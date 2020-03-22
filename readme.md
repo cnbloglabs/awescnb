@@ -205,18 +205,11 @@ new HtmlWebpackPlugin({
 
 项目打包会在 dist 文件夹下生成两个 js 文件:
 
--   theme.js, 你的主题导入的所有依赖都会打包成这个文件
--   index.js, 这个文件是用来根据用户所选的主题加载对应的 theme.js.
+-   theme.js 你的主题导入的所有依赖都会打包成这个文件
+-   index.js 这个文件是用来根据用户所选的主题加载对应的 theme.js.
 
-> 如果你想只用 theme.js, 你需要在 themes/awescnb/indexjs 中加入以下代码.
 
-```js
-import userOptions from '@/assets/js/merge'
-window.userOptions = userOptions
-window.opts = userOptions
-```
-
-这样你就能单独使用打包好的 themejs 文件. 不然, 你需要在你的博客园中引入以上两个文件才能安装你构建的皮肤.
+> 如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 theme.js 即可.
 
 ## 贡献
 

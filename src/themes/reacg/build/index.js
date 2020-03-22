@@ -12,6 +12,7 @@ import catalog from './catalog'
 import btns from './btns'
 import comments from './comments'
 import back2top from './back2top'
+import themeColor from './themeColor'
 
 function build() {
     footer()
@@ -28,6 +29,7 @@ function build() {
     btns()
     comments()
     back2top()
+    themeColor()
 }
 
 export default build

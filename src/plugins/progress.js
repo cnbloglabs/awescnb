@@ -5,7 +5,7 @@ import 'nprogress/nprogress.css'
 
 // 顶部进度条 x
 const setTopProgress = () => {
-    const options = window.userOptions.topProgress
+    const options = window.opts.topProgress
     if (!options.enable) return
     if (options.page !== pageName() && options.page !== 'all') return
     if (options.agent !== userAgent() && options.agent !== 'all') return

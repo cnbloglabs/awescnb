@@ -4,7 +4,7 @@ import { loadFiles, iconInSvg } from '../utils/tools'
 import { script } from '../constants/urls'
 import icons from '../constants/icons'
 
-const userOptions = window.userOptions
+const userOptions = window.opts
 
 // 设置sidebar icon
 function setSidebarIcon() {

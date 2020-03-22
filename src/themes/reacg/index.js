@@ -8,11 +8,9 @@ class Reacg extends AwesCnb {
         super()
         super.init()
         this.init()
-        this.v = 'v1.5.0'
     }
 
     init() {
-        this.hideLoading()
         build()
         plugins()
     }
