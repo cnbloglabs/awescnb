@@ -1,3 +1,5 @@
+// 349.11kb
+
 import roughViz from 'rough-viz'
 
 const opts = window.opts.charts

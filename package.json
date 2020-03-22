@@ -13,6 +13,7 @@
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.8.7",
+        "@babel/plugin-transform-runtime": "^7.9.0",
         "@babel/preset-env": "^7.8.7",
         "autoprefixer": "^9.7.4",
         "babel-eslint": "^10.1.0",
@@ -35,6 +36,7 @@
         "stylelint-config-prettier": "^8.0.1",
         "stylelint-prettier": "^1.1.2",
         "webpack": "^4.42.0",
+        "webpack-bundle-analyzer": "^3.6.1",
         "webpack-cli": "^3.3.11",
         "webpack-dev-server": "^3.10.3",
         "webpack-merge": "^4.2.2"

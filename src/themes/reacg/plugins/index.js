@@ -1,7 +1,6 @@
 import setBodyBackground from '@/plugins/background'
 import barrage from '@/plugins/barrage'
 import imageBox from '@/plugins/imageBox'
-import charts from '@/plugins/charts'
 import setLive2d from '@/plugins/live2d'
 import setMusicPlayer from '@/plugins/player'
 import setTopProgress from '@/plugins/progress'
@@ -13,7 +12,6 @@ function plugins() {
     setBodyBackground()
     imageBox()
     barrage()
-    charts()
     setLive2d()
     setMusicPlayer()
     setTopProgress()
