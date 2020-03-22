@@ -39,6 +39,10 @@ if (env === 'dev') {
 // VM6125 sockjs.js:1606 GET http://127.0.0.1:8080/sockjs-node/info?t=1584905472090 net::ERR_CONNECTION_REFUSED
 
 // 解决
+// 1.
 // node_modules/sockjs-client/dist/sockjs.js 代码的1605行注释
 // // self.xhr.send(payload);
 // 可在代码开发完成后关闭，会同步关闭热加载
+
+// 2.
+// 127.0.0.1 -> localhost

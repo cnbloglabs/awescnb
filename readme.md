@@ -44,7 +44,7 @@
 
 ```css
 :root{--sk-size:60px;--sk-color:#ffb3cc}
-#loading{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;justify-content:center;align-items:center;background-image:url(https://guangzan.gitee.io/awescnb/assets/images/background/cell.gif);z-index:99999}
+#loading{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;justify-content:center;align-items:center;background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.gif);z-index:99999}
 .sk-fold{width:var(--sk-size);height:var(--sk-size);position:relative;transform:rotateZ(45deg)}
 .sk-fold-cube{float:left;width:50%;height:50%;position:relative;transform:scale(1.1)}
 .sk-fold-cube:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--sk-color);animation:sk-fold 2.4s infinite linear both;transform-origin:100% 100%}
@@ -205,7 +205,7 @@ new HtmlWebpackPlugin({
 
 > 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
 
-## To do
+## Todo
 
 **项目调整**
 
@@ -226,6 +226,7 @@ new HtmlWebpackPlugin({
 -   bug 打包多出一个 js √
 -   可单独使用 themejs √
 -   sourcemap √
+-   测试单个文件
 
 **通用备选插件**
 
@@ -265,7 +266,7 @@ new HtmlWebpackPlugin({
 -   返回顶部 √
 -   签名 √
 -   bug -> themeColor double 
--   示例音乐丢失 ...
+-   示例音乐丢失 ... √
 -   backtotop 定位逻辑
 
 ## Contact
