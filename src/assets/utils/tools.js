@@ -1,4 +1,4 @@
-// import urls from '@/constants/urls'
+import urls from '@/constants/urls'
 
 /**
  * @description 加载文件
@@ -6,35 +6,35 @@
  * @param {Function} callback 回调函数 只能走一个
  */
 
-// const loadFiles = (files, callback = function() {}) => {
-//     const repositoriesUrl = urls.repositories.package
-//     for (let i = 0; i < files.length; i++) {
-//         const name = files[i].name
-//         const type = files[i].type
-//         const cssUrl = repositoriesUrl + '/css/' + name + '.css'
-//         const jsUrl = `${repositoriesUrl}/${name}.js`
-//         const actions = {
-//             css: () => {
-//                 $('head').append(`<link rel="stylesheet" href="${cssUrl}">`)
-//             },
-//             js: () => {
-//                 $.getScript(jsUrl, () => {
-//                     callback()
-//                 })
-//             },
-//             cssCDN: () => {
-//                 $('head').append(`<link rel="stylesheet" href="${name}">`)
-//             },
-//             jsCDN: () => {
-//                 $.getScript(name)
-//             },
-//             default: () => {
-//                 console.error('Type error!')
-//             },
-//         }
-//         actions[type]()
-//     }
-// }
+const loadFiles = (files, callback = function() {}) => {
+    const repositoriesUrl = urls.repositories.package
+    for (let i = 0; i < files.length; i++) {
+        const name = files[i].name
+        const type = files[i].type
+        const cssUrl = repositoriesUrl + '/css/' + name + '.css'
+        const jsUrl = `${repositoriesUrl}/${name}.js`
+        const actions = {
+            css: () => {
+                $('head').append(`<link rel="stylesheet" href="${cssUrl}">`)
+            },
+            js: () => {
+                $.getScript(jsUrl, () => {
+                    callback()
+                })
+            },
+            cssCDN: () => {
+                $('head').append(`<link rel="stylesheet" href="${name}">`)
+            },
+            jsCDN: () => {
+                $.getScript(name)
+            },
+            default: () => {
+                console.error('Type error!')
+            },
+        }
+        actions[type]()
+    }
+}
 
 /**
  * @description 防抖函数
@@ -206,7 +206,7 @@ const userAgent = () => {
 }
 
 export {
-    // loadFiles,
+    loadFiles,
     debounce,
     throttle,
     getRandomProperty,

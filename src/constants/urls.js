@@ -12,8 +12,8 @@ const urls = {
         live2d: 'live2d',
     },
     repositories: {
-        package: 'https://guangzan.gitee.io/awescnb2.0',
-        gitee: 'https://gitee.com/guangzan/awescnb2.0',
+        package: 'https://guangzan.gitee.io/awescnb',
+        gitee: 'https://gitee.com/guangzan/awescnb',
         github: 'https://github.com/github923665892',
     },
 }
