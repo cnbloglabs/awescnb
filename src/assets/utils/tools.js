@@ -1,4 +1,4 @@
-import urls from '@/constants/urls'
+import { repositories } from '@/constants/urls'
 
 /**
  * @description 加载文件
@@ -7,7 +7,7 @@ import urls from '@/constants/urls'
  */
 
 const loadFiles = (files, callback = function() {}) => {
-    const repositoriesUrl = urls.repositories.package
+    const repositoriesUrl = repositories.package
     for (let i = 0; i < files.length; i++) {
         const name = files[i].name
         const type = files[i].type
