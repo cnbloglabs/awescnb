@@ -3,6 +3,7 @@ import { iconInSvg } from '../utils/tools'
 import icons from '../constants/icons'
 
 const options = window.opts.back2top
+const enableLive2d = window.opts.live2d.enable
 
 //  滚动计算
 function compute() {
@@ -45,7 +46,9 @@ function setBack2Top() {
 
     $($back2top).appendTo('body')
 
-    if (options.right !== '') {
+    if (!enableLive2d) {
+        $('#back-to-top').css('right', '0.667rem')
+    } else if (options.right !== '') {
         const toRight = options.right
         $('#back-to-top').css('right', toRight)
     }

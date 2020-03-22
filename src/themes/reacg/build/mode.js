@@ -4,11 +4,12 @@ import { shootCustom } from '@/plugins/barrage'
 
 // mode 初始化和点击切换
 function mode() {
-    const isNight = new Date().getHours() > 19
+    const nowHour = new Date().getHours()
+    const isNight = nowHour > 19 || nowHour <= 5
+
     const $modeIcon = `<div id='mode-change'>${
         isNight ? iconInSvg(icons.dark) : iconInSvg(icons.light)
     }</div>`
-
     $('#navigator').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {

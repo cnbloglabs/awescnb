@@ -1,7 +1,7 @@
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-let BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
     .BundleAnalyzerPlugin
 
 module.exports = merge(baseWebpackConfig, {
