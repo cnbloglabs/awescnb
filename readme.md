@@ -163,7 +163,7 @@ new Demo()
 ```js
 entry:{
     index: './src/main.js',
-    reacg: './src/themes/reacg/index.js',
+-   reacg: './src/themes/reacg/index.js',
 +   demo: './src/themes/reacg/demo.js',
 },
 ```
@@ -173,8 +173,7 @@ entry:{
 -   `npm i` 安装项目依赖
 -   `npm start` 进行本地开发
 
-templates 文件夹用于存储博客园的 HTML,使用 `HtmlWebpackPlugin` 将制定的 html 注入 index.html。
-运行`npm start`将在本地启动博客园首页。如果您想启动其他页面，请更改 `config/webpack.dev.js`.
+运行`npm start`将在本地启动博客园首页。如果您想启动其他页面，请将 `config/webpack.dev.js`作如下更改:
 
 ```js
 new HtmlWebpackPlugin({
@@ -185,17 +184,26 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-4. **打包**
+1. **打包**
 
 
 -   `npm run build` 打包
 
 项目打包会在 dist 文件夹下生成两个 js 文件:
 
--   theme.js 你的主题导入的所有依赖都会打包成这个文件
 -   index.js 这个文件是用来根据用户所选的主题加载对应的 theme.js.
+-   theme.js 你的主题导入的所有依赖都会打包成这个文件
 
-> 如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 theme.js 即可.
+如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 theme.js 即可,安装你的主题步骤同上,你只需要作如下变化:
+
+```js
+<script src="https://xxx/[theme].js"></script>
+<script>$.awesCnb({
+              // 在这里写入配置
+              // 什么都不写代表使用默认配置
+        });
+</script>
+```
 
 ## 贡献
 
