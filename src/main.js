@@ -8,9 +8,13 @@ window.opts = userOptions
 if (env === 'dev') {
     require('./assets/dev/blog-common.min.css')
 } else {
+    let theme = userOptions.theme.name
+    if(theme === 'acg' || theme === 'light') {
+        theme = 'reacg'
+    }
     loadFiles([
         {
-            name: `${userOptions.theme.name}`,
+            name: `${theme}`,
             type: 'js',
         },
     ])

@@ -39,8 +39,8 @@ const defaultOptions = {
             '#CC0273',
             '#CC0273',
         ],
-        barrages: [],
-        indexBarrages: ['awescnb2.0正式上线', '有问题请反馈', '速度解决'],
+        barrages: ['awescnb2.0 webpack 重构上线,有问题请反馈,谢谢!'],
+        indexBarrages: [],
         postPageBarrages: [],
     },
     back2top: {
