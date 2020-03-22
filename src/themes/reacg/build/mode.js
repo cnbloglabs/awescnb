@@ -24,7 +24,6 @@ function mode() {
         $('body').addClass('mode-change')
         if ($('#mode-dark').length > 0) {
             changeModeToggle('light')
-            shootCustom(['已成功切换为亮色模式 🌕'])
         } else {
             changeModeToggle('dark')
             shootCustom(['已成功切换为暗色模式 ✨'])

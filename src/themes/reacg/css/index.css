@@ -165,8 +165,20 @@ body::-webkit-scrollbar-track {
 .mode-change #navigator,
 .mode-change #mainContent,
 .mode-change #sidebar_news,
+.mode-change #blog-calendar,
+.mode-change #sidebar_search,
+.mode-change #sidebar_shortcut,
+.mode-change #sidebar_recentposts,
+.mode-change #sidebar_toptags,
+.mode-change #sidebar_scorerank,
 .mode-change #sidebar_postcategory,
-.mode-change #catalog {
+.mode-change #sidebar_postarchive,
+.mode-change #sidebar_recentcomments,
+.mode-change #sidebar_topviewedposts,
+.mode-change #sidebar_topcommentedposts,
+.mode-change #sidebar_topdiggedposts,
+.mode-change #catalog,
+.mode-change .input_my_zzk {
     transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
 }
 
@@ -440,6 +452,7 @@ body::-webkit-scrollbar-track {
 /* 搜索 star t*/
 .input_my_zzk {
     border: 1px solid #61aeee;
+    background: var(--background-w);
 }
 input.btn_my_zzk {
     border: none;

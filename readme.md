@@ -267,8 +267,9 @@ new HtmlWebpackPlugin({
 -   签名 √
 -   bug -> themeColor double 
 -   示例音乐丢失 ... √
--   backtotop 定位逻辑
--   夜间判断逻辑
+-   backtotop 定位逻辑 √
+-   夜间判断逻辑 √
+-   优化切换暗色/亮色模式效果和逻辑 √
 
 ## Contact
 
