@@ -1,22 +1,12 @@
-import { loadFiles } from '../utils/tools'
 import { pageName } from '@/assets/utils/tools'
+import '@/assets/js/linenumbers'
 
 // 设置代码行号
 function linenumbers() {
     if (pageName() !== 'post') return
     const options = window.opts.lineNumbers
     if (!options.enable) return
-    loadFiles(
-        [
-            {
-                name: 'lineNumbers',
-                type: 'js',
-            },
-        ],
-        () => {
-            hljs.initLineNumbersOnLoad()
-        },
-    )
+    hljs.initLineNumbersOnLoad()
 }
 
 export default linenumbers
