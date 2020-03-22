@@ -2,6 +2,7 @@ import { pageName, userAgent } from '@/assets/utils/tools'
 import { getRandomProperty } from '@/assets/utils/tools'
 import { CDN } from '@/constants/urls'
 import live2dModels from '@/constants/live2dModels'
+// require('@/constants/live2dModels')
 
 // 看板娘
 const setLive2d = () => {
@@ -24,6 +25,10 @@ const setLive2d = () => {
                      </canvas>`)
 
     const url = `${CDN.live2d.url}@${CDN.live2d.version}/${model}`
+
+    // import('@/constants/live2dModels',() => {
+        // loadlive2d('model', url)
+    // })
 
     $.getScript(
         'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js',

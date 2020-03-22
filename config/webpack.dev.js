@@ -43,7 +43,7 @@ module.exports = merge(baseWebpackConfig, {
         ],
     },
     devServer: {
-        host: '127.0.0.1',
+        host: 'localhost',
         port: 8080,
         contentBase: path.join(__dirname, 'dist'),
         open: true,

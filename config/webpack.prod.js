@@ -49,7 +49,7 @@ module.exports = merge(baseWebpackConfig, {
             analyzerPort: 8888,
             reportFilename: 'report.html',
             defaultSizes: 'parsed',
-            openAnalyzer: true,
+            openAnalyzer: false,
             generateStatsFile: false,
             statsFilename: 'stats.json',
             statsOptions: null,
