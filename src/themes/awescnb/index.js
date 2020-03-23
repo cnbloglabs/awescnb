@@ -7,7 +7,7 @@ class AwesCnb {
     init(building) {
         hideLoading()
         printing()
-        if (env === 'dev') {
+        if (env === 'dev' || $.awesCnb) {
             building()
         } else {
             $.extend({
