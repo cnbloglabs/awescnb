@@ -25,7 +25,7 @@ function loadTheme() {
     if (theme === 'acg' || theme === 'light') {
         theme = 'reacg'
     }
-    load()
+    load(theme)
 }
 
 export default merge
