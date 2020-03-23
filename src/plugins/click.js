@@ -1,4 +1,5 @@
 import anime from 'animejs/lib/anime.es.js'
+import { userAgent } from '@/assets/utils/tools'
 
 const options = window.opts.click
 
@@ -20,6 +21,7 @@ var colors = options.colors || ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
 function setClickEffects() {
     if (!options.enable) return
+    if (userAgent() !== 'pc') return
     canvasEl.style.position = 'fixed'
     canvasEl.style.top = 0
     canvasEl.width = window.innerWidth * 2

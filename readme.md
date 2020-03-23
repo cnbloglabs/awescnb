@@ -186,7 +186,6 @@ new HtmlWebpackPlugin({
 
 1. **打包**
 
-
 -   `npm run build` 打包
 
 项目打包会在 dist 文件夹下生成两个 js 文件:
@@ -215,7 +214,7 @@ new HtmlWebpackPlugin({
 
 ## Todo
 
-**项目调整**
+**项目**
 
 -   merge.js √
 -   在入口引入 merge √
@@ -235,7 +234,10 @@ new HtmlWebpackPlugin({
 -   可单独使用 themejs √
 -   sourcemap √
 -   测试单个文件
--   优化 templates
+-   同步到github
+-   footer 版本同步
+-   注释
+-   md标签
 
 **通用备选插件**
 
@@ -257,10 +259,13 @@ new HtmlWebpackPlugin({
 -   音乐播放器 √
 -   隐藏 loading √
 -   在开发环境中导入 cnblog.common.css √
+-   config/options.js
 
 **reacg**(示例皮肤)
 
--   自定义二维码
+-   评论图片样式
+-   自定义二维码 √
+-   自定义头像 √
 -   icons √
 -   footer √
 -   移动端菜单 √
@@ -274,11 +279,18 @@ new HtmlWebpackPlugin({
 -   弹幕 √
 -   返回顶部 √
 -   签名 √
--   bug -> themeColor double 
 -   示例音乐丢失 ... √
 -   backtotop 定位逻辑 √
 -   夜间判断逻辑 √
 -   优化切换暗色/亮色模式效果和逻辑 √
+-   bug highlight 无效 √
+-   显示评论区头像 增加轮询次数 √
+-   移动端默认禁用点击特效 √
+-   signature 样式优化 √
+-   移动端隐藏顶部订阅按钮 √
+-   调整移动端字体大小 √
+-   bug -> themeColor double √
+-   图标跟随主题色
 
 ## Contact
 

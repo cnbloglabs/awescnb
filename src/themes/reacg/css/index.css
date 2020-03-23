@@ -855,7 +855,7 @@ input.btn_my_zzk:hover {
 }
 
 #cnblogs_post_body p {
-    line-height: 2;
+    line-height: 1.8;
 }
 
 #cnblogs_post_body a {
@@ -1093,13 +1093,14 @@ pre::before {
 
 #post-signature p {
     margin: 0;
+    font-size: 0.213rem;
 }
 
 #post-signature::before {
     content: '!';
     background-color: var(--themeColor);
     position: absolute;
-    top: 14px;
+    top: 20px;
     left: -12px;
     color: #fff;
     width: 20px;
@@ -1611,6 +1612,17 @@ footer #links {
     #author_profile {
         display: none;
     }
+
+    .entrylistPosttitle,
+    .postTitle {
+        font-size: 0.5rem;
+    }
+
+    /* 顶部导航栏 start*/
+    #blog_nav_rss {
+        display: none !important;
+    }
+    /* 顶部导航栏 end*/
     /* 首页 start */
     .postDesc a:last-child {
         display: none;
@@ -1662,7 +1674,6 @@ footer #links {
         display: none;
     }
     /* ... 底部 阅读（x） 评论（x） 编辑 end */
-
     /* 底部广告 start */
     #ad_t2 {
         font-size: 0.2rem;
@@ -1672,7 +1683,6 @@ footer #links {
     }
     /* 底部广告 end */
     /* 随笔页 end*/
-
     /* 返回顶部按钮 start */
     #back-to-top {
         bottom: 0.4rem;

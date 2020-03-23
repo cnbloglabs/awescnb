@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { template, themeName } = require('./options')
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
@@ -55,8 +56,9 @@ module.exports = merge(baseWebpackConfig, {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'src/templates/post.html',
+            template: `src/templates/${template}.html`,
             inject: 'body',
+            chunks: ['index', `${themeName}`],
         }),
         new webpack.HotModuleReplacementPlugin({}),
     ],

@@ -1,6 +1,8 @@
+// 代码高亮
+
 import { pageName } from '@/assets/utils/tools'
 const opts = window.opts.highLight
-// 设置代码高亮
+
 function highlight() {
     if (pageName() !== 'post') return
     if ($('pre').length === 0) return
@@ -15,7 +17,7 @@ function highlight() {
         atomOneLight,
         github,
     }
-    
+
     $('head').append(actions[type])
 }
 

@@ -1,7 +1,6 @@
 import footer from './footer'
 import mobileMenu from './mobileMenu'
 import mode from './mode'
-import color from './color'
 import avatar from './avatar'
 import qrcode from './qrcode'
 import scroll from './scroll'
@@ -18,7 +17,6 @@ import signature from './signature'
 function build() {
     mobileMenu()
     mode()
-    color()
     avatar()
     qrcode()
     scroll()

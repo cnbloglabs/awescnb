@@ -32,7 +32,7 @@ function setCommentListAvatars() {
                 clearInterval(intervalId)
                 show()
             }
-            if (count == 10) {
+            if (count === 15) {
                 clearInterval(intervalId)
             }
             count++
