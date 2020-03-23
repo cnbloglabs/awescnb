@@ -7,8 +7,8 @@ import plugins from './plugins'
 class Reacg extends AwesCnb {
     constructor() {
         super()
-        super.init()
         this.init()
+        super.init()
     }
 
     init() {

@@ -4,7 +4,14 @@ import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
-    constructor() {
+    constructor() {}
+
+    init() {
+        hideLoading()
+        printing()
+    }
+
+    initOpts() {
         if (env === 'dev') {
             window.opts = defaultOptions
         } else if (!$.awesCnb) {
@@ -16,12 +23,8 @@ class AwesCnb {
             })
         }
     }
-    init() {
-        hideLoading()
-        printing()
-    }
 }
 
-new AwesCnb()
+new AwesCnb().initOpts()
 
 export default AwesCnb
