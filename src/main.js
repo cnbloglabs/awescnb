@@ -1,3 +1,2 @@
-const { merge } = require('@/assets/utils/merge')
-
+import merge from '@/assets/utils/merge'
 merge()
