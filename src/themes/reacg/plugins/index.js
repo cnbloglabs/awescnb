@@ -19,3 +19,4 @@ function plugins() {
 }
 
 export default plugins
+module.exports = plugins

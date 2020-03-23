@@ -37,7 +37,9 @@
 
 ```css
 :root{--sk-size:60px;--sk-color:#ffb3cc}
-#loading{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;justify-content:center;align-items:center;background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.gif);z-index:99999}
+#loading{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;justify-content:center;align-items:center;
+background-color: #fff;
+background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.gif);z-index:99999}
 .sk-fold{width:var(--sk-size);height:var(--sk-size);position:relative;transform:rotateZ(45deg)}
 .sk-fold-cube{float:left;width:50%;height:50%;position:relative;transform:scale(1.1)}
 .sk-fold-cube:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--sk-color);animation:sk-fold 2.4s infinite linear both;transform-origin:100% 100%}
@@ -123,14 +125,12 @@ import AwesCnb from '@/themes/awescnb' // 引入公共的类
 class Demo extends AwesCnb {
     constructor() {
         super()
-        super.init()
-        this.init()
+        super.init(this.init)
     }
 
     init() {
-        this.hideLoading()
+        // to do something
     }
-    // to do something
 }
 
 new Demo()
