@@ -3,12 +3,14 @@ import { loadFiles } from '@/assets/utils/tools'
 const userOptions = require('@/assets/utils/merge')
 
 window.opts = userOptions
-// console.log(window.opts)
+console.log(window.opts)
 
 if (env === 'dev') {
     require('./assets/dev/blog-common.min.css')
+    // Todo: add other cnblog files
 } else {
     let theme = userOptions.theme.name
+    console.log('你正在使用:', theme)
     if(theme === 'acg' || theme === 'light') {
         theme = 'reacg'
     }
