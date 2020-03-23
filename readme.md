@@ -1,6 +1,6 @@
-<p align="center">
+<!-- <p align="center">
   <img src='https://guangzan.gitee.io/imagehost/awescnb/logo.png' />
-</p>
+</p> -->
 
 # Awescnb
 
@@ -85,27 +85,20 @@
 
 ## 目录
 
-这里只简单的罗列基本的项目目录,让你清楚它是怎么运行的.如果你有问题或建议欢迎交流.
-
 ```
-├─config  webpack配置
+├─config webpack配置
+├─dist 打包生成
 └─src
-    │  main.js 项目入口
+    │ main.js
     ├─assets 静态文件
-    ├─constants 常量
-    │      default.js  默认配置
-    │      elements.js 博客园常用标签class\id
-    │      env.js 环境变量
-    │
+    ├─constants
     ├─plugins 公共插件
-    │
-    ├─templates 博客园的html
-    │
+    ├─templates
     └─themes
-        ├─awescnb 其他皮肤继承的 class
+        ├─awescnb 需要继承的 class
         │  │  index.js
         │
-        └─reacg 新增的皮肤
+        └─demo 新增的皮肤
             │  index.js
 ```
 
