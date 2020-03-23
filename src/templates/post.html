@@ -12,10 +12,34 @@
         <link rel="stylesheet" href="https://www.cnblogs.com/css/blog-common.min.css?v=BKtyzabbeYJEVOaELkxmRjHbp7LT-v37GzrU5S24bJk">
         <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+        <style>
+            :root{--sk-size:60px;--sk-color:#ffb3cc}
+#loading{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;justify-content:center;align-items:center;background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.gif);z-index:99999}
+.sk-fold{width:var(--sk-size);height:var(--sk-size);position:relative;transform:rotateZ(45deg)}
+.sk-fold-cube{float:left;width:50%;height:50%;position:relative;transform:scale(1.1)}
+.sk-fold-cube:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--sk-color);animation:sk-fold 2.4s infinite linear both;transform-origin:100% 100%}
+.sk-fold-cube:nth-child(2){transform:scale(1.1) rotateZ(90deg)}
+.sk-fold-cube:nth-child(4){transform:scale(1.1) rotateZ(180deg)}
+.sk-fold-cube:nth-child(3){transform:scale(1.1) rotateZ(270deg)}
+.sk-fold-cube:nth-child(2):before{animation-delay:.3s}
+.sk-fold-cube:nth-child(4):before{animation-delay:.6s}
+.sk-fold-cube:nth-child(3):before{animation-delay:.9s}
+@keyframes sk-fold{
+0%,10%{transform:perspective(140px) rotateX(-180deg);opacity:0}
+25%,75%{transform:perspective(140px) rotateX(0);opacity:1}
+100%,90%{transform:perspective(140px) rotateY(180deg);opacity:0}}
+        </style>
     </head>
     <body>
         <a name="top"></a>
-
+<div id="loading">
+    <div class="sk-fold">
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+    </div>
+</div>
         <!--done-->
         <div id="home">
             <div id="header">

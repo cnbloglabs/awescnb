@@ -7,8 +7,7 @@ const constants = {
 
 // 隐藏加载动画
 function hideLoading() {
-    if (env === 'dev') return
-    if ($('#loading').length !== 1) return
+    // if (env === 'dev') return
     $('#loading').fadeOut(300)
 }
 

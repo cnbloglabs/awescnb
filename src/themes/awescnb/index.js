@@ -4,8 +4,6 @@ import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
-    constructor() {}
-
     init() {
         hideLoading()
         printing()
