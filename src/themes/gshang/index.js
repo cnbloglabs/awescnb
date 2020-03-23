@@ -1,11 +1,5 @@
 import AwesCnb from '@/themes/awescnb'
 import './index.css'
-import {
-    setBack2Top,
-    setAvatar,
-    setHeaderBackground,
-    setThemeColor,
-} from './build'
 
 class Gshang extends AwesCnb {
     constructor() {
@@ -15,6 +9,12 @@ class Gshang extends AwesCnb {
 
     init() {
         $.getScript('//at.alicdn.com/t/font_1416496_14nsmkubys8.js')
+        const {
+            setBack2Top,
+            setAvatar,
+            setHeaderBackground,
+            setThemeColor,
+        } = require('./build')
         setThemeColor()
         setAvatar()
         setHeaderBackground()

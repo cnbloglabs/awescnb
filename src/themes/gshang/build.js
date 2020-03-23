@@ -66,3 +66,5 @@ function iconInSvg(icon) {
 }
 
 export { setBack2Top, setAvatar, setHeaderBackground, setThemeColor }
+
+module.exports = { setBack2Top, setAvatar, setHeaderBackground, setThemeColor }

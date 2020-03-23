@@ -1,8 +1,6 @@
-import './index.css'
+import './css/index.css'
 import 'lib-flexible/flexible.js'
 import AwesCnb from '@/themes/awescnb'
-// import build from './build'
-// import plugins from './plugins'
 
 class Reacg extends AwesCnb {
     constructor() {
