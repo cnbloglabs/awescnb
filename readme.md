@@ -15,7 +15,7 @@
 
 ## 简介
 
-通过 webpack 构建, 可以在本地启动服务调试 css 和 js, 并且集成了大量博客园皮肤插件,使你快速构建一款博客园皮肤.
+通过 webpack 构建, 可以在本地启动服务调试 css 和 js, 并且集成了大量博客插件,使你快速构建一款博客园皮肤.
 
 1. 你可以使用它快速创建自己的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
 
@@ -111,15 +111,15 @@
 
 ## 创建新的皮肤
 
-首先你需要将[项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
+首先你需要将[本项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
 
 **1. 创建基本文件**
 
--   在 themes 文件夹下创建一个新文件夹, 例如你的主题叫做 demo 你就创建 demo 文件夹.
+-   在 themes 文件夹下创建一个新文件夹, 例如你的主题叫做 demo, 你就创建 demo 文件夹.
 
 -   在 demo 文件夹中创建 index.js.
 
--   在 demo 文件夹中创建 index.css. 皮肤样式
+-   在 demo 文件夹中创建 index.css.
 
 -   在 demo/index.js 中粘贴以下代码.
 
@@ -143,7 +143,7 @@ class Demo extends AwesCnb {
 new Demo()
 ```
 
-**2. 更改配置以你的启动主题**
+**2. 更新配置以启动你的皮肤**
 
 打开`config / options.js`：
 
@@ -154,15 +154,15 @@ module.exports = {
 }
 ```
 
--   themeName 你创建的主题文件夹名称,运行 `npm start` 会启动它
--   template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+-   themeName 你创建的主题文件夹名称
+-   template 本地开发要启动的页面 | 首页 -> 'index' | 随笔详情页 -> 'post' | 标签页 -> 'tag' | ...
 
 **3. 构建和打包**
 
 -   `npm start` 将在本地启动你的皮肤,进行调试.
 -   `npm run build` 打包
 
-项目打包会在 dist 文件夹下生成以下 js 文件:
+项目打包会在 dist 目录下生成以下 js 文件:
 
 -   index.js 这个文件是用来根据用户所选的主题加载对应的 demo.js.
 -   demo.js 你的主题导入的所有依赖都会打包成这个文件
@@ -176,7 +176,7 @@ module.exports = {
 安装你的主题步骤同上,你只需在安装过程中作如下变化:
 
 ```js
-<script src="https://xxx/[theme].js"></script> // 仅这一行有变化
+<script src="https://xxx/demo.js"></script> // 仅这一行有变化
 <script>$.awesCnb({
               // 在这里写入配置
               // 什么都不写代表使用默认配置
@@ -214,11 +214,11 @@ module.exports = {
 -   可单独使用 themejs √
 -   sourcemap √
 -   config/options.js √
+-   md 标签 √
 -   测试单个文件
 -   同步到 github
 -   footer 版本同步
 -   注释
--   md 标签
 
 **通用备选插件**
 
