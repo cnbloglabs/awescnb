@@ -1543,9 +1543,10 @@ footer #links {
     top: 1.2rem;
     width: 100vw;
     height: 40vh;
-    pointer-events: none;
+    text-shadow: 0px 0px 3px var(--themeColor);
     overflow: hidden;
     z-index: 20;
+    pointer-events: none;
 }
 
 #barrage-wrap span {
