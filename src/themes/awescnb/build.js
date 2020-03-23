@@ -7,6 +7,7 @@ const constants = {
 
 // 隐藏加载动画
 function hideLoading() {
+    if (env === 'dev') return
     if ($('#loading').length !== 1) return
     $('#loading').fadeOut(300)
 }
@@ -19,4 +20,4 @@ function printing() {
     console.log(qqGroup)
 }
 
-module.exports = { hideLoading, printing }
+export { hideLoading, printing }

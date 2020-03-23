@@ -212,6 +212,7 @@ module.exports = {
 -   同步到 github
 -   footer 版本同步
 -   注释
+-   rebuild tools/loadfile
 
 **通用备选插件**
 

@@ -1,11 +1,8 @@
 import '@/assets/css/common.css'
+import merge from '@/assets/utils/merge'
+import { hideLoading, printing } from './build'
 
-if (!window.opts) {
-    const { userOptions } = require('@/assets/utils/merge')
-    window.opts = userOptions
-}
-
-const { hideLoading, printing } = require('./build')
+merge()
 
 class AwesCnb {
     constructor() {}

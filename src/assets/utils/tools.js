@@ -1,39 +1,13 @@
 import { repositories } from '@/constants/urls'
 
 /**
- * @description 加载文件
- * @param {Array} files [{name: '', type: 'js | css | jsCDN | cssCDN'}]
- * @param {Function} callback 回调函数 只能走一个
+ * @description 加载主题js
+ * @param {String} themeName 主题名称
  */
-
-const loadFiles = (files, callback = function() {}) => {
+function load(themeName) {
     const repositoriesUrl = repositories.package
-    for (let i = 0; i < files.length; i++) {
-        const name = files[i].name
-        const type = files[i].type
-        const cssUrl = repositoriesUrl + '/css/' + name + '.css'
-        const jsUrl = `${repositoriesUrl}/${name}.js`
-        const actions = {
-            css: () => {
-                $('head').append(`<link rel="stylesheet" href="${cssUrl}">`)
-            },
-            js: () => {
-                $.getScript(jsUrl, () => {
-                    callback()
-                })
-            },
-            cssCDN: () => {
-                $('head').append(`<link rel="stylesheet" href="${name}">`)
-            },
-            jsCDN: () => {
-                $.getScript(name)
-            },
-            default: () => {
-                console.error('Type error!')
-            },
-        }
-        actions[type]()
-    }
+    const url = `${repositoriesUrl}/${themeName}.js`
+    $.getScript(url)
 }
 
 /**
@@ -206,7 +180,7 @@ const userAgent = () => {
 }
 
 export {
-    loadFiles,
+    load,
     debounce,
     throttle,
     getRandomProperty,

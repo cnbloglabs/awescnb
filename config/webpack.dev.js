@@ -58,7 +58,7 @@ module.exports = merge(baseWebpackConfig, {
             filename: 'index.html',
             template: `src/templates/${template}.html`,
             inject: 'body',
-            chunks: ['index', `${themeName}`],
+            chunks: [`${themeName}`],
         }),
         new webpack.HotModuleReplacementPlugin({}),
     ],
