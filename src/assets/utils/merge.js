@@ -1,21 +1,16 @@
 import { load } from '@/assets/utils/tools'
 import defaultOptions from '@/constants/default'
-import env from '@/constants/env'
 
 // 创建 awesCnb
 // 合并配置
 function merge() {
-    if (env === 'dev') {
-        window.opts = defaultOptions
-    } else {
-        $.extend({
-            awesCnb: options => {
-                if (options) $.extend(true, defaultOptions, options)
-                window.opts = defaultOptions
-                loadTheme()
-            },
-        })
-    }
+    $.extend({
+        awesCnb: options => {
+            if (options) $.extend(true, defaultOptions, options)
+            window.opts = defaultOptions
+            loadTheme()
+        },
+    })
 }
 
 // 加载主题
