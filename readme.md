@@ -4,21 +4,14 @@
 
 # Awescnb
 
-  <img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg">
-  <img src="https://img.shields.io/badge/-jquery-lightgrey">
-  <img src="https://img.shields.io/badge/-gulp-orange">
-  <img src="https://img.shields.io/badge/-live2D-yellow">
-  <img src="https://img.shields.io/badge/-anime-red">
-  <img src="https://img.shields.io/badge/-APlayer-informational">
-  <img src="https://img.shields.io/badge/-flexible-success">
-  <img src="https://img.shields.io/badge/-highlight-yellowgreen">
-  <img src="https://img.shields.io/badge/-linenumber-important">
-  <img src="https://img.shields.io/badge/-scrollgress-critical">
-  <img src="https://img.shields.io/badge/-music-informational">
-  <img src="https://img.shields.io/badge/-custom-ff69b4">
-  <img src="https://img.shields.io/badge/-responsive-9cf">
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
-> **Awescnb**, awesome cnblog 使博客园看起来更好。
+> **Awescnb**, awesome cnblog 使博客园更美好。
 
 ## 简介
 
@@ -116,25 +109,19 @@
             │  index.js
 ```
 
-## 命令
-
--   `npm install`
--   `npm start`
--   `npm run build`
-
 ## 创建新的皮肤
 
 首先你需要将[项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
 
-1. **创建基本文件**
+**1. 创建基本文件**
 
-- 在 themes 文件夹下创建一个新文件夹, 例如你的主题叫做 demo 你就创建 demo 文件夹.
+-   在 themes 文件夹下创建一个新文件夹, 例如你的主题叫做 demo 你就创建 demo 文件夹.
 
-- 在 demo 文件夹中创建 index.js.
+-   在 demo 文件夹中创建 index.js.
 
-- 在 demo 文件夹中创建 index.css. 皮肤样式
+-   在 demo 文件夹中创建 index.css. 皮肤样式
 
-- 在 demo/index.js 中粘贴以下代码.
+-   在 demo/index.js 中粘贴以下代码.
 
 ```js
 import './index.css' // 引入你的样式文件
@@ -156,7 +143,7 @@ class Demo extends AwesCnb {
 new Demo()
 ```
 
-2. **更改配置以你的启动主题**
+**2. 更改配置以你的启动主题**
 
 打开`config / options.js`：
 
@@ -167,28 +154,29 @@ module.exports = {
 }
 ```
 
-- themeName 你创建的主题文件夹名称 (运行 npm start 会启动它)
-- template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+-   themeName 你创建的主题文件夹名称,运行 `npm start` 会启动它
+-   template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
 
-3. **构建和打包**
+**3. 构建和打包**
 
--  `npm start` 将在本地启动你的皮肤,进行调试.
+-   `npm start` 将在本地启动你的皮肤,进行调试.
 -   `npm run build` 打包
 
 项目打包会在 dist 文件夹下生成以下 js 文件:
 
 -   index.js 这个文件是用来根据用户所选的主题加载对应的 demo.js.
 -   demo.js 你的主题导入的所有依赖都会打包成这个文件
--   ...其他主题js
+-   ...其他主题 js
 
 如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 demo.js 即可.
 如果你希望别人也能切换到你构建的皮肤, 欢迎分享你构建的皮肤.
 
-4. **安装你创建的主题**
+**4. 安装你创建的主题**
 
 安装你的主题步骤同上,你只需在安装过程中作如下变化:
+
 ```js
-<script src="https://xxx/[theme].js"></script>
+<script src="https://xxx/[theme].js"></script> // 仅这一行有变化
 <script>$.awesCnb({
               // 在这里写入配置
               // 什么都不写代表使用默认配置
@@ -200,7 +188,7 @@ module.exports = {
 
 1. Fork 主仓库到自己账号成为副本仓库
 2. 在副本仓库完成代码贡献
-3. 将副本修改的内容给主仓库提交 PR ( Pull Requests )
+3. 将副本修改的内容给主仓库提交 Pull Requests
 
 > 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
 
@@ -225,11 +213,12 @@ module.exports = {
 -   bug 打包多出一个 js √
 -   可单独使用 themejs √
 -   sourcemap √
+-   config/options.js √
 -   测试单个文件
--   同步到github
+-   同步到 github
 -   footer 版本同步
 -   注释
--   md标签
+-   md 标签
 
 **通用备选插件**
 
@@ -251,7 +240,6 @@ module.exports = {
 -   音乐播放器 √
 -   隐藏 loading √
 -   在开发环境中导入 cnblog.common.css √
--   config/options.js
 
 **reacg**(示例皮肤)
 

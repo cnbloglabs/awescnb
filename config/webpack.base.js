@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         index: './src/main.js',
         reacg: './src/themes/reacg/index.js',
+        gshang: './src/themes/gshang/index.js',
         [themeName]: `./src/themes/${themeName}/index.js`,
     },
     output: {
