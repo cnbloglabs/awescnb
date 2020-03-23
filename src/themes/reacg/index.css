@@ -293,7 +293,8 @@ body::-webkit-scrollbar-track {
 .dayTitle {
     border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
     padding: 0.267rem;
-    color: var(--text-0);
+    color: var(--text-4);
+    font-size: 0.3rem;
 }
 
 .PostList,
