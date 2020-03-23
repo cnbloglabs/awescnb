@@ -128,7 +128,7 @@
 
 1. **创建基本文件**
 
-- 在 themes 文件夹下创建一个新文件夹,比如 demo.
+- 在 themes 文件夹下创建一个新文件夹, 例如你的主题叫做 demo 你就创建 demo 文件夹.
 
 - 在 demo 文件夹中创建 index.js.
 
@@ -156,45 +156,37 @@ class Demo extends AwesCnb {
 new Demo()
 ```
 
-1. **更改配置以你的启动主题**
+2. **更改配置以你的启动主题**
 
-打开`config / webpack.base.js`并进行以下更改：
-
-```js
-entry:{
-    index: './src/main.js',
--   reacg: './src/themes/reacg/index.js',
-+   demo: './src/themes/reacg/demo.js',
-},
-```
-
-3. **在本地启动**
-
--   `npm i` 安装项目依赖
--   `npm start` 进行本地开发
-
-运行`npm start`将在本地启动博客园首页。如果您想启动其他页面，请将 `config/webpack.dev.js`作如下更改:
+打开`config / options.js`：
 
 ```js
-new HtmlWebpackPlugin({
-    filename: 'index.html',
--   template: 'src/templates/index.html',
-+   template: 'src/templates/post.html', // Or other pages
-    inject: 'body',
-}),
+module.exports = {
+    themeName: 'demo',
+    template: 'post',
+}
 ```
 
-1. **打包**
+- themeName 你创建的主题文件夹名称 (运行 npm start 会启动它)
+- template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
 
+3. **构建和打包**
+
+-  `npm start` 将在本地启动你的皮肤,进行调试.
 -   `npm run build` 打包
 
-项目打包会在 dist 文件夹下生成两个 js 文件:
+项目打包会在 dist 文件夹下生成以下 js 文件:
 
--   index.js 这个文件是用来根据用户所选的主题加载对应的 theme.js.
--   theme.js 你的主题导入的所有依赖都会打包成这个文件
+-   index.js 这个文件是用来根据用户所选的主题加载对应的 demo.js.
+-   demo.js 你的主题导入的所有依赖都会打包成这个文件
+-   ...其他主题js
 
-如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 theme.js 即可,安装你的主题步骤同上,你只需要作如下变化:
+如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 demo.js 即可.
+如果你希望别人也能切换到你构建的皮肤, 欢迎分享你构建的皮肤.
 
+4. **安装你创建的主题**
+
+安装你的主题步骤同上,你只需在安装过程中作如下变化:
 ```js
 <script src="https://xxx/[theme].js"></script>
 <script>$.awesCnb({
@@ -207,7 +199,7 @@ new HtmlWebpackPlugin({
 ## 贡献
 
 1. Fork 主仓库到自己账号成为副本仓库
-2. 在副本仓库完成代码贡献（添加、删除、修改代码等等）
+2. 在副本仓库完成代码贡献
 3. 将副本修改的内容给主仓库提交 PR ( Pull Requests )
 
 > 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
