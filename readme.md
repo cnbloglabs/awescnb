@@ -1,39 +1,54 @@
-<!-- <p align="center">
-  <img src='https://guangzan.gitee.io/imagehost/awescnb/logo.png' />
-</p> -->
+## Awescnb
 
-# Awescnb
-
-[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg) ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) ![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg) ![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg) ![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg) ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
 > **Awescnb**, awesome cnblog 使博客园更美好。
 
 ## 简介
 
-通过 webpack 构建, 可以在本地启动服务调试 css 和 js, 并且集成了大量博客插件,使你快速构建一款博客园皮肤.
+**特性**
 
-1. 你可以使用它快速创建自己的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
+1. 本地调试
 
-2. 你可以使用它创建一个博客园皮肤.并将它贡献给项目,园友就能够切换到你的皮肤了.
+2. 模块化开发
 
-3. 你可以安装这个项目中的皮肤在你的博客园.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
+3. 集成插件(仅导入即可)
+
+
+**你可以用它做以下三件事**
+
+1. 创建: 你可以使用它快速创建自己的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
+
+2. 分享: 你可以使用它快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到你的皮肤了.
+
+3. 安装: 你可以安装这个项目中的皮肤在你的博客园.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
 
 **切换效果展示:**
 
 文件较大，为了节省流量，[点击](https://guangzan.gitee.io/imagehost/blog/themechange.gif)跳转查看.
 
-## 安装
+## 安装现成的皮肤
 
 1.你的博客首页 -> 管理 -> 设置
 
 2.设置博客默认皮肤为 **Custom**
 
-3.复制如下 css 粘贴到 **页面定制 CSS**
+3.使用 loading (不使用请忽略)
+
+复制如下 html 粘贴到 **页首 HTML**.
+
+```html
+<div id="loading">
+    <div class="sk-fold">
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+        <div class="sk-fold-cube"></div>
+    </div>
+</div>
+```
+
+复制如下 css 粘贴到 **页面定制 CSS**
 
 ```css
 :root{--sk-size:60px;--sk-color:#ffb3cc}
@@ -62,26 +77,14 @@ background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.
 ```js
 <script src="https://guangzan.gitee.io/awescnb2.0/index.js"></script>
 <script>$.awesCnb({
+              // 默认使用已经集成的皮肤 reacg
               // 在这里写入配置
               // 什么都不写代表使用默认配置
         });
 </script>
 ```
 
-6.复制如下 html 粘贴到 **页首 HTML**.
-
-```html
-<div id="loading">
-    <div class="sk-fold">
-        <div class="sk-fold-cube"></div>
-        <div class="sk-fold-cube"></div>
-        <div class="sk-fold-cube"></div>
-        <div class="sk-fold-cube"></div>
-    </div>
-</div>
-```
-
-7.保存.
+6.保存.
 
 > 如果你想继续定制化一些功能, [点我](https://guangzan.gitee.io/awescnb-docs) 跳转到宝宝都能看懂的文档.
 
@@ -104,13 +107,13 @@ background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.
             │  index.js
 ```
 
-## 创建新的皮肤
+## 创建一个皮肤
 
 首先你需要将[本项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
 
 **1. 创建基本文件**
 
--   在 themes 文件夹下创建一个新文件夹, 例如你的主题叫做 demo, 你就创建 demo 文件夹.
+-   在 themes 文件夹下创建一个新文件夹, 例如你的皮肤叫做 demo, 你就创建 demo 文件夹.
 
 -   在 demo 文件夹中创建 index.js.
 
@@ -129,6 +132,7 @@ class Demo extends AwesCnb {
     }
 
     init() {
+        // import plugins (use commonjs)
         // to do something
     }
 }
@@ -147,7 +151,7 @@ module.exports = {
 }
 ```
 
--   themeName 你创建的主题文件夹名称
+-   themeName 你创建的皮肤文件夹名称
 -   template 本地开发要启动的页面 | 首页 -> 'index' | 随笔详情页 -> 'post' | 标签页 -> 'tag' | ...
 
 **3. 构建和打包**
@@ -157,16 +161,16 @@ module.exports = {
 
 项目打包会在 dist 目录下生成以下 js 文件:
 
--   index.js 这个文件是用来根据用户所选的主题加载对应的 demo.js.
--   demo.js 你的主题导入的所有依赖都会打包成这个文件
--   ...其他主题 js
+-   demo.js 你的皮肤导入的所有依赖都会打包成这个文件
+-   index.js 这个文件是用来根据用户所选的皮肤加载对应的 demo.js.
+-   ...其他皮肤 js
 
 如果你仅自己使用你构建的皮肤, 你只需要在你的博客园中引入 demo.js 即可.
 如果你希望别人也能切换到你构建的皮肤, 欢迎分享你构建的皮肤.
 
-**4. 安装你创建的主题**
+**4. 安装你创建的皮肤**
 
-安装你的主题步骤同上,你只需在安装过程中作如下变化:
+安装你的皮肤步骤同上,你只需在安装过程中作如下变化:
 
 ```js
 <script src="https://xxx/demo.js"></script> // 仅这一行有变化
@@ -183,7 +187,7 @@ module.exports = {
 2. 在副本仓库完成代码贡献
 3. 将副本修改的内容给主仓库提交 Pull Requests
 
-> 如果你有兴趣加入项目, 可以直接加入仓库开发者行列.
+> 如果你有兴趣, 也可以加入仓库开发者行列.
 
 ## Todo
 
@@ -208,19 +212,26 @@ module.exports = {
 -   sourcemap √
 -   config/options.js √
 -   md 标签 √
--   测试单个文件
+-   测试单个文件 √
 -   同步到 github
 -   footer 版本同步
 -   注释
--   rebuild tools/loadfile
+-   rebuild tools/loadfile √
 
 **通用备选插件**
 
 -   自定义 body 背景图片\背景色透明度 √
 -   图片灯箱 √
+-   弹幕 √
+-   点击特效 √
+-   图片灯箱 √
+-   live2d √
+-   播放器 √
+-   加载进度条 √
+-   charts
+-   typed
 -   代码行号
 -   代码高亮
--   弹幕
 
 **class awescnb**
 
@@ -229,7 +240,7 @@ module.exports = {
 -   live2d √
 -   点击特效 √
 -   背景包括颜色和图像 √
--   主题颜色 √
+-   皮肤颜色 √
 -   favicon 和网站标题 √
 -   音乐播放器 √
 -   隐藏 loading √
@@ -264,7 +275,8 @@ module.exports = {
 -   移动端隐藏顶部订阅按钮 √
 -   调整移动端字体大小 √
 -   bug -> themeColor double √
--   图标跟随主题色
+-   弹幕阴影 √
+-   图标跟随皮肤色
 
 ## Contact
 
