@@ -3,11 +3,11 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { template, themeName } = require('./options')
+const { template, themeName, sourceMap } = require('./options')
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
-    // devtool: 'eval-source-map',
+    devtool: sourceMap ? 'eval-source-map' : '',
     module: {
         rules: [
             {
@@ -21,24 +21,6 @@ module.exports = merge(baseWebpackConfig, {
                         },
                     },
                     'postcss-loader',
-                ],
-            },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env'],
-                        },
-                    },
-                    {
-                        loader: 'eslint-loader',
-                        options: {
-                            cache: true,
-                        },
-                    },
                 ],
             },
         ],

@@ -164,6 +164,8 @@ body::-webkit-scrollbar-track {
 .mode-change,
 .mode-change #navigator,
 .mode-change #mainContent,
+.mode-change #cnblogs_post_body blockquote,
+.mode-change #post-signature,
 .mode-change #sidebar_news,
 .mode-change #blog-calendar,
 .mode-change #sidebar_search,
@@ -855,10 +857,6 @@ input.btn_my_zzk:hover {
     margin-top: 10px;
 }
 
-#cnblogs_post_body p {
-    line-height: 1.8;
-}
-
 #cnblogs_post_body a {
     color: #00a1d6;
 }
@@ -1033,6 +1031,7 @@ input.btn_my_zzk:hover {
 
 #cnblogs_post_body blockquote p {
     line-height: 1.5;
+    font-size: 14px;
 }
 
 #cnblogs_post_body pre {
@@ -1088,7 +1087,7 @@ pre::before {
     flex-direction: column;
     margin: 0.5333rem 0;
     padding: 12px 24px 12px 30px;
-    background-color: #f1eded;
+    background-color: var(--background-e);
     border-left: 5px solid var(--themeColor);
 }
 
@@ -1352,6 +1351,15 @@ pre::before {
     font-size: 0.25rem;
     max-width: 10rem;
     line-height: 2;
+}
+
+.feedbackCon .blog_comment_body p {
+    display: flex;
+    align-items: center;
+}
+.feedbackCon .blog_comment_body img {
+    width: 0.5rem;
+    height: 0.5rem;
 }
 
 .blog_comment_body p :nth-child(1) {
@@ -1653,7 +1661,7 @@ footer #links {
     .feedbackCon .blog_comment_body {
         max-width: 5rem;
     }
-
+    /* 评论图片 */
     #blog-comments-placeholder .feedbackListSubtitle {
         font-size: 12px;
     }

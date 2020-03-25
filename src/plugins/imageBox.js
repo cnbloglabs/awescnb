@@ -8,7 +8,7 @@ function imagebox() {
     if (!options.enable) return
     if (pageName() !== 'post') return
     
-    const imgList = $('#cnblogs_post_body img')
+    const imgList = $('#cnblogs_post_body img,.feedbackCon img')
     if (imgList === 0) return
     $.each(imgList, i => {
         const item = $(imgList[i])

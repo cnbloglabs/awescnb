@@ -8,60 +8,85 @@ const userOptions = window.opts
 
 // 设置sidebar icon
 function setSidebarIcon() {
-    // 小块标题
-    if ($(sidebarWraps.news).length > 0) {
-        $(`${sidebarWraps.news} h3`).prepend(iconInSvg(icons.news))
+    const insert = () => {
+        // 小块标题
+        if ($(sidebarWraps.news).length > 0) {
+            $(`${sidebarWraps.news} h3`).prepend(iconInSvg(icons.news))
+        }
+        if ($(sidebarWraps.search).length > 0) {
+            $(`${sidebarWraps.search} h3`).prepend(iconInSvg(icons.search))
+        }
+        if ($(sidebarWraps.links).length > 0) {
+            $(`${sidebarWraps.links} h3`).prepend(iconInSvg(icons.links))
+            $(`${sidebarWraps.links} ul li a`).prepend(iconInSvg(icons.link))
+        }
+        if ($(sidebarWraps.recent).length > 0) {
+            $(`${sidebarWraps.recent} h3`).prepend(iconInSvg(icons.pens))
+            $(`${sidebarWraps.recent} ul li a`).prepend(iconInSvg(icons.pen))
+        }
+        if ($(sidebarWraps.tags).length > 0) {
+            $(`${sidebarWraps.tags} h3`).prepend(iconInSvg(icons.tags))
+            $(`${sidebarWraps.tags} ul li a`).prepend(iconInSvg(icons.tag))
+        }
+        if ($(sidebarWraps.score).length > 0) {
+            $(`${sidebarWraps.score} h3`).prepend(iconInSvg(icons.trending))
+        }
+        if ($(sidebarWraps.category).length > 0) {
+            $(`${sidebarWraps.category} h3`).prepend(
+                iconInSvg(icons.categories),
+            )
+            $(`${sidebarWraps.category} ul li a`).prepend(
+                iconInSvg(icons.category),
+            )
+        }
+        if ($(sidebarWraps.record).length > 0) {
+            $(`${sidebarWraps.record} h3`).prepend(iconInSvg(icons.records))
+            $(`${sidebarWraps.record} ul li a`).prepend(iconInSvg(icons.record))
+        }
+        if ($(sidebarWraps.recentComments).length > 0) {
+            $(`${sidebarWraps.recentComments} h3`).prepend(
+                iconInSvg(icons.comments),
+            )
+            $(`${sidebarWraps.recentComments} ul li a`).prepend(
+                iconInSvg(icons.comment),
+            )
+        }
+        if ($(sidebarWraps.topview).length > 0) {
+            $(`${sidebarWraps.topview} h3`).prepend(iconInSvg(icons.trending))
+            $(`${sidebarWraps.topview} ul li a`).prepend(iconInSvg(icons.view))
+        }
+        if ($(sidebarWraps.topComents).length > 0) {
+            $(`${sidebarWraps.topComents} h3`).prepend(
+                iconInSvg(icons.trending),
+            )
+            $(`${sidebarWraps.topComents} ul li a`).prepend(
+                iconInSvg(icons.comment),
+            )
+        }
+        if ($(sidebarWraps.topDig).length > 0) {
+            $(`${sidebarWraps.topDig} h3`).prepend(iconInSvg(icons.trending))
+            $(`${sidebarWraps.topDig} ul li a`).prepend(iconInSvg(icons.dig))
+        }
+        if ($(sidebarWraps.catalog).length > 0) {
+            $(`${sidebarWraps.catalog} h3`).prepend(iconInSvg(icons.catalog))
+        }
     }
-    if ($(sidebarWraps.search).length > 1) {
-        $(`${sidebarWraps.search} h3`).prepend(iconInSvg(icons.search))
-    }
-    if ($(sidebarWraps.links).length > 0) {
-        $(`${sidebarWraps.links} h3`).prepend(iconInSvg(icons.links))
-        $(`${sidebarWraps.links} ul li a`).prepend(iconInSvg(icons.link))
-    }
-    if ($(sidebarWraps.recent).length > 0) {
-        $(`${sidebarWraps.recent} h3`).prepend(iconInSvg(icons.pens))
-        $(`${sidebarWraps.recent} ul li a`).prepend(iconInSvg(icons.pen))
-    }
-    if ($(sidebarWraps.tags).length > 0) {
-        $(`${sidebarWraps.tags} h3`).prepend(iconInSvg(icons.tags))
-        $(`${sidebarWraps.tags} ul li a`).prepend(iconInSvg(icons.tag))
-    }
-    if ($(sidebarWraps.score).length > 0) {
-        $(`${sidebarWraps.score} h3`).prepend(iconInSvg(icons.trending))
-    }
-    if ($(sidebarWraps.category).length > 0) {
-        $(`${sidebarWraps.category} h3`).prepend(iconInSvg(icons.categories))
-        $(`${sidebarWraps.category} ul li a`).prepend(iconInSvg(icons.category))
-    }
-    if ($(sidebarWraps.record).length > 0) {
-        $(`${sidebarWraps.record} h3`).prepend(iconInSvg(icons.records))
-        $(`${sidebarWraps.record} ul li a`).prepend(iconInSvg(icons.record))
-    }
-    if ($(sidebarWraps.recentComments).length > 0) {
-        $(`${sidebarWraps.recentComments} h3`).prepend(
-            iconInSvg(icons.comments),
-        )
-        $(`${sidebarWraps.recentComments} ul li a`).prepend(
-            iconInSvg(icons.comment),
-        )
-    }
-    if ($(sidebarWraps.topview).length > 0) {
-        $(`${sidebarWraps.topview} h3`).prepend(iconInSvg(icons.trending))
-        $(`${sidebarWraps.topview} ul li a`).prepend(iconInSvg(icons.view))
-    }
-    if ($(sidebarWraps.topComents).length > 0) {
-        $(`${sidebarWraps.topComents} h3`).prepend(iconInSvg(icons.trending))
-        $(`${sidebarWraps.topComents} ul li a`).prepend(
-            iconInSvg(icons.comment),
-        )
-    }
-    if ($(sidebarWraps.topDig).length > 0) {
-        $(`${sidebarWraps.topDig} h3`).prepend(iconInSvg(icons.trending))
-        $(`${sidebarWraps.topDig} ul li a`).prepend(iconInSvg(icons.dig))
-    }
-    if ($(sidebarWraps.catalog).length > 0) {
-        $(`${sidebarWraps.catalog} h3`).prepend(iconInSvg(icons.catalog))
+
+    if ($('#sidebar_topdiggedposts').length) {
+        insert()
+    } else {
+        let count = 1
+
+        let intervalId = setInterval(() => {
+            if ($('#sidebar_topdiggedposts').length) {
+                clearInterval(intervalId)
+                insert()
+            }
+            if (count == 15) {
+                clearInterval(intervalId)
+            }
+            count++
+        }, 500)
     }
 }
 

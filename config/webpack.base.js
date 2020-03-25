@@ -1,5 +1,24 @@
-const { themeName } = require('./options')
 const path = require('path')
+const { themeName } = require('./options')
+const { eslint } = require('./options')
+
+const jsLoader = [
+    {
+        loader: 'babel-loader',
+        options: {
+            presets: ['@babel/preset-env'],
+        },
+    },
+]
+
+if (eslint) {
+    jsLoader.push({
+        loader: 'eslint-loader',
+        options: {
+            cache: true,
+        },
+    })
+}
 
 module.exports = {
     entry: {
@@ -12,9 +31,21 @@ module.exports = {
         filename: '[name].js',
         path: path.join(__dirname, '..', 'dist'),
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: jsLoader,
+            },
+        ],
+    },
     resolve: {
         alias: {
             '@': path.resolve('src'),
+            '@tools': path.resolve('src/assets/utils/tools'),
+            '@plugins': path.resolve('src/plugins'),
+            '@constants': path.resolve('src/constants'),
         },
     },
 }

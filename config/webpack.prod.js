@@ -1,8 +1,28 @@
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
+const { openAnalyzer } = require('./options')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-    .BundleAnalyzerPlugin
+
+const plugins = [new CleanWebpackPlugin()]
+
+if (openAnalyzer) {
+    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+        .BundleAnalyzerPlugin
+    plugins.push(
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerHost: '127.0.0.1',
+            analyzerPort: 8888,
+            reportFilename: 'report.html',
+            defaultSizes: 'parsed',
+            openAnalyzer: true,
+            generateStatsFile: false,
+            statsFilename: 'stats.json',
+            statsOptions: null,
+            logLevel: 'info',
+        }),
+    )
+}
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'production',
@@ -21,41 +41,9 @@ module.exports = merge(baseWebpackConfig, {
                     'postcss-loader',
                 ],
             },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env'],
-                        },
-                    },
-                    {
-                        loader: 'eslint-loader',
-                        options: {
-                            cache: true,
-                        },
-                    },
-                ],
-            },
         ],
     },
-    plugins: [
-        new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerHost: '127.0.0.1',
-            analyzerPort: 8888,
-            reportFilename: 'report.html',
-            defaultSizes: 'parsed',
-            openAnalyzer: true,
-            generateStatsFile: false,
-            statsFilename: 'stats.json',
-            statsOptions: null,
-            logLevel: 'info',
-        }),
-    ],
+    plugins,
     externals: {
         jquery: 'window.jquery',
     },

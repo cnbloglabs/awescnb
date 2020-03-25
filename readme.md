@@ -2,18 +2,11 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg) ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) ![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg) ![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg) ![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg) ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
-> **Awescnb**, awesome cnblog 使博客园更美好。
+> **Awescnb**, awesome cnblog 使博客园更加美好。
 
 ## 简介
 
-**特性**
-
-1. 本地调试
-
-2. 模块化开发
-
-3. 集成插件(仅导入即可)
-
+项目使用 webpack4 构建, 可本地调试 js 和 css, 同时集成大量常用博客插件(仅引入即可), 使构建博客园皮肤变得简单.
 
 **你可以用它做以下三件事**
 
@@ -21,7 +14,7 @@
 
 2. 分享: 你可以使用它快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到你的皮肤了.
 
-3. 安装: 你可以安装这个项目中的皮肤在你的博客园.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
+3. 安装: 你可以在你的博客园安装这个项目中现成的皮肤.这不是一个简单的博客园皮肤,而是一个合集.安装之后,你可以快速切换其他皮肤.
 
 **切换效果展示:**
 
@@ -33,7 +26,7 @@
 
 2.设置博客默认皮肤为 **Custom**
 
-3.使用 loading (不使用请忽略)
+3.使用 loading (推荐使用,不使用请忽略)
 
 复制如下 html 粘贴到 **页首 HTML**.
 
@@ -113,7 +106,9 @@ background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.
 
 **1. 创建基本文件**
 
--   在 themes 文件夹下创建一个新文件夹, 例如你的皮肤叫做 demo, 你就创建 demo 文件夹.
+例如0你要创建的皮肤叫做 demo.
+
+-   在 themes 文件夹下创建 demo 文件夹.
 
 -   在 demo 文件夹中创建 index.js.
 
@@ -134,6 +129,7 @@ class Demo extends AwesCnb {
     init() {
         // import plugins (use commonjs)
         // to do something
+        // 如果你不知道到如何导入已经集成的插件, 你可以打开 themes/reacg/index.js (示例皮肤)参考
     }
 }
 
@@ -156,8 +152,9 @@ module.exports = {
 
 **3. 构建和打包**
 
--   `npm start` 将在本地启动你的皮肤,进行调试.
--   `npm run build` 打包
+1.运行`npm start` 将在本地启动你的皮肤,进行调试.
+
+2.运行`npm run build` 打包
 
 项目打包会在 dist 目录下生成以下 js 文件:
 
@@ -173,13 +170,20 @@ module.exports = {
 安装你的皮肤步骤同上,你只需在安装过程中作如下变化:
 
 ```js
-<script src="https://xxx/demo.js"></script> // 仅这一行有变化
-<script>$.awesCnb({
-              // 在这里写入配置
-              // 什么都不写代表使用默认配置
-        });
-</script>
+<script src="https://xxx/demo.js"></script> // 你可以引入你构建好的的皮肤js 或者将代码放入 script 标签内
+<script>$.awesCnb({})</script>
 ```
+
+## 文档
+
+- [参考写法](https://guangzan.gitee.io/awescnb-docs/guide/use/default.html)
+
+- [所有配置](https://guangzan.gitee.io/awescnb-docs/guide/use/options.html#theme%EF%BC%88%E5%85%A8%E5%B1%80%E4%B8%BB%E9%A2%98%EF%BC%89)
+
+- [更新日志](https://guangzan.gitee.io/awescnb-docs/guide/dev/log.html)
+
+- [To do](https://guangzan.gitee.io/awescnb-docs/guide/dev/todo.html)
+
 
 ## 贡献
 
@@ -189,94 +193,6 @@ module.exports = {
 
 > 如果你有兴趣, 也可以加入仓库开发者行列.
 
-## Todo
-
-**项目**
-
--   merge.js √
--   在入口引入 merge √
--   themejs 从 mergejs 导入用户选项 x
--   组织目录 √
--   Window.useroptions √
--   调整 plugins 位置 √
--   根据 env 加载 http 文件 x
--   eslint √
--   prettier √
--   stylelint x
--   babel √
--   autoprefixer √
--   postcss-import √
--   cssnano √
--   bug 打包多出一个 js √
--   可单独使用 themejs √
--   sourcemap √
--   config/options.js √
--   md 标签 √
--   测试单个文件 √
--   同步到 github
--   footer 版本同步
--   注释
--   rebuild tools/loadfile √
-
-**通用备选插件**
-
--   自定义 body 背景图片\背景色透明度 √
--   图片灯箱 √
--   弹幕 √
--   点击特效 √
--   图片灯箱 √
--   live2d √
--   播放器 √
--   加载进度条 √
--   charts
--   typed
--   代码行号
--   代码高亮
-
-**class awescnb**
-
--   NProgress √
--   组织常用 css √
--   live2d √
--   点击特效 √
--   背景包括颜色和图像 √
--   皮肤颜色 √
--   favicon 和网站标题 √
--   音乐播放器 √
--   隐藏 loading √
--   在开发环境中导入 cnblog.common.css √
-
-**reacg**(示例皮肤)
-
--   评论图片样式
--   自定义二维码 √
--   自定义头像 √
--   icons √
--   footer √
--   移动端菜单 √
--   图标 √
--   自定义 body 背景图片\背景色透明度 √
--   图片灯箱 √
--   代码行号 √
--   代码高亮 √
--   文章目录 √
--   文章底部签名 √
--   弹幕 √
--   返回顶部 √
--   签名 √
--   示例音乐丢失 ... √
--   backtotop 定位逻辑 √
--   夜间判断逻辑 √
--   优化切换暗色/亮色模式效果和逻辑 √
--   bug highlight 无效 √
--   显示评论区头像 增加轮询次数 √
--   移动端默认禁用点击特效 √
--   signature 样式优化 √
--   移动端隐藏顶部订阅按钮 √
--   调整移动端字体大小 √
--   bug -> themeColor double √
--   弹幕阴影 √
--   图标跟随皮肤色
 
 ## Contact
 
