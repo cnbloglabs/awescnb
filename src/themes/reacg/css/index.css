@@ -1411,7 +1411,8 @@ pre::before {
     width: 0.5rem;
     height: 0.5rem;
 }
-.blog_comment_body p :nth-child(1) {
+.blog_comment_body>a:first-of-type,
+.blog_comment_body p a:nth-child(1) {
     color: #fff;
 }
 .feedbackListSubtitle > a:last-of-type {
