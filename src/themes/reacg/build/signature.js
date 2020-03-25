@@ -25,6 +25,7 @@ function signature() {
                          const $signature = `<div id='post-signature'>
                             <p>本文作者：${author}</p>
                             <p>本文链接：${href}</p>
+                            <p>版权声明：本博客所有文章除特别声明外均为原创，采用 <a href='${opts.licenseLink}'>CC BY-NC-SA 4.0</a> 许可协议。转载请在明显位置注明原文链接和作者等相关信息，明确指出修改（如有），并通过 E-mail 等方式告知，谢谢合作！</p>,
                             ${custom}
                           </div>`
                          $('#cnblogs_post_body').append($signature)

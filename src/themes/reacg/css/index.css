@@ -1,16 +1,4 @@
-/* :root {
-  --dark-background-g: #333;
-  --dark-background-w: #555;
-  --dark-background-e: #7c7c7c;
-  --dark-text-0: #ccc;
-  --dark-text-3: #ccc;
-  --dark-text-4: #c0c0c0;
-  --dark-text-5: #999;
-  --dark-text-9: #7c7c7c;
-  --dark-text-a: #000;
-} */
 html {
-    /* mode */
     --background-g: var(--dark-background-g, var(--default-background-g));
     --background-w: var(--dark-background-w, var(--default-background-w));
     --background-e: var(--dark-background-e, var(--default-background-e));
@@ -29,21 +17,6 @@ html {
     --default-text-5: #555;
     --default-text-9: #999;
     --default-text-a: #fff;
-    /* / mode */
-
-    /* code theme */
-    /* --hl-base: #282c34;
-    --hl-mono-1: #abb2bf;
-    --hl-mono-3: #5c6370;
-    --hl-hue-1: #56b6c2;
-    --hl-hue-2: #61aeee;
-    --hl-hue-3: #c678dd;
-    --hl-hue-4: #98c379;
-    --hl-hue-5: #e06c75;
-    --hl-hue-6: #d19a66;
-    --hl-hue-6-2: #e6c07b;
-    --hl-tag: #abb2bf; */
-    /* / code theme */
 }
 
 body,
@@ -1367,7 +1340,7 @@ pre::before {
     padding: 0 0.2rem;
     background-color: var(--themeColor);
     border-radius: 3px;
-    color: var(--text-3);
+    color: var(--text-0);
     font-size: 0.25rem;
     max-width: 10rem;
     line-height: 1.6;

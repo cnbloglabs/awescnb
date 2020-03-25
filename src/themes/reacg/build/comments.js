@@ -26,8 +26,7 @@ function showAvatar() {
 // 轮询显示头像
 function poll() {
     if (pageName() !== 'post') return
-    if ($('.feedbackItem').length === 0) return
-    if ($('.feedbackItem').length) {
+    if ($('.blog_comment_body').length) {
         showAvatar()
     } else {
         let count = 1
