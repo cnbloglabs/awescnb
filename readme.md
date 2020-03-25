@@ -117,14 +117,21 @@ class Demo extends AwesCnb {
 new Demo()
 ```
 
-**2. 更新配置以启动你的皮肤**
+**2. 更新配置以启动本地服务调试皮肤**
 
 打开`config / options.js`：
 
 ```js
+// 你无需直接更改webpack配置文件
+// 直接更改这里的配置
+// 其他配置我都帮你做好了
+
 module.exports = {
-    themeName: 'demo',
-    template: 'post',
+    themeName: 'reacg', // 你创建的主题文件夹名称 (运行 npm start 会启动它) 'reacg' | 'gshang'
+    template: 'post', // 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+    eslint: true, // 是否开启eslint
+    sourceMap: true, //是否开启sourcemap
+    openAnalyzer: false, // build 时开启 size 分析
 }
 ```
 
@@ -188,3 +195,5 @@ module.exports = {
 ## License
 
 Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
+
+> 开源不易,且行且珍惜.
