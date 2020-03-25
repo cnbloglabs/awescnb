@@ -13,13 +13,13 @@ function showAvatar() {
             ? avatar.replace('http://', 'https://')
             : 'https://pic.cnblogs.com/face/sample_face.gif'
 
-        if (env) {
+        if (env==='dev') {
             avatar = 'https://www.dummyimage.com/50'
         }
 
-        $(`<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`).prependTo(
-            $(this).children('.feedbackCon'),
-        )
+        $(
+            `<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`,
+        ).prependTo($(this).children('.feedbackCon'))
     })
 }
 
@@ -27,7 +27,6 @@ function showAvatar() {
 function poll() {
     if (pageName() !== 'post') return
     if ($('.feedbackItem').length === 0) return
-
     if ($('.feedbackItem').length) {
         showAvatar()
     } else {

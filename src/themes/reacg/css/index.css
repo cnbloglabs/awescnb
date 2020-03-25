@@ -611,10 +611,11 @@ input.btn_my_zzk:hover {
 /* 随笔页 start */
 /* 主要容器 */
 #post_detail,
-#comment_form {
+#comment_form,
+#blog-comments-placeholder {
     padding: 0.4rem;
 }
-#comment_form {
+#blog-comments-placeholder {
     padding-top: 0;
 }
 #post_detail .postTitle {
@@ -1728,7 +1729,7 @@ footer #links {
 
     /* 评论列表 start */
     .feedbackCon .blog_comment_body {
-        max-width: 5rem;
+        max-width: 6rem;
     }
     /* 评论图片 */
     #blog-comments-placeholder .feedbackListSubtitle {
@@ -1736,13 +1737,16 @@ footer #links {
     }
 
     #blog-comments-placeholder .comment_date {
-        width: 1.8rem;
+        /* width: 1.8rem; */
         overflow: hidden;
         white-space: nowrap;
     }
+     #blog-comments-placeholder.comment_vote{
+         display: none;
+     }
 
     #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
-        width: 2.2rem;
+        /* width: 2.2rem; */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

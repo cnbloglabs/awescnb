@@ -81,25 +81,6 @@ background-image:url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/cell.
 
 > 如果你想继续定制化一些功能, [点我](https://guangzan.gitee.io/awescnb-docs) 跳转到宝宝都能看懂的文档.
 
-## 目录
-
-```
-├─config webpack配置
-├─dist 打包生成
-└─src
-    │ main.js
-    ├─assets 静态文件
-    ├─constants
-    ├─plugins 公共插件
-    ├─templates
-    └─themes
-        ├─awescnb 需要继承的 class
-        │  │  index.js
-        │
-        └─demo 新增的皮肤
-            │  index.js
-```
-
 ## 创建一个皮肤
 
 首先你需要将[本项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.

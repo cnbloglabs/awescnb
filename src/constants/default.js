@@ -9,6 +9,9 @@ const defaultOptions = {
         headerBackground:
             'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',
     },
+    emoji: {
+        enable: true,
+    },
     highLight: {
         type: 'atomOneDark',
     },
@@ -86,7 +89,7 @@ const defaultOptions = {
         audio: [
             {
                 name: 'イニシャル',
-                artist: 'Poppin\'Party',
+                artist: "Poppin'Party",
                 url: `https://guangzan.gitee.io/imagehost/awescnb/music/demo1.mp3`,
                 cover:
                     '//p2.music.126.net/ww7gcJ_erzPa8jgZesmTOA==/109951163271403502.jpg?param=90y90',

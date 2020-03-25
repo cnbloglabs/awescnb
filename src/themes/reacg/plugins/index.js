@@ -5,6 +5,7 @@ import setLive2d from '@/plugins/live2d'
 import setMusicPlayer from '@/plugins/player'
 import setTopProgress from '@/plugins/progress'
 import setClickEffects from '@/plugins/click'
+// import emoji from '@/plugins/emoji'
 import setIcons from './icons'
 
 function plugins() {
@@ -16,6 +17,7 @@ function plugins() {
     setMusicPlayer()
     setTopProgress()
     setClickEffects()
+    // emoji()
 }
 
 export default plugins
