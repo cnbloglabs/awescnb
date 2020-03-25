@@ -1343,9 +1343,11 @@ pre::before {
     width: 100%;
 }
 
+.custom-comment-avatar {
+    align-self: baseline;
+}
+
 .avatar {
-    /* width: 1.2rem;
-  height: 1.2rem; */
     border: 1px solid #eee;
     border-radius: 50%;
     transform: scale(0.7);
@@ -1360,6 +1362,7 @@ pre::before {
 .feedbackCon .blog_comment_body {
     position: relative;
     margin-left: 10px;
+    margin-top: 0.1rem;
     padding: 0 0.2rem;
     background-color: var(--themeColor);
     border-radius: 3px;
@@ -1430,15 +1433,10 @@ pre::before {
 .custom-comments-author .feedbackCon {
     flex-direction: row-reverse;
 }
-.feedbackCon .blog_comment_body p {
-    display: flex;
-    align-items: center;
-}
 .feedbackCon .blog_comment_body img {
     width: 0.5rem;
     height: 0.5rem;
 }
-
 .blog_comment_body p :nth-child(1) {
     color: #fff;
 }

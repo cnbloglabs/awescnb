@@ -9,15 +9,15 @@ function showAvatar() {
             .children('span:last')
             .html()
 
+        avatar = avatar
+            ? avatar.replace('http://', 'https://')
+            : 'https://pic.cnblogs.com/face/sample_face.gif'
+
         if (env) {
             avatar = 'https://www.dummyimage.com/50'
-        } else {
-            avatar = avatar
-                ? avatar.replace('http://', 'https://')
-                : 'https://pic.cnblogs.com/face/sample_face.gif'
         }
 
-        $(`<img src="${avatar}" class='avatar' />`).prependTo(
+        $(`<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`).prependTo(
             $(this).children('.feedbackCon'),
         )
     })
