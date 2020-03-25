@@ -4,7 +4,7 @@ const defaultOptions = {
         color: '#FFB3CC',
         qrcode: '',
         title: 'awescnb2.0',
-        favicon: 'https://guangzan.gitee.io/awescnb/assets/images/favicon.png',
+        favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
             'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',

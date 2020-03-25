@@ -32,7 +32,7 @@ function poll() {
         let count = 1
 
         let intervalId = setInterval(() => {
-            if ($('.feedbackItem').length) {
+            if ($('.blog_comment_body').length) {
                 clearInterval(intervalId)
                 showAvatar()
             }
