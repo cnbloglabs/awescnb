@@ -10,7 +10,7 @@ function hideLoading() {
     // if (env === 'dev') return
     setTimeout(() => {
         $('#loading').fadeOut(200)
-    }, 600)
+    }, 400)
 }
 
 // 控制台打印
