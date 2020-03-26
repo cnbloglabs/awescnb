@@ -1044,11 +1044,6 @@ input.btn_my_zzk:hover {
     padding: 0.333rem 0.2rem;
 }
 
-.feedbackItem {
-    border-left: 1px solid var(--text-10);
-    border-right: 1px solid var(--text-10);
-}
-
 #blog-comments-placeholder {
     margin: 0.4rem;
     border: 1px solid var(--text-10);
