@@ -1009,7 +1009,7 @@ input.btn_my_zzk:hover {
 }
 .feedback_area_title {
     padding: 0.14rem 0.2rem;
-    border: 1px solid var(--text-10);
+    border-bottom: 1px solid var(--text-10);
     background-color: var(--background-e);
     border-radius: 2px 2px 0 0;
     font-size: 0.2rem;
@@ -1050,7 +1050,8 @@ input.btn_my_zzk:hover {
 }
 
 #blog-comments-placeholder {
-    margin-top: 0.4rem;
+    margin: 0.4rem;
+    border: 1px solid var(--text-10);
 }
 
 #blog-comments-placeholder .feedbackItem:last-child {
