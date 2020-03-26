@@ -192,18 +192,12 @@ body::-webkit-scrollbar-track {
     right: 0;
     height: 1rem;
     background: var(--background-w);
-    color: var(--text-9);
+    color: var(--text-5);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     text-shadow: hsla(0, 0%, 59.2%, 0.1);
     z-index: 10;
     transition: all 0.2s;
 }
-
-.blogStats {
-    color: var(--text-9);
-    margin-left: 38vw;
-}
-
 .navigator-hide {
     transform: translateY(-100%);
 }
@@ -220,11 +214,8 @@ body::-webkit-scrollbar-track {
 
 #navigator .blogStats {
     font-size: 0.16rem;
-}
-
-#navList {
-    /* width: 42%; */
-    margin-left: 0.2rem;
+    color: var(--text-9);
+    /* margin-left: 34vw; */
 }
 
 #navList li {
@@ -590,12 +581,9 @@ input.btn_my_zzk:hover {
 
 /* 随笔页 start */
 /* 主要容器 */
-#post_detail,
-#comment_form {
+#comment_form,
+#post_detail {
     padding: 0.4rem;
-}
-#blog-comments-placeholder {
-    padding-top: 0 0.4rem;
 }
 #post_detail .postTitle {
     padding: 0.1rem 0.267rem 0.1rem 0;
@@ -1022,7 +1010,7 @@ input.btn_my_zzk:hover {
 .feedback_area_title {
     padding: 0.14rem 0.2rem;
     border: 1px solid var(--text-10);
-    background-color:  var(--background-e);
+    background-color: var(--background-e);
     border-radius: 2px 2px 0 0;
     font-size: 0.2rem;
     font-weight: 700;
@@ -1060,8 +1048,17 @@ input.btn_my_zzk:hover {
     border-left: 1px solid var(--text-10);
     border-right: 1px solid var(--text-10);
 }
+
+#blog-comments-placeholder {
+    margin-top: 0.4rem;
+}
+
 #blog-comments-placeholder .feedbackItem:last-child {
     border-bottom: 1px solid var(--text-10);
+}
+
+#blog-comments-placeholder br {
+    display: none;
 }
 #post-comments-list {
     margin-top: 0.4rem;
@@ -1255,8 +1252,6 @@ input.btn_my_zzk:hover {
     transition: border-color 0.2s;
 }
 
- 
-
 #btn_comment_submit {
     position: absolute;
     bottom: -0.2rem;
@@ -1369,6 +1364,9 @@ footer #links {
         height: 2.667rem;
     }
     /* 覆盖博客园bundle end */
+    #mode-change {
+        margin-left: 7vw !important;
+    }
     .postBody ul li {
         padding-top: 0.133rem;
     }
