@@ -1,10 +1,13 @@
+// 设置页面背景色
+// 设置内容透明度
+// 仅引入即可
+
 const config = window.opts
 
-// 设置页面背景色
 function setBodyBackground() {
     const options = config.bodyBackground
     if (!options.enable) return
-    
+
     $('#main,#navigator').css('opacity', `${options.opacity}`)
     if ($('#catalog').length > 0) {
         $('#main').css('opacity', `${options.opacity}`)

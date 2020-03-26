@@ -6,17 +6,13 @@
 
 ## 简介
 
-项目使用 webpack4 构建, 可本地调试 js 和 css, 同时集成大量常用博客插件(仅引入即可), 使构建博客园皮肤更简单.
+项目使用 webpack4 构建, 可本地调试 js 和 css, 同时集成大量常用博客插件(仅引入即可), 使构建博客园皮肤更简单.你可以用它做以下三件事:
 
-**你可以用它做以下三件事**
+1. 创建: 使用它快速创建一个的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
 
-1. **创建:** 使用它快速创建一个的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
+2. 分享: 使用它快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到你的皮肤了.
 
-2. **分享:** 使用它快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到你的皮肤了.
-
-3. **安装:** 在你的博客园安装这个项目中现成的皮肤.安装之后,可以快速切换其他皮肤.
-
-切换效果展示: [点击查看GIF](https://guangzan.gitee.io/imagehost/blog/themechange.gif).
+3. 安装: 在你的博客园安装这个项目中现成的皮肤.安装之后,可以快速切换其他皮肤.[点击查看G切换效果](https://guangzan.gitee.io/imagehost/blog/themechange.gif).
 
 ## 安装现成的皮肤
 
@@ -61,7 +57,7 @@
 5.复制如下 js 粘贴到 **博客侧边栏公告** 如没开通 js 权限请先开通.
 
 ```js
-<script src="https://guangzan.gitee.io/awescnb2.0/index.js"></script>
+<script src="https://guangzan.gitee.io/awescnb/index.js"></script>
 <script>$.awesCnb({
               // 默认使用已经集成的皮肤 reacg
               // 在这里写入配置

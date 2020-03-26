@@ -1,4 +1,5 @@
-// 设置头像
+// 设置侧栏头像
+// 引入即可
 function avatar() {
     const avatar = window.opts.theme.avatar
     if (avatar === '' || $('#blog-news').length === 0) return

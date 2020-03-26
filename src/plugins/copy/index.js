@@ -1,7 +1,9 @@
-import { pageName } from '@/assets/utils/tools'
-
-
 // 代码块复制按钮
+// 引入即可
+
+import { pageName } from '@/assets/utils/tools'
+import './index.css'
+
 function copy() {
     if (pageName() !== 'post') return
     const pres = $('.cnblogs-markdown').find('pre')
@@ -10,7 +12,7 @@ function copy() {
     $.each(pres, (index, pre) => {
         $(pre).prepend(`<div class="copy-btns">copy</div>`)
     })
-    
+
     $('pre').on('click', '.copy-btns', function() {
         const sel = window.getSelection()
         sel.removeAllRanges()

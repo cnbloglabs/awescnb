@@ -7,7 +7,7 @@ const { template, themeName, sourceMap } = require('./options')
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
-    devtool: sourceMap ? 'eval-source-map' : '',
+    devtool: sourceMap ? 'inline-source-map' : '',
     module: {
         rules: [
             {

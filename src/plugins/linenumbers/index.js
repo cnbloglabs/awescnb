@@ -1,7 +1,8 @@
-import { pageName } from '@/assets/utils/tools'
-// import '@/assets/js/linenumbers'
-
 // 设置代码行号
+// 引入即可
+
+import { pageName } from '@/assets/utils/tools'
+
 function linenumbers() {
     const options = window.opts.lineNumbers
     if (pageName() !== 'post') return

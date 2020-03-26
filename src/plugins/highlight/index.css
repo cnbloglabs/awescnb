@@ -1,0 +1,120 @@
+
+#cnblogs_post_body .hljs {
+    display: block !important;
+    padding: 0.5em !important;
+    color: var(--hl-mono-1) !important;
+    background: var(--hl-base) !important;
+    border: none !important;
+}
+
+#cnblogs_post_body .hljs-tag {
+    color: var(--hl-tag);
+}
+
+#cnblogs_post_body .hljs-comment,
+#cnblogs_post_body .hljs-quote {
+    color: var(--hl-mono-3);
+    font-style: italic;
+}
+
+#cnblogs_post_body .hljs-doctag,
+#cnblogs_post_body .hljs-formula,
+#cnblogs_post_body .hljs-keyword {
+    color: var(--hl-hue-3);
+}
+
+#cnblogs_post_body .hljs-deletion,
+#cnblogs_post_body .hljs-name,
+#cnblogs_post_body .hljs-section,
+#cnblogs_post_body .hljs-selector-tag,
+#cnblogs_post_body .hljs-subst {
+    color: var(--hl-hue-5);
+}
+
+#cnblogs_post_body .hljs-literal {
+    color: var(--hl-hue-1);
+}
+
+#cnblogs_post_body .hljs-addition,
+#cnblogs_post_body .hljs-attribute,
+#cnblogs_post_body .hljs-meta-string,
+#cnblogs_post_body .hljs-regexp,
+#cnblogs_post_body .hljs-string {
+    color: var(--hl-hue-4);
+}
+
+#cnblogs_post_body .hljs-built_in,
+#cnblogs_post_body .hljs-class .hljs-title {
+    color: var(--hl-hue-6-2);
+}
+
+#cnblogs_post_body .hljs-attr,
+#cnblogs_post_body .hljs-number,
+#cnblogs_post_body .hljs-selector-attr,
+#cnblogs_post_body .hljs-selector-class,
+#cnblogs_post_body .hljs-selector-pseudo,
+#cnblogs_post_body .hljs-template-variable,
+#cnblogs_post_body .hljs-type,
+#cnblogs_post_body .hljs-variable {
+    color: var(--hl-hue-6);
+}
+
+#cnblogs_post_body .hljs-bullet,
+#cnblogs_post_body .hljs-link,
+#cnblogs_post_body .hljs-meta,
+#cnblogs_post_body .hljs-selector-id,
+#cnblogs_post_body .hljs-symbol,
+#cnblogs_post_body .hljs-title {
+    color: var(--hl-hue-2);
+}
+
+#cnblogs_post_body .hljs-emphasis {
+    font-style: italic;
+}
+
+#cnblogs_post_body .hljs-strong {
+    font-weight: 700;
+}
+
+#cnblogs_post_body .hljs-link {
+    text-decoration: underline;
+}
+
+#cnblogs_post_body pre {
+    position: relative;
+    padding-top: 10px;
+    background: var(--hl-base);
+    border-radius: 4px;
+}
+
+#cnblogs_post_body code {
+    font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
+        monospace !important;
+    color: #c7254e !important;
+    font-size: 0.87em !important;
+    padding: 0 !important;
+    margin: 0;
+    word-break: break-word !important;
+    border: none !important;
+    background: none !important;
+}
+
+#cnblogs_post_body li code {
+    font-size: 12px !important;
+    font-weight: 700;
+}
+
+pre:hover {
+    box-shadow: 1px 1px 10px red;
+}
+
+pre::before {
+    border-radius: 4px;
+    content: ' ';
+    display: block;
+    height: 24px;
+    background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
+        no-repeat;
+    background-size: 65px 23px;
+    background-position-x: 10px;
+}

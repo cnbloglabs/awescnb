@@ -1,0 +1,17 @@
+#barrage-wrap {
+    position: fixed;
+    top: 1.2rem;
+    width: 100vw;
+    height: 40vh;
+    text-shadow: 0px 0px 3px var(--themeColor);
+    overflow: hidden;
+    z-index: 20;
+    pointer-events: none;
+}
+
+#barrage-wrap span {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 0.32rem;
+    font-weight: 700;
+}

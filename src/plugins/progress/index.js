@@ -1,4 +1,6 @@
-// import env from '@/constants/env'
+// 头部进度条
+// 引入即可
+
 import NProgress from 'NProgress'
 import { pageName, userAgent } from '@/assets/utils/tools'
 import 'nprogress/nprogress.css'

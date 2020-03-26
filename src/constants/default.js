@@ -3,7 +3,7 @@ const defaultOptions = {
         name: 'reacg',
         color: '#FFB3CC',
         qrcode: '',
-        title: 'awescnb2.0',
+        title: '',
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
@@ -110,7 +110,7 @@ const defaultOptions = {
     },
     links: [
         {
-            name: 'awesCnb',
+            name: 'awescnb',
             link: 'https://gitee.com/guangzan/awescnb',
         },
     ],

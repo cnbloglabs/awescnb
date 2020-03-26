@@ -1,3 +1,7 @@
+// 发送弹幕
+// 仅引入即可
+
+import './index.css'
 import {
     pageName,
     getClientRect,

@@ -1,6 +1,7 @@
+// 评论输入表情
+// state: dev
 
 const opts = window.opts.emoji
-
 
 function build() {
     if (!opts) return

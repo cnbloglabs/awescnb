@@ -1,4 +1,5 @@
 import { pageName } from '@/assets/utils/tools'
+import './index.css'
 
 function btns() {
     if (pageName() !== 'post') return

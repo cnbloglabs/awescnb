@@ -1,3 +1,6 @@
+// 设置看板娘
+// 引入即可
+
 import { pageName, userAgent } from '@/assets/utils/tools'
 import { getRandomProperty } from '@/assets/utils/tools'
 import { CDN } from '@/constants/urls'

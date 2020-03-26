@@ -1,6 +1,10 @@
+// 音乐播放器
+// 引入即可
+
 import { pageName, userAgent } from '@/assets/utils/tools'
 import APlayer from '@/assets/js/APlayer.min'
 import 'aplayer/dist/aplayer.min.css'
+import './index.css'
 
 // 音乐播放器
 const setMusicPlayer = () => {

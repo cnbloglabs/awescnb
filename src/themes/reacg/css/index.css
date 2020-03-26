@@ -612,90 +612,6 @@ input.btn_my_zzk:hover {
 }
 /* 文章标题icon end*/
 
-/* 随笔页关注推荐按钮 start */
-#custom-post-btn {
-    position: fixed;
-    bottom: 6.8rem;
-    right: 3.2rem;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-size: 0.2rem;
-}
-
-#custom-post-btn #green_channel_digg {
-    margin-top: 0.3rem;
-}
-
-#custom-post-btn #green_channel_follow,
-#custom-post-btn #green_channel_digg {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    background-color: #00a1d6;
-    text-align: center;
-    width: 0.72rem;
-    height: 0.72rem;
-    line-height: 0.72rem;
-    padding: 0;
-    border-radius: 100%;
-    opacity: 0.8;
-    box-shadow: 0px 0px 6px #00a1d6;
-}
-
-#custom-post-btn #green_channel_follow:hover,
-#custom-post-btn #green_channel_digg:hover {
-    color: #00a1d6;
-    background: none;
-    opacity: 0.8;
-    box-shadow: none;
-    transition: all 0.3s;
-}
-
-#custom-post-btn #green_channel_follow::before,
-#custom-post-btn #green_channel_digg::before,
-#custom-post-btn #green_channel_follow::after,
-#custom-post-btn #green_channel_digg::after {
-    box-sizing: inherit;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 100%;
-}
-
-#custom-post-btn #green_channel_follow::before,
-#custom-post-btn #green_channel_digg::before {
-    border: 2px solid transparent;
-}
-
-#custom-post-btn #green_channel_follow::after,
-#custom-post-btn #green_channel_digg::after {
-    border: 0 solid transparent;
-}
-
-#custom-post-btn #green_channel_follow:hover::before,
-#custom-post-btn #green_channel_digg:hover::before {
-    border-top-color: var(--themeColor);
-    border-right-color: var(--themeColor);
-    border-bottom-color: var(--themeColor);
-    transition: border-top-color 0.15s linear,
-        border-right-color 0.15s linear 0.1s,
-        border-bottom-color 0.15s linear 0.2s;
-}
-
-#custom-post-btn #green_channel_follow:hover::after,
-#custom-post-btn #green_channel_digg:hover::after {
-    border-top: 2px solid var(--themeColor);
-    border-left-width: 2px;
-    border-right-width: 2px;
-    transform: rotate(270deg);
-    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
-}
-
-/* 随笔页关注推荐按钮 end */
 /* 头部进度条 start */
 #nprogress .bar {
     background: var(--themeColor) !important;
@@ -898,104 +814,6 @@ input.btn_my_zzk:hover {
     padding: 02px 0.0933rem;
 }
 
-#cnblogs_post_body .hljs {
-    display: block !important;
-    padding: 0.5em !important;
-    color: var(--hl-mono-1) !important;
-    background: var(--hl-base) !important;
-    border: none !important;
-}
-
-#cnblogs_post_body .hljs-tag {
-    color: var(--hl-tag);
-}
-
-#cnblogs_post_body .hljs-comment,
-#cnblogs_post_body .hljs-quote {
-    color: var(--hl-mono-3);
-    font-style: italic;
-}
-
-#cnblogs_post_body .hljs-doctag,
-#cnblogs_post_body .hljs-formula,
-#cnblogs_post_body .hljs-keyword {
-    color: var(--hl-hue-3);
-}
-
-#cnblogs_post_body .hljs-deletion,
-#cnblogs_post_body .hljs-name,
-#cnblogs_post_body .hljs-section,
-#cnblogs_post_body .hljs-selector-tag,
-#cnblogs_post_body .hljs-subst {
-    color: var(--hl-hue-5);
-}
-
-#cnblogs_post_body .hljs-literal {
-    color: var(--hl-hue-1);
-}
-
-#cnblogs_post_body .hljs-addition,
-#cnblogs_post_body .hljs-attribute,
-#cnblogs_post_body .hljs-meta-string,
-#cnblogs_post_body .hljs-regexp,
-#cnblogs_post_body .hljs-string {
-    color: var(--hl-hue-4);
-}
-
-#cnblogs_post_body .hljs-built_in,
-#cnblogs_post_body .hljs-class .hljs-title {
-    color: var(--hl-hue-6-2);
-}
-
-#cnblogs_post_body .hljs-attr,
-#cnblogs_post_body .hljs-number,
-#cnblogs_post_body .hljs-selector-attr,
-#cnblogs_post_body .hljs-selector-class,
-#cnblogs_post_body .hljs-selector-pseudo,
-#cnblogs_post_body .hljs-template-variable,
-#cnblogs_post_body .hljs-type,
-#cnblogs_post_body .hljs-variable {
-    color: var(--hl-hue-6);
-}
-
-#cnblogs_post_body .hljs-bullet,
-#cnblogs_post_body .hljs-link,
-#cnblogs_post_body .hljs-meta,
-#cnblogs_post_body .hljs-selector-id,
-#cnblogs_post_body .hljs-symbol,
-#cnblogs_post_body .hljs-title {
-    color: var(--hl-hue-2);
-}
-
-#cnblogs_post_body .hljs-emphasis {
-    font-style: italic;
-}
-
-#cnblogs_post_body .hljs-strong {
-    font-weight: 700;
-}
-
-#cnblogs_post_body .hljs-link {
-    text-decoration: underline;
-}
-
-#cnblogs_post_body code {
-    font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
-        monospace !important;
-    color: #c7254e !important;
-    font-size: 0.87em !important;
-    padding: 0 !important;
-    margin: 0;
-    word-break: break-word !important;
-    border: none !important;
-    background: none !important;
-}
-
-#cnblogs_post_body li code {
-    font-size: 12px !important;
-    font-weight: 700;
-}
-
 #cnblogs_post_body blockquote {
     margin-top: 0.2rem;
     padding: 0.1rem 0.1rem 0.1rem 0.3rem;
@@ -1008,86 +826,7 @@ input.btn_my_zzk:hover {
     line-height: 1.5;
     font-size: 14px;
 }
-
-#cnblogs_post_body pre {
-    position: relative;
-    padding-top: 10px;
-    background: var(--hl-base);
-    border-radius: 4px;
-}
-
-pre:hover {
-    box-shadow: 1px 1px 10px red;
-}
-
-pre::before {
-    border-radius: 4px;
-    content: ' ';
-    display: block;
-    height: 24px;
-    background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
-        no-repeat;
-    background-size: 65px 23px;
-    background-position-x: 10px;
-}
-
 /* markdown end */
-
-/* 复制按钮 */
-.copy-btns {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 10px;
-    font-size: 0.5em;
-    cursor: pointer;
-    filter: invert(0.8);
-}
-
-/* 复制按钮 end */
-
-/* 音乐播放器 start */
-#iframe-music,
-.music-APlayer {
-    position: fixed;
-    bottom: 0.2667rem;
-    left: 0.1333rem;
-}
-/* 音乐播放器 end */
-
-/* 随笔签名 start */
-#post-signature {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 0.5333rem 0;
-    padding: 12px 24px 12px 30px;
-    background-color: var(--background-e);
-    border-left: 5px solid var(--themeColor);
-}
-
-#post-signature p {
-    margin: 0;
-    font-size: 0.213rem;
-}
-
-#post-signature::before {
-    content: '!';
-    background-color: var(--themeColor);
-    position: absolute;
-    top: 20px;
-    left: -12px;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 20px;
-    font-weight: 800;
-    font-size: 14px;
-}
-
-/* 随笔签名 end */
 
 /* 随笔目录 start */
 #catalog {
@@ -1411,7 +1150,7 @@ pre::before {
     width: 0.5rem;
     height: 0.5rem;
 }
-.blog_comment_body>a:first-of-type,
+.blog_comment_body > a:first-of-type,
 .blog_comment_body p a:nth-child(1) {
     color: #fff;
 }
@@ -1589,26 +1328,6 @@ footer #links {
 
 /* footer end */
 
-/* 弹幕 start*/
-#barrage-wrap {
-    position: fixed;
-    top: 1.2rem;
-    width: 100vw;
-    height: 40vh;
-    text-shadow: 0px 0px 3px var(--themeColor);
-    overflow: hidden;
-    z-index: 20;
-    pointer-events: none;
-}
-
-#barrage-wrap span {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 0.32rem;
-    font-weight: 700;
-}
-/* 弹幕 end*/
-
 /* 非移动端 start */
 @media screen and (min-width: 767px) {
     #post_detail,
@@ -1715,9 +1434,9 @@ footer #links {
         overflow: hidden;
         white-space: nowrap;
     }
-     #blog-comments-placeholder.comment_vote{
-         display: none;
-     }
+    #blog-comments-placeholder.comment_vote {
+        display: none;
+    }
 
     #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
         /* width: 2.2rem; */

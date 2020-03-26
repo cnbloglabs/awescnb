@@ -1,9 +1,12 @@
+// 设置图片灯箱
+// 仅引入即可
+
 import { pageName } from '@/assets/utils/tools'
-import baguetteBox from '../../node_modules/baguettebox.js/dist/baguetteBox'
-import '../../node_modules/baguettebox.js/dist/baguetteBox.css'
+import baguetteBox from '../../../node_modules/baguettebox.js/dist/baguetteBox'
+import '../../../node_modules/baguettebox.js/dist/baguetteBox.css'
 
 const options = window.opts.imagebox
-// 设置图片灯箱
+
 function buildPostDetail() {
     const imgList = $('#cnblogs_post_body img')
     if (imgList === 0) return

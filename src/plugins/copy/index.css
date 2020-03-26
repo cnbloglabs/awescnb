@@ -1,0 +1,13 @@
+.copy-btns {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 10px;
+    font-size: 0.5em;
+    cursor: pointer;
+    filter: invert(0.8);
+}
+
+#cnblogs_post_body pre {
+    position: relative;
+}
