@@ -480,8 +480,8 @@ input.btn_my_zzk:hover {
 
 /* sideBar start */
 #sideBar {
-    max-width: 15vw;
-    margin-left: 1vw;
+    max-width: 4.5rem;
+    margin-left: 0.5rem;
     overflow: hidden;
 }
 
@@ -833,7 +833,7 @@ input.btn_my_zzk:hover {
     word-wrap: nowrap;
     text-overflow: ellipsis;
     background-color: var(--background-w);
-    z-index: 9999;
+    z-index: 3;
 }
 
 #catalog ul li {
