@@ -95,7 +95,7 @@ function setGithub() {
     const options = userOptions.github
     if (!options.enable) return
     const $githubIcon = `<a href=${options.url}>${iconInSvg(icons.github)}</a>`
-    $('#navigator').prepend($githubIcon)
+    $('#navList').before($githubIcon)
     $('#navigator .icon').css({ color: `${options.color}` })
 }
 

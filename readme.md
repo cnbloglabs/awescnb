@@ -72,7 +72,7 @@
 
 ## 创建一个皮肤
 
-首先你需要将[本项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地 `git clone https://gitee.com/guangzan/awescnb2.0.git`.
+首先你需要将[本项目](https://gitee.com/guangzan/awescnb2.0) clone 到本地.
 
 **1. 创建基本文件**
 

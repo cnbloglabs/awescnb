@@ -7,15 +7,17 @@ html {
     --text-4: var(--dark-text-4, var(--default-text-4));
     --text-5: var(--dark-text-5, var(--default-text-5));
     --text-9: var(--dark-text-9, var(--default-text-9));
+    --text-10: var(--dark-text-10, var(--default-text-10));
     --text-a: var(--dark-text-a, var(--default-text-a));
     --default-background-g: rgb(253, 230, 224);
     --default-background-w: #fff;
-    --default-background-e: #eee;
+    --default-background-e: #f6f8fa;
     --default-text-0: #000;
     --default-text-3: #333;
     --default-text-4: #444;
     --default-text-5: #555;
     --default-text-9: #999;
+    --default-text-10: #d1d5da;
     --default-text-a: #fff;
 }
 
@@ -158,7 +160,7 @@ body::-webkit-scrollbar-track {
 }
 
 #mode-change {
-    margin-left: 0.2rem;
+    margin-left: 17vw;
 }
 
 #mode-change .icon {
@@ -166,9 +168,9 @@ body::-webkit-scrollbar-track {
     cursor: pointer;
 }
 
-.mode-btn-rotate {
+/* #mode-change {
     animation: changeModeRotate 20s linear infinite;
-}
+} */
 
 /* 初始化 end */
 /* header start */
@@ -184,7 +186,6 @@ body::-webkit-scrollbar-track {
 #navigator {
     display: flex;
     align-items: center;
-    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -193,8 +194,14 @@ body::-webkit-scrollbar-track {
     background: var(--background-w);
     color: var(--text-9);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: hsla(0, 0%, 59.2%, 0.1);
     z-index: 10;
     transition: all 0.2s;
+}
+
+.blogStats {
+    color: var(--text-9);
+    margin-left: 38vw;
 }
 
 .navigator-hide {
@@ -216,7 +223,7 @@ body::-webkit-scrollbar-track {
 }
 
 #navList {
-    width: 42%;
+    /* width: 42%; */
     margin-left: 0.2rem;
 }
 
@@ -482,8 +489,8 @@ input.btn_my_zzk:hover {
 
 /* sideBar start */
 #sideBar {
-    max-width: 4.5rem;
-    margin-left: 0.5rem;
+    max-width: 15vw;
+    margin-left: 1vw;
     overflow: hidden;
 }
 
@@ -584,12 +591,11 @@ input.btn_my_zzk:hover {
 /* 随笔页 start */
 /* 主要容器 */
 #post_detail,
-#comment_form,
-#blog-comments-placeholder {
+#comment_form {
     padding: 0.4rem;
 }
 #blog-comments-placeholder {
-    padding-top: 0;
+    padding-top: 0 0.4rem;
 }
 #post_detail .postTitle {
     padding: 0.1rem 0.267rem 0.1rem 0;
@@ -1014,11 +1020,14 @@ input.btn_my_zzk:hover {
     display: none;
 }
 .feedback_area_title {
-    padding: 10px 0;
-    border-bottom: 2px solid var(--themeColor);
+    padding: 0.14rem 0.2rem;
+    border: 1px solid var(--text-10);
+    background-color:  var(--background-e);
+    border-radius: 2px 2px 0 0;
+    font-size: 0.2rem;
     font-weight: 700;
+    color: var(--text-3);
 }
-
 .feedbackListSubtitle {
     display: flex;
     align-items: center;
@@ -1044,13 +1053,16 @@ input.btn_my_zzk:hover {
 }
 
 .feedbackItem {
-    padding: 0.333rem 0;
+    padding: 0.333rem 0.2rem;
 }
 
-#blog-comments-placeholder .feedbackItem:not(:nth-last-child(1)) {
-    border-bottom: 1px dotted var(--themeColor);
+.feedbackItem {
+    border-left: 1px solid var(--text-10);
+    border-right: 1px solid var(--text-10);
 }
-
+#blog-comments-placeholder .feedbackItem:last-child {
+    border-bottom: 1px solid var(--text-10);
+}
 #post-comments-list {
     margin-top: 0.4rem;
     width: 100%;
@@ -1079,7 +1091,7 @@ input.btn_my_zzk:hover {
     padding: 0 0.2rem;
     background-color: var(--themeColor);
     border-radius: 3px;
-    color: var(--text-0);
+    color: var(--text-5);
     font-size: 0.25rem;
     max-width: 10rem;
     line-height: 1.6;
@@ -1212,12 +1224,12 @@ input.btn_my_zzk:hover {
 
 #commentform_title {
     padding: 10px 0;
-    border-bottom: 2px solid var(--themeColor);
+    border-bottom: 2px dotted var(--themeColor);
     background: none;
     font-weight: 700;
 }
 
-#comment_form_container .commentbox_main,
+#comment_form_container .comment_textarea,
 #tbCommentBody {
     background: none;
 }
@@ -1237,11 +1249,13 @@ input.btn_my_zzk:hover {
     border-bottom-color: var(--text-9);
 }
 
-.commentbox_title:hover,
+.comment_textarea:hover .commentbox_title,
 .comment_textarea:hover {
     border-color: var(--themeColor);
     transition: border-color 0.2s;
 }
+
+ 
 
 #btn_comment_submit {
     position: absolute;
@@ -1605,11 +1619,9 @@ footer #links {
 .fade-in-left {
     animation: fadeInLeft 1s ease-in 0s;
 }
-
 .fade-in-down {
     animation: fadeInDown 1s ease-in 0s;
 }
-
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -1621,7 +1633,6 @@ footer #links {
         transform: translate3d(0, 0, 0);
     }
 }
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -1633,7 +1644,6 @@ footer #links {
         transform: translate3d(0, 0, 0);
     }
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1643,7 +1653,6 @@ footer #links {
         opacity: 1;
     }
 }
-
 @keyframes changeModeRotate {
     to {
         transform: rotate(360deg);

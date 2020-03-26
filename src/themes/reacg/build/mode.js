@@ -36,7 +36,7 @@ function mode() {
  * @param {String} mode 'dark' 或 'light'
  */
 function changeModeToggle(mode = 'light') {
-    const $dark = `<style id='mode-dark'>:root {--dark-background-g: #333;--dark-background-w: #555;--dark-background-e: #7c7c7c;--dark-text-0: #ccc;--dark-text-3: #ccc;--dark-text-4: #c0c0c0;--dark-text-5: #999;--dark-text-9: #7c7c7c;--dark-text-a: #000;}</style>`
+    const $dark = `<style id='mode-dark'>:root {--dark-background-g: #333;--dark-background-w: #555;--dark-background-e: #7c7c7c;--dark-text-0: #ccc;--dark-text-3: #ccc;--dark-text-4: #c0c0c0;--dark-text-5: #999;--dark-text-9: #7c7c7c;--dark-text-10: #7c7c7c;--dark-text-a: #000;}</style>`
     const $darkIcon = `<div id='mode-change'>${iconInSvg(icons.dark)}</div>`
     const $lightIcon = `<div id='mode-change'>${iconInSvg(icons.light)}</div>`
 
