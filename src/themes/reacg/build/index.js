@@ -13,6 +13,7 @@ import comments from './comments'
 import back2top from './back2top'
 import themeColor from './themeColor'
 import signature from './signature'
+import titleFavicon from './titleFavicon'
 
 function build() {
     mobileMenu()
@@ -30,6 +31,7 @@ function build() {
     themeColor()
     signature()
     footer()
+    titleFavicon()
 }
 
 export default build
