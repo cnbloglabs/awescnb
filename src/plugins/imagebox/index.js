@@ -1,7 +1,7 @@
 // 设置图片灯箱
 // 仅引入即可
 
-import { pageName } from '@/assets/utils/tools'
+import { pageName, poll } from '@/assets/utils/tools'
 import baguetteBox from '../../../node_modules/baguettebox.js/dist/baguetteBox'
 import '../../../node_modules/baguettebox.js/dist/baguetteBox.css'
 
@@ -36,30 +36,31 @@ function buildCommentsList() {
 }
 
 // 轮询评论区
-function poll() {
+function pollToShow() {
     if (pageName() !== 'post') return
-    if ($('.blog_comment_body').length) {
-        buildCommentsList()
-    } else {
-        let count = 1
+    poll($('.blog_comment_body').length, buildCommentsList)
+    // if ($('.blog_comment_body').length) {
+    //     buildCommentsList()
+    // } else {
+    //     let count = 1
 
-        let intervalId = setInterval(() => {
-            if ($('.blog_comment_body').length) {
-                clearInterval(intervalId)
-                buildCommentsList()
-            }
-            if (count === 15) {
-                clearInterval(intervalId)
-            }
-            count++
-        }, 500)
-    }
+    //     let intervalId = setInterval(() => {
+    //         if ($('.blog_comment_body').length) {
+    //             clearInterval(intervalId)
+    //             buildCommentsList()
+    //         }
+    //         if (count === 15) {
+    //             clearInterval(intervalId)
+    //         }
+    //         count++
+    //     }, 500)
+    // }
 }
 
 function imagebox() {
     if (!options.enable) return
     if (pageName() !== 'post') return
     buildPostDetail()
-    poll()
+    pollToShow()
 }
 export default imagebox

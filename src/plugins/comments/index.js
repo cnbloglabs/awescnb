@@ -1,4 +1,4 @@
-import { pageName } from '@/assets/utils/tools'
+import { pageName, poll } from '@/assets/utils/tools'
 import env from '@constants/env'
 
 // 显示评论列表头像
@@ -13,7 +13,7 @@ function showAvatar() {
             ? avatar.replace('http://', 'https://')
             : 'https://pic.cnblogs.com/face/sample_face.gif'
 
-        if (env==='dev') {
+        if (env === 'dev') {
             avatar = 'https://www.dummyimage.com/50'
         }
 
@@ -24,24 +24,25 @@ function showAvatar() {
 }
 
 // 轮询显示头像
-function poll() {
+function pollToShow() {
     if (pageName() !== 'post') return
-    if ($('.blog_comment_body').length) {
-        showAvatar()
-    } else {
-        let count = 1
+    poll($('.blog_comment_body').length, showAvatar)
+    // if ($('.blog_comment_body').length) {
+    //     showAvatar()
+    // } else {
+    //     let count = 1
 
-        let intervalId = setInterval(() => {
-            if ($('.blog_comment_body').length) {
-                clearInterval(intervalId)
-                showAvatar()
-            }
-            if (count === 15) {
-                clearInterval(intervalId)
-            }
-            count++
-        }, 500)
-    }
+    //     let intervalId = setInterval(() => {
+    //         if ($('.blog_comment_body').length) {
+    //             clearInterval(intervalId)
+    //             showAvatar()
+    //         }
+    //         if (count === 15) {
+    //             clearInterval(intervalId)
+    //         }
+    //         count++
+    //     }, 500)
+    // }
 }
 
 // 调整支持反对按钮位置
@@ -72,7 +73,7 @@ function authorRight() {
 }
 
 function comments() {
-    poll()
+    pollToShow()
     support()
     authorRight()
 }

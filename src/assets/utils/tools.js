@@ -1,6 +1,29 @@
 import { repositories } from '@/constants/urls'
 
 /**
+ * @description 轮询
+ * @param {condition} 条件
+ * @param {func} 函数
+ */
+function poll(condition, func) {
+    if (condition) {
+        func()
+    } else {
+        let count = 1
+        let intervalId = setInterval(() => {
+            if (condition) {
+                clearInterval(intervalId)
+                func()
+            }
+            if (count === 15) {
+                clearInterval(intervalId)
+            }
+            count++
+        }, 500)
+    }
+}
+
+/**
  * @description 加载主题js
  * @param {String} themeName 主题名称
  */
@@ -190,4 +213,5 @@ export {
     pageName,
     userAgent,
     hasPostTitle,
+    poll,
 }
