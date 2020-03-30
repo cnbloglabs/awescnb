@@ -374,22 +374,8 @@ body footer {
 }
 
 .postTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 5px 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
-    color: #424242;
+    font-weight: 700;
     text-shadow: 0 0 2px #fff, 0 0 2px #fff;
-    text-align: center;
-    opacity: 0;
-    backdrop-filter: blur(0.0667rem);
-    transition: opacity 0.2s;
-    z-index: 5;
 }
 
 .post-item:hover > .postTitle {
@@ -1108,6 +1094,40 @@ pre:after {
     align-items: center;
 }
 
+/* index */
+
+.entrylist .entrylistTitle:not(:first-of-type),
+.day .dayTitle:not(:first-of-type) {
+    border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
+}
+
+.PostListTitle,
+.entrylistTitle,
+.dayTitle {
+    border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+    padding: 0.267rem;
+    color: var(--text-4);
+    font-size: 0.3rem;
+}
+
+.PostList,
+.entrylistPosttitle,
+.entrylistPostSummary,
+.entrylistItemPostDesc,
+.postTitle,
+.postCon,
+.postDesc {
+    padding: 0.1rem 0.267rem;
+}
+
+.c_b_p_desc_readmore {
+    display: table;
+    margin-top: 0.1rem;
+    padding: 0.05rem 0.1rem 0.05rem 0.15rem;
+    border: 1px solid var(--themeColor);
+    color: var(--themeColor);
+    border-radius: 3px;
+}
 /* 移动端 */
 @media screen and (max-width: 768px) {
     body {
