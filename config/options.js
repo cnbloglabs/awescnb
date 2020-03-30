@@ -3,9 +3,15 @@
 // 其他配置我都帮你做好了
 
 module.exports = {
-    themeName: 'acg',     // 你创建的主题文件夹名称 (运行 npm start 会启动它) ‘acg’ | 'reacg' | 'gshang'
-    template: 'index',     // 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
-    eslint: true,         // 是否开启eslint
-    sourceMap: true,      //是否开启sourcemap
-    openAnalyzer: false,  // build 时开启 size 分析
+    themeName: 'acg',    
+    template: 'post',    
+    eslint: true,         
+    sourceMap: true,      
+    openAnalyzer: false,  
 }
+
+ // themeName - 你创建的主题文件夹名称 (运行 npm start 会启动它) ‘acg’ | 'reacg' | 'gshang'
+ // template - 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+ // eslint - 是否开启eslint
+ // sourceMap - 是否开启sourcemap
+ // openAnalyzer - build 时开启 size 分析
