@@ -39,22 +39,6 @@ function buildCommentsList() {
 function pollToShow() {
     if (pageName() !== 'post') return
     poll($('.blog_comment_body').length, buildCommentsList)
-    // if ($('.blog_comment_body').length) {
-    //     buildCommentsList()
-    // } else {
-    //     let count = 1
-
-    //     let intervalId = setInterval(() => {
-    //         if ($('.blog_comment_body').length) {
-    //             clearInterval(intervalId)
-    //             buildCommentsList()
-    //         }
-    //         if (count === 15) {
-    //             clearInterval(intervalId)
-    //         }
-    //         count++
-    //     }, 500)
-    // }
 }
 
 function imagebox() {

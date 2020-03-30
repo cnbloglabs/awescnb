@@ -1,6 +1,27 @@
 import { repositories } from '@/constants/urls'
 
 /**
+ * @description 滚动穿透处理
+ * @param {show} Boolean
+ */
+function unpass(show) {
+    if (show) {
+        let body = document.body
+        body.style.position = ''
+        let top = body.style.top
+        document.body.scrollTop = document.documentElement.scrollTop = -parseInt(
+            top,
+        )
+        body.style.top = ''
+    } else {
+        let scrollTop =
+            document.body.scrollTop || document.documentElement.scrollTop
+        document.body.style.cssText +=
+            'position:fixed;width:100%;top:-' + scrollTop + 'px;'
+    }
+}
+
+/**
  * @description 轮询
  * @param {condition} 条件
  * @param {func} 函数
@@ -214,4 +235,5 @@ export {
     userAgent,
     hasPostTitle,
     poll,
+    unpass,
 }

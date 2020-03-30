@@ -17,7 +17,7 @@ function merge() {
 function loadTheme() {
     let theme = window.opts.theme.name
     console.log('正在使用的主题:', theme)
-    if (theme === 'acg' || theme === 'light') {
+    if (theme === 'light') {
         theme = 'reacg'
     }
     load(theme)

@@ -7,7 +7,7 @@ const defaultOptions = {
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
-            'https://guangzan.gitee.io/awescnb/assets/images/acg/22.jpg',
+            'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
     emoji: {
         enable: true,

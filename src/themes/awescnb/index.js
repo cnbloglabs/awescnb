@@ -1,12 +1,10 @@
 import '@/assets/css/common.css'
-import { hideLoading, printing } from './build'
+// import build from './build'
 import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
     init(building) {
-        hideLoading()
-        printing()
         if (env === 'dev' || $.awesCnb) {
             building()
         } else {
@@ -24,6 +22,8 @@ class AwesCnb {
         if (env === 'dev') {
             window.opts = defaultOptions
         }
+        console.log(window.opts)
+        require('./build')()
     }
 }
 

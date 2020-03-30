@@ -2,7 +2,7 @@ import './index.css'
 import 'lib-flexible/flexible.js'
 import AwesCnb from '@/themes/awescnb'
 
-class Reacg extends AwesCnb {
+class ACG extends AwesCnb {
     constructor() {
         super()
         super.init(this.init)
@@ -16,4 +16,4 @@ class Reacg extends AwesCnb {
     }
 }
 
-new Reacg()
+new ACG()

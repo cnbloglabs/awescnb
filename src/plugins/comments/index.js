@@ -27,22 +27,6 @@ function showAvatar() {
 function pollToShow() {
     if (pageName() !== 'post') return
     poll($('.blog_comment_body').length, showAvatar)
-    // if ($('.blog_comment_body').length) {
-    //     showAvatar()
-    // } else {
-    //     let count = 1
-
-    //     let intervalId = setInterval(() => {
-    //         if ($('.blog_comment_body').length) {
-    //             clearInterval(intervalId)
-    //             showAvatar()
-    //         }
-    //         if (count === 15) {
-    //             clearInterval(intervalId)
-    //         }
-    //         count++
-    //     }, 500)
-    // }
 }
 
 // 调整支持反对按钮位置
