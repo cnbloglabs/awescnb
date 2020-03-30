@@ -13,7 +13,7 @@ const urls = {
     },
     repositories: {
         gitee: 'https://gitee.com/guangzan/awescnb/',
-        github: 'https://github.com/guangzan/awescnb',
+        github: 'https://github.com/guangzan/awescnb/',
     },
     images: 'https://guangzan.gitee.io/imagehost/awescnb/images/anime/',
 }
