@@ -17,8 +17,9 @@ function postTopimage() {
     } else {
         url = randomArrayElements(urls, 1)[0]
     }
-    const ele = `<img id="custom-post-topimage" src="${url}" />`
+    const ele = `<div id="custom-post-topimage"></div>`
     $('.post>.postTitle').after(ele)
+    $('#custom-post-topimage').css('background-image',`url(${url})`)
 }
 
 export default postTopimage
