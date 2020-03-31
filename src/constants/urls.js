@@ -11,4 +11,6 @@ const repositories = {
     github: 'https://github.com/github923665892',
 }
 
-export { CDN, repositories }
+const images = 'https://guangzan.gitee.io/imagehost/awescnb/images/anime/'
+
+export { CDN, repositories, images }

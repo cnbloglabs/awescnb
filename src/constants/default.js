@@ -9,6 +9,10 @@ const defaultOptions = {
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
+    postTopimage: {
+        enable: true,
+        urls: [],
+    },
     emoji: {
         enable: true,
     },

@@ -1,0 +1,10 @@
+#custom-post-topimage {
+    width: 100%;
+    height: 367px;
+}
+
+@media screen and (max-width: 767px) {
+    #custom-post-topimage {
+        height: 184px;
+    }
+}

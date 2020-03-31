@@ -45,6 +45,7 @@
         "animejs": "^3.1.0",
         "aplayer": "^1.10.1",
         "baguettebox.js": "^1.11.0",
+        "bootstrap": "^4.4.1",
         "lib-flexible": "^0.3.2",
         "loaders.css": "^0.1.2",
         "lodash": "^4.17.15",

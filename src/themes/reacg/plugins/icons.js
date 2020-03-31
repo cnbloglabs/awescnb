@@ -1,5 +1,5 @@
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, getRandomProperty } from '@/assets/utils/tools'
+import { pageName, randomProperty } from '@/assets/utils/tools'
 import { loadFiles, iconInSvg } from '../utils/tools'
 import { CDN } from '../constants/urls'
 import icons from '../constants/icons'
@@ -137,7 +137,7 @@ function setPostTitleIcon() {
     const $h2 = $('#cnblogs_post_body:first>h2')
     const $title = $h1.length === 0 ? $h2 : $h1
     $($title).each(function() {
-        const randomIconName = getRandomProperty(icons.food)
+        const randomIconName = randomProperty(icons.food)
         const icon = icons.food[randomIconName]
         $(this).prepend(iconInSvg(icon))
     })

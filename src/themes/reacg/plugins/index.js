@@ -12,6 +12,7 @@ import comments from '@plugins/comments'
 import signature from '@plugins/signature'
 import highlight from '@plugins/highlight'
 import btns from '@plugins/btns'
+import postTopimage from '@plugins/postTopimage'
 import setIcons from './icons'
 // import emoji from '@plugins/emoji'
 
@@ -31,6 +32,7 @@ function plugins() {
     highlight()
     copy()
     btns()
+    postTopimage()
     // emoji()
 }
 

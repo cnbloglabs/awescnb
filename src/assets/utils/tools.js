@@ -1,4 +1,33 @@
-import { repositories } from '@/constants/urls'
+import { repositories, images } from '@/constants/urls'
+
+/**
+ * @description 获取数组中随机元素
+ * @param {arr} Array
+ * @param {count} Number
+ */
+function randomArrayElements(arr, count = 1) {
+    var shuffled = arr.slice(0),
+        i = arr.length,
+        min = i - count,
+        temp,
+        index
+    while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random())
+        temp = shuffled[index]
+        shuffled[index] = shuffled[i]
+        shuffled[i] = temp
+    }
+    return shuffled.slice(min)
+}
+
+// 获取一个随机image url
+// 使用内置的 imagehost url
+// 无需参数
+function randomImgurl() {
+    const random = Math.floor(Math.random() * 78)
+    const url = `${images + random}.jpg`
+    return url
+}
 
 /**
  * @description 滚动穿透处理
@@ -104,7 +133,7 @@ const throttle = (func, wait, mustRun) => {
  * @param {Object} obj javascript对象
  * @returns 对象的随机属性
  */
-const getRandomProperty = obj => {
+const randomProperty = obj => {
     let result
     let count = 0
     for (let prop in obj) if (Math.random() < 1 / ++count) result = prop
@@ -116,7 +145,7 @@ const getRandomProperty = obj => {
  * @param {String} type 可选 颜色值类型 rgba 16
  * @returns 颜色值
  */
-const getRandomColor = type => {
+const randomColor = type => {
     let res = ''
     if (type === 'rgba') {
         const r = Math.floor(Math.random() * 256)
@@ -177,7 +206,7 @@ const getClientRect = el => {
  * @param {Number} min 最小值
  * @returns 介于最大值与最小值闭区间的随机数
  */
-const getRandomNum = (max, min) => {
+const randomNum = (max, min) => {
     parseInt(Math.random() * (max - min + 1) + min, 10)
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -224,16 +253,18 @@ const userAgent = () => {
 }
 
 export {
+    randomProperty,
+    randomImgurl,
+    randomColor,
+    randomNum,
+    pageName,
+    userAgent,
     load,
     debounce,
     throttle,
-    getRandomProperty,
-    getRandomColor,
     getClientRect,
-    getRandomNum,
-    pageName,
-    userAgent,
     hasPostTitle,
     poll,
     unpass,
+    randomArrayElements,
 }
