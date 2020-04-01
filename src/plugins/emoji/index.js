@@ -1,4 +1,6 @@
 // 评论输入表情
+import { pageName } from '@tools'
+import { js } from '@constants/urls'
 import './index.css'
 const {
     enable,
@@ -52,10 +54,8 @@ function build() {
 
 function emoji() {
     if (!enable) return
-    $.getScript(
-        'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js',
-        build,
-    )
+    if (pageName() !== 'post') return
+    $.getScript(`${js}/emoji.min.js`, build)
 }
 
 export default emoji
