@@ -1,4 +1,4 @@
-import { repositories, images } from '@/constants/urls'
+import { themeRepository, animeImages } from '@/constants/urls'
 
 /**
  * @description 获取数组中随机元素
@@ -25,7 +25,7 @@ function randomArrayElements(arr, count = 1) {
 // 无需参数
 function randomImgurl() {
     const random = Math.floor(Math.random() * 78)
-    const url = `${images + random}.jpg`
+    const url = `${animeImages}/${random}.jpg`
     return url
 }
 
@@ -78,8 +78,7 @@ function poll(condition, func) {
  * @param {String} themeName 主题名称
  */
 function load(themeName) {
-    const repositoriesUrl = repositories.package
-    const url = `${repositoriesUrl}/${themeName}.js`
+    const url = `${themeRepository}/${themeName}.js`
     $.getScript(url)
 }
 

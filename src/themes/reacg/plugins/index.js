@@ -14,7 +14,7 @@ import highlight from '@plugins/highlight'
 import btns from '@plugins/btns'
 import postTopimage from '@plugins/postTopimage'
 import setIcons from './icons'
-// import emoji from '@plugins/emoji'
+import emoji from '@plugins/emoji'
 
 function plugins() {
     setIcons()
@@ -33,7 +33,7 @@ function plugins() {
     copy()
     btns()
     postTopimage()
-    // emoji()
+    emoji()
 }
 
 export default plugins

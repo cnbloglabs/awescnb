@@ -15,6 +15,11 @@ const defaultOptions = {
     },
     emoji: {
         enable: true,
+        style: 'native',
+        showRecents: true,
+        recentsCount: 20,
+        showPreview: true,
+        showSearch: true,
     },
     highLight: {
         type: 'atomOneDark',

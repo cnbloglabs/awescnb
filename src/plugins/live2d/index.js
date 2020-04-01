@@ -3,7 +3,7 @@
 
 import { pageName, userAgent } from '@/assets/utils/tools'
 import { getRandomProperty } from '@/assets/utils/tools'
-import { CDN } from '@/constants/urls'
+import { live2d } from '@/constants/urls'
 import live2dModels from '@/constants/live2dModels'
 import env from '@/constants/env'
 
@@ -28,7 +28,7 @@ const setLive2d = () => {
                                 height="${options.height}" id="model">
                      </canvas>`)
 
-    const url = `${CDN.live2d.url}@${CDN.live2d.version}/${model}`
+    const url = `${live2d.url}@${live2d.version}/${model}`
 
     $.getScript(
         'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js',

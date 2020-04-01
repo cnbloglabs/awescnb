@@ -10,7 +10,8 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
         "hljs": "readonly",
-        "loadlive2d": "readonly"
+        "loadlive2d": "readonly",
+        "EmojiButton": true
     },
     "parser": "babel-eslint",
     "parserOptions": {

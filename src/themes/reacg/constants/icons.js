@@ -23,6 +23,7 @@ const icons = {
     dark: '#ac-dark', //夜间模式
     light: '#ac-light', //白天
     look: '#ac-look',
+    emoji: '#ac-emoji',
     //count -> 20
     food: {
         pistachio: '#ac-food-pistachio',

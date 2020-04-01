@@ -1,6 +1,5 @@
 // 在随笔详情页顶部随笔生成一个文章头图
 // 引入即可
-
 import { randomImgurl, pageName, randomArrayElements } from '@tools'
 import './index.css'
 
