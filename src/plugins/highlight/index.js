@@ -1,7 +1,8 @@
 // 代码高亮
 import { pageName } from '@/assets/utils/tools'
-const opts = window.opts.highLight
 import './index.css'
+
+const opts = window.opts.highLight
 
 function build() {
     const atomOneDark = ` --hl-base: #282c34;

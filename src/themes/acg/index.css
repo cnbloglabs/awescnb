@@ -853,18 +853,11 @@ body footer {
 
 #cnblogs_post_body table,
 .cnblogs-post-body table,
-#cnblogs_post_body .hljs-ln-numbers,
 #cnblogs_post_body .hljs-ln-code {
     border: none;
 }
 
-#cnblogs_post_body .hljs-ln-numbers {
-    padding: 02px 0.2667rem 02px 0.1333rem;
-    text-align: right;
-    color: var(--themeColor);
-    user-select: none;
-    word-break: normal;
-}
+
 
 #cnblogs_post_body .hljs-ln-code {
     padding: 02px 0.0933rem;
@@ -1082,7 +1075,6 @@ pre:after {
     header img {
         max-width: 100vw !important;
     }
-    #cnblogs_post_body td,
     .cnblogs-post-body th,
     .cnblogs-post-body td {
         white-space: pre;

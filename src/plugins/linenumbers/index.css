@@ -1,0 +1,17 @@
+#cnblogs_post_body .hljs-ln-numbers {
+    border: none;
+}
+#cnblogs_post_body .hljs-ln-numbers {
+    padding: 02px 0.2667rem 02px 0.1333rem;
+    text-align: right;
+    color: var(--themeColor,#999999);
+    user-select: none;
+    word-break: normal;
+    white-space: pre;
+}
+/* 覆盖博客园bundle css*/
+@media screen and (max-width: 767px) {
+    #cnblogs_post_body td {
+        white-space: pre;
+    }
+}
