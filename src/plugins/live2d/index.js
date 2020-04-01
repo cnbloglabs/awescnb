@@ -4,6 +4,7 @@
 import { pageName, userAgent } from '@/assets/utils/tools'
 import { getRandomProperty } from '@/assets/utils/tools'
 import { live2d } from '@/constants/urls'
+import { js } from '@constants/urls'
 import live2dModels from '@/constants/live2dModels'
 import env from '@/constants/env'
 
@@ -30,12 +31,9 @@ const setLive2d = () => {
 
     const url = `${live2d.url}@${live2d.version}/${model}`
 
-    $.getScript(
-        'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js',
-        () => {
-            loadlive2d('model', url)
-        },
-    )
+    $.getScript(`${js}/live2d.min.js`, () => {
+        loadlive2d('model', url)
+    })
 }
 
 export default setLive2d
