@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0.5333rem 0;
+    margin: 25px 0;
     padding: 12px 24px 12px 30px;
     background-color: var(--background-e);
     border-left: 5px solid var(--themeColor);
@@ -11,7 +11,7 @@
 
 #post-signature p {
     margin: 0;
-    font-size: 0.213rem;
+    font-size: 14px;
 }
 
 #post-signature::before {

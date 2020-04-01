@@ -1,15 +1,15 @@
 #custom-post-btn {
     position: fixed;
-    bottom: 6.8rem;
-    right: 3.2rem;
+    bottom: 367px;
+    right: 173px;
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-size: 0.2rem;
+    font-size: 14px;
 }
 
 #custom-post-btn #green_channel_digg {
-    margin-top: 0.3rem;
+    margin-top: 16px;
 }
 
 #custom-post-btn #green_channel_follow,
@@ -19,9 +19,9 @@
     box-sizing: border-box;
     background-color: #00a1d6;
     text-align: center;
-    width: 0.72rem;
-    height: 0.72rem;
-    line-height: 0.72rem;
+    width: 39px;
+    height: 39px;
+    line-height: 40px;
     padding: 0;
     border-radius: 100%;
     opacity: 0.8;

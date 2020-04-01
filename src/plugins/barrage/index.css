@@ -1,6 +1,6 @@
 #barrage-wrap {
     position: fixed;
-    top: 1.2rem;
+    top: 90px;
     width: 100vw;
     height: 40vh;
     text-shadow: 0px 0px 3px var(--themeColor);
@@ -12,6 +12,6 @@
 #barrage-wrap span {
     position: absolute;
     white-space: nowrap;
-    font-size: 0.32rem;
+    font-size: 24px;
     font-weight: 700;
 }
