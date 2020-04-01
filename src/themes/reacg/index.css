@@ -71,7 +71,7 @@ html {
 }
 
 body {
-    background: var(--background-g);
+    background-color: var(--background-g);
     font-size: 14px;
     color: var(--text-0);
 }

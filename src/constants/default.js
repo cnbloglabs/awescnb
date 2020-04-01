@@ -38,8 +38,9 @@ const defaultOptions = {
     },
     bodyBackground: {
         enable: false,
-        type: 'color',
-        value: '#FDE6E0',
+        type: 'img',
+        value:
+            'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
         opacity: 1,
         repeat: false,
     },
