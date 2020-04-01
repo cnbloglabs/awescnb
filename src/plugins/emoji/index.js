@@ -36,12 +36,9 @@ const emojiConfig = {
     },
 }
 
-function element() {
+function build() {
     const ele = `<span id='emoji-button'>🙃</span>`
     $('.commentbox_title_right').prepend(ele)
-}
-
-function build() {
     const EmojiButton = window.EmojiButton
     const button = document.querySelector('#emoji-button')
     const picker = new EmojiButton(emojiConfig)
@@ -57,10 +54,7 @@ function emoji() {
     if (!enable) return
     $.getScript(
         'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js',
-        () => {
-            element()
-            build()
-        },
+        build,
     )
 }
 
