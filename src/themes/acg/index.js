@@ -1,6 +1,6 @@
 import './index.css'
 import 'lib-flexible/flexible.js'
-import AwesCnb from '@/themes/awescnb'
+import AwesCnb from '@awescnb'
 
 class ACG extends AwesCnb {
     constructor() {

@@ -1,4 +1,4 @@
-import AwesCnb from '@/themes/awescnb'
+import AwesCnb from '@awescnb'
 import './index.css'
 
 class Gshang extends AwesCnb {

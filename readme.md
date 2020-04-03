@@ -75,7 +75,7 @@
 
 ```js
 import './index.css'
-import AwesCnb from '@/themes/awescnb'
+import AwesCnb from '@awescnb'
 
 class Demo extends AwesCnb {
     // 继承该类以初始化

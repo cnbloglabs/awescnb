@@ -44,6 +44,7 @@ module.exports = {
     resolve: {
         alias: {
             '@': path.resolve('src'),
+            '@awescnb': path.resolve('src/awescnb'),
             '@tools': path.resolve('src/assets/utils/tools'),
             '@plugins': path.resolve('src/plugins'),
             '@constants': path.resolve('src/constants'),
