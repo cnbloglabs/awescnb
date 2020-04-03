@@ -22,7 +22,7 @@ class AwesCnb {
         if (env === 'dev') {
             window.opts = defaultOptions
         }
-        console.log(window.opts)
+        // console.log(window.opts)
         require('./build')()
     }
 }

@@ -1,6 +1,41 @@
 import { themeRepository, animeImages } from '@/constants/urls'
 
 /**
+ * @description 获取当前日期
+ */
+function getDate() {
+    const time = new Date()
+    const year = time.getFullYear()
+    const month = ('0' + (time.getMonth() + 1)).slice(-2)
+    const day = ('0' + time.getDate()).slice(-2)
+    // const hour = ('0' + time.getHours()).slice(-2)
+    // const minute = ('0' + time.getMinutes()).slice(-2)
+    // const second = ('0' + time.getSeconds()).slice(-2)
+    const today = `${year}-${month}-${day}`
+    return today
+}
+
+/**
+ * @description ajax
+ * @param {url} String
+ * @param {type} String
+ * @param {callback} Function
+ */
+function getData(url, type, callback) {
+    $.ajax({
+        url,
+        type,
+        dataType: 'jsonp',
+        success(data) {
+            callback(data)
+        },
+        error(xhr) {
+            console.log('error', xhr)
+        },
+    })
+}
+
+/**
  * @description 获取数组中随机元素
  * @param {arr} Array
  * @param {count} Number
@@ -180,7 +215,7 @@ const randomColor = type => {
  * @param {Object} client document对象
  * @returns top, bottom, left, right, height, width
  */
-const getClientRect = el => {
+function getClientRect(el) {
     const {
         top,
         bottom,
@@ -205,14 +240,14 @@ const getClientRect = el => {
  * @param {Number} min 最小值
  * @returns 介于最大值与最小值闭区间的随机数
  */
-const randomNum = (max, min) => {
+function randomNum(max, min) {
     parseInt(Math.random() * (max - min + 1) + min, 10)
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 // 文章内容是否存在标题
 // 文章是否有可用来生成目录的标题
-const hasPostTitle = () => {
+function hasPostTitle() {
     return $(
         '#cnblogs_post_body>h1,#cnblogs_post_body>h2,#cnblogs_post_body>h3,#cnblogs_post_body>h4',
     ).length === 0
@@ -224,7 +259,7 @@ const hasPostTitle = () => {
  * @description 返回当前页面名称
  * @returns 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
  */
-const pageName = () => {
+function pageName() {
     if ($('#post_detail').length > 0) {
         return 'post'
     }
@@ -246,7 +281,7 @@ const pageName = () => {
  * @description 返回用户设备
  * @returns 'pc' | 'phone'
  */
-const userAgent = () => {
+function userAgent() {
     const width = $(window).width()
     return width > 768 ? 'pc' : 'phone'
 }
@@ -266,4 +301,6 @@ export {
     poll,
     unpass,
     randomArrayElements,
+    getData,
+    getDate,
 }

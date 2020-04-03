@@ -8,6 +8,11 @@ const defaultOptions = {
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
+        signature: '快去自定义你的个性签名吧~',
+    },
+    lock: {
+        enable: true,
+        background: '',
     },
     postTopimage: {
         enable: true,

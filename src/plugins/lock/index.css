@@ -1,0 +1,51 @@
+.overflow {
+    overflow: hidden;
+    overflow-x: inherit;
+}
+
+#lock-screen {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.lock-screen-weather {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.lock-screen-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.lock-screen-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
+.lock-screen-user img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.lock-screen-text {
+    margin-top: 30px;
+}
+
+.lock-screen-text span {
+    font-size: 22px;
+    color: #000;
+}

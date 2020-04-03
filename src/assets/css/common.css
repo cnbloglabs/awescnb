@@ -1,4 +1,41 @@
-* {
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     margin: 0;
     padding: 0;
 }
@@ -7,11 +44,20 @@ html {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
         PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-g);
+    font-size: 14px;
+    color: var(--text-0);
 }
 
 html,
-body {
+body,
+#cnblogs_post_body pre code,
+#catalog,
+#links,
+#sideBar {
     scroll-behavior: smooth;
 }
 
@@ -30,4 +76,28 @@ a:visited {
 ol,
 ul {
     list-style: none;
+}
+::selection {
+    background: var(--themeColor, #00a1d6);
+    color: var(--text-a, #fff);
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--themeColor, #eee);
+}
+
+body::-webkit-scrollbar-track {
+    background: 0 0;
+    border-radius: 2px;
+}
+
+.fireworks {
+    display: none;
 }

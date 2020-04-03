@@ -1,4 +1,4 @@
-:root {
+html {
     --background-g: var(--dark-background-g, var(--default-background-g));
     --background-w: var(--dark-background-w, var(--default-background-w));
     --background-e: var(--dark-background-e, var(--default-background-e));
@@ -19,6 +19,107 @@
     --default-text-9: #999;
     --default-text-10: #d1d5da;
     --default-text-a: #fff;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: var(--background-g);
+    font-size: 14px;
+    color: var(--text-0);
+}
+
+html,
+body,
+#cnblogs_post_body pre code,
+#catalog,
+#links,
+#sideBar {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none !important;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+::selection {
+    background: var(--themeColor);
+    color: var(--text-a);
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--themeColor);
+}
+
+body::-webkit-scrollbar-track {
+    background: 0 0;
+    border-radius: 2px;
 }
 
 .icon {
@@ -66,9 +167,13 @@
     cursor: pointer;
 }
 
-/* 初始化 end */
+/* #mode-change {
+    animation: changeModeRotate 20s linear infinite;
+} */
 
+/* 初始化 end */
 /* header start */
+/* loading隐藏后home显示 */
 #home {
     display: block;
 }
@@ -109,6 +214,7 @@
 #navigator .blogStats {
     font-size: 0.16rem;
     color: var(--text-9);
+    /* margin-left: 34vw; */
 }
 
 #navList li {
@@ -132,10 +238,6 @@
 }
 
 /* header end */
-
-/* #mode-change {
-    animation: changeModeRotate 20s linear infinite;
-} */
 
 /* main start*/
 #main {
@@ -1004,7 +1106,7 @@ input.btn_my_zzk:hover {
     color: var(--themeColor);
 }
 .custom-comments-author .blog_comment_body {
-    background-color: #61aeee;
+    background-color: #61aeee
 }
 .custom-comments-author img {
     margin-left: 0.2rem;
@@ -1046,7 +1148,6 @@ input.btn_my_zzk:hover {
 .feedbackCon .blog_comment_body img {
     width: 0.5rem;
     height: 0.5rem;
-    vertical-align: middle;
 }
 .blog_comment_body > a:first-of-type,
 .blog_comment_body p a:nth-child(1) {
@@ -1170,8 +1271,6 @@ input.btn_my_zzk:hover {
     margin-top: 0.8rem;
 }
 
-#under_post_kb,
-#under_post_news,
 #cnblogs_c1,
 #cnblogs_c2 {
     display: none;

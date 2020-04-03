@@ -1,5 +1,6 @@
 import setBodyBackground from '@plugins/background'
 import { shootInitial } from '@plugins/barrage'
+import setIcons from './icons'
 import imageBox from '@plugins/imageBox'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
@@ -13,8 +14,8 @@ import signature from '@plugins/signature'
 import highlight from '@plugins/highlight'
 import btns from '@plugins/btns'
 import postTopimage from '@plugins/postTopimage'
-import setIcons from './icons'
 import emoji from '@plugins/emoji'
+// import lock from '@plugins/lock'
 
 function plugins() {
     setIcons()
@@ -34,6 +35,7 @@ function plugins() {
     btns()
     postTopimage()
     emoji()
+    // lock()
 }
 
 export default plugins
