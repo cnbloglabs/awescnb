@@ -8,3 +8,8 @@
     filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
     -webkit-filter: grayscale(1);
 }
+
+.gray-filter body {
+    background-color: gray;
+    background-image: none;
+}

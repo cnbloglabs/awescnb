@@ -1,28 +1,28 @@
 import env from '@/constants/env'
 import { shootCustom } from '@plugins/barrage'
-// import { getDate } from '@tools'
+import { getDate } from '@tools'
 import './index.css'
 
 const noticeContent = []
-// const grayDate = [
-//     {
-//         date: '2020-04-04',
-//         desc: '深切哀悼为抗击新冠肺炎疫情斗争牺牲的烈士',
-//     },
-// ]
+const grayDate = [
+    {
+        date: '2020-04-04',
+        desc: '深切哀悼为抗击新冠肺炎疫情斗争牺牲的烈士',
+    },
+]
 const constants = {
     install: '安装皮肤: https://gitee.com/guangzan/awescnb',
     qqGroup: 'qq群: 541802647',
 }
 
 // 哀悼日
-// function gray() {
-//     for (const { date } of grayDate) {
-//         if (getDate() === date) {
-//             $('html').addClass('gray-filter')
-//         }
-//     }
-// }
+function gray() {
+    for (const { date } of grayDate) {
+        if (getDate() === date) {
+            $('html').addClass('gray-filter')
+        }
+    }
+}
 
 // 隐藏加载动画
 function hideLoading() {
@@ -51,7 +51,7 @@ function build() {
     hideLoading()
     printing()
     notice()
-    // gray()
+    gray()
 }
 
 module.exports = build
