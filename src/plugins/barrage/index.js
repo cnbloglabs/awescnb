@@ -5,8 +5,8 @@ import './index.css'
 import {
     pageName,
     getClientRect,
-    getRandomNum,
-    getRandomColor,
+    randomNum,
+    randomColor,
 } from '@/assets/utils/tools'
 
 const options = window.opts.barrage
@@ -28,8 +28,8 @@ function shootBarrage(textList) {
         const $barrage = document.createElement('span')
         const barrageStyle = `
 									left: ${wrapWidth}px;
-									top: ${getRandomNum(wrapHeight - 20, 1)}px;
-									color: ${getRandomColor(options.colors)};
+									top: ${randomNum(wrapHeight - 20, 1)}px;
+									color: ${randomColor(options.colors)};
 									opacity: ${options.opacity};
 								`
         $barrage.style.cssText = barrageStyle
@@ -52,7 +52,7 @@ function shootBarrage(textList) {
                 window.requestAnimationFrame(roll)
             }
         }
-        const randomSpeed = getRandomNum(100, 1)
+        const randomSpeed = randomNum(100, 1)
         roll(randomSpeed)
     })
 }

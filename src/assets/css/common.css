@@ -77,25 +77,10 @@ ol,
 ul {
     list-style: none;
 }
+
 ::selection {
     background: var(--themeColor, #00a1d6);
     color: var(--text-a, #fff);
-}
-
-body::-webkit-scrollbar {
-    display: block;
-    width: 8px;
-    height: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: var(--themeColor, #eee);
-}
-
-body::-webkit-scrollbar-track {
-    background: 0 0;
-    border-radius: 2px;
 }
 
 .fireworks {
