@@ -28,8 +28,6 @@ function typeEffects() {
         strings,
         typeSpeed: 100,
     })
-
-    console.log(typed)
 }
 
 function setBackground() {
