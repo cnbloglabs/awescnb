@@ -1,3 +1,4 @@
+/* :root */
 :root {
     --background-g: var(--dark-background-g, var(--default-background-g));
     --background-w: var(--dark-background-w, var(--default-background-w));
@@ -21,59 +22,12 @@
     --default-text-a: #fff;
 }
 
-.icon {
-    width: 1rem;
-    height: 1rem;
-    vertical-align: -0.15rem;
-    fill: currentColor;
-    overflow: hidden;
-    color: inherit;
-}
-
-.disable-hover {
-    pointer-events: none;
-}
-
-.mode-change,
-.mode-change #navigator,
-.mode-change #mainContent,
-.mode-change #cnblogs_post_body blockquote,
-.mode-change #post-signature,
-.mode-change #sidebar_news,
-.mode-change #blog-calendar,
-.mode-change #sidebar_search,
-.mode-change #sidebar_shortcut,
-.mode-change #sidebar_recentposts,
-.mode-change #sidebar_toptags,
-.mode-change #sidebar_scorerank,
-.mode-change #sidebar_postcategory,
-.mode-change #sidebar_postarchive,
-.mode-change #sidebar_recentcomments,
-.mode-change #sidebar_topviewedposts,
-.mode-change #sidebar_topcommentedposts,
-.mode-change #sidebar_topdiggedposts,
-.mode-change #catalog,
-.mode-change .input_my_zzk {
-    transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
-}
-
-#mode-change {
-    margin-left: 17vw;
-}
-
-#mode-change .icon {
-    width: 0.8rem;
-    cursor: pointer;
-}
-
-/* 初始化 end */
-
-/* header start */
+/* home */
 #home {
-    position: relative;
     display: block;
 }
 
+/* header */
 #header {
     position: fixed;
     top: 0;
@@ -94,10 +48,6 @@
     color: var(--text-5);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
-}
-
-.navigator-hide {
-    transform: translateY(-100%);
 }
 
 #navigator>a {
@@ -136,22 +86,26 @@
     transition: all 0.3s;
 }
 
-/* header end */
+#mode-change {
+    margin-left: 17vw;
+}
+
+#mode-change .icon {
+    width: 0.8rem;
+    cursor: pointer;
+}
 
 /* #mode-change {
     animation: changeModeRotate 20s linear infinite;
 } */
 
-/* main start*/
+/* main */
 #main {
     padding-top: 1.2rem;
     display: flex;
     justify-content: center;
 }
 
-/* main end */
-
-/* mainContent start*/
 #mainContent {
     width: 50vw;
     border-radius: 2px;
@@ -252,13 +206,10 @@
 }
 
 #myposts {
-    /*当前标签页*/
     margin-left: 0;
 }
 
-/* mainContent end*/
-
-/* 常用链接 start */
+/* 常用链接 */
 .forFlow>.pager {
     display: none;
 }
@@ -270,9 +221,7 @@
     color: var(--themeColor);
 }
 
-/* 常用链接 start */
-
-/* 日历 start */
+/* 日历 */
 #blogCalendar table,
 #blogCalendar tbody,
 #blogCalendar tr,
@@ -325,8 +274,7 @@
     color: #00a1d6;
 }
 
-/* 日历 end */
-/* 搜索 star t*/
+/* 搜索 */
 .input_my_zzk {
     border: 1px solid #61aeee;
     background: var(--background-w);
@@ -343,10 +291,7 @@ input.btn_my_zzk:hover {
     transition: background 0.3s;
 }
 
-/* 搜索 end */
-
-/* 首页 start */
-/* 分页器 start */
+/* 首页 */
 .topicListFooter {
     display: flex;
     justify-content: center;
@@ -382,10 +327,7 @@ input.btn_my_zzk:hover {
     transition: all 0.2s;
 }
 
-/* 分页器 end */
-/* 首页 end */
-
-/* sideBar start */
+/* sideBar */
 #sideBar {
     max-width: 4.5rem;
     margin-left: 0.5rem;
@@ -398,7 +340,6 @@ input.btn_my_zzk:hover {
     height: 1.8em;
 }
 
-/* 公告 start */
 #blog-news {
     display: flex;
     align-items: center;
@@ -407,8 +348,6 @@ input.btn_my_zzk:hover {
 #profile_block {
     margin-top: 0;
 }
-
-/* 公告 end */
 
 /* 每个块的外层 */
 #sidebar_news,
@@ -485,9 +424,7 @@ input.btn_my_zzk:hover {
     transition: all 0.2s;
 }
 
-/*  sideBar end */
-
-/* 随笔页 start */
+/* 随笔页 */
 /* 主要容器 */
 #comment_form,
 #post_detail {
@@ -1295,7 +1232,52 @@ footer #links {
 
 /* footer end */
 
-/* 非移动端 start */
+
+
+/* 动态类 */
+.icon {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: -0.15rem;
+    fill: currentColor;
+    overflow: hidden;
+    color: inherit;
+}
+
+.disable-hover {
+    pointer-events: none;
+}
+
+.mode-change,
+.mode-change #navigator,
+.mode-change #mainContent,
+.mode-change #cnblogs_post_body blockquote,
+.mode-change #post-signature,
+.mode-change #sidebar_news,
+.mode-change #blog-calendar,
+.mode-change #sidebar_search,
+.mode-change #sidebar_shortcut,
+.mode-change #sidebar_recentposts,
+.mode-change #sidebar_toptags,
+.mode-change #sidebar_scorerank,
+.mode-change #sidebar_postcategory,
+.mode-change #sidebar_postarchive,
+.mode-change #sidebar_recentcomments,
+.mode-change #sidebar_topviewedposts,
+.mode-change #sidebar_topcommentedposts,
+.mode-change #sidebar_topdiggedposts,
+.mode-change #catalog,
+.mode-change .input_my_zzk {
+    transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
+}
+
+
+
+.navigator-hide {
+    transform: translateY(-100%);
+}
+
+/* 非移动端  */
 @media screen and (min-width: 767px) {
 
     #post_detail,
@@ -1305,9 +1287,7 @@ footer #links {
     }
 }
 
-/* 非移动端end */
-
-/* 移动端 start */
+/* 移动端 */
 @media screen and (max-width: 767px) {
     ::-webkit-scrollbar {
         display: none;
@@ -1596,10 +1576,9 @@ footer #links {
 
     /* 菜单 end */
 }
-
 /* 移动端 end */
 
-/* 动画 start */
+/* 动画 */
 
 .fade-in {
     animation: fadeIn 1s ease-in 0s;
@@ -1652,5 +1631,3 @@ footer #links {
         transform: rotate(360deg);
     }
 }
-
-/* 动画 end */
