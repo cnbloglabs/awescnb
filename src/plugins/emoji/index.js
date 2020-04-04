@@ -4,7 +4,6 @@ import { js } from '@constants/urls'
 import './index.css'
 const {
     enable,
-    style,
     showRecents,
     recentsCount,
     showSearch,
@@ -13,8 +12,8 @@ const {
 const emojiConfig = {
     position: 'top-start',
     theme: 'auto', // dark light auto
+    style: 'native', //native twemoji
     showVariants: false, //肤色
-    style, //native twemoji
     showRecents,
     recentsCount,
     showSearch,
