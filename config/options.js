@@ -7,7 +7,7 @@ module.exports = {
     template: 'post',    
     eslint: true,         
     sourceMap: false,      
-    openAnalyzer: true,  
+    openAnalyzer: false,  
 }
 
  // themeName - 你创建的主题文件夹名称 (运行 npm start 会启动它) ‘acg’ | 'reacg' | 'gshang'

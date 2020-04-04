@@ -7,6 +7,8 @@
     overflow: hidden;
     background-color: #fff;
     transition: top 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .lock-screen-weather {
