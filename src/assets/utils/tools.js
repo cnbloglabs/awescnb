@@ -1,5 +1,15 @@
 import { themeRepository, animeImages } from '@/constants/urls'
 
+
+/**
+ * @description prettier console.log
+ * @param {str} String
+ * @param {color} String
+ */
+function prettyLog(str, color='green') {
+    console.log(`%c  ${str}`, `color: ${color}; font-weight: bold;`)
+}
+
 /**
  * @description 获取当前日期
  */
@@ -303,4 +313,5 @@ export {
     randomArrayElements,
     getData,
     getDate,
+    prettyLog,
 }

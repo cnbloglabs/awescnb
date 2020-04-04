@@ -4,10 +4,10 @@
 
 module.exports = {
     themeName: 'reacg',    
-    template: 'index',    
+    template: 'post',    
     eslint: true,         
     sourceMap: false,      
-    openAnalyzer: false,  
+    openAnalyzer: true,  
 }
 
  // themeName - 你创建的主题文件夹名称 (运行 npm start 会启动它) ‘acg’ | 'reacg' | 'gshang'

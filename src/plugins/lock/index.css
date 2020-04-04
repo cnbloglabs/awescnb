@@ -1,16 +1,12 @@
-.overflow {
-    overflow: hidden;
-    overflow-x: inherit;
-}
-
-#lock-screen {
+.lock-screen {
     position: fixed;
-    top: 0;
+    top: -100vh;
     width: 100vw;
     height: 100vh;
     z-index: 999;
     overflow: hidden;
     background-color: #fff;
+    transition: top 0.3s;
 }
 
 .lock-screen-weather {
@@ -47,5 +43,11 @@
 
 .lock-screen-text span {
     font-size: 22px;
-    color: #000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.overflow {
+    overflow: hidden;
+    overflow-x: inherit;
 }

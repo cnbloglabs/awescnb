@@ -2,25 +2,22 @@
 // 引入即可
 
 import { pageName, userAgent } from '@/assets/utils/tools'
-import APlayer from '@/assets/js/APlayer.min'
+import { js } from '@constants/urls'
 import 'aplayer/dist/aplayer.min.css'
 import './index.css'
 
-// 音乐播放器
-const setMusicPlayer = () => {
-    const options = window.opts.musicPlayer
-    if (!options.enable) return
-    if (options.page !== pageName() && options.page !== 'all') return
-    if (options.agent !== userAgent() && options.agent !== 'all') return
+const { enable, autoplay, audio, page, agent } = window.opts.musicPlayer
 
+// 音乐播放器
+const build = () => {
     $('body').append('<div id="player" class="aplayer music-APlayer"></div>')
 
     const ap = new APlayer({
         container: document.getElementById('player'),
         fixed: true,
         preload: 'auto',
-        autoplay: options.autoplay,
-        audio: options.audio,
+        autoplay,
+        audio,
     })
 
     window.onbeforeunload = () => {
@@ -30,6 +27,14 @@ const setMusicPlayer = () => {
     window.onload = () => {
         ap.seek(localStorage.audioTime ? Number(localStorage.audioTime) : 0)
     }
+}
+
+function setMusicPlayer() {
+    if (!enable) return
+    if (page !== pageName() && page !== 'all') return
+    if (agent !== userAgent() && agent !== 'all') return
+
+    $.getScript(`${js}/APlayer.min.js`, build)
 }
 
 export default setMusicPlayer

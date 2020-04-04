@@ -14,7 +14,8 @@
         "SharedArrayBuffer": "readonly",
         "hljs": "readonly",
         "loadlive2d": "readonly",
-        "EmojiButton": true
+        "EmojiButton": true,
+        "APlayer": true
     },
     "parser": "babel-eslint",
     "parserOptions": {

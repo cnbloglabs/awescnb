@@ -1,12 +1,20 @@
-import { randomImgurl, pageName } from '@tools'
-import env from '@constants/env'
+import { randomImgurl, pageName, randomArrayElements } from '@tools'
 import './index.css'
+
+const { imgList } = window.opts.theme
+
+function image() {
+    let image =
+        imgList.length === 0
+            ? randomImgurl()
+            : randomArrayElements(imgList, 1)[0]
+    return image
+}
 
 function listImages() {
     $('.postCon').each(function() {
-        const image = env === 'dev' ? 'https:dummyimage.com/50' : randomImgurl()
         $(this).append(
-            `<div class='custom-list-image' style="background-image:url(${image})"></div>`,
+            `<div class='custom-list-image' style="background-image:url(${image()})"></div>`,
         )
     })
 }

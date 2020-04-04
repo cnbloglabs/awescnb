@@ -4,15 +4,14 @@ const defaultOptions = {
         color: '#FFB3CC',
         qrcode: '',
         title: '',
+        imgList: [],
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
-        signature: '快去自定义你的个性签名吧~',
     },
     postTopimage: {
         enable: true,
-        urls: [],
     },
     emoji: {
         enable: true,
@@ -119,8 +118,13 @@ const defaultOptions = {
         enable: false,
     },
     lock: {
-        enable: false,
+        enable: true,
         background: '',
+        strings: [
+            '<i>Powered by</i> webpack.',
+            '&amp; Theme in awescnb',
+            '快去自定义你的个性签名吧~',
+        ],
     },
     links: [
         {
