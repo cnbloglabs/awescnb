@@ -1,7 +1,12 @@
 // 设置侧栏头像
+import env from '@constants/env'
+
 // 引入即可
 function avatar() {
-    const avatar = window.opts.theme.avatar
+    let avatar = window.opts.theme.avatar
+    if (env === 'dev') {
+        avatar = 'https://dummyimage.com/50'
+    }
     if (avatar === '' || $('#blog-news').length === 0) return
 
     const avatarStyle = {
