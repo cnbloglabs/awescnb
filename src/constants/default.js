@@ -16,7 +16,6 @@ const defaultOptions = {
     },
     emoji: {
         enable: true,
-        style: 'native',
         showRecents: true,
         recentsCount: 20,
         showPreview: true,
@@ -55,10 +54,10 @@ const defaultOptions = {
     },
     click: {
         enable: true,
-        page: 'all',
-        agent: 'pc',
-        auto: true,
+        auto: false,
         colors: ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'],
+        size: 30,
+        maxCount: 50,
     },
     topProgress: {
         enable: true,
