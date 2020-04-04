@@ -17,7 +17,7 @@ const constants = {
 
 // 哀悼日
 function gray() {
-    if(pageName() !== 'post') return
+    if(pageName() === 'post') return
     for (const { date } of grayDate) {
         if (getDate() === date) {
             $('html').addClass('gray-filter')
