@@ -1,17 +1,15 @@
 // 点击特效
 // 仅引入即可
-
 import anime from 'animejs/lib/anime.es.js'
+import './index.css'
 import { userAgent } from '@/assets/utils/tools'
 
 const options = window.opts.click
 
-$('body').append(
-    `<canvas class="fireworks" style="pointer-events:none"></canvas>`,
-)
+$('body').append(`<canvas id="click-effects"></canvas>`)
 
 window.human = false
-var canvasEl = document.querySelector('.fireworks')
+var canvasEl = document.querySelector('#click-effects')
 var ctx = canvasEl.getContext('2d')
 var numberOfParticules = 30
 var pointerX = 0
