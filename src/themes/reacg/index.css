@@ -1165,10 +1165,35 @@ input.btn_my_zzk:hover {
 
 /* 写评论 end */
 
-/* 广告 start */
+/* 广告 */
 
 #ad_t2 {
     margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 14px;
+    color: #555;
+}
+
+#ad_t2 a {
+    margin-right: 0;
+    margin-top: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+}
+
+#ad_t2 a:nth-child(1) {
+    background-color: var(--themeColor)
+}
+
+#ad_t2 a:nth-child(3) {
+    background-color: #61aeee;
+}
+
+#ad_t2 br {
+    display: none;
 }
 
 #under_post_kb,
@@ -1178,14 +1203,10 @@ input.btn_my_zzk:hover {
     display: none;
 }
 
-/* 广告 end */
-
-/* 历史上的今天 start */
+/* 历史上的今天 */
 #HistoryToday {
     display: none;
 }
-
-/* 历史上的今天 end */
 
 /* 随笔页 end */
 
@@ -1576,6 +1597,7 @@ footer #links {
 
     /* 菜单 end */
 }
+
 /* 移动端 end */
 
 /* 动画 */
