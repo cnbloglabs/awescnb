@@ -7,6 +7,7 @@ import scroll from './scroll'
 import catalog from './catalog'
 import back2top from './back2top'
 import themeColor from './themeColor'
+import indexList from './indexList'
 
 function build() {
     mobileMenu()
@@ -18,6 +19,7 @@ function build() {
     back2top()
     themeColor()
     footer()
+    indexList()
 }
 
 export default build
