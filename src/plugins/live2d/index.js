@@ -23,14 +23,9 @@ const setLive2d = () => {
         console.log('live2d model：', model)
     }
 
-    $('body').append(`<canvas style="
-                                position:fixed;${options.position}:0;
-                                bottom:0;z-index:3" width="${options.width}" 
-                                height="${options.height}" id="model">
-                     </canvas>`)
-
+    const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:3" width="${options.width}"height="${options.height}" > </canvas>`
+    $('body').append(ele)
     const url = `${live2d.url}@${live2d.version}/${model}`
-
     $.getScript(`${js}/live2d.min.js`, () => {
         loadlive2d('model', url)
     })
