@@ -6,6 +6,9 @@
         "jquery": true
     },
     "extends": "eslint:recommended",
+    "rules": {
+        "semi": [2, "never"]
+    },
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
@@ -17,8 +20,5 @@
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
-    },
-    "rules": {
-        "semi": [2, "never"]
     }
 }
