@@ -27,7 +27,7 @@ function footer() {
         )
     }
     const $footer = `<footer>${$links.prop('outerHTML')}${$copyright}</footer>`
-    $('body').append($footer)
+    $('#home').append($footer)
 }
 
 export default footer
