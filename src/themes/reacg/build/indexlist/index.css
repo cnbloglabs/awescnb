@@ -1,0 +1,17 @@
+.postCon {
+    display: flex;
+}
+
+.c_b_p_desc {
+    flex: 8;
+}
+
+.custom-list-image {
+    margin-left: 10px;
+    height: 112.5px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #000;
+    /* flex: 2; */
+    width: 200px;
+}
