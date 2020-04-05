@@ -12,7 +12,7 @@ function postTopimage() {
     let url =
         imgList.length === 0 ? randomImage : randomArrayElements(imgList, 1)[0]
     const ele = `<div id="custom-post-topimage"></div>`
-    $('.post>.postTitle').after(ele)
+    $('.post>.postTitle').before(ele)
     $('#custom-post-topimage').css('background-image', `url(${url})`)
 }
 

@@ -38,8 +38,8 @@
 
 ## 感谢
 
-[GShang](https://www.cnblogs.com/gshang/)
-[青墟](https://www.cnblogs.com/guoxinyu/)
+- [GShang](https://www.cnblogs.com/gshang/)
+- [青墟](https://www.cnblogs.com/guoxinyu/)
 
 > 排名不分先后，会陆续添加。
 

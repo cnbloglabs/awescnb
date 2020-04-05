@@ -22,6 +22,40 @@
     --default-text-a: #fff;
 }
 
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar:hover {
+    width: 15px;
+    transition: width 4s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    background-color: var(--themeColor);
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
+}
+
 /* home */
 #home {
     display: block;
@@ -567,6 +601,10 @@ input.btn_my_zzk:hover {
 
 /* 返回顶部 end */
 /* markdown start*/
+mark {
+    background-color: #fff200;
+}
+
 .cnblogs-markdown pre {
     margin: 0.267rem 0;
 }
@@ -1219,7 +1257,7 @@ body footer {
     margin: 1rem 0 0;
     padding: 0.6rem 0;
     text-align: center;
-    color: var(--text-9);
+    color: var(--text-3);
     border-top: var(--themeColor) 1px solid;
 }
 

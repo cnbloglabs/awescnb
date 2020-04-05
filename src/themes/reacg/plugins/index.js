@@ -16,6 +16,7 @@ import btns from '@plugins/btns'
 import postTopimage from '@plugins/postTopimage'
 import emoji from '@plugins/emoji'
 import lock from '@plugins/lock'
+import postMessage from '@plugins/postMessage'
 
 function plugins() {
     setIcons()
@@ -36,6 +37,7 @@ function plugins() {
     postTopimage()
     emoji()
     lock()
+    postMessage()
 }
 
 export default plugins

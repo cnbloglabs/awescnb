@@ -35,6 +35,33 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                        },
+                    },
+                    'postcss-loader',
+                ],
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                        },
+                    },
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: jsLoader,

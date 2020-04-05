@@ -8,23 +8,6 @@ const { template, themeName, sourceMap } = require('./options')
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
     devtool: sourceMap ? 'inline-source-map' : '',
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                        },
-                    },
-                    'postcss-loader',
-                ],
-            },
-        ],
-    },
     devServer: {
         host: 'localhost',
         port: 8080,

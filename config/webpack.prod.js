@@ -26,23 +26,6 @@ if (openAnalyzer) {
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'production',
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                        },
-                    },
-                    'postcss-loader',
-                ],
-            },
-        ],
-    },
     plugins,
     externals: {
         jquery: 'window.jquery',

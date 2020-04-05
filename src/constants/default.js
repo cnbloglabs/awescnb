@@ -91,7 +91,7 @@ const defaultOptions = {
         value:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
         opacity: 1,
-        repeat: true,
+        repeat: false,
     },
     barrage: {
         enable: false,

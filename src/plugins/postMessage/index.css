@@ -1,0 +1,64 @@
+#EntryTag,
+#BlogPostCategory {
+    display: none;
+}
+
+#custom-post-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.custom-post-message-top {
+    display: flex;
+}
+
+
+.custom-tags,
+.custom-categories {
+    display: flex;
+    align-items: center;
+}
+
+.custom-tags a,
+.custom-categories a:not(:first-child) {
+    margin-left: 5px;
+}
+
+.custom-tags a,
+.custom-categories a {
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 3px;
+    color: #fff;
+    box-shadow: 1px 1px 5px rgb(211, 207, 207);
+}
+
+.custom-tags {
+    margin-left: 5px;
+}
+
+.custom-tags a {
+    background-color: #22a6b3;
+}
+
+.custom-tags a:nth-child(2) {
+    background-color: #ff6b6b;
+}
+
+.custom-tags a:nth-child(3) {
+    background-color: #fbc531;
+}
+
+.custom-categories a {
+    background-color: var(--themeColor, #ff7979);
+}
+
+.custom-post-message-bottom {
+    color: #909090;
+    font-size: 14px;
+}
