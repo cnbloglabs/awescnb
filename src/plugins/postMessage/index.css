@@ -62,3 +62,27 @@
     color: #909090;
     font-size: 14px;
 }
+
+@media screen and (max-width: 767px) {
+    .custom-post-message-top {
+        flex-direction: column;
+    }
+
+    .custom-categories,
+    .custom-tags {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .custom-tags {
+        margin-left: 0;
+    }
+
+    .custom-categories a {
+        margin-left: 5px;
+    }
+
+    .custom-post-message-bottom {
+        margin: 5px 0;
+    }
+}
