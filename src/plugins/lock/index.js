@@ -1,3 +1,5 @@
+// 双击 header 下拉锁屏
+
 import './index.css'
 import Typed from 'typed.js'
 import env from '@constants/env'
@@ -41,7 +43,7 @@ function setBackground() {
 }
 
 function open() {
-    $('#navigator').dblclick(function() {
+    $('#header').dblclick(function() {
         $('body').addClass('overflow')
         $('.lock-screen').css('top', '0')
         typed.start()

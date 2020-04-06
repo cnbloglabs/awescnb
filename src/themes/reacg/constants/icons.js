@@ -22,8 +22,12 @@ const icons = {
     github: '#ac-github', //github
     dark: '#ac-dark', //夜间模式
     light: '#ac-light', //白天
-    look: '#ac-look',
-    emoji: '#ac-emoji',
+    look: '#ac-look', // 阅读全文
+    cnblog: '#ac-cnblog', // 博客园首页
+    home: '#ac-home', // 首页
+    admin: '#ac-admin', // 管理
+    rss: '#ac-rss', // 订阅
+    contact: '#ac-contact', // 联系
     //count -> 20
     food: {
         pistachio: '#ac-food-pistachio',

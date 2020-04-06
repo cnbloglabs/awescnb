@@ -1,5 +1,5 @@
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty } from '@/assets/utils/tools'
+import { pageName, randomProperty, userAgent } from '@/assets/utils/tools'
 import { loadFiles, iconInSvg } from '../utils/tools'
 import { CDN } from '../constants/urls'
 import icons from '../constants/icons'
@@ -94,9 +94,50 @@ function setSidebarIcon() {
 function setGithub() {
     const options = userOptions.github
     if (!options.enable) return
-    const $githubIcon = `<a href=${options.url}>${iconInSvg(icons.github)}</a>`
-    $('#navList').before($githubIcon)
-    $('#navigator .icon').css({ color: `${options.color}` })
+    const $githubIcon = `<a id="custom-github" style="color:${options.color}" href=${
+        options.url
+    }>${iconInSvg(icons.github)}</a>`
+    $('#mode-change').after($githubIcon)
+}
+
+//nalist 图标（博客园  首页 ...）
+function nav() {
+    // 博客园首页
+    if ($('#blog_nav_sitehome').length !== 0) {
+        $('#blog_nav_sitehome').prepend(iconInSvg(icons.cnblog))
+    }
+    // 博客首页
+    if ($('#blog_nav_myhome').length !== 0) {
+        $('#blog_nav_myhome').prepend(iconInSvg(icons.home))
+    }
+    // 新随笔
+    if ($('#blog_nav_newpost').length !== 0) {
+        $('#blog_nav_newpost').prepend(iconInSvg(icons.pens))
+    }
+    // 联系
+    if ($('#blog_nav_contact').length !== 0) {
+        $('#blog_nav_contact').prepend(iconInSvg(icons.contact))
+    }
+    // 订阅
+    if ($('#blog_nav_rss').length !== 0) {
+        $('#blog_nav_rss').prepend(iconInSvg(icons.rss))
+    }
+
+    // 管理
+    if ($('#blog_nav_admin').length !== 0) {
+        $('#blog_nav_admin').prepend(iconInSvg(icons.admin))
+    }
+}
+
+// 移动端头部菜单 toggle  (博客园  首页 ...)
+function mobileNavDropdown() {
+    if (userAgent() !== 'phone') return
+    const ele = `<div id='custom-mobile-nav'>${iconInSvg(icons.look)}</div>`
+    $('#navList').before(ele)
+
+    $('#custom-mobile-nav').click(function() {
+        $('#navList').toggle(300, 'swing')
+    })
 }
 
 // 首页文章题目 icon
@@ -152,6 +193,8 @@ function build() {
     setEntrylistPosttitleIcon()
     setHeadlineIcon()
     setPostTitleIcon()
+    mobileNavDropdown()
+    nav()
 }
 
 // 加载i confont js

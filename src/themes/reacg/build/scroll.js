@@ -30,12 +30,10 @@ function scrollOnce() {
         let direction = scrollFunc()
         if (direction && originalDir != direction) {
             if (direction == 'down') {
-                // console.log("down")
-                $('#navigator').addClass('navigator-hide') // 头部导航隐藏
+                $('#header').addClass('header-hide') // 头部导航隐藏
                 $('#catalog').addClass('catalog-scroll-up') // 当头部导航隐藏目录随之向上移动
             } else {
-                // console.log("up")
-                $('#navigator').removeClass('navigator-hide')
+                $('#header').removeClass('header-hide')
                 $('#catalog').removeClass('catalog-scroll-up')
             }
             originalDir = direction

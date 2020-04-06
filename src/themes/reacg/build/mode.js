@@ -10,7 +10,7 @@ function init() {
     const $modeIcon = `<div id='mode-change'>${
         isNight ? iconInSvg(icons.dark) : iconInSvg(icons.light)
     }</div>`
-    $('#navigator').prepend($modeIcon)
+    $('#header').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {
         shootCustom(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
