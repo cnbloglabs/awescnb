@@ -4,8 +4,6 @@ import { loadFiles, iconInSvg } from '../utils/tools'
 import { CDN } from '../constants/urls'
 import icons from '../constants/icons'
 
-const userOptions = window.opts
-
 // 设置sidebar icon
 function setSidebarIcon() {
     const insert = () => {
@@ -92,40 +90,66 @@ function setSidebarIcon() {
 
 // 设置github icon
 function setGithub() {
-    const options = userOptions.github
-    if (!options.enable) return
-    const $githubIcon = `<a id="custom-github" style="color:${options.color}" href=${
-        options.url
-    }>${iconInSvg(icons.github)}</a>`
+    const { enable, color, url } = window.opts.github
+    if (!enable) return
+    const $githubIcon = `
+                        <a id="custom-github" style="color:${color}" href=${url}>${iconInSvg(
+        icons.github,
+    )}</a>
+                        `
     $('#mode-change').after($githubIcon)
 }
 
 //nalist 图标（博客园  首页 ...）
 function nav() {
-    // 博客园首页
-    if ($('#blog_nav_sitehome').length !== 0) {
-        $('#blog_nav_sitehome').prepend(iconInSvg(icons.cnblog))
-    }
-    // 博客首页
-    if ($('#blog_nav_myhome').length !== 0) {
-        $('#blog_nav_myhome').prepend(iconInSvg(icons.home))
-    }
-    // 新随笔
-    if ($('#blog_nav_newpost').length !== 0) {
-        $('#blog_nav_newpost').prepend(iconInSvg(icons.pens))
-    }
-    // 联系
-    if ($('#blog_nav_contact').length !== 0) {
-        $('#blog_nav_contact').prepend(iconInSvg(icons.contact))
-    }
-    // 订阅
-    if ($('#blog_nav_rss').length !== 0) {
-        $('#blog_nav_rss').prepend(iconInSvg(icons.rss))
-    }
+    const { cnblog, home, pens, contact, rss, admin } = icons
 
-    // 管理
-    if ($('#blog_nav_admin').length !== 0) {
-        $('#blog_nav_admin').prepend(iconInSvg(icons.admin))
+    // 使用对象
+    // const items = {
+    //     '#blog_nav_sitehome': cnblog,
+    //     '#blog_nav_myhome': home, // 博客首页
+    //     '#blog_nav_newpost': pens, // 新随笔
+    //     '#blog_nav_contact': contact, // 联系
+    //     '#blog_nav_rss': rss, // 订阅
+    //     '#blog_nav_admin': admin, // 管理
+    // }
+
+    // for (let selector in items) {
+    //     if ($(selector).length !== 0) {
+    //         $(selector).prepend(iconInSvg(items[selector]))
+    //     }
+    // }
+
+    // 使用对象数组
+    // const items = [
+    //     { selector: '#blog_nav_sitehome', icon: cnblog },
+    //     { selector: '#blog_nav_myhome', icon: home },
+    //     { selector: '#blog_nav_newpost', icon: pens },
+    //     { selector: '#blog_nav_contact', icon: contact },
+    //     { selector: '#blog_nav_rss', icon: rss },
+    //     { selector: '#blog_nav_admin', icon: admin },
+    // ]
+
+    // for (let { selector, icon } of items) {
+    //     if ($(selector).length !== 0) {
+    //         $(selector).prepend(iconInSvg(icon))
+    //     }
+    // }
+
+    // 使用 Map
+    const items = new Map([
+        ['#blog_nav_sitehome', cnblog], // 博客园首页
+        ['#blog_nav_myhome', home], // 博客首页
+        ['#blog_nav_newpost', pens], // 新随笔
+        ['#blog_nav_contact', contact], // 联系
+        ['#blog_nav_rss', rss], // 订阅
+        ['#blog_nav_admin', admin], // 管理
+    ])
+
+    for (let [selector, icon] of items.entries()) {
+        if ($(selector).length !== 0) {
+            $(selector).prepend(iconInSvg(icon))
+        }
     }
 }
 
