@@ -5,7 +5,7 @@ const repositories = {
 }
 
 const CDN = {
-    icon: '//at.alicdn.com/t/font_1595820_trfxcr84ism.js',
+    icon: '//at.alicdn.com/t/font_1595820_uwf9ihoffw.js',
 }
 
 export { repositories, CDN }
