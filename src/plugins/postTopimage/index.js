@@ -3,14 +3,13 @@
 import { pageName, randomArrayElements } from '@tools'
 import { randomImage } from '@constants/urls'
 import './index.css'
-const { imgList } = window.opts.theme
-const { enable } = window.opts.postTopimage
+
+const { enable, imgs } = window.opts.postTopimage
 
 function postTopimage() {
     if (!enable) return
     if (pageName() !== 'post') return
-    let url =
-        imgList.length === 0 ? randomImage : randomArrayElements(imgList, 1)[0]
+    let url = imgs.length === 0 ? randomImage : randomArrayElements(imgs, 1)[0]
     const ele = `<div id="custom-post-topimage"></div>`
     $('.post>.postTitle').before(ele)
     $('#custom-post-topimage').css('background-image', `url(${url})`)

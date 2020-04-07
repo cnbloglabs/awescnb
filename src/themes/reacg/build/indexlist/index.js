@@ -1,13 +1,11 @@
 import { randomImgurl, pageName, userAgent, randomArrayElements } from '@tools'
 import './index.css'
 
-const { imgList } = window.opts.theme
+const { enable, imgs } = window.opts.indexListImg
 
 function image() {
     let image =
-        imgList.length === 0
-            ? randomImgurl()
-            : randomArrayElements(imgList, 1)[0]
+        imgs.length === 0 ? randomImgurl() : randomArrayElements(imgs, 1)[0]
     return image
 }
 
@@ -20,6 +18,7 @@ function listImages() {
 }
 
 function indexList() {
+    if (!enable) return
     if (pageName() !== 'index') return
     if (userAgent() !== 'pc') return
     listImages()
