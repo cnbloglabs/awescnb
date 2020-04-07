@@ -1,5 +1,5 @@
 // 设置移动端菜单按钮
-import { userAgent,unpass } from '@tools'
+import { userAgent, unpass } from '@tools'
 
 function build() {
     $('body').append(
@@ -23,6 +23,7 @@ function toggle() {
             })
             setTimeout(() => {}, 500)
             unpass(true)
+            $('html').css('scroll-behavior', 'smooth')
         } else {
             $(this).addClass('side-btn-active')
             $('#sideBar').css({
@@ -31,6 +32,7 @@ function toggle() {
                 transition: 'all .3s ease-in-out',
             })
             unpass(false)
+            $('html').css('scroll-behavior', 'unset')
         }
     })
 }
