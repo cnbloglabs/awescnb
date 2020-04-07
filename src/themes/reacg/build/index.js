@@ -5,7 +5,6 @@ import avatar from './avatar'
 import qrcode from './qrcode'
 import scroll from './scroll'
 import catalog from './catalog'
-import back2top from './back2top'
 import themeColor from './themeColor'
 import indexList from './indexList'
 
@@ -16,7 +15,6 @@ function build() {
     qrcode()
     scroll()
     catalog()
-    back2top()
     themeColor()
     footer()
     indexList()

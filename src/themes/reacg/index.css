@@ -128,7 +128,7 @@
     transition: all 0.3s;
 }
 
-#navList li  .icon {
+#navList li .icon {
     margin-right: 5px;
     width: 0.5rem;
 }
@@ -511,109 +511,7 @@ input.btn_my_zzk:hover {
 }
 
 /* 头部进度条 end */
-/* 返回顶部 start */
-#back-to-top {
-    position: fixed;
-    bottom: 0.667rem;
-    right: 2.8rem;
-    width: 0.667rem;
-    height: 0.667rem;
-    border-radius: 50%;
-    background-color: rgba(32, 28, 41, 0.86);
-    color: #fff;
-    text-align: center;
-    line-height: 0.667rem;
-    z-index: 11;
-    font-size: 0.187rem;
-    display: none;
-    border: 0.053rem solid rgba(32, 28, 41, 0.26);
-    box-shadow: 0 0 0.4rem rgba(16, 14, 23, 0.46);
-    cursor: pointer;
-    overflow: hidden;
-}
 
-#back-to-top .icon {
-    width: 0.3rem;
-    height: 0.55rem;
-}
-
-#back-to-top .flow {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0;
-    width: 100%;
-    z-index: 12;
-    background: rgba(32, 28, 41, 0.86);
-}
-
-#back-to-top .flow::before,
-#back-to-top .flow::after {
-    content: '';
-    position: absolute;
-    width: 5.333rem;
-    height: 5.333rem;
-    top: 0;
-    left: -350%;
-    background: #ffb3cc !important;
-    background: linear-gradient(#f00, #f353a9) !important;
-    opacity: 0.4;
-    border-radius: 45%;
-    transform: translate(-50%, -70%) rotate(0);
-    animation: rotate 6s linear infinite;
-    z-index: 10;
-}
-
-#back-to-top .flow::after {
-    border-radius: 47%;
-    background: #ffb3cc !important;
-    background: linear-gradient(#f00, #f353a9) !important;
-    opacity: 0.9;
-    transform: translate(-50%, -70%) rotate(0);
-    animation: rotate 10s linear -5s infinite;
-    z-index: 20;
-}
-
-#back-to-top span {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 0.667rem;
-    text-align: center;
-    line-height: 0.667rem;
-    font-weight: 900;
-    z-index: 13;
-}
-
-#back-to-top #back2top-icon {
-    display: none;
-    font-size: 0.373rem;
-}
-
-#back-to-top:hover .percentage {
-    display: none;
-}
-
-#back-to-top:hover #back2top-icon {
-    display: block;
-}
-
-@keyframes rotate {
-    0% {
-        transform: translate(-50%, 0) rotateZ(0deg);
-    }
-
-    50% {
-        transform: translate(-50%, -2%) rotateZ(180deg);
-    }
-
-    100% {
-        transform: translate(-50%, 0%) rotateZ(360deg);
-    }
-}
-
-/* 返回顶部 end */
 /* markdown start*/
 mark {
     background-color: #fff200;

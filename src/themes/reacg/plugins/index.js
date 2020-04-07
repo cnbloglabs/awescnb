@@ -17,6 +17,7 @@ import postTopimage from '@plugins/postTopimage'
 import emoji from '@plugins/emoji'
 import lock from '@plugins/lock'
 import postMessage from '@plugins/postMessage'
+import back2top from '@plugins/back2top'
 
 function plugins() {
     setIcons()
@@ -38,6 +39,7 @@ function plugins() {
     emoji()
     lock()
     postMessage()
+    back2top()
 }
 
 export default plugins

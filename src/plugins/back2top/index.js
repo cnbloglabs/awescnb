@@ -1,6 +1,5 @@
 import { userAgent } from '@/assets/utils/tools'
-import { iconInSvg } from '../utils/tools'
-import icons from '../constants/icons'
+import './index.css'
 
 const options = window.opts.back2top
 const enableLive2d = window.opts.live2d.enable
@@ -31,16 +30,14 @@ function setBack2Top() {
     if (options.type === 'simple') {
         $back2top = `<div id="back-to-top" style="display: block;">
                         <span class="percentage">0%</span>
-                        <span id='back2top-icon'>${iconInSvg(
-                            icons.back2top,
-                        )}</span>
+                        <span id='back2top-icon'>🚀</span>
                       </div>`
     }
     if (options.type === 'complex') {
         $back2top = `<div id="back-to-top" style="display: block;">
                     <div class="flow" style="height: 0%;"></div>
                     <span class="percentage">0%</span>
-                    <span id='back2top-icon'>${iconInSvg(icons.back2top)}</span>
+                    <span id='back2top-icon'>🚀</span>
                   </div>`
     }
 

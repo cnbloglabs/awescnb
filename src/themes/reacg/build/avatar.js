@@ -1,7 +1,8 @@
-// 设置侧栏头像
+// 设置侧b边栏头像
+// 引入即可
+
 import env from '@constants/env'
 
-// 引入即可
 function avatar() {
     let avatar = window.opts.theme.avatar
     if (env === 'dev') {
