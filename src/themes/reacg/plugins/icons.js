@@ -195,7 +195,7 @@ function setHeadlineIcon() {
     $('#topics .postTitle').prepend(iconInSvg(icons.pen))
 }
 
-// 文章标题icon
+// 文章小标题icon
 function setPostTitleIcon() {
     if (pageName() !== 'post') return
     const $h1 = $('#cnblogs_post_body:first>h1')

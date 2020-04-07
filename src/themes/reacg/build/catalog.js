@@ -1,39 +1,52 @@
-import { pageName, hasPostTitle, userAgent } from '@/assets/utils/tools'
+import { pageName, hasPostTitle, userAgent } from '@tools'
 
-const options = window.opts.catalog
+const { enable, position } = window.opts.catalog
 
-// 设置随笔目录
-function setCatalog() {
-    if (!options.enable) return
-    if (!hasPostTitle()) return
-    if (pageName() !== 'post') return
-    if (userAgent() !== 'pc') return
+let $catalogContainer
 
-    const $post = $($('#cnblogs_post_body'))
-    const $catalogContainer = $('<div>')
+function build() {
+    $catalogContainer = $('<div id="catalog"></div>')
+    $catalogContainer.append($(`<div class='catListTitle'><h3>目录</h3></div>`))
+}
+
+// 如果使用 markdown
+function markdown() {
     const $ulContainer = $('<ul>')
     const titleReg = /^h[1-3]$/
 
-    $catalogContainer
-        .attr('id', 'catalog')
-        .append($(`<div class='catListTitle'><h3>目录</h3></div>`))
+    $('#cnblogs_post_body')
+        .children()
+        .each(function() {
+            if (titleReg.test(this.tagName.toLowerCase())) {
+                let text
 
-    $post.children().each(function() {
-        if (titleReg.test(this.tagName.toLowerCase())) {
-            $(this).append("<a href='#catalog' class='title_back'></a>")
-            let aEle = $('<a></a>')
-            let hEle = $('<li></li>')
-            const text =
-                this.childNodes.length === 3
-                    ? this.childNodes[1].nodeValue
-                    : this.childNodes[0].nodeValue
-            aEle.attr('href', '#' + this.id).text(text)
-            hEle.attr('class', this.nodeName.toLowerCase() + '-list').append(
-                aEle,
-            )
-            $ulContainer.append(hEle)
-        }
-    })
+                if (this.id !== '') {
+                    console.log('markdown')
+                    text =
+                        this.childNodes.length === 3
+                            ? this.childNodes[1].nodeValue
+                            : this.childNodes[0].nodeValue
+                } else {
+                    console.log('text editor')
+                    if (this.childNodes.length === 3) {
+                        const value = this.childNodes[1].nodeValue
+                        text = value ? value : $(this.childNodes[1]).text()
+                    } else {
+                        const value = this.childNodes[0].nodeValue
+                        text = value ? value : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
+                    }
+                    $(this).attr('id', text.trim())
+                }
+
+                const title = `
+                            <li class='${this.nodeName.toLowerCase()}-list'>
+                                <a href='#${text.trim()}'>${text}</a>
+                            </li>
+                        `
+
+                $ulContainer.append(title)
+            }
+        })
 
     $($catalogContainer.append($ulContainer)).appendTo('#sideBar')
     setCatalogPosition()
@@ -53,11 +66,19 @@ function setCatalogPosition() {
         },
     }
 
-    actions[options.position]()
+    actions[position]()
 }
 
 function catalog() {
-    setCatalog()
+    if (!enable) return
+    if (!hasPostTitle()) return
+    if (pageName() !== 'post') return
+    if (userAgent() !== 'pc') return
+    build()
+
+    console.log(markdown)
+    markdown()
+    // textEditor()
 }
 
 export default catalog
