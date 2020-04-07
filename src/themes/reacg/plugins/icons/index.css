@@ -1,0 +1,22 @@
+#custom-gitee {
+    display: flex;
+    align-items: center;
+    padding: 0 .293rem;
+}
+
+#custom-gitee:hover {
+    background-color: var(--themeColor);
+    color: #fff;
+    transition: all .3s;
+}
+
+#custom-gitee .icon {
+    width: 0.5rem;
+    margin-right: 5px;
+}
+
+#custom-gitee span {
+    font-weight: 700;
+    text-shadow: 5px 0 10px var(--themeColor);
+    color: var(--text-3)
+}

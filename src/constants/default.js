@@ -63,6 +63,11 @@ const defaultOptions = {
         color: '#ffb3cc',
         url: 'https://gitee.com/guangzan/awescnb',
     },
+    gitee: {
+        enable: true,
+        color: '#C71D23',
+        url: 'https://gitee.com/guangzan/awescnb',
+    },
     click: {
         enable: true,
         auto: false,

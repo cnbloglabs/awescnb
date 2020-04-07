@@ -1,8 +1,9 @@
+import './index.css'
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty, userAgent } from '@/assets/utils/tools'
-import { loadFiles, iconInSvg } from '../utils/tools'
-import { CDN } from '../constants/urls'
-import icons from '../constants/icons'
+import { pageName, randomProperty, userAgent } from '@tools'
+import { loadFiles, iconInSvg } from '../../utils/tools'
+import { CDN } from '../../constants/urls'
+import icons from '../../constants/icons'
 
 // 设置sidebar icon
 function setSidebarIcon() {
@@ -98,6 +99,17 @@ function setGithub() {
     )}</a>
                         `
     $('#mode-change').after($githubIcon)
+}
+
+// gitee icon
+function setGitee() {
+    const { enable, color, url } = window.opts.gitee
+    if (!enable) return
+    const icon = `<a id="custom-gitee" style="color:${color};" href=${url}>${iconInSvg(
+        icons.gitee,
+    )}<span>码云</span></a>
+                        `
+    $('#blogTitle').before(icon)
 }
 
 //nalist 图标（博客园  首页 ...）
@@ -212,6 +224,7 @@ function setPostTitleIcon() {
 function build() {
     setSidebarIcon()
     setGithub()
+    setGitee()
     setIndexPosttitleIcon()
     setIndexPostLookIcon()
     setEntrylistPosttitleIcon()
