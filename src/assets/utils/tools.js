@@ -1,12 +1,11 @@
 import { themeRepository, animeImages } from '@/constants/urls'
 
-
 /**
  * @description prettier console.log
  * @param {str} String
  * @param {color} String
  */
-function prettyLog(str, color='green') {
+function prettyLog(str, color = 'green') {
     console.log(`%c  ${str}`, `color: ${color}; font-weight: bold;`)
 }
 
@@ -125,6 +124,23 @@ function poll(condition, func) {
 function load(themeName) {
     const url = `${themeRepository}/${themeName}.js`
     $.getScript(url)
+}
+
+/**
+ * @description add a script and cache it
+ * @param {url} String
+ * @param {callback} Function
+ */
+function cacheScript(url, callback) {
+    $.ajax({
+        type: 'GET',
+        dataType: 'script',
+        cache: true,
+        url,
+        success() {
+            callback()
+        },
+    })
 }
 
 /**
@@ -314,4 +330,5 @@ export {
     getData,
     getDate,
     prettyLog,
+    cacheScript,
 }
