@@ -1,9 +1,9 @@
 import '@/assets/css/common.css'
-// import build from './build'
 import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
+    // building
     init(building) {
         if (env === 'dev' || $.awesCnb) {
             building()
@@ -18,11 +18,11 @@ class AwesCnb {
         }
     }
 
+    // dev env
     devOpts() {
         if (env === 'dev') {
             window.opts = defaultOptions
         }
-        // console.log(window.opts)
         require('./build')()
     }
 }
