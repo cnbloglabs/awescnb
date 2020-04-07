@@ -75,10 +75,7 @@ function catalog() {
     if (pageName() !== 'post') return
     if (userAgent() !== 'pc') return
     build()
-
-    console.log(markdown)
     markdown()
-    // textEditor()
 }
 
 export default catalog
