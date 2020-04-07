@@ -36,7 +36,7 @@
 -   QQ 群：541802647 (活跃)
 -   微信：wx923665892
 
-## 感谢
+## 成员
 
 - [GShang](https://www.cnblogs.com/gshang/)
 - [青墟](https://www.cnblogs.com/guoxinyu/)

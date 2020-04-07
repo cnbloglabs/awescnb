@@ -17,8 +17,7 @@
     padding: 10px 15px;
     width: auto;
     height: auto;
-    /* max-width: 100%;
-    min-height: 48px; */
+    max-width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
     line-height: 14px;
     word-break: keep-all;
@@ -35,6 +34,12 @@
     color: #00e676;
     margin: 0;
     margin-left: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .toast {
+        background-color: #fff;
+    }
 }
 
 /* @media only screen and (max-width: 540px) {
