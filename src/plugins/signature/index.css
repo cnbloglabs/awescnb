@@ -5,8 +5,17 @@
     flex-direction: column;
     margin: 25px 0;
     padding: 12px 24px 12px 30px;
-    background-color: var(--background-e);
-    border-left: 5px solid var(--themeColor);
+    background-color: var(--background-e, #f6f8fa);
+    border-left: 5px solid var(--themeColor, #00a1d6);
+}
+
+#post-signature a {
+    color: #000;
+}
+
+#post-signature a:hover {
+    color: #00a1d6 !important;
+    transition: all 0.25s;
 }
 
 #post-signature p {
