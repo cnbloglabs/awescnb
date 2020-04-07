@@ -4,6 +4,7 @@ import './index.css'
 import Typed from 'typed.js'
 import env from '@constants/env'
 import { randomImage, dummyimage } from '@constants/urls'
+
 const { enable, background, strings } = window.opts.lock
 const { avatar } = window.opts.theme
 let typed
@@ -13,6 +14,7 @@ const typedOpts = {
     typeSpeed: 100,
 }
 
+// 创建元素
 function build() {
     let image
     image = env === 'dev' ? dummyimage : avatar
@@ -30,6 +32,7 @@ function build() {
     $('body').append(ele)
 }
 
+// 设置背景
 function setBackground() {
     let image
     if (env === 'dev') {
@@ -40,6 +43,7 @@ function setBackground() {
     $('.lock-screen').css('background-image', `url(${image}/red)`)
 }
 
+// 打开
 function open() {
     $('#header').dblclick(function() {
         $('body').addClass('overflow')
@@ -48,6 +52,7 @@ function open() {
     })
 }
 
+// 关闭
 function close() {
     $(document).on('click', '.lock-screen-close', () => {
         $('.lock-screen').css('top', '-100vh')
