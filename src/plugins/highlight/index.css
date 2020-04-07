@@ -1,3 +1,52 @@
+/* 富文本编辑器 start*/
+.cnblogs_code {
+    border: none;
+    padding: 0;
+
+}
+
+.cnblogs_code:hover {
+    box-shadow: 1px 1px 10px red;
+}
+
+.cnblogs_code_toolbar {
+    display: none;
+}
+
+.cnblogs_code pre {
+    overflow: auto;
+    font-family: Lucida Console,
+        Consolas,
+        Monaco,
+        Andale Mono,
+        Ubuntu Mono,
+        monospace !important;
+    display: block !important;
+    padding: 0.5em !important;
+    color: var(--hl-mono-1) !important;
+    background: var(--hl-base) !important;
+    border: none !important;
+    white-space: pre;
+}
+
+/* 注释 */
+.cnblogs_code pre span[style="color: #008000;"] {
+    color: var(--hl-mono-3) !important;
+    font-style: italic;
+}
+
+/* new if return ... */
+.cnblogs_code pre span[style="color: #0000ff;"] {
+    color: var(--hl-hue-3) !important;
+}
+
+
+.cnblogs_code pre span[style="color: #8b0000;"] {
+    color: var(--hl-hue-6) !important;
+}
+
+
+/* 富文本编辑器 end */
 
 #cnblogs_post_body .hljs {
     display: block !important;
@@ -113,8 +162,7 @@ pre::before {
     content: ' ';
     display: block;
     height: 24px;
-    background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
-        no-repeat;
+    background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png) no-repeat;
     background-size: 65px 23px;
     background-position-x: 10px;
 }
