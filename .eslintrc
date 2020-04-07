@@ -5,10 +5,6 @@
         "es6": true,
         "jquery": true
     },
-    "extends": "eslint:recommended",
-    "rules": {
-        "semi": [2, "never"]
-    },
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
@@ -16,6 +12,10 @@
         "loadlive2d": "readonly",
         "EmojiButton": true,
         "APlayer": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "semi": [2, "never"]
     },
     "parser": "babel-eslint",
     "parserOptions": {
