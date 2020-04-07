@@ -13,4 +13,15 @@ const live2d = {
     url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
     version: '1.7',
 }
-export { live2d, themeRepository, animeImages, js, randomImage, dummyimage }
+// materialize
+const materialize =
+    'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'
+export {
+    live2d,
+    themeRepository,
+    animeImages,
+    js,
+    randomImage,
+    dummyimage,
+    materialize,
+}

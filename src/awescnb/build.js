@@ -1,7 +1,7 @@
+import './index.css'
 import env from '@/constants/env'
 import { shootCustom } from '@plugins/barrage'
 import { getDate, pageName } from '@tools'
-import './index.css'
 
 const noticeContent = []
 const grayDate = [
@@ -17,7 +17,7 @@ const constants = {
 
 // 哀悼日
 function gray() {
-    if(pageName() === 'post') return
+    if (pageName() === 'post') return
     for (const { date } of grayDate) {
         if (getDate() === date) {
             $('html').addClass('gray-filter')
