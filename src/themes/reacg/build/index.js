@@ -7,6 +7,7 @@ import scroll from './scroll'
 import catalog from './catalog'
 import themeColor from './themeColor'
 import indexList from './indexList'
+import notice from './notice'
 
 function build() {
     mobileMenu()
@@ -18,6 +19,7 @@ function build() {
     themeColor()
     footer()
     indexList()
+    notice()
 }
 
 export default build

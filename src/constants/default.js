@@ -9,6 +9,14 @@ const defaultOptions = {
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
+    notice: {
+        enable: true,
+        text: ['🖼双击导航条锁屏', '🙃快去自定义通知吧'],
+    },
+    author: {
+        isAuthor: false,
+        notices: ['🙌欢迎使用awescnb'],
+    },
     indexListImg: {
         enable: false,
         imgs: [],
