@@ -1,8 +1,7 @@
-import { pageName } from '@/assets/utils/tools'
+import { pageName, poll } from '@tools'
 import './index.css'
 
-function btns() {
-    if (pageName() !== 'post') return
+function build() {
     const $follow = $('#green_channel_follow').prop('outerHTML')
     const $like = $('#green_channel_digg').prop('outerHTML')
     const $wrap = `<div id='custom-post-btn'>${$follow}${$like}</div>`
@@ -18,6 +17,11 @@ function btns() {
     followText === '已关注'
         ? $('#custom-post-btn #green_channel_follow').text('已关')
         : $('#custom-post-btn #green_channel_follow').text('关注')
+}
+
+function btns() {
+    if (pageName() !== 'post') return
+    poll($('#green_channel_follow').length, build)
 }
 
 export default btns

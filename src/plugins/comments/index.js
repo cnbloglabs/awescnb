@@ -1,4 +1,4 @@
-import { pageName, poll } from '@/assets/utils/tools'
+import { pageName, poll } from '@tools'
 import env from '@constants/env'
 
 // 显示评论列表头像
