@@ -4,14 +4,18 @@ const defaultOptions = {
         color: '#FFB3CC',
         qrcode: '',
         title: '',
-        imgList: [],
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
+    indexListImg: {
+        enable: false,
+        imgs: [],
+    },
     postTopimage: {
         enable: true,
+        imgs: [],
     },
     emoji: {
         enable: true,
