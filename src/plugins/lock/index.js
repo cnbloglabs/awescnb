@@ -8,6 +8,11 @@ const { enable, background, strings } = window.opts.lock
 const { avatar } = window.opts.theme
 let typed
 
+const typedOpts = {
+    strings,
+    typeSpeed: 100,
+}
+
 function build() {
     let image
     image = env === 'dev' ? dummyimage : avatar
@@ -25,13 +30,6 @@ function build() {
     $('body').append(ele)
 }
 
-function typeEffects() {
-    typed = new Typed('.lock-screen-text span', {
-        strings,
-        typeSpeed: 100,
-    })
-}
-
 function setBackground() {
     let image
     if (env === 'dev') {
@@ -46,14 +44,14 @@ function open() {
     $('#header').dblclick(function() {
         $('body').addClass('overflow')
         $('.lock-screen').css('top', '0')
-        typed.start()
+        typed = new Typed('.lock-screen-text span', typedOpts)
     })
 }
 
 function close() {
     $(document).on('click', '.lock-screen-close', () => {
         $('.lock-screen').css('top', '-100vh')
-        typed.reset()
+        typed.destroy()
         setTimeout(() => {
             $('body').removeClass('overflow')
         }, 400)
@@ -63,7 +61,6 @@ function close() {
 function lock() {
     if (!enable) return
     build()
-    typeEffects()
     setBackground()
     open()
     close()
