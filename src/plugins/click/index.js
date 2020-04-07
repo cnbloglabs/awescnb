@@ -7,6 +7,9 @@ import { userAgent } from '@/assets/utils/tools'
 const options = window.opts.click
 
 $('body').append(`<canvas id="click-effects"></canvas>`)
+if (!options.enable) {
+    $('#click-effects').hide()
+}
 
 window.human = false
 var canvasEl = document.querySelector('#click-effects')
