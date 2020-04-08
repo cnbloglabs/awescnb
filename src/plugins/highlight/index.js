@@ -29,7 +29,7 @@ function build() {
                             --hl-hue-6-2: #c18401;
                             --hl-tag: #383A42;`
 
-    const github = `--hl-base: #fff;
+    const github = `--hl-base: ##f6f8fa;
                     --hl-mono-1: #333333;
                     --hl-mono-3: #d73a49;
                     --hl-hue-1: #0086b3;

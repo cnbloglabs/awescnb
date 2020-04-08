@@ -3,11 +3,11 @@
 // 其他配置我都帮你做好了
 
 module.exports = {
-    themeName: 'reacg',    
-    template: 'post',    
-    eslint: true,         
-    sourceMap: false,      
-    openAnalyzer: false,  
+    themeName: 'reacg',
+    template: 'post1',
+    eslint: true,
+    sourceMap: false,
+    openAnalyzer: false,
 }
 
  // themeName - 你创建的主题文件夹名称 (运行 npm start 会启动它) ‘acg’ | 'reacg' | 'gshang'

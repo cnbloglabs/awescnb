@@ -11,11 +11,7 @@ const defaultOptions = {
     },
     notice: {
         enable: true,
-        text: ['🖼双击导航条锁屏', '🙃快去自定义通知吧'],
-    },
-    author: {
-        isAuthor: false,
-        notices: ['🙌欢迎使用awescnb'],
+        text: ['🙂欢迎访问我的博客'],
     },
     indexListImg: {
         enable: false,
@@ -33,7 +29,7 @@ const defaultOptions = {
         showSearch: true,
     },
     highLight: {
-        type: 'atomOneDark',
+        type: 'github',
     },
     imagebox: {
         enable: true,
@@ -61,7 +57,7 @@ const defaultOptions = {
     github: {
         enable: true,
         color: '#ffb3cc',
-        url: 'https://gitee.com/guangzan/awescnb',
+        url: 'https://github.com/guangzan/awescnb',
     },
     gitee: {
         enable: true,
@@ -149,6 +145,11 @@ const defaultOptions = {
             link: 'https://gitee.com/guangzan/awescnb',
         },
     ],
+    // admin
+    author: {
+        isAuthor: false,
+        notices: [],
+    },
 }
 
 export default defaultOptions

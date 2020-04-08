@@ -6,18 +6,18 @@
 
 ## 简介
 
-项目完全使用博客园自带的 jquery 和原生 js 构建, 没有引入第三方框架, 使用 webpack4 打包, 可本地调试. 同时集成大量博客插件(仅引入即可), 使构建博客园皮肤更简单.你可以用它做以下三件事:
+项目使用 webpack4 构建. 集成大量博客插件. 你可以用它做以下三件事:
 
 1. 创建: 快速创建一个的博客园皮肤,最后打包生成的 js 文件,供你自己使用.
 
 2. 分享: 快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到你的皮肤了.
 
-3. 安装: 在你的博客园安装这个项目中现成的皮肤.安装之后,可以快速切换其他皮肤.[点击查看G切换效果](https://guangzan.gitee.io/imagehost/blog/themechange.gif).
+3. 安装: 在你的博客园安装这个项目中已经集成的皮肤.安装之后,可以快速切换其他皮肤.[点击查看切换效果](https://guangzan.gitee.io/imagehost/blog/themechange.gif).
 
 ## 文档
 
 -   [给我的博客园安装皮肤](https://guangzan.gitee.io/awescnb-docs/guide/use/install.html)
--   [如何配置已经安装的皮肤](https://guangzan.gitee.io/awescnb-docs/guide/use/default.html)
+-   [我已经安装完毕，去配置一下](https://guangzan.gitee.io/awescnb-docs/guide/use/default.html)
 -   [我想快速创建一个新皮肤](https://guangzan.gitee.io/awescnb-docs/guide/dev/dev.html)
 -   [更新日志](https://guangzan.gitee.io/awescnb-docs/guide/dev/log.html)
 -   [正在做什么](https://guangzan.gitee.io/awescnb-docs/guide/dev/todo.html)
@@ -38,10 +38,10 @@
 
 ## 成员
 
+- [DIVMonster](https://www.cnblogs.com/guangzan/)
 - [GShang](https://www.cnblogs.com/gshang/)
 - [青墟](https://www.cnblogs.com/guoxinyu/)
 
-> 排名不分先后，会陆续添加。
 
 ## 许可
 

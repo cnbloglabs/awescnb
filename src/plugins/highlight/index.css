@@ -1,12 +1,20 @@
+/* 滚动条行为 */
+.cnblogs_code pre::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.cnblogs_code:hover pre::-webkit-scrollbar-thumb {
+    display: block;
+}
 /* 富文本编辑器 start*/
 .cnblogs_code {
     border: none;
     padding: 0;
-
+    border-radius: 4px;
 }
 
 .cnblogs_code:hover {
-    box-shadow: 1px 1px 10px red;
+    box-shadow: 1px 1px 5px var(--themeColor, red);
 }
 
 .cnblogs_code_toolbar {
@@ -29,6 +37,9 @@
     white-space: pre;
 }
 
+
+
+
 /* 注释 */
 .cnblogs_code pre span[style="color: #008000;"] {
     color: var(--hl-mono-3) !important;
@@ -44,7 +55,6 @@
 .cnblogs_code pre span[style="color: #8b0000;"] {
     color: var(--hl-hue-6) !important;
 }
-
 
 /* 富文本编辑器 end */
 
