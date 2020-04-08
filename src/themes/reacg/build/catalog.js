@@ -11,16 +11,18 @@ function build() {
 
 // 如果使用 markdown
 function markdown() {
-    const $ulContainer = $('<ul>')
+    const $ulContainer = $('<ul></ul>')
     const titleReg = /^h[1-3]$/
 
     $('#cnblogs_post_body')
         .children()
         .each(function() {
             if (titleReg.test(this.tagName.toLowerCase())) {
+                let id
                 let text
 
                 if (this.id !== '') {
+                    id = this.id
                     text =
                         this.childNodes.length === 2
                             ? this.childNodes[1].nodeValue
@@ -33,12 +35,13 @@ function markdown() {
                         const value = this.childNodes[0].nodeValue
                         text = value ? value : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
                     }
-                    $(this).attr('id', text.trim())
+                    id = text.trim()
+                    $(this).attr('id', id)
                 }
 
                 const title = `
                             <li class='${this.nodeName.toLowerCase()}-list'>
-                                <a href='#${text.trim()}'>${text}</a>
+                                <a href='#${id}'>${text}</a>
                             </li>
                         `
 
