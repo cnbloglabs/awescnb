@@ -8,7 +8,8 @@
 }
 
 /* 富文本编辑器 start*/
-
+.cnblogs_code_collapse,
+.cnblogs_code_toolbar,
 .code_img_opened,
 .code_img_closed {
     display: none;
@@ -26,10 +27,6 @@
 
 .cnblogs_code:hover {
     box-shadow: 1px 1px 5px var(--themeColor, red);
-}
-
-.cnblogs_code_toolbar {
-    display: none;
 }
 
 .cnblogs_code pre {
