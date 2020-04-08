@@ -29,7 +29,7 @@ const defaultOptions = {
         showSearch: true,
     },
     highLight: {
-        type: 'github',
+        type: 'atomOneDark',
     },
     imagebox: {
         enable: true,

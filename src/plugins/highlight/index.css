@@ -6,6 +6,7 @@
 .cnblogs_code:hover pre::-webkit-scrollbar-thumb {
     display: block;
 }
+
 /* 富文本编辑器 start*/
 .cnblogs_code {
     border: none;
@@ -37,8 +38,9 @@
     white-space: pre;
 }
 
-
-
+.cnblogs_code pre:before {
+    height: 35px;
+}
 
 /* 注释 */
 .cnblogs_code pre span[style="color: #008000;"] {
@@ -49,6 +51,11 @@
 /* new if return ... */
 .cnblogs_code pre span[style="color: #0000ff;"] {
     color: var(--hl-hue-3) !important;
+}
+
+/* 字符串 */
+.cnblogs_code pre span[style="color: #800000;"] {
+    color: var(--hl-hue-4) !important;
 }
 
 

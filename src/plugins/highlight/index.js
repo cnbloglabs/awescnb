@@ -17,7 +17,8 @@ function build() {
                             --hl-hue-6-2: #e6c07b;
                             --hl-tag: #abb2bf;`
 
-    const atomOneLight = `--hl-base: #fafafa;
+    // atomOneLight --hl-base: #fafafa;
+    const atomOneLight = `--hl-base: #f6f8fa;
                             --hl-mono-1: #383a42;
                             --hl-mono-3: #a0a1a7;
                             --hl-hue-1: #0184bb;
