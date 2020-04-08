@@ -79,7 +79,7 @@ const defaultOptions = {
         height: '5px',
     },
     postSignature: {
-        enable: true,
+        enable: false,
         content: [],
         licenseLink: '',
     },

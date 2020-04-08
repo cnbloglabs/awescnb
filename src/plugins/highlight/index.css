@@ -72,6 +72,45 @@
 
 /* 富文本编辑器 end */
 
+pre:hover {
+    box-shadow: 1px 1px 10px red;
+}
+
+pre::before {
+    border-radius: 4px;
+    content: ' ';
+    display: block;
+    height: 24px;
+    background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png) no-repeat;
+    background-size: 65px 23px;
+    background-position-x: 10px;
+}
+
+#cnblogs_post_body pre {
+    position: relative;
+    padding-top: 10px;
+    background: var(--hl-base);
+    border-radius: 4px;
+}
+
+#cnblogs_post_body code {
+    font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
+        monospace !important;
+    color: #c7254e !important;
+    font-size: 0.87em !important;
+    padding: 0 !important;
+    margin: 0;
+    word-break: break-word !important;
+    border: none !important;
+    background: none !important;
+}
+
+#cnblogs_post_body li code {
+    font-size: 12px !important;
+    font-weight: 700;
+}
+
+
 #cnblogs_post_body .hljs {
     display: block !important;
     padding: 0.5em !important;
@@ -151,42 +190,4 @@
 
 #cnblogs_post_body .hljs-link {
     text-decoration: underline;
-}
-
-#cnblogs_post_body pre {
-    position: relative;
-    padding-top: 10px;
-    background: var(--hl-base);
-    border-radius: 4px;
-}
-
-#cnblogs_post_body code {
-    font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
-        monospace !important;
-    color: #c7254e !important;
-    font-size: 0.87em !important;
-    padding: 0 !important;
-    margin: 0;
-    word-break: break-word !important;
-    border: none !important;
-    background: none !important;
-}
-
-#cnblogs_post_body li code {
-    font-size: 12px !important;
-    font-weight: 700;
-}
-
-pre:hover {
-    box-shadow: 1px 1px 10px red;
-}
-
-pre::before {
-    border-radius: 4px;
-    content: ' ';
-    display: block;
-    height: 24px;
-    background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png) no-repeat;
-    background-size: 65px 23px;
-    background-position-x: 10px;
 }
