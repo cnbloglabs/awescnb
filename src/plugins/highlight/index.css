@@ -8,6 +8,16 @@
 }
 
 /* 富文本编辑器 start*/
+
+.code_img_opened,
+.code_img_closed {
+    display: none;
+}
+
+.cnblogs_code_hide {
+    display: block !important;
+}
+
 .cnblogs_code {
     border: none;
     padding: 0;
