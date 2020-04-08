@@ -40,13 +40,14 @@
 }
 
 .lock-screen-text {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .lock-screen-text span {
     font-size: 22px;
-    color: #fff;
     font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 5px #999;
 }
 
 .overflow {
