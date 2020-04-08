@@ -10,7 +10,7 @@
 }
 
 #post-signature a {
-    color: #000;
+    color: var(--text-0);
 }
 
 #post-signature a:hover {

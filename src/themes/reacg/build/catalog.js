@@ -21,14 +21,12 @@ function markdown() {
                 let text
 
                 if (this.id !== '') {
-                    console.log('markdown')
                     text =
-                        this.childNodes.length === 3
+                        this.childNodes.length === 2
                             ? this.childNodes[1].nodeValue
                             : this.childNodes[0].nodeValue
                 } else {
-                    console.log('text editor')
-                    if (this.childNodes.length === 3) {
+                    if (this.childNodes.length === 2) {
                         const value = this.childNodes[1].nodeValue
                         text = value ? value : $(this.childNodes[1]).text()
                     } else {

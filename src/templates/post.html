@@ -137,7 +137,6 @@
                                             <li><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;">如果【资源】没有设置数据规则，那么视为该资源允许被任何主体查看。</span></span></span></li>
                                             <li><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;"><span style="font-size: medium;">数据规则中授权的对象限定为角色、用户。即不能设定为某个部门所有，如果想实现类似的功能，通过角色间接实现。例如：资源属于角色“开发组成员”，“开发组组长”。</span></span></span></span></li>
                                         </ul>
-                                        <h2>核心实现--查询对象模式 </h2>
                                         <p><span style="font-size: medium;">权限控制总离不开一些条件的限制，如果没有完善的查询机制，那么在做权限条件过滤的时候你会觉得很别扭。马丁在<strong>《企业应用架构模式》第13章对象-关系元数据映射模式中提出查询对象模式(Query Object Pattern)</strong>。该模式核心结构如下：</span></p>
                                         <p><a href="https://img2018.cnblogs.com/blog/42655/201911/42655-20191126225537377-1591536417.png"><a class="lightbox-post" href="https://img2018.cnblogs.com/blog/42655/201911/42655-20191126225537871-692713107.png"><img style="display: inline; background-image: none;" title="下载" src="https://img2018.cnblogs.com/blog/42655/201911/42655-20191126225537871-692713107.png" alt="下载" width="532" height="286" border="0"></a></a></p>
                                         <p><span style="font-size: medium;">该结构为【数据规则】的建立提供了理论基础。在设计数据权限的时候，可以照搬该思想。上面例子中的规则，数据规则展开如下：</span></p>
