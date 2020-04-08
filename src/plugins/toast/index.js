@@ -7,7 +7,7 @@ function build(title, duration) {
     window.Materialize.toast(title, duration)
 }
 
-function toast(title = '默认提示文字', duration = 5000) {
+function toast(title = '默认提示文字', duration = 3000) {
     cacheScript(materialize, () => {
         build(title, duration)
     })

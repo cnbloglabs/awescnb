@@ -8,25 +8,25 @@
 
 .toast {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 3px;
     top: 35px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    border-radius: 3px;
     margin-top: 10px;
     padding: 10px 15px;
     width: auto;
     height: auto;
     max-width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
-    line-height: 14px;
-    word-break: keep-all;
-    font-size: 14px;
-    font-weight: 300;
     color: var(--themeColor, #fff);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    word-break: keep-all;
     text-shadow: 1px 1px 3px #eee;
     box-shadow: 1px 1px 10px var(--themeColor, #999);
-    clear: both;
+    /* clear: both; */
 }
 
 .toast .btn,

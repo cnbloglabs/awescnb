@@ -7,7 +7,7 @@ async function sleep(time) {
 async function shoot(textList) {
     for (let i = 0; i < textList.length; i++) {
         toast(textList[i])
-        if (i < textList.length - 1) await sleep(3000)
+        if (i < textList.length - 1) await sleep(3800)
     }
 }
 
