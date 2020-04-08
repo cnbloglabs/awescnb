@@ -620,6 +620,14 @@ mark {
 /* markdown end */
 
 /* 随笔目录 start */
+#catalog ul::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+#catalog:hover ul::-webkit-scrollbar-thumb {
+    display: block;
+}
+
 #catalog {
     min-height: 1.333rem;
     max-height: 11rem;
@@ -1185,7 +1193,7 @@ footer #links {
 }
 
 #copyright span:first-child {
-     /* font-weight: 700; */
+    /* font-weight: 700; */
 }
 
 #copyright a {
