@@ -37,9 +37,11 @@
 
 ## 成员
 
--   [DIVMonster](https://www.cnblogs.com/guangzan/)
--   [GShang](https://www.cnblogs.com/gshang/)
 -   [青墟](https://www.cnblogs.com/guoxinyu/)
+-   [阿东]()
+-   [GShang](https://www.cnblogs.com/gshang/)
+-   [DIVMonster](https://www.cnblogs.com/guangzan/)
+
 
 ## 许可
 
