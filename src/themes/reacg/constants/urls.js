@@ -1,11 +1,3 @@
-const repositories = {
-    package: 'https://guangzan.gitee.io/awescnb',
-    gitee: 'https://gitee.com/guangzan/awescnb',
-    github: 'https://github.com/github923665892',
-}
+const iconfont = '//at.alicdn.com/t/font_1595820_xlzm539tyvq.js'
 
-const CDN = {
-    icon: '//at.alicdn.com/t/font_1595820_pxrxbusqsk.js',
-}
-
-export { repositories, CDN }
+export { iconfont }

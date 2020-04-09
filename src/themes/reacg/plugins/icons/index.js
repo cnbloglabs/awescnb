@@ -1,8 +1,8 @@
 import './index.css'
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty, userAgent } from '@tools'
-import { loadFiles, iconInSvg } from '../../utils/tools'
-import { CDN } from '../../constants/urls'
+import { pageName, randomProperty, userAgent, cacheScript } from '@tools'
+import { iconInSvg } from '../../utils/tools'
+import { iconfont } from '../../constants/urls'
 import icons from '../../constants/icons'
 
 // 设置sidebar icon
@@ -236,15 +236,7 @@ function build() {
 
 // 加载i confont js
 function setIcons() {
-    loadFiles(
-        [
-            {
-                name: CDN.icon,
-                type: 'jsCDN',
-            },
-        ],
-        build,
-    )
+    cacheScript(iconfont, build)
 }
 
 // -------- icon end ----
