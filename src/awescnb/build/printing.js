@@ -22,7 +22,7 @@ const log = [
 ]
 
 function printing() {
-    if (env !== 'dev') return
+    if (env === 'dev') return
     for (const { str, color } of log) {
         prettyLog(str, color)
     }
