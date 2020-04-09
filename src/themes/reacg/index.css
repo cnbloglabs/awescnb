@@ -138,7 +138,7 @@
     cursor: pointer;
 }
 
-/* #mode-change {
+/* #mode-change .icon {
     animation: changeModeRotate 20s linear infinite;
 } */
 
@@ -1220,7 +1220,7 @@ footer #links {
 }
 
 .mode-change,
-.mode-change #navigator,
+.mode-change #header,
 .mode-change #mainContent,
 .mode-change #cnblogs_post_body blockquote,
 .mode-change #post-signature,
