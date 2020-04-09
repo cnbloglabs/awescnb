@@ -1,7 +1,7 @@
 // 音乐播放器
 // 引入即可
 
-import { pageName, userAgent } from '@/assets/utils/tools'
+import { pageName, userAgent, cacheScript } from '@/assets/utils/tools'
 import { js } from '@constants/urls'
 import 'aplayer/dist/aplayer.min.css'
 import './index.css'
@@ -33,8 +33,7 @@ function setMusicPlayer() {
     if (!enable) return
     if (page !== pageName() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
-
-    $.getScript(`${js}/APlayer.min.js`, build)
+    cacheScript(`${js}/APlayer.min.js`, build)
 }
 
 export default setMusicPlayer

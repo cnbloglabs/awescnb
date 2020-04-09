@@ -1,10 +1,8 @@
 // 设置看板娘
 // 引入即可
 
-import { pageName, userAgent } from '@/assets/utils/tools'
-import { getRandomProperty } from '@/assets/utils/tools'
-import { live2d } from '@/constants/urls'
-import { js } from '@constants/urls'
+import { pageName, userAgent, cacheScript, getRandomProperty } from '@tools'
+import { live2d, js } from '@constants/urls'
 import live2dModels from '@/constants/live2dModels'
 import env from '@/constants/env'
 
@@ -26,7 +24,7 @@ const setLive2d = () => {
     const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:3" width="${options.width}"height="${options.height}" > </canvas>`
     $('body').append(ele)
     const url = `${live2d.url}@${live2d.version}/${model}`
-    $.getScript(`${js}/live2d.min.js`, () => {
+    cacheScript(`${js}/live2d.min.js`, () => {
         loadlive2d('model', url)
     })
 }
