@@ -5,7 +5,7 @@ import { themeRepository, animeImages } from '@/constants/urls'
  * @param {str} String
  * @param {color} String
  */
-function prettyLog(str, color = 'green') {
+function prettyLog(str, color = '#ffb3cc') {
     console.log(`%c  ${str}`, `color: ${color}; font-weight: bold;`)
 }
 

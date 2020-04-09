@@ -23,7 +23,7 @@ class AwesCnb {
         if (env === 'dev') {
             window.opts = defaultOptions
         }
-        require('./build')()
+        require('./build/index')()
     }
 }
 
