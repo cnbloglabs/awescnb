@@ -1,23 +1,27 @@
-import { pageName, hasPostTitle, userAgent } from '@tools'
+import {
+    pageName,
+    userAgent,
+    hasPostTitle,
+    getClientRect,
+    throttle,
+} from '@tools'
 
 const { enable, position } = window.opts.catalog
 
-let $catalogContainer
-
+// 构建目录
 function build() {
-    $catalogContainer = $('<div id="catalog"></div>')
-    $catalogContainer.append($(`<div class='catListTitle'><h3>目录</h3></div>`))
-}
-
-// 如果使用 markdown
-function markdown() {
+    let $catalogContainer = $(
+        `<div id="catalog">
+            <div class='catListTitle'><h3>目录</h3></div>
+        </div>`,
+    )
     const $ulContainer = $('<ul></ul>')
-    const titleReg = /^h[1-3]$/
+    const titleRegExp = /^h[1-3]$/
 
     $('#cnblogs_post_body')
         .children()
         .each(function() {
-            if (titleReg.test(this.tagName.toLowerCase())) {
+            if (titleRegExp.test(this.tagName.toLowerCase())) {
                 let id
                 let text
 
@@ -53,11 +57,11 @@ function markdown() {
     setCatalogPosition()
 }
 
-// 目录固定方式
+// 目录固定位置
 function setCatalogPosition() {
     const actions = {
         sidebar: () => {
-            this.setCatalogToggle()
+            setCatalogToggle()
         },
         left: () => {
             $('#catalog').addClass('catalog-sticky-left')
@@ -70,13 +74,78 @@ function setCatalogPosition() {
     actions[position]()
 }
 
+// 设置目录活跃标题样式
+function setActiveCatalogTitle() {
+    $(window).scroll(
+        throttle(
+            function() {
+                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
+                    const titleId = $($('#catalog ul li')[i])
+                        .find('a')
+                        .attr('href')
+                        .replace(/[#]/g, '')
+                    const postTitle = document.querySelector(
+                        `#cnblogs_post_body [id='${titleId}']`,
+                    )
+                    if (getClientRect(postTitle).top <= 10) {
+                        if (
+                            $($('#catalog ul li')[i]).hasClass('catalog-active')
+                        )
+                            return
+                        $($('#catalog ul li')[i]).addClass('catalog-active')
+                        $($('#catalog ul li')[i])
+                            .siblings()
+                            .removeClass('catalog-active')
+                        return
+                    }
+                }
+            },
+            50,
+            1000 / 60,
+        ),
+    )
+}
+
+// 目录固定在侧栏的滚动事件
+// 当目录固定在侧边栏
+// 到原来的sidebar滚动到不可见位置才显示catalog
+function setCatalogToggle() {
+    if (position !== 'sidebar') return
+    var p = 0,
+        t = 0
+    $(window).scroll(
+        throttle(
+            function() {
+                const bottom = getClientRect(
+                    document.querySelector('#sideBarMain'),
+                ).bottom
+                if (bottom <= 0) {
+                    $('#catalog').addClass('catalog-sticky')
+                    p = $(this).scrollTop()
+                    t <= p
+                        ? $('#catalog').addClass('catalog-scroll-up')
+                        : $('#catalog').removeClass('catalog-scroll-up')
+                    setTimeout(function() {
+                        t = p
+                    }, 0)
+                } else {
+                    $('#catalog').removeClass('catalog-sticky')
+                }
+            },
+            50,
+            1000 / 60,
+        ),
+    )
+}
+
 function catalog() {
     if (!enable) return
     if (!hasPostTitle()) return
     if (pageName() !== 'post') return
     if (userAgent() !== 'pc') return
     build()
-    markdown()
+    setActiveCatalogTitle()
+    setCatalogToggle()
 }
 
 export default catalog
