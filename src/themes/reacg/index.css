@@ -39,6 +39,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
+    display: block;
     border-radius: 10px;
     background-color: var(--themeColor);
     background-image: linear-gradient(45deg,

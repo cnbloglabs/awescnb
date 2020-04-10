@@ -1,5 +1,5 @@
-import setBodyBackground from '@plugins/background'
 import { shootInitial } from '@plugins/barrage'
+import setBodyBackground from '@plugins/background'
 import setIcons from './icons/index.js'
 import imageBox from '@plugins/imageBox'
 import setLive2d from '@plugins/live2d'

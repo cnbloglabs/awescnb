@@ -1,5 +1,7 @@
-import { pageName, poll } from '@tools'
+// 添加关注和推荐按钮
+
 import './index.css'
+import { pageName, poll } from '@tools'
 
 function build() {
     const $follow = $('#green_channel_follow').prop('outerHTML')

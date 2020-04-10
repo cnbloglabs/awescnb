@@ -1,6 +1,15 @@
 import { animeImages } from '@/constants/urls'
 
 /**
+ * @description 获编辑器类型是否为md
+ */
+function edtType() {
+    const isMd = $('#cnblogs_post_body').hasClass('cnblogs-markdown')
+    let type = isMd ? 'md' : 'other'
+    return type
+}
+
+/**
  * @description prettier console.log
  * @param {str} String
  * @param {color} String
@@ -321,4 +330,5 @@ export {
     getDate,
     prettyLog,
     cacheScript,
+    edtType,
 }

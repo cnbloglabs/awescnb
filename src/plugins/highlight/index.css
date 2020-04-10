@@ -1,8 +1,10 @@
 /* 滚动条行为 */
+.cnblogs-markdown code::-webkit-scrollbar-thumb,
 .cnblogs_code pre::-webkit-scrollbar-thumb {
     display: none;
 }
 
+.cnblogs-markdown:hover code::-webkit-scrollbar-thumb,
 .cnblogs_code:hover pre::-webkit-scrollbar-thumb {
     display: block;
 }
@@ -76,6 +78,8 @@ pre:hover {
     box-shadow: 1px 1px 10px red;
 }
 
+
+/* markdown start */
 pre::before {
     border-radius: 4px;
     content: ' ';
@@ -191,3 +195,5 @@ pre::before {
 #cnblogs_post_body .hljs-link {
     text-decoration: underline;
 }
+
+/* markdown end */
