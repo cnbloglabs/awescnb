@@ -1,6 +1,6 @@
 import icons from '../constants/icons'
 import { iconInSvg } from '../utils/tools'
-import { shootCustom } from '@/plugins/barrage'
+// import { shootCustom } from '@/plugins/barrage'
 
 // mode 初始化和点击切换
 function init() {
@@ -13,7 +13,7 @@ function init() {
     $('#header').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {
-        shootCustom(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
+        // shootCustom(['夜深了，点击左上角小太阳试试暗色模式吧 🐱‍👤'])
     }
 
     localStorage.modeType === 'dark'
@@ -29,7 +29,7 @@ function click() {
             changeModeToggle('light')
         } else {
             changeModeToggle('dark')
-            shootCustom(['已成功切换为暗色模式 ✨'])
+            // shootCustom(['已成功切换为暗色模式 ✨'])
         }
     })
 }

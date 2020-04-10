@@ -131,7 +131,7 @@ function load(themeName) {
  * @param {url} String
  * @param {callback} Function
  */
-function cacheScript(url, callback) {
+function cacheScript(url, callback = function() {}) {
     $.ajax({
         type: 'GET',
         dataType: 'script',

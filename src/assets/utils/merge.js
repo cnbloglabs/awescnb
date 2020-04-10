@@ -1,6 +1,6 @@
-import { load } from '@/assets/utils/tools'
+import { chacheScript } from '@/assets/utils/tools'
 import defaultOptions from '@/constants/default'
-
+import { themeRepository } from '@/constants/urls'
 // 创建 awesCnb
 // 合并配置
 function merge() {
@@ -19,7 +19,9 @@ function loadTheme() {
     if (theme === 'light') {
         theme = 'reacg'
     }
-    load(theme)
+    // load(theme)
+    const url = `${themeRepository}/${theme}.js`
+    chacheScript(url)
 }
 
 export default merge
