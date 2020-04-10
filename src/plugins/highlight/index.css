@@ -4,7 +4,7 @@
     display: none;
 }
 
-.cnblogs-markdown:hover code::-webkit-scrollbar-thumb,
+.cnblogs-markdown pre:hover code::-webkit-scrollbar-thumb,
 .cnblogs_code:hover pre::-webkit-scrollbar-thumb {
     display: block;
 }
