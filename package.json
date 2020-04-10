@@ -50,6 +50,7 @@
         "aplayer": "^1.10.1",
         "baguettebox.js": "^1.11.0",
         "bootstrap": "^4.4.1",
+        "darkmode-js": "^1.5.5",
         "lib-flexible": "^0.3.2",
         "loaders.css": "^0.1.2",
         "lodash": "^4.17.15",

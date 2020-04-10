@@ -1,4 +1,4 @@
-import { themeRepository, animeImages } from '@/constants/urls'
+import { animeImages } from '@/constants/urls'
 
 /**
  * @description prettier console.log
@@ -115,15 +115,6 @@ function poll(condition, func) {
             count++
         }, 500)
     }
-}
-
-/**
- * @description 加载主题js
- * @param {String} themeName 主题名称
- */
-function load(themeName) {
-    const url = `${themeRepository}/${themeName}.js`
-    $.getScript(url)
 }
 
 /**
@@ -319,7 +310,6 @@ export {
     randomNum,
     pageName,
     userAgent,
-    load,
     debounce,
     throttle,
     getClientRect,
