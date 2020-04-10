@@ -1,4 +1,4 @@
-import { chacheScript } from '@/assets/utils/tools'
+import { cacheScript } from '@tools'
 import defaultOptions from '@/constants/default'
 import { themeRepository } from '@/constants/urls'
 // 创建 awesCnb
@@ -21,7 +21,7 @@ function loadTheme() {
     }
     // load(theme)
     const url = `${themeRepository}/${theme}.js`
-    chacheScript(url)
+    cacheScript(url)
 }
 
 export default merge
