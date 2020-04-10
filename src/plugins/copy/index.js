@@ -32,8 +32,8 @@ function click(type) {
         sel.removeAllRanges()
 
         type === 'md'
-            ? range.selectNode($(this).siblings('code.hljs')[0])
-            : range.selectNode($(this).siblings()[0])
+            ? range.selectNode($(this).siblings('code')[0])
+            : range.selectNode($(this).siblings('pre')[0])
 
         sel.addRange(range)
 
