@@ -5,19 +5,23 @@ import env from '@/constants/env'
 const log = [
     {
         str: `Awescnb: awesome cnblog!`,
-        color: '#00b894',
+        color: '#eb4d4b',
     },
     {
-        str: `永久开源、长期维护！`,
-        color: '#2d3436',
-    },
-    {
-        str: '安装皮肤: https://gitee.com/guangzan/awescnb',
-        color: '#0984e3',
-    },
-    {
-        str: 'qq群: 541802647',
+        str: `为博客园发烧友而生！`,
         color: '#f0932b',
+    },
+    {
+        str: `使用 awescnb 快速构建、安装、分享博客园皮肤`,
+        color: '#f9ca24',
+    },
+    {
+        str: 'QQ群: 541802647',
+        color: '#6ab04c',
+    },
+    {
+        str: '码云: https://gitee.com/guangzan/awescnb',
+        color: '#4834d4',
     },
 ]
 
