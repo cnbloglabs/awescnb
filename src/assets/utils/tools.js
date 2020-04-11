@@ -1,14 +1,6 @@
 import { animeImages } from '@/constants/urls'
 
 /**
- * @description sleep
- * @param {time} Number await time
- */
-async function sleep(time) {
-    return new Promise(res => setTimeout(res, time))
-}
-
-/**
  * @description 获编辑器类型是否为md
  */
 function edtType() {
@@ -81,6 +73,14 @@ function randomArrayElements(arr, count = 1) {
     return shuffled.slice(min)
 }
 
+/**
+ * @description sleep
+ * @param {time} Number await time
+ */
+async function sleep(time) {
+    return new Promise(res => setTimeout(res, time))
+}
+
 // 获取一个随机image url
 // 使用内置的 imagehost url
 // 无需参数
@@ -123,14 +123,14 @@ function poll(condition, func) {
         let count = 1
         let intervalId = setInterval(() => {
             if (condition) {
-                clearInterval(intervalId)
                 func()
+                clearInterval(intervalId)
             }
-            if (count === 15) {
+            if (count === 10) {
                 clearInterval(intervalId)
             }
             count++
-        }, 500)
+        }, 800)
     }
 }
 
