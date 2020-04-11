@@ -1,6 +1,14 @@
 import { animeImages } from '@/constants/urls'
 
 /**
+ * @description sleep
+ * @param {time} Number await time
+ */
+async function sleep(time) {
+    return new Promise(res => setTimeout(res, time))
+}
+
+/**
  * @description 获编辑器类型是否为md
  */
 function edtType() {
@@ -331,4 +339,5 @@ export {
     prettyLog,
     cacheScript,
     edtType,
+    sleep,
 }

@@ -1,4 +1,4 @@
-import { pageName, poll } from '@tools'
+import { pageName, sleep } from '@tools'
 import env from '@constants/env'
 
 // 显示评论列表头像
@@ -24,9 +24,19 @@ function showAvatar() {
 }
 
 // 轮询显示头像
-function pollToShow() {
+// replace poll by sleep
+async function pollToShow() {
     if (pageName() !== 'post') return
-    poll($('.blog_comment_body').length, showAvatar)
+    // poll($('.blog_comment_body').length, showAvatar)
+    for (let i = 0; i < 15; i++) {
+        if ($('.blog_comment_body').length) {
+            showAvatar()
+            break
+        } else {
+            showAvatar()
+            await sleep(1000)
+        }
+    }
 }
 
 // 调整支持反对按钮位置

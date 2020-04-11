@@ -1,8 +1,5 @@
 import toast from '@plugins/toast'
-
-async function sleep(time) {
-    return new Promise(res => setTimeout(res, time))
-}
+import { sleep } from '@tools'
 
 async function shoot(textList) {
     for (let i = 0; i < textList.length; i++) {

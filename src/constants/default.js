@@ -11,7 +11,7 @@ const defaultOptions = {
     },
     notice: {
         enable: true,
-        text: ['🙂欢迎访问我的博客'],
+        text: ['🙂欢迎访问我的博客','agarae','agrerarg'],
     },
     indexListImg: {
         enable: false,
