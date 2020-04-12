@@ -45,7 +45,7 @@ function setBackground() {
 
 // 打开
 function open() {
-    $('#header').dblclick(function() {
+    $('#header').dblclick(function () {
         $('body').addClass('overflow')
         $('.lock-screen').css('top', '0')
         typed = new Typed('.lock-screen-text span', typedOpts)
