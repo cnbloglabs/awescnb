@@ -13,7 +13,7 @@ function init() {
     $('#header').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {
-        toast('夜深了，点击左上角小太阳试试暗色模式吧 🌓')
+        toast('🌓 夜深了，点击左上角小太阳试试暗色模式吧')
     }
 
     localStorage.modeType === 'dark'
