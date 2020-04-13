@@ -18,6 +18,7 @@ import emoji from '@plugins/emoji'
 import lock from '@plugins/lock'
 import postMessage from '@plugins/postMessage'
 import back2top from '@plugins/back2top'
+import qrcode from '@plugins/qrcode'
 
 function plugins() {
     setIcons()
@@ -40,6 +41,7 @@ function plugins() {
     lock()
     postMessage()
     back2top()
+    qrcode()
 }
 
 export default plugins

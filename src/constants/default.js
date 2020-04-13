@@ -2,16 +2,20 @@ const defaultOptions = {
     theme: {
         name: 'reacg',
         color: '#FFB3CC',
-        qrcode: '',
         title: '',
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         avatar: '//pic.cnblogs.com/avatar/1501373/20200119190802.png',
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
+    qrcode: {
+        enable: false,
+        img: '',
+        desc: '',
+    },
     notice: {
-        enable: true,
-        text: ['欢迎访问我的博客🙂'],
+        enable: false,
+        text: [],
     },
     indexListImg: {
         enable: false,
