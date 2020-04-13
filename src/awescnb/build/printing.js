@@ -16,7 +16,7 @@ const log = [
         color: '#f9ca24',
     },
     {
-        str: 'QQ群: 541802647',
+        str: 'QQ群: 541802647(活跃)',
         color: '#6ab04c',
     },
     {
