@@ -11,7 +11,8 @@
         "hljs": "readonly",
         "loadlive2d": "readonly",
         "EmojiButton": true,
-        "APlayer": true
+        "APlayer": true,
+        "roughViz": true
     },
     "extends": "eslint:recommended",
     "rules": {

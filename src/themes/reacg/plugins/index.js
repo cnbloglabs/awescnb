@@ -11,6 +11,7 @@ import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
 import comments from '@plugins/comments'
 import signature from '@plugins/signature'
+import postSignature from '@plugins/postSignature'
 import highlight from '@plugins/highlight'
 import btns from '@plugins/btns'
 import postTopimage from '@plugins/postTopimage'
@@ -19,6 +20,7 @@ import lock from '@plugins/lock'
 import postMessage from '@plugins/postMessage'
 import back2top from '@plugins/back2top'
 import qrcode from '@plugins/qrcode'
+import charts from '@plugins/charts'
 
 function plugins() {
     setIcons()
@@ -33,6 +35,7 @@ function plugins() {
     titleFavicon()
     comments()
     signature()
+    postSignature()
     highlight()
     copy()
     btns()
@@ -42,6 +45,7 @@ function plugins() {
     postMessage()
     back2top()
     qrcode()
+    charts()
 }
 
 export default plugins

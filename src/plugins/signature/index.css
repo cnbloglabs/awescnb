@@ -1,42 +1,7 @@
-/* 随笔签名 start */
-#post-signature {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0;
-    padding: 12px 24px 12px 30px;
-    background-color: var(--background-e, #f6f8fa);
-    border-left: 5px solid var(--themeColor, #00a1d6);
-}
-
-#post-signature a {
-    color: var(--text-0);
-}
-
-#post-signature a:hover {
-    color: #00a1d6 !important;
-    transition: all 0.25s;
-}
-
-#post-signature p {
-    margin: 0;
+.custom-signature {
+    padding: 0 13.884px 9.72px;
     font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-indent: 1em;
 }
-
-#post-signature::before {
-    content: '!';
-    background-color: var(--themeColor);
-    position: absolute;
-    top: 20px;
-    left: -12px;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 20px;
-    font-weight: 800;
-    font-size: 14px;
-}
-
-/* 随笔签名 end */

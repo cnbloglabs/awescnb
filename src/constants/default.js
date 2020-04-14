@@ -1,4 +1,5 @@
 const defaultOptions = {
+    // 基本配置
     theme: {
         name: 'reacg',
         color: '#FFB3CC',
@@ -8,27 +9,33 @@ const defaultOptions = {
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
+    // 个性签名
     signature: {
         enable: false,
         contents: [],
     },
+    // 二维码
     qrcode: {
         enable: false,
         img: '',
         desc: '',
     },
+    // 弹出公告
     notice: {
         enable: false,
         text: [],
     },
+    // 首页列表图
     indexListImg: {
         enable: false,
         imgs: [],
     },
+    // 随笔头图
     postTopimage: {
         enable: true,
         imgs: [],
     },
+    // 评论输入框表情
     emoji: {
         enable: true,
         showRecents: true,
@@ -36,23 +43,29 @@ const defaultOptions = {
         showPreview: true,
         showSearch: true,
     },
+    // 代码高亮
     highLight: {
         type: 'atomOneDark',
     },
+    // 图片灯箱
     imagebox: {
         enable: true,
     },
+    // 代码行号
     lineNumbers: {
         enable: true,
     },
+    // 文章目录
     catalog: {
         enable: true,
         position: 'left',
     },
+    // 返回顶部按钮
     back2top: {
         enable: true,
         type: 'complex',
     },
+    // live2d模型
     live2d: {
         enable: true,
         page: 'all',
@@ -62,16 +75,19 @@ const defaultOptions = {
         height: 200,
         position: 'right',
     },
+    // github图标
     github: {
         enable: true,
         color: '#ffb3cc',
         url: 'https://github.com/guangzan/awescnb',
     },
+    // 码云图标
     gitee: {
         enable: true,
         color: '#C71D23',
         url: 'https://gitee.com/guangzan/awescnb',
     },
+    // 点击特效
     click: {
         enable: true,
         auto: false,
@@ -79,6 +95,7 @@ const defaultOptions = {
         size: 30,
         maxCount: 50,
     },
+    // 顶部加载进度条
     topProgress: {
         enable: true,
         page: 'all',
@@ -86,11 +103,13 @@ const defaultOptions = {
         background: '#FFB3CC',
         height: '5px',
     },
+    // 随笔页尾部签名
     postSignature: {
         enable: false,
         content: [],
         licenseLink: '',
     },
+    // 音乐播放器
     musicPlayer: {
         enable: true,
         page: 'all',
@@ -106,6 +125,7 @@ const defaultOptions = {
             },
         ],
     },
+    // 背景图片或颜色
     bodyBackground: {
         enable: false,
         type: 'img',
@@ -114,6 +134,7 @@ const defaultOptions = {
         opacity: 1,
         repeat: false,
     },
+    // 弹幕
     barrage: {
         enable: false,
         opacity: 0.6,
@@ -135,9 +156,18 @@ const defaultOptions = {
         indexBarrages: [],
         postPageBarrages: [],
     },
+    // 图表
     charts: {
         enable: false,
+        pie: {
+            title: 'My skills',
+            data: {
+                labels: ['JavaScript', 'css', 'Vue', 'React', 'wechat'],
+                values: [40, 30, 20, 10, 20],
+            },
+        },
     },
+    // 锁屏
     lock: {
         enable: true,
         background: '',
@@ -147,6 +177,7 @@ const defaultOptions = {
             '快去自定义你的个性签名吧~',
         ],
     },
+    // footer链接
     links: [
         {
             name: 'awescnb',

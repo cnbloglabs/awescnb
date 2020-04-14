@@ -13,7 +13,7 @@ function init() {
     $('#header').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {
-        toast('🌓 夜深了，点击左上角小太阳试试暗色模式吧')
+        toast('夜深了，点击左上角小太阳试试暗色模式 🌓')
     }
 
     localStorage.modeType === 'dark'
@@ -27,10 +27,10 @@ function click() {
         $('body').addClass('mode-change')
         if ($('#mode-dark').length > 0) {
             changeModeToggle('light')
-            toast('已成功切换为亮色模式 ☀')
+            toast('进入亮色模式 ☀')
         } else {
             changeModeToggle('dark')
-            toast('已成功切换为暗色模式 ✨')
+            toast('进入暗色模式 ✨')
         }
     })
 }

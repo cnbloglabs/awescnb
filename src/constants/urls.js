@@ -16,6 +16,9 @@ const live2d = {
 // materialize
 const materialize =
     'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'
+// rough-viz
+const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
+
 export {
     live2d,
     themeRepository,
@@ -24,4 +27,5 @@ export {
     randomImage,
     dummyimage,
     materialize,
+    viz,
 }
