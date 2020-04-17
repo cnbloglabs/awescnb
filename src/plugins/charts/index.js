@@ -4,13 +4,13 @@ import { viz } from '@constants/urls'
 const { enable, pie } = window.opts.charts
 
 function wrap() {
-    const wrap = '<div class="charts"></div>'
+    const wrap = '<div id="charts"></div>'
     $('#sidebar_news').append(wrap)
 }
 
 function skill() {
     const skill = '<div id="charts-skill"></div>'
-    $('.charts').append(skill)
+    $('#charts').append(skill)
 
     new roughViz.Pie({
         element: '#charts-skill',
