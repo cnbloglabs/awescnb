@@ -1,4 +1,4 @@
-import message from '../constants/message'
+import {gitee, version } from '../constants/message'
 
 const options = window.opts
 
@@ -15,9 +15,9 @@ function footer() {
 						${nickName}
 					</span>
 					<span>
-						Build by <a href=${message.blog}>${message.author}</a>
+						Powered by you
 						🧦
-						Theme ${'awesCnb'.link(message.gitee)} ${message.version}
+						Theme in ${'awescnb'.link(gitee)} ${version}
 					</span>
 				</div>`
     let $links = $('<ul id="links"></ul>')
