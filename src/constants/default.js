@@ -34,6 +34,7 @@ const defaultOptions = {
     postTopimage: {
         enable: true,
         imgs: [],
+        position: 'top',
     },
     // 评论输入框表情
     emoji: {
@@ -158,7 +159,7 @@ const defaultOptions = {
     },
     // 图表
     charts: {
-        enable: false,
+        enable: true,
         pie: {
             title: 'My skills',
             data: {
@@ -184,11 +185,6 @@ const defaultOptions = {
             link: 'https://gitee.com/guangzan/awescnb',
         },
     ],
-    // admin
-    author: {
-        isAuthor: false,
-        notices: [],
-    },
 }
 
 export default defaultOptions
