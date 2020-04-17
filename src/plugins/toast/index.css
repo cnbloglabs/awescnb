@@ -22,7 +22,7 @@
     line-height: 14px;
     font-weight: 300;
     word-break: keep-all;
-    text-shadow: 1px 1px 3px #eee;
+    text-shadow: 1px 1px 3px rgb(223, 217, 217);
     box-shadow: 1px 1px 10px var(--themeColor, #999);
 }
 
