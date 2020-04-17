@@ -1,8 +1,4 @@
- const message = {
-     version: 'v2.0',
-     author: 'DIV Monster',
-     blog: 'https://www.cnblogs.com/guangzan',
-     gitee: 'https://gitee.com/guangzan/awescnb',
- }
-
- export default message
+export const version = 'v2.0'
+export const author = 'DIV Monster'
+export const blog = 'https://www.cnblogs.com/guangzan'
+export const gitee = 'https://gitee.com/guangzan/awescnb'
