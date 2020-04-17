@@ -8,15 +8,22 @@ async function shoot(textList) {
     }
 }
 
+// API isAuthor disabled
+// function notice() {
+//     const { isAuthor, notices } = window.opts.author
+//     const { enable, text } = window.opts.notice
+//     if (!isAuthor) {
+//         if (!enable) return
+//         shoot(text)
+//     } else {
+//         enable ? shoot(notices.concat(text)) : shoot(notices)
+//     }
+// }
+
 function notice() {
-    const { isAuthor, notices } = window.opts.author
     const { enable, text } = window.opts.notice
-    if (!isAuthor) {
-        if (!enable) return
-        shoot(text)
-    } else {
-        enable ? shoot(notices.concat(text)) : shoot(notices)
-    }
+    if (!enable) return
+    shoot(text)
 }
 
 export default notice
