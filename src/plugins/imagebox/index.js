@@ -1,6 +1,7 @@
 // 设置图片灯箱
 // 仅引入即可
 
+import './index.css'
 import { pageName, poll } from '@/assets/utils/tools'
 import baguetteBox from '../../../node_modules/baguettebox.js/dist/baguetteBox'
 import '../../../node_modules/baguettebox.js/dist/baguetteBox.css'
