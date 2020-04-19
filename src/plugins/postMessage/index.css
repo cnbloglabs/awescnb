@@ -9,7 +9,6 @@
     justify-content: space-around;
     margin-bottom: 10px;
     width: 100%;
-    height: 60px;
 }
 
 .custom-post-message-top {
@@ -61,6 +60,7 @@
 .custom-post-message-bottom {
     color: #909090;
     font-size: 14px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 767px) {
