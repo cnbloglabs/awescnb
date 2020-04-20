@@ -3,13 +3,17 @@ import { owo } from '../../constants/urls'
 
 // 构建btn
 function owoEmoji() {
+    //  onclick = 'load_face(this)'
     $('.commentbox_footer').before(
-        '<div class="OwO" onclick="load_face(this)"><div class="OwO-logo"><i class="fa fa-smile-o" aria-hidden="true"></i></div></div>',
+        '<div class="OwO"><div class="OwO-logo"><i class="fa fa-smile-o" aria-hidden="true"></i></div></div>',
     )
+    $('.OwO').click(function() {
+        console.log(4784651)
+    })
 }
 
-// click
-function load_face(b) {
+// load
+function load_face() {
     new window.OwO({
         logo: '<i class="fa fa-smile-o" aria-hidden="true"></i>',
         container: document.getElementsByClassName('OwO')[0],
@@ -19,8 +23,8 @@ function load_face(b) {
         width: '100%',
         maxHeight: '250px',
     })
-    b.classList.add('OwO-open')
-    b.onclick = null
+    // b.classList.add('OwO-open')
+    // b.onclick = null
 }
 
 export default function emoji() {
