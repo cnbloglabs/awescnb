@@ -52,6 +52,12 @@
             transparent);
 }
 
+body {
+    background-color: var(--background-g);
+    font-size: 14px;
+    color: var(--text-0);
+}
+
 /* home */
 #home {
     display: block;

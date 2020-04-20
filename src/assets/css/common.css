@@ -47,12 +47,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: var(--background-g);
-    font-size: 14px;
-    color: var(--text-0);
-}
-
 a {
     color: inherit;
     cursor: pointer;

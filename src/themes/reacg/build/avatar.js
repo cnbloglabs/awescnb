@@ -1,4 +1,4 @@
-// 设置侧b边栏头像
+// 设置侧边栏头像
 // 引入即可
 
 import env from '@constants/env'

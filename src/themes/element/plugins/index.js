@@ -10,6 +10,8 @@ import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
 import back2top from '@plugins/back2top'
 import themeColor from '@plugins/themeColor'
+
+// ---------
 // import comments from '@plugins/comments'
 // import signature from '@plugins/signature'
 // import postSignature from '@plugins/postSignature'
@@ -35,6 +37,8 @@ function plugins() {
     titleFavicon()
     copy()
     back2top()
+
+    // ---------
     // postMessage()
     // comments()
     // signature()
