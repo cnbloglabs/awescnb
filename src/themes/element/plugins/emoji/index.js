@@ -1,4 +1,4 @@
-import { cacheScript } from '@tools'
+import { pageName, cacheScript } from '@tools'
 import { owo } from '../../constants/urls'
 
 // 构建btn
@@ -28,6 +28,7 @@ function load_face() {
 }
 
 export default function emoji() {
+    if (pageName() !== 'post') return
     owoEmoji()
     cacheScript(owo, load_face)
 }
