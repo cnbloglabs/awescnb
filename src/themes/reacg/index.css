@@ -517,10 +517,6 @@ mark {
     margin: 0.267rem 0;
 }
 
-#cnblogs_post_body pre table {
-    overflow-x: unset;
-}
-
 #cnblogs_post_body table {
     display: block;
     margin-top: 0.2rem;
@@ -593,16 +589,6 @@ mark {
 
 #cnblogs_post_body ul li {
     line-height: 0.5rem;
-}
-
-#cnblogs_post_body table,
-.cnblogs-post-body table,
-#cnblogs_post_body .hljs-ln-code {
-    border: none;
-}
-
-#cnblogs_post_body .hljs-ln-code {
-    padding: 02px 0.0933rem;
 }
 
 #cnblogs_post_body blockquote {
