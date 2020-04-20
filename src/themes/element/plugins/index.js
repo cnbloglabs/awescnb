@@ -5,7 +5,7 @@ import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
 import setTopProgress from '@plugins/progress'
 import setClickEffects from '@plugins/click'
-import copy from '@plugins/copy'
+// import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
 // import back2top from '@plugins/back2top'
@@ -15,6 +15,7 @@ import SideFloatBtns from './SideFloatBtns'
 import catalog from './catalog'
 import emoji from './emoji'
 import toast from './toast'
+import copy from './copy'
 // ---------
 // import comments from '@plugins/comments'
 // import signature from '@plugins/signature'
@@ -39,9 +40,9 @@ function plugins() {
     setClickEffects()
     linenumbers()
     titleFavicon()
-    copy()
     // back2top()
     // ---------
+    copy()
     SideFloatBtns()
     catalog()
     emoji()
