@@ -1,4 +1,7 @@
-function fancybox() {
+import { pageName, cacheScript } from '@tools'
+import { fancybox } from '../../constants/urls'
+
+function build() {
     // fancybox
     $('.cnblogs-markdown img').each(function() {
         var element = document.createElement('a')
@@ -8,4 +11,9 @@ function fancybox() {
     })
 }
 
-export default fancybox
+function fancyImgbox() {
+    if (pageName() !== 'post') return
+    cacheScript(fancybox, build)
+}
+
+export default fancyImgbox
