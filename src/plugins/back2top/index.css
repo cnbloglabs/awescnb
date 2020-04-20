@@ -66,16 +66,16 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 34.684px;
+    width: 31px;
     text-align: center;
-    line-height: 34.684px;
+    line-height: 31px;
     font-weight: 900;
     z-index: 13;
 }
 
 #back-to-top #back2top-icon {
     display: none;
-    font-size: 16px;
+    font-size: 14px;
     transform: rotate(-45deg);
 }
 
