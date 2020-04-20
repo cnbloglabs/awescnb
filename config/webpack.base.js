@@ -26,6 +26,7 @@ module.exports = {
         acg: './src/themes/acg/index.js',
         reacg: './src/themes/reacg/index.js',
         gshang: './src/themes/gshang/index.js',
+        element: './src/themes/element/index.js',
         [themeName]: `./src/themes/${themeName}/index.js`,
     },
     output: {
