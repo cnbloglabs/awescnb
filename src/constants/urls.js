@@ -8,6 +8,8 @@ const js = 'https://guangzan.gitee.io/imagehost/awescnb/js'
 const randomImage = 'https://api.mz-moe.cn/img.php'
 // 随机返回一张图片，只在开发环境使用， 快要弃用
 const dummyimage = 'https://www.dummyimage.com/50'
+// 随机生成一个图像
+const randomAva = 'https://i.pravatar.cc/125?image=3'
 // 看板娘模型仓库
 const live2d = {
     url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
@@ -28,4 +30,5 @@ export {
     dummyimage,
     materialize,
     viz,
+    randomAva,
 }
