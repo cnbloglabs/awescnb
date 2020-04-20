@@ -116,14 +116,14 @@ function unpass(show) {
  * @param {condition} 条件
  * @param {func} 函数
  */
-function poll(condition, func) {
+function poll(condition, handler) {
     if (condition) {
-        func()
+        handler()
     } else {
         let count = 1
         let intervalId = setInterval(() => {
             if (condition) {
-                func()
+                handler()
                 clearInterval(intervalId)
             }
             if (count === 10) {

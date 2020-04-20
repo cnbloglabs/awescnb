@@ -75,6 +75,7 @@ const defaultOptions = {
         width: 150,
         height: 200,
         position: 'right',
+        gap: 'default' // 边距
     },
     // github图标
     github: {

@@ -3,7 +3,7 @@
 // 其他配置我都帮你做好了
 
 module.exports = {
-    themeName: 'element',
+    themeName: 'reacg',
     template: 'post',
     eslint: true,
     sourceMap: false,
