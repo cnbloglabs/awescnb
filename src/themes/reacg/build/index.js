@@ -4,7 +4,6 @@ import mode from './mode'
 import avatar from './avatar'
 import scroll from './scroll'
 import catalog from './catalog'
-import themeColor from './themeColor'
 import indexList from './indexList'
 import notice from './notice'
 
@@ -14,7 +13,6 @@ function build() {
     avatar()
     scroll()
     catalog()
-    themeColor()
     footer()
     indexList()
     notice()

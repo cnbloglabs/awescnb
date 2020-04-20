@@ -1,4 +1,4 @@
-import { shootInitial } from '@plugins/barrage'
+import themeColor from '@plugins/themeColor'
 import setBodyBackground from '@plugins/background'
 import setIcons from './icons/index.js'
 import imageBox from '@plugins/imageBox'
@@ -21,8 +21,10 @@ import postMessage from '@plugins/postMessage'
 import back2top from '@plugins/back2top'
 import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
+import { shootInitial } from '@plugins/barrage'
 
 function plugins() {
+    themeColor()
     setIcons()
     setBodyBackground()
     imageBox()
