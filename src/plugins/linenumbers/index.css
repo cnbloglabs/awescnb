@@ -3,15 +3,11 @@
     padding: 2px 0;
     border: none;
     text-align: center;
-    color: var(--themeColor, #999999)!important;
+    color: var(--themeColor, #999999) !important;
     user-select: none;
     word-break: normal;
     white-space: pre;
 }
-
-/* .cnblogs_code {
-    color: red!important;
-} */
 
 /* 富文本end */
 #cnblogs_post_body .hljs-ln-numbers {
@@ -29,4 +25,26 @@
     #cnblogs_post_body td {
         white-space: pre;
     }
+}
+
+/* linenumbers table */
+#cnblogs_post_body pre table {
+    overflow-x: unset;
+    border: none !important;
+}
+
+#cnblogs_post_body pre table tr,
+#cnblogs_post_body pre table td {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+#cnblogs_post_body pre table .hljs-ln-numbers {
+    padding: 0 !important;
+    width: 30px !important;
+}
+
+#cnblogs_post_body pre table .hljs-ln-code {
+    padding: 0 2px 4.8516px;
 }
