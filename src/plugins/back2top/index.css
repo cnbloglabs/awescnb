@@ -1,27 +1,27 @@
 /* 返回顶部 start */
 #back-to-top {
     position: fixed;
-    bottom: 0.667rem;
-    right: 2.8rem;
-    width: 0.667rem;
-    height: 0.667rem;
+    bottom: 34.684px;
+    right: 145.6px;
+    width: 34.684px;
+    height: 34.684px;
     border-radius: 50%;
     background-color: rgba(32, 28, 41, 0.86);
     color: #fff;
     text-align: center;
-    line-height: 0.667rem;
+    line-height: 34.684px;
     z-index: 11;
-    font-size: 0.187rem;
+    font-size: 9.724px;
     display: none;
-    border: 0.053rem solid rgba(32, 28, 41, 0.26);
-    box-shadow: 0 0 0.4rem rgba(16, 14, 23, 0.46);
+    border: 2.756px solid rgba(32, 28, 41, 0.26);
+    box-shadow: 0 0 20.8px rgba(16, 14, 23, 0.46);
     cursor: pointer;
     overflow: hidden;
 }
 
 #back-to-top .icon {
-    width: 0.3rem;
-    height: 0.55rem;
+    width: 15.6px;
+    height: 28.6px;
 }
 
 #back-to-top .flow {
@@ -39,8 +39,8 @@
 #back-to-top .flow::after {
     content: '';
     position: absolute;
-    width: 5.333rem;
-    height: 5.333rem;
+    width: 277.316px;
+    height: 277.316px;
     top: 0;
     left: 50%;
     background: #ffb3cc !important;
@@ -66,9 +66,9 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 0.667rem;
+    width: 34.684px;
     text-align: center;
-    line-height: 0.667rem;
+    line-height: 34.684px;
     font-weight: 900;
     z-index: 13;
 }
