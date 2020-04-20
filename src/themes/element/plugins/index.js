@@ -1,14 +1,11 @@
 import { shootInitial } from '@plugins/barrage'
 import setBodyBackground from '@plugins/background'
-import imageBox from '@plugins/imageBox'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
 import setTopProgress from '@plugins/progress'
 import setClickEffects from '@plugins/click'
-// import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
-// import back2top from '@plugins/back2top'
 import themeColor from '@plugins/themeColor'
 // ---------
 import SideFloatBtns from './SideFloatBtns'
@@ -16,7 +13,11 @@ import catalog from './catalog'
 import emoji from './emoji'
 import toast from './toast'
 import copy from './copy'
+import fancyImgbox from './fancyImgbox'
 // ---------
+// import back2top from '@plugins/back2top'
+// import copy from '@plugins/copy'
+// import imageBox from '@plugins/imageBox'
 // import comments from '@plugins/comments'
 // import signature from '@plugins/signature'
 // import postSignature from '@plugins/postSignature'
@@ -32,7 +33,6 @@ import copy from './copy'
 function plugins() {
     themeColor()
     setBodyBackground()
-    imageBox()
     shootInitial()
     setLive2d()
     setMusicPlayer()
@@ -40,7 +40,7 @@ function plugins() {
     setClickEffects()
     linenumbers()
     titleFavicon()
-    // back2top()
+    fancyImgbox()
     // ---------
     copy()
     SideFloatBtns()
@@ -48,6 +48,8 @@ function plugins() {
     emoji()
     toast()
     // ---------
+    // imageBox()
+    // back2top()
     // postMessage()
     // comments()
     // signature()

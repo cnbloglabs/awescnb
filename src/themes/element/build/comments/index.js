@@ -1,6 +1,6 @@
 /////// 评论区相关 ////////
 
-import { poll } from '@tools'
+import { poll, pageName } from '@tools'
 
 // 评论模块的滚动隐藏效果
 function scroll2hide() {
@@ -58,6 +58,7 @@ function poll2show() {
 }
 
 function comments() {
+    if (pageName() !== 'post') return
     poll2show()
     scroll2hide()
 }
