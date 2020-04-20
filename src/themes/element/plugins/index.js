@@ -8,9 +8,13 @@ import setClickEffects from '@plugins/click'
 import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
-import back2top from '@plugins/back2top'
+// import back2top from '@plugins/back2top'
 import themeColor from '@plugins/themeColor'
-
+// ---------
+import SideFloatBtns from './SideFloatBtns'
+import catalog from './catalog'
+import emoji from './emoji'
+import toast from './toast'
 // ---------
 // import comments from '@plugins/comments'
 // import signature from '@plugins/signature'
@@ -36,8 +40,12 @@ function plugins() {
     linenumbers()
     titleFavicon()
     copy()
-    back2top()
-
+    // back2top()
+    // ---------
+    SideFloatBtns()
+    catalog()
+    emoji()
+    toast()
     // ---------
     // postMessage()
     // comments()
