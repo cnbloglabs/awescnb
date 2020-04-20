@@ -23,6 +23,12 @@ const setLive2d = () => {
 
     const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:3" width="${options.width}"height="${options.height}" > </canvas>`
     $('body').append(ele)
+
+    // gap
+    if (options.gap !== 'default') {
+        $('#model').css(options.position, options.gap)
+    }
+    // load
     const url = `${live2d.url}@${live2d.version}/${model}`
     cacheScript(`${js}/live2d.min.js`, () => {
         loadlive2d('model', url)
