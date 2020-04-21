@@ -160,7 +160,7 @@ const defaultOptions = {
     },
     // 图表
     charts: {
-        enable: true,
+        enable: false,
         pie: {
             title: 'My skills',
             data: {
