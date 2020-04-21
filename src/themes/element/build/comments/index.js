@@ -1,6 +1,6 @@
 /////// 评论区相关 ////////
 
-import { poll, pageName } from '@tools'
+import { pageName } from '@tools'
 
 // 评论模块的滚动隐藏效果
 function scroll2hide() {
@@ -22,44 +22,40 @@ function scroll2hide() {
 
 // 显示评论区头像
 function commentsAvator() {
-    $.each($('.feedbackItem'), function(index, ele) {
-        var self = $(ele)
-        var obj = self.find('.blog_comment_body')
-        var id = obj.attr('id').split('_')[2]
-        var blog = self.find('a[id^="a_comment_author"]')
-        var blogUrl = blog.attr('href')
-        var imgSrc =
-            $('#comment_' + id + '_avatar').html() ||
-            'http://pic.cnblogs.com/avatar/simple_avatar.gif'
-        self.prepend(
-            '<a href="' +
-                blogUrl +
-                '"><img src="' +
-                imgSrc +
-                '" style="float:left;" class="comment_avatar"></a',
-        )
-        $('.feedbackListSubtitle').addClass('feedbackListSubtitle_right')
-        $('.feedbackCon').addClass('feedbackCon_right')
+    $(document).ajaxComplete(function(event, xhr, option) {
+        //评论头像
+        if (option.url.indexOf('GetComments') > -1) {
+            setTimeout(function() {
+                $.each($('.feedbackItem'), function(index, ele) {
+                    var self = $(ele)
+                    var obj = self.find('.blog_comment_body')
+                    var id = obj.attr('id').split('_')[2]
+                    var blog = self.find('a[id^="a_comment_author"]')
+                    var blogUrl = blog.attr('href')
+                    var imgSrc =
+                        $('#comment_' + id + '_avatar').html() ||
+                        'http://pic.cnblogs.com/avatar/simple_avatar.gif'
+                    self.prepend(
+                        '<a href="' +
+                            blogUrl +
+                            '"><img src="' +
+                            imgSrc +
+                            '" style="float:left;" class="comment_avatar"></a',
+                    )
+                    $('.feedbackListSubtitle').addClass(
+                        'feedbackListSubtitle_right',
+                    )
+                    $('.feedbackCon').addClass('feedbackCon_right')
+                })
+                //myscroll();
+            }, 300)
+        }
     })
-
-    // $(document).ajaxComplete(function(event, xhr, option) {
-    //     //评论头像
-    //     if (option.url.indexOf('GetComments') > -1) {
-    //         setTimeout(function() {
-    //             //myscroll();
-    //         }, 300)
-    //     }
-    // })
-}
-
-// 轮询
-function poll2show() {
-    poll($('.blog_comment_body').length, commentsAvator)
 }
 
 function comments() {
     if (pageName() !== 'post') return
-    poll2show()
+    commentsAvator()
     scroll2hide()
 }
 
