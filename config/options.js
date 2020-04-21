@@ -9,7 +9,7 @@ module.exports = {
     template: 'post',
     eslint: true,
     sourceMap: false,
-    openAnalyzer: false,
+    openAnalyzer: true,
 }
 
 ///////// options /////////
