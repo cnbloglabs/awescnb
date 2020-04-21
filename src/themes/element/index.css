@@ -1664,10 +1664,10 @@
         margin-bottom: 0 !important;
         /*word-break: normal !important;*/
     }
-
+    
     .cnblogs-markdown .highlight pre,
     .cnblogs-markdown pre {
-        padding: 16px 16px 0 0 !important;
+        padding: 16px 16px 8px 5px !important;
         overflow-x: auto !important;
         font-size: 85% !important;
         width: 100%;
