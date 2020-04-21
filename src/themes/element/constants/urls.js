@@ -12,7 +12,6 @@ export const notiflix =
 export const highlight =
     'https://blog-static.cnblogs.com/files/gshang/highlight.pack.js'
 export const vue = 'https://cdn.staticfile.org/vue/2.2.2/vue.min.js'
-export const owo =
-    'https://blog-static.cnblogs.com/files/gshang/gshang.owo.2020.01.05.1.js'
+export const owo = 'https://guangzan.gitee.io/imagehost/awescnb/js/owo.min.js'
 export const bootstrap =
            'https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js'
