@@ -2,9 +2,7 @@ import printing from './printing'
 import grayDay from './grayDay'
 
 function hideLoading() {
-    setTimeout(() => {
-        $('#loading').fadeOut(200)
-    }, 180)
+    $('#loading').fadeOut(200)
 }
 
 function build() {
@@ -14,4 +12,3 @@ function build() {
 }
 
 module.exports = build
-export default build
