@@ -2,12 +2,7 @@
 // 仅引入即可
 
 import './index.css'
-import {
-    pageName,
-    getClientRect,
-    randomNum,
-    randomColor,
-} from '@/assets/utils/tools'
+import { pageName, getClientRect, randomNum, randomColor, sleep } from '@tools'
 
 const options = window.opts.barrage
 
@@ -15,32 +10,39 @@ const options = window.opts.barrage
  * @description 发送弹幕
  * @param {Array} textList 弹幕列表
  */
-function shootBarrage(textList) {
+
+async function shootBarrage(textList) {
     if (!options.enable) return
     if (!document.querySelector('#barrage-wrap'))
         $('body').append(`<div id='barrage-wrap'></div>`)
+
     const $wrap = document.querySelector('#barrage-wrap')
     const rect = getClientRect($wrap)
     const wrapWidth = rect.right - rect.left
     const wrapHeight = rect.bottom - rect.top
 
-    textList.forEach(text => {
+    for (let i = 0; i < textList.length; i++) {
+        const text = textList[i]
         const $barrage = document.createElement('span')
         const barrageStyle = `
 									left: ${wrapWidth}px;
-									top: ${randomNum(wrapHeight - 20, 1)}px;
+									top: ${randomNum(wrapHeight - 30, 1)}px;
 									color: ${randomColor(options.colors)};
 									opacity: ${options.opacity};
 								`
+
         $barrage.style.cssText = barrageStyle
         $barrage.innerText = text
         $wrap.appendChild($barrage)
+
         const roll = timer => {
             const now = +new Date()
             const rect = getClientRect($barrage)
             let left = $barrage.offsetLeft
+
             roll.last = roll.last || now
             roll.timer = roll.timer || timer
+
             if (left < rect.left - rect.right) {
                 $($barrage).remove()
             } else {
@@ -52,9 +54,10 @@ function shootBarrage(textList) {
                 window.requestAnimationFrame(roll)
             }
         }
-        const randomSpeed = randomNum(100, 1)
-        roll(randomSpeed)
-    })
+
+        roll(randomNum(30, 1))
+        await sleep(1000)
+    }
 }
 
 // 发送预定义弹幕
