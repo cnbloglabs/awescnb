@@ -2,8 +2,7 @@
 
 import './index.css'
 import Typed from 'typed.js'
-import env from '@constants/env'
-import { randomImage, dummyimage } from '@constants/urls'
+import { randomImage } from '@constants/urls'
 
 const { enable, background, strings } = window.opts.lock
 const { avatar } = window.opts.theme
@@ -16,13 +15,11 @@ const typedOpts = {
 
 // 创建元素
 function build() {
-    let image
-    image = env === 'dev' ? dummyimage : avatar
     const ele = `
     <div class='lock-screen'>
         <div class="lock-screen-weather"></div>
         <div class="lock-screen-user">
-            <img src="${image}" alt=""/>
+            <img src="${avatar}" alt=""/>
             <div class='lock-screen-text'>
                 <span></span>
             </div>
@@ -34,12 +31,7 @@ function build() {
 
 // 设置背景
 function setBackground() {
-    let image
-    if (env === 'dev') {
-        image = dummyimage
-    } else {
-        image = background === '' ? randomImage : background
-    }
+    const image = background === '' ? randomImage : background
     $('.lock-screen').css('background-image', `url(${image}/red)`)
 }
 
