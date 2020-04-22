@@ -75,9 +75,8 @@
 /* 富文本编辑器 end */
 
 pre:hover {
-    box-shadow: 1px 1px 10px red;
+    box-shadow: 0 0 3px red;
 }
-
 
 /* markdown start */
 pre::before {
