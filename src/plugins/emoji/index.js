@@ -1,6 +1,6 @@
 // 评论输入表情
 import { pageName, cacheScript } from '@tools'
-import { js } from '@constants/urls'
+import { emojijs } from '@constants/urls'
 import './index.css'
 const {
     enable,
@@ -54,7 +54,7 @@ function build() {
 function emoji() {
     if (!enable) return
     if (pageName() !== 'post') return
-    cacheScript(`${js}/emoji.min.js`, build)
+    cacheScript(emojijs, build)
 }
 
 export default emoji
