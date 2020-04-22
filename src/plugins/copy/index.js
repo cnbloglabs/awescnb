@@ -5,7 +5,6 @@ import './index.css'
 import { pageName, edtType } from '@/assets/utils/tools'
 import toast from '@plugins/toast'
 
-
 // 添加按钮
 function addBtns(type) {
     let pres = $('#cnblogs_post_body, #blog-comments-placeholder').find('pre')
@@ -21,7 +20,6 @@ function addBtns(type) {
         })
     }
 }
-
 
 // 点击事件
 function click(type) {
@@ -47,7 +45,11 @@ function click(type) {
         document.execCommand('copy')
 
         $(this).text('copied')
-        toast('代码已复制✔')
+        toast('已复制✔')
+
+        setTimeout(() => {
+            $(this).text('copy')
+        }, 1000)
     })
 }
 
