@@ -1,34 +1,31 @@
 // 主题 js 存放的仓库
-const themeRepository = 'https://guangzan.gitee.io/awescnb'
+export const themeRepository = 'https://guangzan.gitee.io/awescnb'
 // 图片的根路径，只有tools/randomImgurl使用
-const animeImages = 'https://guangzan.gitee.io/imagehost/awescnb/images/anime'
-// 存放极少数体积较大的依赖
-const js = 'https://guangzan.gitee.io/imagehost/awescnb/js'
-//随机返回一张动漫图片
-const randomImage = 'https://api.mz-moe.cn/img.php'
-// 随机返回一张图片，只在开发环境使用， 快要弃用
-const dummyimage = 'https://www.dummyimage.com/50'
-// 随机生成一个人物头像
-const randomAva = 'https://i.pravatar.cc/125?image=3'
+export const animeImages =
+    'https://guangzan.gitee.io/imagehost/awescnb/images/anime'
 // 看板娘模型仓库
-const live2d = {
+export const live2d = {
     url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
     version: '1.7',
 }
+export const emojijs =
+    'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js'
+export const aplayerjs =
+    'https://guangzan.gitee.io/imagehost/awescnb/js/APlayer.min.js'
+// 随机返回一张动漫图片
+export const randomImage = 'https://api.mz-moe.cn/img.php'
+// 随机返回一张图片，只在开发环境使用
+export const dummyimage = 'https://www.dummyimage.com/50'
+// 随机返回一个人物头像，只在开发环境使用
+export const randomAva = 'https://i.pravatar.cc/125?image=3'
+// live2d js
+export const live2djs =
+    'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js'
 // materialize
-const materialize =
+export const materialize =
     'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'
 // rough-viz
-const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
-
-export {
-    live2d,
-    themeRepository,
-    animeImages,
-    js,
-    randomImage,
-    dummyimage,
-    materialize,
-    viz,
-    randomAva,
-}
+export const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
+// linenumber
+export const linenumbersjs =
+    'https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js'
