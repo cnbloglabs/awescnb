@@ -2,7 +2,7 @@
 // 引入即可
 
 import { pageName, userAgent, cacheScript } from '@/assets/utils/tools'
-import { js } from '@constants/urls'
+import { aplayerjs } from '@constants/urls'
 import 'aplayer/dist/aplayer.min.css'
 import './index.css'
 
@@ -33,7 +33,7 @@ function setMusicPlayer() {
     if (!enable) return
     if (page !== pageName() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
-    cacheScript(`${js}/APlayer.min.js`, build)
+    cacheScript(aplayerjs, build)
 }
 
 export default setMusicPlayer

@@ -2,7 +2,7 @@
 // 引入即可
 
 import { pageName, userAgent, cacheScript, getRandomProperty } from '@tools'
-import { live2d, js } from '@constants/urls'
+import { live2d, live2djs } from '@constants/urls'
 import live2dModels from '@/constants/live2dModels'
 import env from '@/constants/env'
 
@@ -30,7 +30,7 @@ const setLive2d = () => {
     }
     // load
     const url = `${live2d.url}@${live2d.version}/${model}`
-    cacheScript(`${js}/live2d.min.js`, () => {
+    cacheScript(live2djs, () => {
         loadlive2d('model', url)
     })
 }
