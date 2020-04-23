@@ -29,3 +29,4 @@ export const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
 // linenumber
 export const linenumbersjs =
     'https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js'
+export const jqueryui = 'https://code.jquery.com/ui/1.12.0/jquery-ui.js'
