@@ -189,7 +189,7 @@ function create() {
     // 关注
     const focus = () => {
         toast('谢谢关注🍺')
-        window.follow()
+        window.followByGroup()
     }
 
     // 推荐
