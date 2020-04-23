@@ -9,7 +9,7 @@ import './index.css'
 const { enable, autoplay, audio, page, agent } = window.opts.musicPlayer
 
 // 音乐播放器
-const build = () => {
+function build() {
     $('body').append('<div id="player" class="aplayer music-APlayer"></div>')
 
     const ap = new APlayer({
@@ -18,6 +18,7 @@ const build = () => {
         preload: 'auto',
         autoplay,
         audio,
+        volume: 0.4,
     })
 
     window.onbeforeunload = () => {

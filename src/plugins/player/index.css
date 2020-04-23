@@ -1,0 +1,11 @@
+.aplayer.aplayer-fixed .aplayer-body {
+    left: -66px;
+}
+
+.aplayer.aplayer-fixed .aplayer-body:hover {
+    left: 0;
+}
+
+.aplayer .aplayer-miniswitcher {
+    background: #a4b0be;
+}
