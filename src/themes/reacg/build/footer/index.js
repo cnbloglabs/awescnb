@@ -1,5 +1,5 @@
-import {gitee, version } from '../constants/message'
-
+import { gitee, version } from '../../constants/message'
+import './index.css'
 const options = window.opts
 
 // 设置footer
