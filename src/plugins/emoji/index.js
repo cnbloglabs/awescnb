@@ -38,7 +38,7 @@ const emojiConfig = {
 }
 
 function build() {
-    const ele = `<span id='emoji-button'>🙃</span>`
+    const ele = `<span id='emoji-button'>🍺</span>`
     $('.commentbox_title_right').prepend(ele)
     const EmojiButton = window.EmojiButton
     const button = document.querySelector('#emoji-button')
