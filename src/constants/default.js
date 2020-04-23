@@ -74,7 +74,7 @@ const defaultOptions = {
         model: 'haru-01',
         width: 150,
         height: 200,
-        position: 'right',
+        position: 'left',
         gap: 'default', // 边距
     },
     // github图标
@@ -99,7 +99,7 @@ const defaultOptions = {
     },
     // 顶部加载进度条
     topProgress: {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         background: '#FFB3CC',
