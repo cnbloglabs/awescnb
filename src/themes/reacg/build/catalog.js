@@ -62,6 +62,7 @@ function setCatalogPosition() {
     const actions = {
         sidebar: () => {
             setCatalogToggle()
+            $('#mainContent').css('width','60vw')
         },
         left: () => {
             $('#catalog').addClass('catalog-sticky-left')
