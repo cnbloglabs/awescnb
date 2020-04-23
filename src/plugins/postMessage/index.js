@@ -4,7 +4,7 @@ import { pageName } from '@tools'
 function postMessage() {
     if (pageName() !== 'post') return
 
-    let categories = $(`<div class='custom-categories'>🎈</div>`)
+    let categories = $(`<div class='custom-categories'>📌</div>`)
     let tags = $(`<div class='custom-tags'>🏷</div>`)
 
     if ($('#BlogPostCategory a').length) {
@@ -26,6 +26,7 @@ function postMessage() {
     const date = $('#post-date').text()
     const viewCount = $('#post_view_count').text()
     const commentCount = $('#post_comment_count').text()
+    const diggCount = $('#digg_count').text()
 
     const ele = `
                 <div id='custom-post-message'>
@@ -37,6 +38,7 @@ function postMessage() {
                         <span>${date}</span>
                         <span>阅读 ${viewCount}</span>
                         <span>评论 ${commentCount}</span>
+                        <span>推荐 ${diggCount}</span>
                     </div>
                 </div>
                 `
