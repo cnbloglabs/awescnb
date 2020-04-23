@@ -247,6 +247,12 @@ function create() {
 }
 
 function dragMenu() {
+    if (
+        $('#profile_block>a:nth-child(1)')
+            .text()
+            .trim() === '李玉宝'
+    )
+        return
     create()
     // cacheScript(jqueryui, create)
 }
