@@ -1100,17 +1100,23 @@ mark {
 
 #ad_t2 {
     margin-top: 0.8rem;
+    padding: 15px 15px 15px 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     font-size: 14px;
     color: #fff;
+    /* background-color: var(--background-w); */
+    border-radius: 3px;
+}
+
+#ad_t2 a:not(:nth-child(1)) {
+    margin-top: 10px;
 }
 
 #ad_t2 a {
     margin-right: 0;
-    margin-top: 10px;
     padding-right: 10px;
     border-radius: 3px;
 }
@@ -1120,7 +1126,24 @@ mark {
 }
 
 #ad_t2 a:nth-child(3) {
-    background-color: #61aeee;
+    background-color: #feca57;
+}
+
+#ad_t2 a:nth-child(5) {
+    background-color: #ff6b6b;
+}
+
+#ad_t2 a:nth-child(7) {
+    background-color: #48dbfb;
+}
+
+#ad_t2 a:nth-child(9) {
+    background-color: #10ac84;
+}
+
+#ad_t2 a:hover {
+    transform: translateX(5px); 
+    transition: 0.25s all
 }
 
 #ad_t2 br {
