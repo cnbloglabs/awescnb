@@ -27,6 +27,35 @@
     line-height: 40px;
 }
 
+.dragmenu-item:hover .dragmenu-item-tooltip {
+    visibility: visible;
+    top: -200%;
+    transition: 0.25s all;
+}
+
+.dragmenu-item-tooltip {
+    position: relative;
+    top: -100%;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--themeColor, #fff);
+    text-align: center;
+    border-radius: 2px;
+    padding: 2px 5px;
+    font-size: 14px;
+}
+
+.dragmenu-item-tooltip::selection {
+    background: none;
+    color: inherit;
+}
+
+.custom-drag-menu .dragmenu-item:not(:last-child):hover {
+    transform: translateY(-5px);
+    transition: 0.25s all;
+}
+
 .dragmenu-item i {
     font-style: normal;
 }
@@ -36,7 +65,7 @@
 }
 
 
-@media screen and (max-width: 767px) { 
+@media screen and (max-width: 767px) {
     .custom-drag-menu {
         right: 25px;
         bottom: 80px;

@@ -4,6 +4,7 @@ import toast from '@plugins/toast'
 import { pageName } from '@tools'
 // import { cacheScript } from '@tools'
 // import { jqueryui } from '@constants/urls'
+const back2topConfig = window.opts.back2top
 
 var timeOut
 // db timer
@@ -15,16 +16,21 @@ class Item {
         backgroundColor,
         event = 'click',
         callback = function() {},
+        tip = '',
     ) {
         this.$element = $(document.createElement('div'))
         // this.icon = icon
         this.$element.addClass('dragmenu-item')
         this.$element.css('background-color', backgroundColor)
         var i = document.createElement('i')
+        var tooltip = document.createElement('span')
+        $(tooltip).addClass('dragmenu-item-tooltip')
         // $(i).addClass('fi-' + icon)
         this.$element.on(event, callback)
         $(i).html(content)
+        $(tooltip).html(tip)
         this.$element.append(i)
+        this.$element.append(tooltip)
         this.prev = null
         this.next = null
         this.isMoving = false
@@ -219,16 +225,17 @@ function create() {
 
     var menu = new Menu('#myMenu')
 
-    var item1 = new Item('🚀', '#48dbfb', 'dblclick', back2top)
+    var item1 = new Item('🚀', '#48dbfb', 'dblclick', back2top, '回顶')
     menu.add(item1)
-    var item3 = new Item('❤', '#feca57', 'click', focus)
+    var item3 = new Item('💗', '#feca57', 'click', focus, '关注')
     menu.add(item3)
+
     if (pageName() === 'post') {
-        var item2 = new Item('👍', '#ff6b6b', 'click', diggit)
+        var item2 = new Item('👍', '#ff6b6b', 'click', diggit, '点赞')
         menu.add(item2)
-        var item4 = new Item('💬', '#10ac84', 'click', comment)
+        var item4 = new Item('💬', '#10ac84', 'click', comment, '评论')
         menu.add(item4)
-        var item5 = new Item('💼', '#54a0ff', 'click', collect)
+        var item5 = new Item('💼', '#54a0ff', 'click', collect, '收藏')
         menu.add(item5)
     }
 
@@ -247,12 +254,7 @@ function create() {
 }
 
 function dragMenu() {
-    if (
-        $('#profile_block>a:nth-child(1)')
-            .text()
-            .trim() === '李玉宝'
-    )
-        return
+    if (!back2topConfig.enable) return
     create()
     // cacheScript(jqueryui, create)
 }
