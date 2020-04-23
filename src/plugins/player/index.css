@@ -6,6 +6,6 @@
     left: 0;
 }
 
-.aplayer .aplayer-miniswitcher {
-    background: #a4b0be;
+.aplayer.aplayer-fixed .aplayer-body:hover .aplayer-miniswitcher {
+    background-color: #fff;
 }
