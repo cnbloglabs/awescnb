@@ -16,13 +16,12 @@
     width: max-content;
     height: auto;
     max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #1E1E1E;
     color: var(--themeColor, #000);
     font-size: 14px;
     line-height: 14px;
     font-weight: 300;
     word-break: keep-all;
-    text-shadow: 1px 1px 3px rgb(223, 217, 217);
     box-shadow: 1px 1px 5px var(--themeColor, rgb(218, 214, 214));
 }
 
