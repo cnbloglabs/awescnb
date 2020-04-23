@@ -34,3 +34,11 @@
 .dragmenu-item i::selection {
     background: none;
 }
+
+
+@media screen and (max-width: 767px) { 
+    .custom-drag-menu {
+        right: 25px;
+        bottom: 80px;
+    }
+}
