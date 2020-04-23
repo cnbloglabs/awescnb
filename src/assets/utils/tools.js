@@ -152,7 +152,7 @@ function cacheScript(url, callback = function() {}) {
 }
 
 /**
- * @description 防抖函数
+ * @description 防抖
  * @param {Function} func 传入的函数
  * @param {Number} wait 等待
  * @param {Boolean} immediate 立即
@@ -174,7 +174,7 @@ const debounce = (func, wait, immediate) => {
     }
 }
 
-// 简单的节流函数
+// 节流
 const throttle = (func, wait, mustRun) => {
     var timeout,
         startTime = new Date()
