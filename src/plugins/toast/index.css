@@ -22,7 +22,6 @@
     line-height: 14px;
     font-weight: 300;
     word-break: keep-all;
-    box-shadow: 1px 1px 5px var(--themeColor, rgb(218, 214, 214));
 }
 
 .toast .btn,
@@ -31,52 +30,3 @@
     margin: 0;
     margin-left: 3rem;
 }
-
-@media only screen and (max-width: 768px) {
-    .toast {
-        background-color: #fff;
-    }
-}
-
-/* @media only screen and (max-width: 540px) {
-    #toast-container {
-        min-width: 100%;
-        bottom: 0;
-    }
-}
-
-@media only screen and (min-width: 541px) and (max-width: 768px) {
-    #toast-container {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-270px);
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    #toast-container {
-        left: 32px;
-        bottom: 32px;
-        max-width: 90%;
-    }
-}
-
-@media only screen and (max-width: 540px) {
-    .toast {
-        width: 100%;
-        border-radius: 0;
-    }
-}
-
-@media only screen and (min-width: 541px) and (max-width: 768px) {
-    .toast {
-        width: 540px;
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    .toast {
-        float: left;
-    }
-} */
