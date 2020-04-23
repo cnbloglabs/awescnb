@@ -1,6 +1,7 @@
+import setIcons from './icons'
+import dragMenu from '@plugins/dragMenu'
 import themeColor from '@plugins/themeColor'
 import setBodyBackground from '@plugins/background'
-import setIcons from './icons/index.js'
 import imageBox from '@plugins/imageBox'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
@@ -13,17 +14,18 @@ import comments from '@plugins/comments'
 import signature from '@plugins/signature'
 import postSignature from '@plugins/postSignature'
 import highlight from '@plugins/highlight'
-import btns from '@plugins/btns'
+// import btns from '@plugins/btns'
 import postTopimage from '@plugins/postTopimage'
 import emoji from '@plugins/emoji'
 import lock from '@plugins/lock'
 import postMessage from '@plugins/postMessage'
-import back2top from '@plugins/back2top'
+// import back2top from '@plugins/back2top'
 import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
 import { shootInitial } from '@plugins/barrage'
 
 function plugins() {
+    dragMenu()
     themeColor()
     setIcons()
     setBodyBackground()
@@ -40,12 +42,12 @@ function plugins() {
     postSignature()
     highlight()
     copy()
-    btns()
+    // btns()
     postTopimage()
     emoji()
     lock()
     postMessage()
-    back2top()
+    // back2top()
     qrcode()
     charts()
 }
