@@ -51,7 +51,7 @@ const log = [
         color: '#f0932b',
     },
     {
-        str: '# 👌使用awescnb快速构建安装分享博客园皮肤',
+        str: '# 👌使用awescnb快速构建、安装、分享博客园皮肤',
         color: '#341f97',
     },
     {
