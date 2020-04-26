@@ -1,12 +1,26 @@
 import { animeImages } from '@/constants/urls'
 
 /**
- * @description 获编辑器类型是否为md
+ * @description 创建link标签
+ * @param {href} String
  */
-function edtType() {
-    const isMd = $('#cnblogs_post_body').hasClass('cnblogs-markdown')
-    let type = isMd ? 'md' : 'other'
-    return type
+function addCss(href) {
+    $('head').append('<link>')
+    const toolbarCss = $('head').children(':last')
+    toolbarCss.attr({
+        rel: 'stylesheet',
+        type: 'text/css',
+        href,
+    })
+}
+
+/**
+ * @description 获编辑器类型是否为md
+ * @retuens Boolean
+ */
+function isMd() {
+    const bool = $('#cnblogs_post_body').hasClass('cnblogs-markdown')
+    return bool
 }
 
 /**
@@ -321,6 +335,7 @@ function userAgent() {
 }
 
 export {
+    isMd,
     randomProperty,
     randomImgurl,
     randomColor,
@@ -338,6 +353,6 @@ export {
     getDate,
     prettyLog,
     cacheScript,
-    edtType,
     sleep,
+    addCss,
 }
