@@ -43,12 +43,12 @@
         background: rgba(211, 210, 210, 0);
     }
 }
-
+#catalog,
 body,
 .emoji-picker__emojis {
     @extend .scrollbar-gradient;
 }
-
+#cnblogs_post_body table，
 pre,
 code {
     @extend .scrollbar-code;
