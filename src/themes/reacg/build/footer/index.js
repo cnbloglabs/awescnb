@@ -1,13 +1,12 @@
+import './index.scss'
 import { gitee, version } from '../../constants/message'
-import './index.css'
-const options = window.opts
 
-// 设置footer
 function footer() {
+    const { links } = window.opts
     const nickName = $('#profile_block a:first')
         .text()
         .trim()
-    const config = options.links
+    const config = links
     const $copyright = `<div id='copyright'>
 					<span>
 						Copyright ©
@@ -26,8 +25,9 @@ function footer() {
             `<li><a href='${config[i].link}'>${config[i].name}</a></li>`,
         )
     }
-    const $footer = `<footer>${$links.prop('outerHTML')}${$copyright}</footer>`
-    $('#home').append($footer)
+    $('#footer')
+        .empty()
+        .append(`${$links.prop('outerHTML')}${$copyright}`)
 }
 
 export default footer
