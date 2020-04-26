@@ -8,7 +8,7 @@ class AwesCnb {
             building()
         } else {
             $.extend({
-                config: options => {
+                awescnb: options => {
                     if (options) $.extend(true, defaultOptions, options)
                     window.opts = defaultOptions
                     building()
