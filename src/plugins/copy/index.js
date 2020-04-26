@@ -45,7 +45,7 @@ function click() {
         document.execCommand('copy')
 
         $(this).text('copied')
-        toast('已复制✔')
+        toast('已复制 ✔')
 
         setTimeout(() => {
             $(this).text('copy')

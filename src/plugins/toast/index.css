@@ -23,10 +23,3 @@
     font-weight: 300;
     word-break: keep-all;
 }
-
-.toast .btn,
-.toast .btn-flat {
-    color: #00e676;
-    margin: 0;
-    margin-left: 3rem;
-}
