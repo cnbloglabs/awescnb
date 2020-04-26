@@ -2,14 +2,15 @@
 // 你无需直接更改webpack配置文件
 // 直接更改这里的配置
 // 其他配置我都帮你做好了
-// 当然，有特殊需求你可以自行更改
+// 当然，有特殊需求自行更改
 
 module.exports = {
     themeName: 'reacg',
     template: 'post',
     eslint: true,
     sourceMap: false,
-    openAnalyzer: true,
+    openAnalyzer: false,
+    cssExtract: false,
 }
 
 ///////// options /////////
@@ -18,6 +19,7 @@ module.exports = {
 // eslint - 是否开启eslint
 // sourceMap - 是否开启sourcemap
 // openAnalyzer - build 时开启 size 分析
+// cssExtract 单独抽离css
 
 ///////// run the build /////////
 // - npm start
