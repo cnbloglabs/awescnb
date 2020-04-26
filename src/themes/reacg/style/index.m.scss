@@ -19,6 +19,9 @@
 
     #main {
         padding-top: 1.6rem;
+        #mainContent {
+            width: 96vw;
+        }
     }
 
     .forFlow #blog-comments-placeholder.comment_vote,
