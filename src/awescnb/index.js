@@ -5,8 +5,7 @@ import defaultOptions from '@/constants/default'
 class AwesCnb {
     // building
     init(building) {
-        if (env === 'dev') {
-            window.opts = defaultOptions
+        if (env === 'dev' || $.awesCnb) {
             building()
             require('./build/index')()
         } else {
