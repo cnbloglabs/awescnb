@@ -6,8 +6,6 @@ import scroll from './scroll'
 import catalog from './catalog'
 import indexList from './indexList'
 import notice from './notice'
-import layout from './layout'
-
 
 function build() {
     mobileMenu()
@@ -18,7 +16,6 @@ function build() {
     footer()
     indexList()
     notice()
-    layout()
 }
 
 export default build
