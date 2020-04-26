@@ -7,7 +7,7 @@ import { userAgent } from '@tools'
 const options = window.opts.click
 let clickEffects
 
-if (options.enable) {
+if (options.enable && userAgent() === 'pc') {
     $('body').append(`<canvas id="click-effects"></canvas>`)
     window.human = false
     var canvasEl = document.querySelector('#click-effects')
@@ -22,8 +22,6 @@ if (options.enable) {
     var colors = options.colors || ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
     clickEffects = () => {
-        if (!options.enable) return
-        if (userAgent() !== 'pc') return
         canvasEl.style.position = 'fixed'
         canvasEl.style.top = 0
         canvasEl.width = window.innerWidth * 2
@@ -165,7 +163,7 @@ if (options.enable) {
 }
 
 function setClickEffects() {
-    if (!options.enable) return
+    if (!options.enable || userAgent() === 'phone') return
     clickEffects()
 }
 
