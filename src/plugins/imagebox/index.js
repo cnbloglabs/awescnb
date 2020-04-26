@@ -33,7 +33,9 @@ function buildCommentsList() {
             `<a class='lightbox-comments' href='${item.attr('src')}'></a>`,
         )
     })
-    baguetteBox.run('.lightbox-comments')
+    baguetteBox.run('.lightbox-comments', {
+        animation: 'fadeIn',
+    })
 }
 
 // 轮询评论区
