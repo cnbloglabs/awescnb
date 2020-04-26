@@ -3,8 +3,9 @@ import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
+    // building
     init(building) {
-        if (env === 'dev') {
+        if (env === 'dev' || $.awesCnb) {
             building()
         } else {
             $.extend({
