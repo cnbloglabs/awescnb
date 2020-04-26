@@ -2,15 +2,15 @@
 // 引入即可
 
 import './index.css'
-import { pageName, edtType } from '@/assets/utils/tools'
+import { pageName, isMd } from '@/assets/utils/tools'
 import toast from '@plugins/toast'
 
 // 添加按钮
-function addBtns(type) {
+function addBtns() {
     let pres = $('#cnblogs_post_body, #blog-comments-placeholder').find('pre')
     if (!pres.length) return
 
-    if (type === 'md') {
+    if (isMd()) {
         $.each(pres, (index, pre) => {
             $(pre).prepend(`<div class="copy-btns">copy</div>`)
         })
@@ -22,14 +22,14 @@ function addBtns(type) {
 }
 
 // 点击事件
-function click(type) {
-    const position = type === 'md' ? 'pre' : '.cnblogs_code'
+function click() {
+    const position = isMd() ? 'pre' : '.cnblogs_code'
     $(position).on('click', '.copy-btns', function() {
         const sel = window.getSelection()
         const range = document.createRange()
         sel.removeAllRanges()
-
-        type === 'md'
+        
+        isMd()
             ? range.selectNode($(this).siblings('code')[0])
             : range.selectNode($(this).siblings('pre')[0])
 
@@ -55,9 +55,8 @@ function click(type) {
 
 function copy() {
     if (pageName() !== 'post') return
-    const editorType = edtType()
-    addBtns(editorType)
-    click(editorType)
+    addBtns()
+    click()
 }
 
 export default copy
