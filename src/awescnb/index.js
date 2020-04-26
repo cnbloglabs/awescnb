@@ -6,27 +6,30 @@ class AwesCnb {
     // building
     init(building) {
         if (env === 'dev' || $.awesCnb) {
+            window.opts = defaultOptions
             building()
+            require('./build/index')()
         } else {
             $.extend({
                 awesCnb: options => {
                     if (options) $.extend(true, defaultOptions, options)
                     window.opts = defaultOptions
                     building()
+                    require('./build/index')()
                 },
             })
         }
     }
 
     // dev env
-    devOpts() {
-        if (env === 'dev') {
-            window.opts = defaultOptions
-        }
-        require('./build/index')()
-    }
+    // devOpts() {
+    //     if (env === 'dev') {
+    //         window.opts = defaultOptions
+    //     }
+    //     require('./build/index')()
+    // }
 }
 
-new AwesCnb().devOpts()
+// new AwesCnb().devOpts()
 
 export default AwesCnb
