@@ -66,6 +66,12 @@ const defaultOptions = {
         enable: true,
         type: 'complex',
     },
+    // 右下角按钮列表
+    tools: {
+        enable: true,
+        initialOpen: true,
+        draggable: false,
+    },
     // live2d模型
     live2d: {
         enable: true,
