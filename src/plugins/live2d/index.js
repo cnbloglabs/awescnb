@@ -1,7 +1,7 @@
 // 设置看板娘
 // 引入即可
 
-import { pageName, userAgent, cacheScript, getRandomProperty } from '@tools'
+import { pageName, userAgent, cacheScript, randomProperty } from '@tools'
 import { live2d, live2djs } from '@constants/urls'
 import live2dModels from '@/constants/live2dModels'
 import env from '@/constants/env'
@@ -15,7 +15,7 @@ const setLive2d = () => {
 
     let model =
         options.model === 'random'
-            ? live2dModels[getRandomProperty(live2dModels)]
+            ? live2dModels[randomProperty(live2dModels)]
             : live2dModels[options.model]
     if (env === 'dev') {
         console.log('live2d model：', model)

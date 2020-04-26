@@ -1,13 +1,13 @@
-import { pageName } from '@tools'
+import { pageName, userAgent } from '@tools'
 
-function extend () {
-    if(pageName() === 'index') {
-        $('#mainContent').css('width', '55vw')
-    }
+// 首页内容区域调整
+function extend() {
+    if (pageName() !== 'index') return
+    if (userAgent() !== 'pc') return
+    $('#mainContent').css('width', '55vw')
 }
 
-
-function layout () {
+function layout() {
     extend()
 }
 

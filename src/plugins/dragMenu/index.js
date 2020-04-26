@@ -1,15 +1,15 @@
 import './index.css'
 import anime from 'animejs/lib/anime.es.js'
 import toast from '@plugins/toast'
-import { pageName } from '@tools'
-// import { cacheScript } from '@tools'
-// import { jqueryui } from '@constants/urls'
-const back2topConfig = window.opts.back2top
+import { pageName, userAgent, cacheScript } from '@tools'
+import { jqueryui } from '@constants/urls'
 
+const back2topConfig = window.opts.back2top
+const { enable, initialOpen, draggable } = window.opts.tools
 var timeOut
 // db timer
 var timer = null
-// 创建子项
+
 class Item {
     constructor(
         content,
@@ -96,27 +96,31 @@ class Menu {
                     menu.click()
                 }
             })
-            // item.$element.draggable(
-            //     {
-            //         start: function() {
-            //             menu.close()
-            //             item.isMoving = true
-            //         },
-            //     },
-            //     {
-            //         drag: function() {
-            //             if (item.next) {
-            //                 item.next.updatePosition()
-            //             }
-            //         },
-            //     },
-            //     {
-            //         stop: function() {
-            //             item.isMoving = false
-            //             item.next.moveTo(item)
-            //         },
-            //     },
-            // )
+            if (draggable) {
+                cacheScript(jqueryui, () => {
+                    item.$element.draggable(
+                        {
+                            start: function() {
+                                menu.close()
+                                item.isMoving = true
+                            },
+                        },
+                        {
+                            drag: function() {
+                                if (item.next) {
+                                    item.next.updatePosition()
+                                }
+                            },
+                        },
+                        {
+                            stop: function() {
+                                item.isMoving = false
+                                item.next.moveTo(item)
+                            },
+                        },
+                    )
+                })
+            }
         } else {
             this.last.next = item
             item.prev = this.last
@@ -195,7 +199,7 @@ function create() {
     // 关注
     const focus = () => {
         toast('谢谢关注🍺')
-        window.followByGroup()
+        window.follow()()
     }
 
     // 推荐
@@ -225,7 +229,7 @@ function create() {
 
     var menu = new Menu('#myMenu')
 
-    var item1 = new Item('🚀', '#48dbfb', 'dblclick', back2top, '回顶')
+    var item1 = new Item('🚀', '#48dbfb', 'dblclick', back2top, '双击')
     menu.add(item1)
     var item3 = new Item('💗', '#feca57', 'click', focus, '关注')
     menu.add(item3)
@@ -244,6 +248,15 @@ function create() {
         .queue(function(next) {
             menu.open()
             next()
+            if (userAgent() === 'phone') {
+                $(document)
+                    .delay(1000)
+                    .queue(function(next) {
+                        menu.close()
+                        next()
+                    })
+            }
+            if (initialOpen) return
             $(document)
                 .delay(1000)
                 .queue(function(next) {
@@ -255,8 +268,8 @@ function create() {
 
 function dragMenu() {
     if (!back2topConfig.enable) return
+    if (!enable) return
     create()
-    // cacheScript(jqueryui, create)
 }
 
 export default dragMenu

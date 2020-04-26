@@ -1,6 +1,6 @@
 import './index.css'
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty, userAgent, cacheScript } from '@tools'
+import { pageName, randomProperty, cacheScript } from '@tools'
 import { iconInSvg } from '../../utils/tools'
 import { iconfont } from '../../constants/urls'
 import icons from '../../constants/icons'
@@ -166,15 +166,15 @@ function nav() {
 }
 
 // 移动端头部菜单 toggle  (博客园  首页 ...)
-function mobileNavDropdown() {
-    if (userAgent() !== 'phone') return
-    const ele = `<div id='custom-mobile-nav'>${iconInSvg(icons.look)}</div>`
-    $('#navList').before(ele)
+// function mobileNavDropdown() {
+//     if (userAgent() !== 'phone') return
+//     const ele = `<div id='custom-mobile-nav'>${iconInSvg(icons.look)}</div>`
+//     $('#navList').before(ele)
 
-    $('#custom-mobile-nav').click(function() {
-        $('#navList').toggle(300, 'swing')
-    })
-}
+//     $('#custom-mobile-nav').click(function() {
+//         $('#navList').toggle(300, 'swing')
+//     })
+// }
 
 // 首页文章题目 icon
 function setIndexPosttitleIcon() {
@@ -230,7 +230,7 @@ function build() {
     setEntrylistPosttitleIcon()
     setHeadlineIcon()
     setPostTitleIcon()
-    mobileNavDropdown()
+    // mobileNavDropdown()
     nav()
 }
 

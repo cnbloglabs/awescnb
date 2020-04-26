@@ -1,11 +1,13 @@
 // 设置代码行号
 // 引入即可
-import './index.css'
+import './index.scss'
 import { pageName, cacheScript } from '@tools'
 import { linenumbersjs } from '@constants/urls'
 
 function build() {
-    hljs.initLineNumbersOnLoad()
+    hljs.initLineNumbersOnLoad({
+        singleLine: true,
+    })
 }
 
 function linenumbers() {

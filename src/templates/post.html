@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>awescnb test1 - 已注销用户456123 - 博客园</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css" />
-    <link rel="stylesheet" href="https://www.cnblogs.com/css/blog-common.min.css?v=BKtyzabbeYJEVOaELkxmRjHbp7LT-v37GzrU5S24bJk">
+    <link rel="stylesheet"
+        href="https://www.cnblogs.com/css/blog-common.min.css?v=BKtyzabbeYJEVOaELkxmRjHbp7LT-v37GzrU5S24bJk">
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 </head>
@@ -14,7 +15,8 @@
     <div id="home">
         <div id="header">
             <div id="blogTitle">
-                <a id="lnkBlogLogo" href="https://www.cnblogs.com/guangzanassistant/"><img id="blogLogo" src="https://dummyimage.com/50" alt="返回主页"></a>
+                <a id="lnkBlogLogo" href="https://www.cnblogs.com/guangzanassistant/"><img id="blogLogo"
+                        src="https://dummyimage.com/50" alt="返回主页"></a>
                 <h1><a id="Header1_HeaderTitle" class="headermaintitle
                         HeaderMainTitle" href="https://www.cnblogs.com/guangzanassistant/">已注销</a>
                 </h1>
@@ -35,7 +37,8 @@
                             新随笔</a>
                     </li>
                     <li>
-                        <a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B7%B2%E6%B3%A8%E9%94%80%E7%94%A8%E6%88%B7456123">
+                        <a id="blog_nav_contact" class="menu"
+                            href="https://msg.cnblogs.com/send/%E5%B7%B2%E6%B3%A8%E9%94%80%E7%94%A8%E6%88%B7456123">
                             联系</a></li>
                     <li>
                         <a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/guangzanassistant/rss/">
@@ -72,15 +75,22 @@
                             <div class="post">
                                 <h1 class="postTitle">
 
-                                    <a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/guangzanassistant/p/12549775.html">markdonwn 测试</a>
+                                    <a id="cb_post_title_url" class="postTitle2"
+                                        href="https://www.cnblogs.com/guangzanassistant/p/12549775.html">markdonwn
+                                        测试</a>
 
                                 </h1>
                                 <div class="clear"></div>
                                 <div class="postBody">
 
                                     <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-                                        <h1 id="前置">前置</h1>
-                                        <p>如果你曾使用 webpack 构建应用，就会知道如果把所有配置都写在 <code>webpack.config.js</code> 中那将是灾难。正如你所见，我现在使用的这套博客园皮肤是使用 gulp 构建的，如果你不熟悉 gulp, 那你肯定熟悉 webpack. 下面将介绍我使用这两个工具是如何抽离配置的，先从 webpack 开始.</p>
+                                        <h1 id="前置">开始</h1>
+                                        <blockquote>
+                                            <p>如有错误或不足，欢迎指正！</p>
+                                        </blockquote>
+                                        <p>如果你曾使用 webpack 构建应用，就会知道如果把所有配置都写在 <code>webpack.config.js</code>
+                                            中那将是灾难。正如你所见，我现在使用的这套博客园皮肤是使用 gulp 构建的，如果你不熟悉 gulp, 那你肯定熟悉 webpack.
+                                            下面将介绍我使用这两个工具是如何抽离配置的，先从 webpack 开始.</p>
                                         <h1 id="webpack">webpack</h1>
                                         <h2 id="原因">原因</h2>
                                         <p>webpack 默认的 <code>webpack.config.js</code> 长这样:</p>
@@ -91,90 +101,29 @@
   <span class="hljs-comment">//show scroll 1111111111111111111111111111111111111111111111111111111111111111111111111111...</span>
 }
 </code></pre>
-                                        <p>这里最让人头疼的就是 <code>module</code> 内的层层嵌套。例如，我稍稍处理 css 和 js 就会像下面这样:</p>
-                                        <pre><code class="language-js hljs javascript"> <span class="hljs-built_in">module</span>: {
-        <span class="hljs-attr">rules</span>: [
-            {
-                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
-                <span class="hljs-attr">use</span>: [
-                    <span class="hljs-string">'style-loader'</span>,
-                    {
-                        <span class="hljs-attr">loader</span>: <span class="hljs-string">'css-loader'</span>,
-                        <span class="hljs-attr">options</span>: {
-                            <span class="hljs-attr">importLoaders</span>: <span class="hljs-number">1</span>,
-                        },
-                    },
-                    <span class="hljs-string">'postcss-loader'</span>,
-                ],
-            },
-            {
-                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,
-                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
-                <span class="hljs-attr">use</span>: [
-                    {
-                        <span class="hljs-attr">loader</span>: <span class="hljs-string">'babel-loader'</span>,
-                        <span class="hljs-attr">options</span>: {
-                            <span class="hljs-attr">presets</span>: [<span class="hljs-string">'@babel/preset-env'</span>],
-                        },
-                    },
-                    {
-                        <span class="hljs-attr">loader</span>: <span class="hljs-string">'eslint-loader'</span>,
-                        <span class="hljs-attr">options</span>: {
-                            <span class="hljs-attr">cache</span>: <span class="hljs-literal">true</span>,
-                        },
-                    },
-                ],
-            },
-        ],
-    },
-</code></pre>
-                                        <p>如果再去区分生产环境和开发环境可能看起来更加混乱。好一点的做法是，抽离不同环境的 module 或者其他配置，根据环境来决定最终导出的项。但是无法改变的是这些东西都存在一个 <code>webpack.config.js</code> 文件中。如果应用程序需要使用大量的 loader, 会显得文件又长又混乱，需要修改一些配置时容易出错。寻找和出错都会浪费时间.</p>
+                                        <p>如果再去区分生产环境和开发环境可能看起来更加混乱。好一点的做法是，抽离不同环境的 module
+                                            或者其他配置，根据环境来决定最终导出的项。但是无法改变的是这些东西都存在一个 <code>webpack.config.js</code>
+                                            文件中。如果应用程序需要使用大量的 loader, 会显得文件又长又混乱，需要修改一些配置时容易出错。寻找和出错都会浪费时间.</p>
                                         <h2 id="webpack-merge">webpack-merge</h2>
                                         <p><code>npm i -D webpack-merge</code><br>
-                                            Webpack-merge 提供了一个函数，该函数将数组串联并合并创建新对象的对象。如果遇到函数，它将执行它们，通过算法运行结果，然后再次将返回的值包装在函数中。</p>
+                                            Webpack-merge
+                                            提供了一个函数，该函数将数组串联并合并创建新对象的对象。如果遇到函数，它将执行它们，通过算法运行结果，然后再次将返回的值包装在函数中。</p>
                                         <p>语法</p>
-                                        <pre><code class="language-js hljs javascript"><span class="hljs-comment">// 默认的方式</span>
-<span class="hljs-keyword">const</span> output = merge (object1, object2, object3, ...);
-
-<span class="hljs-comment">// 数组对象</span>
-<span class="hljs-comment">// 这适用于所有可用的功能。</span>
-<span class="hljs-keyword">const</span> output = merge ([object1, object2, object3]);
-
-<span class="hljs-comment">// 右边优先</span>
-<span class="hljs-keyword">const</span> output = merge (
-  { <span class="hljs-attr">fruit</span>: <span class="hljs-string">"apple"</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">"red"</span> },
-  { <span class="hljs-attr">fruit</span>: <span class="hljs-string">"strawberries"</span> }
-);
-</code></pre>
-                                        <p>一般使用默认的方式就够了，深入了解 <a href="https://www.npmjs.com/package/webpack-merge">Webpack-merge</a>. 接下来不在使用 <code>webpack.config.js</code>, 在项目根目录新建 config 文件夹。文件夹下新建:</p>
+                                        <p>一般使用默认的方式就够了，深入了解 <a
+                                                href="https://www.npmjs.com/package/webpack-merge">Webpack-merge</a>.
+                                            接下来不在使用 <code>webpack.config.js</code>, 在项目根目录新建 config 文件夹。文件夹下新建:</p>
                                         <ul>
                                             <li>webpack.base.js 公共的配置</li>
                                             <li>webpack.dev.js 开发环境配置</li>
                                             <li>webpack.prod.js 生产环境配置</li>
                                         </ul>
                                         <p><strong>webpack.base.js</strong></p>
-                                        <pre><code class="language-js hljs javascript"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span> (<span class="hljs-string">"path"</span>)
-
-<span class="hljs-built_in">module</span>.exports = {
-  <span class="hljs-attr">entry</span>: {
-    <span class="hljs-comment">// 这里是多入口</span>
-    index: <span class="hljs-string">"./src/main.js"</span>,
-    <span class="hljs-attr">reacg</span>: <span class="hljs-string">"./src/themes/reacg/index.js"</span>
-    <span class="hljs-comment">//...</span>
-  },
-  <span class="hljs-attr">output</span>: {
-    <span class="hljs-attr">filename</span>: <span class="hljs-string">"[name].min.js"</span>,
-    <span class="hljs-attr">path</span>: path.join (__dirname, <span class="hljs-string">".."</span>, <span class="hljs-string">"dist"</span>)
-  },
-  <span class="hljs-attr">resolve</span>: {
-    <span class="hljs-attr">alias</span>: {
-      <span class="hljs-string">"@"</span>: path.resolve (<span class="hljs-string">"src"</span>)
-    }
-  }
-}
-</code></pre>
-                                        <p>这里需要注意的一点是 <code>output.path</code> 需要处理一下路径.<code>path.join (__dirname,"..","dist")</code>, 这样就能够和原来一样将打包得到的 dist 目录输出到根目录.<br>
-                                            这句代码的意思是获取当前绝对路径的上一层路径，就是项目的根目录了。另外的 <code>webpack.dev.js</code> 和 <code>webpack.prod.js</code> 根据项目需要分别配置就可以了。这样如果再去添加或修改一些配置就能一目了然了。最后还需要更改一下 <code>package.json</code> 中的 <code>script</code>:</p>
+                                        <p>这里需要注意的一点是 <code>output.path</code>
+                                            需要处理一下路径.<code>path.join (__dirname,"..","dist")</code>, 这样就能够和原来一样将打包得到的
+                                            dist 目录输出到根目录.<br>
+                                            这句代码的意思是获取当前绝对路径的上一层路径，就是项目的根目录了。另外的 <code>webpack.dev.js</code> 和
+                                            <code>webpack.prod.js</code> 根据项目需要分别配置就可以了。这样如果再去添加或修改一些配置就能一目了然了。最后还需要更改一下
+                                            <code>package.json</code> 中的 <code>script</code>:</p>
                                         <pre><code class="language-json hljs"><span class="hljs-string">"scripts"</span>: {
     <span class="hljs-attr">"start"</span>: <span class="hljs-string">"webpack-dev-server --config config/webpack.dev.js"</span>,
     <span class="hljs-attr">"build"</span>: <span class="hljs-string">"webpack --config config/webpack.prod.js"</span>
@@ -185,18 +134,25 @@
                                             <li>npm run build 打包项目</li>
                                         </ul>
                                         <p>另外，如果你有兴趣，这里有一个使用 webpack 构建的 <strong>DEMO</strong> 供你参考:<br>
-                                            <a href="https://gitee.com/guangzan/awescnb2.0"><img src="https://gitee.com/guangzan/awescnb2.0/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b" alt="GZ/awescnb2.0"></a></p>
+                                            <a href="https://gitee.com/guangzan/awescnb2.0"><img
+                                                    src="https://gitee.com/guangzan/awescnb2.0/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b"
+                                                    alt="GZ/awescnb2.0"></a></p>
                                         <h1 id="gulp">gulp</h1>
-                                        <p>如果你使用 gulp 构建应用，抽离它的配置就相当简单了。正常情况下，根目录下有一个 <code>gulpfile.js</code> 文件，在这里做一些配置。最后通过 <code>exports</code> 导出配置，通过 <code>gulp</code> 命令或者自定义命令来运行 task (任务). 要将不同环境的配置分开写只需要将 <code>gulpfile.js</code> 文件换成同名的文件夹并新建:</p>
+                                        <p>如果你使用 gulp 构建应用，抽离它的配置就相当简单了。正常情况下，根目录下有一个 <code>gulpfile.js</code>
+                                            文件，在这里做一些配置。最后通过 <code>exports</code> 导出配置，通过 <code>gulp</code> 命令或者自定义命令来运行
+                                            task (任务). 要将不同环境的配置分开写只需要将 <code>gulpfile.js</code> 文件换成同名的文件夹并新建:</p>
                                         <ul>
                                             <li>index.js 必须，被当作 gulpfile.js 使用</li>
                                             <li>options.js 一些常量</li>
                                             <li>gulp.dev.js 开发环境配置</li>
                                             <li>gulp.prod.js 生产环境配置</li>
                                         </ul>
-                                        <p>除了必须的 index 之外可以随意扩展。如果需要使用 npm 来代替 gulp 命令，只需要在 <code>package.json</code> 中的 <code>script</code> 中定义.</p>
+                                        <p>除了必须的 index 之外可以随意扩展。如果需要使用 npm 来代替 gulp 命令，只需要在 <code>package.json</code> 中的
+                                            <code>script</code> 中定义.</p>
                                         <p>如果你有兴趣，这里同样有一个使用 gulp 构建的 <strong>DEMO</strong> 供你参考:<br>
-                                            <a href="https://gitee.com/guangzan/awescnb"><img src="https://gitee.com/guangzan/awescnb/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b" alt="GZ/awescnb"></a></p>
+                                            <a href="https://gitee.com/guangzan/awescnb"><img
+                                                    src="https://gitee.com/guangzan/awescnb/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b"
+                                                    alt="GZ/awescnb"></a></p>
 
                                     </div>
                                     <div id="MySignature"></div>
@@ -204,25 +160,43 @@
                                     <div id="blog_post_info_block">
                                         <div id="BlogPostCategory">
                                             分类:
-                                            <a href="https://www.cnblogs.com/guangzanassistant/category/1605656.html" target="_blank">测试1</a></div>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/category/1605656.html"
+                                                target="_blank">测试1</a></div>
                                         <div id="EntryTag">
                                             标签:
-                                            <a href="https://www.cnblogs.com/guangzanassistant/tag/awescnb/">awescnb</a>, <a href="https://www.cnblogs.com/guangzanassistant/tag/test/">test</a></div>
+                                            <a
+                                                href="https://www.cnblogs.com/guangzanassistant/tag/awescnb/">awescnb</a>,
+                                            <a href="https://www.cnblogs.com/guangzanassistant/tag/test/">test</a></div>
 
                                         <div id="blog_post_info">
                                             <div id="green_channel">
-                                                <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(12549775,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
-                                                <a id="green_channel_follow" onclick="follow('8a1d5911-2fd3-40d4-1799-08d6ae5bbb5c');" href="javascript:void(0);">关注我</a>
-                                                <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
-                                                <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="https://common.cnblogs.com/images/icon_weibo_24.png" alt=""></a>
-                                                <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="https://common.cnblogs.com/images/wechat.png" alt=""></a>
+                                                <a href="javascript:void(0);" id="green_channel_digg"
+                                                    onclick="DiggIt(12549775,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+                                                <a id="green_channel_follow"
+                                                    onclick="follow('8a1d5911-2fd3-40d4-1799-08d6ae5bbb5c');"
+                                                    href="javascript:void(0);">关注我</a>
+                                                <a id="green_channel_favorite"
+                                                    onclick="AddToWz(cb_entryId);return false;"
+                                                    href="javascript:void(0);">收藏该文</a>
+                                                <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博"
+                                                    onclick="ShareToTsina()"><img
+                                                        src="https://common.cnblogs.com/images/icon_weibo_24.png"
+                                                        alt=""></a>
+                                                <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信"
+                                                    onclick="shareOnWechat()"><img
+                                                        src="https://common.cnblogs.com/images/wechat.png" alt=""></a>
                                             </div>
                                             <div id="author_profile">
                                                 <div id="author_profile_info" class="author_profile_info">
                                                     <div id="author_profile_detail" class="author_profile_info">
-                                                        <a href="https://home.cnblogs.com/u/guangzanassistant/">awescnb-test</a><br>
-                                                        <a href="https://home.cnblogs.com/u/guangzanassistant/followees/">关注 - 2</a><br>
-                                                        <a href="https://home.cnblogs.com/u/guangzanassistant/followers/">粉丝 - 0</a>
+                                                        <a
+                                                            href="https://home.cnblogs.com/u/guangzanassistant/">awescnb-test</a><br>
+                                                        <a
+                                                            href="https://home.cnblogs.com/u/guangzanassistant/followees/">关注
+                                                            - 2</a><br>
+                                                        <a
+                                                            href="https://home.cnblogs.com/u/guangzanassistant/followers/">粉丝
+                                                            - 0</a>
                                                     </div>
                                                 </div>
                                                 <div class="clear"></div>
@@ -250,7 +224,10 @@
                                         <div class="clear"></div>
                                         <div id="post_next_prev">
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/p/12380553.html" class="p_n_p_prefix">« </a> 上一篇： <a href="https://www.cnblogs.com/guangzanassistant/p/12380553.html" title="发布于 2020-02-28 22:05">awescnb test1</a>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/p/12380553.html"
+                                                class="p_n_p_prefix">« </a> 上一篇： <a
+                                                href="https://www.cnblogs.com/guangzanassistant/p/12380553.html"
+                                                title="发布于 2020-02-28 22:05">awescnb test1</a>
 
                                         </div>
                                     </div>
@@ -260,17 +237,415 @@
                                     <a href="https://www.cnblogs.com/guangzanassistant/">awescnb-test</a>&nbsp;
                                     阅读(<span id="post_view_count">0</span>)&nbsp;
                                     评论(<span id="post_comment_count">0</span>)&nbsp;
-                                    <a href="https://www.cnblogs.com/guangzanassistant/p/12549775.md" target="_blank">MD</a>&nbsp;
-                                    <a href="https://i.cnblogs.com/EditPosts.aspx?postid=12549775" rel="nofollow">编辑(未发布)</a>&nbsp;
+                                    <a href="https://www.cnblogs.com/guangzanassistant/p/12549775.md"
+                                        target="_blank">MD</a>&nbsp;
+                                    <a href="https://i.cnblogs.com/EditPosts.aspx?postid=12549775"
+                                        rel="nofollow">编辑(未发布)</a>&nbsp;
                                     <a href="javascript:void(0)" onclick="AddToWz(12549775);return false;">收藏</a></div>
                             </div>
                         </div>
                         <a name="!comments"></a>
-                        <div id="blog-comments-placeholder"></div>
+                        <div id="blog-comments-placeholder">
+
+<div id="comment_pager_top">
+    
+</div>
+
+<br>
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"><div class="feedbackNoItems"></div></div>	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    <a href="javascript:void(0);" onclick="return ReplyComment(4493987, 'yXucN5rWXshiIMlWVyUpED0PNkUG3fjSdjWV5LW9MxGppn/vjAxWJw==')">
+        回复
+    </a>
+    <a href="javascript:void(0);" onclick="return QuoteComment(4493987, 'yXucN5rWXshiIMlWVyUpED0PNkUG3fjSdjWV5LW9MxGppn/vjAxWJw==')">
+        引用
+    </a>
+    
+    <a href="javascript:void(0);" onclick="return DelComment(4493987, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4493987" class="layer">#1楼</a>
+<a name="4493987" id="comment_anchor_4493987"></a>
+
+ 
+<span class="comment_date">2020-02-06 14:48</span>
+
+ 
+
+            <a id="a_comment_author_4493987" href="https://www.cnblogs.com/khldragon/" target="_blank">khldragon</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4493987, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4493987, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/u104238.jpg
+        " class="avatar"></div>
+				
+<div id="comment_body_4493987" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    你这个鼠标点后的特效是真的棒！
+</div>
+        
+        <span id="comment_4493987_avatar" style="display:none">
+            https://pic.cnblogs.com/face/u104238.jpg
+        </span>
+
+			</div>
+		</div>
+		<div class="feedbackItem custom-comments-author">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    <a href="javascript:void(0);" onclick="return GetCommentBody(4494135)">
+        修改
+    </a>
+    <a href="javascript:void(0);" onclick="return DelComment(4494135, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4494135" class="layer">#2楼</a>
+<a name="4494135" id="comment_anchor_4494135"></a>
+[<span class="louzhu">楼主</span>]
+ 
+<span class="comment_date">2020-02-06 20:17</span>
+
+ 
+
+            <a id="a_comment_author_4494135" href="https://www.cnblogs.com/guangzan/" target="_blank">DIVMonster</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4494135, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4494135, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        " class="avatar"></div>
+				
+<div id="comment_body_4494135" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    <a href="#4493987" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,4493987);">@</a>
+khldragon<br>  谢谢支持
+</div>
+        
+        <span id="comment_4494135_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        </span>
+
+			</div>
+		</div>
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    <a href="javascript:void(0);" onclick="return ReplyComment(4494220, 'GBrQFW9NPgRJXqt6NDQ0+zNwbb7xhjeFUNCnE9giCrGks3h+6OU6Ug==')">
+        回复
+    </a>
+    <a href="javascript:void(0);" onclick="return QuoteComment(4494220, 'GBrQFW9NPgRJXqt6NDQ0+zNwbb7xhjeFUNCnE9giCrGks3h+6OU6Ug==')">
+        引用
+    </a>
+    
+    <a href="javascript:void(0);" onclick="return DelComment(4494220, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4494220" class="layer">#3楼</a>
+<a name="4494220" id="comment_anchor_4494220"></a>
+
+ 
+<span class="comment_date">2020-02-06 22:53</span>
+
+ 
+
+            <a id="a_comment_author_4494220" href="https://www.cnblogs.com/qianxunman/" target="_blank">badGentleMan</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4494220, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4494220, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/1482713/20180905224730.png
+        " class="avatar"></div>
+				
+<div id="comment_body_4494220" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    这个页面特效真溜,但是感觉有点费CPU
+</div>
+        
+        <span id="comment_4494220_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1482713/20180905224730.png
+        </span>
+
+			</div>
+		</div>
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    <a href="javascript:void(0);" onclick="return ReplyComment(4494274, 'Iut+meutYV9YqDgs6ou+xzFIu0XSMCdk1EXPDS1+q+gg7E4e9LrswQ==')">
+        回复
+    </a>
+    <a href="javascript:void(0);" onclick="return QuoteComment(4494274, 'Iut+meutYV9YqDgs6ou+xzFIu0XSMCdk1EXPDS1+q+gg7E4e9LrswQ==')">
+        引用
+    </a>
+    
+    <a href="javascript:void(0);" onclick="return DelComment(4494274, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4494274" class="layer">#4楼</a>
+<a name="4494274" id="comment_anchor_4494274"></a>
+
+ 
+<span class="comment_date">2020-02-07 00:50</span>
+
+ 
+
+            <a id="a_comment_author_4494274" href="https://www.cnblogs.com/wujunchao/" target="_blank">梦淑</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4494274, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4494274, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/1930631/20200131210714.png
+        " class="avatar"></div>
+				
+<div id="comment_body_4494274" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    页面忒好看了吧！点赞！
+</div>
+        
+        <span id="comment_4494274_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1930631/20200131210714.png
+        </span>
+
+			</div>
+		</div>
+		<div class="feedbackItem custom-comments-author">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    <a href="javascript:void(0);" onclick="return GetCommentBody(4494614)">
+        修改
+    </a>
+    <a href="javascript:void(0);" onclick="return DelComment(4494614, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4494614" class="layer">#5楼</a>
+<a name="4494614" id="comment_anchor_4494614"></a>
+[<span class="louzhu">楼主</span>]
+ 
+<span class="comment_date">2020-02-07 18:16</span>
+
+ 
+
+            <a id="a_comment_author_4494614" href="https://www.cnblogs.com/guangzan/" target="_blank">DIVMonster</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4494614, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4494614, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        " class="avatar"></div>
+				
+<div id="comment_body_4494614" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    <a href="#4494220" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,4494220);">@</a>
+badGentleMan<br>  弹幕功能废cpu，可以选择关闭，有时间会将它改为canvas。
+</div>
+        
+        <span id="comment_4494614_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        </span>
+
+			</div>
+		</div>
+		<div class="feedbackItem custom-comments-author">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    <a href="javascript:void(0);" onclick="return GetCommentBody(4494615)">
+        修改
+    </a>
+    <a href="javascript:void(0);" onclick="return DelComment(4494615, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4494615" class="layer">#6楼</a>
+<a name="4494615" id="comment_anchor_4494615"></a>
+[<span class="louzhu">楼主</span>]
+ 
+<span class="comment_date">2020-02-07 18:16</span>
+
+ 
+
+            <a id="a_comment_author_4494615" href="https://www.cnblogs.com/guangzan/" target="_blank">DIVMonster</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4494615, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4494615, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        " class="avatar"></div>
+				
+<div id="comment_body_4494615" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    <a href="#4494274" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,4494274);">@</a>
+梦淑<br> 谢谢支持
+</div>
+        
+        <span id="comment_4494615_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        </span>
+
+			</div>
+		</div>
+		<div class="feedbackItem custom-comments-author">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    <a href="javascript:void(0);" onclick="return GetCommentBody(4509951)">
+        修改
+    </a>
+    <a href="javascript:void(0);" onclick="return DelComment(4509951, this,'12268211')">
+        删除
+    </a>
+</span>
+
+
+				</div>
+				
+<a href="#4509951" class="layer">#7楼</a>
+<a name="4509951" id="comment_anchor_4509951"></a>
+[<span class="louzhu">楼主</span>]
+        <span id="comment-maxId" style="display:none">4509951</span>
+        <span id="comment-maxDate" style="display:none">2020/3/3 上午9:03:03</span>
+ 
+<span class="comment_date">2020-03-03 09:03</span>
+
+ 
+
+            <a id="a_comment_author_4509951" href="https://www.cnblogs.com/guangzan/" target="_blank">DIVMonster</a>
+
+			<div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4509951, 'Digg', this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4509951, 'Bury', this.parentElement, false);">
+                反对(0)
+            </a>
+        </div></div>
+			<div class="feedbackCon"><div class="custom-comment-avatar"><img src="
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        " class="avatar"></div>
+				
+<div id="comment_body_4509951" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p>测试</p>
+
+</div>
+        
+        <span id="comment_4509951_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1501373/20200119190802.png
+        </span>
+
+			</div>
+		</div>
+
+<div id="comment_pager_bottom">
+    
+</div>
+
+
+</div>
                         <div id="comment_form" class="commentform">
                             <a name="commentform"></a>
                             <div id="divCommentShow"></div>
-                            <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/guangzanassistant/p/12380553.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/guangzanassistant/p/12380553.html#top">返回顶部</a></div>
+                            <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);"
+                                    onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server"
+                                    clientidmode="Static">刷新评论</a><a
+                                    href="https://www.cnblogs.com/guangzanassistant/p/12380553.html#"
+                                    onclick="return RefreshPage();">刷新页面</a><a
+                                    href="https://www.cnblogs.com/guangzanassistant/p/12380553.html#top">返回顶部</a></div>
                             <div id="comment_form_container" style="visibility: visible;">
                                 <div id="commentform_title">发表评论</div>
                                 <span id="tip_comment" style="color:Red"></span>
@@ -280,7 +655,8 @@
                                         <div class="commentbox_title_left">
                                             <span id="btn_edit_comment" class="commentbox_tab
                                                 active" title="编辑评论">编辑</span>
-                                            <span id="btn_preview_comment" class="commentbox_tab" title="Markdown 预览">预览</span>
+                                            <span id="btn_preview_comment" class="commentbox_tab"
+                                                title="Markdown 预览">预览</span>
                                         </div>
                                         <div class="commentbox_title_right">
                                             <span id="ubb_bold" class="comment_icon" alt="粗体" title="添加粗体(Ctrl +
@@ -331,7 +707,8 @@
                                             </span>
                                             <span id="ubb_url" class="comment_icon" title="添加链接(Ctrl + L)" alt="链接">
                                                 <svg class="comment_svg
-                                                    comment_svg_stroke" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    comment_svg_stroke" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
                                                     <g fill-rule="evenodd">
                                                         <g transform="translate(4
                                                             4)" fill-rule="nonzero" stroke-width=".4">
@@ -446,7 +823,8 @@
                                                             1.1968-0.50008
                                                             0.11366-0.9978-0.16911-1.1643-0.64128l-0.032406-0.11223-2-8.8c-0.1224-0.53855
                                                             0.21496-1.0744
-                                                            0.75351-1.1968z" fill-rule="nonzero" stroke-width=".25"></path>
+                                                            0.75351-1.1968z" fill-rule="nonzero" stroke-width=".25">
+                                                        </path>
                                                     </g>
                                                 </svg>
                                             </span>
@@ -544,8 +922,10 @@
                                     </div>
                                 </div>
                                 <p id="commentbox_opt">
-                                    <input id="btn_comment_submit" type="button" class="comment_btn" title="提交评论(Ctrl + Enter)" value="提交评论">
-                                    <span id="span_comment_canceledit" style="display:none"><a href="javascript:void(0);" onclick="return
+                                    <input id="btn_comment_submit" type="button" class="comment_btn"
+                                        title="提交评论(Ctrl + Enter)" value="提交评论">
+                                    <span id="span_comment_canceledit" style="display:none"><a
+                                            href="javascript:void(0);" onclick="return
                                             CancelCommentEdit()">不改了</a></span>
                                     <a href="javascript:void(0);" onclick="return logout();">退出</a>
                                 </p>
@@ -555,42 +935,68 @@
                             <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
                             <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】超50万行VC++源码:
                                     大型组态工控、电力仿真CAD与GIS源码库</a><br>
-                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755" target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
-                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755" target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
-                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755" target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
-                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755" target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
+                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755"
+                                    target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
+                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755"
+                                    target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
+                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755"
+                                    target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
+                                <a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755"
+                                    target="_blank">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br>
                             </div>
                             <div id="opt_under_post"></div>
                             <div id="cnblogs_c1" class="c_ad_block">
-                                <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;" data-google-query-id="CLaoxcvTzugCFZUIXAod6LwDbw">
-                                    <div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px;
-                                            vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src=""></iframe></div>
+                                <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"
+                                    data-google-query-id="CLaoxcvTzugCFZUIXAod6LwDbw">
+                                    <div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;">
+                                        <iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content"
+                                            name="google_ads_iframe_/1090369/C1_0" width="300" height="250"
+                                            scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px;
+                                            vertical-align: bottom;" data-google-container-id="1"
+                                            data-load-complete="true" src=""></iframe></div>
                                 </div>
                             </div>
                             <div id="under_post_news">
                                 <div class="recomm-block"><b>相关博文：</b><br>·
-                                    <a title="Markdown教程（精简了菜鸟教程）" href="https://www.cnblogs.com/zry20200217/p/12331695.html" target="_blank" onclick="clickRecomItmem(12331695)">Markdown教程（精简了菜鸟教程）</a><br>·
-                                    <a title="MarkdownLearningNotes" href="https://www.cnblogs.com/biaogejiushibiao/p/11718815.html" target="_blank" onclick="clickRecomItmem(11718815)">MarkdownLearningNotes</a><br>·
-                                    <a title="一篇文章讲清楚markdown" href="https://www.cnblogs.com/caoleiCoding/p/markdown.html" target="_blank" onclick="clickRecomItmem(12358686)">一篇文章讲清楚markdown</a><br>·
-                                    <a title="Markdown教程" href="https://www.cnblogs.com/Golanguage/p/12287376.html" target="_blank" onclick="clickRecomItmem(12287376)">Markdown教程</a><br>·
-                                    <a title="Markdown速学笔记" href="https://www.cnblogs.com/momoon/p/12314066.html" target="_blank" onclick="clickRecomItmem(12314066)">Markdown速学笔记</a><br>»
-                                    <a target="_blank" href="https://recomm.cnblogs.com/blogpost/12380553">更多推荐...</a></div>
+                                    <a title="Markdown教程（精简了菜鸟教程）"
+                                        href="https://www.cnblogs.com/zry20200217/p/12331695.html" target="_blank"
+                                        onclick="clickRecomItmem(12331695)">Markdown教程（精简了菜鸟教程）</a><br>·
+                                    <a title="MarkdownLearningNotes"
+                                        href="https://www.cnblogs.com/biaogejiushibiao/p/11718815.html" target="_blank"
+                                        onclick="clickRecomItmem(11718815)">MarkdownLearningNotes</a><br>·
+                                    <a title="一篇文章讲清楚markdown"
+                                        href="https://www.cnblogs.com/caoleiCoding/p/markdown.html" target="_blank"
+                                        onclick="clickRecomItmem(12358686)">一篇文章讲清楚markdown</a><br>·
+                                    <a title="Markdown教程" href="https://www.cnblogs.com/Golanguage/p/12287376.html"
+                                        target="_blank" onclick="clickRecomItmem(12287376)">Markdown教程</a><br>·
+                                    <a title="Markdown速学笔记" href="https://www.cnblogs.com/momoon/p/12314066.html"
+                                        target="_blank" onclick="clickRecomItmem(12314066)">Markdown速学笔记</a><br>»
+                                    <a target="_blank" href="https://recomm.cnblogs.com/blogpost/12380553">更多推荐...</a>
+                                </div>
                             </div>
                             <div id="cnblogs_c2" class="c_ad_block">
-                                <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CICpxsvTzugCFZUIXAod6LwDbw">
-                                    <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px;
-                                            vertical-align: bottom;" data-google-container-id="2" data-load-complete="true" src=""></iframe></div>
+                                <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"
+                                    data-google-query-id="CICpxsvTzugCFZUIXAod6LwDbw">
+                                    <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;">
+                                        <iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content"
+                                            name="google_ads_iframe_/1090369/C2_0" width="468" height="60"
+                                            scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px;
+                                            vertical-align: bottom;" data-google-container-id="2"
+                                            data-load-complete="true" src=""></iframe></div>
                                 </div>
                             </div>
                             <div id="under_post_kb">
                                 <div class="itnews c_ad_block">
                                     <b>最新 IT 新闻</b>:
                                     <br>
-                                    · <a href="https://news.cnblogs.com/n/659072/" target="_blank">门店爆单、加盟商控诉：瑞幸制造的恐慌正在蔓延</a>
+                                    · <a href="https://news.cnblogs.com/n/659072/"
+                                        target="_blank">门店爆单、加盟商控诉：瑞幸制造的恐慌正在蔓延</a>
                                     <br>
-                                    · <a href="https://news.cnblogs.com/n/659073/" target="_blank">中国MCN出海记：几千块就能签一个粉丝百万的网红？</a>
+                                    · <a href="https://news.cnblogs.com/n/659073/"
+                                        target="_blank">中国MCN出海记：几千块就能签一个粉丝百万的网红？</a>
                                     <br>
-                                    · <a href="https://news.cnblogs.com/n/659065/" target="_blank">月入2万的中国程序员，撑起Zoom千亿市值</a>
+                                    · <a href="https://news.cnblogs.com/n/659065/"
+                                        target="_blank">月入2万的中国程序员，撑起Zoom千亿市值</a>
                                     <br>
                                     · <a href="https://news.cnblogs.com/n/659077/" target="_blank">瑞幸的男人们毫无悔意</a>
                                     <br>
@@ -637,7 +1043,8 @@
 
                     </div>
                     <div id="blog-calendar">
-                        <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+                        <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar"
+                            border="0">
                             <tbody>
                                 <tr>
                                     <td colspan="7">
@@ -809,11 +1216,14 @@
                                     <div id="sidebar_search_box">
                                         <div id="widget_my_zzk" class="div_my_zzk">
                                             <input type="text" id="q" onkeydown="return
-                                                    zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+                                                    zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input
+                                                onclick="zzk_go()" type="button" value="找找看" id="btnZzk"
+                                                class="btn_my_zzk">
                                         </div>
                                         <div id="widget_my_google" class="div_my_zzk">
                                             <input type="text" name="google_q" id="google_q" onkeydown="return
-                                                    google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+                                                    google_go_enter(event);" class="input_my_zzk">&nbsp;<input
+                                                onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
                                         </div>
                                     </div>
                                 </div>
@@ -828,23 +1238,28 @@
                                     <ul>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/p/" title="我的博客的随笔列表">我的随笔</a>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/p/"
+                                                title="我的博客的随笔列表">我的随笔</a>
                                         </li>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/MyComments.html" title="我的发表过的评论列表">我的评论</a>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/MyComments.html"
+                                                title="我的发表过的评论列表">我的评论</a>
                                         </li>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/OtherPosts.html" title="我评论过的随笔列表">我的参与</a>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/OtherPosts.html"
+                                                title="我评论过的随笔列表">我的参与</a>
                                         </li>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/RecentComments.html" title="我的博客的评论列表">最新评论</a>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/RecentComments.html"
+                                                title="我的博客的评论列表">最新评论</a>
                                         </li>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/tag/" title="我的博客的标签列表">我的标签</a>
+                                            <a href="https://www.cnblogs.com/guangzanassistant/tag/"
+                                                title="我的博客的标签列表">我的标签</a>
                                         </li>
 
                                     </ul>
@@ -878,7 +1293,8 @@
                                         <li>
 
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/p/11910978.html">3.45345654</a>
+                                            <a
+                                                href="https://www.cnblogs.com/guangzanassistant/p/11910978.html">3.45345654</a>
                                         </li>
 
 
@@ -896,7 +1312,8 @@
                                     <ul>
 
                                         <li>
-                                            <a href="https://www.cnblogs.com/guangzanassistant/tag/awescnb/">awescnb</a>(1)
+                                            <a
+                                                href="https://www.cnblogs.com/guangzanassistant/tag/awescnb/">awescnb</a>(1)
                                         </li>
                                         <li>
                                             <a href="https://www.cnblogs.com/guangzanassistant/tag/test/">test</a>(1)
@@ -951,7 +1368,8 @@
 
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/category/1605656.html" rel="" target="">
+                                            <a href="https://www.cnblogs.com/guangzanassistant/category/1605656.html"
+                                                rel="" target="">
                                                 测试1(2)
                                             </a>
 
@@ -978,7 +1396,8 @@
 
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/archive/2020/02.html" rel="" target="">
+                                            <a href="https://www.cnblogs.com/guangzanassistant/archive/2020/02.html"
+                                                rel="" target="">
                                                 2020年2月(1)
                                             </a>
 
@@ -986,7 +1405,8 @@
                                         </li>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/archive/2019/12.html" rel="" target="">
+                                            <a href="https://www.cnblogs.com/guangzanassistant/archive/2019/12.html"
+                                                rel="" target="">
                                                 2019年12月(1)
                                             </a>
 
@@ -994,7 +1414,8 @@
                                         </li>
                                         <li>
 
-                                            <a href="https://www.cnblogs.com/guangzanassistant/archive/2019/11.html" rel="" target="">
+                                            <a href="https://www.cnblogs.com/guangzanassistant/archive/2019/11.html"
+                                                rel="" target="">
                                                 2019年11月(2)
                                             </a>
 
@@ -1014,7 +1435,8 @@
                                     <h3 class="catListTitle">最新评论</h3>
                                     <div class="RecentCommentBlock">
                                         <ul>
-                                            <li class="recent_comment_title"><a href="https://www.cnblogs.com/guangzanassistant/p/12064754.html">1.
+                                            <li class="recent_comment_title"><a
+                                                    href="https://www.cnblogs.com/guangzanassistant/p/12064754.html">1.
                                                     Re:测试</a></li>
                                             <li class="recent_comment_body">111</li>
                                             <li class="recent_comment_author">--已注销用户456123</li>

@@ -1,5 +1,6 @@
-import icons from '../constants/icons'
-import { iconInSvg } from '../utils/tools'
+import './index.scss'
+import icons from '../../constants/icons'
+import { iconInSvg } from '../../utils/tools'
 import toast from '@plugins/toast'
 
 // mode 初始化和点击切换

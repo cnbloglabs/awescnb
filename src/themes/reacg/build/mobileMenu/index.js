@@ -1,4 +1,5 @@
 // 设置移动端菜单按钮
+import './index.scss'
 import { userAgent, unpass } from '@tools'
 
 function build() {

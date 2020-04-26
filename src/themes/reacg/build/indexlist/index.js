@@ -1,3 +1,4 @@
+// 首页列表图片
 import { randomImgurl, pageName, userAgent, randomArrayElements } from '@tools'
 import './index.css'
 

@@ -1,10 +1,11 @@
+// 随笔顶部信息
 import './index.css'
 import { pageName } from '@tools'
 
 function postMessage() {
     if (pageName() !== 'post') return
 
-    let categories = $(`<div class='custom-categories'>📌</div>`)
+    let categories = $(`<div class='custom-categories'>📂</div>`)
     let tags = $(`<div class='custom-tags'>🏷</div>`)
 
     if ($('#BlogPostCategory a').length) {

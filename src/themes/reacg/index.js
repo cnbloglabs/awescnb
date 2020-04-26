@@ -1,4 +1,4 @@
-import './index.css'
+import './style/index.scss'
 import 'lib-flexible/flexible.js'
 import AwesCnb from '@awescnb'
 

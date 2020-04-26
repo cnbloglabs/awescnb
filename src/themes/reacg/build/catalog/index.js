@@ -1,3 +1,4 @@
+import './index.scss'
 import {
     pageName,
     userAgent,
@@ -12,7 +13,7 @@ const { enable, position } = window.opts.catalog
 function build() {
     let $catalogContainer = $(
         `<div id="catalog">
-            <div class='catListTitle'><h3>目录</h3></div>
+            <div class='catalog-title'><h3>目录</h3></div>
         </div>`,
     )
     const $ulContainer = $('<ul></ul>')

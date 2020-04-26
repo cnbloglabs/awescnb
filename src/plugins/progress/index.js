@@ -4,6 +4,7 @@
 import NProgress from 'NProgress'
 import { pageName, userAgent } from '@/assets/utils/tools'
 import 'nprogress/nprogress.css'
+import './index.scss'
 
 const opts = window.opts
 
