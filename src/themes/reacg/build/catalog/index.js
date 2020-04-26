@@ -65,8 +65,8 @@ function setCatalogPosition() {
             setCatalogToggle()
             $('#mainContent').css('width', '60vw')
             $('#catalog').css({
-                width: '100%',
-                'max-width': '100%',
+                width: '20vw',
+                'max-width': '20vw',
             })
         },
         left: () => {
