@@ -21,14 +21,13 @@ class AwesCnb {
     }
 
     // dev env
-    // devOpts() {
-    //     if (env === 'dev') {
-    //         window.opts = defaultOptions
-    //     }
-    //     require('./build/index')()
-    // }
+    devOpts() {
+        if (env === 'dev') {
+            window.opts = defaultOptions
+        }
+    }
 }
 
-// new AwesCnb().devOpts()
+new AwesCnb().devOpts()
 
 export default AwesCnb
