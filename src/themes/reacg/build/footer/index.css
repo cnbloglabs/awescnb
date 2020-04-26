@@ -1,4 +1,3 @@
-/* footer start */
 #footer {
     display: none;
 }
@@ -49,4 +48,11 @@ footer #links {
     /* color: var(--themeColor); */
 }
 
-/* footer end */
+@media screen and (max-width: 767px) {
+    #links {
+        width: 90vw;
+        overflow-x: scroll;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+}

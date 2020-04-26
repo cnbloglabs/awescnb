@@ -1142,7 +1142,7 @@ mark {
 }
 
 #ad_t2 a:hover {
-    transform: translateX(5px); 
+    transform: translateX(5px);
     transition: 0.25s all
 }
 

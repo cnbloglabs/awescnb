@@ -1,0 +1,45 @@
+#mode-change {
+    color: var(--themeColor);
+    margin-left: 16vw;
+    .icon {
+        width: 0.8rem;
+        cursor: pointer;
+        animation: changeModeRotate 20s linear infinite;
+    }
+}
+
+.mode-change {
+    #header,
+    #mainContent,
+    #cnblogs_post_body blockquote,
+    #post-signature,
+    #sidebar_news,
+    #blog-calendar,
+    #sidebar_search,
+    #sidebar_shortcut,
+    #sidebar_recentposts,
+    #sidebar_toptags,
+    #sidebar_scorerank,
+    #sidebar_postcategory,
+    #sidebar_postarchive,
+    #sidebar_recentcomments,
+    #sidebar_topviewedposts,
+    #sidebar_topcommentedposts,
+    #sidebar_topdiggedposts,
+    #catalog,
+    .input_my_zzk {
+        transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #mode-change {
+        margin-left: 0 !important;
+    }
+}
+
+@keyframes changeModeRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}

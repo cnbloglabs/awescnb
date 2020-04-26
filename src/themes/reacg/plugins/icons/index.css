@@ -6,8 +6,11 @@
 
 #custom-gitee:hover {
     background-color: var(--themeColor);
-    color: #fff;
     transition: all .3s;
+}
+
+#custom-gitee:hover span {
+    color: #fff;
 }
 
 #custom-gitee .icon {
@@ -18,5 +21,6 @@
 #custom-gitee span {
     font-weight: 700;
     text-shadow: 5px 0 10px var(--themeColor);
-    color: var(--text-3)
+    color: var(--text-3);
+    line-height: 100%;
 }

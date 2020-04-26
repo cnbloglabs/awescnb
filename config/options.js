@@ -22,4 +22,4 @@ module.exports = {
 ///////// run the build /////////
 // - npm start
 // - npm run build
-// or use yarn
+// - or use yarn
