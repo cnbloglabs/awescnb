@@ -1,4 +1,3 @@
-import setIcons from './icons'
 import dragMenu from '@plugins/dragMenu'
 import themeColor from '@plugins/themeColor'
 import setBodyBackground from '@plugins/background'
@@ -27,7 +26,6 @@ import { shootInitial } from '@plugins/barrage'
 function plugins() {
     dragMenu()
     themeColor()
-    setIcons()
     setBodyBackground()
     imageBox()
     shootInitial()

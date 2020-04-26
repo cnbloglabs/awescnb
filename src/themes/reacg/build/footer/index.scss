@@ -1,6 +1,6 @@
 #footer {
-    margin: 1rem 0 0;
-    padding: 0.6rem 0;
+    margin: 54px 0 0;
+    padding: 32.4px 0;
     text-align: center;
     color: #979b9e;
     background-color: #232323;
@@ -17,16 +17,16 @@
             }
         }
         & > li:not(:first-child) {
-            margin-left: 0.4rem;
+            margin-left: 21.6px;
         }
     }
     #copyright {
         display: flex;
         flex-direction: column;
-        margin-top: 0.2667rem;
+        margin-top: 14.4018px;
         font-size: 14px;
         span {
-            margin-top: 0.1333rem;
+            margin-top: 7.1982px;
         }
     }
 }

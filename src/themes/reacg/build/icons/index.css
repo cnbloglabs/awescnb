@@ -1,7 +1,7 @@
 #custom-gitee {
     display: flex;
     align-items: center;
-    padding: 0 .293rem;
+    padding: 0 15.822px;
 }
 
 #custom-gitee:hover {
@@ -14,7 +14,7 @@
 }
 
 #custom-gitee .icon {
-    width: 0.5rem;
+    width: 27px;
     margin-right: 5px;
 }
 

@@ -1,5 +1,4 @@
 @media screen and (max-width: 767px) {
-    //  覆盖博客园bundle start
     .postBody {
         padding: 0;
     }
@@ -8,22 +7,19 @@
     }
     div.commentform textarea {
         width: 100%;
-        height: 2.667rem;
+        height: 144.018px;
     }
     #header {
         overflow: auto;
         word-break: keep-all;
         padding: 0 10px;
-        height: 1.2rem;
     }
-
     #main {
-        padding-top: 1.6rem;
+        padding-top: 86.4px;
         #mainContent {
             width: 96vw;
         }
     }
-
     .forFlow #blog-comments-placeholder.comment_vote,
     #topics .postDesc,
     .postDesc a:last-child,
@@ -33,94 +29,52 @@
     ::-webkit-scrollbar {
         display: none;
     }
-
-    // #navList {
-    //     position: absolute;
-    //     top: 100%;
-    //     display: flex;
-    //     display: none;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     height: auto;
-    //     background-color: #fff;
-    //     box-shadow: 1px 1px 5px rgb(233, 227, 227);
-    // }
-
-    // #navList li {
-    //     display: block;
-    //     background-color: #fff;
-    //     border-radius: 3px;
-    //     width: 100px;
-    // }
-
     .postBody ul li {
-        padding-top: 0.133rem;
+        padding-top: 7.182px;
     }
-
     #mainContent {
         width: 95%;
     }
-
     #green_channel a:nth-child(1),
     #green_channel a:nth-child(2),
     #green_channel a:nth-child(3) {
         margin: 3px!important;
     }
-
     #green_channel #green_channel_weibo,
     #green_channel #green_channel_wechat {
         margin: 3px!important;
         padding: 0;
     }
-
     #div_digg {
         margin-top: 10px!important;
     }
-
     .entrylistPosttitle,
     .postTitle {
-        font-size: 0.5rem!important;
+        font-size: 26px!important;
     }
-
-    /* 写评论 start */
     .commentbox_title {
-        margin-bottom: 0.1rem;
+        margin-bottom: 5.4px;
     }
-
     #btn_comment_submit {
-        bottom: -0.1rem;
-        padding: 0 0.2rem;
+        bottom: -5.4px;
+        padding: 0 10.8px;
         width: auto!important;
     }
-
-    /* 写评论 end */
-
-    /* 评论列表 start */
     .feedbackCon .blog_comment_body {
-        max-width: 6rem;
+        max-width: 324px;
     }
-
-    /* 评论图片 */
     .forFlow #blog-comments-placeholder .feedbackListSubtitle {
         font-size: 12px;
     }
-
     .forFlow #blog-comments-placeholder .comment_date {
-        /* width: 1.8rem; */
         overflow: hidden;
         white-space: nowrap;
     }
-
     .forFlow #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
-        /* width: 2.2rem; */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
-    /* ... 底部 阅读（x） 评论（x） 编辑 end */
-
-    /* 菜单 start */
     #sideBar {
         visibility: hidden;
         position: fixed;
@@ -129,18 +83,17 @@
         left: 0;
         right: 0;
         margin: 0;
+        width: 100vw;
         max-width: 100vw;
         background-color: var(--background-w);
         overflow-y: scroll;
         clip-path: circle(30px at calc(100%) 100%);
         z-index: 12;
     }
-
     #sidebar_news {
         margin-bottom: 0;
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
     }
-
     #blog-calendar,
     #sidebar_news,
     #sidebar_postarchive,
@@ -156,9 +109,8 @@
     #topdigg_posts_wrap .catListView {
         margin-bottom: 0;
     }
-
     #blogCalendar tr:not(:nth-child(1)) td {
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 43.2px;
+        height: 43.2px;
     }
 }
