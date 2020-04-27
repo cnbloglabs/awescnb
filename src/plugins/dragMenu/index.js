@@ -205,7 +205,8 @@ function create() {
     // 推荐
     const diggit = () => {
         toast('谢谢推荐🍺')
-        window.DiggIt()
+        const id =  window.location.href.match(/p\/(\S*).html/)[1]
+        window.votePost(parseInt(id), 'Digg')
     }
 
     // 评论
