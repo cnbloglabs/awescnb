@@ -1,5 +1,5 @@
 // 评论输入表情
-import { pageName, cacheScript } from '@tools'
+import { pageName, cacheScript, userAgent } from '@tools'
 import { emojijs } from '@constants/urls'
 import './index.css'
 const {
@@ -16,7 +16,7 @@ const emojiConfig = {
     showVariants: false, //肤色
     showRecents,
     recentsCount,
-    showSearch,
+    showSearch: userAgent() === 'pc' ? showSearch : false,
     showPreview,
     zIndex: 3,
     i18n: {
