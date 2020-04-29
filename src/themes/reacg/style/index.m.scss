@@ -12,7 +12,11 @@
     #header {
         overflow: auto;
         word-break: keep-all;
-        padding: 0 10px;
+        padding: 0;
+        width: 100%;
+        &::after {
+            position: fixed;
+        }
     }
     #main {
         padding-top: 65px;
@@ -38,19 +42,19 @@
     #green_channel a:nth-child(1),
     #green_channel a:nth-child(2),
     #green_channel a:nth-child(3) {
-        margin: 3px!important;
+        margin: 3px !important;
     }
     #green_channel #green_channel_weibo,
     #green_channel #green_channel_wechat {
-        margin: 3px!important;
+        margin: 3px !important;
         padding: 0;
     }
     #div_digg {
-        margin-top: 10px!important;
+        margin-top: 10px !important;
     }
     .entrylistPosttitle,
     .postTitle {
-        font-size: 26px!important;
+        font-size: 26px !important;
     }
     .commentbox_title {
         margin-bottom: 5.4px;
@@ -58,7 +62,7 @@
     #btn_comment_submit {
         bottom: -5.4px;
         padding: 0 10.8px;
-        width: auto!important;
+        width: auto !important;
     }
     .feedbackCon .blog_comment_body {
         max-width: 324px;

@@ -34,7 +34,7 @@ body {
 
 #header {
     position: relative;
-    &:after {
+    &::after {
         content: '';
         height: 54px;
         background: var(--background-w);
