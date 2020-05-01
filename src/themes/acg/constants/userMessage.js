@@ -11,7 +11,7 @@ const userMessage = {
     focus: $('#profile_block a:nth-child(7)')
         .text()
         .trim(),
+    blogUrl: window.location.href,
 }
-
 
 export default userMessage

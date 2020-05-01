@@ -6,9 +6,9 @@ import { pageName, userAgent } from '@tools'
 function user() {
     const el = ` 
                         <li id='user-msg'>
-                            <a href="https://www.cnblogs.com/guangzan/">${
-                                userMessage.nickName
-                            }</a>
+                            <a href="${userMessage.blogUrl}">${
+        userMessage.nickName
+    }</a>
                             <ul>
                                 <li>园龄：${$(
                                     '#profile_block a:nth-child(3)',
@@ -48,7 +48,6 @@ function hover() {
     if (userAgent() !== 'pc') return
     mouseoverOrmouseout(headerElements)
 }
-
 
 function nav() {
     user()
