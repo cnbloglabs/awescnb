@@ -6,7 +6,7 @@ import { pageName, userAgent } from '@tools'
 function user() {
     const el = ` 
                         <li id='user-msg'>
-                            <a href="${userMessage.blogUrl}">${
+                            <a>${
         userMessage.nickName
     }</a>
                             <ul>
