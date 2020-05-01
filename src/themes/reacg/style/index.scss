@@ -51,7 +51,7 @@ body {
     position: fixed;
     top: 0;
     width: 80%;
-    padding-left: 15.5vw;
+    padding-left: 16.5vw;
     height: 54px;
     z-index: 10;
 
@@ -67,7 +67,7 @@ body {
         // }
     }
     #navigator {
-        position: relative;
+        // position: relative;
         display: flex;
         align-items: center;
         height: 100%;
@@ -76,6 +76,9 @@ body {
             position: relative;
         }
         .blogStats {
+            position: absolute;
+            top: 0;
+            right: -50px;
             display: flex;
             height: 100%;
             font-size: 12px;

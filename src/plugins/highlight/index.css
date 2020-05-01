@@ -64,7 +64,7 @@
 /* 富文本编辑器 end */
 
 pre:hover {
-    box-shadow: 0 0 3px red;
+    box-shadow: 0 0 6px var(--themeColor, red);
 }
 
 /* markdown start */
