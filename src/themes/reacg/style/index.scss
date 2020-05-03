@@ -126,7 +126,6 @@ body {
 }
 
 .forFlow {
-    font-size: 16px;
     // 首页
     .day {
         .dayTitle {
@@ -283,7 +282,8 @@ body {
     }
     // 随笔页
     #post_detail {
-        padding: 21.6px;
+        font-size: 16px;
+        padding: 21.6px 21.6px 0;
         #topics {
             .post {
                 .postTitle {
