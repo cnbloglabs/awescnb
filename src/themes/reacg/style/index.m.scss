@@ -24,6 +24,11 @@
             width: 96vw;
         }
     }
+    .forFlow {
+        #comment_form {
+            padding: 0;
+        }
+    }
     .forFlow #blog-comments-placeholder.comment_vote,
     #topics .postDesc,
     .postDesc a:last-child,
@@ -52,10 +57,10 @@
     #div_digg {
         margin-top: 10px !important;
     }
-    .entrylistPosttitle,
-    .postTitle {
-        font-size: 26px !important;
-    }
+    // .entrylistPosttitle,
+    // .postTitle {
+    //     font-size: 26px !important;
+    // }
     .commentbox_title {
         margin-bottom: 5.4px;
     }
