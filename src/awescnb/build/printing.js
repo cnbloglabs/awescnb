@@ -31,39 +31,47 @@ for (const { theme, author } of themes) {
 
 const log = [
     {
-        str: '# # # # # # # # # # # # # # # # # # # # # # #',
+        str: '# # # # # # # # # # # # # # # # # # # # # # # #',
         color: '#1e3799',
     },
     {
-        str: `# 🎨The theme you are using is ${name}`,
-        color: '#5352ed',
-    },
-    {
-        str: `# ❤The author of the ${name} is ${themeAuthor}`,
-        color: '#f368e0',
-    },
-    {
-        str: '# ⛷Awescnb: awesome cnblog!',
+        str: '# ⛷ Awescnb: awesome cnblog!',
         color: '#eb4d4b',
     },
     {
-        str: '# 🎉为博客园发烧友而生！',
+        str: '# 🎉 为博客园发烧友而生！',
         color: '#f0932b',
     },
     {
-        str: '# 👌使用awescnb快速构建、安装、分享博客园皮肤',
+        str: '# 👌 使用awescnb快速构建、安装、分享博客园皮肤',
         color: '#341f97',
     },
     {
-        str: '# 📧QQ群:541802647(活跃)',
+        str: `# 🎨 The theme you are using is ${name}`,
+        color: '#f368e0',
+    },
+    {
+        str: `# ❤ The author of the ${name} is ${themeAuthor}`,
+        color: '#5352ed',
+    },
+    {
+        str: '# 📧 QQ群:541802647(活跃)',
         color: '#6ab04c',
     },
     {
-        str: '# 📌码云:https://gitee.com/guangzan/awescnb',
+        str: '# 📑 文档:https://guangzan.gitee.io/awescnb-docs',
+        color: '#fd79a8',
+    },
+    {
+        str: '# 🌏 GitHub:https://gaitee.com/guangzan/awescnb',
+        color: '#2f3542',
+    },
+    {
+        str: '# 📌 码云:https://gitee.com/guangzan/awescnb',
         color: '#4834d4',
     },
     {
-        str: '# # # # # # # # # # # # # # # # # # # # # # #',
+        str: '# # # # # # # # # # # # # # # # # # # # # # # #',
         color: '#1e3799',
     },
 ]
