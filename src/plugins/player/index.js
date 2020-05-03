@@ -6,7 +6,7 @@ import { aplayerjs } from '@constants/urls'
 import 'aplayer/dist/aplayer.min.css'
 import './index.css'
 
-const { enable, autoplay, audio, page, agent } = window.opts.musicPlayer
+const { enable, autoplay, audio, page, agent, volume } = window.opts.musicPlayer
 
 // 音乐播放器
 function build() {
@@ -18,7 +18,7 @@ function build() {
         preload: 'auto',
         autoplay,
         audio,
-        volume: 0.4,
+        volume,
     })
 
     window.onbeforeunload = () => {

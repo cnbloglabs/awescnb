@@ -123,6 +123,7 @@ const defaultOptions = {
         page: 'all',
         agent: 'pc',
         autoplay: false,
+        volume: 0.4,
         audio: [
             {
                 name: 'イニシャル',
