@@ -2,6 +2,7 @@
 import { pageName, cacheScript, userAgent } from '@tools'
 import { emojijs } from '@constants/urls'
 import './index.css'
+
 const {
     enable,
     showRecents,
@@ -9,11 +10,26 @@ const {
     showSearch,
     showPreview,
 } = window.opts.emoji
+
 const emojiConfig = {
     position: 'top-start',
     theme: 'auto', // dark light auto
     style: 'native', //native twemoji
     showVariants: false, //肤色
+    autoHide: true,
+    autoFocusSearch: false,
+    emojiSize: '1.8em',
+    categories: [
+        'smileys',
+        'people',
+        'animals',
+        'food',
+        'activities',
+        'travel',
+        'objects',
+        'symbols',
+        'flags',
+    ],
     showRecents,
     recentsCount,
     showSearch: userAgent() === 'pc' ? showSearch : false,

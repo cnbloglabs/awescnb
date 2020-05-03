@@ -126,6 +126,7 @@ body {
 }
 
 .forFlow {
+    font-size: 16px;
     // 首页
     .day {
         .dayTitle {
@@ -309,10 +310,24 @@ body {
     // 评论列表
     #blog-comments-placeholder {
         margin: 0 21.6px;
-        border: 1px solid var(--text-10);
+        // border: 1px solid var(--text-10);
         border-radius: 3px;
+        .feedback_area_title {
+            padding: 7.56px 10.8px;
+            border: 1px solid var(--text-10);
+            background-color: var(--background-e);
+            border-radius: 2px 2px 0 0;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-3);
+        }
         .feedbackItem {
+            border-left: 1px solid var(--text-10);
+            border-right: 1px solid var(--text-10);
             padding: 17.982px 10.8px;
+            &:nth-last-child(2) {
+                border-bottom: 1px solid var(--text-10);
+            }
         }
         .custom-comments-author {
             display: flex;
@@ -375,15 +390,6 @@ body {
                     display: none;
                 }
             }
-        }
-        .feedback_area_title {
-            padding: 7.56px 10.8px;
-            border-bottom: 1px solid var(--text-10);
-            background-color: var(--background-e);
-            border-radius: 2px 2px 0 0;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-3);
         }
         br {
             display: none;
@@ -1134,12 +1140,4 @@ mark {
     transition: all 0.2s;
 }
 
-/* 非移动端  */
-@media screen and (min-width: 767px) {
-    #post_detail,
-    .forFlow #blog-comments-placeholder,
-    #comment_form {
-        font-size: 16px !important;
-    }
-}
 @import './index.m.scss';
