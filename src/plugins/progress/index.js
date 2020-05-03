@@ -6,13 +6,12 @@ import { pageName, userAgent } from '@/assets/utils/tools'
 import 'nprogress/nprogress.css'
 import './index.scss'
 
-const opts = window.opts
+const { enable, page, agent } = window.opts.topProgress
 
-const setTopProgress = () => {
-    const options = opts.topProgress
-    if (!options.enable) return
-    if (options.page !== pageName() && options.page !== 'all') return
-    if (options.agent !== userAgent() && options.agent !== 'all') return
+function setTopProgress() {
+    if (!enable) return
+    if (page !== pageName() && page !== 'all') return
+    if (agent !== userAgent() && agent !== 'all') return
 
     NProgress.configure({
         easing: 'ease',
@@ -23,11 +22,9 @@ const setTopProgress = () => {
 
     NProgress.start()
 
-    // if (env === 'dev') {
     setTimeout(() => {
         NProgress.done()
     }, 1000)
-    // }
 }
 
 export default setTopProgress

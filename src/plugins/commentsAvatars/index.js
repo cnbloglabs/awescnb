@@ -1,7 +1,7 @@
+// 显示评论列表头像
 import { pageName, poll } from '@tools'
 import env from '@constants/env'
 
-// 显示评论列表头像
 function showAvatar() {
     $('.feedbackItem').each(function() {
         let avatar = $(this)
@@ -56,10 +56,10 @@ function authorRight() {
     })
 }
 
-function comments() {
+function commentsAvatar() {
     pollToShow()
     support()
     authorRight()
 }
 
-export default comments
+export default commentsAvatar

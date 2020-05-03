@@ -8,7 +8,7 @@ import setClickEffects from '@plugins/click'
 import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
-import comments from '@plugins/comments'
+import commentsAvatars from '@plugins/commentsAvatars'
 import signature from '@plugins/signature'
 import highlight from '@plugins/highlight'
 import btns from '@plugins/btns'
@@ -25,7 +25,7 @@ function plugins() {
     setClickEffects()
     linenumbers()
     titleFavicon()
-    comments()
+    commentsAvatars()
     signature()
     highlight()
     copy()

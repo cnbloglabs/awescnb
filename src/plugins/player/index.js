@@ -1,9 +1,8 @@
 // 音乐播放器
 // 引入即可
 
-import { pageName, userAgent, cacheScript } from '@/assets/utils/tools'
-import { aplayerjs } from '@constants/urls'
-import 'aplayer/dist/aplayer.min.css'
+import { pageName, userAgent, cacheScript, addCss } from '@/assets/utils/tools'
+import { aplayerjs, aplayercss } from '@constants/urls'
 import './index.css'
 
 const { enable, autoplay, audio, page, agent, volume } = window.opts.musicPlayer
@@ -34,6 +33,7 @@ function setMusicPlayer() {
     if (!enable) return
     if (page !== pageName() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
+    addCss(aplayercss)
     cacheScript(aplayerjs, build)
 }
 

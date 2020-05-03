@@ -1,9 +1,9 @@
 .aplayer.aplayer-fixed .aplayer-body {
-    left: -66px;
+    left: -66px !important;
 }
 
 .aplayer.aplayer-fixed .aplayer-body:hover {
-    left: 0;
+    left: 0 !important;
 }
 
 .aplayer.aplayer-fixed .aplayer-body:hover .aplayer-miniswitcher {
