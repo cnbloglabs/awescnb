@@ -23,6 +23,7 @@ function build() {
         .children()
         .each(function() {
             if (titleRegExp.test(this.tagName.toLowerCase())) {
+                if ($(this).text().length === 0) return // 如果标题为空 只有 #
                 let id
                 let text
 
