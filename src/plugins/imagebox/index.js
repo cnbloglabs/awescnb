@@ -3,10 +3,15 @@
 
 import './index.css'
 import { pageName, poll } from '@/assets/utils/tools'
-import baguetteBox from '../../../node_modules/baguettebox.js/dist/baguetteBox'
-import '../../../node_modules/baguettebox.js/dist/baguetteBox.css'
+// import baguetteBox from '../../../node_modules/baguettebox.js/dist/baguetteBox'
+// import '../../../node_modules/baguettebox.js/dist/baguetteBox.css'
+import mediumZoom from 'medium-zoom'
 
 const options = window.opts.imagebox
+const mediumZoomConfig = {
+    scrollOffset: 0,
+    background: 'rgba(0,0,0,0.3)',
+}
 
 function buildPostDetail() {
     const imgList = $('#cnblogs_post_body img')
@@ -19,9 +24,12 @@ function buildPostDetail() {
         //         "<a class='lightbox' href='" + item.attr('src') + "'></a>",
         //     )
         // }
-        item.wrap(`<a class='lightbox-post' href='${item.attr('src')}'></a>`)
+        // item.wrap(`<a class='custom-zoom' href='${item.attr('src')}'></a>`)
+        item.addClass('custom-zoom')
     })
-    baguetteBox.run('.lightbox-post')
+
+    // baguetteBox.run('.custom-zoom')
+    mediumZoom('.custom-zoom', mediumZoomConfig)
 }
 
 function buildCommentsList() {
@@ -29,13 +37,13 @@ function buildCommentsList() {
     if (imgList === 0) return
     $.each(imgList, i => {
         const item = $(imgList[i])
-        item.wrap(
-            `<a class='lightbox-comments' href='${item.attr('src')}'></a>`,
-        )
+        // item.wrap(`<a class='custom-zoom' href='${item.attr('src')}'></a>`)
+        item.addClass('custom-zoom')
     })
-    baguetteBox.run('.lightbox-comments', {
-        animation: 'fadeIn',
-    })
+    // baguetteBox.run('.custom-zoom', {
+    //     animation: 'fadeIn',
+    // })
+    mediumZoom('.custom-zoom', mediumZoomConfig)
 }
 
 // 轮询评论区
