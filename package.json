@@ -53,6 +53,7 @@
         "darkmode-js": "^1.5.5",
         "lib-flexible": "^0.3.2",
         "loaders.css": "^0.1.2",
+        "medium-zoom": "^1.0.5",
         "node-sass": "^4.13.1",
         "nprogress": "^0.2.0",
         "typed.js": "^2.0.11"
