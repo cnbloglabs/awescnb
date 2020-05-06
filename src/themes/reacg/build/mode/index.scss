@@ -1,6 +1,5 @@
 #mode-change {
     color: var(--themeColor);
-    // margin-left: 16vw;
     .icon {
         width: 40px;
         cursor: pointer;
@@ -9,7 +8,10 @@
 }
 
 .mode-change {
-    #header,
+    & {
+        transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
+    }
+    #header::after,
     #mainContent,
     #cnblogs_post_body blockquote,
     #post-signature,

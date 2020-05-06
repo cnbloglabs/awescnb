@@ -66,9 +66,9 @@ body::-webkit-scrollbar-track {
 }
 
 .icon {
-    width: 0.5rem;
-    height: 0.5rem;
-    vertical-align: -0.15rem;
+    width: 27px;
+    height: 27px;
+    vertical-align: -8.1px;
     fill: currentColor;
     overflow: hidden;
     color: inherit;
@@ -87,7 +87,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 5.333rem;
+    height: 287.982px;
     border-bottom: 1px;
     background-image: url(https://guangzan.gitee.io/awescnb-files/images/acg/22.jpg);
     background-repeat: no-repeat;
@@ -112,7 +112,7 @@ header {
 
 #blogTitle h1 {
     color: #fff;
-    font-size: 0.5333rem;
+    font-size: 28.7982px;
     text-align: center;
     text-shadow: 0 0 2px var(--themeColor), 0 0 2px var(--themeColor);
 }
@@ -122,8 +122,8 @@ header {
     top: 0;
     display: flex;
     width: 100vw;
-    height: 0.8rem;
-    line-height: 0.48rem;
+    height: 43.2px;
+    line-height: 25.92px;
     color: #444;
     font-weight: 700;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -132,7 +132,7 @@ header {
 }
 
 #navigator a {
-    padding: 0 0.293rem;
+    padding: 0 15.822px;
     transition: background-color 0.2s;
     background-color: transparent;
     cursor: pointer;
@@ -144,7 +144,7 @@ header {
 }
 
 #navigator .icon {
-    width: 1rem;
+    width: 54px;
 }
 
 #navList {
@@ -175,13 +175,13 @@ header {
 }
 
 #user-msg>a {
-    font-size: 0.5rem;
+    font-size: 27px;
     font-weight: bold;
 }
 
 #user-msg-details {
     position: absolute;
-    top: 0.8rem;
+    top: 43.2px;
     left: 0;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px 5px;
@@ -228,7 +228,7 @@ header {
 #sidebar_shortcut,
 .sidebar-block {
     position: relative;
-    padding: 0 0.293rem;
+    padding: 0 15.822px;
     display: flex;
     align-items: center;
     height: 100%;
@@ -249,11 +249,11 @@ header {
 #sidebar_search_box {
     display: none;
     position: absolute;
-    top: 0.8rem;
+    top: 43.2px;
     left: 0;
     background: rgba(255, 255, 255, 0.8);
     word-break: keep-all;
-    min-width: 2.6667rem;
+    min-width: 144.0018px;
     padding: 10px 5px;
     border-radius: 0 0 3px 3px;
 }
@@ -266,8 +266,8 @@ header {
 
 /* footer */
 body footer {
-    margin: 1rem 0 0;
-    padding: 0.6rem 0;
+    margin: 54px 0 0;
+    padding: 32.4px 0;
     border-top: 1px solid #eee;
     text-align: center;
     background-color: #f6f9fa;
@@ -283,17 +283,17 @@ body footer {
 }
 
 #links>ul>li:not(:first-child) {
-    margin-left: 0.4rem;
+    margin-left: 21.6px;
 }
 
 #copyright {
     display: flex;
     flex-direction: column;
-    margin-top: 0.2667rem;
+    margin-top: 14.4018px;
 }
 
 #copyright span {
-    margin-top: 0.1333rem;
+    margin-top: 7.1982px;
 }
 
 #copyright a {
@@ -333,33 +333,33 @@ body footer {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0 0.4rem;
+    padding: 0 21.6px;
 }
 
 #cb_post_title_url {
     display: block;
     border-bottom: 02px solid #eee;
     line-height: 2em;
-    font-size: 0.2933rem;
+    font-size: 15.8382px;
     color: var(--color-post-title);
 }
 
 .post-item {
     position: relative;
-    margin: 0.32rem;
+    margin: 17.28px;
     width: 26%;
-    height: 3.6667rem;
+    height: 198.0018px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border: 01px solid #dcdcdc;
     transition: box-shadow 0.2s;
-    box-shadow: 0 0 0.1333rem 0 #e8e8e8;
+    box-shadow: 0 0 7.1982px 0 #e8e8e8;
 }
 
 .post-item:hover {
     transition: box-shadow 0.2s;
-    box-shadow: 0 0 0.1333rem 0 #bcbcbc;
+    box-shadow: 0 0 7.1982px 0 #bcbcbc;
 }
 
 .postTitle {
@@ -379,7 +379,7 @@ body footer {
 
 #mainContent {
     width: 55%;
-    margin: 0.2667rem auto;
+    margin: 14.4018px auto;
     padding: 25px;
     background: rgb(253, 230, 224);
     font-size: 16px !important;
@@ -388,7 +388,7 @@ body footer {
 }
 
 #comment_form {
-    margin: 0.5rem auto;
+    margin: 27px auto;
 }
 
 /* 随笔底部所属分类、标签、日期 */
@@ -414,7 +414,7 @@ body footer {
     display: block;
     margin-left: 3px;
     background: #f4f4f4;
-    padding: 2px 0.16rem;
+    padding: 2px 8.64px;
 }
 
 #post-category a {
@@ -550,8 +550,8 @@ body footer {
 }
 
 #tbCommentBody {
-    height: 1.5rem;
-    min-height: 1.5rem;
+    height: 81px;
+    min-height: 81px;
     color: var(--text-5);
 }
 
@@ -572,10 +572,10 @@ body footer {
 
 #btn_comment_submit {
     position: absolute;
-    bottom: -0.2rem;
+    bottom: -10.8px;
     right: 0;
-    width: 1.4rem;
-    height: 0.6rem;
+    width: 75.6px;
+    height: 32.4px;
     color: var(--text-a);
     border-radius: 4px;
     border: none;
@@ -583,7 +583,7 @@ body footer {
     user-select: none;
     outline: none;
     cursor: pointer;
-    font-size: 0.187rem;
+    font-size: 10.098px;
 }
 
 #btn_comment_submit:hover {
@@ -599,11 +599,11 @@ body footer {
 }
 
 .feedback_area_title {
-    padding: 0.14rem 0.2rem;
+    padding: 7.56px 10.8px;
     border-bottom: 1px solid var(--themeColor);
     background-color: var(--background-e);
     border-radius: 2px 2px 0 0;
-    font-size: 0.2rem;
+    font-size: 10.8px;
     font-weight: 700;
     color: var(--text-3);
 }
@@ -613,7 +613,7 @@ body footer {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5px;
-    font-size: 0.1rem;
+    font-size: 5.4px;
     color: #999;
 }
 
@@ -630,15 +630,15 @@ body footer {
 }
 
 .comment_vote a {
-    padding-left: 0.1rem;
+    padding-left: 5.4px;
 }
 
 .feedbackItem {
-    padding: 0.333rem 0.2rem;
+    padding: 17.982px 10.8px;
 }
 
 #blog-comments-placeholder {
-    margin: 0.4rem 0;
+    margin: 21.6px 0;
     border: 1px solid var(--text-10);
 }
 
@@ -651,7 +651,7 @@ body footer {
 }
 
 #post-comments-list {
-    margin-top: 0.4rem;
+    margin-top: 21.6px;
     width: 100%;
 }
 
@@ -674,28 +674,28 @@ body footer {
 .feedbackCon .blog_comment_body {
     position: relative;
     margin-left: 10px;
-    margin-top: 0.1rem;
-    padding: 0 0.2rem;
+    margin-top: 5.4px;
+    padding: 0 10.8px;
     background-color: var(--themeColor);
     border-radius: 3px;
     color: var(--text-5);
-    font-size: 0.25rem;
-    max-width: 10rem;
+    font-size: 13.5px;
+    max-width: 540px;
     line-height: 1.6;
-    padding: 0.1rem 0.2rem;
+    padding: 5.4px 10.8px;
 }
 
 .blog_comment_body:before {
     content: '';
     display: block;
     position: absolute;
-    left: -0.46rem;
-    top: 0.1rem;
-    width: 0.227rem;
+    left: -24.84px;
+    top: 5.4px;
+    width: 12.258px;
     height: 0;
-    border-right: solid 0.24rem var(--themeColor);
-    border-top: solid 0.06rem rgba(0, 0, 0, 0);
-    border-bottom: solid 0.133rem rgba(0, 0, 0, 0);
+    border-right: solid 12.96px var(--themeColor);
+    border-top: solid 3.24px rgba(0, 0, 0, 0);
+    border-bottom: solid 7.182px rgba(0, 0, 0, 0);
 }
 
 .custom-comments-author {
@@ -713,7 +713,7 @@ body footer {
 }
 
 .custom-comments-author img {
-    margin-left: 0.2rem;
+    margin-left: 10.8px;
 }
 
 .custom-comments-author .blog_comment_body::before {
@@ -724,13 +724,13 @@ body footer {
     content: '';
     display: block;
     position: absolute;
-    right: -0.46rem;
-    top: 0.1rem;
-    width: 0.227rem;
+    right: -24.84px;
+    top: 5.4px;
+    width: 12.258px;
     height: 0;
-    border-left: solid 0.24rem #61aeee;
-    border-top: solid 0.06rem rgba(0, 0, 0, 0);
-    border-bottom: solid 0.133rem rgba(0, 0, 0, 0);
+    border-left: solid 12.96px #61aeee;
+    border-top: solid 3.24px rgba(0, 0, 0, 0);
+    border-bottom: solid 7.182px rgba(0, 0, 0, 0);
 }
 
 .custom-comments-author .feedbackManage {
@@ -738,7 +738,7 @@ body footer {
 }
 
 .custom-comments-author .layer {
-    margin-left: 0.1rem;
+    margin-left: 5.4px;
     order: 3 !important;
 }
 
@@ -759,8 +759,8 @@ body footer {
 }
 
 .feedbackCon .blog_comment_body img {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 27px;
+    height: 27px;
 }
 
 .blog_comment_body>a:first-of-type,
@@ -774,7 +774,7 @@ body footer {
 }
 
 .feedbackManage {
-    margin-right: 0.2rem;
+    margin-right: 10.8px;
     order: 3;
 }
 
@@ -784,16 +784,16 @@ body footer {
 }
 
 #blog-comments-placeholder .layer {
-    padding: 0 0.1rem;
+    padding: 0 5.4px;
     color: var(--text-a);
     background-color: var(--themeColor);
     border-radius: 3px;
-    margin-right: 0.1rem;
+    margin-right: 5.4px;
     order: 0;
 }
 
 #blog-comments-placeholder .comment_date {
-    margin: 0 0.1rem;
+    margin: 0 5.4px;
     order: 2;
 }
 
@@ -802,7 +802,7 @@ body footer {
 }
 
 .comment_vote {
-    font-size: 0.1rem;
+    font-size: 5.4px;
     color: #999;
 }
 
@@ -810,8 +810,8 @@ body footer {
 /* 返回顶部按钮 */
 #back2Top {
     position: fixed;
-    bottom: 0.667rem;
-    right: 2.8rem;
+    bottom: 36.018px;
+    right: 151.2px;
 }
 
 /* 标签页面 */
@@ -856,11 +856,11 @@ body footer {
 #cnblogs_post_body h1,
 #cnblogs_post_body h2,
 #cnblogs_post_body h3 {
-    margin: 0.6rem 0 0.1333rem;
+    margin: 32.4px 0 7.1982px;
 }
 
 #cnblogs_post_body ul li {
-    line-height: 0.45rem;
+    line-height: 24.3px;
 }
 
 #cnblogs_post_body table,
@@ -872,7 +872,7 @@ body footer {
 
 
 #cnblogs_post_body .hljs-ln-code {
-    padding: 02px 0.0933rem;
+    padding: 02px 5.0382px;
 }
 
 #cnblogs_post_body .hljs {
@@ -959,25 +959,25 @@ body footer {
     background-color: #f9f2f4 !important;
     color: #c7254e !important;
     font-size: 0.87em !important;
-    padding: 0 0.0533rem !important;
+    padding: 0 2.8782px !important;
     word-break: break-word !important;
     overflow-x: auto !important;
     border: none !important;
 }
 
 #cnblogs_post_body blockquote {
-    padding: 0.1333rem;
+    padding: 7.1982px;
     background: #f6f9fa;
     border: none;
     border-left: 3px solid var(--themeColor);
 }
 
 mark {
-    padding: 02px 0.0533rem;
+    padding: 02px 2.8782px;
     font-size: 90%;
     color: #fff;
     background-color: #333;
-    border-radius: 0.04rem;
+    border-radius: 2.16px;
 }
 
 #cnblogs_post_body pre {
@@ -1004,7 +1004,7 @@ pre::before {
 pre:after {
     color: #ccc;
     content: attr(data-lang);
-    font-size: 0.6rem;
+    font-size: 32.4px;
     font-weight: 600;
     height: 15px;
     line-height: 15px;
@@ -1040,14 +1040,14 @@ pre:after {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0 27px;
 }
 
 #nav_next_page {
     display: flex;
     justify-content: center;
     margin: 10px 0;
-    padding: 0.05rem 0.2rem;
+    padding: 2.7px 10.8px;
     border-radius: 2px;
     background-color: #00a1d6;
     color: #fff;
@@ -1077,8 +1077,8 @@ pre:after {
 #iframe-music,
 .music-APlayer {
     position: fixed;
-    bottom: 0.2667rem;
-    left: 0.1333rem;
+    bottom: 14.4018px;
+    left: 7.1982px;
 }
 
 #cnblogs_post_body td {
@@ -1114,9 +1114,9 @@ pre:after {
 .entrylistTitle,
 .dayTitle {
     border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
-    padding: 0.267rem;
+    padding: 14.418px;
     color: var(--text-4);
-    font-size: 0.3rem;
+    font-size: 16.2px;
 }
 
 .PostList,
@@ -1126,13 +1126,13 @@ pre:after {
 .postTitle,
 .postCon,
 .postDesc {
-    padding: 0.1rem 0.267rem;
+    padding: 5.4px 14.418px;
 }
 
 .c_b_p_desc_readmore {
     display: table;
-    margin-top: 0.1rem;
-    padding: 0.05rem 0.1rem 0.05rem 0.15rem;
+    margin-top: 5.4px;
+    padding: 2.7px 5.4px 2.7px 8.1px;
     border: 1px solid var(--themeColor);
     color: var(--themeColor);
     border-radius: 3px;
@@ -1149,7 +1149,7 @@ pre:after {
     }
 
     #blogTitle {
-        height: 4rem;
+        height: 216px;
     }
 
     #blogTitle {
@@ -1167,7 +1167,7 @@ pre:after {
 
     /* 评论列表 start */
     .feedbackCon .blog_comment_body {
-        max-width: 6rem;
+        max-width: 324px;
     }
 
     /* 评论图片 */
@@ -1176,7 +1176,7 @@ pre:after {
     }
 
     #blog-comments-placeholder .comment_date {
-        /* width: 1.8rem; */
+        /* width: 97.2px; */
         overflow: hidden;
         white-space: nowrap;
     }
@@ -1186,7 +1186,7 @@ pre:after {
     }
 
     #blog-comments-placeholder .feedbackListSubtitle>a:last-of-type {
-        /* width: 2.2rem; */
+        /* width: 118.8px; */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1199,7 +1199,7 @@ pre:after {
     }
 
     #cnblogs_post_body {
-        padding: 0 0.5rem;
+        padding: 0 27px;
     }
 
     #green_channel {
@@ -1225,7 +1225,7 @@ pre:after {
     #comment_form_container,
     #blog_post_info_block,
     .postDesc {
-        padding: 0 0.5rem;
+        padding: 0 27px;
     }
 
     /* 随笔页 */
@@ -1235,17 +1235,17 @@ pre:after {
 
     /* 返回顶部按钮 */
     #back2Top {
-        bottom: 0.4rem;
-        right: 0.6rem;
+        bottom: 21.6px;
+        right: 32.4px;
     }
 
     /* 移动端侧边栏按钮 */
     #side-btn-wrap {
         visibility: hidden;
         position: fixed;
-        bottom: 0.4rem;
-        right: 0.5rem;
-        padding: 0.35rem;
+        bottom: 21.6px;
+        right: 27px;
+        padding: 18.9px;
         background: #fff;
         box-shadow: 1px 1px 8px var(--themeColor);
         border-radius: 50%;

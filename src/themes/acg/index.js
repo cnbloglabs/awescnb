@@ -1,5 +1,4 @@
 import './index.css'
-import 'lib-flexible/flexible.js'
 import AwesCnb from '@awescnb'
 
 class ACG extends AwesCnb {
