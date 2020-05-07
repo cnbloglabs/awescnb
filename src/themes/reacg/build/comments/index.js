@@ -3,13 +3,17 @@ import toast from '@plugins/toast'
 import './index.scss'
 
 const commentManager = window.commentManager
-const awesCommentsAvatar = window.awesCommentsAvatar
+
+function showAvatar() {
+    const script = `<script>window.awesCommentsAvatar()</script>`
+    $('body').append(script)
+}
 
 function submit() {
     $('#btn_comment_submit').click(() => {
         toast('感谢评论 🍺')
         commentManager.renderComments(0)
-        awesCommentsAvatar()
+        showAvatar()
     })
 }
 
@@ -17,7 +21,7 @@ function del() {
     $('.comment_actions a:nth-child(2)').click(() => {
         toast('删除成功 ✔')
         commentManager.renderComments(0)
-        awesCommentsAvatar()
+        showAvatar()
     })
 }
 
