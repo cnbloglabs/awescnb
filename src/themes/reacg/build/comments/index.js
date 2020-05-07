@@ -7,17 +7,20 @@ import './index.scss'
 
 function submit() {
     $('#btn_comment_submit').click(function() {
+        if ($('#tbCommentBody').text().length === 0) return
         toast('感谢评论 🍺')
-        window.commentManager.renderComments(0)
-        window.awesCommentsAvatar()
+        toast('请刷新页面')
+        // window.commentManager.renderComments(0)
+        // window.awesCommentsAvatar()
     })
 }
 
 function del() {
     $('.comment_actions a:nth-child(2)').click(function() {
         toast('删除成功 ✔')
-        window.commentManager.renderComments(0)
-        window.awesCommentsAvatar()
+        toast('请刷新页面')
+        // window.commentManager.renderComments(0)
+        // window.awesCommentsAvatar()
     })
 }
 
