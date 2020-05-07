@@ -7,7 +7,7 @@ import './index.scss'
 
 function submit() {
     $('#btn_comment_submit').click(function() {
-        if ($('#tbCommentBody').text().length === 0) return
+        if ($('#tbCommentBody').val().length === 0) return
         toast('感谢评论 🍺')
         toast('请刷新页面')
         // window.commentManager.renderComments(0)
