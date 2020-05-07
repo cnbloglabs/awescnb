@@ -5,29 +5,34 @@ import './index.scss'
 const commentManager = window.commentManager
 
 function showAvatar() {
-    const script = `<script>window.awesCommentsAvatar()</script>`
+    const script = `<script id='showAvatar'>window.awesCommentsAvatar()</script>`
     $('body').append(script)
+    setTimeout(() => {
+        $('#showAvatar').remove()
+    }, 1000)
 }
 
-function submit() {
-    $('document').on('click', '#btn_comment_submit', function() {
+async function submit() {
+    $('#btn_comment_submit').click(function() {
         toast('感谢评论 🍺')
         commentManager.renderComments(0)
-        showAvatar()
     })
 }
 
-function del() {
-    $('document').on('click', '.comment_actions a:nth-child(2)', function() {
+async function del() {
+    $('.comment_actions a:nth-child(2)').click(function() {
         toast('删除成功 ✔')
         commentManager.renderComments(0)
-        showAvatar()
     })
 }
 
 function comments() {
-    submit()
-    del()
+    submit().then(() => {
+        showAvatar()
+    })
+    del().then(() => {
+        showAvatar()
+    })
 }
 
 export default comments
