@@ -92,10 +92,6 @@ body {
         #navList {
             display: flex;
             height: auto;
-            li .icon {
-                margin-right: 5px;
-                width: 27px;
-            }
             li a {
                 display: flex;
                 align-items: center;
@@ -146,10 +142,7 @@ body {
             font-size: 16px;
             text-shadow: 5px 0px 10px var(--themeColor);
             color: var(--text-3);
-            .icon {
-                width: 27px;
-                height: 27px;
-            }
+
             &:hover {
                 transform: translateX(5.4px);
                 transition: all 0.2s;
@@ -167,15 +160,6 @@ body {
                     border: 1px solid var(--themeColor);
                     color: var(--themeColor);
                     border-radius: 3px;
-                    .icon {
-                        width: 1em;
-                        height: 1.2em;
-                        vertical-align: middle;
-                    }
-                    &:hover .icon {
-                        transform: translateX(2.7px);
-                        transition: all 0.2s;
-                    }
                 }
             }
         }
@@ -243,10 +227,6 @@ body {
                 color: var(--text-3);
                 // .entrylistItemTitle {
                 // }
-                .icon {
-                    width: 27px;
-                    height: 27px;
-                }
                 &:hover {
                     transform: translateX(5.4px);
                     transition: all 0.2s;
@@ -262,15 +242,6 @@ body {
                         border: 1px solid var(--themeColor);
                         color: var(--themeColor);
                         border-radius: 3px;
-                        .icon {
-                            width: 1em;
-                            height: 1.2em;
-                            vertical-align: middle;
-                        }
-                        &:hover .icon {
-                            transform: translateX(2.7px);
-                            transition: all 0.2s;
-                        }
                     }
                 }
             }
@@ -290,10 +261,6 @@ body {
                     padding: 5.4px 14.418px 5.4px 0;
                     font-size: 20px;
                     color: var(--text-3);
-                    .icon {
-                        width: 27px;
-                        height: 27px;
-                    }
                 }
                 // .postBody {
                 // }
@@ -573,27 +540,6 @@ body {
         #TopDiggPostsBlock {
             padding: 10.098px 14.418px;
         }
-        #sidebar_search_box .icon,
-        #sidebar_shortcut ul li a .icon,
-        #sidebar_recentposts ul li a .icon,
-        .icon #sidebar_scorerank ul li a .icon,
-        #sidebar_toptags ul li a .icon,
-        #sidebar_postcategory ul li a .icon,
-        #sidebar_postarchive ul li a .icon,
-        #sidebar_recentcomments .RecentCommentBlock .icon,
-        #TopViewPostsBlock .icon,
-        #TopFeedbackPostsBlock .icon,
-        #TopDiggPostsBlock .icon {
-            width: 1.2em;
-            height: 1.8em;
-        }
-    }
-    h3 {
-        .icon {
-            margin-right: 5.4px;
-            width: 1.8em;
-            height: 1.8em;
-        }
     }
     #blog-calendar {
         #blogCalendar {
@@ -671,10 +617,6 @@ body {
         padding: 14.418px;
         color: var(--text-4);
         font-size: 16px;
-        .icon {
-            width: 27px;
-            height: 27px;
-        }
     }
 }
 
@@ -710,12 +652,6 @@ body {
     h2 {
         display: flex;
         align-items: center;
-    }
-    h1 .icon,
-    h2 .icon {
-        margin-right: 5.4px;
-        width: 1.2em;
-        height: 1.2em;
     }
     h2,
     h3 {
@@ -1122,15 +1058,6 @@ mark {
 
 /* 随笔页 end */
 /* 动态类 */
-.icon {
-    width: 54px;
-    height: 54px;
-    vertical-align: -8.1px;
-    fill: currentColor;
-    overflow: hidden;
-    color: inherit;
-}
-
 .disable-hover {
     pointer-events: none;
 }

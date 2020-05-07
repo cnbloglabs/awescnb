@@ -1,0 +1,95 @@
+.icon {
+    width: 54px;
+    height: 54px;
+    vertical-align: -8.1px;
+    fill: currentColor;
+    overflow: hidden;
+    color: inherit;
+}
+
+#navList {
+    li .icon {
+        margin-right: 5px;
+        width: 27px;
+    }
+}
+
+.c_b_p_desc_readmore {
+    .icon {
+        width: 1em;
+        height: 1.2em;
+        vertical-align: middle;
+    }
+    &:hover .icon {
+        transform: translateX(2.7px);
+        transition: all 0.2s;
+    }
+}
+
+.postTitle,
+.entrylistPosttitle,
+.PostListTitle {
+    .icon {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+#cnblogs_post_body {
+    h1 .icon,
+    h2 .icon {
+        margin-right: 5.4px;
+        width: 1.2em;
+        height: 1.2em;
+    }
+}
+
+#sideBar {
+    h3 {
+        .icon {
+            margin-right: 5.4px;
+            width: 1.8em;
+            height: 1.8em;
+        }
+    }
+    #sidebar_search_box,
+    #sidebar_shortcut ul li a,
+    #sidebar_recentposts ul li a,
+    .icon #sidebar_scorerank ul li a,
+    #sidebar_toptags ul li a,
+    #sidebar_postcategory ul li a,
+    #sidebar_postarchive ul li a,
+    #sidebar_recentcomments .RecentCommentBlock,
+    #TopViewPostsBlock,
+    #TopFeedbackPostsBlock,
+    #TopDiggPostsBlock {
+        .icon {
+            width: 1.2em;
+            height: 1.8em;
+            margin-right: 3px;
+        }
+    }
+}
+
+#custom-gitee {
+    display: flex;
+    align-items: center;
+    padding: 0 15.822px;
+    &:hover {
+        background-color: var(--themeColor);
+        transition: all 0.3s;
+    }
+    &:hover span {
+        color: #fff;
+    }
+    .icon {
+        width: 27px;
+        margin-right: 5px;
+    }
+    span {
+        font-weight: 700;
+        text-shadow: 5px 0 10px var(--themeColor);
+        color: var(--text-3);
+        line-height: 100%;
+    }
+}
