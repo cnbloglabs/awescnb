@@ -142,7 +142,6 @@ body {
             font-size: 16px;
             text-shadow: 5px 0px 10px var(--themeColor);
             color: var(--text-3);
-
             &:hover {
                 transform: translateX(5.4px);
                 transition: all 0.2s;
@@ -460,7 +459,7 @@ body {
                     outline: none;
                     cursor: pointer;
                     font-size: 12px;
-                    :hover {
+                    &:hover {
                         background-color: var(--themeColor);
                         transition: background-color 0.3s;
                     }
