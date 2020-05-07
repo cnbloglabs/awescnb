@@ -2,37 +2,28 @@
 import toast from '@plugins/toast'
 import './index.scss'
 
-const commentManager = window.commentManager
+// const commentManager = window.commentManager
+// const awesCommentsAvatar = window.awesCommentsAvatar
 
-function showAvatar() {
-    const script = `<script id='showAvatar'>window.awesCommentsAvatar()</script>`
-    $('body').append(script)
-    setTimeout(() => {
-        $('#showAvatar').remove()
-    }, 1000)
-}
-
-async function submit() {
+function submit() {
     $('#btn_comment_submit').click(function() {
         toast('感谢评论 🍺')
-        commentManager.renderComments(0)
+        window.commentManager.renderComments(0)
+        window.awesCommentsAvatar()
     })
 }
 
-async function del() {
+function del() {
     $('.comment_actions a:nth-child(2)').click(function() {
         toast('删除成功 ✔')
-        commentManager.renderComments(0)
+        window.commentManager.renderComments(0)
+        window.awesCommentsAvatar()
     })
 }
 
 function comments() {
-    submit().then(() => {
-        showAvatar()
-    })
-    del().then(() => {
-        showAvatar()
-    })
+    submit()
+    del()
 }
 
 export default comments
