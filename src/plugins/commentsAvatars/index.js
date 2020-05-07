@@ -62,4 +62,6 @@ function commentsAvatar() {
     authorRight()
 }
 
+window.awesCommentsAvatar = commentsAvatar
+
 export default commentsAvatar
