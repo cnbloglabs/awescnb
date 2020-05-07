@@ -1,9 +1,9 @@
-import './index.css'
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty, cacheScript } from '@tools'
+import { pageName, randomProperty, cacheScript, poll } from '@tools'
 import { iconInSvg } from '../../utils/tools'
 import { iconfont } from '../../constants/urls'
 import icons from '../../constants/icons'
+import './index.scss'
 
 // 设置sidebar icon
 function setSidebarIcon() {
@@ -70,23 +70,7 @@ function setSidebarIcon() {
             $(`${sidebarWraps.catalog} h3`).prepend(iconInSvg(icons.catalog))
         }
     }
-
-    if ($('#sidebar_topdiggedposts').length) {
-        insert()
-    } else {
-        let count = 1
-
-        let intervalId = setInterval(() => {
-            if ($('#sidebar_topdiggedposts').length) {
-                clearInterval(intervalId)
-                insert()
-            }
-            if (count == 15) {
-                clearInterval(intervalId)
-            }
-            count++
-        }, 500)
-    }
+    poll($("#blog-sidecolumn").length, insert)
 }
 
 // 设置github icon
@@ -112,53 +96,20 @@ function setGitee() {
     $('#blogTitle').before(icon)
 }
 
-//nalist 图标（博客园  首页 ...）
+//navlist 图标（博客园  首页 ...）
 function nav() {
     const { cnblog, home, pens, contact, rss, admin } = icons
 
-    // 使用对象
-    // const items = {
-    //     '#blog_nav_sitehome': cnblog,
-    //     '#blog_nav_myhome': home, // 博客首页
-    //     '#blog_nav_newpost': pens, // 新随笔
-    //     '#blog_nav_contact': contact, // 联系
-    //     '#blog_nav_rss': rss, // 订阅
-    //     '#blog_nav_admin': admin, // 管理
-    // }
+    const items = [
+        { selector: '#blog_nav_sitehome', icon: cnblog },
+        { selector: '#blog_nav_myhome', icon: home },
+        { selector: '#blog_nav_newpost', icon: pens },
+        { selector: '#blog_nav_contact', icon: contact },
+        { selector: '#blog_nav_rss', icon: rss },
+        { selector: '#blog_nav_admin', icon: admin },
+    ]
 
-    // for (let selector in items) {
-    //     if ($(selector).length !== 0) {
-    //         $(selector).prepend(iconInSvg(items[selector]))
-    //     }
-    // }
-
-    // 使用对象数组
-    // const items = [
-    //     { selector: '#blog_nav_sitehome', icon: cnblog },
-    //     { selector: '#blog_nav_myhome', icon: home },
-    //     { selector: '#blog_nav_newpost', icon: pens },
-    //     { selector: '#blog_nav_contact', icon: contact },
-    //     { selector: '#blog_nav_rss', icon: rss },
-    //     { selector: '#blog_nav_admin', icon: admin },
-    // ]
-
-    // for (let { selector, icon } of items) {
-    //     if ($(selector).length !== 0) {
-    //         $(selector).prepend(iconInSvg(icon))
-    //     }
-    // }
-
-    // 使用 Map
-    const items = new Map([
-        ['#blog_nav_sitehome', cnblog], // 博客园首页
-        ['#blog_nav_myhome', home], // 博客首页
-        ['#blog_nav_newpost', pens], // 新随笔
-        ['#blog_nav_contact', contact], // 联系
-        ['#blog_nav_rss', rss], // 订阅
-        ['#blog_nav_admin', admin], // 管理
-    ])
-
-    for (let [selector, icon] of items.entries()) {
+    for (let { selector, icon } of items) {
         if ($(selector).length !== 0) {
             $(selector).prepend(iconInSvg(icon))
         }
