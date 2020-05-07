@@ -7,6 +7,7 @@ import catalog from './catalog'
 import indexList from './indexList'
 import notice from './notice'
 import setIcons from './icons'
+import comments from './comments'
 
 function build() {
     mobileMenu()
@@ -18,6 +19,7 @@ function build() {
     indexList()
     notice()
     setIcons()
+    comments()
 }
 
 export default build
