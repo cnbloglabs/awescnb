@@ -10,7 +10,7 @@ function showAvatar() {
 }
 
 function submit() {
-    $('#btn_comment_submit').click(() => {
+    $('document').on('click', '#btn_comment_submit', function() {
         toast('感谢评论 🍺')
         commentManager.renderComments(0)
         showAvatar()
@@ -18,7 +18,7 @@ function submit() {
 }
 
 function del() {
-    $('.comment_actions a:nth-child(2)').click(() => {
+    $('document').on('click', '.comment_actions a:nth-child(2)', function() {
         toast('删除成功 ✔')
         commentManager.renderComments(0)
         showAvatar()
