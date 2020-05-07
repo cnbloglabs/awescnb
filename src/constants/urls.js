@@ -14,18 +14,19 @@ export const themeRepository = 'https://guangzan.gitee.io/awescnb'
 // 图片的根路径，只有tools/randomImgurl使用
 export const animeImages =
     'https://guangzan.gitee.io/imagehost/awescnb/images/anime'
-// rough-viz
+// imagehost 文件
 export const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
 export const emojijs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js'
+export const live2djs =
+    'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js'
+// CDN
 export const aplayerjs =
     'https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js'
 export const aplayercss =
     'https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css'
-export const live2djs =
-    'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js'
 export const materialize =
-    'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'
+    'https://cdn.bootcdn.net/ajax/libs/materialize/0.98.0/js/materialize.min.js'
 export const linenumbersjs =
-    'https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js'
+    'https://cdn.bootcdn.net/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js'
 export const jqueryui = 'https://code.jquery.com/ui/1.12.0/jquery-ui.js'
