@@ -2,7 +2,7 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg) ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) ![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg) ![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg) ![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg) ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
-> ⛷ **Awescnb**, awesome cnblog 使博客园更加美好。
+> ⛷ **Awescnb**, awesome cnblog 使博客园更加美好，为博客园发烧友而生！
 
 ## 简介
 
@@ -13,6 +13,36 @@
 2. 分享: 快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到您的皮肤了.
 
 3. 安装: 在您的博客园安装这个项目中已经集成的皮肤.安装之后,可以快速切换其他皮肤.[点击查看切换效果](https://guangzan.gitee.io/imagehost/blog/themechange.gif).
+
+## 构建
+
+**config/options.js**
+
+我把需要经常更改的配置单独抽离一个文件，这样做能节省多时间。
+
+```js
+module.exports = {
+  themeName: 'reacg',
+  template: 'post',
+  eslint: true,
+  sourceMap: false,
+  openAnalyzer: false,
+  cssExtract: false,
+}
+```
+
+- themeName 创建的主题文件夹名称 (运行 npm start 会启动它)
+- template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+- eslint 是否开启 eslint
+- sourceMap 是否开启 sourcemap
+- openAnalyzer 是否在 build 时开启 size 分析
+- cssExtract 是否单独抽离 css
+
+`cssExtract` 如果没有开启，build 会打包生成一个 dist， dist 下仅有 js 文件， 这是 css in js 的方式，通过 js 动态添加 `style` ； 若设为 true ，会在 dist 目录下另外创建一个 ext 文件夹， 下面放了皮肤的 js 和 css 文件。这两种方式供你灵活选择。
+
+![](https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-dist.png)
+
+> 正如你所见， ext 下每一个皮肤对应 js 和 css 两个文件。
 
 ## 文档
 
@@ -49,8 +79,7 @@
 
 ## 捐赠
 
-1. 最近帮小伙伴解决一些问题, 请我喝水, 一并在此感谢, 但本人并不接受任何捐赠.
-2. 如需捐赠请捐赠给皮肤作者. 如有时间,问题都会解决的.
-3. 有任何问题都可以到群里反馈,十分感谢!
+1. 最近帮小伙伴解决一些问题, 要请我喝水, 一并在此感谢, 但本人并不接受任何捐赠，如需捐赠请捐赠给皮肤作者。
+2. 欢迎加群，有问必答。有任何问题也都可以到群里反馈,十分感谢!
 
 > 做这个项目是兴趣使然, 也为了一群博客园发烧友.
