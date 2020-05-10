@@ -5,11 +5,11 @@
         [
             "@babel/plugin-transform-runtime",
             {
-                "absoluteRuntime": false,
                 "corejs": false,
+                "useESModules": false,
+                "absoluteRuntime": false,
                 "helpers": true,
                 "regenerator": true,
-                "useESModules": false,
                 "version": "7.0.0-beta.0"
             }
         ]
