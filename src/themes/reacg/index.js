@@ -1,5 +1,4 @@
 import './style/index.scss'
-// import 'lib-flexible/flexible.js'
 import AwesCnb from '@awescnb'
 
 class Reacg extends AwesCnb {
