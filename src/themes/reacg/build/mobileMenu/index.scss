@@ -4,7 +4,7 @@
         position: fixed;
         bottom: 21.6px;
         right: 27px;
-        padding: 18.9px;
+        padding: 10px;
         background: #fff;
         box-shadow: 1px 1px 8px var(--themeColor);
         border-radius: 50%;
@@ -49,11 +49,11 @@
     }
 
     #side-btn-burger:before {
-        top: 10px;
+        top: 8px;
     }
 
     #side-btn-burger:after {
-        bottom: 10px;
+        bottom: 8px;
     }
 
     #side-btn.side-btn-active #side-btn-burger {

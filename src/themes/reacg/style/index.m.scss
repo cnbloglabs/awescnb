@@ -122,4 +122,9 @@
         width: 43.2px;
         height: 43.2px;
     }
+    // 插件样式覆盖
+    body .custom-drag-menu {
+        right: 86px !important;
+        bottom: 22px;
+    }
 }
