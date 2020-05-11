@@ -134,6 +134,7 @@ body {
             }
         }
         .postTitle {
+            margin-top: 5px;
             padding-left: 10.8px;
             white-space: nowrap;
             overflow: hidden;
@@ -247,6 +248,66 @@ body {
             .entrylistItemPostDesc {
                 padding: 5.4px 14.418px;
                 color: var(--text-9);
+            }
+        }
+    }
+    // 标签页列表
+    .PostListTitle {
+        border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+        padding: 14.418px;
+        color: var(--text-4);
+        font-size: 16px;
+    }
+    // 我的标签
+    #taglist_main {
+        margin-top: 0;
+        padding: 0 10px 10px;
+        #taglist_title_wrap {
+            h3 {
+                margin: 0;
+                padding: 5px;
+            }
+        }
+        #taglist {
+            padding: 10px 0;
+            table {
+                display: block;
+            }
+            tbody {
+                display: flex;
+                flex-wrap: wrap;
+                tr {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    td {
+                        margin: 5px;
+                        padding: 2px 8px;
+                        border-radius: 5px;
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 700;
+                        flex-grow: 1;
+                        text-align: center;
+                        &:nth-child(n) {
+                            background-color: #ff6b6b;
+                        }
+                        &:nth-child(2n) {
+                            background-color: #10ac84;
+                        }
+                        &:nth-child(3n) {
+                            background-color: #ff9f43;
+                        }
+                        &:nth-child(4n) {
+                            background-color: #2e86de;
+                        }
+                        &:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 0 5px var(--themeColor);
+                            transition: all 0.2s;
+                        }
+                    }
+                }
             }
         }
     }
@@ -611,12 +672,6 @@ body {
 .PostList {
     margin-left: 0;
     padding: 5.4px 14.418px;
-    .PostListTitle {
-        border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
-        padding: 14.418px;
-        color: var(--text-4);
-        font-size: 16px;
-    }
 }
 
 .postDesc2 {
