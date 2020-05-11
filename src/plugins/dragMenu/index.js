@@ -230,17 +230,17 @@ function create() {
 
     var menu = new Menu('#myMenu')
 
-    var item1 = new Item('🚀', '#48dbfb', 'dblclick', back2top, '双击')
+    var item1 = new Item('🚀', '#c8d6e5', 'dblclick', back2top, '双击')
     menu.add(item1)
-    var item3 = new Item('💗', '#feca57', 'click', focus, '关注')
+    var item3 = new Item('💗', '#fdcb6e', 'click', focus, '关注')
     menu.add(item3)
 
     if (pageName() === 'post') {
-        var item2 = new Item('👍', '#ff6b6b', 'click', diggit, '点赞')
+        var item2 = new Item('👍', '#ff6b6b', 'click', diggit, '推荐')
         menu.add(item2)
         var item4 = new Item('💬', '#10ac84', 'click', comment, '评论')
         menu.add(item4)
-        var item5 = new Item('💼', '#54a0ff', 'click', collect, '收藏')
+        var item5 = new Item('📂', '#01a3a4', 'click', collect, '收藏')
         menu.add(item5)
     }
 
