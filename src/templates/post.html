@@ -73,6 +73,11 @@
 								<div class="clear"></div>
 								<div class="postBody">
 									<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+										<details open="">
+											<summary>设置构造函数</summary>
+											<pre><div class="copy-btns">copy</div><code class="language-js hljs javascript"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">  <span class="hljs-keyword">this</span>.a = <span class="hljs-number">1</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">  <span class="hljs-keyword">this</span>.b = <span class="hljs-number">2</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">}</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5">f()</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6"><span class="hljs-built_in">console</span>.log(f.constructor) <span class="hljs-comment">//ƒ Function() { [native code] }</span></td></tr></tbody></table></code></pre>
+											<pre><div class="copy-btns">copy</div><code class="language-js hljs javascript"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">  <span class="hljs-keyword">this</span>.a = <span class="hljs-number">1</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">  <span class="hljs-keyword">this</span>.b = <span class="hljs-number">2</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">}</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5"> </td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6"><span class="hljs-keyword">const</span> o = <span class="hljs-keyword">new</span> f()</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7"><span class="hljs-built_in">console</span>.log(o.constructor)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8"><span class="hljs-comment">// ƒ f() {</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9"><span class="hljs-comment">//   this.a = 1</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10"><span class="hljs-comment">//   this.b = 2</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11"><span class="hljs-comment">// }</span></td></tr></tbody></table></code></pre>
+										</details>
 										<h1 id="标题测试">标题测试</h1>
 										<pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"><span class="hljs-comment"># 二级标题</span></span>
 <span class="hljs-meta">#</span><span class="bash"><span class="hljs-comment">## 三级标题</span></span>
@@ -265,12 +270,9 @@
 ![<span class="hljs-string">RUNOOB 图标</span>](<span class="hljs-link">http://static.runoob.com/images/runoob-logo.png "RUNOOB"</span>)
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://static.runoob.com/images/runoob-logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50%"</span>&gt;</span></span>
 </code></pre>
-										<p><img src="https://i.pravatar.cc/50"
-												alt="RUNOOB 图标"><br>
-											<img src="https://i.pravatar.cc/50"
-												alt="RUNOOB 图标" title="RUNOOB"><br>
-											<img src="https://i.pravatar.cc/50"
-												width="50%"></p>
+										<p><img src="https://i.pravatar.cc/50" alt="RUNOOB 图标"><br>
+											<img src="https://i.pravatar.cc/50" alt="RUNOOB 图标" title="RUNOOB"><br>
+											<img src="https://i.pravatar.cc/50" width="50%"></p>
 										<h2 id="使用链接">使用链接</h2>
 										<pre><code class="hljs markdown">这个链接用 1 作为网址变量 [<span class="hljs-string">RUNOOB</span>][<span class="hljs-symbol">1</span>].
 然后在文档的结尾为变量赋值（网址）
@@ -433,12 +435,10 @@
 												<a id="green_channel_favorite"
 													onclick="AddToWz(cb_entryId);return false;"
 													href="javascript:void(0);">收藏该文</a>
-												<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博"><img
-														src="https://i.pravatar.cc/50"
-														alt=""></a>
-												<a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信"><img
-														src="https://i.pravatar.cc/50"
-														alt=""></a>
+												<a id="green_channel_weibo" href="javascript:void(0);"
+													title="分享至新浪微博"><img src="https://i.pravatar.cc/50" alt=""></a>
+												<a id="green_channel_wechat" href="javascript:void(0);"
+													title="分享至微信"><img src="https://i.pravatar.cc/50" alt=""></a>
 											</div>
 											<div id="author_profile">
 												<div id="author_profile_info" class="author_profile_info">
