@@ -70,7 +70,7 @@ function setSidebarIcon() {
             $(`${sidebarWraps.catalog} h3`).prepend(iconInSvg(icons.catalog))
         }
     }
-    poll($("#blog-sidecolumn").length, insert)
+    poll($('#blog-sidecolumn').length, insert)
 }
 
 // 设置github icon
@@ -82,7 +82,11 @@ function setGithub() {
         icons.github,
     )}</a>
                         `
-    $('#mode-change').after($githubIcon)
+    $('#mode-change').length
+        ? $('#mode-change').after($githubIcon)
+        : $('#custom-gitee').length
+        ? $('#custom-gitee').before($githubIcon)
+        : $('#blogTitle').before($githubIcon)
 }
 
 // gitee icon

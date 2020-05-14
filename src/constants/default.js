@@ -9,6 +9,11 @@ const defaultOptions = {
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
     },
+    // 暗色模式
+    darkMode: {
+        enable: true,
+        auto: false,
+    },
     // 个性签名
     signature: {
         enable: false,

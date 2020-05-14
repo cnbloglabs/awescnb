@@ -3,6 +3,8 @@ import icons from '../../constants/icons'
 import { iconInSvg } from '../../utils/tools'
 import toast from '@plugins/toast'
 
+const { enable, auto } = window.opts.darkMode
+
 // mode 初始化和点击切换
 function init() {
     const nowHour = new Date().getHours()
@@ -14,7 +16,7 @@ function init() {
     $('#header').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {
-        toast('试试暗色模式 🌓')
+        auto ? changeModeToggle('dark') : toast('试试暗色模式 🌓')
     }
 
     localStorage.modeType === 'dark'
@@ -82,6 +84,7 @@ function background(mode = 'light') {
 }
 
 function mode() {
+    if (!enable) return
     init()
     click()
 }
