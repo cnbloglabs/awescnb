@@ -1,12 +1,12 @@
-/* 随笔签名 start */
 #post-signature {
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 25px 0;
-    padding: 12px 24px 12px 15px;
+    padding: 10px 24px 10px 15px;
     background-color: var(--background-e, #f6f8fa);
     border-left: 5px solid var(--themeColor, #00a1d6);
+    border-radius: 2px;
 }
 
 #post-signature a {
@@ -20,7 +20,7 @@
 
 #post-signature p {
     margin: 0;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #post-signature::before {
@@ -30,13 +30,11 @@
     top: 20px;
     left: -12px;
     color: #fff;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 100%;
     text-align: center;
-    line-height: 20px;
+    line-height: 18px;
     font-weight: 800;
     font-size: 14px;
 }
-
-/* 随笔签名 end */
