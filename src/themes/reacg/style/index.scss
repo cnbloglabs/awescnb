@@ -739,8 +739,19 @@ body {
     ol {
         padding-left: 20px;
         li {
-            margin-top: 10px;
+            line-height: 28px;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+    ul {
+        margin-left: 21.6px;
+        li {
             line-height: 24px;
+            &:hover {
+                cursor: default;
+            }
         }
     }
     img {
@@ -758,14 +769,8 @@ body {
         color: var(--themeColor);
         transition: color 0.2s;
     }
-    ul {
-        margin-left: 21.6px;
-        li {
-            line-height: 24px;
-        }
-    }
     blockquote {
-        margin-top: 10.8px;
+        margin-top: 10px;
         padding: 1px 1px 1px 15px;
         background: var(--background-e);
         border: none;
