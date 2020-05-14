@@ -703,6 +703,10 @@ body {
     p {
         line-height: 1.5em;
     }
+    p a:hover {
+        color: var(--themeColor);
+        transition: color 0.2s;
+    }
     h1,
     h2 {
         display: flex;
@@ -715,7 +719,7 @@ body {
     h1 {
         display: flex;
         align-items: center;
-        margin: 54px 0 7.1982px;
+        margin: 20px 0 7.1982px;
         font-size: 24px;
         color: var(--themeColor);
         svg {
@@ -737,7 +741,8 @@ body {
         white-space: pre;
     }
     ol {
-        padding-left: 20px;
+        margin: 10px 0;
+        padding-left: 18px;
         li {
             line-height: 28px;
             &:hover {
@@ -746,7 +751,7 @@ body {
         }
     }
     ul {
-        margin-left: 21.6px;
+        margin: 10px 0px 10px 21.6px;
         li {
             line-height: 24px;
             &:hover {
@@ -765,23 +770,18 @@ body {
         border: none;
         height: auto !important;
     }
-    p a:hover {
-        color: var(--themeColor);
-        transition: color 0.2s;
-    }
     blockquote {
-        margin-top: 10px;
+        margin: 5px 0;
         padding: 1px 1px 1px 15px;
         background: var(--background-e);
         border: none;
         border-left: 8px solid var(--themeColor);
         p {
             margin: 6px auto;
-            line-height: 1.5;
+            line-height: 1.8;
             font-size: 14px;
         }
     }
-
     details {
         font-family: 'Roboto', 'sans-serif';
         margin: 0 0 0.6em 0;
@@ -838,42 +838,6 @@ body {
             }
         }
     }
-    /*     details {
-        margin-top: 10px;
-        &:hover {
-            cursor: pointer;
-        }
-        summary {
-            background-color: var(--themeColor);
-            padding: 5px 0 5px 15px;
-            border-radius: 3px;
-            color: #fff;
-            &:after {
-                content: '展开';
-                float: right;
-                opacity: 0;
-                font-size: 0.8em;
-                transition: opacity 0.8s;
-            }
-            &:hover:after {
-                opacity: 0.7;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-        &[open] {
-            summary {
-                &:before {
-                    transform: rotate(90deg);
-                    transition: all 0.25s;
-                }
-                &:after {
-                    content: '收起';
-                }
-            }
-        }
-    } */
 }
 
 #blog_post_info_block {
