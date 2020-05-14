@@ -11,8 +11,9 @@ const defaultOptions = {
     },
     // 暗色模式
     darkMode: {
-        enable: true,
-        auto: false,
+        enable: true,    // 是否启用
+        autoDark: false, // 夜间自动切换暗色模式
+        autoLight: false // 日间自动切换亮色模式
     },
     // 个性签名
     signature: {
