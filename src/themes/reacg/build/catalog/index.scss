@@ -1,6 +1,6 @@
 #catalog {
     min-height: 71.982px;
-    max-height: 594px;
+    max-height: 550px;
     width: 14vw;
     max-width: 14vw;
     font-size: 14px;
@@ -10,13 +10,15 @@
     text-overflow: ellipsis;
     background-color: var(--background-w);
     z-index: 3;
-    background-color: var(--background-w);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border-radius: 2px;
     margin-bottom: 16.2px;
     color: var(--text-3);
     .catalog-title {
+        position: sticky;
+        top: 0;
         padding: 10.098px 14.418px;
+        background-color: var(--background-w);
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
     }
     ul {

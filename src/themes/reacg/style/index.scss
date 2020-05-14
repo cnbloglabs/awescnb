@@ -769,6 +769,31 @@ body {
         overflow-x: auto;
         border: none;
         height: auto !important;
+        font-size: 14px;
+        thead,
+        tr,
+        th,
+        tbody,
+        td {
+            border: none;
+        }
+        thead {
+            tr {
+                th {
+                    background-color: #a4b0be;
+                    color: #333;
+                    padding: 6px 9px;
+                }
+            }
+        }
+        tr {
+            &:nth-child(even) {
+                background-color: var(--background-e);
+            }
+            td {
+                padding: 4px 7px;
+            }
+        }
     }
     blockquote {
         margin: 5px 0;

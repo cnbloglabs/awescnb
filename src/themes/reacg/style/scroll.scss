@@ -27,7 +27,7 @@
     }
 }
 
-.scrollbar-code {
+@mixin scrollbar-simple($thumb-color) {
     &::-webkit-scrollbar {
         display: block;
         margin-top: 105px;
@@ -36,7 +36,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: var(--themeColor, rgba(0, 0, 0, 0.9));
+        background-color: $thumb-color;
     }
 
     &::-webkit-scrollbar-track {
@@ -44,13 +44,17 @@
     }
 }
 
-#catalog,
 body,
 .emoji-picker__emojis {
     @extend .scrollbar-gradient;
 }
-#cnblogs_post_body table,
+
+#catalog,
 pre,
 code {
-    @extend .scrollbar-code;
+    @include scrollbar-simple(var(--themeColor));
+}
+
+#cnblogs_post_body table {
+    @include scrollbar-simple(#a4b0be);
 }
