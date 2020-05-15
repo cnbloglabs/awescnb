@@ -120,17 +120,6 @@ function nav() {
     }
 }
 
-// 移动端头部菜单 toggle  (博客园  首页 ...)
-// function mobileNavDropdown() {
-//     if (userAgent() !== 'phone') return
-//     const ele = `<div id='custom-mobile-nav'>${iconInSvg(icons.look)}</div>`
-//     $('#navList').before(ele)
-
-//     $('#custom-mobile-nav').click(function() {
-//         $('#navList').toggle(300, 'swing')
-//     })
-// }
-
 // 首页文章题目 icon
 function setIndexPosttitleIcon() {
     if (pageName() !== 'index') return
@@ -152,14 +141,14 @@ function setIndexPostLookIcon() {
 function setEntrylistPosttitleIcon() {
     if (pageName() !== 'list') return
     $('.entrylistPosttitle').each(function() {
-        $(this).prepend(iconInSvg(icons.pen))
+        $(this).prepend(iconInSvg(icons.md))
     })
 }
 
 // 设置随笔页文章题目icon
 function setHeadlineIcon() {
     if (pageName() !== 'post') return
-    $('#topics .postTitle').prepend(iconInSvg(icons.pen))
+    $('#topics .postTitle').prepend(iconInSvg(icons.md))
 }
 
 // 文章小标题icon
