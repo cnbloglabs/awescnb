@@ -30,9 +30,18 @@
 .entrylistPosttitle,
 .PostListTitle {
     .icon {
-        width: 1em;
-        height: 1.2em;
-        color: #10ac84;
+        width: 1.6em;
+        height: 1.6em;
+    }
+}
+
+.post {
+    .postTitle {
+        .icon {
+            width: 1em;
+            height: 1.2em;
+            color: #10ac84;
+        }
     }
 }
 
