@@ -375,8 +375,12 @@ body {
             .blog_comment_body {
                 background-color: #61aeee !important;
                 color: #fff;
-                a {
+                & > a:nth-child(1) {
                     color: var(--themeColor);
+                }
+                a:not(:nth-child(1)):hover {
+                    color: var(--themeColor);
+                    transition: all 0.25s;
                 }
             }
 
@@ -1126,11 +1130,6 @@ body {
         line-height: 1.6;
         padding: 5.4px 10.8px;
     }
-}
-
-.blog_comment_body > a:first-of-type,
-.blog_comment_body p a:nth-child(1) {
-    color: #fff;
 }
 
 .feedbackListSubtitle > a:last-of-type {
