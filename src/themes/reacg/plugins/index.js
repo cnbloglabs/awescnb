@@ -12,10 +12,10 @@ import commentsAvatars from '@plugins/commentsAvatars'
 import signature from '@plugins/signature'
 import postSignature from '@plugins/postSignature'
 import highlight from '@plugins/highlight'
+import postMessage from '@plugins/postMessage'
 import postTopimage from '@plugins/postTopimage'
 import emoji from '@plugins/emoji'
 import lock from '@plugins/lock'
-import postMessage from '@plugins/postMessage'
 import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
 import { shootInitial } from '@plugins/barrage'
@@ -36,10 +36,10 @@ function plugins() {
     postSignature()
     highlight()
     copy()
-    postTopimage()
     emoji()
     lock()
     postMessage()
+    postTopimage()
     qrcode()
     charts()
 }
