@@ -29,6 +29,7 @@ const icons = {
     rss: '#ac-rss', // 订阅
     contact: '#ac-contact', // 联系
     gitee: '#ac-gitee', // 联系
+    md: '#ac-md', // #号
     //count -> 20
     food: {
         pistachio: '#ac-food-pistachio',
