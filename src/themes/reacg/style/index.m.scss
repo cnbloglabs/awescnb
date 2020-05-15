@@ -57,10 +57,10 @@
     #div_digg {
         margin-top: 10px !important;
     }
-    // .entrylistPosttitle,
-    // .postTitle {
-    //     font-size: 26px !important;
-    // }
+    .entrylistPosttitle,
+    .postTitle {
+        font-size: 26px !important;
+    }
     .commentbox_title {
         margin-bottom: 5.4px;
     }
@@ -74,6 +74,7 @@
     }
     .forFlow #blog-comments-placeholder .feedbackListSubtitle {
         font-size: 12px;
+        line-height: 2em;
     }
     .forFlow #blog-comments-placeholder .comment_date {
         overflow: hidden;
@@ -98,30 +99,31 @@
         overflow-y: scroll;
         clip-path: circle(30px at calc(100%) 100%);
         z-index: 12;
+        #sidebar_news {
+            margin-bottom: 0;
+            border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+        }
+        #blog-calendar,
+        #sidebar_news,
+        #sidebar_postarchive,
+        #sidebar_postcategory,
+        #sidebar_recentcomments,
+        #sidebar_recentposts,
+        #sidebar_scorerank,
+        #sidebar_search,
+        #sidebar_shortcut,
+        #sidebar_topcommentedposts .catListFeedback,
+        #sidebar_toptags,
+        #sidebar_topviewedposts .catListView,
+        #topdigg_posts_wrap .catListView {
+            margin-bottom: 0;
+        }
+        #blogCalendar tr:not(:nth-child(1)) td {
+            width: 43.2px;
+            height: 43.2px;
+        }
     }
-    #sidebar_news {
-        margin-bottom: 0;
-        border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
-    }
-    #blog-calendar,
-    #sidebar_news,
-    #sidebar_postarchive,
-    #sidebar_postcategory,
-    #sidebar_recentcomments,
-    #sidebar_recentposts,
-    #sidebar_scorerank,
-    #sidebar_search,
-    #sidebar_shortcut,
-    #sidebar_topcommentedposts .catListFeedback,
-    #sidebar_toptags,
-    #sidebar_topviewedposts .catListView,
-    #topdigg_posts_wrap .catListView {
-        margin-bottom: 0;
-    }
-    #blogCalendar tr:not(:nth-child(1)) td {
-        width: 43.2px;
-        height: 43.2px;
-    }
+
     // 插件样式覆盖
     body .custom-drag-menu {
         right: 86px !important;

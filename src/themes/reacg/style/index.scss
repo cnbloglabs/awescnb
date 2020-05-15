@@ -1,15 +1,5 @@
 @import './scroll.scss';
 :root {
-    --background-g: var(--dark-background-g, var(--default-background-g));
-    --background-w: var(--dark-background-w, var(--default-background-w));
-    --background-e: var(--dark-background-e, var(--default-background-e));
-    --text-0: var(--dark-text-0, var(--default-text-0));
-    --text-3: var(--dark-text-3, var(--default-text-3));
-    --text-4: var(--dark-text-4, var(--default-text-4));
-    --text-5: var(--dark-text-5, var(--default-text-5));
-    --text-9: var(--dark-text-9, var(--default-text-9));
-    --text-10: var(--dark-text-10, var(--default-text-10));
-    --text-a: var(--dark-text-a, var(--default-text-a));
     --default-background-g: rgb(253, 230, 224);
     --default-background-w: #fff;
     --default-background-e: #f6f8fa;
@@ -20,11 +10,28 @@
     --default-text-9: #999;
     --default-text-10: #d1d5da;
     --default-text-a: #fff;
+    --background-g: var(--dark-background-g, var(--default-background-g));
+    --background-w: var(--dark-background-w, var(--default-background-w));
+    --background-e: var(--dark-background-e, var(--default-background-e));
+    --text-0: var(--dark-text-0, var(--default-text-0));
+    --text-3: var(--dark-text-3, var(--default-text-3));
+    --text-4: var(--dark-text-4, var(--default-text-4));
+    --text-5: var(--dark-text-5, var(--default-text-5));
+    --text-9: var(--dark-text-9, var(--default-text-9));
+    --text-10: var(--dark-text-10, var(--default-text-10));
+    --text-a: var(--dark-text-a, var(--default-text-a));
+}
+
+html {
+    font-size: 12px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    word-break: break-word;
+    text-rendering: optimizeLegibility;
 }
 
 body {
     background-color: var(--background-g);
-    font-size: 14px;
     color: var(--text-0);
 }
 
@@ -319,8 +326,9 @@ body {
         #topics {
             .post {
                 .postTitle {
+                    margin: 5px 0;
                     padding: 5.4px 14.418px 5.4px 0;
-                    font-size: 20px;
+                    font-size: 30px;
                     color: var(--text-3);
                 }
                 // .postBody {
@@ -338,7 +346,6 @@ body {
     // 评论列表
     #blog-comments-placeholder {
         margin: 0 21.6px;
-        // border: 1px solid var(--text-10);
         border-radius: 3px;
         .feedback_area_title {
             padding: 7.56px 10.8px;
@@ -367,6 +374,10 @@ body {
 
             .blog_comment_body {
                 background-color: #61aeee !important;
+                color: #fff;
+                a {
+                    color: var(--themeColor);
+                }
             }
 
             img {
@@ -536,7 +547,7 @@ body {
 
 #sideBar {
     width: 20vw;
-    max-width: 243px;
+    max-width: 16vw;
     margin-left: 27px;
     font-size: 14px;
     overflow: hidden;
@@ -675,20 +686,6 @@ body {
     padding: 5.4px 14.418px;
 }
 
-.postDesc2 {
-    color: var(--text-9);
-    margin-top: 5.4px;
-}
-
-.entrylistPostSummary {
-    padding: 5.4px 14.418px;
-    color: var(--text-5);
-}
-
-#myposts {
-    margin-left: 0;
-}
-
 #cnblogs_post_body {
     &:after {
         content: '——— EOF ———';
@@ -711,6 +708,7 @@ body {
     h2 {
         display: flex;
         align-items: center;
+        cursor: default;
     }
     h2,
     h3 {
@@ -822,12 +820,8 @@ body {
             padding: 0.3em 0.6em;
             width: auto;
             font-weight: bold;
-            // color: darken(#ff6b6b, 10%);
-            // background: lighten(#ff6b6b, 45%);
             color: #bd1616;
             background: #f79393;
-            // color: #fff;
-            // background-color: var(--themeColor);
             border-radius: 3px;
             user-select: none;
             cursor: pointer;
@@ -870,6 +864,23 @@ body {
             }
         }
     }
+    mark {
+        background-color: #fff200;
+    }
+}
+
+.postDesc2 {
+    color: var(--text-9);
+    margin-top: 5.4px;
+}
+
+.entrylistPostSummary {
+    padding: 5.4px 14.418px;
+    color: var(--text-5);
+}
+
+#myposts {
+    margin-left: 0;
 }
 
 #blog_post_info_block {
@@ -1030,12 +1041,6 @@ body {
     }
 }
 
-/* markdown start*/
-mark {
-    background-color: #fff200;
-}
-/* markdown end */
-
 #post-date {
     margin-left: 5.4px;
 }
@@ -1047,28 +1052,24 @@ mark {
     transform: scale(0.6);
 }
 
-/* 文章末尾按钮 end */
-
-/* 评论列表 start */
-
 .feedbackListSubtitle {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text-5);
     .feedbackManage {
         order: 3;
+    }
+
+    .comment_vote {
+        order: 4;
     }
 }
 
 .comment_actions {
     border-bottom: 1px solid var(--themeColor);
-}
-
-.feedbackListSubtitle .comment_vote {
-    order: 4;
 }
 
 .comment_vote a {
@@ -1152,10 +1153,6 @@ mark {
     color: #999;
 }
 
-/* 评论列表 end */
-
-/* 广告 */
-
 #ad_t2 {
     margin: 21.6px 0 0 0;
     padding: 0;
@@ -1204,17 +1201,6 @@ mark {
 /* 历史上的今天 */
 #HistoryToday {
     display: none;
-}
-
-/* 随笔页 end */
-/* 动态类 */
-.disable-hover {
-    pointer-events: none;
-}
-
-.header-hide {
-    transform: translateY(-100%);
-    transition: all 0.2s;
 }
 
 @import './index.m.scss';
