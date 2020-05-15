@@ -56,5 +56,5 @@ code {
 }
 
 #cnblogs_post_body table {
-    @include scrollbar-simple(#a4b0be);
+    @include scrollbar-simple(var(--themeColor));
 }

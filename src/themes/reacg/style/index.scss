@@ -780,9 +780,10 @@ body {
         thead {
             tr {
                 th {
-                    background-color: #a4b0be;
-                    color: #333;
+                    background-color: #ff6b81;
+                    color: #fff;
                     padding: 6px 9px;
+                    text-align: left;
                 }
             }
         }
@@ -790,8 +791,14 @@ body {
             &:nth-child(even) {
                 background-color: var(--background-e);
             }
+            &:hover {
+                background-color: #999;
+                cursor: default;
+            }
             td {
-                padding: 4px 7px;
+                border-bottom: 1px solid var(--text-10);
+                padding: 6px 9px;
+                text-align: left;
             }
         }
     }
