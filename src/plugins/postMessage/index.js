@@ -6,7 +6,7 @@ function postMessage() {
     if (pageName() !== 'post') return
 
     let categories = $(`<div class='custom-categories'>📂</div>`)
-    let tags = $(`<div class='custom-tags'>🏷</div>`)
+    let tags = $(`<div class='custom-tags'>🔖</div>`)
 
     if ($('#BlogPostCategory a').length) {
         $('#BlogPostCategory a').each(function() {
