@@ -375,7 +375,7 @@ body {
             .blog_comment_body {
                 background-color: #61aeee !important;
                 color: #fff;
-                & > a:nth-child(1) {
+                a:nth-child(1) {
                     color: var(--themeColor);
                 }
                 a:not(:nth-child(1)):hover {
