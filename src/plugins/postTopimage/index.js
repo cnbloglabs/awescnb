@@ -13,9 +13,11 @@ function postTopimage() {
     let url = imgs.length === 0 ? randomImage : randomArrayElements(imgs, 1)[0]
 
     const ele = `<div id="custom-post-topimage"></div>`
+    
     if (position === 'top') {
         $('.post>.postTitle').before(ele)
-    } else {
+    }
+    if (position === 'bottom') {
         $('#cnblogs_post_body').after(ele)
     }
 
