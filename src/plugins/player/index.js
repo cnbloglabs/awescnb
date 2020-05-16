@@ -37,6 +37,20 @@ function build() {
         ap.seek(localStorage.audioTime ? Number(localStorage.audioTime) : 0)
     }
 
+    if (autoplay) {
+        $('.aplayer-lrc').show()
+    }
+
+    if (lrc.enable) {
+        ap.on('play', () => {
+            $('.aplayer-lrc').show()
+        })
+        ap.on('pause', () => {
+            console.log('pause')
+            $('.aplayer-lrc').hide()
+        })
+    }
+
     if (lrc.enable && lrc.color !== '') {
         $('.aplayer-lrc .aplayer-lrc-contents p').css('color', lrc.color)
     }

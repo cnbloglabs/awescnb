@@ -131,7 +131,7 @@ const defaultOptions = {
         autoplay: false,
         volume: 0.4,
         lrc: {
-            enable: false, // 启用歌词
+            enable: true, // 启用歌词
             type: 1, // 1 字符串 3 url
             color: '', // 颜色
         },
