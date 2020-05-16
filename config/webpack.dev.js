@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { template, themeName, sourceMap } = require('./options')
+const { template, themeName, sourceMap, openBrowser } = require('./options')
 
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
@@ -12,7 +12,7 @@ module.exports = merge(baseWebpackConfig, {
         host: 'localhost',
         port: 8080,
         contentBase: path.join(__dirname, 'dist'),
-        open: true,
+        open: openBrowser,
         hot: true,
         disableHostCheck: true,
         proxy: {},

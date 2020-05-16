@@ -11,6 +11,7 @@ module.exports = {
     sourceMap: false,
     openAnalyzer: false,
     cssExtract: false,
+    openBrowser: false
 }
 
 ///////// options /////////
