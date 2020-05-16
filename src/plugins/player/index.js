@@ -1,11 +1,19 @@
 // 音乐播放器
 // 引入即可
 
+import './index.scss'
 import { pageName, userAgent, cacheScript, addCss } from '@/assets/utils/tools'
 import { aplayerjs, aplayercss } from '@constants/urls'
-import './index.css'
 
-const { enable, autoplay, audio, page, agent, volume } = window.opts.musicPlayer
+const {
+    enable,
+    autoplay,
+    audio,
+    page,
+    agent,
+    volume,
+    lrc,
+} = window.opts.musicPlayer
 
 // 音乐播放器
 function build() {
@@ -16,8 +24,9 @@ function build() {
         fixed: true,
         preload: 'auto',
         autoplay,
-        audio,
         volume,
+        lrcType: lrc.enable ? lrc.type : null,
+        audio,
     })
 
     window.onbeforeunload = () => {
@@ -26,6 +35,10 @@ function build() {
     }
     window.onload = () => {
         ap.seek(localStorage.audioTime ? Number(localStorage.audioTime) : 0)
+    }
+
+    if (lrc.enable && lrc.color !== '') {
+        $('.aplayer-lrc .aplayer-lrc-contents p').css('color', lrc.color)
     }
 }
 

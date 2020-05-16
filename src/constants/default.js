@@ -11,9 +11,9 @@ const defaultOptions = {
     },
     // 暗色模式
     darkMode: {
-        enable: true,    // 是否启用
+        enable: true, // 是否启用
         autoDark: false, // 夜间自动切换暗色模式
-        autoLight: false // 日间自动切换亮色模式
+        autoLight: false, // 日间自动切换亮色模式
     },
     // 个性签名
     signature: {
@@ -130,13 +130,21 @@ const defaultOptions = {
         agent: 'pc',
         autoplay: false,
         volume: 0.4,
+        lrc: {
+            enable: false, // 启用歌词
+            type: 1, // 1 字符串 3 url
+            color: '', // 颜色
+        },
         audio: [
             {
-                name: 'イニシャル',
-                artist: "Poppin'Party",
-                url: `https://guangzan.gitee.io/imagehost/awescnb/music/demo1.mp3`,
+                name: '404 not found',
+                artist: 'REOL',
+                url:
+                    'http://music.163.com/song/media/outer/url?id=436016480.mp3',
                 cover:
-                    '//p2.music.126.net/ww7gcJ_erzPa8jgZesmTOA==/109951163271403502.jpg?param=90y90',
+                    'http://p2.music.126.net/cu1sEIDxXOJm5huZ3Wjs0Q==/18833534672880379.jpg?param=300x300',
+                lrc:
+                    "[ti:404 not found][ar:REOL][al:Σ][by:菜籽酱][00:00.000] 作曲 : Reol[00:00.008] 作词 : Reol[00:00.25][00:01.69]fade away...do over again...[00:13.35][00:13.76]歌い始めの一文字目 いつも迷ってる[00:18.57]どうせとりとめのないことだけど[00:22.85]伝わらなきゃもっと意味がない[00:26.84][00:27.38]どうしたってこんなに複雑なのに[00:30.75]噛み砕いてやらなきゃ伝わらない[00:34.18]ほら結局歌詞なんかどうだっていい[00:37.64]僕の音楽なんかこの世になくたっていいんだよ[00:41.32][00:54.74]Everybody don't know why.[00:58.20]Everybody don't know much.[01:01.56]僕は気にしない 君は気付かない[01:04.99]何処にももういないいない[01:08.17][01:08.59]Everybody don't know why.[01:11.86]Everybody don't know much.[01:15.25]忘れていく 忘れられていく[01:18.61]We don't know,We don't know.[01:22.86][01:39.61]目の前 広がる現実世界がまた歪んだ[01:46.30]何度リセットしても[01:47.57]僕は僕以外の誰かには生まれ変われない[01:51.88]「そんなの知ってるよ」[01:53.41]気になるあの子の噂話も[01:56.52]シニカル標的は次の速報[01:59.75][02:00.22]麻痺しちゃってるこっからエスケープ[02:03.57]遠く遠くまで行けるよ[02:06.71][02:07.15]安定なんてない 不安定な世界[02:14.04]安定なんてない きっと明日には忘れるよ[02:20.52][02:22.35]fade away...do over again...[02:33.62][02:34.41]そうだ世界はどこかがいつも嘘くさい[02:37.51]綺麗事だけじゃ大事な人たちすら守れない[02:41.06]くだらない 僕らみんなどこか狂ってるみたい[02:44.48]本当のことなんか全部神様も知らない[02:48.56][03:03.39]Everybody don't know why.[03:06.80]Everybody don't know much.[03:10.17]僕は気にしない 君は気付かない[03:13.62]何処にももういないいない[03:17.02][03:17.46]Everybody don't know why.[03:20.49]Everybody don't know much.[03:23.88]忘れていく 忘れられていく[03:27.18]We don't know,We don't know.[03:29.83]",
             },
         ],
     },

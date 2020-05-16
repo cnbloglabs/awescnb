@@ -1,0 +1,26 @@
+body {
+    .aplayer.aplayer-fixed {
+        .aplayer-body {
+            left: -66px !important;
+            &:hover {
+                left: 0 !important;
+            }
+            &:hover .aplayer-miniswitcher {
+                background-color: #eee;
+            }
+        }
+        .aplayer-lrc {
+            // top: 10px;
+            // bottom: auto;
+            // left: -21px;
+            // right: auto;
+            .aplayer-lrc-contents {
+                p {
+                    font-size: 14px;
+                    color: #10ac84;
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+}
