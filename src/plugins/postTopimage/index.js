@@ -4,7 +4,7 @@ import { pageName, randomArrayElements } from '@tools'
 import { randomImage } from '@constants/urls'
 import './index.css'
 
-function postTopimage() {
+function build() {
     const { enable, imgs, position } = window.opts.postTopimage
 
     if (!enable) return
@@ -13,7 +13,7 @@ function postTopimage() {
     let url = imgs.length === 0 ? randomImage : randomArrayElements(imgs, 1)[0]
 
     const ele = `<div id="custom-post-topimage"></div>`
-    
+
     if (position === 'top') {
         $('.post>.postTitle').before(ele)
     }
@@ -22,6 +22,27 @@ function postTopimage() {
     }
 
     $('#custom-post-topimage').css('background-image', `url(${url})`)
+}
+
+// function download() {
+//     $('#download').click(function() {
+//         var x = new XMLHttpRequest()
+//         x.open('GET', 'http://danml.com/wave2.gif', true)
+//         x.responseType = 'blob'
+//         x.onload = function() {
+//             var url = window.URL.createObjectURL(x.response)
+//             var a = document.createElement('a')
+//             a.href = url
+//             a.download = ''
+//             a.click()
+//         }
+//         x.send()
+//     })
+// }
+
+function postTopimage() {
+    build()
+    // download()
 }
 
 export default postTopimage
