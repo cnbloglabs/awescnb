@@ -1,5 +1,5 @@
 import './index.scss'
-import icons from '../../constants/icons'
+import { icons } from '../icons/icons'
 import { iconInSvg } from '../../utils/tools'
 import toast from '@plugins/toast'
 

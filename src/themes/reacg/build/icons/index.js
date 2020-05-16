@@ -2,74 +2,86 @@ import { sidebarWraps } from '@/constants/elements'
 import { pageName, randomProperty, cacheScript, poll } from '@tools'
 import { iconInSvg } from '../../utils/tools'
 import { iconfont } from '../../constants/urls'
-import icons from '../../constants/icons'
+import { icons, foodIcons } from './icons'
 import './index.scss'
 
 // 设置sidebar icon
 function setSidebarIcon() {
+    const iconActions = [
+        {
+            title: sidebarWraps.news,
+            icon: icons.news,
+        },
+        {
+            title: sidebarWraps.search,
+            icon: icons.search,
+        },
+        {
+            title: sidebarWraps.catalog,
+            icon: icons.catalog,
+        },
+        {
+            title: sidebarWraps.score,
+            icon: icons.trending,
+        },
+        {
+            title: sidebarWraps.links,
+            icon: icons.links,
+            sonIcon: icons.link,
+        },
+        {
+            title: sidebarWraps.recent,
+            icon: icons.pens,
+            sonIcon: icons.pen,
+        },
+        {
+            title: sidebarWraps.tags,
+            icon: icons.tags,
+            sonIcon: icons.tag,
+        },
+        {
+            title: sidebarWraps.record,
+            icon: icons.records,
+            sonIcon: icons.record,
+        },
+        {
+            title: sidebarWraps.topview,
+            icon: icons.trending,
+            sonIcon: icons.view,
+        },
+        {
+            title: sidebarWraps.topDig,
+            icon: icons.trending,
+            sonIcon: icons.dig,
+        },
+        {
+            title: sidebarWraps.recentComments,
+            icon: icons.comments,
+            sonIcon: icons.comment,
+        },
+        {
+            title: sidebarWraps.category,
+            icon: icons.categories,
+            sonIcon: icons.category,
+        },
+        {
+            title: sidebarWraps.topComents,
+            icon: icons.trending,
+            sonIcon: icons.comment,
+        },
+    ]
+
     const insert = () => {
-        // 小块标题
-        if ($(sidebarWraps.news).length > 0) {
-            $(`${sidebarWraps.news} h3`).prepend(iconInSvg(icons.news))
-        }
-        if ($(sidebarWraps.search).length > 0) {
-            $(`${sidebarWraps.search} h3`).prepend(iconInSvg(icons.search))
-        }
-        if ($(sidebarWraps.links).length > 0) {
-            $(`${sidebarWraps.links} h3`).prepend(iconInSvg(icons.links))
-            $(`${sidebarWraps.links} ul li a`).prepend(iconInSvg(icons.link))
-        }
-        if ($(sidebarWraps.recent).length > 0) {
-            $(`${sidebarWraps.recent} h3`).prepend(iconInSvg(icons.pens))
-            $(`${sidebarWraps.recent} ul li a`).prepend(iconInSvg(icons.pen))
-        }
-        if ($(sidebarWraps.tags).length > 0) {
-            $(`${sidebarWraps.tags} h3`).prepend(iconInSvg(icons.tags))
-            $(`${sidebarWraps.tags} ul li a`).prepend(iconInSvg(icons.tag))
-        }
-        if ($(sidebarWraps.score).length > 0) {
-            $(`${sidebarWraps.score} h3`).prepend(iconInSvg(icons.trending))
-        }
-        if ($(sidebarWraps.category).length > 0) {
-            $(`${sidebarWraps.category} h3`).prepend(
-                iconInSvg(icons.categories),
-            )
-            $(`${sidebarWraps.category} ul li a`).prepend(
-                iconInSvg(icons.category),
-            )
-        }
-        if ($(sidebarWraps.record).length > 0) {
-            $(`${sidebarWraps.record} h3`).prepend(iconInSvg(icons.records))
-            $(`${sidebarWraps.record} ul li a`).prepend(iconInSvg(icons.record))
-        }
-        if ($(sidebarWraps.recentComments).length > 0) {
-            $(`${sidebarWraps.recentComments} h3`).prepend(
-                iconInSvg(icons.comments),
-            )
-            $(`${sidebarWraps.recentComments} ul li a`).prepend(
-                iconInSvg(icons.comment),
-            )
-        }
-        if ($(sidebarWraps.topview).length > 0) {
-            $(`${sidebarWraps.topview} h3`).prepend(iconInSvg(icons.trending))
-            $(`${sidebarWraps.topview} ul li a`).prepend(iconInSvg(icons.view))
-        }
-        if ($(sidebarWraps.topComents).length > 0) {
-            $(`${sidebarWraps.topComents} h3`).prepend(
-                iconInSvg(icons.trending),
-            )
-            $(`${sidebarWraps.topComents} ul li a`).prepend(
-                iconInSvg(icons.comment),
-            )
-        }
-        if ($(sidebarWraps.topDig).length > 0) {
-            $(`${sidebarWraps.topDig} h3`).prepend(iconInSvg(icons.trending))
-            $(`${sidebarWraps.topDig} ul li a`).prepend(iconInSvg(icons.dig))
-        }
-        if ($(sidebarWraps.catalog).length > 0) {
-            $(`${sidebarWraps.catalog} h3`).prepend(iconInSvg(icons.catalog))
+        for (const { title, icon, sonIcon } of iconActions) {
+            if ($(title).length) {
+                $(`${title} h3`).prepend(iconInSvg(icon))
+                if (sonIcon) {
+                    $(`${title} ul li a`).prepend(iconInSvg(sonIcon))
+                }
+            }
         }
     }
+
     poll($('#blog-sidecolumn').length, insert)
 }
 
@@ -141,7 +153,7 @@ function setIndexPostLookIcon() {
 function setEntrylistPosttitleIcon() {
     if (pageName() !== 'list') return
     $('.entrylistPosttitle').each(function() {
-        $(this).prepend(iconInSvg(icons.md))
+        $(this).prepend(iconInSvg(icons.pen))
     })
 }
 
@@ -158,8 +170,8 @@ function setPostTitleIcon() {
     const $h2 = $('#cnblogs_post_body:first>h2')
     const $title = $h1.length === 0 ? $h2 : $h1
     $($title).each(function() {
-        const randomIconName = randomProperty(icons.food)
-        const icon = icons.food[randomIconName]
+        const randomIconName = randomProperty(foodIcons)
+        const icon = foodIcons[randomIconName]
         $(this).prepend(iconInSvg(icon))
     })
 }
@@ -174,7 +186,6 @@ function build() {
     setEntrylistPosttitleIcon()
     setHeadlineIcon()
     setPostTitleIcon()
-    // mobileNavDropdown()
     nav()
 }
 

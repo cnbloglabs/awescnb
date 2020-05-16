@@ -1,4 +1,4 @@
-const icons = {
+export const icons = {
     dig: '#ac-dig', //推荐
     view: '#ac-view', //看
     search: '#ac-search', //搜索
@@ -30,29 +30,28 @@ const icons = {
     contact: '#ac-contact', // 联系
     gitee: '#ac-gitee', // 联系
     md: '#ac-md', // #号
-    //count -> 20
-    food: {
-        pistachio: '#ac-food-pistachio',
-        mochi: '#ac-food-mochi',
-        cashew: '#ac-food-cashew',
-        macaron: '#ac-food-macaron',
-        cake: '#ac-food-cake',
-        sushi: '#ac-food-sushi',
-        eggyolkcake: '#ac-food-eggyolkcake',
-        popsiple: '#ac-food-popsicle',
-        taco: '#ac-food-taco',
-        hotdog: '#ac-food-hotdog',
-        pizza: '#ac-food-pizza',
-        bread: '#ac-food-bread',
-        popcorn: '#ac-food-popcorn',
-        chips: '#ac-food-chips',
-        doughnut: '#ac-food-doughnut',
-        strawberry: '#ac-food-strawberry',
-        pudding: '#ac-food-pudding',
-        avocado: '#ac-food-avocado',
-        pecan: '#ac-food-pecan',
-        cookie: '#ac-food-cookie',
-    },
 }
 
-export default icons
+export const foodIcons = {
+    //count -> 20
+    pistachio: '#ac-food-pistachio',
+    mochi: '#ac-food-mochi',
+    cashew: '#ac-food-cashew',
+    macaron: '#ac-food-macaron',
+    cake: '#ac-food-cake',
+    sushi: '#ac-food-sushi',
+    eggyolkcake: '#ac-food-eggyolkcake',
+    popsiple: '#ac-food-popsicle',
+    taco: '#ac-food-taco',
+    hotdog: '#ac-food-hotdog',
+    pizza: '#ac-food-pizza',
+    bread: '#ac-food-bread',
+    popcorn: '#ac-food-popcorn',
+    chips: '#ac-food-chips',
+    doughnut: '#ac-food-doughnut',
+    strawberry: '#ac-food-strawberry',
+    pudding: '#ac-food-pudding',
+    avocado: '#ac-food-avocado',
+    pecan: '#ac-food-pecan',
+    cookie: '#ac-food-cookie',
+}
