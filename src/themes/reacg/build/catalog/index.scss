@@ -2,7 +2,6 @@
     min-height: 71.982px;
     max-height: 550px;
     width: 14vw;
-    max-width: 14vw;
     font-size: 14px;
     overflow-y: scroll；;
     overflow-x: hidden;
@@ -72,14 +71,14 @@
 .catalog-sticky-left {
     position: fixed;
     top: 64.8px;
-    left: 10.8px;
+    left: 4.2vw;
     transition: top 0.2s;
 }
 
 .catalog-sticky-right {
     position: fixed;
     top: 64.8px;
-    right: 10.8px;
+    right: 4vw;
     transition: top 0.2s;
 }
 

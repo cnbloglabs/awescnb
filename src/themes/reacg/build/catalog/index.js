@@ -62,19 +62,22 @@ function build() {
 // 目录固定位置
 function setCatalogPosition() {
     const actions = {
+        left: () => {
+            $('#catalog').addClass('catalog-sticky-left')
+            $('#mainContent').css('margin-left', '14vw')
+        },
+        right: () => {
+            $('#main').css('flex-direction', 'row-reverse')
+            $('#sideBar').css('margin-left', '-14vw')
+            $('#mainContent').css('margin-left', '1vw')
+            $('#catalog').addClass('catalog-sticky-right')
+        },
         sidebar: () => {
             setCatalogToggle()
             $('#mainContent').css('width', '60vw')
             $('#catalog').css({
-                width: '20vw',
-                'max-width': '20vw',
+                'width': '16vw',
             })
-        },
-        left: () => {
-            $('#catalog').addClass('catalog-sticky-left')
-        },
-        right: () => {
-            $('#catalog').addClass('catalog-sticky-right')
         },
     }
 

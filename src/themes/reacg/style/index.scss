@@ -121,7 +121,7 @@ body {
     display: flex;
     justify-content: center;
     #mainContent {
-        width: 50vw;
+        width: 58vw;
         border-radius: 2px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         background-color: var(--background-w);
@@ -159,12 +159,14 @@ body {
             padding: 5.4px 14.418px;
             color: var(--text-5);
             .c_b_p_desc {
+                font-size: 14px;
                 color: var(--text-5);
                 .c_b_p_desc_readmore {
                     display: table;
                     margin-top: 5.4px;
                     padding: 2.7px 5.4px 2.7px 8.1px;
                     border: 1px solid var(--themeColor);
+                    font-size: 16px;
                     color: var(--themeColor);
                     border-radius: 3px;
                 }
@@ -524,7 +526,7 @@ body {
 #sideBar {
     width: 20vw;
     max-width: 16vw;
-    margin-left: 27px;
+    margin-left: 1vw;
     font-size: 14px;
     overflow: hidden;
     #sideBarMain {
@@ -1083,33 +1085,41 @@ body {
 }
 
 // 分页器
+#homepage_top_pager {
+    margin-top: 10px;
+}
 .topicListFooter {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0 27px;
-    #nav_next_page {
-        display: flex;
-        justify-content: center;
-        margin: 10px 0;
-        .pager {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--themeColor);
-        }
+    #nav_next_page,
+    .pager {
         a {
             padding: 2.7px 10.8px;
             color: #fff;
             background-color: #00a1d6;
-            border-color: #00a1d6;
             border-radius: 2px;
+            border: none;
             &:hover {
                 background-color: var(--themeColor);
-                border-color: var(--themeColor);
                 transition: all 0.2s;
             }
+            &:active {
+                background-color: var(--themeColor);
+            }
         }
+    }
+    #nav_next_page {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .pager {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--themeColor);
     }
 }
 
