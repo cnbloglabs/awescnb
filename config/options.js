@@ -21,6 +21,7 @@ module.exports = {
 // sourceMap - 是否开启sourcemap
 // openAnalyzer - build 时开启 size 分析
 // cssExtract 单独抽离css
+// openBrowser - 自动打开浏览器
 
 ///////// run the build /////////
 // - npm start
