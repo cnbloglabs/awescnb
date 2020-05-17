@@ -41,6 +41,7 @@ const defaultOptions = {
         enable: true,
         imgs: [],
         position: 'top',
+        fixed: false
     },
     // 评论输入框表情
     emoji: {

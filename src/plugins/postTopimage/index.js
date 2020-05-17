@@ -5,7 +5,7 @@ import { randomImage } from '@constants/urls'
 import './index.css'
 
 function build() {
-    const { enable, imgs, position } = window.opts.postTopimage
+    const { enable, imgs, position, fixed } = window.opts.postTopimage
 
     if (!enable) return
     if (pageName() !== 'post') return
@@ -21,7 +21,15 @@ function build() {
         $('#cnblogs_post_body').after(ele)
     }
 
-    $('#custom-post-topimage').css('background-image', `url(${url})`)
+    const style = {
+        'background-image': `url(${url})`,
+    }
+
+    if (fixed) {
+        style['background-attachment'] = 'fixed'
+    }
+
+    $('#custom-post-topimage').css(style)
 }
 
 // function download() {
