@@ -8,6 +8,7 @@ const defaultOptions = {
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
+        contentSize: 'mid',
     },
     // 暗色模式
     darkMode: {
@@ -41,7 +42,7 @@ const defaultOptions = {
         enable: true,
         imgs: [],
         position: 'top',
-        fixed: false
+        fixed: false,
     },
     // 评论输入框表情
     emoji: {

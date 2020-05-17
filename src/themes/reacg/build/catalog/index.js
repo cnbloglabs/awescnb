@@ -8,6 +8,7 @@ import {
 } from '@tools'
 
 const { enable, position } = window.opts.catalog
+const { contentSize } = window.opts.theme
 
 // 构建目录
 function build() {
@@ -59,23 +60,117 @@ function build() {
     setCatalogPosition()
 }
 
+const layout = {
+    min: {
+        // position left
+        catalogLeftWhenL: '5vw',
+        contentWidthWhenL: '50vw',
+        headerPaddingLeftWhenL: '21vw',
+        contentMarginLeftWhenL: '10vw',
+        catalogMaxHeightWhenL: '75vh',
+        // position right
+        contentWidthWhenR: '50vw',
+        sidebarMarginRightWhenR: '1vw',
+        contentMarginRightWhenR: '17vw',
+        headerPaddingLeftWhenR: '24.5vw',
+        catalogRightWhenR: '8vw',
+        catalogMaxHeightWhenR: '80vh',
+        // position sidebar
+        headerPaddingLeftWhenSidebar: '11.2vw',
+        contentWidthWhenSidebar: '60vw',
+        catalogMaxHeightWhenSidebar: '80vh',
+    },
+    mid: {
+        // position left
+        contentMarginLeftWhenL: '14vw',
+        catalogLeftWhenL: '5vw',
+        contentWidthWhenL: '54vw',
+        headerPaddingLeftWhenL: '21.2vw',
+        catalogMaxHeightWhenL: '75vh',
+        // position right
+        contentWidthWhenR: '54vw',
+        sidebarMarginRightWhenR: '1vw',
+        contentMarginRightWhenR: '17vw',
+        headerPaddingLeftWhenR: '22.5vw',
+        catalogRightWhenR: '6vw',
+        catalogMaxHeightWhenR: '80vh',
+        // position sidebar
+        headerPaddingLeftWhenSidebar: '11.2vw',
+        contentWidthWhenSidebar: '60vw',
+        catalogMaxHeightWhenSidebar: '80vh',
+    },
+    max: {
+        // position left
+        contentMarginLeftWhenL: '14vw',
+        catalogLeftWhenL: '2vw',
+        contentWidthWhenL: '60vw',
+        headerPaddingLeftWhenL: '18.5vw',
+        catalogMaxHeightWhenL: '75vh',
+        // position right
+        contentWidthWhenR: '60vw',
+        sidebarMarginRightWhenR: '1vw',
+        contentMarginRightWhenR: '17vw',
+        headerPaddingLeftWhenR: '19.5vw',
+        catalogRightWhenR: '3vw',
+        catalogMaxHeightWhenR: '80vh',
+        // position sidebar
+        headerPaddingLeftWhenSidebar: '11.2vw',
+        contentWidthWhenSidebar: '60vw',
+        catalogMaxHeightWhenSidebar: '80vh',
+    },
+}
+
 // 目录固定位置
 function setCatalogPosition() {
     const actions = {
         left: () => {
             $('#catalog').addClass('catalog-sticky-left')
-            $('#mainContent').css('margin-left', '14vw')
+            $('#header').css(
+                'padding-left',
+                layout[contentSize].headerPaddingLeftWhenL,
+            )
+            $('#mainContent').css({
+                width: layout[contentSize].contentWidthWhenL,
+                'margin-left': layout[contentSize].contentMarginLeftWhenL,
+            })
+            $('#catalog').css({
+                left: layout[contentSize].catalogLeftWhenL,
+                'max-height': layout[contentSize].catalogMaxHeightWhenL,
+            })
         },
         right: () => {
             $('#catalog').addClass('catalog-sticky-right')
             $('#main').css('flex-direction', 'row-reverse')
-            $('#mainContent').css('margin-left', '1vw')
-            $('#sideBar').css('margin-left', '-19vw')
+            $('#mainContent').css({
+                width: layout[contentSize].contentWidthWhenR,
+                'margin-right': layout[contentSize].contentMarginRightWhenR,
+            })
+            $('#sideBar').css(
+                'margin-right',
+                layout[contentSize].sidebarMarginRightWhenR,
+            )
+            $('#header').css(
+                'padding-left',
+                layout[contentSize].headerPaddingLeftWhenR,
+            )
+            $('#catalog').css({
+                right: layout[contentSize].catalogRightWhenR,
+                'max-height': layout[contentSize].catalogMaxHeightWhenR,
+            })
         },
         sidebar: () => {
-            $('#header').css('padding-left', '11.5vw')
-            $('#mainContent').css('width', '60vw')
-            $('#catalog').css('width', '16vw')
+            $('#header').css(
+                'padding-left',
+                layout[contentSize].headerPaddingLeftWhenSidebar,
+            )
+            $('#mainContent').css(
+                'width',
+                layout[contentSize].contentWidthWhenSidebar,
+            )
+            $('#catalog').css(
+                'max-height',
+                layout[contentSize].catalogMaxHeightWhenSidebar,
+            )
             setCatalogToggle()
         },
     }
