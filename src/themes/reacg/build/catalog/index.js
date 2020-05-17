@@ -67,16 +67,16 @@ function setCatalogPosition() {
             $('#mainContent').css('margin-left', '14vw')
         },
         right: () => {
-            $('#main').css('flex-direction', 'row-reverse')
-            $('#sideBar').css('margin-left', '-19vw')
-            $('#mainContent').css('margin-left', '1vw')
             $('#catalog').addClass('catalog-sticky-right')
+            $('#main').css('flex-direction', 'row-reverse')
+            $('#mainContent').css('margin-left', '1vw')
+            $('#sideBar').css('margin-left', '-19vw')
         },
         sidebar: () => {
-            setCatalogToggle()
-            $('#mainContent').css('width', '60vw')
             $('#header').css('padding-left', '11.5vw')
+            $('#mainContent').css('width', '60vw')
             $('#catalog').css('width', '16vw')
+            setCatalogToggle()
         },
     }
 
