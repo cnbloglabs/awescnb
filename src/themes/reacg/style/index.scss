@@ -58,7 +58,7 @@ body {
     position: fixed;
     top: 0;
     width: 80%;
-    padding-left: 16.2vw;
+    padding-left: 19vw;
     height: 54px;
     z-index: 10;
 
@@ -85,7 +85,7 @@ body {
         .blogStats {
             position: absolute;
             top: 0;
-            right: -50px;
+            right: 7.2vw;
             display: flex;
             height: 100%;
             font-size: 12px;
@@ -524,8 +524,7 @@ body {
 }
 
 #sideBar {
-    width: 20vw;
-    max-width: 16vw;
+    width: 15.5vw;
     margin-left: 1vw;
     font-size: 14px;
     overflow: hidden;

@@ -13,7 +13,7 @@ function init() {
     const $modeIcon = `<div id='mode-change'>${
         isNight ? iconInSvg(icons.dark) : iconInSvg(icons.light)
     }</div>`
-    $('#header').prepend($modeIcon)
+    $('#navigator').prepend($modeIcon)
 
     if (isNight && localStorage.modeType !== 'dark') {
         autoDark ? changeModeToggle('dark') : toast('试试暗色模式 🌓')

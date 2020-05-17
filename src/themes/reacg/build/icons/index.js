@@ -98,18 +98,22 @@ function setGithub() {
         ? $('#mode-change').after($githubIcon)
         : $('#custom-gitee').length
         ? $('#custom-gitee').before($githubIcon)
-        : $('#blogTitle').before($githubIcon)
+        : $('#navigator').prepend($githubIcon)
 }
 
 // gitee icon
 function setGitee() {
     const { enable, color, url } = window.opts.gitee
     if (!enable) return
-    const icon = `<a id="custom-gitee" style="color:${color};" href=${url}>${iconInSvg(
-        icons.gitee,
-    )}<span>码云</span></a>
+    const icon = `
+    <li>
+        <a id="custom-gitee" style="color:${color};" href=${url}>
+            ${iconInSvg(icons.gitee)}
+            <span>码云</span>
+        </a>
+    </li>
                         `
-    $('#blogTitle').before(icon)
+    $('#navList').prepend(icon)
 }
 
 //navlist 图标（博客园  首页 ...）
@@ -179,8 +183,8 @@ function setPostTitleIcon() {
 // 调用
 function build() {
     setSidebarIcon()
-    setGithub()
     setGitee()
+    setGithub()
     setIndexPosttitleIcon()
     setIndexPostLookIcon()
     setEntrylistPosttitleIcon()
