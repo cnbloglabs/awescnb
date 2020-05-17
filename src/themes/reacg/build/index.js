@@ -1,4 +1,3 @@
-import { pageName } from '@tools'
 import footer from './footer'
 import mobileMenu from './mobileMenu'
 import mode from './mode'
@@ -10,15 +9,7 @@ import notice from './notice'
 import setIcons from './icons'
 import comments from './comments'
 
-function init() {
-    // 调整 header 位置
-    if (pageName() === 'index') {
-        $('#header').css('padding-left', '12vw')
-    }
-}
-
 function build() {
-    init()
     mobileMenu()
     mode()
     avatar()

@@ -62,6 +62,9 @@ function build() {
 
 const layout = {
     min: {
+        // index
+        indexContentWidth: '50vw',
+        indexHeaderPaddingLeft: '16.5vw',
         // position left
         catalogLeftWhenL: '5vw',
         contentWidthWhenL: '50vw',
@@ -81,6 +84,9 @@ const layout = {
         catalogMaxHeightWhenSidebar: '80vh',
     },
     mid: {
+        // index
+        indexContentWidth: '54vw',
+        indexHeaderPaddingLeft: '14vw',
         // position left
         contentMarginLeftWhenL: '14vw',
         catalogLeftWhenL: '5vw',
@@ -100,6 +106,9 @@ const layout = {
         catalogMaxHeightWhenSidebar: '80vh',
     },
     max: {
+        // index
+        indexContentWidth: '60vw',
+        indexHeaderPaddingLeft: '11.2vw',
         // position left
         contentMarginLeftWhenL: '14vw',
         catalogLeftWhenL: '2vw',
@@ -120,23 +129,35 @@ const layout = {
     },
 }
 
+function setIndexContentWidth() {
+    if (pageName() !== 'index') return
+    $('#mainContent').css({ width: layout[contentSize].contentWidthWhenL })
+    $('#header').css('padding-left', layout[contentSize].indexHeaderPaddingLeft)
+}
+
+function noCatalog() {
+    // 如果没生成catalog，内容的宽度一律为54vw，写在style/index.scss中
+    // 所以给 header padding left 一个固定的值
+    $('#header').css('padding-left', '14.2vw')
+}
+
 // 目录固定位置
 function setCatalogPosition() {
     const actions = {
         left: () => {
-            $('#catalog').addClass('catalog-sticky-left')
-            $('#header').css(
-                'padding-left',
-                layout[contentSize].headerPaddingLeftWhenL,
-            )
             $('#mainContent').css({
                 width: layout[contentSize].contentWidthWhenL,
                 'margin-left': layout[contentSize].contentMarginLeftWhenL,
             })
+            $('#catalog').addClass('catalog-sticky-left')
             $('#catalog').css({
                 left: layout[contentSize].catalogLeftWhenL,
                 'max-height': layout[contentSize].catalogMaxHeightWhenL,
             })
+            $('#header').css(
+                'padding-left',
+                layout[contentSize].headerPaddingLeftWhenL,
+            )
         },
         right: () => {
             $('#catalog').addClass('catalog-sticky-right')
@@ -243,13 +264,19 @@ function setCatalogToggle() {
 }
 
 function catalog() {
-    if (!enable) return
-    if (!hasPostTitle()) return
-    if (pageName() !== 'post') return
-    if (userAgent() !== 'pc') return
-    build()
-    setActiveCatalogTitle()
-    setCatalogToggle()
+    setIndexContentWidth()
+    if (
+        enable &&
+        hasPostTitle() &&
+        pageName() === 'post' &&
+        userAgent() === 'pc'
+    ) {
+        build()
+        setActiveCatalogTitle()
+        setCatalogToggle()
+    } else {
+        noCatalog()
+    }
 }
 
 export default catalog
