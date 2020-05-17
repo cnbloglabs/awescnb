@@ -64,7 +64,7 @@ const layout = {
     min: {
         // index
         indexContentWidth: '50vw',
-        indexHeaderPaddingLeft: '16.5vw',
+        indexHeaderPaddingLeft: '16.2vw',
         // position left
         catalogLeftWhenL: '5vw',
         contentWidthWhenL: '50vw',
@@ -86,7 +86,7 @@ const layout = {
     mid: {
         // index
         indexContentWidth: '54vw',
-        indexHeaderPaddingLeft: '14vw',
+        indexHeaderPaddingLeft: '14.2vw',
         // position left
         contentMarginLeftWhenL: '14vw',
         catalogLeftWhenL: '5vw',
@@ -131,6 +131,10 @@ const layout = {
 
 function setIndexContentWidth() {
     if (pageName() !== 'index') return
+    console.log(
+        layout[contentSize].contentWidthWhenL,
+        layout[contentSize].indexHeaderPaddingLeft,
+    )
     $('#mainContent').css({ width: layout[contentSize].contentWidthWhenL })
     $('#header').css('padding-left', layout[contentSize].indexHeaderPaddingLeft)
 }
@@ -138,6 +142,7 @@ function setIndexContentWidth() {
 function noCatalog() {
     // 如果没生成catalog，内容的宽度一律为54vw，写在style/index.scss中
     // 所以给 header padding left 一个固定的值
+    if (pageName() !== 'post') return
     $('#header').css('padding-left', '14.2vw')
 }
 

@@ -8,7 +8,7 @@ const defaultOptions = {
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
         headerBackground:
             'https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg',
-        contentSize: 'min',
+        contentSize: 'mid',
     },
     // 暗色模式
     darkMode: {
