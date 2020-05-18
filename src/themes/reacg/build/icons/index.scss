@@ -5,6 +5,8 @@
     fill: currentColor;
     overflow: hidden;
     color: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #navList {

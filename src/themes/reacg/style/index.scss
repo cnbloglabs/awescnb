@@ -28,11 +28,14 @@ html {
         PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
     word-break: break-word;
     text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     background-color: var(--background-g);
     color: var(--text-0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #home {
@@ -673,8 +676,10 @@ body {
     }
     a {
         color: #00a1d6;
+        border-bottom: 1px dotted #00a1d6;
         &:hover {
             color: var(--themeColor);
+            border-bottom-color: var(--themeColor);
             transition: color 0.2s;
         }
     }
@@ -785,6 +790,15 @@ body {
             line-height: 1.8;
             font-size: 14px;
         }
+    }
+    kbd {
+        font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
+            monospace !important;
+        padding: 2px 4px;
+        background-color: #ff4757;
+        border-radius: 3px;
+        color: #fff;
+        box-shadow: 1px 1px 3px var(--text-10);
     }
     details {
         font-family: 'Roboto', 'sans-serif';
