@@ -194,7 +194,7 @@ const defaultOptions = {
     },
     // 锁屏
     lock: {
-        enable: true,
+        enable: false,
         background: '',
         strings: [
             '<i>Powered by</i> webpack.',
