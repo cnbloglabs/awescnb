@@ -12,7 +12,7 @@
     #header {
         overflow: auto;
         word-break: keep-all;
-        padding: 0;
+        padding-left: 2vw!important;
         width: 100%;
         &::after {
             position: fixed;
@@ -123,10 +123,20 @@
             height: 43.2px;
         }
     }
-
     // 插件样式覆盖
     body .custom-drag-menu {
         right: 86px !important;
         bottom: 22px;
+    }
+    // 分页器
+    .topicListFooter {
+        padding: 0;
+    }
+    .topicListFooter {
+        .pager {
+            a {
+                padding: 2px 10px;
+            }
+        }
     }
 }

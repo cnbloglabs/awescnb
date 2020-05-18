@@ -1095,18 +1095,24 @@ body {
     #nav_next_page,
     .pager {
         a {
-            padding: 2.7px 10.8px;
             color: #fff;
-            background-color: #00a1d6;
+            background-color: #8395a7;
             border-radius: 2px;
             border: none;
             &:hover {
                 background-color: var(--themeColor);
                 transition: all 0.2s;
             }
-            &:active {
-                background-color: var(--themeColor);
-            }
+        }
+    }
+    #nav_next_page {
+        a {
+            padding: 6px 15px;
+        }
+    }
+    .pager {
+        a {
+            padding: 2px 12px;
         }
     }
     #nav_next_page {
