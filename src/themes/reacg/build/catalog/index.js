@@ -1,3 +1,7 @@
+// 相关options: 
+// theme.contentSize  
+// catalog.enable & catalog.position
+
 import './index.scss'
 import {
     pageName,
@@ -131,10 +135,7 @@ const layout = {
 
 function setIndexContentWidth() {
     if (pageName() !== 'index') return
-    console.log(
-        layout[contentSize].contentWidthWhenL,
-        layout[contentSize].indexHeaderPaddingLeft,
-    )
+    if (userAgent() !== 'pc') return
     $('#mainContent').css({ width: layout[contentSize].contentWidthWhenL })
     $('#header').css('padding-left', layout[contentSize].indexHeaderPaddingLeft)
 }
