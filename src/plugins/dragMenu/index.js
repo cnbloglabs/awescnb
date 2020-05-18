@@ -1,7 +1,11 @@
 import './index.css'
 import anime from 'animejs/lib/anime.es.js'
 import toast from '@plugins/toast'
-import { pageName, userAgent, cacheScript } from '@tools'
+import {
+    pageName,
+    cacheScript,
+    // userAgent,
+} from '@tools'
 import { jqueryui } from '@constants/urls'
 
 const back2topConfig = window.opts.back2top
@@ -205,7 +209,7 @@ function create() {
     // 推荐
     const diggit = () => {
         toast('谢谢推荐🍺')
-        const id =  window.location.href.match(/p\/(\S*).html/)[1]
+        const id = window.location.href.match(/p\/(\S*).html/)[1]
         window.votePost(parseInt(id), 'Digg')
     }
 
@@ -249,14 +253,17 @@ function create() {
         .queue(function(next) {
             menu.open()
             next()
-            if (userAgent() === 'phone') {
-                $(document)
-                    .delay(1000)
-                    .queue(function(next) {
-                        menu.close()
-                        next()
-                    })
-            }
+
+            // 移动端自动收起
+            // if (userAgent() === 'phone') {
+            //     $(document)
+            //         .delay(1000)
+            //         .queue(function(next) {
+            //             menu.close()
+            //             next()
+            //         })
+            // }
+
             if (initialOpen) return
             $(document)
                 .delay(1000)
