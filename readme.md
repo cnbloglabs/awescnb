@@ -14,40 +14,40 @@
 
 3. 安装: 在您的博客园安装这个项目中已经集成的皮肤.安装之后,可以快速切换其他皮肤.[点击查看切换效果](https://guangzan.gitee.io/imagehost/blog/themechange.gif).
 
+## 文档
+
+-   [给我的博客园安装皮肤](https://guangzan.gitee.io/awescnb-docs/awescnb/use/install.html)
+-   [我已经安装完毕，去配置一下](https://guangzan.gitee.io/awescnb-docs/awescnb/use/default.html)
+-   [我想快速创建一个新皮肤](https://guangzan.gitee.io/awescnb-docs/awescnb/dev/dev.html)
+-   [更新日志](https://guangzan.gitee.io/awescnb-docs/awescnb/dev/log.html)
+
 ## 开发配置
 
 **config/options.js**
 
 ```js
 module.exports = {
-  themeName: 'reacg',
-  template: 'post',
-  eslint: true,
-  sourceMap: false,
-  openAnalyzer: false,
-  cssExtract: false,
+    themeName: 'reacg',
+    template: 'post',
+    eslint: true,
+    sourceMap: false,
+    openAnalyzer: false,
+    cssExtract: false,
 }
 ```
 
-- themeName 创建的主题文件夹名称 (运行 npm start 会启动它)
-- template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
-- eslint 是否开启 eslint
-- sourceMap 是否开启 sourcemap
-- openAnalyzer 是否在 build 时开启 size 分析
-- cssExtract 是否单独抽离 css
+-   themeName 创建的主题文件夹名称 (运行 npm start 会启动它)
+-   template 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+-   eslint 是否开启 eslint
+-   sourceMap 是否开启 sourcemap
+-   openAnalyzer 是否在 build 时开启 size 分析
+-   cssExtract 是否单独抽离 css
 
 `cssExtract` 如果没有开启，build 会打包生成一个 dist， dist 下仅有 js 文件， 这是 css in js 的方式，通过 js 动态添加 `style` ； 若设为 true ，会在 dist 目录下另外创建一个 ext 文件夹， 下面放了皮肤的 js 和 css 文件。这两种方式供你灵活选择。
 
 ![](https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-dist.png)
 
 > 正如你所见， ext 下每一个皮肤对应 js 和 css 两个文件。
-
-## 文档
-
--   [给我的博客园安装皮肤](https://guangzan.gitee.io/awescnb-docs/guide/use/install.html)
--   [我已经安装完毕，去配置一下](https://guangzan.gitee.io/awescnb-docs/guide/use/default.html)
--   [我想快速创建一个新皮肤](https://guangzan.gitee.io/awescnb-docs/guide/dev/dev.html)
--   [更新日志](https://guangzan.gitee.io/awescnb-docs/guide/dev/log.html)
 
 ## 贡献
 
@@ -68,7 +68,6 @@ module.exports = {
 -   [GShang](https://www.cnblogs.com/gshang/)
 -   [DIVMonster](https://www.cnblogs.com/guangzan/)
 -   [ABing](https://www.cnblogs.com/A-Bing/)
-
 
 ## 许可
 
