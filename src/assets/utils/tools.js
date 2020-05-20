@@ -1,5 +1,3 @@
-import { animeImages } from '@/constants/urls'
-
 /**
  * @description 创建link标签
  * @param {href} String
@@ -12,6 +10,15 @@ function addCss(href) {
         type: 'text/css',
         href,
     })
+}
+
+/**
+ * @description 是否为夜间
+ */
+function isNight() {
+    const nowHour = new Date().getHours()
+    const isNight = nowHour > 19 || nowHour <= 5
+    return isNight
 }
 
 /**
@@ -99,8 +106,9 @@ async function sleep(time) {
 // 使用内置的 imagehost url
 // 无需参数
 function randomImgurl() {
-    const random = Math.floor(Math.random() * 78)
-    const url = `${animeImages}/${random}.jpg`
+    const animeImages = 'https://api.mz-moe.cn/img'
+    const random = Math.floor(Math.random() * 950)
+    const url = `${animeImages}/img${random}.jpg`
     return url
 }
 
@@ -355,4 +363,5 @@ export {
     cacheScript,
     sleep,
     addCss,
+    isNight,
 }
