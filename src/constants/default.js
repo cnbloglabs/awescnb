@@ -107,6 +107,13 @@ const defaultOptions = {
             },
         ],
     },
+    // 随笔头图
+    postTopimage: {
+        enable: true,
+        position: 'top',
+        fixed: false,
+        imgs: [],
+    },
     // 个性签名
     signature: {
         enable: false,
@@ -126,13 +133,6 @@ const defaultOptions = {
     // 首页列表图
     indexListImg: {
         enable: false,
-        imgs: [],
-    },
-    // 随笔头图
-    postTopimage: {
-        enable: false,
-        position: 'top',
-        fixed: false,
         imgs: [],
     },
     // 顶部加载进度条

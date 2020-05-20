@@ -6,7 +6,8 @@ import './index.css'
 function build() {
     const { enable, imgs, position, fixed } = window.opts.postTopimage
 
-    if (!enable && pageName() !== 'post') return
+    if (!enable) return
+    if (pageName() !== 'post') return
 
     const url =
         imgs.length === 0 ? randomImgurl() : randomArrayElements(imgs, 1)[0]
