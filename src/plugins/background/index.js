@@ -2,21 +2,19 @@
 // 设置内容透明度
 // 仅引入即可
 
-const config = window.opts
-
 function setBodyBackground() {
-    const options = config.bodyBackground
-    if (!options.enable) return
-
-    $('#main,#navigator').css('opacity', `${options.opacity}`)
+    const { enable, opacity, type, value, repeat } = window.opts.bodyBackground
+    if (!enable) return
+    $('#main,#navigator').css('opacity', `${opacity}`)
     if ($('#catalog').length > 0) {
-        $('#main').css('opacity', `${options.opacity}`)
+        $('#main').css('opacity', `${opacity}`)
     }
-    if (options.type === 'color') {
-        $('body').css('background-color', `${options.value}`)
-    } else if (options.type === 'img') {
-        $('body').css('background-image', `url(${options.value})`)
-        if (!options.repeat) {
+    if (type === 'color') {
+        $('body').css('background-color', `${value}`)
+    }
+    if (type === 'img') {
+        $('body').css('background-image', `url(${value})`)
+        if (repeat) {
             $('body').css({
                 'background-repeat': `no-repeat`,
                 'background-size': '100% 100%',
