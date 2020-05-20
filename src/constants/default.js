@@ -9,59 +9,29 @@ const defaultOptions = {
         avatar: 'https://guangzan.gitee.io/imagehost/awescnb/logo.png',
         favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
     },
-    // 暗色模式
-    darkMode: {
-        enable: true,
-        autoDark: false,
-        autoLight: false,
-    },
-    // 个性签名
-    signature: {
-        enable: false,
-        contents: [],
-    },
-    // 二维码
-    qrcode: {
-        enable: false,
-        img: '',
-        desc: '',
-    },
-    // 弹出公告
-    notice: {
-        enable: false,
-        text: [],
-    },
-    // 首页列表图
-    indexListImg: {
-        enable: false,
-        imgs: [],
-    },
-    // 随笔头图
-    postTopimage: {
-        enable: true,
-        position: 'top',
-        fixed: false,
-        imgs: [],
-    },
-    // 评论输入框表情
-    emoji: {
-        enable: true,
-        showRecents: true,
-        recentsCount: 20,
-        showPreview: true,
-        showSearch: true,
-    },
     // 代码高亮
     highLight: {
         type: 'atomOneDark',
         inDarkMode: 'atomOneDark',
     },
-    // 图片灯箱
-    imagebox: {
-        enable: true,
-    },
     // 代码行号
     lineNumbers: {
+        enable: true,
+    },
+    // github图标
+    github: {
+        enable: true,
+        color: '#ffb3cc',
+        url: 'https://github.com/guangzan/awescnb',
+    },
+    // 码云图标
+    gitee: {
+        enable: true,
+        color: '#C71D23',
+        url: 'https://gitee.com/guangzan/awescnb',
+    },
+    // 图片灯箱
+    imagebox: {
         enable: true,
     },
     // 文章目录
@@ -91,18 +61,6 @@ const defaultOptions = {
         position: 'left',
         gap: 'default', // 边距
     },
-    // github图标
-    github: {
-        enable: true,
-        color: '#ffb3cc',
-        url: 'https://github.com/guangzan/awescnb',
-    },
-    // 码云图标
-    gitee: {
-        enable: true,
-        color: '#C71D23',
-        url: 'https://gitee.com/guangzan/awescnb',
-    },
     // 点击特效
     click: {
         enable: true,
@@ -111,19 +69,19 @@ const defaultOptions = {
         size: 30,
         maxCount: 50,
     },
-    // 顶部加载进度条
-    topProgress: {
-        enable: false,
-        page: 'all',
-        agent: 'pc',
-        background: '#FFB3CC',
-        height: '5px',
+    // 评论输入框表情
+    emoji: {
+        enable: true,
+        showRecents: true,
+        recentsCount: 20,
+        showPreview: true,
+        showSearch: true,
     },
-    // 随笔页尾部签名
-    postSignature: {
-        enable: false,
-        content: [],
-        licenseLink: '',
+    // 暗色模式
+    darkMode: {
+        enable: true,
+        autoDark: false,
+        autoLight: false,
     },
     // 音乐播放器
     musicPlayer: {
@@ -149,11 +107,53 @@ const defaultOptions = {
             },
         ],
     },
+    // 个性签名
+    signature: {
+        enable: false,
+        contents: [],
+    },
+    // 二维码
+    qrcode: {
+        enable: false,
+        img: '',
+        desc: '',
+    },
+    // 弹出公告
+    notice: {
+        enable: false,
+        text: [],
+    },
+    // 首页列表图
+    indexListImg: {
+        enable: false,
+        imgs: [],
+    },
+    // 随笔头图
+    postTopimage: {
+        enable: false,
+        position: 'top',
+        fixed: false,
+        imgs: [],
+    },
+    // 顶部加载进度条
+    topProgress: {
+        enable: false,
+        page: 'all',
+        agent: 'pc',
+        background: '#FFB3CC',
+        height: '5px',
+    },
+    // 随笔页尾部签名
+    postSignature: {
+        enable: false,
+        content: [],
+        licenseLink: '',
+    },
     // 背景图片或颜色
     bodyBackground: {
-        enable: true,
+        enable: false,
         type: 'color',
-        value: 'blue',
+        value: '',
         opacity: 1,
         repeat: false,
     },
