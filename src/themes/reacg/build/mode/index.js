@@ -14,12 +14,15 @@ const $lightIcon = `<div id='mode-change'>${iconInSvg(icons.light)}</div>`
  */
 function changeModeToggle(mode = 'light') {
     if (mode === 'dark') {
+        toast('进入暗色模式 ✨')
         setBackground('dark')
         $('head').append($dark)
         $($darkIcon).replaceAll('#mode-change')
         localStorage.modeType = 'dark'
         $('#mode-change .icon').css('animation', 'none')
-    } else {
+    }
+    if (mode === 'light') {
+        toast('进入亮色模式 ☀')
         setBackground('light')
         $('#mode-dark').remove()
         $($lightIcon).replaceAll('#mode-change')
@@ -76,13 +79,9 @@ function init() {
 function click() {
     $(document).on('click', '#mode-change', () => {
         $('body').addClass('mode-change')
-        if ($('#mode-dark').length) {
-            changeModeToggle('light')
-            toast('进入亮色模式 ☀')
-        } else {
-            changeModeToggle('dark')
-            toast('进入暗色模式 ✨')
-        }
+        $('#mode-dark').length
+            ? changeModeToggle('light')
+            : changeModeToggle('dark')
     })
 }
 
