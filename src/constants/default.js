@@ -24,8 +24,8 @@ const defaultOptions = {
     // 二维码
     qrcode: {
         enable: false,
-        img: '',
-        desc: '',
+        img: 'https://gitee.com/guangzan/imagehost/raw/master/markdown/dd5e06a44e92687b3945f412adea1901.png',
+        desc: '🤼‍♂️ 扫码加入 awescnb皮肤 qq交流群，有问必答！',
     },
     // 弹出公告
     notice: {
@@ -55,6 +55,7 @@ const defaultOptions = {
     // 代码高亮
     highLight: {
         type: 'atomOneDark',
+        inDarkMode: 'atomOneDark',
     },
     // 图片灯箱
     imagebox: {

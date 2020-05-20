@@ -1,9 +1,8 @@
-import '@/assets/css/common.css'
+import '@/assets/style/common.css'
 import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
-    // building
     init(building) {
         if (env === 'dev' || $.awesCnb) {
             building()
@@ -20,7 +19,6 @@ class AwesCnb {
         }
     }
 
-    // dev env
     devOpts() {
         if (env === 'dev') {
             window.opts = defaultOptions

@@ -1,6 +1,6 @@
 // 首页列表图片
-import { randomImgurl, pageName, userAgent, randomArrayElements } from '@tools'
 import './index.css'
+import { randomImgurl, pageName, userAgent, randomArrayElements } from '@tools'
 
 const { enable, imgs } = window.opts.indexListImg
 

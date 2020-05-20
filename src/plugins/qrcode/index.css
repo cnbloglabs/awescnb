@@ -1,13 +1,10 @@
-.custom-qrcode,
-.custom-qrcode-desc {
-    padding: 9.724px 13.884px 0;
-}
-
 .custom-qrcode {
-    width: 216px;
-    height: 216px
+    width: 100%;
+    height: 248px;
 }
 
 .custom-qrcode-desc {
+    padding: 0 20px 10px;
     word-break: break-all;
+    line-height: 1.5em;
 }

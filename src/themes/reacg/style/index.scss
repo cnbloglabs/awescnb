@@ -1,4 +1,25 @@
 @import './scroll.scss';
+
+@mixin flex($direction: row, $inline: block) {
+    display: if($inline==block, flex, inline-block);
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+
+@mixin center($direction: v) {
+    display: flex;
+    @if $direction == h {
+        justify-content: center;
+    }
+    @if $direction == v {
+        align-items: center;
+    }
+    @if $direction == all {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 :root {
     --default-background-g: rgb(253, 230, 224);
     --default-background-w: #fff;
@@ -55,9 +76,6 @@ body {
         left: 0;
         z-index: -1;
     }
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     position: fixed;
     top: 0;
     width: 80%;
@@ -77,9 +95,7 @@ body {
         // }
     }
     #navigator {
-        // position: relative;
-        display: flex;
-        align-items: center;
+        @include center();
         height: 100%;
         color: var(--text-3);
         a {
@@ -94,8 +110,7 @@ body {
             font-size: 12px;
             color: var(--text-9);
             span {
-                display: flex;
-                align-items: center;
+                @include center();
                 padding: 0 15.822px;
             }
         }
@@ -103,8 +118,7 @@ body {
             display: flex;
             height: auto;
             li a {
-                display: flex;
-                align-items: center;
+                @include center();
                 height: 100%;
                 font-weight: 700;
                 text-shadow: 5px 0 10px var(--themeColor);
@@ -121,8 +135,7 @@ body {
 
 #main {
     padding-top: 64.8px;
-    display: flex;
-    justify-content: center;
+    @include center(h);
     #mainContent {
         width: 54vw;
         border-radius: 2px;
@@ -533,6 +546,9 @@ body {
     overflow: hidden;
     #sideBarMain {
         ul li {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             padding-top: 5.4px;
             &:hover {
                 transform: translateX(5px);
@@ -540,10 +556,18 @@ body {
             }
         }
         #blog-news {
-            display: flex;
-            align-items: center;
+            @include center();
             #profile_block {
                 margin-top: 0;
+            }
+        }
+        #sidebar_news {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .catListTitle {
+            padding-left: 40px;
+                width: 100%;
             }
         }
         /* 每个块的外层 */
@@ -590,7 +614,7 @@ body {
         #TopViewPostsBlock,
         #TopFeedbackPostsBlock,
         #TopDiggPostsBlock {
-            padding: 10.098px 14.418px;
+            padding: 10px 14px;
         }
     }
     #blog-calendar {
@@ -625,9 +649,7 @@ body {
                     display: flex;
                     justify-content: space-between;
                     td {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        @include center(all);
                         width: 21.6px;
                         height: 21.6px;
                     }
@@ -688,8 +710,7 @@ body {
     }
     h1,
     h2 {
-        display: flex;
-        align-items: center;
+        @include center();
         cursor: default;
     }
     h2,
@@ -697,8 +718,7 @@ body {
         margin: 16.2px 0 7.1982px;
     }
     h1 {
-        display: flex;
-        align-items: center;
+        @include center();
         margin: 20px 0 7.1982px;
         font-size: 24px;
         &:first-of-type {
@@ -858,9 +878,8 @@ body {
 }
 
 #blog_post_info_block {
-    display: flex;
+    @include center(h);
     flex-direction: column;
-    justify-content: center;
     margin: 0;
     #BlogPostCategory {
         margin-bottom: 5.4px;
@@ -875,14 +894,13 @@ body {
     #blog_post_info {
         order: 3;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: wrap;
         align-items: baseline;
         margin: 21.6px 0 10.8px;
         #green_channel {
-            display: flex;
+            @include center();
             flex-wrap: wrap;
-            align-items: center;
             margin: 0;
             padding: 0;
             width: auto;
@@ -934,8 +952,7 @@ body {
             }
         }
         #author_profile {
-            display: flex;
-            align-items: center;
+            @include center();
             margin: 0 10.8px 0 0;
             padding: 0;
             width: auto;
@@ -952,8 +969,7 @@ body {
             }
         }
         #div_digg {
-            display: flex;
-            align-items: center;
+            @include center();
             margin: 0;
             padding: 0;
             .diggit,
@@ -1041,8 +1057,7 @@ body {
 }
 
 .feedbackListSubtitle {
-    display: flex;
-    align-items: center;
+    @include center();
     flex-wrap: wrap;
     margin-bottom: 5px;
     font-size: 14px;
@@ -1135,16 +1150,13 @@ body {
         margin: 10px 0;
     }
     .pager {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center(all);
         color: var(--themeColor);
     }
 }
 
 .feedbackCon {
-    display: flex;
-    align-items: center;
+    @include center();
     margin-top: 5px;
     .blog_comment_body {
         position: relative;

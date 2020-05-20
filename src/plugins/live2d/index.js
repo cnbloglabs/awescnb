@@ -21,7 +21,7 @@ const setLive2d = () => {
         console.log('live2d model：', model)
     }
 
-    const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:3" width="${options.width}"height="${options.height}" > </canvas>`
+    const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:3;pointer-events: none;" width="${options.width}"height="${options.height}" > </canvas>`
     $('body').append(ele)
 
     // gap

@@ -6,7 +6,7 @@ const qrcodeImg = window.opts.theme.qrcode //兼容旧的api
 
 function buildImage() {
     if (img === '') return
-    $('#blog-news').before(
+    $('#blog-news').after(
         `<img class='custom-qrcode' src='${qrcodeImg || img}' />`,
     )
 }
