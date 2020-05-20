@@ -18,7 +18,7 @@ const defaultOptions = {
     },
     // 个性签名
     signature: {
-        enable: true,
+        enable: false,
         contents: ['快去定义签名吧'],
     },
     // 二维码
