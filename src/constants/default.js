@@ -23,7 +23,7 @@ const defaultOptions = {
     },
     // 二维码
     qrcode: {
-        enable: true,
+        enable: false,
         img: 'https://gitee.com/guangzan/imagehost/raw/master/markdown/dd5e06a44e92687b3945f412adea1901.png',
         desc: '🤼‍♂️ 扫码加入 awescnb皮肤 QQ交流群，有问必答！',
     },
