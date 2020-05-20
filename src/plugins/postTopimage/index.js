@@ -1,18 +1,19 @@
 // 在随笔详情页顶部随笔生成一个文章头图
 // 引入即可
-import { pageName, randomArrayElements } from '@tools'
-import { randomImage } from '@constants/urls'
+import { randomImgurl, pageName, randomArrayElements } from '@tools'
 import './index.css'
 
 function build() {
     const { enable, imgs, position, fixed } = window.opts.postTopimage
 
-    if (!enable) return
-    if (pageName() !== 'post') return
+    if (!enable && pageName() !== 'post') return
 
-    let url = imgs.length === 0 ? randomImage : randomArrayElements(imgs, 1)[0]
-
-    const ele = `<div id="custom-post-topimage"></div>`
+    const url =
+        imgs.length === 0 ? randomImgurl() : randomArrayElements(imgs, 1)[0]
+    const ele = `<a  href="${url}" target="blank"><div id="custom-post-topimage"></div></a>`
+    const style = {
+        'background-image': `url(${url})`,
+    }
 
     if (position === 'top') {
         $('.post>.postTitle').before(ele)
@@ -20,37 +21,14 @@ function build() {
     if (position === 'bottom') {
         $('#cnblogs_post_body').after(ele)
     }
-
-    const style = {
-        'background-image': `url(${url})`,
-    }
-
     if (fixed) {
         style['background-attachment'] = 'fixed'
     }
-
     $('#custom-post-topimage').css(style)
 }
 
-// function download() {
-//     $('#download').click(function() {
-//         var x = new XMLHttpRequest()
-//         x.open('GET', 'http://danml.com/wave2.gif', true)
-//         x.responseType = 'blob'
-//         x.onload = function() {
-//             var url = window.URL.createObjectURL(x.response)
-//             var a = document.createElement('a')
-//             a.href = url
-//             a.download = ''
-//             a.click()
-//         }
-//         x.send()
-//     })
-// }
-
 function postTopimage() {
     build()
-    // download()
 }
 
 export default postTopimage
