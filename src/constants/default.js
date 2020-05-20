@@ -18,14 +18,14 @@ const defaultOptions = {
     },
     // 个性签名
     signature: {
-        enable: false,
-        contents: [],
+        enable: true,
+        contents: ['快去定义签名吧'],
     },
     // 二维码
     qrcode: {
-        enable: false,
+        enable: true,
         img: 'https://gitee.com/guangzan/imagehost/raw/master/markdown/dd5e06a44e92687b3945f412adea1901.png',
-        desc: '🤼‍♂️ 扫码加入 awescnb皮肤 qq交流群，有问必答！',
+        desc: '🤼‍♂️ 扫码加入 awescnb皮肤 QQ交流群，有问必答！',
     },
     // 弹出公告
     notice: {

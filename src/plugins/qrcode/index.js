@@ -6,9 +6,10 @@ const qrcodeImg = window.opts.theme.qrcode //兼容旧的api
 
 function buildImage() {
     if (img === '') return
-    $('#blog-news').after(
-        `<img class='custom-qrcode' src='${qrcodeImg || img}' />`,
-    )
+    const ele = `<img class='custom-qrcode' src='${qrcodeImg || img}' />`
+    $('.custom-signature').length
+        ? $('.custom-signature').after(ele)
+        : $('#blog-news').after(ele)
 }
 
 function buildDesc() {
