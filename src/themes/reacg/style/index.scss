@@ -561,16 +561,6 @@ body {
                 margin-top: 0;
             }
         }
-        #sidebar_news {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 10px;
-            .catListTitle {
-                padding-left: 40px;
-                width: 100%;
-            }
-        }
         /* 每个块的外层 */
         #sidebar_news,
         #blog-calendar,
@@ -919,7 +909,6 @@ body {
                 text-shadow: none;
             }
             a {
-                background-color: var(--themeColor);
                 &:nth-child(1),
                 &:nth-child(2),
                 &:nth-child(3) {
