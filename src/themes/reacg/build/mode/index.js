@@ -22,7 +22,7 @@ function changeModeToggle(mode = 'light') {
         $('#mode-change .icon').css('animation', 'none')
     }
     if (mode === 'light') {
-        toast('进入亮色模式 ☀')
+        toast('进入亮色模式 🌝')
         setBackground('light')
         $('#mode-dark').remove()
         $($lightIcon).replaceAll('#mode-change')
