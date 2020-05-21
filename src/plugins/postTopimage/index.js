@@ -4,7 +4,7 @@ import { randomImgurl, pageName, randomArrayElements } from '@tools'
 import './index.css'
 
 function build() {
-    const { enable, imgs, position, fixed } = window.opts.postTopimage
+    const { enable, imgs, fixed } = window.opts.postTopimage
 
     if (!enable) return
     if (pageName() !== 'post') return
@@ -15,16 +15,9 @@ function build() {
     const style = {
         'background-image': `url(${url})`,
     }
-
-    if (position === 'top') {
-        $('.post>.postTitle').before(ele)
-    }
-    if (position === 'bottom') {
-        $('#cnblogs_post_body').after(ele)
-    }
-    if (fixed) {
-        style['background-attachment'] = 'fixed'
-    }
+    
+    if (fixed) style['background-attachment'] = 'fixed'
+    $('.post>.postTitle').before(ele)
     $('#custom-post-topimage').css(style)
 }
 

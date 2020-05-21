@@ -110,9 +110,20 @@ const defaultOptions = {
     // 随笔头图
     postTopimage: {
         enable: true,
-        position: 'top',
+        // position: 'top', // position api 已经废弃，使用 postbottomimage 代替
         fixed: false,
         imgs: [],
+    },
+    // 随笔尾图
+    postBottomimage: {
+        enable: false,
+        img: '',
+        height: '',
+    },
+    // 打赏
+    donation: {
+        enable: false,
+        qrcodes: [],
     },
     // 个性签名
     signature: {
