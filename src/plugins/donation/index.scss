@@ -1,0 +1,29 @@
+#custom-donation-btn {
+    background-color: #10ac84 !important;
+    padding: 4px 10px !important;
+    user-select: none;
+    &:hover {
+        box-shadow: 0 0 5px #999;
+        transform: scale(1.1);
+        transform: translateY(-2px);
+        transition: all 0.2s;
+    }
+}
+#custom-donation-qrcode {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 999999999;
+    text-align: center;
+    & > div {
+        display: inline-block;
+        margin: 0 auto;
+        margin-right: 20px;
+        width: 180px;
+        height: 180px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        background-color: (--themeColor, #fff);
+    }
+}
