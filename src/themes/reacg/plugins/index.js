@@ -14,10 +14,12 @@ import postSignature from '@plugins/postSignature'
 import highlight from '@plugins/highlight'
 import postMessage from '@plugins/postMessage'
 import postTopimage from '@plugins/postTopimage'
+import postBottomimage from '@plugins/postBottomimage'
 import emoji from '@plugins/emoji'
 import lock from '@plugins/lock'
 import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
+import donation from '@plugins/donation'
 import { shootInitial } from '@plugins/barrage'
 
 function plugins() {
@@ -40,8 +42,10 @@ function plugins() {
     lock()
     postMessage()
     postTopimage()
+    postBottomimage()
     qrcode()
     charts()
+    donation()
 }
 
 export default plugins
