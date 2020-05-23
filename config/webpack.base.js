@@ -44,11 +44,13 @@ module.exports = {
     },
     resolve: {
         alias: {
+            // mobx: __dirname + '/node_modules/mobx/lib/mobx.es6.js',
             '@': path.resolve('src'),
             '@awescnb': path.resolve('src/awescnb'),
             '@tools': path.resolve('src/assets/utils/tools'),
             '@plugins': path.resolve('src/plugins'),
             '@constants': path.resolve('src/constants'),
+            '@store': path.resolve('src/store'),
         },
     },
 }
