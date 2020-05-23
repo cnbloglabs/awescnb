@@ -20,6 +20,12 @@
     }
 }
 
+@mixin text-over {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 :root {
     --default-background-g: rgb(253, 230, 224);
     --default-background-w: #fff;
@@ -159,9 +165,7 @@ body {
         .postTitle {
             margin-top: 5px;
             padding-left: 10.8px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include text-over();
             font-weight: 700;
             font-size: 16px;
             text-shadow: 5px 0px 10px var(--themeColor);
@@ -215,9 +219,7 @@ body {
         .entrylistItem {
             .entrylistPosttitle {
                 padding: 5.4px 14.418px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                @include text-over();
                 font-weight: 700;
                 font-size: 16px;
                 text-shadow: 5px 0px 10px var(--themeColor);
@@ -546,9 +548,6 @@ body {
     overflow: hidden;
     #sideBarMain {
         ul li {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
             padding-top: 5.4px;
             &:hover {
                 transform: translateX(5px);
@@ -559,6 +558,11 @@ body {
             @include center();
             #profile_block {
                 margin-top: 0;
+            }
+        }
+        #sidebar_recentposts {
+            ul li {
+                @include text-over();
             }
         }
         /* 每个块的外层 */
@@ -1200,9 +1204,7 @@ body {
     a {
         border-radius: 3px;
         margin-right: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include text-over();
         &:not(:nth-child(1)) {
             margin-top: 5px;
         }
