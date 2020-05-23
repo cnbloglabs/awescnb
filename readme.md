@@ -64,10 +64,10 @@ module.exports = {
 ## 成员
 
 -   [青墟](https://www.cnblogs.com/guoxinyu/)
--   [阿东]()
+-   [ABing](https://www.cnblogs.com/A-Bing/)
 -   [GShang](https://www.cnblogs.com/gshang/)
 -   [DIVMonster](https://www.cnblogs.com/guangzan/)
--   [ABing](https://www.cnblogs.com/A-Bing/)
+-   [Kindear_chen](https://www.cnblogs.com/masterchd)
 
 ## 许可
 
