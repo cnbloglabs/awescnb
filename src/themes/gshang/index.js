@@ -1,5 +1,5 @@
 import AwesCnb from '@awescnb'
-import './index.css'
+import './style/index.scss'
 
 class Gshang extends AwesCnb {
     constructor() {
@@ -9,16 +9,8 @@ class Gshang extends AwesCnb {
 
     init() {
         $.getScript('//at.alicdn.com/t/font_1416496_14nsmkubys8.js')
-        const {
-            setBack2Top,
-            setAvatar,
-            setHeaderBackground,
-            setThemeColor,
-        } = require('./build')
-        setThemeColor()
-        setAvatar()
-        setHeaderBackground()
-        setBack2Top()
+        require('./build')()
+        require('./plugins')()
     }
 }
 

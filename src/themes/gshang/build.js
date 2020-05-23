@@ -65,6 +65,11 @@ function iconInSvg(icon) {
     return `<svg class="icon" aria-hidden="true"><use xlink:href="${icon}"></use></svg>`
 }
 
-export { setBack2Top, setAvatar, setHeaderBackground, setThemeColor }
+function build() {
+    setBack2Top()
+    setAvatar()
+    setHeaderBackground()
+    setThemeColor()
+}
 
-module.exports = { setBack2Top, setAvatar, setHeaderBackground, setThemeColor }
+module.exports = build
