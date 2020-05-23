@@ -10,16 +10,16 @@ function build() {
     if (options.enable && userAgent() === 'pc') {
         $('body').append(`<canvas id="click-effects"></canvas>`)
         window.human = false
-        var canvasEl = document.querySelector('#click-effects')
-        var ctx = canvasEl.getContext('2d')
-        var numberOfParticules = 30
-        var pointerX = 0
-        var pointerY = 0
-        var tap =
+        let canvasEl = document.querySelector('#click-effects')
+        let ctx = canvasEl.getContext('2d')
+        let numberOfParticules = options.maxCount
+        let pointerX = 0
+        let pointerY = 0
+        let tap =
             'ontouchstart' in window || navigator.msMaxTouchPoints
                 ? 'touchstart'
                 : 'mousedown'
-        var colors = options.colors || [
+        let colors = options.colors || [
             '#FF1461',
             '#18FF92',
             '#5A87FF',
@@ -42,9 +42,9 @@ function build() {
         }
 
         const setParticuleDirection = p => {
-            var angle = (anime.random(0, 360) * Math.PI) / 180
-            var value = anime.random(50, 180)
-            var radius = [-1, 1][anime.random(0, 1)] * value
+            let angle = (anime.random(0, 360) * Math.PI) / 180
+            let value = anime.random(50, 180)
+            let radius = [-1, 1][anime.random(0, 1)] * value
             return {
                 x: p.x + radius * Math.cos(angle),
                 y: p.y + radius * Math.sin(angle),
@@ -52,7 +52,7 @@ function build() {
         }
 
         const createParticule = (x, y) => {
-            var p = {}
+            let p = {}
             p.x = x
             p.y = y
             p.color = colors[anime.random(0, colors.length - 1)]
@@ -68,7 +68,7 @@ function build() {
         }
 
         const createCircle = (x, y) => {
-            var p = {}
+            let p = {}
             p.x = x
             p.y = y
             p.color = '#FFF'
@@ -88,25 +88,25 @@ function build() {
         }
 
         const renderParticule = anim => {
-            for (var i = 0; i < anim.animatables.length; i++) {
+            for (let i = 0; i < anim.animatables.length; i++) {
                 anim.animatables[i].target.draw()
             }
         }
 
         const animateParticules = (x, y) => {
-            var circle = createCircle(x, y)
-            var particules = []
-            for (var i = 0; i < numberOfParticules; i++) {
+            let circle = createCircle(x, y)
+            let particules = []
+            for (let i = 0; i < numberOfParticules; i++) {
                 particules.push(createParticule(x, y))
             }
             anime
                 .timeline()
                 .add({
                     targets: particules,
-                    x: function(p) {
+                    x(p) {
                         return p.endPos.x
                     },
-                    y: function(p) {
+                    y(p) {
                         return p.endPos.y
                     },
                     radius: 0.1,
@@ -132,7 +132,7 @@ function build() {
 
         const render = anime({
             duration: Infinity,
-            update: function() {
+            update() {
                 ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
             },
         })
@@ -149,8 +149,8 @@ function build() {
         )
 
         const autoClick = () => {
-            var centerX = window.innerWidth / 2
-            var centerY = window.innerHeight / 2
+            let centerX = window.innerWidth / 2
+            let centerY = window.innerHeight / 2
             if (window.human) return
             animateParticules(
                 anime.random(centerX - 50, centerX + 50),
@@ -161,16 +161,13 @@ function build() {
             }).finished.then(autoClick)
         }
 
-        if (options.auto) {
-            autoClick()
-        }
+        if (options.auto) autoClick()
         window.addEventListener('resize', clickEffects, false)
         clickEffects()
     }
 }
 
 function setClickEffects() {
-    if (!options.enable || userAgent() === 'phone') return
     build()
 }
 

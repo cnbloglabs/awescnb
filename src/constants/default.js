@@ -67,7 +67,7 @@ const defaultOptions = {
         auto: false,
         colors: ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'],
         size: 30,
-        maxCount: 50,
+        maxCount: 15,
     },
     // 评论输入框表情
     emoji: {
@@ -203,7 +203,7 @@ const defaultOptions = {
     },
     // 锁屏
     lock: {
-        enable: false,
+        enable: true,
         background: '',
         strings: [
             '<i>Powered by</i> webpack.',

@@ -1,3 +1,4 @@
 #click-effects {
-    pointer-events:none
+    pointer-events:none;
+    z-index: 100;
 }
