@@ -131,130 +131,93 @@ body {
 }
 
 .forFlow {
-    // 首页
-    // .postTitle,
-    // .postCon,
-    // .postDesc {
-    //     &:nth-child(2n) {
-    //         left: 20px;
-    //     }
-    // }
-    .day {
-        // &:nth-child(odd) {
-        //     .postTitle,
-        //     .postCon,
-        //     .postDesc {
-        //         left: 20px;
-        //     }
-        // }
-        // &:nth-child(even) {
-        //     .postTitle,
-        //     .postCon,
-        //     .postDesc {
-        //         left: -410px;
-        //     }
-        // }
-        // .postTitle {
-        //     &:nth-child(8) {  //2 8 14
-        //         left: 20px;
-        //     }
-        // }
-        // .postCon {
-        //     &:nth-child(9) { //3 9 15
-        //         left: 20px;
-        //     }
-        // }
-        // .postDesc {
-        //     &:nth-child(11) { //4 10
-        //         left: 20px;
-        //     }
-        // }
-
-        position: relative;
-        // left: -38%;
-        width: 4px;
-        margin: 0 auto;
-        padding-top: 50px;
-        background: blue;
-        // display: grid;
-        .dayTitle {
-            position: relative;
-            left: -46px;
-            bottom: 46px;
-            padding: 3px 6px;
-            width: 90px;
-            background-color: green;
-        }
-        .postTitle,
-        .postCon,
-        .postDesc {
-            position: relative;
-
-            bottom: 20px;
-            width: 360px;
-            padding: 15px;
-            background: #f45b69;
-        }
-        .postCon {
-        }
-
-        .clear {
-            display: none;
-        }
-    }
 
     // .day {
+    //     position: relative;
+    //     // left: -38%;
+    //     width: 4px;
+    //     margin: 0 auto;
+    //     padding-top: 50px;
+    //     background: blue;
+    //     // display: grid;
     //     .dayTitle {
-    //         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
-    //         padding: 14.418px;
-    //         color: var(--text-4);
-    //         font-size: 16px;
-    //         &:not(:first-of-type) {
-    //             border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
-    //         }
+    //         position: relative;
+    //         left: -46px;
+    //         bottom: 46px;
+    //         padding: 3px 6px;
+    //         width: 90px;
+    //         background-color: green;
     //     }
-    //     .postTitle {
-    //         margin-top: 5px;
-    //         padding-left: 10.8px;
-    //         @include text-over();
-    //         font-weight: 700;
-    //         font-size: 16px;
-    //         text-shadow: 5px 0px 10px var(--themeColor);
-    //         color: var(--text-3);
-    //         &:hover {
-    //             transform: translateX(5.4px);
-    //             transition: all 0.2s;
-    //         }
+    //     .postTitle,
+    //     .postCon,
+    //     .postDesc {
+    //         position: relative;
+
+    //         bottom: 20px;
+    //         width: 360px;
+    //         padding: 15px;
+    //         background: #f45b69;
     //     }
     //     .postCon {
-    //         padding: 5.4px 14.418px;
-    //         color: var(--text-5);
-    //         .c_b_p_desc {
-    //             font-size: 14px;
-    //             color: var(--text-5);
-    //             .c_b_p_desc_readmore {
-    //                 display: table;
-    //                 margin-top: 5.4px;
-    //                 padding: 2.7px 5.4px 2.7px 8.1px;
-    //                 border: 1px solid var(--themeColor);
-    //                 font-size: 14px;
-    //                 color: var(--themeColor);
-    //                 border-radius: 3px;
-    //             }
-    //         }
     //     }
-    //     .postDesc {
-    //         display: flex;
-    //         justify-content: flex-end;
-    //         align-items: baseline;
-    //         text-transform: uppercase;
-    //         padding: 5.4px 14.418px;
-    //         color: var(--text-9);
-    //         a:last-child {
-    //             margin-left: 8.1px;
-    //         }
+
+    //     .clear {
+    //         display: none;
     //     }
     // }
+
+    .day {
+        .dayTitle {
+            border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+            padding: 14.418px;
+            color: var(--text-4);
+            font-size: 16px;
+            &:not(:first-of-type) {
+                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
+            }
+        }
+        .postTitle {
+            margin-top: 5px;
+            padding-left: 10.8px;
+            @include text-over();
+            font-weight: 700;
+            font-size: 16px;
+            text-shadow: 5px 0px 10px var(--themeColor);
+            color: var(--text-3);
+            &:hover {
+                transform: translateX(5.4px);
+                transition: all 0.2s;
+            }
+        }
+        .postCon {
+            padding: 5.4px 14.418px;
+            color: var(--text-5);
+            .c_b_p_desc {
+                font-size: 14px;
+                color: var(--text-5);
+                .c_b_p_desc_readmore {
+                    display: table;
+                    margin-top: 5.4px;
+                    padding: 2.7px 5.4px 2.7px 8.1px;
+                    border: 1px solid var(--themeColor);
+                    font-size: 14px;
+                    color: var(--themeColor);
+                    border-radius: 3px;
+                }
+            }
+        }
+        .postDesc {
+            display: flex;
+            justify-content: flex-end;
+            align-items: baseline;
+            text-transform: uppercase;
+            padding: 5.4px 14.418px;
+            color: var(--text-9);
+            a:last-child {
+                margin-left: 8.1px;
+            }
+        }
+    }
 
     // 随笔分类 | 随笔档案 | 文章档案
     .entrylist {
