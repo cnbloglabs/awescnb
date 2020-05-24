@@ -1,6 +1,6 @@
 // 代码高亮
 import { pageName } from '@/assets/utils/tools'
-import './index.css'
+import './index.scss'
 
 const {type} = window.opts.highLight
 

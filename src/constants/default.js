@@ -122,8 +122,14 @@ const defaultOptions = {
     },
     // 打赏
     donation: {
-        enable: false,
-        qrcodes: [],
+        enable: true,
+        qrcodes: [
+            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
+            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
+            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
+            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
+
+        ],
     },
     // 个性签名
     signature: {

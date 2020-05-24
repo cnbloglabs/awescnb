@@ -8,10 +8,8 @@ class Reacg extends AwesCnb {
     }
 
     init() {
-        const build = require('./build')
-        const plugins = require('./plugins')
-        build()
-        plugins()
+        require('./build')()
+        require('./plugins')()
     }
 }
 

@@ -1,0 +1,155 @@
+/* 富文本编辑器 start*/
+.cnblogs_code_collapse,
+.cnblogs_code_toolbar,
+.code_img_opened,
+.code_img_closed {
+    display: none;
+}
+.cnblogs_code_hide {
+    display: block !important;
+}
+.cnblogs_code {
+    border: none;
+    padding: 0;
+    border-radius: 4px;
+    &:hover {
+        box-shadow: 1px 1px 5px var(--themeColor, red);
+    }
+    pre {
+        overflow: auto;
+        font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
+            monospace !important;
+        display: block !important;
+        padding: 0.5em !important;
+        color: var(--hl-mono-1) !important;
+        background: var(--hl-base) !important;
+        border: none !important;
+        white-space: pre;
+        &:before {
+            height: 35px;
+        }
+    }
+    /* 注释 */
+    span[style='color: #008000;'] {
+        color: var(--hl-mono-3) !important;
+        font-style: italic;
+    }
+    /* new if return ... */
+    span[style='color: #0000ff;'] {
+        color: var(--hl-hue-3) !important;
+    }
+    /* 字符串 */
+    span[style='color: #800000;'] {
+        color: var(--hl-hue-4) !important;
+    }
+    span[style='color: #8b0000;'] {
+        color: var(--hl-hue-6) !important;
+    }
+}
+/* 富文本编辑器 end */
+
+pre:hover {
+    box-shadow: 0 0 6px var(--themeColor, red);
+}
+#cnblogs_post_body {
+    pre {
+        position: relative;
+        padding: 10px 0;
+        background: var(--hl-base);
+        border-radius: 4px;
+        &::before {
+            border-radius: 4px;
+            content: ' ';
+            display: block;
+            height: 24px;
+            background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
+                no-repeat;
+            background-size: 65px 23px;
+            background-position-x: 10px;
+        }
+    }
+    code {
+        font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
+            monospace !important;
+        color: #c7254e !important;
+        font-size: 0.87em !important;
+        padding: 0 !important;
+        margin: 0;
+        word-break: break-word !important;
+        border: none !important;
+        background: none !important;
+    }
+    li code {
+        font-size: 12px !important;
+        font-weight: 700;
+    }
+    .hljs {
+        display: block !important;
+        color: var(--hl-mono-1) !important;
+        background: var(--hl-base) !important;
+        border: none !important;
+        padding-bottom: 10px !important;
+    }
+    .hljs-tag {
+        color: var(--hl-tag);
+    }
+    .hljs-comment,
+    .hljs-quote {
+        color: var(--hl-mono-3);
+        font-style: italic;
+    }
+    .hljs-doctag,
+    .hljs-formula,
+    .hljs-keyword {
+        color: var(--hl-hue-3);
+    }
+    .hljs-deletion,
+    .hljs-name,
+    .hljs-section,
+    .hljs-selector-tag,
+    .hljs-subst {
+        color: var(--hl-hue-5);
+    }
+    .hljs-literal {
+        color: var(--hl-hue-1);
+    }
+    .hljs-addition,
+    .hljs-attribute,
+    .hljs-meta-string,
+    .hljs-regexp,
+    .hljs-string {
+        color: var(--hl-hue-4);
+    }
+    .hljs-built_in,
+    .hljs-class .hljs-title {
+        color: var(--hl-hue-6-2);
+    }
+    .hljs-attr,
+    .hljs-number,
+    .hljs-selector-attr,
+    .hljs-selector-class,
+    .hljs-selector-pseudo,
+    .hljs-template-variable,
+    .hljs-type,
+    .hljs-variable {
+        color: var(--hl-hue-6);
+    }
+    .hljs-bullet,
+    .hljs-link,
+    .hljs-meta,
+    .hljs-selector-id,
+    .hljs-symbol,
+    .hljs-title {
+        color: var(--hl-hue-2);
+    }
+    .hljs-emphasis {
+        font-style: italic;
+    }
+    .hljs-strong {
+        font-weight: 700;
+    }
+    .hljs-link {
+        text-decoration: underline;
+    }
+}
+

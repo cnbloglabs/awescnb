@@ -14,7 +14,7 @@ function setBodyBackground() {
     }
     if (type === 'img') {
         $('body').css('background-image', `url(${value})`)
-        if (repeat) {
+        if (!repeat) {
             $('body').css({
                 'background-repeat': `no-repeat`,
                 'background-size': '100% 100%',
