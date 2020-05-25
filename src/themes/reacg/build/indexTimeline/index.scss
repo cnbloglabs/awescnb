@@ -1,0 +1,104 @@
+.day {
+    position: relative;
+    // left: -38%;
+    width: 4px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: var(--text-10);
+    // display: grid;
+    .dayTitle {
+        position: relative;
+        left: -46px;
+        bottom: 46px;
+        padding: 6px 6px;
+        width: 90px;
+        text-align: center;
+        background-color: var(--themeColor);
+        border-radius: 3px;
+        color: #fff;
+    }
+    .postTitle,
+    .postCon,
+    .postDesc {
+        position: relative;
+        bottom: 20px;
+        width: 360px;
+    }
+    .postTitle {
+        padding: 10px 15px;
+        font-weight: 700;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background: #f45b69;
+        border-left: 1px solid #f45b69;
+        border-right: 1px solid #f45b69;
+        border-radius: 5px 5px 0 0;
+        color: #fff;
+    }
+    .postCon {
+        padding: 15px;
+        border-left: 1px solid var(--text-10);
+        border-right: 1px solid var(--text-10);
+        .c_b_p_desc {
+            font-size: 14px;
+            color: var(--text-3);
+            .c_b_p_desc_readmore {
+                display: table;
+                margin-top: 5.4px;
+                padding: 2.7px 5.4px 2.7px 8.1px;
+                border: 1px solid var(--themeColor);
+                font-size: 14px;
+                color: var(--themeColor);
+                border-radius: 3px;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+        }
+    }
+    .postDesc {
+        padding: 0 15px 15px;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 5px 5px;
+        border-left: 1px solid var(--text-10);
+        border-right: 1px solid var(--text-10);
+    }
+    .clear {
+        display: none;
+    }
+    .custom-postDesc-even,
+    .custom-postTitle-even,
+    .custom-postCon-even {
+        left: 20px;
+    }
+    .custom-postDesc-odd,
+    .custom-postTitle-odd,
+    .custom-postCon-odd {
+        left: -405px;
+    }
+    .custom-postCon-even {
+        &::before {
+            left: -7px;
+            border-right: 7px solid #f45b69;
+        }
+    }
+    .custom-postCon-odd {
+        &::before {
+            right: -7px;
+            border-left: 7px solid #f45b69;
+        }
+    }
+    .timeline-item-show {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    }
+}
