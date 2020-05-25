@@ -122,14 +122,8 @@ const defaultOptions = {
     },
     // 打赏
     donation: {
-        enable: true,
-        qrcodes: [
-            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
-            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
-            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
-            'https://gitee.com/guangzan/imagehost/raw/master/markdown/awescnb-qqgroup.png',
-
-        ],
+        enable: false,
+        qrcodes: [],
     },
     // 个性签名
     signature: {
@@ -159,6 +153,9 @@ const defaultOptions = {
         agent: 'pc',
         background: '#FFB3CC',
         height: '5px',
+    },
+    indexTimeline: {
+        enable: false
     },
     // 随笔页尾部签名
     postSignature: {

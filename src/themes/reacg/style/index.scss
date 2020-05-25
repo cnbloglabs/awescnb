@@ -126,46 +126,8 @@ body {
     }
 }
 
-.forFlow .postTitle:nth-of-type(2n) {
-    left: 20px;
-}
-
 .forFlow {
-
-    // .day {
-    //     position: relative;
-    //     // left: -38%;
-    //     width: 4px;
-    //     margin: 0 auto;
-    //     padding-top: 50px;
-    //     background: blue;
-    //     // display: grid;
-    //     .dayTitle {
-    //         position: relative;
-    //         left: -46px;
-    //         bottom: 46px;
-    //         padding: 3px 6px;
-    //         width: 90px;
-    //         background-color: green;
-    //     }
-    //     .postTitle,
-    //     .postCon,
-    //     .postDesc {
-    //         position: relative;
-
-    //         bottom: 20px;
-    //         width: 360px;
-    //         padding: 15px;
-    //         background: #f45b69;
-    //     }
-    //     .postCon {
-    //     }
-
-    //     .clear {
-    //         display: none;
-    //     }
-    // }
-
+    // 首页
     .day {
         .dayTitle {
             border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
@@ -179,7 +141,9 @@ body {
         .postTitle {
             margin-top: 5px;
             padding-left: 10.8px;
-            @include text-over();
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             font-weight: 700;
             font-size: 16px;
             text-shadow: 5px 0px 10px var(--themeColor);
@@ -218,7 +182,6 @@ body {
             }
         }
     }
-
     // 随笔分类 | 随笔档案 | 文章档案
     .entrylist {
         .entrylistTitle {
