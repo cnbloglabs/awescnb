@@ -1,3 +1,6 @@
+#cnblogs_post_body,
+#cnblogs_post_body,
+.cnblogs-post-body,
 .cnblogs-markdown {
     a {
         color: #00a1d6;
@@ -85,7 +88,7 @@
         thead {
             tr {
                 th {
-                    background-color: #ff6b81;
+                    background-color: #ff6b81!important;
                     color: #fff;
                     padding: 6px 9px;
                     text-align: left;
