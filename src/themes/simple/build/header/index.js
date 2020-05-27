@@ -7,7 +7,7 @@ const buildHeader = () => {
     $('#navList').after(`<div class="navbar-end"></div>`)
     $('#blog_nav_newpost').appendTo('.navbar-end')
     $(
-        `<a href="https://guangzan.gitee.io/awescnb-docs/" id="header-awescnb">十分钟创建新皮肤</a>`,
+        `<a href="https://guangzan.gitee.io/awescnb-docs/" id="header-awescnb">使用 awescnb 构建皮肤</a>`,
     ).appendTo('.navbar-end')
     $(`<a href="${gitee.url}" id="header-gitee">开源主页</a>`).appendTo(
         '.navbar-end',
