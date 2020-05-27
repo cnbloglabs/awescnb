@@ -12,7 +12,7 @@ import player from '@plugins/player'
 import postMessage from '@plugins/postMessage'
 import postSignature from '@plugins/postSignature'
 import postTopimage from '@plugins/postTopimage'
-import toast from '@plugins/toast'
+import notice from '@plugins/notice'
 // import titleFavicon from '@plugins/titleFavicon'
 // import signature from '@plugins/signature'
 // import background from '@plugins/background'
@@ -35,7 +35,7 @@ const plugins = () => {
     postMessage()
     postSignature()
     postTopimage()
-    toast()
+    notice()
     // signature()
     // titleFavicon()    // background()
     // postBottomimage()
