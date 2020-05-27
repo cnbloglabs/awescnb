@@ -67,7 +67,7 @@ function noCatalog() {
     // 如果没生成catalog，内容的宽度一律为54vw，写在style/index.scss中
     // 所以给 header padding left 一个固定的值
     if (pageName() !== 'post') return
-    $('#header').css('padding-left', '14.2vw')
+    // $('#header').css('padding-left', '14.2vw')
 }
 
 // 设置目录活跃标题样式

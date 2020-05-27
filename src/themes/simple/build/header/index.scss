@@ -154,7 +154,7 @@
                     background-color: #e7339f;
                 }
                 &::before {
-                    content: '\f14b';
+                    content: '\f304';
                     font-weight: bold;
                 }
             }
@@ -291,6 +291,9 @@
             }
             &.is-active .navbar-end {
                 justify-content: flex-start;
+                .custom-links {
+                    display: none;
+                }
             }
         }
     }

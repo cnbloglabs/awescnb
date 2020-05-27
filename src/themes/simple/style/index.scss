@@ -40,17 +40,34 @@ body {
     display: flex;
 }
 
+// .forFlow {
+//     padding: 1.5rem;
+//     background-color: #fff;
+// }
+
+#post_detail,
+#blog-comments-placeholder,
+#comment_form {
+    padding: 1.5rem;
+    background-color: #fff;
+}
+
 #mainContent {
     overflow: hidden;
     flex: 1;
     .dayTitle {
         display: none;
     }
+    .entrylistPosttitle,
+    .entrylistPostSummary,
+    .entrylistItemPostDesc,
     .postTitle,
     .postCon,
     .postDesc {
         background-color: #fff;
     }
+    .postTitl2,
+    .entrylistPosttitle,
     .postTitle {
         padding: 1rem 1rem 0;
         font-weight: 600;
@@ -58,11 +75,14 @@ body {
             content: '\f15b';
         }
     }
+    .entrylistPostSummary,
     .postCon {
         padding: 0.5rem 1rem 0;
     }
+    .postDesc2,
+    .entrylistItemPostDesc,
     .postDesc {
-        padding: 0.5rem 0 1rem;
+        padding: 0.5rem 1rem 1rem;
         margin-bottom: 1rem;
         border: 0 0 2px 2px;
     }
@@ -214,11 +234,6 @@ body {
     }
 }
 
-.forFlow {
-    padding: 1.5rem;
-    background-color: #fff;
-}
-
 #cnblogs_post_body {
     &:after {
         content: '——— EOF ———';
@@ -229,6 +244,7 @@ body {
     }
 }
 
+// 文章结尾按钮
 #blog_post_info_block {
     @include center(h);
     flex-direction: column;
@@ -389,7 +405,6 @@ body {
 
 // 评论列表
 #blog-comments-placeholder {
-    // margin: 0 21.6px;
     border-radius: 3px;
     .feedback_area_title {
         padding: 7.56px 10.8px;
@@ -499,23 +514,21 @@ body {
     }
 }
 
-.avatar {
-    border: 1px solid #eee;
-    border-radius: 50%;
-    transform: scale(0.7);
-}
-
-.blog_comment_body:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -24.84px;
-    top: 5.4px;
-    width: 12.258px;
-    height: 0;
-    border-right: solid 12.96px #00d1b2;
-    border-top: solid 3.24px rgba(0, 0, 0, 0);
-    border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+.feedbackListSubtitle {
+    @include center();
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    font-size: 14px;
+    & > a:last-of-type {
+        color: #00a1d6;
+        order: 1;
+    }
+    .feedbackManage {
+        order: 3;
+    }
+    .comment_vote {
+        order: 4;
+    }
 }
 
 .feedbackCon {
@@ -533,41 +546,32 @@ body {
         max-width: 540px;
         line-height: 1.6;
         padding: 5.4px 10.8px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -24.84px;
+            top: 5.4px;
+            width: 12.258px;
+            height: 0;
+            border-right: solid 12.96px #00d1b2;
+            border-top: solid 3.24px rgba(0, 0, 0, 0);
+            border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+        }
         a {
             color: #fa745e;
             border-color: #fa745e;
         }
     }
-}
-
-.feedbackListSubtitle > a:last-of-type {
-    color: #00a1d6;
-    order: 1;
-}
-
-.feedbackListSubtitle > a:last-of-type:hover {
-    color: var(--themeColor);
-    transition: all 0.2s;
-}
-
-.feedbackListSubtitle {
-    @include center();
-    flex-wrap: wrap;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: var(--text-5);
-    .feedbackManage {
-        order: 3;
-    }
-
-    .comment_vote {
-        order: 4;
+    .avatar {
+        border: 1px solid #eee;
+        border-radius: 50%;
+        transform: scale(0.7);
     }
 }
 
 // 发表评论
 #comment_form {
-    margin: 21.6px 0;
     #divCommentShow,
     #ad_text_under_commentbox,
     #comment_nav {
@@ -609,7 +613,7 @@ body {
             background: none;
             border: none;
             .commentbox_title {
-                border-bottom-color: var(--themeColor);
+                border-bottom-color: rgb(172, 169, 169);
             }
             .commentbox_title_left {
                 display: none;
@@ -710,12 +714,6 @@ body {
 #HistoryToday {
     display: none;
 }
-
-// #sidebar_postarchive li a::before,
-// #sidebar_articlearchive li a::before {
-//     content: '\f2b9';
-//     font-weight: 900;
-// }
 
 @import './markdown.scss';
 @import './index.m.scss';

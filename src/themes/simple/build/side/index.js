@@ -75,8 +75,9 @@ const addCalendarTitle = () => {
 
 const side = () => {
     addCalendarTitle()
-    // poll($('#blog-sidecolumn').length, sideItemToggle)
-    poll($('#TopDiggPostsBlock').length, sideItemToggle)
+    setTimeout(() => {
+        poll($('#blog-sidecolumn').length, sideItemToggle)
+    }, 0)
 }
 
 module.exports = side
