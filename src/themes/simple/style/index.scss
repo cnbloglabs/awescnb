@@ -485,7 +485,7 @@ body {
     }
     .layer {
         padding: 0 5.4px;
-        background-color: #00d1b2;
+        background-color: #fa745e;
         color: #fff;
         font-weight: 700;
         border-radius: 3px;
@@ -533,6 +533,10 @@ body {
         max-width: 540px;
         line-height: 1.6;
         padding: 5.4px 10.8px;
+        a {
+            color: #fa745e;
+            border-color: #fa745e;
+        }
     }
 }
 

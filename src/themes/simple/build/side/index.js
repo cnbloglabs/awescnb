@@ -1,4 +1,5 @@
 import './index.scss'
+import { poll } from '@tools'
 
 const actions = [
     {
@@ -60,7 +61,6 @@ const sideItemToggle = () => {
         if (!title.length) continue
         $(title).click(function() {
             $(content).toggle('fast', 'linear', function() {
-                // console.log()
                 $(this).css('display') === 'none'
                     ? $(title).removeClass('is-active')
                     : $(title).addClass('is-active')
@@ -75,7 +75,7 @@ const addCalendarTitle = () => {
 
 const side = () => {
     addCalendarTitle()
-    sideItemToggle()
+    poll($('#blog-sidecolumn').length, sideItemToggle)
 }
 
 module.exports = side
