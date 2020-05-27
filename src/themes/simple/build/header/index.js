@@ -17,7 +17,6 @@ const buildHeader = () => {
 // header头像
 const buildAva = () => {
     const { avatar } = window.opts.theme
-    //'https://bulma.io/images/bulma-logo.png'
     $('#blogLogo').attr('src', `${avatar}`)
 }
 
@@ -25,17 +24,19 @@ const buildAva = () => {
 const headerInnerPostTitle = () => {
     if (pageName() !== 'post') return
     if (userAgent() !== 'pc') return
-    let title = $('.post .postTitle')
-        .text()
-        .replace(/\s*/g, '')
+    let title =
+        '你你好你好你你你好你好你好你好你好好你好你好' ||
+        $('.post .postTitle')
+            .text()
+            .replace(/\s*/g, '')
     const titleLength = title.length
 
     let offset = ''
     if (0 <= titleLength && titleLength < 10) offset = '-200%'
-    if (10 <= titleLength && titleLength < 15) offset = '-150%'
-    if (titleLength >= 15) {
-        title = title.substring(0, 15) + '...'
-        offset = '-80%'
+    if (10 <= titleLength && titleLength < 18) offset = '-100%'
+    if (titleLength >= 18) {
+        title = title.substring(0, 18) + '...'
+        offset = '-100%'
     }
     $('#navList').append(`<span class='header-posttitle'>${title}</span>`)
     $('head').append(
