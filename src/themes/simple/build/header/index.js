@@ -62,12 +62,19 @@ const customLinks = () => {
     $('.custom-links').append(`<a class="zhihu"></a>`)
 }
 
-const init = () => {
+// 首页 header 不要上下翻滚
+const preventHeaderChange = () => {
+    if (pageName() !== 'index') return
+    $('#header').addClass('navlist-fix')
+}
+
+const header = () => {
     buildHeader()
     buildAva()
     headerBtn()
     customLinks()
     headerInnerPostTitle()
+    preventHeaderChange()
 }
 
-module.exports = init
+module.exports = header

@@ -5,7 +5,7 @@
 // 当然，有特殊需求自行更改
 
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'simple',
     template: 'index',
     eslint: true,
     sourceMap: false,
