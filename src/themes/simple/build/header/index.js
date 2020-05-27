@@ -14,6 +14,12 @@ const buildHeader = () => {
     )
 }
 
+// 构建header昵称
+
+const headerNickname = () => {
+    $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
+}
+
 // header头像
 const buildAva = () => {
     const { avatar } = window.opts.theme
@@ -24,19 +30,20 @@ const buildAva = () => {
 const headerInnerPostTitle = () => {
     if (pageName() !== 'post') return
     if (userAgent() !== 'pc') return
-    let title =
-        '你你好你好你你你好你好你好你好你好好你好你好' ||
-        $('.post .postTitle')
-            .text()
-            .replace(/\s*/g, '')
+    let title = $('.post .postTitle')
+        .text()
+        .replace(/\s*/g, '')
     const titleLength = title.length
 
     let offset = ''
-    if (0 <= titleLength && titleLength < 10) offset = '-200%'
-    if (10 <= titleLength && titleLength < 18) offset = '-100%'
-    if (titleLength >= 18) {
-        title = title.substring(0, 18) + '...'
-        offset = '-100%'
+    if (0 <= titleLength && titleLength < 10) offset = '-180%'
+    if (10 <= titleLength && titleLength < 15) offset = '-140%'
+    if (15 <= titleLength && titleLength < 20) offset = '-100%'
+    if (20 <= titleLength && titleLength < 25) offset = '-65%'
+    if (25 <= titleLength && titleLength < 28) offset = '-60%'
+    if (titleLength >= 28) {
+        title = title.substring(0, 28) + '...'
+        offset = '-60%'
     }
     $('#navList').append(`<span class='header-posttitle'>${title}</span>`)
     $('head').append(
@@ -84,6 +91,7 @@ const preventHeaderChange = () => {
 }
 
 const header = () => {
+    headerNickname()
     buildHeader()
     buildAva()
     headerBtn()

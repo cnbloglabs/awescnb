@@ -83,6 +83,8 @@
             align-items: center;
             justify-content: flex-start;
             margin-right: auto;
+            max-width: 40rem;
+            overflow: hidden;
             li {
                 transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
                 a {
@@ -97,6 +99,7 @@
                     padding: 0.5rem 0.75rem;
                     position: relative;
                     cursor: pointer;
+                    white-space: nowrap;
                     &:hover {
                         background-color: #fafafa;
                         color: #3273dc;
@@ -184,10 +187,37 @@
         .blogStats {
             display: none;
         }
-        // .github {
-        //     margin-right: 1rem;
-        // }
     }
+}
+
+#header {
+    &.is-active {
+        padding-top: 0;
+        padding-bottom: 0;
+        transition: padding 0.2s;
+        li {
+            transform: translate3d(0, -200%, 0);
+            transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .header-posttitle {
+            // transform: translate3d(-50%, 0, 0);
+            transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+    }
+    &.navlist-fix {
+        li {
+            transform: none !important;
+        }
+    }
+}
+
+.header-posttitle {
+    position: relative;
+    // transform: translate3d(-50%, 300%, 0);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 1023px) {
@@ -264,33 +294,4 @@
             }
         }
     }
-}
-
-#header {
-    &.is-active {
-        padding-top: 0;
-        padding-bottom: 0;
-        transition: padding 0.2s;
-        li {
-            transform: translate3d(0, -200%, 0);
-            transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
-        .header-posttitle {
-            // transform: translate3d(-50%, 0, 0);
-            transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
-    }
-    &.navlist-fix {
-        li {
-            transform: none !important;
-        }
-    }
-}
-
-.header-posttitle {
-    position: relative;
-    // transform: translate3d(-50%, 300%, 0);
-    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    font-size: 1.2rem;
-    font-weight: bold;
 }
