@@ -5,6 +5,7 @@
 *::after {
     font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
     margin-right: 0.5em;
+    font-weight: bold;
 }
 
 *::before {
@@ -41,9 +42,14 @@ body {
 }
 
 // .forFlow {
-//     padding: 1.5rem;
 //     background-color: #fff;
 // }
+
+#post_detail {
+    #topics .postDesc {
+        padding: 0;
+    }
+}
 
 #post_detail,
 #blog-comments-placeholder,
@@ -229,6 +235,43 @@ body {
             &:hover {
                 background: #61aeee;
                 transition: background 0.3s;
+            }
+        }
+    }
+}
+
+// 当前标签页,随笔分类
+.forFlow {
+    .entrylistTitle,
+    .PostListTitle {
+        padding: 1rem 1rem;
+        border-bottom: 1px solid #f4f5f5;
+        font-weight: 700;
+        background-color: #fff;
+        &::before {
+            content: '\f02b';
+        }
+    }
+    .pager {
+        margin: 0;
+        // padding: 1rem 0;
+    }
+    #myposts {
+        background-color: #fff;
+        margin-left: 0;
+        .PostList {
+            margin: 0;
+            .postTitl2 {
+                font-size: 1rem;
+                font-weight: normal;
+            }
+            .postDesc2 {
+                margin-bottom: 0;
+                padding-top: 2rem;
+                color: #999;
+            }
+            .postText2 {
+                display: none;
             }
         }
     }

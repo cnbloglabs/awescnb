@@ -7,7 +7,7 @@ import commentsAvatars from '@plugins/commentsAvatars'
 import dragMenu from '@plugins/dragMenu'
 import donation from '@plugins/donation'
 import emoji from '@plugins/emoji'
-import live2d from '@plugins/live2d'
+// import live2d from '@plugins/live2d'
 import player from '@plugins/player'
 import postMessage from '@plugins/postMessage'
 import postSignature from '@plugins/postSignature'
@@ -30,7 +30,7 @@ const plugins = () => {
     donation()
     dragMenu()
     emoji()
-    live2d()
+    // live2d()
     player()
     postMessage()
     postSignature()

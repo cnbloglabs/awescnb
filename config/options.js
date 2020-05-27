@@ -6,7 +6,7 @@
 
 module.exports = {
     themeName: 'simple',
-    template: 'post',
+    template: 'index',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,
