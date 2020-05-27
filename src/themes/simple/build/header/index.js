@@ -25,11 +25,26 @@ const buildAva = () => {
 const headerInnerPostTitle = () => {
     if (pageName() !== 'post') return
     if (userAgent() !== 'pc') return
-    let title = $('.post .postTitle').text()
-    if (title.trim().length > 30) {
-        title = title.trim().substring(0, 30) + '...'
+    let title = $('.post .postTitle')
+        .text()
+        .replace(/\s*/g, '')
+    const titleLength = title.length
+
+    let offset = ''
+    if (0 <= titleLength && titleLength < 10) offset = '-200%'
+    if (10 <= titleLength && titleLength < 20) offset = '-100%'
+    if (20 <= titleLength && titleLength < 30) offset = '-50%'
+    if (titleLength > 30) {
+        title = title.substring(0, 30) + '...'
+        offset = '-50%'
     }
     $('#navList').append(`<span class='header-posttitle'>${title}</span>`)
+    $('head').append(
+        `<style>
+               .header-posttitle {transform: translate3d(${offset}, 300%, 0);}
+                #header.is-active .header-posttitle {transform: translate3d(${offset}, 0, 0);}
+        </style>`,
+    )
 }
 
 // header移动端菜单

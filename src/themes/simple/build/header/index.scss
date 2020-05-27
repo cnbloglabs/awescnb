@@ -276,7 +276,7 @@
             transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         }
         .header-posttitle {
-            transform: translate3d(-50%, 0, 0);
+            // transform: translate3d(-50%, 0, 0);
             transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         }
     }
@@ -289,7 +289,7 @@
 
 .header-posttitle {
     position: relative;
-    transform: translate3d(-50%, 300%, 0);
+    // transform: translate3d(-50%, 300%, 0);
     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     font-size: 1.2rem;
     font-weight: bold;
