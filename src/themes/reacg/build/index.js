@@ -1,4 +1,3 @@
-import footer from './footer'
 import mobileMenu from './mobileMenu'
 import mode from './mode'
 import avatar from './avatar'
@@ -8,6 +7,7 @@ import indexList from './indexList'
 import notice from './notice'
 import setIcons from './icons'
 import comments from './comments'
+import indexTimeline from './indexTimeline'
 
 function build() {
     mobileMenu()
@@ -15,11 +15,11 @@ function build() {
     avatar()
     scroll()
     catalog()
-    footer()
     indexList()
     notice()
     setIcons()
     comments()
+    indexTimeline()
 }
 
 export default build

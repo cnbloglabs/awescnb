@@ -27,6 +27,7 @@ module.exports = {
         reacg: './src/themes/reacg/index.js',
         gshang: './src/themes/gshang/index.js',
         element: './src/themes/element/index.js',
+        simple: './src/themes/simple/index.js',
         [themeName]: `./src/themes/${themeName}/index.js`,
     },
     output: {
@@ -39,6 +40,10 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: jsLoader,
+            },
+            {
+                test: /\.(gif|png|jpg|woff|woff2|svg|ttf|eot)$/i,
+                use: 'url-loader',
             },
         ],
     },

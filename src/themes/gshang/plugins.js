@@ -1,5 +1,5 @@
 import setBodyBackground from '@plugins/background'
-import imageBox from '@plugins/imageBox'
+import imagebox from '@plugins/imagebox'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
 import setClickEffects from '@plugins/click'
@@ -12,7 +12,7 @@ import lock from '@plugins/lock'
 
 function plugins() {
     setBodyBackground()
-    imageBox()
+    imagebox()
     setLive2d()
     setMusicPlayer()
     setClickEffects()

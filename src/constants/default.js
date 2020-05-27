@@ -6,8 +6,9 @@ const defaultOptions = {
         title: '',
         contentSize: 'mid',
         headerBackground: '',
-        avatar: 'https://guangzan.gitee.io/imagehost/awescnb/logo.png',
-        favicon: 'https://guangzan.gitee.io/imagehost/awescnb/favicon.png',
+        avatar:
+            'http://img4.imgtn.bdimg.com/it/u=2753922961,323026641&fm=26&gp=0.jpg',
+        favicon: '',
     },
     // 代码高亮
     highLight: {
@@ -59,7 +60,7 @@ const defaultOptions = {
         width: 150,
         height: 200,
         position: 'left',
-        gap: 'default', // 边距
+        gap: 'default',
     },
     // 点击特效
     click: {
@@ -155,7 +156,7 @@ const defaultOptions = {
         height: '5px',
     },
     indexTimeline: {
-        enable: false
+        enable: false,
     },
     // 随笔页尾部签名
     postSignature: {

@@ -1,0 +1,6 @@
+#sidebar_new {
+    &::after {
+        content: '123';
+        display: block;
+    }
+}

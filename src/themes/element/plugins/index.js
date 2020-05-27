@@ -17,7 +17,7 @@ import fancyImgbox from './fancyImgbox'
 // ---------
 // import back2top from '@plugins/back2top'
 // import copy from '@plugins/copy'
-// import imageBox from '@plugins/imageBox'
+// import imagebox from '@plugins/imagebox'
 // import comments from '@plugins/comments'
 // import signature from '@plugins/signature'
 // import postSignature from '@plugins/postSignature'
@@ -48,7 +48,7 @@ function plugins() {
     emoji()
     toast()
     // ---------
-    // imageBox()
+    // imagebox()
     // back2top()
     // postMessage()
     // comments()

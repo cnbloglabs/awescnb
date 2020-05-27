@@ -1,5 +1,4 @@
-// 与逻辑无关
-// 只作为跳转链接或展示
-const message = {}
-
-export default message
+export const version = 'v2.0'
+export const author = 'DIV Monster'
+export const blog = 'https://www.cnblogs.com/guangzan'
+export const gitee = 'https://gitee.com/guangzan/awescnb'

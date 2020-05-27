@@ -16,8 +16,8 @@
     width: max-content;
     height: auto;
     max-width: 100%;
-    background-color: #1E1E1E;
-    color: var(--themeColor, #000);
+    background-color: #1e1e1e;
+    color: var(--themeColor, #fff);
     font-size: 14px;
     line-height: 14px;
     font-weight: 300;

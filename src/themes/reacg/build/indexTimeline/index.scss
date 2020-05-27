@@ -1,11 +1,9 @@
 .day {
     position: relative;
-    // left: -38%;
     width: 4px;
     margin: 0 auto;
     padding-top: 50px;
     background: var(--text-10);
-    // display: grid;
     .dayTitle {
         position: relative;
         left: -46px;
@@ -78,11 +76,15 @@
     .custom-postTitle-even,
     .custom-postCon-even {
         left: 20px;
+        transform: translate3d(-200px, 0, 0);
+        visibility: hidden;
     }
     .custom-postDesc-odd,
     .custom-postTitle-odd,
     .custom-postCon-odd {
         left: -405px;
+        transform: translate3d(200px, 0, 0);
+        visibility: hidden;
     }
     .custom-postCon-even {
         &::before {
@@ -96,9 +98,61 @@
             border-left: 7px solid #f45b69;
         }
     }
-    .timeline-item-show {
+    .in-view,
+    .in-view ~ .postCon,
+    .in-view ~ .postDesc {
         transform: none;
         visibility: visible;
         opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .day {
+        margin-left: 10px;
+        .dayTitle {
+            left: -5px;
+            bottom: 28px;
+        }
+        .postTitle,
+        .postCon,
+        .postDesc {
+            position: relative;
+            bottom: 20px;
+            width: 280px;
+        }
+        .postTitle {
+            margin-top: 20px;
+            padding: 8px 15px;
+            font-size: 14px!important;
+        }
+        .custom-postDesc-odd,
+        .custom-postTitle-odd,
+        .custom-postCon-odd,
+        .custom-postDesc-even,
+        .custom-postTitle-even,
+        .custom-postCon-even {
+            left: 20px;
+            transform: translate3d(-200px, 0, 0);
+            visibility: visible;
+        }
+        .custom-postCon-odd,
+        .custom-postCon-even {
+            &::before {
+                left: -7px;
+                border-right: 7px solid #f45b69;
+                border-left: none;
+            }
+        }
+
+        .in-view,
+        .in-view ~ .postCon,
+        .in-view ~ .postDesc {
+            transform: none;
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
     }
 }

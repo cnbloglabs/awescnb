@@ -971,14 +971,14 @@ body {
     order: 1;
 }
 
-.feedbackManage {
-    margin-right: 10.8px;
-    order: 3;
-}
-
 .feedbackListSubtitle > a:last-of-type:hover {
     color: var(--themeColor);
     transition: all 0.2s;
+}
+
+.feedbackManage {
+    margin-right: 10.8px;
+    order: 3;
 }
 
 .comment_vote {

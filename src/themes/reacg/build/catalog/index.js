@@ -1,6 +1,7 @@
-// 相关options: 
-// theme.contentSize  
-// catalog.enable & catalog.position
+// 相关options:
+// theme.contentSize
+// catalog.enable
+// catalog.position
 
 import './index.scss'
 import {

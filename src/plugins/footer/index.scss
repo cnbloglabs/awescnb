@@ -34,7 +34,7 @@
 @media screen and (max-width: 767px) {
     #links {
         width: 90vw;
-        overflow-x: scroll;
+        overflow: hidden;
         margin: 0 auto;
         white-space: nowrap;
     }

@@ -1,7 +1,8 @@
 import dragMenu from '@plugins/dragMenu'
+import footer from '@plugins/footer'
 import themeColor from '@plugins/themeColor'
 import setBodyBackground from '@plugins/background'
-import imageBox from '@plugins/imageBox'
+import imagebox from '@plugins/imagebox'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
 import setClickEffects from '@plugins/click'
@@ -24,9 +25,10 @@ import { shootInitial } from '@plugins/barrage'
 
 function plugins() {
     dragMenu()
+    footer()
     themeColor()
     setBodyBackground()
-    imageBox()
+    imagebox()
     shootInitial()
     setLive2d()
     setMusicPlayer()
