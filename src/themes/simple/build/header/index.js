@@ -32,11 +32,10 @@ const headerInnerPostTitle = () => {
 
     let offset = ''
     if (0 <= titleLength && titleLength < 10) offset = '-200%'
-    if (10 <= titleLength && titleLength < 20) offset = '-100%'
-    if (20 <= titleLength && titleLength < 30) offset = '-50%'
-    if (titleLength > 30) {
-        title = title.substring(0, 30) + '...'
-        offset = '-50%'
+    if (10 <= titleLength && titleLength < 15) offset = '-150%'
+    if (titleLength >= 15) {
+        title = title.substring(0, 15) + '...'
+        offset = '-80%'
     }
     $('#navList').append(`<span class='header-posttitle'>${title}</span>`)
     $('head').append(
