@@ -149,6 +149,7 @@
                 cursor: pointer;
             }
             #blog_nav_newpost {
+                display: block !important;
                 background-color: #ea4aaa;
                 &:hover {
                     background-color: #e7339f;
