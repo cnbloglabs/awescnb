@@ -8,25 +8,21 @@ function showAvatar() {
             .children('.feedbackCon')
             .children('span:last')
             .html()
-
         avatar = avatar
             ? avatar.replace('http://', 'https://')
             : 'https://pic.cnblogs.com/face/sample_face.gif'
-
-        if (env === 'dev') {
-            avatar = 'https://www.dummyimage.com/50'
-        }
-
-        $(
-            `<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`,
-        ).prependTo($(this).children('.feedbackCon'))
+        if (env === 'dev') avatar = 'https://www.dummyimage.com/50'
+        const ele = `<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`
+        $(this)
+            .children('.feedbackCon')
+            .prepend(ele)
     })
 }
 
 // 轮询显示头像
 async function pollToShow() {
     if (pageName() !== 'post') return
-    poll($('.blog_comment_body').length, showAvatar)
+    poll($('.feedbackListSubtitle').length, showAvatar)
 }
 
 // 调整支持反对按钮位置
@@ -49,10 +45,7 @@ function authorRight() {
                 .text() === '楼主'
                 ? true
                 : false
-
-        if (isAuthor) {
-            $(this).addClass('custom-comments-author')
-        }
+        if (isAuthor) $(this).addClass('custom-comments-author')
     })
 }
 

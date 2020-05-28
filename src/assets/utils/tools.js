@@ -164,11 +164,11 @@ function poll(condition, handler) {
                 handler()
                 clearInterval(intervalId)
             }
-            if (count === 15) {
+            if (count === 30) {
                 clearInterval(intervalId)
             }
             count++
-        }, 500)
+        }, 100)
     }
 }
 
