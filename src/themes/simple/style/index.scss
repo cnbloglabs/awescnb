@@ -54,8 +54,12 @@ body {
 #post_detail,
 #blog-comments-placeholder,
 #comment_form {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0;
     background-color: #fff;
+}
+
+#comment_form{
+    padding-bottom: 1.5rem;
 }
 
 #mainContent {
@@ -89,13 +93,13 @@ body {
     .entrylistItemPostDesc,
     .postDesc {
         padding: 0.5rem 1rem 1rem;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         border: 0 0 2px 2px;
     }
 }
 
 #post_detail {
-    .postTitle{
+    .postTitle {
         padding-left: 0;
         padding-bottom: 1rem;
         font-size: 1.2rem;
@@ -464,6 +468,9 @@ body {
         border-radius: 2px 2px 0 0;
         font-size: 12px;
         font-weight: 700;
+        &::before {
+            content: '\f4ad';
+        }
     }
     .feedbackItem {
         border-left: 1px solid #d1d5da;
@@ -654,6 +661,9 @@ body {
             font-size: 12px;
             font-weight: 700;
             color: var(--text-3);
+            &::before {
+                content: '\f56b';
+            }
         }
         // #tip_comment {
         // }
@@ -732,18 +742,19 @@ body {
     a {
         border-radius: 3px;
         margin-right: 0;
+        user-select: none;
         @include text-over();
         &:not(:nth-child(1)) {
             margin-top: 5px;
         }
         &:nth-child(1) {
-            background-color: var(--themeColor);
+            background-color: #fa745e;
         }
         &:nth-child(3) {
-            background-color: #feca57;
+            background-color: #ff6b6b;
         }
         &:nth-child(5) {
-            background-color: #ff6b6b;
+            background-color: #feca57;
         }
         &:nth-child(7) {
             background-color: #48dbfb;

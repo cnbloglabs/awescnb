@@ -14,7 +14,7 @@ import postSignature from '@plugins/postSignature'
 import postTopimage from '@plugins/postTopimage'
 import notice from '@plugins/notice'
 // import titleFavicon from '@plugins/titleFavicon'
-// import signature from '@plugins/signature'
+import signature from '@plugins/signature'
 // import background from '@plugins/background'
 // import click from '@plugins/click'
 // import lock from '@plugins/lock'
@@ -36,7 +36,7 @@ const plugins = () => {
     postSignature()
     postTopimage()
     notice()
-    // signature()
+    signature()
     // titleFavicon()    // background()
     // postBottomimage()
     // lock()
