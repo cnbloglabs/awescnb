@@ -20,7 +20,7 @@ function showAvatar() {
 }
 
 // 轮询显示头像
-async function pollToShow() {
+function pollToShow() {
     if (pageName() !== 'post') return
     poll($('.feedbackListSubtitle').length, showAvatar)
 }
