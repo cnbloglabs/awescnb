@@ -58,7 +58,7 @@ body {
     background-color: #fff;
 }
 
-#comment_form{
+#comment_form {
     padding-bottom: 1.5rem;
 }
 
@@ -420,6 +420,10 @@ body {
                     transform: translateY(-2px);
                     transition: all 0.2s;
                 }
+                &::before {
+                    content: '\f004';
+                    color: #fff;
+                }
             }
             .buryit {
                 margin-left: 10.8px;
@@ -430,12 +434,10 @@ body {
                     transform: translateY(-2px);
                     transition: all 0.2s;
                 }
-            }
-            .diggit::before {
-                content: '👍';
-            }
-            .buryit::before {
-                content: '👎';
+                &::before {
+                    content: "\f7a9";
+                    color: #fff;
+                }
             }
             .diggword {
                 display: none;
