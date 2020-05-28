@@ -4,10 +4,9 @@
 .cnblogs-markdown {
     a {
         color: #00a1d6;
-        border-bottom: 1px dotted #00a1d6;
+        border-bottom: 1px dotted #53ccf5;
         &:hover {
-            color: var(--themeColor);
-            border-bottom-color: var(--themeColor);
+            color: #0582ac;
             transition: color 0.2s;
         }
     }
@@ -32,14 +31,14 @@
         }
     }
     h2 {
-        color: var(--themeColor);
+        // color: var(--themeColor);
         font-size: 20px;
     }
     h3 {
         font-size: 16px;
     }
     hr {
-        border-color: var(--text-10);
+        border-color: #999;
     }
     ol {
         margin: 10px 0;
@@ -97,14 +96,14 @@
         }
         tr {
             &:nth-child(even) {
-                background-color: var(--background-e);
+                background-color: #f5f5f5;
             }
             &:hover {
                 background-color: #999;
                 cursor: default;
             }
             td {
-                border-bottom: 1px solid var(--text-10);
+                // border-bottom: 1px solid var(--text-10);
                 padding: 6px 9px;
                 text-align: left;
             }
@@ -113,9 +112,9 @@
     blockquote {
         margin: 5px 0;
         padding: 1px 1px 1px 15px;
-        background: var(--background-e);
+        background: #f5f5f5;
         border: none;
-        border-left: 8px solid var(--themeColor);
+        border-left: 6px solid #CBCBCB;
         p {
             margin: 6px auto;
             line-height: 1.8;
@@ -129,7 +128,7 @@
         background-color: #a4b0be;
         border-radius: 3px;
         color: #fff;
-        box-shadow: 1px 1px 3px var(--text-10);
+        box-shadow: 1px 1px 3px #f5f5f5;
     }
     details {
         font-family: 'Roboto', 'sans-serif';
@@ -183,7 +182,7 @@
             }
         }
     }
-    mark {
-        background-color: var(--themeColor);
-    }
+    // mark {
+    //     background-color: var(--themeColor);
+    // }
 }
