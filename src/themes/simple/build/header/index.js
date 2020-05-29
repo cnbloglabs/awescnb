@@ -4,18 +4,17 @@ import { pageName, userAgent } from '@tools'
 // header右侧按钮容器
 const buildHeader = () => {
     const gitee = window.opts.gitee
+
     $('#navList').after(`<div class="navbar-end"></div>`)
     $('#blog_nav_newpost').appendTo('.navbar-end')
-    $(
-        `<a href="https://guangzan.gitee.io/awescnb-docs/" id="header-awescnb">构建新皮肤</a>`,
-    ).appendTo('.navbar-end')
-    $(`<a href="${gitee.url}" id="header-gitee">开源主页</a>`).appendTo(
-        '.navbar-end',
-    )
+
+    const customEle = `<a href="https://guangzan.gitee.io/awescnb-docs/awescnb/dev/dev.html" id="header-awescnb">构建新皮肤</a>`
+    const giteeEle = `<a href="${gitee.url}" id="header-gitee">开源主页</a>`
+    $(customEle).appendTo('.navbar-end')
+    $(giteeEle).appendTo('.navbar-end')
 }
 
 // 构建header昵称
-
 const headerNickname = () => {
     $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
 }
@@ -77,7 +76,9 @@ const customLinks = () => {
     $('#blogTitle h2').after(`<div class="custom-links"></div>`)
 
     // 码云
-    $('.custom-links').append(`<a class="gitee" href="${gitee.url}"></a>`)
+    if (gitee.enable) {
+        $('.custom-links').append(`<a class="gitee" href="${gitee.url}"></a>`)
+    }
     // github icon
     if (github.enable) {
         $('.custom-links').append(`<a class="github" href="${github.url}"></a>`)

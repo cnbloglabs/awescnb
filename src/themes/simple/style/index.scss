@@ -518,9 +518,6 @@ body {
         }
         .feedbackManage {
             order: 0;
-            .comment_actions {
-                border-bottom: 1px solid #3273dc;
-            }
         }
         .layer {
             margin-left: 5.4px;
@@ -580,6 +577,9 @@ body {
     }
     .feedbackManage {
         order: 3;
+        .comment_actions {
+            border-bottom: 1px solid #3273dc;
+        }
     }
     .comment_vote {
         order: 4;

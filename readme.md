@@ -2,7 +2,7 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg) ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) ![forthebadge](https://forthebadge.com/images/badges/thats-how-they-get-you.svg) ![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg) ![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg) ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
-> ⛷ **Awescnb**, awesome cnblog 为博客园发烧友而生！
+> ⛷ **Awescnb**, awesome cnblog. 为博客园发烧友而生！
 
 ## 简介
 
