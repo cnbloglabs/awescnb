@@ -1,4 +1,4 @@
-@import './reset.scss';
+@import '@/assets/style/reset.scss';
 @import './scroll.scss';
 @import './tools.scss';
 *::before,
@@ -7,7 +7,6 @@
     margin-right: 0.5em;
     font-weight: bold;
 }
-
 *::before {
     margin-right: 0.5em;
 }
@@ -24,7 +23,6 @@ html {
     text-size-adjust: 100%;
     box-sizing: border-box;
 }
-
 body {
     background-color: #f4f5f5;
     color: #4a4a4a;
@@ -35,16 +33,13 @@ body {
         Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         Helvetica, Arial, sans-serif;
 }
-
 #main {
     padding: 7rem 10rem 3rem;
     display: flex;
 }
-
 // .forFlow {
 //     background-color: #fff;
 // }
-
 #post_detail {
     #topics .postDesc {
         padding: 0;
@@ -114,11 +109,7 @@ body {
         ul li {
             padding: 0.2rem 0.5rem;
             border-radius: 2px;
-            &:hover {
-                background-color: #fafafa;
-            }
         }
-
         #sidebar_news .catListTitle,
         #blog-calendar-title,
         #sidebar_search .catListTitle,
@@ -296,6 +287,7 @@ body {
         margin: 21.6px auto;
         text-align: center;
         color: #999;
+        font-weight: normal;
     }
 }
 
@@ -435,7 +427,7 @@ body {
                     transition: all 0.2s;
                 }
                 &::before {
-                    content: "\f7a9";
+                    content: '\f7a9';
                     color: #fff;
                 }
             }
@@ -526,6 +518,9 @@ body {
         }
         .feedbackManage {
             order: 0;
+            .comment_actions {
+                border-bottom: 1px solid #3273dc;
+            }
         }
         .layer {
             margin-left: 5.4px;

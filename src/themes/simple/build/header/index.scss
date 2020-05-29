@@ -1,7 +1,10 @@
 .custom-links {
+    display: flex;
+    align-items: center;
     .github::before {
         content: '\f113';
         font-size: 1.3rem;
+        margin-left: 0.6rem;
     }
 
     .zhihu::before {
@@ -10,14 +13,17 @@
         color: #0084ff;
     }
 
-    .qq:before {
-        content: '\f1d6';
+    .gitee::before {
+        content: '\f1a0';
+        font-size: 1.3rem;
+        color: #C71D23;
+        margin-right: 0;
     }
     a {
         &::before {
             font-weight: bold;
         }
-        padding-left: 0.6rem;
+        margin-left: 0.6rem;
     }
 }
 

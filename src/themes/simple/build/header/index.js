@@ -71,15 +71,17 @@ const headerBtn = () => {
 // 创建自定义图标容器及其图标
 const customLinks = () => {
     const github = window.opts.github
+    const gitee = window.opts.gitee
     // wrap
     $('.navbar-end').prepend(`<div class="custom-links"></div>`)
     $('#blogTitle h2').after(`<div class="custom-links"></div>`)
+
+    // 码云
+    $('.custom-links').append(`<a class="gitee" href="${gitee.url}"></a>`)
     // github icon
     if (github.enable) {
         $('.custom-links').append(`<a class="github" href="${github.url}"></a>`)
     }
-    // qq
-    // $('.custom-links').append(`<a class="qq"></a>`)
     // 知乎
     $('.custom-links').append(`<a class="zhihu"></a>`)
 }

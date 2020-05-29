@@ -26,17 +26,25 @@
     font-size: 20px;
     line-height: 40px;
     box-shadow: 0 0 6px rgb(209, 205, 205);
+    i {
+        display: flex;
+        justify-content: center;
+        &::before {
+            margin-right: 0;
+        }
+    }
 }
 
 .dragmenu-item:hover .dragmenu-item-tooltip {
     visibility: visible;
-    top: -200%;
+    top: -80px;
     transition: 0.25s all;
+    white-space: nowrap;
 }
 
 .dragmenu-item-tooltip {
     position: relative;
-    top: -100%;
+    top: -50px;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
     color: var(--themeColor, #fff);
