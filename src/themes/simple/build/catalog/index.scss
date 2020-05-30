@@ -79,6 +79,9 @@
     ul {
         background-color: #fff;
     }
+    h3::before {
+        display: none;
+    }
     .catalog-title {
         display: flex;
         align-items: center;

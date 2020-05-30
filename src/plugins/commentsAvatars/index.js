@@ -22,10 +22,13 @@ function build() {
 function show() {
     if (pageName() !== 'post') return
     $(document).ajaxComplete(function(event, xhr, option) {
-        if (option.url.indexOf('GetComments') <= -1) return
-        setTimeout(function() {
-            build()
-        }, 300)
+        console.log(option)
+        if (option.url.indexOf('GetComments') > -1) {
+            setTimeout(function() {
+                console.log('build')
+                build()
+            }, 300)
+        }
     })
 }
 
