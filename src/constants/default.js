@@ -32,7 +32,7 @@ const defaultOptions = {
     },
     // 图片灯箱
     imagebox: {
-        enable: true,
+        enable: false,
     },
     // 文章目录
     catalog: {

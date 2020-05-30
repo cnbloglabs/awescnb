@@ -71,24 +71,24 @@
         border: none;
         height: auto !important;
         font-size: 14px;
-        border: none!important;
+        // border: none!important;
         td,
         th,
         td {
             white-space: pre;
         }
-        thead,
-        tr,
-        th,
-        tbody,
-        td {
-            border: none;
-        }
+        // thead,
+        // tr,
+        // th,
+        // tbody,
+        // td {
+        //     border: none;
+        // }
         thead {
             tr {
                 th {
-                    background-color: #ff6b81!important;
-                    color: #fff;
+                    // background-color: #ff6b81!important;
+                    // color: #fff;
                     padding: 6px 9px;
                     text-align: left;
                 }
@@ -98,12 +98,12 @@
             &:nth-child(even) {
                 background-color: var(--background-e);
             }
-            &:hover {
-                background-color: #999;
-                cursor: default;
-            }
+            // &:hover {
+            //     background-color: #999;
+            //     cursor: default;
+            // }
             td {
-                border-bottom: 1px solid var(--text-10);
+                // border-bottom: 1px solid var(--text-10);
                 padding: 6px 9px;
                 text-align: left;
             }
@@ -115,10 +115,12 @@
         background: var(--background-e);
         border: none;
         border-left: 8px solid var(--themeColor);
+        color: #555;
         p {
             margin: 6px auto;
             line-height: 1.8;
             font-size: 14px;
+            color: inherit;
         }
     }
     kbd {

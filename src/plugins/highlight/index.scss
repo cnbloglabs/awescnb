@@ -8,9 +8,10 @@
 .cnblogs_code_hide {
     display: block !important;
 }
-.cnblogs_code {
+#cnblogs_post_body .cnblogs_code {
     border: none;
     padding: 0;
+    padding-top: 10px;
     border-radius: 4px;
     &:hover {
         box-shadow: 1px 1px 5px var(--themeColor, red);
@@ -20,9 +21,9 @@
         font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
             monospace !important;
         display: block !important;
-        padding: 0.5em !important;
+        padding: 0.5em;
         color: var(--hl-mono-1) !important;
-        background: var(--hl-base) !important;
+        background-color: var(--hl-base) !important;
         border: none !important;
         white-space: pre;
         &:before {
@@ -48,25 +49,30 @@
 }
 /* 富文本编辑器 end */
 
-pre:hover {
-    box-shadow: 0 0 6px var(--themeColor, red);
+.cnblogs-markdown pre,
+.cnblogs_code {
+    padding-top: 10px;
+    background: var(--hl-base);
+    &::before {
+        border-radius: 4px;
+        content: ' ';
+        display: block;
+        height: 24px;
+        background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
+            no-repeat;
+        background-size: 65px 23px;
+        background-position-x: 10px;
+    }
+    &:hover {
+        box-shadow: 0 0 6px var(--themeColor, red);
+    }
 }
+
 #cnblogs_post_body {
     pre {
         position: relative;
         padding: 10px 0;
-        background: var(--hl-base);
         border-radius: 4px;
-        &::before {
-            border-radius: 4px;
-            content: ' ';
-            display: block;
-            height: 24px;
-            background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
-                no-repeat;
-            background-size: 65px 23px;
-            background-position-x: 10px;
-        }
     }
     code {
         font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
@@ -152,4 +158,3 @@ pre:hover {
         text-decoration: underline;
     }
 }
-

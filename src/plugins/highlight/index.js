@@ -1,8 +1,8 @@
 // 代码高亮
-import { pageName } from '@/assets/utils/tools'
+import { pageName, isMd } from '@/assets/utils/tools'
 import './index.scss'
 
-const {type} = window.opts.highLight
+const { type } = window.opts.highLight
 
 const atomOneDark = `--hl-base: #282c34;
                          --hl-mono-1: #abb2bf;
@@ -15,7 +15,6 @@ const atomOneDark = `--hl-base: #282c34;
                          --hl-hue-6: #d19a66;
                          --hl-hue-6-2: #e6c07b;
                          --hl-tag: #abb2bf;`
-
 // atomOneLight --hl-base: #fafafa;
 const atomOneLight = `--hl-base: #f6f8fa;
                           --hl-mono-1: #383a42;
@@ -28,7 +27,6 @@ const atomOneLight = `--hl-base: #f6f8fa;
                           --hl-hue-6: #986801;
                           --hl-hue-6-2: #c18401;
                           --hl-tag: #383A42;`
-
 const github = `--hl-base: #f6f8fa;
                     --hl-mono-1: #333333;
                     --hl-mono-3: #d73a49;
@@ -53,7 +51,7 @@ const pande = `   --hl-base: #292a2b;
   --hl-hue-6-2: #ff4b82;
   --hl-tag: #ffb86c;`
 
-function build() {
+function buildMarkdownLinenumber() {
     const actions = {
         atomOneDark,
         atomOneLight,
@@ -65,10 +63,24 @@ function build() {
     $('head').append(style)
 }
 
+function otherEditorLinenumberPadding() {
+    if (isMd()) return
+    $('pre').each(function() {
+        const hasLineNumber =
+            $(this).find('span[style="color: #008080;"]').length !== 0
+        if (!hasLineNumber) {
+            $(this).css({
+                padding: '10px 14px',
+            })
+        }
+    })
+}
+
 function highlight() {
     if (pageName() !== 'post') return
     if ($('pre').length === 0) return
-    build()
+    buildMarkdownLinenumber()
+    otherEditorLinenumberPadding()
 }
 
 export default highlight
