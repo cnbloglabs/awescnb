@@ -22,6 +22,4 @@ function build() {
     indexTimeline()
 }
 
-export default build
-
 module.exports = build

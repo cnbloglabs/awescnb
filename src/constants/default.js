@@ -6,8 +6,7 @@ const defaultOptions = {
         title: '',
         contentSize: 'mid',
         headerBackground: '',
-        avatar:
-            'http://img4.imgtn.bdimg.com/it/u=2753922961,323026641&fm=26&gp=0.jpg',
+        avatar: 'https://pic.cnblogs.com/face/sample_face.gif',
         favicon: '',
     },
     // 代码高亮

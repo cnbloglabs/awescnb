@@ -8,6 +8,11 @@
     text-overflow: ellipsis;
     border-radius: 2px;
     z-index: 20;
+    h3 {
+        &::before {
+            content: "\f022"
+        }
+    }
     .catalog-title {
         display: flex;
         align-items: center;

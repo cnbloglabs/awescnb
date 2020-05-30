@@ -50,5 +50,4 @@ function plugins() {
     donation()
 }
 
-export default plugins
 module.exports = plugins

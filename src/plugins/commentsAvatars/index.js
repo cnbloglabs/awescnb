@@ -1,8 +1,8 @@
 // 显示评论列表头像
-import { pageName, poll } from '@tools'
+import { pageName } from '@tools'
 import env from '@constants/env'
 
-function showAvatar() {
+function build() {
     $('.feedbackItem').each(function() {
         let avatar = $(this)
             .children('.feedbackCon')
@@ -19,10 +19,14 @@ function showAvatar() {
     })
 }
 
-// 轮询显示头像
-function pollToShow() {
+function show() {
     if (pageName() !== 'post') return
-    poll($('.feedbackListSubtitle').length, showAvatar)
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (option.url.indexOf('GetComments') <= -1) return
+        setTimeout(function() {
+            build()
+        }, 300)
+    })
 }
 
 // 调整支持反对按钮位置
@@ -50,7 +54,7 @@ function authorRight() {
 }
 
 function commentsAvatar() {
-    pollToShow()
+    show()
     support()
     authorRight()
 }
