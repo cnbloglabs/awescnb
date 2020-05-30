@@ -21,15 +21,18 @@ function build() {
 
 function show() {
     if (pageName() !== 'post') return
-    $(document).ajaxComplete(function(event, xhr, option) {
-        console.log(option)
-        if (option.url.indexOf('GetComments') > -1) {
-            setTimeout(function() {
-                console.log('build')
-                build()
-            }, 300)
-        }
-    })
+    setTimeout(function() {
+        build()
+    }, 300)
+    // $(document).ajaxComplete(function(event, xhr, option) {
+    //     console.log(option)
+    //     if (option.url.indexOf('GetComments') > -1) {
+    //         setTimeout(function() {
+    //             console.log('build')
+    //             build()
+    //         }, 300)
+    //     }
+    // })
 }
 
 // 调整支持反对按钮位置
