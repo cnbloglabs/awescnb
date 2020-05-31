@@ -5,13 +5,13 @@
 // 当然，有特殊需求自行更改
 
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'simple',
     template: 'post',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,
     cssExtract: false,
-    openBrowser: false,
+    openBrowser: true,
 }
 
 ///////// options /////////

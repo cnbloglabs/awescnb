@@ -2,7 +2,7 @@
 // 仅引入即可
 
 import './index.css'
-import { pageName, poll } from '@/assets/utils/tools'
+import { pageName, poll, isMd } from '@/assets/utils/tools'
 import mediumZoom from 'medium-zoom'
 
 const options = window.opts.imagebox
@@ -24,6 +24,7 @@ function build() {
 function imagebox() {
     if (!options.enable) return
     if (pageName() !== 'post') return
+    if (!isMd()) return
     poll($('.blog_comment_body').length, build)
 }
 export default imagebox
