@@ -587,7 +587,8 @@ body {
 }
 
 .feedbackCon {
-    @include center();
+    display: flex;
+    align-items: end;
     margin-top: 5px;
     .blog_comment_body {
         position: relative;
