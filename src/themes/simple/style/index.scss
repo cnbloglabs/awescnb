@@ -587,13 +587,12 @@ body {
 }
 
 .feedbackCon {
-    display: flex;
-    align-items: end;
+    @include center();
     margin-top: 5px;
     .blog_comment_body {
         position: relative;
         margin-left: 10px;
-        margin-top: 5.4px;
+        // margin-top: 10px;
         padding: 0 10.8px;
         background-color: #00d1b2;
         border-radius: 3px;

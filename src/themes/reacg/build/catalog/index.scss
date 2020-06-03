@@ -33,6 +33,9 @@
         }
         li {
             margin-top: 3.618px;
+            &:hover {
+                color: var(--themeColor);
+            }
             a {
                 display: inline-block;
                 user-select: none;

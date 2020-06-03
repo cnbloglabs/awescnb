@@ -10,7 +10,7 @@
     z-index: 20;
     h3 {
         &::before {
-            content: "\f022"
+            content: '\f022';
         }
     }
     .catalog-title {
@@ -47,6 +47,9 @@
         }
         li {
             margin-top: 3.618px;
+            &:hover {
+                color: #3273dc;
+            }
             a {
                 display: inline-block;
                 user-select: none;

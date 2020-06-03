@@ -123,6 +123,10 @@
             color: inherit;
         }
     }
+    iframe {
+        width: 100%;
+        height: 35vw;
+    }
     kbd {
         font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
             monospace !important;
@@ -186,5 +190,25 @@
     }
     mark {
         background-color: var(--themeColor);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #cnblogs_post_body,
+    .cnblogs-post-body,
+    .cnblogs-markdown {
+        iframe {
+            height: 60vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cnblogs_post_body,
+    .cnblogs-post-body,
+    .cnblogs-markdown {
+        iframe {
+            height: 50vw;
+        }
     }
 }

@@ -1,5 +1,5 @@
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty, cacheScript, poll } from '@tools'
+import { pageName, randomProperty, cacheScript } from '@tools'
 import { iconInSvg } from '../../utils/tools'
 import { iconfont } from '../../constants/urls'
 import { icons, foodIcons } from './icons'
@@ -82,7 +82,10 @@ function setSidebarIcon() {
         }
     }
 
-    poll($('#blog-sidecolumn').length, insert)
+    setTimeout(() => {
+        insert()
+    }, 300)
+    // poll($('#blog-sidecolumn').length, insert)
 }
 
 // 设置github icon
