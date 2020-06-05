@@ -7,7 +7,8 @@ class AwesCnb {
         if (env === 'dev' || $.awesCnb) {
             building()
             require('./build/index')()
-        } else {
+        }
+        if (!$.awesCnb) {
             $.extend({
                 awesCnb: options => {
                     if (options) $.extend(true, defaultOptions, options)
@@ -20,9 +21,7 @@ class AwesCnb {
     }
 
     devOpts() {
-        if (env === 'dev') {
-            window.opts = defaultOptions
-        }
+        if (env === 'dev') window.opts = defaultOptions
     }
 }
 
