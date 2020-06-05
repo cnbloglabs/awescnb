@@ -1,11 +1,10 @@
-
 import '@/assets/style/common.css'
 import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 
 class AwesCnb {
     init(building) {
-        if (env === 'dev' || $.awesCnb) {
+        if (env === 'dev') {
             building()
             require('./build/index')()
         } else {

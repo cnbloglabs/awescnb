@@ -165,10 +165,10 @@ function setEntrylistPosttitleIcon() {
 }
 
 // 设置随笔页文章题目icon
-function setHeadlineIcon() {
-    if (pageName() !== 'post') return
-    $('#topics .postTitle').prepend(iconInSvg(icons.md))
-}
+// function setHeadlineIcon() {
+//     if (pageName() !== 'post') return
+//     $('#topics .postTitle').prepend(iconInSvg(icons.md))
+// }
 
 // 文章小标题icon
 function setPostTitleIcon() {
@@ -191,7 +191,7 @@ function build() {
     setIndexPosttitleIcon()
     setIndexPostLookIcon()
     setEntrylistPosttitleIcon()
-    setHeadlineIcon()
+    // setHeadlineIcon()
     setPostTitleIcon()
     nav()
 }
