@@ -7,7 +7,7 @@ import indexList from './indexList'
 import notice from './notice'
 import setIcons from './icons'
 import comments from './comments'
-import indexTimeline from './indexTimeline'
+// import indexTimeline from './indexTimeline'
 
 function build() {
     mobileMenu()
@@ -19,7 +19,7 @@ function build() {
     notice()
     setIcons()
     comments()
-    indexTimeline()
+    // indexTimeline()
 }
 
 module.exports = build
