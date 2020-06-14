@@ -14,9 +14,11 @@
 
 ## 文档
 
--   [安装、配置皮肤](https://guangzan.gitee.io/awescnb-docs/awescnb/use/install.html)
--   [创建新皮肤](https://guangzan.gitee.io/awescnb-docs/awescnb/dev/dev.html)
--   [更新日志](https://guangzan.gitee.io/awescnb-docs/awescnb/dev/log.html)
+-   [在博客园安装皮肤](https://guangzan.gitee.io/awescnb-docs/docs/install)
+-   [配置已经安装的皮肤](https://guangzan.gitee.io/awescnb-docs/docs/options)
+-   [构建一个皮肤](https://guangzan.gitee.io/awescnb-docs/docs/dev)
+-   [皮肤列表](https://guangzan.gitee.io/awescnb-docs/docs/themes)
+-   [更新日志](https://guangzan.gitee.io/awescnb-docs/docs/log)
 
 ## 贡献
 
