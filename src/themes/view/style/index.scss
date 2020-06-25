@@ -282,6 +282,12 @@ body {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    & > td:first-of-type {
+                        width: 100%;
+                        td {
+                            width: auto;
+                        }
+                    }
                     .CalNextPrev {
                         a {
                             color: #000;
