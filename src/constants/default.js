@@ -6,7 +6,7 @@ const defaultOptions = {
         title: '',
         contentSize: 'mid',
         headerBackground: '',
-        avatar: 'https://pic.cnblogs.com/face/sample_face.gif',
+        avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
     },
     // 代码高亮
@@ -217,7 +217,7 @@ const defaultOptions = {
     // footer链接
     links: [
         {
-            name: 'awescnb',
+            name: '自定义链接',
             link: 'https://gitee.com/guangzan/awescnb',
         },
     ],

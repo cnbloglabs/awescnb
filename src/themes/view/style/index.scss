@@ -16,7 +16,6 @@
     margin-left: 0.5em;
 }
 html {
-    background-color: #fff;
     font-size: 16px;
     min-width: 300px;
     overflow-x: hidden;
@@ -24,9 +23,10 @@ html {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     box-sizing: border-box;
+    height: 100%;
 }
 body {
-    background-color: #f4f5f5;
+    // background-color: #f4f5f5;
     color: #4a4a4a;
     font-size: 1em;
     font-weight: 400;
@@ -34,14 +34,26 @@ body {
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         Helvetica, Arial, sans-serif;
+    height: 100%;
 }
-#main {
-    padding: 7rem 10rem 3rem;
+
+#home {
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    #footer {
+        margin: 0;
+    }
 }
-// .forFlow {
-//     background-color: #fff;
-// }
+
+#main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex: 1;
+    background-color: #f2f1f6;
+}
 #post_detail {
     #topics .postDesc {
         padding: 0;
@@ -60,39 +72,45 @@ body {
 }
 
 #mainContent {
-    overflow: hidden;
-    flex: 1;
+    width: 80%;
+    border-left: 1px solid #ccc;
+
     .dayTitle {
         display: none;
-    }
-    .entrylistPosttitle,
-    .entrylistPostSummary,
-    .entrylistItemPostDesc,
-    .postTitle,
-    .postCon,
-    .postDesc {
-        background-color: #fff;
     }
     .postTitl2,
     .entrylistPosttitle,
     .postTitle {
-        padding: 1rem 1rem 0;
         font-weight: 600;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-bottom: 0.5rem;
         &::before {
-            content: '\f15b';
+            content: '\f004';
+            font-weight: normal;
         }
     }
     .entrylistPostSummary,
     .postCon {
-        padding: 0.5rem 1rem 0;
     }
     .postDesc2,
     .entrylistItemPostDesc,
     .postDesc {
-        padding: 0.5rem 1rem 1rem;
-        // margin-bottom: 1rem;
-        border: 0 0 2px 2px;
+        padding-top: 0.5rem;
     }
+}
+
+.topicListFooter {
+    // grid-area: pagenation;
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+    text-align: center;
+    margin: 0 1% 1rem;
+    padding: 0.5rem 0;
+    border-radius: 3px;
 }
 
 #post_detail {
@@ -104,14 +122,75 @@ body {
 }
 
 #sideBar {
-    padding-left: 6rem;
-    width: 16rem;
+    // display: none;
+    // position: absolute;
+    margin-top: 0.5rem;
+    padding: 0 1rem 0;
+    width: 17rem;
     min-height: 200px;
+    user-select: none;
+
     #sideBarMain {
         ul li {
             padding: 0.2rem 0.5rem;
             border-radius: 2px;
         }
+
+        #sidebar_shortcut {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    margin-bottom: 0.5rem;
+                    margin-right: 0.5rem;
+                    padding: 0.2rem 0.5rem;
+                    background-color: #f5f7fa;
+                    font-size: 12px;
+                }
+            }
+        }
+        #sidebar_toptags,
+        #sidebar_recentposts,
+        #sidebar_categories,
+        #sidebar_postarchive,
+        #sidebar_topviewedposts,
+        #sidebar_topcommentedposts {
+            ul {
+                li {
+                    margin-bottom: 0.5rem;
+                    padding: 0.3rem 0.5rem;
+                    &:hover {
+                        background-color: #f5f7fa;
+                    }
+                }
+            }
+        }
+
+        // 最新评论
+        .recent_comment_body {
+            background-color: #f5f7fa;
+            border-radius: 3px;
+        }
+
+        #sidebar_news,
+        #blog-calendar,
+        #blog-calendar-title,
+        #sidebar_search,
+        #sidebar_shortcut,
+        #sidebar_recentposts,
+        #sidebar_toptags,
+        #sidebar_scorerank,
+        #sidebar_postcategory,
+        #sidebar_postarchive,
+        #sidebar_recentcomments,
+        #sidebar_topviewedposts,
+        #sidebar_topcommentedposts,
+        #sidebar_topdiggedposts {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+        }
+
         #sidebar_news .catListTitle,
         #blog-calendar-title,
         #sidebar_search .catListTitle,
@@ -126,25 +205,16 @@ body {
         #sidebar_topcommentedposts .catListTitle,
         #sidebar_topdiggedposts .catListTitle {
             user-select: none;
-            cursor: pointer;
             font-weight: 600;
-            padding: 0.5rem 0.5rem;
             border-radius: 2px;
-            font-size: 0.8rem;
-            &::after {
-                content: '\f107';
-                font-weight: bold;
-                display: inline-block;
-            }
-            &.is-active::after {
-                transform: rotate(180deg);
-                transform-origin: center;
-                transition-duration: 86ms;
-                transition-property: transform;
-            }
-            &:hover {
-                background-color: #f7fafd;
-            }
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            // &::after {
+            //     content: '\f107';
+            //     font-weight: bold;
+            //     display: inline-block;
+            // }
         }
 
         #blog-news,
@@ -160,9 +230,12 @@ body {
         #sidebar_topviewedposts ul,
         #sidebar_topcommentedposts ul,
         #sidebar_topdiggedposts ul {
-            margin-left: 1rem;
-            display: none;
-            font-size: 14px;
+            li {
+                transition: all 0.2s;
+            }
+            // display: none;
+            font-size: 16px;
+            padding-top: 0.5rem;
         }
 
         #blog-news {
@@ -262,17 +335,27 @@ body {
         // padding: 1rem 0;
     }
     #myposts {
+        padding: 1rem 2rem;
         background-color: #fff;
         margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        // margin: 1rem;
         .PostList {
-            margin: 0;
+            padding: 0.5rem;
+            // margin: 0;
+            margin-bottom: 1rem;
+            background-color: #f3f3f3;
+            border-radius: 3px;
+            width: 30%;
+
             .postTitl2 {
                 font-size: 1rem;
                 font-weight: normal;
             }
             .postDesc2 {
                 margin-bottom: 0;
-                padding-top: 2rem;
+                padding-top: 0;
                 color: #999;
             }
             .postText2 {

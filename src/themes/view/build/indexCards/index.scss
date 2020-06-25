@@ -1,0 +1,39 @@
+.index {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-card {
+    width: 100%;
+    background-color: #fafafa;
+    border-radius: 3px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 30%;
+    margin: 1%;
+    padding: 1rem;
+    &:nth-child(1) {
+        width: 63.5%;
+        .postTitle {
+            &::before {
+                font-weight: 700 !important;
+                color: #f14668;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .index {
+        flex-direction: column;
+    }
+    .custom-card {
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        &:nth-child(1) {
+            width: 100%;
+        }
+    }
+}

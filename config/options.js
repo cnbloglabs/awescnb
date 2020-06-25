@@ -1,15 +1,14 @@
 ///////// description /////////
 // 你无需直接更改webpack配置文件
 // 直接更改这里的配置
-// 其他配置我都帮你做好了
 // 当然，有特殊需求自行更改
 
 module.exports = {
-    themeName: 'simple',
-    template: 'post',
+    themeName: 'view',
+    template: 'catalog',
     eslint: true,
     sourceMap: false,
-    openAnalyzer: false,
+    openAnalyzer: true,
     cssExtract: false,
     openBrowser: true,
 }
@@ -23,7 +22,11 @@ module.exports = {
 // cssExtract 单独抽离css
 // openBrowser - 自动打开浏览器
 
-///////// run the build /////////
-// - npm start
-// - npm run build
-// - or use yarn
+///////// themes /////////
+// - acg
+// - element
+// - geek
+// - gshang
+// - material
+// - reacg
+// - simple
