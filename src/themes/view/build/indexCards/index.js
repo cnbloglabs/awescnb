@@ -13,7 +13,10 @@ const build = () => {
           ${$(ele.slice(i, i + 3)[2]).prop('outerHTML')}
       </div>
       `
-        $('.forFlow').prepend(card)
+        $('.custom-card').length
+            ? $('.custom-card:last').after(card)
+            : $('.forFlow').prepend(card)
+
         $('.day').remove()
     }
 }

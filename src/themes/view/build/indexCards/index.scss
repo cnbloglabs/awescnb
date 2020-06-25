@@ -1,24 +1,39 @@
-.index {
+.index,
+.entrylist {
     display: flex;
     flex-wrap: wrap;
 }
 
-.custom-card {
+.entrylistTitle {
     width: 100%;
-    background-color: #fafafa;
-    border-radius: 3px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    width: 30%;
-    margin: 1%;
-    padding: 1rem;
-    &:nth-child(1) {
-        width: 63.5%;
-        .postTitle {
-            &::before {
-                font-weight: 700 !important;
-                color: #f14668;
+}
+
+#mainContent {
+    .custom-card,
+    .entrylistItem {
+        width: 100%;
+        background-color: #fafafa;
+        border-radius: 3px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        width: 30%;
+        margin: 1%;
+        padding: 1rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        &:nth-child(1) {
+            width: 63.5%;
+            .postTitle {
+                &::before {
+                    content: '\f004';
+                    font-weight: 700 !important;
+                    color: #f14668;
+                }
             }
+        }
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
         }
     }
 }

@@ -88,12 +88,14 @@ body {
         text-overflow: ellipsis;
         padding-bottom: 0.5rem;
         &::before {
-            content: '\f004';
+            content: '\f15c';
             font-weight: normal;
         }
     }
     .entrylistPostSummary,
     .postCon {
+        color: #888;
+        font-size: 14px;
     }
     .postDesc2,
     .entrylistItemPostDesc,
@@ -156,7 +158,6 @@ body {
         }
         #sidebar_toptags,
         #sidebar_recentposts,
-        #sidebar_categories,
         #sidebar_postarchive,
         #sidebar_topviewedposts,
         #sidebar_topcommentedposts {
@@ -167,6 +168,17 @@ body {
                     &:hover {
                         background-color: #f5f7fa;
                     }
+                }
+            }
+        }
+
+        #sidebar_categories {
+            a {
+                display: inline-block;
+                padding: 0.3rem 0.5rem;
+                width: 100%;
+                &:hover {
+                    background-color: #f5f7fa;
                 }
             }
         }
@@ -267,14 +279,10 @@ body {
             }
             tr {
                 &:nth-child(1) {
-                    tr {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                    }
                     .CalNextPrev {
                         a {
-                            color: var(--themeColor);
+                            color: #000;
+                            font-weight: 700;
                             &:hover {
                                 color: #00a1d6;
                             }
@@ -282,8 +290,8 @@ body {
                     }
                 }
                 &:nth-child(2) {
-                    margin: 10.098px 0 5.4px;
                     padding: 0 3.24px;
+                    border-bottom: 1px solid #eee;
                 }
                 &:not(:nth-child(1)) {
                     display: flex;
@@ -294,14 +302,19 @@ body {
                         height: 21.6px;
                     }
                 }
+
+                th,
+                td {
+                    padding: 0.2rem;
+                }
             }
             u {
                 color: #00a1d6;
             }
             .CalTodayDay {
-                background-color: var(--themeColor);
-                color: #fff;
-                border-radius: 50%;
+                background-color: #f3f3f3;
+                // color: #fff;
+                border-radius: 2px;
                 font-size: 0.7em;
             }
         }
