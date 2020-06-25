@@ -102,15 +102,19 @@ body {
     }
 }
 
+.Pager,
 .topicListFooter {
-    // grid-area: pagenation;
     width: 100%;
     background-color: #fff;
-    margin: 0;
     text-align: center;
     margin: 0 1% 1rem;
     padding: 0.5rem 0;
     border-radius: 3px;
+    user-select: none;
+}
+
+.pager {
+    margin-top: 1rem;
 }
 
 #post_detail {
@@ -136,7 +140,8 @@ body {
             border-radius: 2px;
         }
 
-        #sidebar_shortcut {
+        #sidebar_shortcut,
+        #sidebar_toptags {
             ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -231,6 +236,7 @@ body {
         #sidebar_topcommentedposts ul,
         #sidebar_topdiggedposts ul {
             li {
+                cursor: pointer;
                 transition: all 0.2s;
             }
             // display: none;
@@ -242,11 +248,13 @@ body {
             display: block;
         }
 
-        #sidebar_recentposts,
-        #sidebar_recentcomments {
-            ul li {
-                @include text-over();
-            }
+        #sidebar_recentposts ul li,
+        .recent_comment_title {
+            @include text-over();
+        }
+
+        .recent_comment_body {
+            padding: 1rem;
         }
     }
     #blog-calendar {
@@ -540,7 +548,6 @@ body {
 // 评论列表
 #blog-comments-placeholder {
     border-radius: 3px;
-    width: 100%;
     .feedback_area_title {
         padding: 7.56px 10.8px;
         border: 1px solid #d1d5da;
@@ -713,7 +720,6 @@ body {
 
 // 发表评论
 #comment_form {
-    width: 100%;
     #divCommentShow,
     #ad_text_under_commentbox,
     #comment_nav {

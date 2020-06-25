@@ -2,9 +2,9 @@
     #main {
         padding: 0;
         #mainContent {
-            width: 96%;
-            padding: 3rem;
-            margin-left: 0rem;
+            width: 100%;
+            // padding: 3rem;
+            // margin-left: 0rem;
             border-left: none;
             #myposts {
                 padding: 0.5rem;
@@ -22,13 +22,16 @@
         }
     }
 
-    #post_detail {
-        width: 100%;
-    }
-
     .topicListFooter {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    #blog-comments-placeholder,
+    #comment_form,
+    #post_detail {
+        padding: 1rem;
+        background-color: #fff;
     }
 }
 
