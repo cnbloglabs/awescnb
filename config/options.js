@@ -5,7 +5,7 @@
 
 module.exports = {
     themeName: 'view',
-    template: 'catalog',
+    template: 'index',
     eslint: true,
     sourceMap: false,
     openAnalyzer: true,

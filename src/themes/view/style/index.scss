@@ -540,6 +540,7 @@ body {
 // 评论列表
 #blog-comments-placeholder {
     border-radius: 3px;
+    width: 100%;
     .feedback_area_title {
         padding: 7.56px 10.8px;
         border: 1px solid #d1d5da;
@@ -712,6 +713,7 @@ body {
 
 // 发表评论
 #comment_form {
+    width: 100%;
     #divCommentShow,
     #ad_text_under_commentbox,
     #comment_nav {

@@ -22,6 +22,10 @@
         }
     }
 
+    #post_detail {
+        width: 100%;
+    }
+
     .topicListFooter {
         margin-left: 0;
         margin-right: 0;
@@ -29,11 +33,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    #main {
-        #mainContent {
-            padding: 0;
-        }
-    }
 }
 
 @media screen and (max-width: 767px) {

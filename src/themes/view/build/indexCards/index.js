@@ -2,7 +2,7 @@ import { pageName } from '@tools'
 import './index.scss'
 
 const build = () => {
-    if (pageName() === 'post') $('.forFlow').addClass('index')
+    if (pageName() === 'index') $('.forFlow').addClass('index')
     const ele = $('.day').find('.postTitle,.postCon,.postDesc')
 
     for (var i = 0; i < ele.length; i += 3) {

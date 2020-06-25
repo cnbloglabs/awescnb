@@ -171,65 +171,6 @@
     }
 }
 
-// .custom-links {
-//     display: flex;
-//     align-items: center;
-//     .github::before {
-//         content: '\f113';
-//         font-size: 1.3rem;
-//         margin-left: 0.6rem;
-//     }
-
-//     .zhihu::before {
-//         content: '\f63f';
-//         font-size: 1.5rem;
-//         color: #0084ff;
-//     }
-
-//     .gitee::before {
-//         content: '\f1a0';
-//         font-size: 1.3rem;
-//         color: #C71D23;
-//         margin-right: 0;
-//     }
-//     a {
-//         &::before {
-//             font-weight: bold;
-//         }
-//         margin-left: 0.6rem;
-//     }
-// }
-
-// #header {
-//     &.is-active {
-//         padding-top: 0;
-//         padding-bottom: 0;
-//         transition: padding 0.2s;
-//         li {
-//             transform: translate3d(0, -200%, 0);
-//             transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-//         }
-//         .header-posttitle {
-//             // transform: translate3d(-50%, 0, 0);
-//             transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-//         }
-//     }
-//     &.navlist-fix {
-//         li {
-//             transform: none !important;
-//         }
-//     }
-// }
-
-// .header-posttitle {
-//     position: relative;
-//     // transform: translate3d(-50%, 300%, 0);
-//     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-//     font-size: 1.2rem;
-//     font-weight: bold;
-//     white-space: nowrap;
-// }
-
 @media screen and (max-width: 1024px) {
     #header {
         padding: 0;
@@ -309,6 +250,7 @@
         #custom-searchbar {
             width: 220px;
             display: none;
+            margin-bottom: 1rem;
         }
     }
 }
