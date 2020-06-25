@@ -5,15 +5,16 @@ import linenumbers from '@plugins/linenumbers'
 import imagebox from '@plugins/imagebox'
 import donation from '@plugins/donation'
 import emoji from '@plugins/emoji'
-// import player from '@plugins/player'
+import player from '@plugins/player'
 import postMessage from '@plugins/postMessage'
 import postSignature from '@plugins/postSignature'
 import notice from '@plugins/notice'
 import signature from '@plugins/signature'
 import commentsAvatars from '@plugins/commentsAvatars'
+import themeColor from '@plugins/themeColor'
 import menu from './menu'
+import titleFavicon from '@plugins/titleFavicon'
 // import postTopimage from '@plugins/postTopimage'
-// import titleFavicon from '@plugins/titleFavicon'
 // import live2d from '@plugins/live2d'
 // import background from '@plugins/background'
 // import click from '@plugins/click'
@@ -28,16 +29,18 @@ const plugins = () => {
     imagebox()
     donation()
     emoji()
-    // player()
+    player()
     postMessage()
     postSignature()
     notice()
     signature()
     commentsAvatars()
     menu()
+    titleFavicon()
+    themeColor()
     // postTopimage()
     // live2d()
-    // titleFavicon()    // background()
+    // background()
     // postBottomimage()
     // lock()
     // click()
