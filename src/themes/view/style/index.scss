@@ -102,7 +102,6 @@ body {
     }
 }
 
-.Pager,
 .topicListFooter {
     width: 100%;
     background-color: #fff;
@@ -113,8 +112,9 @@ body {
     user-select: none;
 }
 
-.pager {
+.homepage_top_pager {
     margin-top: 1rem;
+    order: -1;
 }
 
 #post_detail {
@@ -338,10 +338,6 @@ body {
             content: '\f02b';
         }
     }
-    .pager {
-        margin: 0;
-        // padding: 1rem 0;
-    }
     #myposts {
         padding: 1rem 2rem;
         background-color: #fff;
@@ -533,7 +529,7 @@ body {
         order: 3;
         margin-top: 21.6px;
         font-size: 16px;
-        color: var(--text-9);
+        color: #eee;
         a:nth-child(3n + 1) {
             display: none;
         }
