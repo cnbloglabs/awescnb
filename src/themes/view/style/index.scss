@@ -26,7 +26,6 @@ html {
     height: 100%;
 }
 body {
-    // background-color: #f4f5f5;
     color: #4a4a4a;
     font-size: 1em;
     font-weight: 400;
@@ -118,6 +117,15 @@ body {
 .homepage_top_pager {
     margin-top: 1rem;
     order: -1;
+}
+
+.pager {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
 }
 
 #post_detail {
@@ -351,6 +359,7 @@ body {
 
 // 当前标签页,随笔分类
 .forFlow {
+    #taglist_title,
     .entrylistTitle,
     .PostListTitle {
         padding: 1rem 1rem;
@@ -363,7 +372,6 @@ body {
     }
     #myposts {
         padding: 1rem 2rem;
-        background-color: #fff;
         margin-left: 0;
         display: flex;
         flex-wrap: wrap;
@@ -372,7 +380,7 @@ body {
             padding: 0.5rem;
             // margin: 0;
             margin-bottom: 1rem;
-            background-color: #f3f3f3;
+            background-color: #fff;
             border-radius: 3px;
             width: 30%;
 
@@ -388,6 +396,35 @@ body {
             .postText2 {
                 display: none;
             }
+        }
+    }
+}
+
+#taglist_main {
+    margin-top: 0;
+    #taglist_title_wrap {
+        padding: 0 !important;
+    }
+    #taglist {
+        table,
+        tbody,
+        tr,
+        td {
+            display: block;
+        }
+        tbody,
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        tr {
+            flex-wrap: nowrap;
+        }
+        td {
+            margin: 0.5rem;
+            border-radius: 3px;
+            background-color: #fff;
         }
     }
 }

@@ -1,7 +1,10 @@
 // import './index.scss'
-import { userAgent } from '@tools'
+import { userAgent, pageName } from '@tools'
 // 只触发一次向上或向下
 // 如果又重新反向滚动则再触发一次
+
+const isPostPage = pageName() === 'post'
+
 function scrollOnce() {
     function scrollFunc() {
         let scrollDirection
@@ -27,12 +30,16 @@ function scrollOnce() {
         if (direction && originalDir != direction) {
             if (direction == 'down') {
                 $('#header').addClass('is-active')
-                $('#catalog').addClass('catalog-scroll-up')
-                $('#catalog').removeClass('catalog-scroll-down')
+                if (isPostPage) {
+                    $('#catalog').addClass('catalog-scroll-up')
+                    $('#catalog').removeClass('catalog-scroll-down')
+                }
             } else {
                 $('#header').removeClass('is-active')
-                $('#catalog').removeClass('catalog-scroll-up')
-                $('#catalog').addClass('catalog-scroll-down')
+                if (isPostPage) {
+                    $('#catalog').removeClass('catalog-scroll-up')
+                    $('#catalog').addClass('catalog-scroll-down')
+                }
             }
             originalDir = direction
         }

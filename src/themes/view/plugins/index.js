@@ -12,6 +12,7 @@ import notice from '@plugins/notice'
 import signature from '@plugins/signature'
 import commentsAvatars from '@plugins/commentsAvatars'
 import themeColor from '@plugins/themeColor'
+import notation from '@plugins/notation'
 import menu from './menu'
 import titleFavicon from '@plugins/titleFavicon'
 // import postTopimage from '@plugins/postTopimage'
@@ -38,6 +39,7 @@ const plugins = () => {
     menu()
     titleFavicon()
     themeColor()
+    notation()
     // postTopimage()
     // live2d()
     // background()

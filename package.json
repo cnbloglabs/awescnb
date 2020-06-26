@@ -62,6 +62,7 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "redux": "^4.0.5",
+        "rough-notation": "^0.4.0",
         "typed.js": "^2.0.11",
         "url-loader": "^4.1.0"
     }
