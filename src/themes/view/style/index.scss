@@ -57,6 +57,7 @@ body {
 #post_detail {
     #topics .postDesc {
         padding: 0;
+        color: #999;
     }
 }
 
@@ -551,7 +552,7 @@ body {
         order: 3;
         margin-top: 21.6px;
         font-size: 16px;
-        color: #eee;
+        color: #999;
         a:nth-child(3n + 1) {
             display: none;
         }
