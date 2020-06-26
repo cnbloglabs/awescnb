@@ -21,47 +21,67 @@ const notation = () => {
             type: 'highlight',
             color: '#FFF176',
         })
+        group.push(title)
 
         // <mark>
-        const mark = annotate(document.querySelector('mark'), {
-            type: 'highlight',
-            color: '#FFD54F',
-        })
+        if (document.querySelectorAll('mark').length) {
+            const mark = annotate(document.querySelector('mark'), {
+                type: 'highlight',
+                color: '#FFD54F',
+            })
+            group.push(mark)
+        }
 
         // <s>
-        const s = annotate(document.querySelector('s'), {
-            type: 'strike-through',
-            color: '#FF0000',
-        })
+        if (document.querySelectorAll('s').length) {
+            const s = annotate(document.querySelector('s'), {
+                type: 'strike-through',
+                color: '#FF0000',
+            })
+            group.push(s)
+        }
 
         // <u>
-        const u = annotate(document.querySelector('u'), {
-            type: 'underline',
-            color: '#2196F3',
-        })
+        if (document.querySelectorAll('u').length) {
+            const u = annotate(document.querySelector('u'), {
+                type: 'underline',
+                color: '#2196F3',
+            })
+            group.push(u)
+        }
 
         // <strong>
-        const strong = annotate(document.querySelector('strong'), {
-            type: 'circle',
-            color: '#F44336',
-        })
+        if (document.querySelectorAll('strong').length) {
+            const strong = annotate(document.querySelector('strong'), {
+                type: 'circle',
+                color: '#F44336',
+            })
+            group.push(strong)
+        }
 
         // 文章段落
-        const paragraph = annotate(
-            document.querySelector('#cnblogs_post_body>p'),
-            {
-                type: 'box',
-                color: '#2196F3',
-            },
-        )
+        if (document.querySelectorAll('#cnblogs_post_body>p').length) {
+            const paragraph = annotate(
+                document.querySelector('#cnblogs_post_body>p'),
+                {
+                    type: 'box',
+                    color: '#2196F3',
+                },
+            )
+            group.push(paragraph)
+        }
 
         // h2
-        const h2 = annotate(document.querySelector('#cnblogs_post_body>h2'), {
-            type: 'highlight',
-            color: '#eee',
-        })
-
-        group.push(title, mark, s, u, strong, paragraph, h2)
+        if (document.querySelectorAll('#cnblogs_post_body>h2').length) {
+            const h2 = annotate(
+                document.querySelector('#cnblogs_post_body>h2'),
+                {
+                    type: 'highlight',
+                    color: '#eee',
+                },
+            )
+            group.push(h2)
+        }
     }
 
     const ag = annotationGroup(group)
