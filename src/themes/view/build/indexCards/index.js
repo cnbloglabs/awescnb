@@ -17,7 +17,7 @@ const build = () => {
             ? $('.custom-card:last').after(card)
             : $('.forFlow').prepend(card)
 
-        $('.day').remove()
+        // $('.day').remove()
     }
 }
 

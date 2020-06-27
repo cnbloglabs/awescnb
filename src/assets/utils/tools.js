@@ -332,21 +332,11 @@ function hasPostTitle() {
  * @returns 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
  */
 function pageName() {
-    if ($('#post_detail').length > 0) {
-        return 'post'
-    }
-    if ($('.day').length > 0) {
-        return 'index'
-    }
-    if ($('#taglist_main').length > 0) {
-        return 'tag'
-    }
-    if ($('.entrylistPosttitle').length > 0) {
-        return 'list'
-    }
-    if ($('#myposts').length > 0) {
-        return 'tag'
-    }
+    if ($('#post_detail').length) return 'post'
+    if ($('.day').length) return 'index'
+    if ($('#taglist_main').length) return 'tag'
+    if ($('.entrylistPosttitle').length) return 'list'
+    if ($('#myposts').length) return 'tag'
 }
 
 /**

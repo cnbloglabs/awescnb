@@ -1,8 +1,10 @@
 @import '@/assets/style/reset.scss';
-@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
-@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/brands.min.css);
 @import './tools.scss';
 @import './scroll.scss';
+@import './animate.scss';
+@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
+@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/brands.min.css);
+
 *::before,
 *::after {
     font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
@@ -54,6 +56,7 @@ body {
     background-color: #f2f1f6;
 }
 #post_detail {
+    animation: content-in 0.5s ease-in 0s;
     #topics .postDesc {
         padding: 0;
         color: #999;

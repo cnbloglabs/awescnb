@@ -1,0 +1,10 @@
+@keyframes content-in {
+    from {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
