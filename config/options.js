@@ -1,11 +1,6 @@
-///////// description /////////
-// 你无需直接更改webpack配置文件
-// 直接更改这里的配置
-// 当然，有特殊需求自行更改
-
 module.exports = {
     themeName: 'view',
-    template: 'post',
+    template: 'index',
     eslint: true,
     sourceMap: false,
     openAnalyzer: true,
@@ -13,12 +8,17 @@ module.exports = {
     openBrowser: true,
 }
 
+///////// description /////////
+// 你无需直接更改webpack配置文件
+// 为了方便，请直接更改这里的配置
+// 当然，有特殊需求可以自行更改
+
 ///////// options /////////
-// themeName - 你创建的主题文件夹名称 (运行 npm start 会启动它) 'simple' | 'gshang' | 'element' 'acg' | 'reacg'
-// template - 本地开发要启动的页面 'index' -> 首页 'post' -> 随笔详情页 'tag' -> 标签页 ...
+// themeName - 你创建的主题文件夹名称
+// template - 本地开发要启动的页面
 // eslint - 是否开启eslint
 // sourceMap - 是否开启sourcemap
-// openAnalyzer - build 时开启 size 分析
+// openAnalyzer - build 时是否开启 size 分析
 // cssExtract 单独抽离css
 // openBrowser - 自动打开浏览器
 
@@ -30,3 +30,9 @@ module.exports = {
 // - material
 // - reacg
 // - simple
+
+///////// template /////////
+// - index 首页
+// - post 随笔详情页
+// - tag 标签页
+// - ...

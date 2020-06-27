@@ -1,7 +1,5 @@
 .custom-signature {
-    font-size: 14px;
-    font-weight: 700;
+    padding: 1rem 0;
+    font-size: 1em;
     line-height: 1.5em;
-    text-indent: 1em;
-    padding: 0 14px;
 }
