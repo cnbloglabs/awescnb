@@ -23,20 +23,20 @@ const back2top = () => {
 
 // 关注
 const focus = () => {
-    toast('谢谢关注🍺')
+    toast('感谢关注🍺')
     window.follow()()
 }
 
 // 推荐
 const diggit = () => {
-    toast('谢谢推荐🍺')
+    toast('推荐成功')
     const id = window.location.href.match(/p\/(\S*).html/)[1]
     window.votePost(parseInt(id), 'Digg')
 }
 
 // 评论
 const comment = () => {
-    toast('谢谢评论🍺')
+    toast('跳转成功')
     $('html, body').animate(
         {
             scrollTop:
@@ -49,7 +49,7 @@ const comment = () => {
 
 // 收藏
 const collect = () => {
-    toast('谢谢收藏🍺')
+    toast('欢迎收藏🍺')
     window.AddToWz()
 }
 

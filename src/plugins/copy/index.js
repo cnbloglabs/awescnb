@@ -28,7 +28,7 @@ function click() {
         const sel = window.getSelection()
         const range = document.createRange()
         sel.removeAllRanges()
-        
+
         isMd()
             ? range.selectNode($(this).siblings('code')[0])
             : range.selectNode($(this).siblings('pre')[0])
@@ -45,7 +45,7 @@ function click() {
         document.execCommand('copy')
 
         $(this).text('copied')
-        toast('已复制 ✔')
+        toast('已复制至剪贴板')
 
         setTimeout(() => {
             $(this).text('copy')

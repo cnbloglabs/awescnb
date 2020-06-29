@@ -1,16 +1,31 @@
-// 弹出提示
+import { Notyf } from 'notyf'
+import 'notyf/notyf.min.css'
 import './index.css'
-import { materialize } from '@constants/urls'
-import { cacheScript } from '@tools'
 
-function build(title, duration) {
-    window.Materialize.toast(title, duration)
-}
+const notyf = new Notyf({
+    position: { x: 'right', y: 'top' },
+    icon: false,
+    types: [
+        {
+            type: 'info',
+            background: 'blue',
+            icon: false,
+        },
+        {
+            type: 'warning',
+            background: 'blue',
+            icon: false,
+        },
+    ],
+})
 
-function toast(title = '默认提示文字', duration = 3000) {
-    cacheScript(materialize, () => {
-        build(title, duration)
-    })
+function toast(message = 'default message', type = 'success') {
+    type !== 'success' && type !== 'error'
+        ? notyf.open({
+              type,
+              message,
+          })
+        : notyf[type](message)
 }
 
 export default toast

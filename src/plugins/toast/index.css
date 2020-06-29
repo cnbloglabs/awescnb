@@ -1,26 +1,3 @@
-#toast-container {
-    display: block;
-    position: fixed;
-    right: 20px;
-    top: 60px;
-    z-index: 10000;
-    width: auto;
-    z-index: 999999999999;
-}
-
-.toast {
-    position: relative;
-    top: 35px;
-    border-radius: 3px;
-    margin-top: 10px;
-    padding: 10px 15px;
-    width: max-content;
-    height: auto;
-    max-width: 100%;
-    background-color: #1e1e1e;
-    color: var(--themeColor, #fff);
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 300;
-    word-break: keep-all;
+.notyf__icon i::after {
+    margin: 0;
 }

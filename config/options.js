@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'view',
-    template: 'index',
+    template: 'post',
     eslint: true,
     sourceMap: false,
     openAnalyzer: true,
