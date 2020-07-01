@@ -8,15 +8,15 @@
 
 项目使用 webpack 构建. 集成大量博客插件. 可以用它做以下三件事:
 
-1. 安装: 在您的博客园安装这个项目中已经集成的皮肤.安装之后,可以快速切换其他皮肤.
-2. 创建: 快速创建一个的博客园皮肤,通过打包生成文件,供您使用.
-3. 分享: 快速创建一个博客园皮肤并将它贡献给项目,园友就能够切换到您的皮肤了.
+- 安装: 在您的博客园中安装这个项目已经集成的皮肤.安装之后,可以快速切换其他皮肤.
+- 创建: 快速构建一个的博客园皮肤,通过打包生成的文件,供您使用.
+- 分享: 将您构建的皮肤贡献给该项目,园友就能够切换到您的皮肤了.
 
 ## 文档
 
--   [在博客园安装皮肤](https://guangzan.gitee.io/awescnb-docs/docs/install)
+-   [在博客园中安装皮肤](https://guangzan.gitee.io/awescnb-docs/docs/install)
 -   [配置已经安装的皮肤](https://guangzan.gitee.io/awescnb-docs/docs/options)
--   [构建一个皮肤](https://guangzan.gitee.io/awescnb-docs/docs/dev)
+-   [构建一个博客园皮肤](https://guangzan.gitee.io/awescnb-docs/docs/dev)
 -   [皮肤列表](https://guangzan.gitee.io/awescnb-docs/docs/themes)
 -   [更新日志](https://guangzan.gitee.io/awescnb-docs/docs/log)
 
@@ -25,8 +25,6 @@
 1. fork 主仓库到自己账号成为副本仓库
 2. 在副本仓库完成代码贡献
 3. 将副本修改的内容给主仓库提交 Pull Requests
-
-> 如果您有兴趣, 也可以加入仓库开发者行列.
 
 ## 联系
 
@@ -47,5 +45,4 @@
 
 ## 捐赠
 
-1. 最近帮小伙伴解决一些问题, 要请我喝水, 一并在此感谢。 但本项目并不接受任何捐赠，如需捐赠请捐赠给皮肤作者。
-2. 欢迎加群，有问必答。有任何问题也都可以到群里反馈,十分感谢!
+本项目并不接受捐赠，如需捐赠请捐赠给皮肤作者。

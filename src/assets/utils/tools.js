@@ -248,7 +248,7 @@ const randomProperty = obj => {
 
 /**
  * @description 获取随机颜色
- * @param {String} type 可选 颜色值类型 rgba 16
+ * @param {String} type rgba 16
  * @returns 颜色值
  */
 const randomColor = type => {
