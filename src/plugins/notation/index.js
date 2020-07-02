@@ -74,14 +74,14 @@ const annotateList = [
             color: '#F44336',
         },
     },
-    {
-        page: 'post',
-        selector: '#cnblogs_post_body>p',
-        config: {
-            type: 'box',
-            color: '#2196F3',
-        },
-    },
+    // {
+    //     page: 'post',
+    //     selector: '#cnblogs_post_body>p',
+    //     config: {
+    //         type: 'box',
+    //         color: '#2196F3',
+    //     },
+    // },
     // {
     //     page: 'post',
     //     selector: '#cnblogs_post_body>h2',
@@ -92,17 +92,24 @@ const annotateList = [
     // },
 ]
 
-const buildAnnotate = items => {
+const buildGroup = items => {
     for (let { selector, page, config } of items) {
         if (page === 'all' || pageName === page) {
-            if (!document.querySelectorAll(selector).length) return
-            group.push(annotate(document.querySelector(selector), config))
+            const element = document.querySelectorAll(selector)
+            if (!element.length) return
+            if (element.length === 1)
+                group.push(annotate(document.querySelector(selector), config))
+            if (element.length > 1) {
+                element.forEach(function(item) {
+                    group.push(annotate(item, config))
+                })
+            }
         }
     }
 }
 
 const notation = (customList = annotateList) => {
-    buildAnnotate(customList)
+    buildGroup(customList)
     const ag = annotationGroup(group)
     setTimeout(() => {
         ag.show()
