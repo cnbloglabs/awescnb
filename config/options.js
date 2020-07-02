@@ -3,7 +3,7 @@ module.exports = {
     template: 'post',
     eslint: true,
     sourceMap: false,
-    openAnalyzer: true,
+    openAnalyzer: false,
     cssExtract: false,
     openBrowser: true,
 }
