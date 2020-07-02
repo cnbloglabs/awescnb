@@ -15,16 +15,6 @@ const annotateList = [
         },
     },
     {
-        page: 'index',
-        selector: '.postTitle2',
-        config: {
-            type: 'highlight',
-            color: '#FFF176',
-            animationDuration: 2000,
-            iterations: 6,
-        },
-    },
-    {
         page: 'all',
         selector: '#copyright span:last-child',
         config: {
@@ -74,6 +64,16 @@ const annotateList = [
             color: '#F44336',
         },
     },
+    // {
+    //     page: 'index',
+    //     selector: '.postTitle2',
+    //     config: {
+    //         type: 'highlight',
+    //         color: '#FFF176',
+    //         animationDuration: 2000,
+    //         iterations: 6,
+    //     },
+    // },
     // {
     //     page: 'post',
     //     selector: '#cnblogs_post_body>p',
