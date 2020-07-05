@@ -14,7 +14,7 @@ const $lightIcon = `<div id='mode-change'>${iconInSvg(icons.light)}</div>`
  */
 function changeModeToggle(mode = 'light') {
     if (mode === 'dark') {
-        toast('进入暗色模式 ✨')
+        toast('进入暗色模式 ✨', 'info')
         setBackground('dark')
         $('head').append($dark)
         $($darkIcon).replaceAll('#mode-change')

@@ -5,15 +5,11 @@ import './index.css'
 const notyf = new Notyf({
     position: { x: 'right', y: 'top' },
     icon: false,
+    duration: 3000,
     types: [
         {
             type: 'info',
-            background: 'blue',
-            icon: false,
-        },
-        {
-            type: 'warning',
-            background: 'blue',
+            background: 'rgba(0,0,0,0.7)',
             icon: false,
         },
     ],

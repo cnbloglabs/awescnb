@@ -1,5 +1,5 @@
 import './index.scss'
-import { gitee, version } from '../../constants/message'
+import { gitee } from '../../constants/message'
 
 function footer() {
     const { links } = window.opts
@@ -16,7 +16,7 @@ function footer() {
                             <span>
                                 Powered by you
                                 🍦
-                                Theme in ${'awescnb'.link(gitee)} ${version}
+                                Theme in ${'awescnb'.link(gitee)} 
                             </span>
                         </div>`
 
