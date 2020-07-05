@@ -6,12 +6,8 @@ function setBodyBackground() {
     const { enable, opacity, type, value, repeat } = window.opts.bodyBackground
     if (!enable) return
     $('#main,#navigator').css('opacity', `${opacity}`)
-    if ($('#catalog').length > 0) {
-        $('#main').css('opacity', `${opacity}`)
-    }
-    if (type === 'color') {
-        $('body').css('background-color', `${value}`)
-    }
+    if ($('#catalog').length) $('#main').css('opacity', `${opacity}`)
+    if (type === 'color') $('body').css('background-color', `${value}`)
     if (type === 'img') {
         $('body').css('background-image', `url(${value})`)
         if (!repeat) {

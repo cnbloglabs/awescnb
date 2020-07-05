@@ -1,5 +1,6 @@
 // 点击特效
 // 仅引入即可
+
 import './index.css'
 import anime from 'animejs/lib/anime.es.js'
 import { userAgent } from '@tools'

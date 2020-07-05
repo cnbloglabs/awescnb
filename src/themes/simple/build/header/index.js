@@ -74,7 +74,6 @@ const customLinks = () => {
     // wrap
     $('.navbar-end').prepend(`<div class="custom-links"></div>`)
     $('#blogTitle h2').after(`<div class="custom-links"></div>`)
-
     // 码云
     if (gitee.enable) {
         $('.custom-links').append(`<a class="gitee" href="${gitee.url}"></a>`)

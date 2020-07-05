@@ -14,16 +14,16 @@ const annotateList = [
             color: '#2196F3',
         },
     },
-    {
-        page: 'all',
-        selector: '#copyright span:last-child',
-        config: {
-            type: 'highlight',
-            color: '#FFF176',
-            animationDuration: 2000,
-            iterations: 6,
-        },
-    },
+    // {
+    //     page: 'all',
+    //     selector: '#copyright span:last-child',
+    //     config: {
+    //         type: 'highlight',
+    //         color: '#FFF176',
+    //         animationDuration: 2000,
+    //         iterations: 6,
+    //     },
+    // },
     {
         page: 'post',
         selector: '#cb_post_title_url',

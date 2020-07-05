@@ -22,13 +22,13 @@ const defaultOptions = {
     github: {
         enable: true,
         color: '#ffb3cc',
-        url: 'https://github.com/guangzan/awescnb',
+        url: '',
     },
     // 码云图标
     gitee: {
         enable: true,
         color: '#C71D23',
-        url: 'https://gitee.com/guangzan/awescnb',
+        url: '',
     },
     // 图片灯箱
     imagebox: {
@@ -206,13 +206,9 @@ const defaultOptions = {
     },
     // 锁屏
     lock: {
-        enable: true,
+        enable: false,
         background: '',
-        strings: [
-            '<i>Powered by</i> webpack.',
-            '&amp; Theme in awescnb',
-            '快去自定义你的个性签名吧~',
-        ],
+        strings: ['快去自定义你的个性签名吧~'],
     },
     // footer链接
     links: [
