@@ -22,6 +22,7 @@ import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
 import donation from '@plugins/donation'
 import { shootInitial } from '@plugins/barrage'
+import './index.scss'
 
 function plugins() {
     dragMenu()

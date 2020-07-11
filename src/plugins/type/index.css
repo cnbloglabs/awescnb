@@ -1,0 +1,18 @@
+.custom-signature {
+    padding: 1rem 0;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.custom-signature::after {
+    content: '|';
+    animation: blink 1s infinite step-start;
+    margin: 0;
+    font-weight: 400;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

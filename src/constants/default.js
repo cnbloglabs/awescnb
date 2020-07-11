@@ -72,10 +72,10 @@ const defaultOptions = {
     // 评论输入框表情
     emoji: {
         enable: true,
-        showRecents: true,
+        showRecents: false,
         recentsCount: 20,
-        showPreview: true,
-        showSearch: true,
+        showPreview: false,
+        showSearch: false,
     },
     // 暗色模式
     darkMode: {

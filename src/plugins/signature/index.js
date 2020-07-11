@@ -1,5 +1,4 @@
-// 获取博客园子标题
-// 作为个性签名在侧边栏构建
+// 个性签名在侧边栏构建
 import './index.css'
 import Typed from 'typed.js'
 
