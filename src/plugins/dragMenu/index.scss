@@ -16,7 +16,7 @@
 .dragmenu-item {
     position: absolute;
     left: 0px;
-    top: 0px;
+    // top: 0px;
     width: 40px;
     height: 40px;
     background-color: white;
@@ -25,7 +25,7 @@
     text-align: center;
     font-size: 20px;
     line-height: 40px;
-    box-shadow: 0 0 6px rgb(209, 205, 205);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     i {
         display: flex;
         justify-content: center;

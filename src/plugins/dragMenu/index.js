@@ -6,54 +6,11 @@ import { jqueryui } from '@constants/urls'
 
 const back2topConfig = window.opts.back2top
 const { enable, initialOpen, draggable } = window.opts.tools
-var timeOut
-// db timer
-var timer = null
 
-// 返回顶部
-const back2top = () => {
-    clearTimeout(timer)
-    $('html, body').animate(
-        {
-            scrollTop: 0,
-        },
-        300,
-    )
-}
+let timeOut
+// dbclick timer
+let timer = null
 
-// 关注
-const focus = () => {
-    toast('感谢关注🍺')
-    window.follow()()
-}
-
-// 推荐
-const diggit = () => {
-    toast('推荐成功')
-    const id = window.location.href.match(/p\/(\S*).html/)[1]
-    window.votePost(parseInt(id), 'Digg')
-}
-
-// 评论
-const comment = () => {
-    toast('跳转成功')
-    $('html, body').animate(
-        {
-            scrollTop:
-                $('.commentbox_main').offset().top -
-                $('.commentbox_main').height(),
-        },
-        300,
-    )
-}
-
-// 收藏
-const collect = () => {
-    toast('欢迎收藏🍺')
-    window.AddToWz()
-}
-
-// 创建容器
 class Menu {
     constructor(menu) {
         this.$element = $(menu)
@@ -81,20 +38,20 @@ class Menu {
                 cacheScript(jqueryui, () => {
                     item.$element.draggable(
                         {
-                            start: function() {
+                            start() {
                                 menu.close()
                                 item.isMoving = true
                             },
                         },
                         {
-                            drag: function() {
+                            drag() {
                                 if (item.next) {
                                     item.next.updatePosition()
                                 }
                             },
                         },
                         {
-                            stop: function() {
+                            stop() {
                                 item.isMoving = false
                                 item.next.moveTo(item)
                             },
@@ -116,14 +73,15 @@ class Menu {
         var iterator = 1
         var head = this.first
         var sens =
-            head.$element.css('left') < head.$element.css('right') ? 1 : -1
+            head.$element.css('bottom') < head.$element.css('right') ? 1 : -1
         while (current != null) {
             anime({
                 targets: current.$element[0],
-                left:
-                    parseInt(head.$element.css('left'), 10) +
-                    sens * (iterator * 50),
-                top: head.$element.css('top'),
+                bottom: -(
+                    parseInt(head.$element.css('bottom'), 10) +
+                    sens * (iterator * 50)
+                ),
+                left: head.$element.css('left'),
                 duration: 500,
             })
             iterator++
@@ -140,8 +98,8 @@ class Menu {
         while (current != null) {
             anime({
                 targets: current.$element[0],
+                bottom: head.$element.css('bottom'),
                 left: head.$element.css('left'),
-                top: head.$element.css('top'),
                 duration: 500,
             })
             // iterator++
@@ -198,8 +156,8 @@ class Item {
     moveTo(item) {
         anime({
             targets: this.$element[0],
+            bottom: item.$element.css('bottom'),
             left: item.$element.css('left'),
-            top: item.$element.css('top'),
             duration: 700,
             elasticity: 500,
         })
@@ -211,8 +169,8 @@ class Item {
     updatePosition() {
         anime({
             targets: this.$element[0],
+            bottom: this.prev.$element.css('bottom'),
             left: this.prev.$element.css('left'),
-            top: this.prev.$element.css('top'),
             duration: 80,
         })
 
@@ -227,7 +185,11 @@ function create(options) {
     const ele = `<div class="custom-drag-menu"><div id="myMenu"></div></div>`
     $('body').append(ele)
 
-    var menu = new Menu('#myMenu')
+    const menu = new Menu('#myMenu')
+
+    // menu.add(
+    //     new Item(icon, backgroundColor, evenType, callback, '收起'),
+    // )
 
     for (const {
         page,
@@ -237,7 +199,6 @@ function create(options) {
         evenType,
         callback,
     } of options.items) {
-        // if (pageName() !== page) continue
         if (pageName() === page || page === 'all') {
             menu.add(
                 new Item(icon, backgroundColor, evenType, callback, tooltip),
@@ -273,21 +234,81 @@ function create(options) {
 function dragMenu(options) {
     if (!back2topConfig.enable) return
     if (!enable) return
+
+    // 返回顶部
+    const back2top = () => {
+        clearTimeout(timer)
+        $('html, body').animate(
+            {
+                scrollTop: 0,
+            },
+            300,
+        )
+    }
+
+    // 关注
+    const focus = () => {
+        toast('感谢关注🍺')
+        window.follow()()
+    }
+
+    // 推荐
+    const diggit = () => {
+        toast('推荐成功')
+        const id = window.location.href.match(/p\/(\S*).html/)[1]
+        window.votePost(parseInt(id), 'Digg')
+    }
+
+    // 评论
+    const comment = () => {
+        toast('跳转成功')
+        $('html, body').animate(
+            {
+                scrollTop:
+                    $('.commentbox_main').offset().top -
+                    $('.commentbox_main').height(),
+            },
+            300,
+        )
+    }
+
+    // 收藏
+    const collect = () => {
+        toast('欢迎收藏🍺')
+        window.AddToWz()
+    }
+
     const defaultOptions = {
         mobileAutoClose: true,
         items: [
             {
                 page: 'all',
                 icon: '🚀',
-                backgroundColor: '#c8d6e5',
+                backgroundColor: '#f1f2f6',
                 tooltip: '双击',
                 evenType: 'dblclick',
                 callback: back2top,
             },
             {
                 page: 'post',
+                icon: '💬',
+                backgroundColor: '#f1f2f6',
+                tooltip: '评论',
+                evenType: 'click',
+                callback: comment,
+            },
+            {
+                page: 'post',
+                icon: '📌',
+                backgroundColor: '#f1f2f6',
+                tooltip: '收藏',
+                evenType: 'click',
+                callback: collect,
+            },
+            {
+                page: 'post',
                 icon: '💗',
-                backgroundColor: '#fdcb6e',
+                backgroundColor: '#f1f2f6',
                 tooltip: '关注',
                 evenType: 'click',
                 callback: focus,
@@ -295,26 +316,10 @@ function dragMenu(options) {
             {
                 page: 'post',
                 icon: '👍',
-                backgroundColor: '#ff6b6b',
+                backgroundColor: '#f1f2f6',
                 tooltip: '推荐',
                 evenType: 'click',
                 callback: diggit,
-            },
-            {
-                page: 'post',
-                icon: '💬',
-                backgroundColor: '#10ac84',
-                tooltip: '评论',
-                evenType: 'click',
-                callback: comment,
-            },
-            {
-                page: 'post',
-                icon: '📂',
-                backgroundColor: '#01a3a4',
-                tooltip: '收藏',
-                evenType: 'click',
-                callback: collect,
             },
         ],
     }

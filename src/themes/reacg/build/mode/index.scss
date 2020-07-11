@@ -10,6 +10,7 @@
 
 .mode-change {
     & {
+        will-change: auto;
         transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
     }
     #header::after,

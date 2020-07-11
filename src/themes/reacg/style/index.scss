@@ -543,6 +543,11 @@ body {
                 @include text-over();
             }
         }
+        .recent_comment_body {
+            padding: 1rem;
+            background-color: var(--background-e);
+            border-radius: 3px;
+        }
         /* 每个块的外层 */
         #sidebar_news,
         #blog-calendar,
@@ -590,6 +595,7 @@ body {
             padding: 10px 14px;
         }
     }
+
     #blog-calendar {
         #blogCalendar {
             table,
@@ -639,6 +645,7 @@ body {
             }
         }
     }
+
     #sidebar_search {
         .input_my_zzk {
             border: 1px solid #61aeee;
