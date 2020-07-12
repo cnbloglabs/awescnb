@@ -80,8 +80,8 @@ const defaultOptions = {
     // 暗色模式
     darkMode: {
         enable: true,
-        autoDark: false,
-        autoLight: false,
+        autoDark: true,
+        autoLight: true,
     },
     // 音乐播放器
     musicPlayer: {
@@ -100,9 +100,9 @@ const defaultOptions = {
                 name: '404 not found',
                 artist: 'REOL',
                 url:
-                    'http://music.163.com/song/media/outer/url?id=436016480.mp3',
+                    'https://guangzan.gitee.io/imagehost/awescnb/music/demo4.mp3',
                 cover:
-                    'http://p2.music.126.net/cu1sEIDxXOJm5huZ3Wjs0Q==/18833534672880379.jpg?param=300x300',
+                    'https://guangzan.gitee.io/imagehost/awescnb/music/demo.jpg',
                 lrc: ``,
             },
         ],
