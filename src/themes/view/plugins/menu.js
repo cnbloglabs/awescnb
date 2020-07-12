@@ -3,8 +3,19 @@ import dragMenu from '@plugins/dragMenu'
 const options = {
     mobileAutoClose: true,
     items: [
+        // 返回顶部
         {
             icon: 'fa-arrow-up',
+            backgroundColor: '#fff',
+        },
+        // 评论
+        {
+            icon: 'fa-comment-dots',
+            backgroundColor: '#fff',
+        },
+        // 收藏
+        {
+            icon: 'fa-star',
             backgroundColor: '#fff',
         },
         {
@@ -13,14 +24,6 @@ const options = {
         },
         {
             icon: 'fa-thumbs-up',
-            backgroundColor: '#fff',
-        },
-        {
-            icon: 'fa-comment-dots',
-            backgroundColor: '#fff',
-        },
-        {
-            icon: 'fa-star',
             backgroundColor: '#fff',
         },
     ],
