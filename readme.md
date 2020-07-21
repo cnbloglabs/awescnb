@@ -26,9 +26,11 @@
 2. 在副本仓库完成代码贡献
 3. 将副本修改的内容给主仓库提交 Pull Requests
 
-## 联系
+## 交流
 
--   QQ 群：541802647 (活跃)
+- QQ 群：541802647 (活跃)
+- [Gitee Issue](https://gitee.com/guangzan/awescnb/issues/new?issue%5Bassignee_id%5D=0&issue%5Bmilestone_id%5D=0)
+- [Github Issue](https://github.com/guangzan/awescnb/issues/new)
 
 ## 贡献者
 
@@ -40,7 +42,7 @@
 
 ## 许可
 
--   永久免费使用它构建皮肤和安装皮肤, 请不要基于项目此重新构建项目并发布.
+-   永久免费使用它构建皮肤和安装皮肤, 请不要基于此项目重新构建项目并发布.
 -   如果您引用了此项目的**代码**或**样式**请在您的项目中说明, 谢谢合作!
 
 ## 捐赠
