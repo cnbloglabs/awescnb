@@ -24,6 +24,7 @@ const headerBtn = () => {
         $(this).toggleClass('is-active')
         $('#navigator').toggleClass('is-active')
         $('#custom-searchbar').toggle()
+        $('.postTitle svg').toggle()
     })
 }
 
