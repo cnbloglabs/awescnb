@@ -1,8 +1,7 @@
 import { sidebarWraps } from '@/constants/elements'
 import { pageName, randomProperty, cacheScript } from '@tools'
 import { iconInSvg } from '../../utils/tools'
-import { iconfont } from '../../constants/urls'
-import { icons, foodIcons } from './icons'
+import { fontUrl, icons, foodIcons } from './icons'
 import './index.scss'
 
 // 设置sidebar icon
@@ -28,6 +27,11 @@ function setSidebarIcon() {
             title: sidebarWraps.links,
             icon: icons.links,
             sonIcon: icons.link,
+        },
+        {
+            title: sidebarWraps.album,
+            icon: icons.album,
+            sonIcon: icons.photo,
         },
         {
             title: sidebarWraps.recent,
@@ -198,7 +202,7 @@ function build() {
 
 // 加载i confont js
 function setIcons() {
-    cacheScript(iconfont, build)
+    cacheScript(fontUrl, build)
 }
 
 // -------- icon end ----

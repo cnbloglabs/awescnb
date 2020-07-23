@@ -11,8 +11,8 @@ const sidebarWraps = {
     topview: '#sidebar_topviewedposts', //阅读排行
     topComents: '#sidebar_topcommentedposts', //评论排行
     topDig: '#topdigg_posts_wrap', //推荐排行
+    album: '#sidebar_imagecategory',
     catalog: '#catalog', //文章目录
 }
 
-
-export { sidebarWraps, }
+export { sidebarWraps }

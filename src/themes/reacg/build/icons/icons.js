@@ -1,3 +1,5 @@
+export const fontUrl = '//at.alicdn.com/t/font_1595820_qlveru8zeqn.js'
+
 export const icons = {
     dig: '#ac-dig', //推荐
     view: '#ac-view', //看
@@ -30,6 +32,8 @@ export const icons = {
     contact: '#ac-contact', // 联系
     gitee: '#ac-gitee', // 联系
     md: '#ac-md', // #号
+    album: '#ac-album', // 相册
+    photo: '#ac-photo', // 相册
 }
 
 export const foodIcons = {
