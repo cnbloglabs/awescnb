@@ -33,14 +33,13 @@
         padding: 1rem;
         background-color: #fff;
     }
-
-    #div_digg {
-        margin-top: 1rem;
-    }
 }
 
 @media screen and (max-width: 767px) {
     .commentform {
         margin-left: 0;
+    }
+    #blog_post_info #div_digg {
+        margin-top: 1rem;
     }
 }
