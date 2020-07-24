@@ -2,6 +2,8 @@
 // 设置内容透明度
 // 仅引入即可
 
+import { userAgent } from '@tools'
+
 function setBodyBackground() {
     const { enable, opacity, type, value, repeat } = window.opts.bodyBackground
     if (!enable) return
@@ -16,6 +18,9 @@ function setBodyBackground() {
                 'background-size': '100% 100%',
                 'background-attachment': 'fixed',
             })
+            if (userAgent() === 'phone') {
+                $('body').css('background-size', 'cover')
+            }
         }
     }
 }
