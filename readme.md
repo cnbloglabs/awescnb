@@ -32,25 +32,11 @@
 
 ## 贡献者
 
-<a href="https://www.cnblogs.com/guangzan/">
-    <img src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1579449067.png!avatar100" style="width:50px;height:50px;border-radius:3px;margin-right:5px" />
-</a>
-
-<a href="https://www.cnblogs.com/guoxinyu/">
-    <img src="https://portrait.gitee.com/uploads/avatars/user/746/2240671_njit-guoxinyu_1586413047.png!avatar100" style="width:50px;height:50px;border-radius:3px;margin-right:5px" />
-</a>
-
-<a href="https://www.cnblogs.com/A-Bing/">
-    <img src="https://portrait.gitee.com/uploads/avatars/user/2449/7348543_aaabingbingbing_1584778574.png!avatar100" style="width:50px;height:50px;border-radius:3px;margin-right:5px" />
-</a>
-
-<a href="https://www.cnblogs.com/gshang/">
-    <img src="https://portrait.gitee.com/uploads/avatars/user/1626/4879515_gshang_1578976296.jpg!avatar100" style="width:50px;height:50px;border-radius:3px;margin-right:5px" />
-</a>
-
-<a href="https://www.cnblogs.com/masterchd">
-    <img src="https://portrait.gitee.com/uploads/avatars/user/566/1699063_Kindear_1578958026.png!avatar100" style="width:50px;height:50px;border-radius:3px;margin-right:5px" />
-</a>
+- [青墟](https://www.cnblogs.com/guoxinyu/)
+- [ABing](https://www.cnblogs.com/A-Bing/)
+- [GShang](https://www.cnblogs.com/gshang/)
+- [DIVMonster](https://www.cnblogs.com/guangzan/)
+- [Kindear_chen](https://www.cnblogs.com/masterchd)
 
 ## 许可
 
