@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'reacg',
-    template: 'post',
+    template: 'photos',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,
@@ -34,5 +34,6 @@ module.exports = {
 ///////// template /////////
 // - index 首页
 // - post 随笔详情页
+// - post1 富文本编辑器随笔详情页
 // - tag 标签页
-// - ...
+// - ablum 相册

@@ -5,10 +5,12 @@
 import { userAgent } from '@tools'
 
 function setBodyBackground() {
-    const { enable, opacity, type, value, repeat } = window.opts.bodyBackground
+    const { enable, opacity, value, repeat } = window.opts.bodyBackground
     if (!enable) return
     $('#main,#navigator').css('opacity', `${opacity}`)
     if ($('#catalog').length) $('#main').css('opacity', `${opacity}`)
+
+    const type = new RegExp('http').test(value) ? 'img' : 'color'
     if (type === 'color') $('body').css('background-color', `${value}`)
     if (type === 'img') {
         $('body').css('background-image', `url(${value})`)

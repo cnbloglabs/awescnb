@@ -165,10 +165,9 @@ const defaultOptions = {
     },
     // 背景图片或颜色
     bodyBackground: {
-        enable: true,
-        type: 'img',
-        value: 'https://guangzan.gitee.io/imagehost/awescnb/images/anime/3.jpg',
-        opacity: 0.8,
+        enable: false,
+        value: '',
+        opacity: 1,
         repeat: false,
     },
     // 弹幕
