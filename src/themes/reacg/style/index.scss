@@ -227,13 +227,48 @@ body {
             }
         }
     }
-    // 标签页列表
+    // 相册页、标签页
+    .thumbTitle,
     .PostListTitle {
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
-        padding: 14.418px;
+        padding: 1rem;
         color: var(--text-4);
         font-size: 16px;
     }
+
+    // 相册内容容器
+    #GalleryThumbNailViewer1_ThumbNails {
+        display: block;
+        padding: 1rem;
+        tbody,
+        tr,
+        td,
+        img {
+            display: block;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+        }
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        td {
+            margin-right: 5px;
+        }
+    }
+
+    .gallery {
+        & > img {
+            width: 100%;
+            height: auto;
+        }
+        & > br {
+            display: none;
+        }
+    }
+
     // 我的标签
     #taglist_main {
         margin-top: 0;
