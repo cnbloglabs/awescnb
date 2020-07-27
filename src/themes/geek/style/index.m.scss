@@ -1,0 +1,45 @@
+@media screen and (max-width: 1024px) {
+    #main {
+        padding: 0;
+        #mainContent {
+            width: 100%;
+            // padding: 3rem;
+            // margin-left: 0rem;
+            border-left: none;
+            #myposts {
+                padding: 0.5rem;
+
+                flex-direction: column;
+            }
+            .PostList {
+                width: auto;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        #sideBar {
+            display: none;
+        }
+    }
+
+    .topicListFooter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #blog-comments-placeholder,
+    #comment_form,
+    #post_detail {
+        padding: 1rem;
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .commentform {
+        margin-left: 0;
+    }
+    #blog_post_info_block #blog_post_info #div_digg {
+        margin-top: 1rem;
+    }
+}

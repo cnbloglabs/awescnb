@@ -1,0 +1,50 @@
+// @mixin scrollbar-simple($thumb-color) {
+//     &::-webkit-scrollbar {
+//         display: block;
+//         margin-top: 105px;
+//         width: 10px;
+//         height: 8px;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//         background-color: $thumb-color;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//         background: rgba(211, 210, 210, 0);
+//     }
+// }
+
+// #cnblogs_post_body table,
+// // body,
+// .emoji-picker__emojis,
+
+// pre,
+// code {
+//     @include scrollbar-simple(#a8a8a8);
+// }
+
+// #catalog {
+//     @include scrollbar-simple(#d8d8d8);
+// }
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.1);
+}

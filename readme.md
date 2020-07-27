@@ -18,6 +18,8 @@
 - 🎊[皮肤列表](https://guangzan.gitee.io/awescnb-docs/docs/themes)
 - 📑[更新日志](https://guangzan.gitee.io/awescnb-docs/docs/log)
 
+> 🔮您也可以前往哔哩哔哩观看[视频教程](https://www.bilibili.com/video/BV1ik4y167BY)。
+
 ## 贡献
 
 1. fork 主仓库到自己账号成为副本仓库

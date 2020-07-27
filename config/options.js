@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'reacg',
-    template: 'photos',
+    themeName: 'geek',
+    template: 'index',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,

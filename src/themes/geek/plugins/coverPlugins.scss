@@ -1,0 +1,19 @@
+#cnblogs_post_body .cnblogs_code,
+.cnblogs-markdown pre {
+    &:hover {
+        box-shadow: none !important;
+    }
+}
+
+#footer {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 5px;
+    place-items: stretch;
+    #copyright {
+        margin: 0;
+    }
+}

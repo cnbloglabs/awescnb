@@ -54,6 +54,7 @@ module.exports = {
             '@': path.resolve('src'),
             '@awescnb': path.resolve('src/awescnb'),
             '@tools': path.resolve('src/assets/utils/tools'),
+            '@cnblog': path.resolve('src/assets/utils/cnblog'),
             '@plugins': path.resolve('src/plugins'),
             '@constants': path.resolve('src/constants'),
             '@store': path.resolve('src/store'),
