@@ -45,14 +45,29 @@
     }
     ul {
         // padding: 10.098px 14.418px;
+        border-left: 1px solid #202234;
         .h1-list {
+            display: flex;
+            align-items: center;
             font-weight: 700;
+            font-size: 16px;
+            &::before {
+                position: relative;
+                right: 12px;
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                content: '';
+                border-radius: 50%;
+                background-color: #1b86f9;
+            }
         }
         .h1-list ~ .h2-list {
-            margin-left: 0.7em;
+            margin-left: 2em;
+            font-size: 14px;
         }
         .h2-list ~ .h3-list {
-            margin-left: 1.4em;
+            margin-left: 4em;
             font-size: 12px;
         }
         li {

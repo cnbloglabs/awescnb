@@ -60,7 +60,7 @@ function build() {
         })
 
     const $catalog = $($catalogContainer.append($ulContainer))
-    $('#calendar').before($catalog)
+    $('#blog-calendar').before($catalog)
 }
 
 function noCatalog() {

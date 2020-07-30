@@ -1,5 +1,5 @@
 import toast from '@plugins/toast'
-import { getFollowState, getUsername } from '@cnblog'
+import { getFollowState, getBlogname } from '@cnblog'
 import './index.scss'
 
 const follow = () => {
@@ -12,7 +12,7 @@ const follow = () => {
 const build = () => {
     const { avatar } = window.opts.theme
     const { headerBackground } = window.opts.theme
-    const userName = getUsername()
+    const userName = getBlogname()
     const el = `
     <div class="profile">
         <div class="profile-signature"></div>

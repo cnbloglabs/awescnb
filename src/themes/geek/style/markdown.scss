@@ -140,8 +140,8 @@
             padding: 0.3em 0.6em;
             width: auto;
             font-weight: bold;
-            color: #bd1616;
-            background: #f79393;
+            color: #fff;
+            background: #202234;
             border-radius: 3px;
             user-select: none;
             font-size: 0.8rem;
@@ -172,8 +172,8 @@
         }
         &[open] {
             summary {
-                color: darken(#10ac84, 10%);
-                background: lighten(#10ac84, 45%);
+                color: darken(#0984e3, 10%);
+                background: lighten(#0984e3, 45%);
                 text-shadow: none;
                 border-radius: 0.3em 0.3em 0 0;
                 &:before {

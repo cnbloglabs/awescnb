@@ -214,7 +214,7 @@ body {
     #sidebar_topviewedposts,
     #sidebar_topcommentedposts,
     #sidebar_topdiggedposts {
-        padding: 30px;
+        padding: 25px;
         border-bottom: 1px solid #272a3a;
     }
 
@@ -253,6 +253,7 @@ body {
     #sidebar_topcommentedposts ul,
     #sidebar_topdiggedposts ul {
         li {
+            font-size: 12px;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -308,7 +309,7 @@ body {
                 justify-content: space-between;
                 td {
                     @include center(all);
-                    width: 35px;
+                    width: 25px;
                     height: 25px;
                 }
             }
@@ -323,7 +324,7 @@ body {
         }
         .CalTodayDay {
             background-color: #24273b;
-            // color: #fff;
+            color: #1b86f9;
             border-radius: 2px;
             font-size: 0.7em;
         }
@@ -412,25 +413,48 @@ body {
         display: block;
         width: 100%;
         height: 100%;
+        border: none;
     }
     &:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
             0 10px 10px rgba(0, 0, 0, 0.22);
     }
-}
-
-.homepage_top_pager {
-    margin-top: 1rem;
-    order: -1;
+    .page {
+        background-color: #151728;
+    }
 }
 
 .pager {
-    display: flex;
-    justify-content: center;
     padding: 0.5rem 0;
-    width: 100%;
-    background: #202234;
     border-radius: 3px;
+}
+
+#homepage_top_pager {
+    display: none;
+}
+
+#homepage_bottom_pager {
+    padding: 0;
+    background-color: #151728;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover {
+        box-shadow: none;
+    }
+    .pager {
+        display: flex;
+        margin: 0;
+
+        a {
+            margin: 0 20px;
+            border-radius: 4px;
+            background-color: #202234;
+            &:hover {
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                    0 10px 10px rgba(0, 0, 0, 0.22);
+            }
+        }
+    }
 }
 
 #post_detail {
@@ -928,7 +952,7 @@ body {
             font-weight: 700;
             color: var(--text-3);
             &::before {
-                content: '\f56b';
+                content: '\f086';
             }
         }
         // #tip_comment {

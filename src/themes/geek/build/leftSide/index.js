@@ -1,4 +1,4 @@
-import { getUsername } from '@cnblog'
+import { getBlogname } from '@cnblog'
 import './index.scss'
 
 const buildLeftside = () => {
@@ -32,7 +32,7 @@ const removeHeaderToLeftside = () => {
 
 const buildLeftsideBottomBtns = () => {
     const { avatar } = window.opts.theme
-    const userName = getUsername()
+    const userName = getBlogname()
     const el = `
     <a href="https://twitter.com/AysnrTrkk" class="follow-me" target="_blank">
         <span class="follow-text"><i class="fas fa-github"></i>Fork me on GitHub</span>

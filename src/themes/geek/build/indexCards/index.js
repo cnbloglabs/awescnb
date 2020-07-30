@@ -10,7 +10,14 @@ const build = () => {
         const secondEl = $(el.slice(i, i + 3)[1])
         const thirdEl = $(el.slice(i, i + 3)[2])
 
-        const title = firstEl.prop('outerHTML')
+        let title = firstEl.text().trim()
+
+        if (!/.*[\u4e00-\u9fa5]+.*$/.test(title)) {
+            title = title.substring(0, 25) + '...'
+        }
+
+        console.log(title)
+
         const desc = secondEl.prop('outerHTML')
         const detailUrl = secondEl.find('a').attr('href')
         const editUrl = thirdEl.find('a').attr('href')
@@ -28,7 +35,7 @@ const build = () => {
 
         const card = `
         <div class='custom-card'>
-            ${title}
+            <div class="postTitle">${title}</div>
             ${desc}
             <div class="custom-card-actions">
                 <span><li class="fas fa-eye"></li>${viewCount}</span>
