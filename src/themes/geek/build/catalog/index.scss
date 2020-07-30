@@ -51,6 +51,10 @@
             align-items: center;
             font-weight: 700;
             font-size: 16px;
+        }
+        .h1-list ~ .h2-list {
+            margin-left: 2em;
+            font-size: 14px;
             &::before {
                 position: relative;
                 right: 12px;
@@ -61,10 +65,6 @@
                 border-radius: 50%;
                 background-color: #1b86f9;
             }
-        }
-        .h1-list ~ .h2-list {
-            margin-left: 2em;
-            font-size: 14px;
         }
         .h2-list ~ .h3-list {
             margin-left: 4em;

@@ -122,15 +122,20 @@ body {
         font-weight: normal;
     }
 }
+
 .entrylistPostSummary,
 .postCon {
-    color: #888;
+    color: #5c5e6e;
     font-size: 14px;
 }
 .postDesc2,
 .entrylistItemPostDesc,
 .postDesc {
     padding-top: 0.5rem;
+}
+
+.entrylistItem {
+    padding: 20px;
 }
 
 #sideBar,
@@ -478,9 +483,16 @@ body {
     border-bottom: 1px solid #202234;
     font-weight: 700;
     background-color: #202234;
-    // &::before {
-    //     content: '\f02b';
-    // }
+}
+
+.entrylistDescription,
+.postSeparator {
+    display: none;
+}
+
+.entrylistTitle {
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 #myposts {

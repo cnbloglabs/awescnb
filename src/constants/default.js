@@ -5,7 +5,7 @@ const defaultOptions = {
         color: '#FFB3CC',
         title: '',
         contentSize: 'mid',
-        headerBackground: 'https://api.ixiaowai.cn/api/api.php',
+        headerBackground: '',
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
     },

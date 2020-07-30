@@ -1,7 +1,7 @@
 import highlight from '@plugins/highlight'
 import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
-import imagebox from '@plugins/imagebox'
+// import imagebox from '@plugins/imagebox'
 import emoji from '@plugins/emoji'
 // import player from '@plugins/player'
 // import postSignature from '@plugins/postSignature'
@@ -16,7 +16,7 @@ const plugins = () => {
     highlight()
     copy()
     linenumbers()
-    imagebox()
+    // imagebox()
     emoji()
     signature({
         selector: '.profile-signature',

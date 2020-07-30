@@ -28,7 +28,9 @@ const buildTopBtns = () => {
 const buildCalendar = () => {
     $('#sidebar_news').before($('#blog-calendar'))
     // https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80
-    const background = 'https://api.ixiaowai.cn/mcapi/mcapi.php'
+    // https://tva2.sinaimg.cn/large/87c01ec7gy1fsnqqp2wx8j21kw0w04du.jpg
+    const background =
+        'https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqjlmezj21kw0w07ix.jpg'
     const month = getMonth()
     const instance = new Date()
     const year = instance.getFullYear()
