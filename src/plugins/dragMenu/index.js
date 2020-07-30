@@ -238,7 +238,7 @@ function dragMenu(options) {
     // 返回顶部
     const back2top = () => {
         clearTimeout(timer)
-        $('html, body').animate(
+        $('html, body, #mainContent').animate(
             {
                 scrollTop: 0,
             },
@@ -261,15 +261,16 @@ function dragMenu(options) {
 
     // 评论
     const comment = () => {
-        toast('跳转成功')
-        $('html, body').animate(
+        $('html, body, #mainContent').animate(
             {
-                scrollTop:
-                    $('.commentbox_main').offset().top -
-                    $('.commentbox_main').height(),
+                scrollTop: $('.commentbox_main').offset().top,
+                // scrollTop:
+                //     $('.commentbox_main').offset().top -
+                //     $('.commentbox_main').height(),
             },
             300,
         )
+        toast('跳转成功')
     }
 
     // 收藏

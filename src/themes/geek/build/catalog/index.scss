@@ -1,33 +1,34 @@
 #catalog {
-    max-height: 550px;
+    padding: 30px 30px 10px;
     width: 17rem;
     font-size: 14px;
-    overflow-y: scroll；;
+    // overflow-y: scroll；;
     overflow-x: hidden;
     word-wrap: nowrap;
     text-overflow: ellipsis;
-    border-radius: 2px;
-    z-index: 20;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    h3 {
-        &::before {
-            content: '\f022';
-        }
-    }
+    border-bottom: 1px solid #272a3a;
+    // h3 {
+    //     &::before {
+    //         content: '\f022';
+    //     }
+    // }
     .catalog-title {
-        background-color: #fff;
-        font-size: 18px;
-        position: relative;
+        // background-color: #fff;
+        // font-size: 18px;
+        // position: relative;
         display: flex;
         align-items: center;
         position: sticky;
         top: 0;
-        padding: 1rem;
+        // font-weight: 600;
+        // border-bottom: 1px solid #eee;
+        // cursor: pointer;
+
+        font-family: DM Sans, sans-serif;
+        color: #5c5e6e;
+        font-size: 15px;
         font-weight: 600;
-        border-bottom: 1px solid #eee;
-        cursor: pointer;
-        user-select: none;
+        margin-bottom: 20px;
         &::after {
             content: '\f107';
             font-weight: 700;
@@ -43,7 +44,7 @@
         }
     }
     ul {
-        padding: 10.098px 14.418px;
+        // padding: 10.098px 14.418px;
         .h1-list {
             font-weight: 700;
         }
@@ -52,11 +53,12 @@
         }
         .h2-list ~ .h3-list {
             margin-left: 1.4em;
+            font-size: 12px;
         }
         li {
             margin-top: 3.618px;
             &:hover {
-                color: #3273dc;
+                color: #fff;
             }
             a {
                 display: inline-block;

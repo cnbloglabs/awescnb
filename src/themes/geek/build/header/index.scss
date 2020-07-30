@@ -119,28 +119,28 @@
         }
     }
     // searchbar
-    .custom-searchbar {
-        margin: 0 1rem;
-        height: 28px;
-        outline: none;
-        font-size: 100%;
-        border: solid 1px #ccc;
-        padding: 0 0.5rem;
-        width: 65px;
-        border-radius: 6px;
-        transition: all 0.5s;
-        font-size: 14px;
-        &:focus {
-            width: 220px;
-            background-color: #fff;
-            border-color: #7175e4;
-            box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
-        }
-        &::-webkit-search-decoration,
-        &::-webkit-search-cancel-button {
-            display: none;
-        }
-    }
+    // .custom-searchbar {
+    //     margin: 0 1rem;
+    //     height: 28px;
+    //     outline: none;
+    //     font-size: 100%;
+    //     border: solid 1px #ccc;
+    //     padding: 0 0.5rem;
+    //     width: 65px;
+    //     border-radius: 6px;
+    //     transition: all 0.5s;
+    //     font-size: 14px;
+    //     &:focus {
+    //         width: 220px;
+    //         background-color: #fff;
+    //         border-color: #7175e4;
+    //         box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+    //     }
+    //     &::-webkit-search-decoration,
+    //     &::-webkit-search-cancel-button {
+    //         display: none;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 1024px) {
@@ -219,10 +219,10 @@
                 }
             }
         }
-        .custom-searchbar {
-            width: 220px;
-            display: none;
-            margin-bottom: 1rem;
-        }
+        // .custom-searchbar {
+        //     width: 220px;
+        //     display: none;
+        //     margin-bottom: 1rem;
+        // }
     }
 }

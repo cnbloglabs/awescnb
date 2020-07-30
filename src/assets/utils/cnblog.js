@@ -1,16 +1,21 @@
-const {
-    login,
-    logout,
-    register,
-    deliverT2,
-    deliverC1C2,
-    deliverGoogleAdC1C2,
-    hideWhenNoAdDelivery,
-    loadSideColumnAd,
-} = window
+const { login, logout, register, currentBlogApp } = window
 
-export default {
-    login,
-    logout,
-    register,
+/**
+ * 获取用户昵称
+ */
+const getUsername = () => {
+    return currentBlogApp ? currentBlogApp : '昵称'
 }
+
+/**
+ * 是否被关注
+ */
+const getFollowState = () => {
+    return (
+        $('#p_b_follow')
+            .text()
+            .trim() === '-取消关注'
+    )
+}
+
+export { login, logout, register, getFollowState, getUsername }

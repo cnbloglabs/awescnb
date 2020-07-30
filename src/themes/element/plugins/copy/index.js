@@ -1,8 +1,7 @@
 import { pageName, cacheScript } from '@tools'
-import { clipboard } from '../../constants/urls'
+import { clipboard } from '@constants/urls'
 
 function build() {
-    // 代码复制
     for (let i = 0; i <= $('pre').length; i++) {
         $('pre')
             .eq(i)

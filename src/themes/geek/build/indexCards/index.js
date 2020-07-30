@@ -3,22 +3,49 @@ import './index.scss'
 
 const build = () => {
     if (pageName() === 'index') $('.forFlow').addClass('index')
-    const ele = $('.day').find('.postTitle,.postCon,.postDesc')
+    const el = $('.day').find('.postTitle,.postCon,.postDesc')
 
-    for (var i = 0; i < ele.length; i += 3) {
+    for (var i = 0; i < el.length; i += 3) {
+        const firstEl = $(el.slice(i, i + 3)[0])
+        const secondEl = $(el.slice(i, i + 3)[1])
+        const thirdEl = $(el.slice(i, i + 3)[2])
+
+        const title = firstEl.prop('outerHTML')
+        const desc = secondEl.prop('outerHTML')
+        const detailUrl = secondEl.find('a').attr('href')
+        const editUrl = thirdEl.find('a').attr('href')
+
+        const getCounts = selector => {
+            return thirdEl
+                .find(`${selector}`)
+                .text()
+                .match(/\(([^)]*)\)/)[1]
+        }
+
+        const viewCount = getCounts('.post-view-count')
+        const commentCount = getCounts('.post-comment-count')
+        const diggCount = getCounts('.post-digg-count')
+
         const card = `
-      <div class='custom-card'>
-          ${$(ele.slice(i, i + 3)[0]).prop('outerHTML')}
-          ${$(ele.slice(i, i + 3)[1]).prop('outerHTML')}
-          ${$(ele.slice(i, i + 3)[2]).prop('outerHTML')}
-      </div>
-      `
+        <div class='custom-card'>
+            ${title}
+            ${desc}
+            <div class="custom-card-actions">
+                <span><li class="fas fa-eye"></li>${viewCount}</span>
+                <span><li class="fas fa-comment-dots"></li>${commentCount}</span>
+                <span><li class="fas fa-thumbs-up"></li>${diggCount}</span>
+                <a href="${detailUrl}"><button>阅读</button></a>
+                <a href="${editUrl}"><button>编辑</button></a>
+            </div>
+        </div>
+        `
+
         $('.custom-card').length
             ? $('.custom-card:last').after(card)
             : $('.forFlow').prepend(card)
-
-        // $('.day').remove()
     }
+
+    $('.day').remove()
 }
 
 const indexCards = () => {

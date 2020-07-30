@@ -5,7 +5,7 @@ const defaultOptions = {
         color: '#FFB3CC',
         title: '',
         contentSize: 'mid',
-        headerBackground: '',
+        headerBackground: 'https://api.ixiaowai.cn/api/api.php',
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
     },
@@ -128,7 +128,7 @@ const defaultOptions = {
     // 个性签名
     signature: {
         enable: false,
-        contents: [],
+        contents: [''],
     },
     // 二维码
     qrcode: {

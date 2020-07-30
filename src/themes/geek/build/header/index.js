@@ -28,21 +28,7 @@ const headerBtn = () => {
     })
 }
 
-// 构建搜索框
-const buildSearchbar = () => {
-    const ele = `<input id="q" class="custom-searchbar" type="search" placeholder="Search by pressing enter" onkeydown="return zzk_go_enter(event);"/>`
-    $('#navigator').after(ele)
-}
-
 // GitHub 图标
-const buildGithub = () => {
-    const { url } = window.opts.github
-    const ele = `
-    <li>
-        <a id="custom-gtihub" href="${url}">Github</a>
-    </li>`
-    $('#navList').append(ele)
-}
 
 // header右侧按钮容器
 // const buildHeader = () => {
@@ -84,8 +70,7 @@ const header = () => {
     headerBtn()
     // customLinks()
     // headerInnerPostTitle()
-    buildSearchbar()
-    buildGithub()
+    // buildGithub()
 }
 
 module.exports = header

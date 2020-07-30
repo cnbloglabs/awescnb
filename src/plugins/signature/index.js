@@ -4,9 +4,10 @@ import Typed from 'typed.js'
 
 const { enable, contents } = window.opts.signature
 
-function build() {
+function build(options) {
+    const { selector } = options
     const signature = `<div class='custom-signature'><span></span></div>`
-    $('#sidebar_news').append(signature)
+    $(selector).append(signature)
 }
 
 function typed() {
@@ -16,9 +17,13 @@ function typed() {
     })
 }
 
-function signature() {
+function signature(options) {
     if (!enable) return
-    build()
+    const defaultOptions = {
+        selector: '#sidebar_news',
+    }
+    if (options) $.extend(true, defaultOptions, options)
+    build(options)
     typed()
 }
 

@@ -1,3 +1,38 @@
+function getQuarter() {
+    var month = new Date().getMonth()
+    if (month < 3) {
+        return 'Spring'
+    } else if (month < 6) {
+        return 'Summer'
+    } else if (month < 9) {
+        return 'Autumn'
+    } else if (month < 12) {
+        return 'Windter'
+    }
+}
+
+/**
+ * 获取引文月份
+ */
+function getMonth() {
+    const monthsInEng = [
+        'Jan',
+        'Feb',
+        'March',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Oct',
+        'Nov',
+        'Dec',
+    ]
+    const month = new Date().getMonth()
+    return monthsInEng[month]
+}
+
 /**
  * @description 元素是否在视口范围内
  * @param {el} Object
@@ -371,4 +406,6 @@ export {
     addCss,
     isNight,
     isElementInViewport,
+    getMonth,
+    getQuarter,
 }

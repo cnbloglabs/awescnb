@@ -1,0 +1,132 @@
+.logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    height: 68px;
+    line-height: 68px;
+    letter-spacing: 4px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+        to bottom,
+        #151728 0%,
+        #151728 76%,
+        rgba(21, 23, 40, 0) 100%
+    );
+}
+
+// navlist start
+#navList {
+    #blog_nav_sitehome::before {
+        content: '\f781';
+        font-weight: bold;
+        color: #3273dc;
+    }
+    #blog_nav_myhome::before {
+        content: '\f015';
+        font-weight: bold;
+        color: #00d1b2;
+    }
+    #blog_nav_contact::before {
+        content: '\f0e0';
+        font-weight: bold;
+        color: #48c774;
+    }
+    #blog_nav_rss::before {
+        content: '\f143';
+        font-weight: bold;
+        color: #ffd257;
+    }
+    #blog_nav_admin::before {
+        content: '\f02d';
+        font-weight: bold;
+        color: #00d1b2;
+    }
+    #blog_nav_newpost {
+        &::before {
+            content: '\f304';
+            font-weight: bold;
+            color: #e7339f;
+        }
+    }
+}
+// navlist end
+
+.side-wrapper {
+    padding: 30px;
+    h3 {
+        font-family: 'DM Sans', sans-serif;
+        color: #5c5e6e;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        white-space: nowrap;
+        li {
+            text-decoration: none;
+            color: #9c9cab;
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.follow-me {
+    display: flex;
+    align-items: center;
+    // flex-shrink: 0;
+    margin-top: auto;
+    text-decoration: none;
+    font-size: 14px;
+    overflow: hidden;
+    color: #9c9cab;
+    padding: 0 20px;
+    height: 52px;
+    border-top: 1px solid #272a3a;
+    position: relative;
+    .follow-text {
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+    .developer {
+        position: absolute;
+        color: #fff;
+        left: 0;
+        top: -100%;
+        display: flex;
+        transition: 0.3s;
+        padding: 0 20px;
+        align-items: center;
+        background-color: #272a3a;
+        width: 100%;
+        height: 100%;
+        img {
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+    }
+    &:hover {
+        .follow-text {
+            transform: translateY(100%);
+        }
+        .developer {
+            top: 0;
+        }
+    }
+}

@@ -27,3 +27,7 @@ export const materialize =
 export const linenumbersjs =
     'https://cdn.bootcdn.net/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js'
 export const jqueryui = 'https://code.jquery.com/ui/1.12.0/jquery-ui.js'
+export const clipboard =
+    'https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js'
+
+// https://images.unsplash.com/photo-1508247967583-7d982ea01526?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="" class="profile-cover

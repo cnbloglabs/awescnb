@@ -5,26 +5,26 @@ const options = {
     items: [
         // 返回顶部
         {
-            icon: 'fa-arrow-up',
-            backgroundColor: '#fff',
+            icon: 'fa-arrow-alt-circle-up', //
+            backgroundColor: '#202234',
         },
         // 评论
         {
             icon: 'fa-comment-dots',
-            backgroundColor: '#fff',
+            backgroundColor: '#202234',
         },
         // 收藏
         {
             icon: 'fa-star',
-            backgroundColor: '#fff',
+            backgroundColor: '#202234',
         },
         {
             icon: 'fa-heart',
-            backgroundColor: '#fff',
+            backgroundColor: '#202234',
         },
         {
             icon: 'fa-thumbs-up',
-            backgroundColor: '#fff',
+            backgroundColor: '#202234',
         },
     ],
 }

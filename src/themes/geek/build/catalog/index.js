@@ -60,19 +60,16 @@ function build() {
         })
 
     const $catalog = $($catalogContainer.append($ulContainer))
-    $('#sidebar_news').after($catalog)
+    $('#calendar').before($catalog)
 }
 
 function noCatalog() {
-    // 如果没生成catalog，内容的宽度一律为54vw，写在style/index.scss中
-    // 所以给 header padding left 一个固定的值
     if (pageName() !== 'post') return
-    // $('#header').css('padding-left', '14.2vw')
 }
 
 // 设置目录活跃标题样式
 function setActiveCatalogTitle() {
-    $(window).scroll(
+    $('#mainContent').scroll(
         throttle(
             function() {
                 for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
@@ -83,7 +80,7 @@ function setActiveCatalogTitle() {
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (getClientRect(postTitle).top <= 10) {
+                    if (getClientRect(postTitle).top <= 100) {
                         if (
                             $($('#catalog ul li')[i]).hasClass('catalog-active')
                         )
@@ -102,27 +99,27 @@ function setActiveCatalogTitle() {
     )
 }
 
-function setCatalogToggle() {
-    // var p = 0,
-    //     t = 0
-    $(window).scroll(
-        throttle(
-            function() {
-                if ($('#catalog ul').css('display') === 'none') return
-                const bottom = getClientRect(
-                    document.querySelector('#sideBarMain'),
-                ).bottom
-                if (bottom <= 0) {
-                    $('#catalog').addClass('catalog-sticky')
-                } else {
-                    $('#catalog').removeClass('catalog-sticky')
-                }
-            },
-            50,
-            1000 / 60,
-        ),
-    )
-}
+// function setCatalogToggle() {
+//     // var p = 0,
+//     //     t = 0
+//     $(window).scroll(
+//         throttle(
+//             function() {
+//                 if ($('#catalog ul').css('display') === 'none') return
+//                 const bottom = getClientRect(
+//                     document.querySelector('#sideBarMain'),
+//                 ).bottom
+//                 if (bottom <= 0) {
+//                     $('#catalog').addClass('catalog-sticky')
+//                 } else {
+//                     $('#catalog').removeClass('catalog-sticky')
+//                 }
+//             },
+//             50,
+//             1000 / 60,
+//         ),
+//     )
+// }
 
 function toggle() {
     $('.catalog-title').click(function() {
@@ -143,7 +140,7 @@ function catalog() {
     ) {
         build()
         setActiveCatalogTitle()
-        setCatalogToggle()
+        // setCatalogToggle()
         toggle()
     } else {
         noCatalog()

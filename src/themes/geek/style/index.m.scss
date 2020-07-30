@@ -1,27 +1,4 @@
 @media screen and (max-width: 1024px) {
-    #main {
-        padding: 0;
-        #mainContent {
-            width: 100%;
-            // padding: 3rem;
-            // margin-left: 0rem;
-            border-left: none;
-            #myposts {
-                padding: 0.5rem;
-
-                flex-direction: column;
-            }
-            .PostList {
-                width: auto;
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-        #sideBar {
-            display: none;
-        }
-    }
-
     .topicListFooter {
         margin-left: 0;
         margin-right: 0;
@@ -31,15 +8,55 @@
     #comment_form,
     #post_detail {
         padding: 1rem;
-        background-color: #fff;
     }
 }
 
 @media screen and (max-width: 767px) {
+    #home {
+        grid-template-columns: 1fr;
+    }
+    #main {
+        margin-top: 0;
+        grid-area: auto;
+        height: 100vh;
+    }
+
+    #sideBar {
+        display: none;
+    }
+
+    #left-side {
+        display: none;
+    }
+
     .commentform {
         margin-left: 0;
     }
+
+    .topicListFooter {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+
     #blog_post_info_block #blog_post_info #div_digg {
         margin-top: 1rem;
+    }
+
+    #poweredby {
+        display: none;
+    }
+
+    #myposts {
+        grid-template-columns: repeat(1, 1fr);
+        .pager {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+    }
+
+    #GalleryThumbNailViewer1_ThumbNails {
+        & > tbody > tr {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }

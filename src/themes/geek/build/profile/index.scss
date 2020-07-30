@@ -1,0 +1,138 @@
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    max-height: 350px;
+    z-index: 1;
+}
+
+.profile:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-image: url('https://api.mz-moe.cn/img/img851.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(50px);
+    opacity: 0.7;
+    margin: 0;
+}
+
+.profile-signature {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 3px #151728;
+    z-index: 2;
+}
+
+.profile-avatar {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+    bottom: 16px;
+    left: 24px;
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #151728;
+    }
+    .profile-msg {
+        margin-left: 24px;
+        margin-bottom: 24px;
+        button {
+            margin-left: 10px;
+            background-color: #ffc312;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            padding: 3px 7px;
+            box-shadow: 0 0 3px #ffc312;
+            cursor: pointer;
+        }
+        p:nth-child(1) {
+            font-size: 22px;
+            color: #fff;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+            text-shadow: 0 0 3px #151728;
+        }
+        p:nth-child(2) {
+            font-size: 12px;
+            color: #fff;
+            text-shadow: 0 0 3px #151728;
+        }
+    }
+}
+
+.profile-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.profile-menu {
+    position: absolute;
+    bottom: 0;
+    padding-left: 200px;
+    background: #151728;
+    width: 100%;
+    display: flex;
+    border-radius: 0 0 4px 4px;
+    .profile-menu-link {
+        padding: 20px 16px;
+        color: #5c5e6e;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .profile-menu-link.active,
+    .profile-menu-link:hover {
+        color: #fff;
+        background-color: #1b1d2e;
+        border-bottom: 3px solid #1488fa;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .profile-menu {
+        padding: 0 30px;
+        overflow: auto;
+        .profile-menu-link {
+            padding: 10px 8px;
+            color: #5c5e6e;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .profile-menu-link.active,
+        .profile-menu-link:hover {
+            color: #fff;
+            background-color: #1b1d2e;
+            border-bottom: 3px solid #1488fa;
+        }
+    }
+    .profile-avatar {
+        bottom: 30px;
+        .profile-img {
+            width: 80px;
+            height: 80px;
+        }
+        .profile-msg {
+            margin-left: 10px;
+        }
+    }
+}

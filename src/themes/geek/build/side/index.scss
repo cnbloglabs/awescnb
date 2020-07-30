@@ -1,53 +1,180 @@
-#sidebar_new {
-    &::after {
-        content: '123';
-        display: block;
+// #sidebar_new {
+//     &::after {
+//         content: '123';
+//         display: block;
+//     }
+// }
+
+// #sidebar_news h3::before {
+//     content: '\f2bb';
+// }
+
+// #blog-calendar-title::before {
+//     content: '\f274';
+// }
+
+// #sidebar_search h3::before {
+//     content: '\f002';
+// }
+
+// #sidebar_shortcut h3::before {
+//     // content: '\f0c1';
+//     // content: "\f35d";
+//     content: '\f360';
+// }
+
+// #sidebar_recentposts h3::before {
+//     content: '\f15c';
+// }
+// #sidebar_toptags h3::before {
+//     content: '\f02c';
+// }
+// #sidebar_scorerank h3::before {
+//     content: '\f1d8';
+// }
+// #sidebar_categories h3::before {
+//     content: '\f00b';
+// }
+// #sidebar_postarchive h3::before {
+//     content: '\f07c';
+// }
+
+// #sidebar_recentcomments h3::before {
+//     content: '\f4ad';
+// }
+// #sidebar_topviewedposts h3::before {
+//     content: '\f06e';
+// }
+// #sidebar_topcommentedposts h3::before {
+//     content: '\f086';
+// }
+// #sidebar_topdiggedposts h3::before {
+//     content: '\f164';
+// }
+
+// 顶部按钮 start
+
+.account {
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #151728;
+    z-index: 3;
+    flex-shrink: 0;
+}
+
+.account-button {
+    border: 0;
+    background: 0;
+    color: #64677a;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    .fas::before {
+        font-size: 20px;
     }
 }
 
-#sidebar_news h3::before {
-    content: '\f2bb';
+.account-user {
+    display: inline-flex;
+    align-items: center;
+    color: #64677a;
+    font-weight: 600;
+    .account-profile {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+    span {
+        font-size: 10px;
+        font-weight: normal;
+    }
 }
 
-#blog-calendar-title::before {
-    content: '\f274';
+// 顶部按钮 end
+
+// 日历 start
+
+#calendar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    height: 260px;
+    border-bottom: 1px solid #272a3a;
+    overflow: hidden;
+    .event-wrapper,
+    #blog-calendar {
+        padding: 30px 30px 0;
+        transition: 0.3s;
+    }
+    .event-wrapper {
+        position: relative;
+        img {
+            width: 100%;
+            height: 149px;
+            display: block;
+            padding-bottom: 12px;
+        }
+        .event-date {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            .event-month {
+                background-color: #1687fa;
+                padding: 2px 20px;
+                font-weight: 600;
+                font-family: 'DM Sans', sans-serif;
+                color: #fff;
+                text-align: center;
+                border-radius: 4px 4px 0 0;
+            }
+            .event-day {
+                width: 100%;
+                backdrop-filter: blur(4px);
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: 'DM Sans', sans-serif;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: 0px 0;
+                text-align: center;
+            }
+        }
+        .event-title {
+            color: #c3c5d5;
+            margin-bottom: 5px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            padding: 0 14px;
+            font-size: 14px;
+        }
+        .event-subtitle {
+            color: #5c5e6e;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0 14px;
+        }
+    }
+    #blog-calendar {
+        position: absolute;
+        // left: 0;
+        top: -100%;
+    }
+    &:hover {
+        .event-wrapper {
+            transform: translateY(calc(100% + 30px));
+        }
+        #blog-calendar {
+            top: 0;
+        }
+    }
 }
 
-#sidebar_search h3::before {
-    content: '\f002';
-}
-
-#sidebar_shortcut h3::before {
-    // content: '\f0c1';
-    // content: "\f35d";
-    content: '\f360';
-}
-
-#sidebar_recentposts h3::before {
-    content: '\f15c';
-}
-#sidebar_toptags h3::before {
-    content: '\f02c';
-}
-#sidebar_scorerank h3::before {
-    content: '\f1d8';
-}
-#sidebar_categories h3::before {
-    content: '\f00b';
-}
-#sidebar_postarchive h3::before {
-    content: '\f07c';
-}
-
-#sidebar_recentcomments h3::before {
-    content: '\f4ad';
-}
-#sidebar_topviewedposts h3::before {
-    content: '\f06e';
-}
-#sidebar_topcommentedposts h3::before {
-    content: '\f086';
-}
-#sidebar_topdiggedposts h3::before {
-    content: '\f164';
-}
+// 日历 end
