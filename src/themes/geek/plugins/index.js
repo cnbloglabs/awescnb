@@ -7,7 +7,7 @@ import emoji from '@plugins/emoji'
 // import postSignature from '@plugins/postSignature'
 // import notice from '@plugins/notice'
 import signature from '@plugins/signature'
-// import commentsAvatars from '@plugins/commentsAvatars'
+import commentsAvatars from '@plugins/commentsAvatars'
 // import notation from '@plugins/notation'
 import menu from './menu'
 import './coverPlugins.scss'
@@ -24,7 +24,7 @@ const plugins = () => {
     menu()
     // postSignature()
     // notice()
-    // commentsAvatars()
+    commentsAvatars()
 }
 
 module.exports = plugins

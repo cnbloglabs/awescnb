@@ -1,5 +1,5 @@
 // 显示评论列表头像
-import { pageName } from '@tools'
+import { pageName, poll } from '@tools'
 import env from '@constants/env'
 
 function build() {
@@ -21,9 +21,9 @@ function build() {
 
 function show() {
     if (pageName() !== 'post') return
-    setTimeout(function() {
-        build()
-    }, 300)
+    setTimeout(() => {
+        poll($('.feedbackItem').length, build)
+    }, 1000)
     // $(document).ajaxComplete(function(event, xhr, option) {
     //     console.log(option)
     //     if (option.url.indexOf('GetComments') > -1) {
