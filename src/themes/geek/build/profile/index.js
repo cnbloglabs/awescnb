@@ -1,5 +1,13 @@
 import toast from '@plugins/toast'
-import { getFollowState, getBlogname } from '@cnblog'
+import {
+    getFollowState,
+    getBlogname,
+    getBlogAge,
+    getFollowers,
+    getFollowing,
+    getFollowersDetailsUrl,
+    getFollowingDetailsUrl,
+} from '@cnblog'
 import './index.scss'
 
 const follow = () => {
@@ -13,6 +21,9 @@ const build = () => {
     const { avatar } = window.opts.theme
     const { headerBackground } = window.opts.theme
     const userName = getBlogname()
+    const age = getBlogAge()
+    const fans = getFollowers()
+    const focus = getFollowing()
     const el = `
     <div class="profile">
         <div class="profile-signature"></div>
@@ -24,9 +35,9 @@ const build = () => {
                     <button>${getFollowState() ? '取消关注' : '关注'}</button>
                 </p>
                 <p>
-                    <span>园龄：${'11个月'}</span>
-                    <span>粉丝：${100}</span>
-                    <span>关注：${10}</span>
+                    <span>园龄：${age}</span>
+                    <span><a href="${getFollowersDetailsUrl}">粉丝：${fans}</a></span>
+                    <span><a href="${getFollowingDetailsUrl}">关注：${focus}</a></span>
             </div>
         </div>
         <img src="${headerBackground}" class="profile-cover">

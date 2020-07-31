@@ -12,10 +12,15 @@
 
 .custom-comment-avatar {
     align-self: baseline;
-
     img {
         width: 50px;
         height: 50px;
         border-radius: 50%;
     }
+}
+
+// postMessage
+.custom-categories a,
+.custom-tags a {
+    box-shadow: none;
 }

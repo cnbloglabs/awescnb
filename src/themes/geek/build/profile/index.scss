@@ -68,9 +68,13 @@
             text-shadow: 0 0 3px #151728;
         }
         p:nth-child(2) {
+            margin-top: 5px;
             font-size: 12px;
             color: #fff;
             text-shadow: 0 0 3px #151728;
+            span {
+                margin-right: 5px;
+            }
         }
     }
 }
@@ -126,13 +130,15 @@
         }
     }
     .profile-avatar {
-        bottom: 30px;
+        left: 20px;
+        bottom: 54px;
         .profile-img {
             width: 80px;
             height: 80px;
         }
         .profile-msg {
             margin-left: 10px;
+            margin-bottom: 0;
         }
     }
 }

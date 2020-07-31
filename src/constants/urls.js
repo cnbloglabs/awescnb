@@ -15,6 +15,8 @@ export const themeRepository = 'https://guangzan.gitee.io/awescnb'
 export const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
 export const emojijs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js'
+
+//https://unpkg.com/@joeattardi/emoji-button@4.0.1/dist/index.js
 export const live2djs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js'
 // CDN

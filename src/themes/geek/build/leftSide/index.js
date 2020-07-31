@@ -17,7 +17,7 @@ const buildLeftside = () => {
     // </div>`
     const el = `
     <div id='left-side'>
-        <div class='logo'>CNBLOG</div>
+        <div class='logo'><a href="https://www.cnblogs.com/">CNBLOG</a></div>
     </div>`
     $('#home').append(el)
 }
