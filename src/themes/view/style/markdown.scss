@@ -214,6 +214,9 @@
     .cnblogs-post-body table {
         margin-top: 0;
     }
+    .cnblogs-markdown table tr td {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 1023px) {
