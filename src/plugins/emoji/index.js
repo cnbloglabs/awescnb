@@ -70,6 +70,7 @@ function build() {
 function emoji() {
     if (!enable) return
     if (pageName() !== 'post') return
+    // alert(emojijs)
     cacheScript(emojijs, build)
 }
 
