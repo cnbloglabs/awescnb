@@ -195,6 +195,27 @@
     // }
 }
 
+.feedbackCon {
+    .cnblogs-markdown pre,
+    .cnblogs_code {
+        &:before {
+            display: none;
+        }
+    }
+    .copy-btns {
+        display: none;
+    }
+    .cnblogs-markdown pre,
+    .cnblogs_code {
+        background: none;
+    }
+    #cnblogs_post_body table,
+    .cnblogs-markdown table,
+    .cnblogs-post-body table {
+        margin-top: 0;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     #cnblogs_post_body,
     .cnblogs-post-body,

@@ -18,7 +18,7 @@ const buildCustomLinksToLeftSide = () => {
     const links = window.opts.links
     for (const { name, link } of links) {
         $('#left-side').find('ul').append(`
-            <li><a href="${link}">${name}</a></li>
+            <li><a href="${link}" target="_blank">${name}</a></li>
         `)
     }
 }

@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'view',
     template: 'post',
     eslint: true,
     sourceMap: false,
