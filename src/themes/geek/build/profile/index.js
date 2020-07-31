@@ -36,8 +36,8 @@ const build = () => {
                 </p>
                 <p>
                     <span>园龄：${age}</span>
-                    <span><a href="${getFollowersDetailsUrl}">粉丝：${fans}</a></span>
-                    <span><a href="${getFollowingDetailsUrl}">关注：${focus}</a></span>
+                    <span><a href="${getFollowersDetailsUrl()}">粉丝：${fans}</a></span>
+                    <span><a href="${getFollowingDetailsUrl()}">关注：${focus}</a></span>
             </div>
         </div>
         <img src="${headerBackground}" class="profile-cover">

@@ -213,7 +213,7 @@ const defaultOptions = {
     links: [
         {
             name: '自定义链接',
-            link: 'https://gitee.com/guangzan/awescnb',
+            link: '',
         },
     ],
 }

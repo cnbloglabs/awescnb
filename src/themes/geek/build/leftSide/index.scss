@@ -83,11 +83,15 @@
     }
 }
 
+.leftside-bottom {
+    margin-top: auto;
+}
+
 .follow-me {
     display: flex;
     align-items: center;
     // flex-shrink: 0;
-    margin-top: auto;
+
     text-decoration: none;
     font-size: 14px;
     overflow: hidden;
