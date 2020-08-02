@@ -23,7 +23,7 @@ function signature(options) {
         selector: '#sidebar_news',
     }
     if (options) $.extend(true, defaultOptions, options)
-    build(options)
+    build(defaultOptions)
     typed()
 }
 

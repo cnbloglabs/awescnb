@@ -128,7 +128,7 @@ const defaultOptions = {
     // 个性签名
     signature: {
         enable: false,
-        contents: [''],
+        contents: [],
     },
     // 二维码
     qrcode: {

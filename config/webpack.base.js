@@ -23,12 +23,12 @@ if (eslint) {
 module.exports = {
     entry: {
         index: './src/main.js',
-        // acg: './src/themes/acg/index.js',
-        // reacg: './src/themes/reacg/index.js',
-        // gshang: './src/themes/gshang/index.js',
-        // element: './src/themes/element/index.js',
-        // simple: './src/themes/simple/index.js',
-        // view: './src/themes/view/index.js',
+        acg: './src/themes/acg/index.js',
+        reacg: './src/themes/reacg/index.js',
+        gshang: './src/themes/gshang/index.js',
+        element: './src/themes/element/index.js',
+        simple: './src/themes/simple/index.js',
+        view: './src/themes/view/index.js',
         [themeName]: `./src/themes/${themeName}/index.js`,
     },
     output: {
