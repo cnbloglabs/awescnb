@@ -10,7 +10,7 @@ const defaultOptions = {
         color: '#FFB3CC',
         title: '',
         contentSize: 'mid',
-        headerBackground: 'https://api.uomg.com/api/rand.avatar',
+        headerBackground: '',
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
     },
@@ -78,9 +78,9 @@ const defaultOptions = {
     emoji: {
         enable: true,
         showRecents: true,
-        recentsCount: 20,
-        showPreview: false,
         showSearch: true,
+        showPreview: false,
+        recentsCount: 20,
         theme: 'auto',
     },
     // 暗色模式
