@@ -29,6 +29,11 @@ function setSidebarIcon() {
             sonIcon: icons.link,
         },
         {
+            title: sidebarWraps.friends,
+            icon: icons.friends,
+            sonIcon: icons.link,
+        },
+        {
             title: sidebarWraps.album,
             icon: icons.album,
             sonIcon: icons.photo,

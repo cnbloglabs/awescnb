@@ -573,8 +573,9 @@ body {
                 margin-top: 0;
             }
         }
-        #sidebar_recentposts,
-        #sidebar_recentcomments {
+
+        // #sidebar_recentcomments
+        #sidebar_recentposts {
             ul li {
                 @include text-over();
             }
@@ -594,6 +595,7 @@ body {
         #sidebar_toptags,
         #sidebar_imagecategory,
         #sidebar_postcategory,
+        .sidebar-block,
         #sidebar_postarchive,
         #sidebar_recentcomments,
         #sidebar_topviewedposts .catListView,
@@ -625,6 +627,7 @@ body {
         #sidebar_toptags ul,
         #sidebar_imagecategory ul,
         #sidebar_postcategory ul,
+        .sidebar-block ul,
         #sidebar_postarchive ul,
         #sidebar_recentcomments .RecentCommentBlock,
         #TopViewPostsBlock,

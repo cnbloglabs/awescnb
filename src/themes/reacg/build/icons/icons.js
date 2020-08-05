@@ -1,4 +1,4 @@
-export const fontUrl = '//at.alicdn.com/t/font_1595820_qlveru8zeqn.js'
+export const fontUrl = '//at.alicdn.com/t/font_1595820_xb2hu5wpss.js'
 
 export const icons = {
     dig: '#ac-dig', //推荐
@@ -34,6 +34,7 @@ export const icons = {
     md: '#ac-md', // #号
     album: '#ac-album', // 相册
     photo: '#ac-photo', // 相册
+    friends: '#ac-friends', // 侧边栏友情链接
 }
 
 export const foodIcons = {

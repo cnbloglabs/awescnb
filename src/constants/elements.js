@@ -17,6 +17,7 @@ const sidebarWraps = {
     topDig: '#topdigg_posts_wrap', //推荐排行
     album: '#sidebar_imagecategory',
     catalog: '#catalog', //文章目录
+    friends: '#sidebar_links1065840', //文章目录
 }
 
 export { sidebarWraps }
