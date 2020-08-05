@@ -1,3 +1,8 @@
+/**
+ * awescnb 默认配置
+ * 可以在开发环境调试
+ */
+
 const defaultOptions = {
     // 基本配置
     theme: {
@@ -5,7 +10,7 @@ const defaultOptions = {
         color: '#FFB3CC',
         title: '',
         contentSize: 'mid',
-        headerBackground: '',
+        headerBackground: 'https://api.uomg.com/api/rand.avatar',
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
     },
@@ -72,10 +77,11 @@ const defaultOptions = {
     // 评论输入框表情
     emoji: {
         enable: true,
-        showRecents: false,
+        showRecents: true,
         recentsCount: 20,
         showPreview: false,
-        showSearch: false,
+        showSearch: true,
+        theme: 'auto',
     },
     // 暗色模式
     darkMode: {

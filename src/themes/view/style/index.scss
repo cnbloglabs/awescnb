@@ -74,6 +74,7 @@ body {
 #mainContent {
     width: 80%;
     border-left: 1px solid #ccc;
+    background-color: #fff;
     .dayTitle {
         display: none;
     }
@@ -102,6 +103,50 @@ body {
         padding-top: 0.5rem;
     }
 }
+
+// 相册 start
+
+.gallery {
+    & > img {
+        width: 100%;
+        height: auto;
+    }
+    & > br {
+        display: none;
+    }
+}
+
+#GalleryThumbNailViewer1_ThumbNails {
+    display: block;
+    padding: 1rem;
+    tbody,
+    tr,
+    td,
+    img {
+        display: block;
+    }
+    img {
+        width: 150px;
+        height: 150px;
+    }
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    td {
+        margin-right: 5px;
+    }
+}
+
+.thumbTitle {
+    padding: 1rem;
+    border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+    background-color: #fff;
+    color: var(--text-4);
+    font-size: 16px;
+}
+
+// 相册 end
 
 .topicListFooter {
     width: 100%;
@@ -205,6 +250,7 @@ body {
         #sidebar_recentposts,
         #sidebar_toptags,
         #sidebar_scorerank,
+        #sidebar_imagecategory,
         #sidebar_postcategory,
         #sidebar_postarchive,
         #sidebar_recentcomments,
@@ -224,6 +270,7 @@ body {
         #sidebar_toptags .catListTitle,
         #sidebar_scorerank .catListTitle,
         #sidebar_postcategory .catListTitle,
+        #sidebar_imagecategory .catListTitle,
         #sidebar_postarchive .catListTitle,
         #sidebar_recentcomments .catListTitle,
         #sidebar_topviewedposts .catListTitle,

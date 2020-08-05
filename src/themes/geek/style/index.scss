@@ -3,32 +3,7 @@
 @import './scroll.scss';
 @import './animate.scss';
 @import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
-@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/brands.min.css);
-:root {
-    --primary-color: #f00;
-    --secondary-color: #eee;
-
-    --text-color-lightest: #151728;
-    --text-color-darker: #151728;
-    --text-color-dark: #151728;
-    --text-color-gray: #151728;
-    --text-color-dark-gray: #151728;
-    --text-color-light-gray: #151728;
-
-    --back-color-lightest: #151728;
-    --back-color-darker: #151728;
-    --back-color-dark: #151728;
-    --back-color-gray: #151728;
-    --back-color-dark-gray: #151728;
-    --back-color-light-gray: #151728;
-
-    --border-color-lightest: #151728;
-    --border-color-darker: #151728;
-    --border-color-dark: #151728;
-    --border-color-gray: #151728;
-    --border-color-dark-gray: #151728;
-    --border-color-light-gray: #151728;
-}
+// @import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/brands.min.css);
 
 * {
     box-sizing: border-box;
@@ -639,8 +614,9 @@ body {
                 &:nth-child(2),
                 &:nth-child(3) {
                     padding: 4px 10px;
+                    // background-color: #202234;
                     &:hover {
-                        box-shadow: 0 0 5px #999;
+                        box-shadow: 0 0 5px #202234;
                         transform: scale(1.1);
                         transform: translateY(-2px);
                         transition: all 0.2s;
@@ -732,7 +708,7 @@ body {
                     transition: all 0.2s;
                 }
                 &::before {
-                    content: '\f7a9';
+                    content: '\f004';
                     color: #fff;
                 }
             }
@@ -860,13 +836,13 @@ body {
     }
     .layer {
         padding: 0 5.4px;
-        background-color: #fa745e;
+        background-color: #202234;
         color: #fff;
         font-weight: 700;
         border-radius: 3px;
         margin-right: 5.4px;
         order: 0;
-        font-size: 14px;
+        font-size: 12px;
     }
     .comment_date {
         margin: 0 5.4px;
@@ -985,7 +961,7 @@ body {
             #tbCommentBody {
                 margin-bottom: 10.8px !important;
                 height: 81px;
-                min-height: 135px;
+                min-height: 170px;
                 color: var(--text-5);
                 background: none;
                 font-size: 16px;

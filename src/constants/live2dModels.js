@@ -1,3 +1,7 @@
+/**
+ * live2d widgets
+ */
+
 const live2dModels = {
     chitose: 'live2d-widget-model-epsilon2_1/assets/Epsilon2.1.model.json',
     epsilon2_1: 'live2d-widget-model-chitose/assets/chitose.model.json',

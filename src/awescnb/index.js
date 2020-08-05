@@ -1,4 +1,3 @@
-import '@/assets/style/common.css'
 import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
 

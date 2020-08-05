@@ -23,13 +23,13 @@ if (eslint) {
 module.exports = {
     entry: {
         index: './src/main.js',
+        [themeName]: `./src/themes/${themeName}/index.js`,
         // acg: './src/themes/acg/index.js',
         // reacg: './src/themes/reacg/index.js',
         // gshang: './src/themes/gshang/index.js',
         // element: './src/themes/element/index.js',
         // simple: './src/themes/simple/index.js',
         // view: './src/themes/view/index.js',
-        [themeName]: `./src/themes/${themeName}/index.js`,
     },
     output: {
         filename: '[name].js',
@@ -55,6 +55,7 @@ module.exports = {
             '@awescnb': path.resolve('src/awescnb'),
             '@tools': path.resolve('src/assets/utils/tools'),
             '@cnblog': path.resolve('src/assets/utils/cnblog'),
+            '@links': path.resolve('src/constants/links'),
             '@plugins': path.resolve('src/plugins'),
             '@constants': path.resolve('src/constants'),
             '@store': path.resolve('src/store'),

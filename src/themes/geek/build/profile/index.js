@@ -1,17 +1,17 @@
 import toast from '@plugins/toast'
+import { followersDetailsUrl, followingDetailsUrl } from '@links'
 import {
     getFollowState,
     getBlogname,
     getBlogAge,
     getFollowers,
     getFollowing,
-    getFollowersDetailsUrl,
-    getFollowingDetailsUrl,
 } from '@cnblog'
 import './index.scss'
 
 const follow = () => {
     $('.profile-msg button').click(function() {
+        // $('.profile-msg p button').text('已关注')
         toast('感谢关注')
         window.follow()
     })
@@ -29,26 +29,28 @@ const build = () => {
         <div class="profile-signature"></div>
         <div class="profile-avatar">
             <img src="${avatar}" alt="" class="profile-img">
-            <div class="profile-msg">
-                <p>
-                    <span>${userName}</span>
-                    <button>${getFollowState() ? '取消关注' : '关注'}</button>
-                </p>
-                <p>
-                    <span>园龄：${age}</span>
-                    <span><a href="${getFollowersDetailsUrl()}">粉丝：${fans}</a></span>
-                    <span><a href="${getFollowingDetailsUrl()}">关注：${focus}</a></span>
-            </div>
+        </div>
+        <div class="profile-msg">
+            <p>
+                <span>${userName}</span>
+                <button>${getFollowState() ? '取消关注' : '关注'}</button>
+            </p>
+            <p>
+                <span>园龄：${age}</span>
+                <span><a href="${followersDetailsUrl}">粉丝：${fans}</a></span>
+                <span><a href="${followingDetailsUrl}">关注：${focus}</a></span>
+            </p>
         </div>
         <img src="${headerBackground}" class="profile-cover">
         <div class="profile-menu">
-            <a class="profile-menu-link active">More</a>
-            <a class="profile-menu-link">More</a>
-            <a class="profile-menu-link">More</a>
-            <a class="profile-menu-link">More</a>
-            <a class="profile-menu-link">More</a>
+            <a>more</a>
+            <a>more</a>
+            <a>more</a>
+            <a>more</a>
+            <a>more</a>
         </div>
     </div>`
+    // add class active for activing tag a
     // $('.profile:before').css('background-image', `url(${headerBackground})`)
     $('#mainContent').prepend(el)
 }

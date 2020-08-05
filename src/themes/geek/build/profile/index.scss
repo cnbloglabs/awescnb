@@ -6,31 +6,54 @@
     min-height: 250px;
     max-height: 350px;
     z-index: 1;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        background-image: url('https://api.mz-moe.cn/img/img851.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: blur(50px);
+        opacity: 0.7;
+        margin: 0;
+    }
 }
 
-.profile:before {
-    content: '';
+.profile-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    background-image: url('https://api.mz-moe.cn/img/img851.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(50px);
-    opacity: 0.7;
-    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
 }
 
-.profile-signature {
-    margin-bottom: 50px;
-    font-size: 20px;
-    color: #fff;
-    text-shadow: 0 0 3px #151728;
-    z-index: 2;
+.profile-menu {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    padding-left: 185px;
+    background: #151728;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    a {
+        padding: 20px 16px;
+        color: #5c5e6e;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    a.active,
+    a:hover {
+        color: #fff;
+        background-color: #1b1d2e;
+    }
 }
 
 .profile-avatar {
@@ -47,68 +70,46 @@
         object-fit: cover;
         border: 3px solid #151728;
     }
-    .profile-msg {
-        margin-left: 24px;
-        margin-bottom: 24px;
-        button {
-            margin-left: 10px;
-            background-color: #ffc312;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            padding: 3px 7px;
-            box-shadow: 0 0 3px #ffc312;
-            cursor: pointer;
-        }
-        p:nth-child(1) {
-            font-size: 22px;
-            color: #fff;
-            font-weight: 600;
-            font-family: 'DM Sans', sans-serif;
-            text-shadow: 0 0 3px #151728;
-        }
-        p:nth-child(2) {
-            margin-top: 5px;
-            font-size: 12px;
-            color: #fff;
-            text-shadow: 0 0 3px #151728;
-            span {
-                margin-right: 5px;
-            }
-        }
-    }
 }
 
-.profile-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 4px;
+.profile-signature {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 3px #151728;
+    z-index: 2;
 }
 
-.profile-menu {
+.profile-msg {
     position: absolute;
-    bottom: 0;
-    padding-left: 200px;
-    background: #151728;
-    width: 100%;
-    display: flex;
-    border-radius: 0 0 4px 4px;
-    .profile-menu-link {
-        padding: 20px 16px;
-        color: #5c5e6e;
-        transition: 0.3s;
+    left: 200px;
+    bottom: 80px;
+    z-index: 1;
+    button {
+        margin-left: 10px;
+        background-color: #ffc312;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        padding: 3px 7px;
+        box-shadow: 0 0 3px #ffc312;
         cursor: pointer;
     }
-    .profile-menu-link.active,
-    .profile-menu-link:hover {
+    p:nth-child(1) {
+        font-size: 22px;
         color: #fff;
-        background-color: #1b1d2e;
-        border-bottom: 3px solid #1488fa;
+        font-weight: 600;
+        font-family: 'DM Sans', sans-serif;
+        text-shadow: 0 0 3px #151728;
+    }
+    p:nth-child(2) {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #fff;
+        text-shadow: 0 0 3px #151728;
+        span {
+            margin-right: 5px;
+        }
     }
 }
 
@@ -116,17 +117,9 @@
     .profile-menu {
         padding: 0 30px;
         overflow: auto;
-        .profile-menu-link {
+        font-size: 14px;
+        a {
             padding: 10px 8px;
-            color: #5c5e6e;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .profile-menu-link.active,
-        .profile-menu-link:hover {
-            color: #fff;
-            background-color: #1b1d2e;
-            border-bottom: 3px solid #1488fa;
         }
     }
     .profile-avatar {
@@ -136,9 +129,9 @@
             width: 80px;
             height: 80px;
         }
-        .profile-msg {
-            margin-left: 10px;
-            margin-bottom: 0;
-        }
+    }
+    .profile-msg {
+        left: 114px;
+        bottom: 62px;
     }
 }

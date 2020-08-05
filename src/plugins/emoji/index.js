@@ -9,13 +9,13 @@ const {
     recentsCount,
     showSearch,
     showPreview,
+    theme,
 } = window.opts.emoji
 
 const emojiConfig = {
     position: 'top-start',
-    theme: 'auto', // dark light auto
     style: 'native', //native twemoji
-    showVariants: false, //肤色
+    showVariants: false,
     autoHide: true,
     autoFocusSearch: false,
     emojiSize: '1.8em',
@@ -30,6 +30,7 @@ const emojiConfig = {
         'symbols',
         'flags',
     ],
+    theme,
     showRecents,
     recentsCount,
     showSearch: userAgent() === 'pc' ? showSearch : false,
@@ -70,7 +71,6 @@ function build() {
 function emoji() {
     if (!enable) return
     if (pageName() !== 'post') return
-    // alert(emojijs)
     cacheScript(emojijs, build)
 }
 

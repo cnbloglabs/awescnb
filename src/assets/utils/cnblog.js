@@ -1,9 +1,13 @@
-const { login, logout, register, currentBlogApp } = window
-export { login, logout, register }
+/**
+ * 博客园辅助工具函数
+ */
+
+const { currentBlogApp } = window
 
 /**
  * 工具函数
  * 是否开启公告
+ * @returns {Boolean}
  */
 const openNews = () => {
     return !!$('#profile_block').length
@@ -13,8 +17,12 @@ const openNews = () => {
  * 获取博客园昵称
  */
 export const getBlogname = () => {
+    if (openNews()) {
+        return $('#profile_block>a:nth-of-type(1)').text()
+    }
     const headerTitle = $('#Header1_HeaderTitle').text()
-    return headerTitle.length ? headerTitle : currentBlogApp
+    if (headerTitle.length) return headerTitle
+    return currentBlogApp
 }
 
 /**
@@ -27,20 +35,6 @@ export const getFollowers = () => {
               .trim()
         : '未知'
     return count
-}
-
-/**
- * 获取粉丝详情页面链接
- */
-export const getFollowersDetailsUrl = () => {
-    return `https://home.cnblogs.com/u/${currentBlogApp}/followers/`
-}
-
-/**
- * 获取我关注的人的详情页面链接
- */
-export const getFollowingDetailsUrl = () => {
-    return `https://home.cnblogs.com/u/${currentBlogApp}/followees/`
 }
 
 /**
@@ -73,4 +67,12 @@ export const getBlogAge = () => {
               .trim()
         : '未知'
     return age
+}
+
+/**
+ * 获取相册地址
+ */
+
+export const getAlbumUrl = () => {
+    return ``
 }

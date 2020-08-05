@@ -8,6 +8,15 @@ module.exports = {
     openBrowser: false,
 }
 
+///////// themes /////////
+// - geek
+// - reacg
+// - simple
+// - view
+// - gshang
+// - element
+// - acg
+
 ///////// description /////////
 // 你无需直接更改webpack配置文件
 // 为了方便，请直接更改这里的配置
@@ -22,18 +31,9 @@ module.exports = {
 // cssExtract 单独抽离css
 // openBrowser - 自动打开浏览器
 
-///////// themes /////////
-// - acg
-// - element
-// - geek
-// - gshang
-// - material
-// - reacg
-// - simple
-
 ///////// template /////////
 // - index 首页
 // - post 随笔详情页
 // - post1 富文本编辑器随笔详情页
 // - tag 标签页
-// - ablum 相册
+// - photos 相册

@@ -2,17 +2,16 @@ const removeClearel = () => {
     $('.clear').remove()
 }
 
-const moveFooter = () => {
+const moveFooterToMain = () => {
     $('#footer').appendTo('#main')
 }
 
 const build = () => {
     removeClearel()
-    moveFooter()
+    moveFooterToMain()
     require('./indexCards')()
     require('./header')()
     require('./side')()
-    require('./catalog')()
     require('./searchbar')()
     require('./profile')()
     require('./leftSide')()

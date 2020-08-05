@@ -1,8 +1,3 @@
-// 相关options:
-// theme.contentSize
-// catalog.enable & catalog.position
-
-import './index.scss'
 import {
     pageName,
     userAgent,
@@ -16,11 +11,11 @@ const { enable } = window.opts.catalog
 // 构建目录
 function build() {
     let $catalogContainer = $(
-        `<div id="catalog">
+        `<nav id="catalog">
             <div class='catalog-title'><h3>目录</h3></div>
-        </div>`,
+        </nav>`,
     )
-    const $ulContainer = $('<ul></ul>')
+    const $ulContainer = $('<ul>')
     const titleRegExp = /^h[1-3]$/
 
     $('#cnblogs_post_body')
@@ -33,10 +28,11 @@ function build() {
 
                 if (this.id !== '') {
                     id = this.id
-                    text =
-                        this.childNodes.length === 2
-                            ? this.childNodes[1].nodeValue
-                            : this.childNodes[0].nodeValue
+                    // text =
+                    //     this.childNodes.length === 2
+                    //         ? this.childNodes[1].nodeValue
+                    //         : this.childNodes[0].nodeValue
+                    text = $(this).text()
                 } else {
                     if (this.childNodes.length === 2) {
                         const value = this.childNodes[1].nodeValue
@@ -61,10 +57,6 @@ function build() {
 
     const $catalog = $($catalogContainer.append($ulContainer))
     $('#blog-calendar').before($catalog)
-}
-
-function noCatalog() {
-    if (pageName() !== 'post') return
 }
 
 // 设置目录活跃标题样式
@@ -99,28 +91,6 @@ function setActiveCatalogTitle() {
     )
 }
 
-// function setCatalogToggle() {
-//     // var p = 0,
-//     //     t = 0
-//     $(window).scroll(
-//         throttle(
-//             function() {
-//                 if ($('#catalog ul').css('display') === 'none') return
-//                 const bottom = getClientRect(
-//                     document.querySelector('#sideBarMain'),
-//                 ).bottom
-//                 if (bottom <= 0) {
-//                     $('#catalog').addClass('catalog-sticky')
-//                 } else {
-//                     $('#catalog').removeClass('catalog-sticky')
-//                 }
-//             },
-//             50,
-//             1000 / 60,
-//         ),
-//     )
-// }
-
 function toggle() {
     $('.catalog-title').click(function() {
         $('#catalog ul').toggle('fast', 'linear', function() {
@@ -140,12 +110,8 @@ function catalog() {
     ) {
         build()
         setActiveCatalogTitle()
-        // setCatalogToggle()
         toggle()
-    } else {
-        noCatalog()
     }
 }
 
-// export default catalog
-module.exports = catalog
+export default catalog

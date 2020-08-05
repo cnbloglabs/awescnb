@@ -6,6 +6,7 @@ import commentsAvatars from '@plugins/commentsAvatars'
 import signature from '@plugins/signature'
 import emoji from '@plugins/emoji'
 import menu from './menu'
+import catalog from './catalog'
 import './coverPlugins.scss'
 // import imagebox from '@plugins/imagebox'
 // import player from '@plugins/player'
@@ -24,6 +25,7 @@ const plugins = () => {
     menu()
     postMessage()
     commentsAvatars()
+    catalog()
     // postSignature()
     // imagebox()
     // notice()

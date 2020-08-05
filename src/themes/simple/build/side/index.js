@@ -31,6 +31,10 @@ const actions = [
         content: '#sidebar_scorerank ul',
     },
     {
+        title: '#sidebar_imagecategory .catListTitle',
+        content: '#sidebar_imagecategory ul',
+    },
+    {
         title: '#sidebar_postcategory .catListTitle',
         content: '#sidebar_postcategory ul',
     },

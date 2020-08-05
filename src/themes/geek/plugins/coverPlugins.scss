@@ -1,15 +1,12 @@
+// highight
 #cnblogs_post_body .cnblogs_code,
 .cnblogs-markdown pre {
-    // background: #202234;
     &:hover {
         box-shadow: none !important;
     }
 }
 
-// #cnblogs_post_body .hljs {
-//     background: #202234 !important;
-// }
-
+// comments avatars
 .custom-comment-avatar {
     align-self: baseline;
     img {
@@ -23,4 +20,17 @@
 .custom-categories a,
 .custom-tags a {
     box-shadow: none;
+}
+
+// emoji-button
+.emoji-picker {
+    background-color: #151728;
+    border-color: #202234;
+    .emoji-picker__search {
+        background-color: #202234;
+        border: none;
+    }
+}
+.emoji-picker__emojis {
+    height: 200px;
 }

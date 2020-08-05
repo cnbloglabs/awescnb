@@ -1,3 +1,7 @@
+/**
+ * CDN
+ */
+
 // 看板娘模型仓库
 export const live2d = {
     url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
@@ -29,5 +33,3 @@ export const linenumbersjs =
 export const jqueryui = 'https://code.jquery.com/ui/1.12.0/jquery-ui.js'
 export const clipboard =
     'https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js'
-
-// https://images.unsplash.com/photo-1508247967583-7d982ea01526?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="" class="profile-cover
