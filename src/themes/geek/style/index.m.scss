@@ -1,4 +1,17 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
+    #home {
+        grid-template-columns: 1fr 1fr 260px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            'main main right'
+            'main main right'
+            'main main right';
+    }
+
+    #left-side {
+        display: none;
+    }
+
     .topicListFooter {
         margin-left: 0;
         margin-right: 0;
@@ -21,7 +34,16 @@
         height: 100vh;
     }
 
+    #mainContent {
+        grid-template-rows: 30vh 1fr;
+        padding: 10px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
     #sideBar {
+        padding: 0;
         display: none;
     }
 

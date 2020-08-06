@@ -25,10 +25,20 @@ const build = () => {
     const fans = getFollowers()
     const focus = getFollowing()
     const el = `
-    <div class="profile">
-        <div class="profile-signature"></div>
+    <section class="profile">
+        <div class="profile-banner" style="background-image:url(${headerBackground})">
+            <div class="profile-signature"></div>
+        </div>
+        <div class="profile-menu">
+            <a>more</a>
+            <a>more</a>
+            <a>more</a>
+            <a>more</a>
+            <a>more</a>
+        </div>
+        <div class="profile-blur" style="background-image:url(${headerBackground})"></div>
         <div class="profile-avatar">
-            <img src="${avatar}" alt="" class="profile-img">
+            <img src="${avatar}" />
         </div>
         <div class="profile-msg">
             <p>
@@ -41,15 +51,7 @@ const build = () => {
                 <span><a href="${followingDetailsUrl}">关注：${focus}</a></span>
             </p>
         </div>
-        <img src="${headerBackground}" class="profile-cover">
-        <div class="profile-menu">
-            <a>more</a>
-            <a>more</a>
-            <a>more</a>
-            <a>more</a>
-            <a>more</a>
-        </div>
-    </div>`
+    </section>`
     // add class active for activing tag a
     // $('.profile:before').css('background-image', `url(${headerBackground})`)
     $('#mainContent').prepend(el)

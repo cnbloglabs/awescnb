@@ -3,14 +3,14 @@ import { pageName, userAgent } from '@tools'
 
 // header右侧按钮容器
 const buildHeader = () => {
-    const gitee = window.opts.gitee
+    const github = window.opts.github
 
     $('#navList').after(`<div class="navbar-end"></div>`)
     $('#blog_nav_newpost').appendTo('.navbar-end')
 
-    const customEle = `<a href="https://guangzan.gitee.io/awescnb-docs/docs/dev" id="header-awescnb">构建新皮肤</a>`
-    const giteeEle = `<a href="${gitee.url}" id="header-gitee">开源主页</a>`
-    $(customEle).appendTo('.navbar-end')
+    // const customEle = `<a href="https://guangzan.gitee.io/awescnb-docs/docs/dev" id="header-awescnb">构建新皮肤</a>`
+    const giteeEle = `<a href="${github.url}" id="header-gitee">开源主页</a>`
+    // $(customEle).appendTo('.navbar-end')
     $(giteeEle).appendTo('.navbar-end')
 }
 
@@ -83,7 +83,7 @@ const customLinks = () => {
         $('.custom-links').append(`<a class="github" href="${github.url}"></a>`)
     }
     // 知乎
-    $('.custom-links').append(`<a class="zhihu"></a>`)
+    // $('.custom-links').append(`<a class="zhihu"></a>`)
 }
 
 // 首页 header 不要上下翻滚

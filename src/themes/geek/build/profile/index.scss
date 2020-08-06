@@ -1,47 +1,52 @@
 .profile {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 250px;
-    max-height: 350px;
+    flex-direction: column;
     z-index: 1;
-    &:before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        background-image: url('https://api.mz-moe.cn/img/img851.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        filter: blur(50px);
-        opacity: 0.7;
-        margin: 0;
-    }
 }
 
-.profile-cover {
+.profile-blur {
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
+    margin: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.profile-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 4px 4px 0 0;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .profile-signature {
+        max-width: 60%;
+        text-align: center;
+        white-space: wrap;
+
+        margin-bottom: 50px;
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 3px #151728;
+        z-index: 2;
+    }
 }
 
 .profile-menu {
     display: flex;
-    position: absolute;
-    bottom: 0;
     padding-left: 185px;
     background: #151728;
-    width: 100%;
     border-radius: 0 0 4px 4px;
     a {
         padding: 20px 16px;
@@ -63,21 +68,13 @@
     z-index: 1;
     bottom: 16px;
     left: 24px;
-    .profile-img {
+    img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #151728;
     }
-}
-
-.profile-signature {
-    margin-bottom: 50px;
-    font-size: 20px;
-    color: #fff;
-    text-shadow: 0 0 3px #151728;
-    z-index: 2;
 }
 
 .profile-msg {
@@ -125,7 +122,7 @@
     .profile-avatar {
         left: 20px;
         bottom: 54px;
-        .profile-img {
+        img {
             width: 80px;
             height: 80px;
         }
@@ -133,5 +130,30 @@
     .profile-msg {
         left: 114px;
         bottom: 62px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    // .profile {
+    //     height: 30vh;
+    // }
+    .profile-avatar {
+        left: 10px;
+        bottom: 45px;
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .profile-msg {
+        left: 83px;
+        bottom: 51px;
+    }
+
+    .profile-banner {
+        .profile-signature {
+            max-width: 80%;
+            font-size: 14px;
+        }
     }
 }

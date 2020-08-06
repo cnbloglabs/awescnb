@@ -27,10 +27,7 @@ function show() {
     // $(document).ajaxComplete(function(event, xhr, option) {
     //     console.log(option)
     //     if (option.url.indexOf('GetComments') > -1) {
-    //         setTimeout(function() {
-    //             console.log('build')
-    //             build()
-    //         }, 300)
+    //          console.log('build')
     //     }
     // })
 }

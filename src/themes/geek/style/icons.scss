@@ -1,0 +1,15 @@
+@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
+
+*::before,
+*::after {
+    font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
+    margin-right: 0.5em;
+    font-weight: 400;
+}
+*::before {
+    margin-right: 0.5em;
+}
+
+*::after {
+    margin-left: 0.5em;
+}

@@ -1,29 +1,15 @@
 #catalog {
-    padding: 30px 30px 10px;
-    width: 17rem;
+    padding: 25px;
     font-size: 14px;
-    // overflow-y: scroll；;
     overflow-x: hidden;
     word-wrap: nowrap;
     text-overflow: ellipsis;
     border-bottom: 1px solid #272a3a;
-    // h3 {
-    //     &::before {
-    //         content: '\f022';
-    //     }
-    // }
     .catalog-title {
-        // background-color: #fff;
-        // font-size: 18px;
-        // position: relative;
         display: flex;
         align-items: center;
         position: sticky;
         top: 0;
-        // font-weight: 600;
-        // border-bottom: 1px solid #eee;
-        // cursor: pointer;
-
         font-family: DM Sans, sans-serif;
         color: #5c5e6e;
         font-size: 15px;
@@ -35,6 +21,7 @@
             display: inline-block;
             position: absolute;
             right: 0.5rem;
+            margin: 0;
         }
         &.is-active::after {
             transform: rotate(180deg);
@@ -54,7 +41,7 @@
             align-items: center;
             &::before {
                 position: relative;
-                right: 12px;
+                right: 4px;
                 display: inline-block;
                 width: 7px;
                 height: 7px;
@@ -78,7 +65,7 @@
         }
 
         .h2-list ~ .h3-list {
-            margin-left: 4em;
+            margin-left: 2.5em;
         }
 
         li {
@@ -128,9 +115,11 @@
         }
     }
 }
+
 .catalog-scroll-up {
     top: 4rem;
 }
+
 .catalog-scroll-down {
     top: 6rem;
 }

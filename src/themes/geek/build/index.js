@@ -11,7 +11,7 @@ const build = () => {
     moveFooterToMain()
     require('./indexCards')()
     require('./header')()
-    require('./side')()
+    require('./rightSide')()
     require('./searchbar')()
     require('./profile')()
     require('./leftSide')()

@@ -33,10 +33,11 @@ function build() {
 
                 if (this.id !== '') {
                     id = this.id
-                    text =
-                        this.childNodes.length === 2
-                            ? this.childNodes[1].nodeValue
-                            : this.childNodes[0].nodeValue
+                    // text =
+                    //     this.childNodes.length === 2
+                    //         ? this.childNodes[1].nodeValue
+                    //         : this.childNodes[0].nodeValue
+                    text = $(this).text()
                 } else {
                     if (this.childNodes.length === 2) {
                         const value = this.childNodes[1].nodeValue
