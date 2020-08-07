@@ -62,12 +62,16 @@ body {
 .entrylistPosttitle,
 .postTitle {
     font-weight: 600;
-    width: 100%;
     padding-bottom: 0.5rem;
     &::before {
         content: '\f15c';
         font-weight: normal;
     }
+}
+
+.postTitl2,
+.entrylistPosttitle {
+    width: 100%;
 }
 
 .entrylistPostSummary,
