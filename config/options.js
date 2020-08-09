@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'reacg',
-    template: 'post',
+    template: 'post1',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,

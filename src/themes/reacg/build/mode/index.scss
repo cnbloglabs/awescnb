@@ -9,6 +9,12 @@
 
 .mode-change {
     transition: all 0.3s cubic-bezier(1, 0.05, 0.29, 0.99);
+    .forFlow #blog-comments-placeholder .feedback_area_title,
+    .blog_comment_body,
+    .blog_comment_body::before,
+    .feedbackItem,
+    #comment_form_container,
+    #commentform_title,
     .dragmenu-item,
     #header::after,
     #mainContent,
