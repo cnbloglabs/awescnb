@@ -55,7 +55,7 @@
 #back-to-top .flow::after {
     border-radius: 47%;
     background: #ffb3cc !important;
-    background: linear-gradient(#f00, #f353a9) !important;
+    background: linear-gradient(rgb(12, 11, 11), #f353a9) !important;
     opacity: 0.9;
     transform: translate(-50%, -70%) rotate(0);
     animation: rotate 10s linear -5s infinite;

@@ -4,7 +4,9 @@ import './index.scss'
 const buildLeftside = () => {
     const el = `
     <div id='left-side'>
-        <div class='logo'><a href="https://www.cnblogs.com/">CNBLOG</a></div>
+        <div class='logo'>
+            <a href="https://www.cnblogs.com/">CNBLOG</a>
+        </div>
         <div class="side-wrapper">
             <h3>FAVOURITE</h3>
             <ul></ul>

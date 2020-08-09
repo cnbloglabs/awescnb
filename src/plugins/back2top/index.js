@@ -1,6 +1,5 @@
 // 返回顶部按钮
 import { userAgent } from '@/assets/utils/tools'
-import './index.css'
 
 const options = window.opts.back2top
 const enableLive2d = window.opts.live2d.enable

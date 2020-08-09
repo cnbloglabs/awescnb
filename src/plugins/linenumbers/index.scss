@@ -1,3 +1,9 @@
+$linemuber: (
+    color: #999999,
+) !default;
+
+$linenumberColor: map-get($linemuber, color);
+
 /* 覆盖博客园bundle css*/
 @media screen and (max-width: 767px) {
     #cnblogs_post_body td {
@@ -10,7 +16,7 @@
     padding: 2px 0;
     border: none;
     text-align: center;
-    color: var(--themeColor, #999999) !important;
+    color: $linenumberColor !important;
     user-select: none;
     word-break: normal;
     white-space: pre;

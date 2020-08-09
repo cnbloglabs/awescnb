@@ -1,6 +1,5 @@
 // 代码高亮
 import { pageName, isMd } from '@/assets/utils/tools'
-import './index.scss'
 
 const { type } = window.opts.highLight
 

@@ -1,5 +1,4 @@
 // 随笔顶部信息
-import './index.css'
 import { pageName } from '@tools'
 
 function postMessage() {

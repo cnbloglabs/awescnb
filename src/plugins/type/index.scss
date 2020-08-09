@@ -1,6 +1,14 @@
+$signature: (
+    padding: 1rem 0,
+    fontSize: 1em,
+) !default;
+
+$padding: map-get($signature, padding);
+$fontSize: map-get($signature, fontSize);
+
 .custom-signature {
-    padding: 1rem 0;
-    font-size: 1em;
+    padding: $padding;
+    font-size: $fontSize;
     line-height: 1.5em;
 }
 

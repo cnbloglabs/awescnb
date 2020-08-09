@@ -8,59 +8,47 @@ import {
 
 const { enable } = window.opts.catalog
 
-// 构建目录
+/**
+ * 构建目录元素
+ */
 function build() {
-    let $catalogContainer = $(
+    let $container = $(
         `<nav id="catalog">
             <div class='catalog-title'><h3>目录</h3></div>
         </nav>`,
     )
-    const $ulContainer = $('<ul>')
-    const titleRegExp = /^h[1-3]$/
+    const $list = $('<ul>')
+    const regExp = /^h[1-3]$/
 
     $('#cnblogs_post_body')
         .children()
         .each(function() {
-            if (titleRegExp.test(this.tagName.toLowerCase())) {
-                if ($(this).text().length === 0) return // 如果标题为空 只有 #
+            if (regExp.test(this.tagName.toLowerCase())) {
                 let id
-                let text
-
+                let text = $(this).text()
+                if (text.length === 0) return // 如果标题为空 只有 #
                 if (this.id !== '') {
                     id = this.id
-                    // text =
-                    //     this.childNodes.length === 2
-                    //         ? this.childNodes[1].nodeValue
-                    //         : this.childNodes[0].nodeValue
-                    text = $(this).text()
                 } else {
-                    if (this.childNodes.length === 2) {
-                        const value = this.childNodes[1].nodeValue
-                        text = value ? value : $(this.childNodes[1]).text()
-                    } else {
-                        const value = this.childNodes[0].nodeValue
-                        text = value ? value : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
-                    }
                     id = text.trim()
                     $(this).attr('id', id)
                 }
 
                 const title = `
-                            <li class='${this.nodeName.toLowerCase()}-list'>
-                                <a href='#${id}'>${text}</a>
-                            </li>
-                        `
+                <li class='${this.nodeName.toLowerCase()}-list'>
+                    <a href='#${id}'>${text}</a>
+                </li>`
 
-                $ulContainer.append(title)
+                $list.append(title)
             }
         })
-
-    const $catalog = $($catalogContainer.append($ulContainer))
-    $('#blog-calendar').before($catalog)
+    $('#blog-calendar').before($($container.append($list)))
 }
 
-// 设置目录活跃标题样式
-function setActiveCatalogTitle() {
+/**
+ * 标题动态高亮
+ */
+function setActiveTitle() {
     $('#mainContent').scroll(
         throttle(
             function() {
@@ -91,6 +79,9 @@ function setActiveCatalogTitle() {
     )
 }
 
+/**
+ * 目录显示隐藏
+ */
 function toggle() {
     $('.catalog-title').click(function() {
         $('#catalog ul').toggle('fast', 'linear', function() {
@@ -109,7 +100,7 @@ function catalog() {
         userAgent() === 'pc'
     ) {
         build()
-        setActiveCatalogTitle()
+        setActiveTitle()
         toggle()
     }
 }

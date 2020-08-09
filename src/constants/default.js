@@ -1,18 +1,16 @@
 /**
- * awescnb 默认配置
- * 可以在开发环境调试
+ * awescnb 配置
  */
-
 const defaultOptions = {
     // 基本配置
     theme: {
         name: 'reacg',
         color: '#FFB3CC',
         title: '',
-        contentSize: 'mid',
-        headerBackground: '',
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
+        contentSize: 'mid',
+        headerBackground: '',
     },
     // 代码高亮
     highLight: {
@@ -70,7 +68,7 @@ const defaultOptions = {
     click: {
         enable: true,
         auto: false,
-        colors: ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'],
+        colors: [],
         size: 30,
         maxCount: 15,
     },
@@ -116,7 +114,6 @@ const defaultOptions = {
     // 随笔头图
     postTopimage: {
         enable: true,
-        // position: 'top', // position api 已经废弃，使用 postbottomimage 代替
         fixed: false,
         imgs: [],
     },
@@ -165,7 +162,7 @@ const defaultOptions = {
     },
     // 随笔页尾部签名
     postSignature: {
-        enable: false,
+        enable: true,
         content: [],
         licenseLink: '',
     },
@@ -180,20 +177,8 @@ const defaultOptions = {
     barrage: {
         enable: false,
         opacity: 0.6,
-        colors: [
-            '#FE0302',
-            '#FF7204',
-            '#FFAA02',
-            '#FFD302',
-            '#FFFF00',
-            '#A0EE00',
-            '#00CD00',
-            '#019899',
-            '#4266BE',
-            '#89D5FF',
-            '#CC0273',
-            '#CC0273',
-        ],
+        fontSize: '',
+        colors: [],
         barrages: [],
         indexBarrages: [],
         postPageBarrages: [],
@@ -213,7 +198,7 @@ const defaultOptions = {
     lock: {
         enable: false,
         background: '',
-        strings: ['快去自定义你的个性签名吧~'],
+        strings: [],
     },
     // footer链接
     links: [

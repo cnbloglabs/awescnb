@@ -1,8 +1,14 @@
+$progress: (
+    background: #0097e6,
+) !default;
+
+$background: map-get($progress, background);
+
 #nprogress {
     .bar {
-        background: var(--themeColor) !important;
+        background: $background !important;
     }
     .peg {
-        box-shadow: 0 0 10px var(--themeColor), 0 0 5px var(--themeColor) !important;
+        box-shadow: 0 0 10px $background, 0 0 5px $background !important;
     }
 }

@@ -7,11 +7,10 @@
     overflow: hidden;
     z-index: 20;
     pointer-events: none;
-}
 
-#barrage-wrap span {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 24px;
-    font-weight: 700;
+    span {
+        position: absolute;
+        white-space: nowrap;
+        font-weight: 700;
+    }
 }

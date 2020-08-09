@@ -1,6 +1,4 @@
 // ! no use
-
-import './index.css'
 // import Typed from 'typed.js'
 import { type, type as loop } from '@camwiegert/typical'
 

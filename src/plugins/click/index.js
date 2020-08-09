@@ -1,7 +1,4 @@
 // 点击特效
-// 仅引入即可
-
-import './index.css'
 import anime from 'animejs/lib/anime.es.js'
 import { userAgent } from '@tools'
 
@@ -16,16 +13,15 @@ function build() {
         let numberOfParticules = options.maxCount
         let pointerX = 0
         let pointerY = 0
+
         let tap =
             'ontouchstart' in window || navigator.msMaxTouchPoints
                 ? 'touchstart'
                 : 'mousedown'
-        let colors = options.colors || [
-            '#FF1461',
-            '#18FF92',
-            '#5A87FF',
-            '#FBF38C',
-        ]
+
+        let colors = options.colors.length
+            ? options.colors
+            : ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
 
         const clickEffects = () => {
             canvasEl.style.position = 'fixed'

@@ -25,9 +25,8 @@ function show() {
         poll($('.feedbackItem').length, build)
     }, 1000)
     // $(document).ajaxComplete(function(event, xhr, option) {
-    //     console.log(option)
     //     if (option.url.indexOf('GetComments') > -1) {
-    //          console.log('build')
+    //         window.awesCommentsAvatar()
     //     }
     // })
 }
@@ -62,6 +61,6 @@ function commentsAvatar() {
     authorRight()
 }
 
-window.awesCommentsAvatar = commentsAvatar
+// window.awesCommentsAvatar = commentsAvatar
 
 export default commentsAvatar

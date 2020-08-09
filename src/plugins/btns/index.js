@@ -1,7 +1,5 @@
 // 添加关注和推荐按钮
 // 使用 dragmenu 代替
-
-import './index.css'
 import { pageName, poll } from '@tools'
 
 function build() {

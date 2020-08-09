@@ -1,6 +1,5 @@
 // 设置代码行号
 // 引入即可
-import './index.scss'
 import { pageName, cacheScript } from '@tools'
 import { linenumbersjs } from '@constants/urls'
 

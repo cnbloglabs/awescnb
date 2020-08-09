@@ -1,4 +1,3 @@
-import './index.scss'
 import { gitee } from '../../constants/message'
 
 function footer() {

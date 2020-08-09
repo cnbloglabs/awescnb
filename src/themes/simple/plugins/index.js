@@ -1,3 +1,4 @@
+import './index.scss'
 import footer from '@plugins/footer'
 import highlight from '@plugins/highlight'
 import copy from '@plugins/copy'

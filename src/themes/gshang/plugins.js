@@ -5,7 +5,6 @@ import setMusicPlayer from '@plugins/player'
 import setClickEffects from '@plugins/click'
 import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
-import postSignature from '@plugins/postSignature'
 import highlight from '@plugins/highlight'
 import postBottomimage from '@plugins/postBottomimage'
 
@@ -17,7 +16,6 @@ function plugins() {
     setClickEffects()
     linenumbers()
     titleFavicon()
-    postSignature()
     highlight()
     postBottomimage()
 }

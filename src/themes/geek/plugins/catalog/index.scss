@@ -93,33 +93,3 @@
     font-weight: 700;
     transition: all 0.3s;
 }
-.catalog-sticky {
-    position: fixed;
-    top: 0.5rem;
-    visibility: visible;
-    transition: top 0.2s;
-    .catalog-title,
-    ul {
-        background-color: #fff;
-    }
-    h3::before {
-        display: none;
-    }
-    .catalog-title {
-        display: flex;
-        align-items: center;
-        &::before {
-            content: '\f004';
-            color: #f14668;
-            font-weight: 700;
-        }
-    }
-}
-
-.catalog-scroll-up {
-    top: 4rem;
-}
-
-.catalog-scroll-down {
-    top: 6rem;
-}

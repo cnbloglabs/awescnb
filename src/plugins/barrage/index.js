@@ -1,20 +1,44 @@
 // 发送弹幕
-// 仅引入即可
-
-import './index.css'
 import { pageName, getClientRect, randomNum, randomColor, sleep } from '@tools'
 
-const options = window.opts.barrage
+const {
+    enable,
+    opacity,
+    colors,
+    fontSize,
+    barrages,
+    indexBarrages,
+    postPageBarrages,
+} = window.opts.barrage
+
+const fontSz = fontSize.length ? fontSize : '20px'
+
+const barragesColors = colors.length
+    ? colors
+    : [
+          '#FE0302',
+          '#FF7204',
+          '#FFAA02',
+          '#FFD302',
+          '#FFFF00',
+          '#A0EE00',
+          '#00CD00',
+          '#019899',
+          '#4266BE',
+          '#89D5FF',
+          '#CC0273',
+          '#CC0273',
+      ]
 
 /**
  * @description 发送弹幕
  * @param {Array} textList 弹幕列表
  */
-
 async function shootBarrage(textList) {
-    if (!options.enable) return
-    if (!document.querySelector('#barrage-wrap'))
+    if (!enable) return
+    if (!document.querySelector('#barrage-wrap')) {
         $('body').append(`<div id='barrage-wrap'></div>`)
+    }
 
     const $wrap = document.querySelector('#barrage-wrap')
     const rect = getClientRect($wrap)
@@ -27,8 +51,9 @@ async function shootBarrage(textList) {
         const barrageStyle = `
 									left: ${wrapWidth}px;
 									top: ${randomNum(wrapHeight - 30, 1)}px;
-									color: ${randomColor(options.colors)};
-									opacity: ${options.opacity};
+									color: ${randomColor(barragesColors)};
+									opacity: ${opacity};
+									font-size: ${fontSz};
 								`
 
         $barrage.style.cssText = barrageStyle
@@ -63,21 +88,23 @@ async function shootBarrage(textList) {
 // 发送预定义弹幕
 // 随笔页首页
 function shootInitial() {
-    if (options.barrages.length !== 0) {
+    const page = pageName()
+
+    if (barrages.length) {
         setTimeout(() => {
-            shootBarrage(options.barrages)
+            shootBarrage(barrages)
         }, 3000)
     }
 
-    if (pageName() === 'post' && options.postPageBarrages.length !== 0) {
+    if (page === 'post' && postPageBarrages.length) {
         setTimeout(() => {
-            shootBarrage(options.postPageBarrages)
+            shootBarrage(postPageBarrages)
         }, 3000)
     }
 
-    if (pageName() === 'index' && options.indexBarrages.length !== 0) {
+    if (page === 'index' && indexBarrages.length) {
         setTimeout(() => {
-            shootBarrage(options.indexBarrages)
+            shootBarrage(indexBarrages)
         }, 3000)
     }
 }

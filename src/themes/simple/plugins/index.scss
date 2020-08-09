@@ -1,0 +1,6 @@
+// postSignature
+$psignaturePrimary: var(--themeColor);
+$psignatureBackground: var(--background-e);
+$psignatureBorderRadius: 2px;
+
+@import '@plugins/postSignature/index.scss';

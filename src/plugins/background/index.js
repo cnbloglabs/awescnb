@@ -1,7 +1,5 @@
 // 设置页面背景色
 // 设置内容透明度
-// 仅引入即可
-
 import { userAgent } from '@tools'
 
 function setBodyBackground() {

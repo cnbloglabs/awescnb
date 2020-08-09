@@ -1,3 +1,9 @@
+$postMeaage: (
+    tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
+) !default;
+
+$postMessageTagBackground: map-get($postMeaage, tagsBackground);
+
 #EntryTag,
 #BlogPostCategory {
     display: none;
@@ -15,11 +21,14 @@
     display: flex;
 }
 
-
 .custom-tags,
 .custom-categories {
     display: flex;
     align-items: center;
+}
+
+.custom-tags {
+    margin-left: 12px;
 }
 
 .custom-tags a,
@@ -32,25 +41,19 @@
     padding: 4px 8px;
     font-size: 14px;
     line-height: 14px;
-    border-radius: 3px;
+    border-radius: 4px;
     color: #fff;
     box-shadow: 1px 1px 5px rgb(211, 207, 207);
 }
 
-.custom-tags {
-    margin-left: 5px;
-}
-
 .custom-tags a {
-    background-color: #22a6b3;
+    background-color: nth($postMessageTagBackground, 1);
 }
 
-.custom-tags a:nth-child(2) {
-    background-color: #ff6b6b;
-}
-
-.custom-tags a:nth-child(3) {
-    background-color: #fbc531;
+@for $i from 1 through length($postMessageTagBackground) {
+    .custom-tags a:nth-child(#{$i}) {
+        background-color: nth($postMessageTagBackground, $i);
+    }
 }
 
 .custom-categories a {

@@ -1,6 +1,4 @@
-// 构建侧边栏二维码
-
-import './index.css'
+// 二维码
 const { enable, img, desc } = window.opts.qrcode
 const qrcodeImg = window.opts.theme.qrcode //兼容旧的api
 

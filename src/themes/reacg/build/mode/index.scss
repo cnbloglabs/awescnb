@@ -1,6 +1,5 @@
 #mode-change {
     color: #999;
-    // color: var(--themeColor);
     .icon {
         width: 40px;
         cursor: pointer;
@@ -9,10 +8,8 @@
 }
 
 .mode-change {
-    & {
-        will-change: auto;
-        transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
-    }
+    transition: all 0.3s cubic-bezier(1, 0.05, 0.29, 0.99);
+    .dragmenu-item,
     #header::after,
     #mainContent,
     #cnblogs_post_body blockquote,
@@ -24,18 +21,17 @@
     #sidebar_recentposts,
     #sidebar_toptags,
     #sidebar_scorerank,
-    #sidebar_postcategory,
-    #sidebar_postarchive,
+    #sidebar_categories > div,
     #sidebar_recentcomments,
     #sidebar_topviewedposts,
     #sidebar_topcommentedposts,
     #sidebar_topdiggedposts,
     #catalog,
-    #sidebar_imagecategory,
     .recent_comment_body,
     .catalog-title,
     .input_my_zzk {
-        transition: all 0.3s cubic-bezier(0.76, 0.34, 1, 1) 0s;
+        will-change: auto;
+        transition: all 0.3s cubic-bezier(1, 0.05, 0.29, 0.99);
     }
 }
 

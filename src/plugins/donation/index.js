@@ -1,4 +1,3 @@
-import './index.scss'
 import { pageName } from '@tools'
 
 function donation() {
@@ -6,7 +5,7 @@ function donation() {
 
     if (!enable) return
     if (pageName() !== 'post') return
-    if(!qrcodes.length) return
+    if (!qrcodes.length) return
 
     const btn = `<a id="custom-donation-btn">打赏</a>`
     const qrcode = $(`<div id="custom-donation-qrcode"></div>`)

@@ -554,156 +554,140 @@ body {
     }
 }
 
+// 侧边栏 start
 #sideBar {
     width: 15.5vw;
     margin-left: 1vw;
     font-size: 14px;
     overflow: hidden;
-    #sideBarMain {
-        ul li {
+}
+
+#blog-calendar,
+#sidebar_news,
+.sidebar-block {
+    background-color: var(--background-w);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    margin-bottom: 16.2px;
+    color: var(--text-3);
+
+    h3 {
+        padding: 10px 14px;
+        font-weight: 700;
+        font-size: 1.1em;
+        border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+    }
+
+    #blog-news,
+    #sidebar_search_box,
+    ul {
+        padding: 10px 14px;
+        li {
             padding-top: 5.4px;
             &:hover {
                 transform: translateX(5px);
                 transition: all 0.2s;
             }
         }
-        #blog-news {
-            @include center();
-            #profile_block {
-                margin-top: 0;
-            }
-        }
-
-        // #sidebar_recentcomments
-        #sidebar_recentposts {
-            ul li {
-                @include text-over();
-            }
-        }
-        .recent_comment_body {
-            padding: 1rem;
-            background-color: var(--background-e);
-            border-radius: 3px;
-        }
-        /* 每个块的外层 */
-        #sidebar_news,
-        #blog-calendar,
-        #sidebar_search,
-        #sidebar_shortcut,
-        #sidebar_recentposts,
-        #sidebar_scorerank,
-        #sidebar_toptags,
-        #sidebar_imagecategory,
-        #sidebar_postcategory,
-        .sidebar-block,
-        #sidebar_postarchive,
-        #sidebar_recentcomments,
-        #sidebar_topviewedposts .catListView,
-        #sidebar_topcommentedposts .catListFeedback,
-        #topdigg_posts_wrap .catListView {
-            background-color: var(--background-w);
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            border-radius: 2px;
-            margin-bottom: 16.2px;
-            color: var(--text-3);
-        }
-
-        /* 每个小块的标题 */
-        #blogCalendar .CalTitle > tbody > tr,
-        .catListTitle {
-            font-weight: 700;
-            font-size: 1.1em;
-            border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
-        }
-        /* 每个小块的标题内容和标题padding */
-        #blogCalendar .CalTitle > tbody > tr,
-        .catListTitle,
-        #sidebar_news #blog-news,
-        #blog-calendar,
-        #sidebar_search_box,
-        #sidebar_shortcut ul,
-        #sidebar_recentposts ul,
-        #sidebar_scorerank ul,
-        #sidebar_toptags ul,
-        #sidebar_imagecategory ul,
-        #sidebar_postcategory ul,
-        .sidebar-block ul,
-        #sidebar_postarchive ul,
-        #sidebar_recentcomments .RecentCommentBlock,
-        #TopViewPostsBlock,
-        #TopFeedbackPostsBlock,
-        #TopDiggPostsBlock {
-            padding: 10px 14px;
-        }
     }
+}
 
-    #blog-calendar {
-        #blogCalendar {
-            table,
-            tbody,
-            tr,
-            td {
-                display: block;
-            }
-            tr {
-                &:nth-child(1) {
-                    tr {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                    }
-                    .CalNextPrev {
-                        a {
-                            color: var(--themeColor);
-                            &:hover {
-                                color: #00a1d6;
-                            }
+#sidebar_scorerank {
+    ul li {
+        transform: none;
+    }
+}
+
+#sidebar_recentcomments {
+    .recent_comment_body {
+        padding: 1rem;
+        background-color: var(--background-e);
+        border-radius: 3px;
+    }
+    ul li:hover {
+        transform: none;
+    }
+}
+
+#blog-calendar {
+    padding: 10px 14px;
+    #blogCalendar {
+        table,
+        tbody,
+        tr,
+        td {
+            display: block;
+        }
+        tr {
+            &:nth-child(1) {
+                tr {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .CalNextPrev {
+                    a {
+                        color: var(--themeColor);
+                        &:hover {
+                            color: #00a1d6;
                         }
                     }
                 }
-                &:nth-child(2) {
-                    margin: 10.098px 0 5.4px;
-                    padding: 0 3.24px;
-                }
-                &:not(:nth-child(1)) {
-                    display: flex;
-                    justify-content: space-between;
-                    td {
-                        @include center(all);
-                        width: 21.6px;
-                        height: 21.6px;
-                    }
-                }
             }
-            u {
-                color: #00a1d6;
+            &:nth-child(2) {
+                margin: 10.098px 0 5.4px;
+                padding: 0 3.24px;
             }
-            .CalTodayDay {
-                background-color: var(--themeColor);
-                color: #fff;
-                border-radius: 50%;
-                font-size: 0.7em;
+            &:not(:nth-child(1)) {
+                display: flex;
+                justify-content: space-between;
+                td {
+                    @include center(all);
+                    width: 21.6px;
+                    height: 21.6px;
+                }
             }
         }
-    }
-
-    #sidebar_search {
-        .input_my_zzk {
-            border: 1px solid #61aeee;
-            background: var(--background-w);
-        }
-        .btn_my_zzk {
-            border: none;
-            background: var(--themeColor);
-            color: #fff;
-            &:hover {
-                background: #61aeee;
-                transition: background 0.3s;
-            }
+        .CalTodayDay {
+            color: var(--themeColor);
         }
     }
 }
 
+#sidebar_search {
+    .input_my_zzk {
+        padding: 0 3px;
+        border: 1px solid var(--themeColor);
+        background: var(--background-w);
+        outline: none;
+        color: var(--text-3);
+    }
+    .btn_my_zzk {
+        border: none;
+        background: var(--themeColor);
+        color: #fff;
+        outline: none;
+        &:hover {
+            background: #ef98b5;
+            transition: background 0.3s;
+        }
+    }
+}
+
+// #sidebar_recentcomments
+.recent_comment_title,
+#sidebar_recentposts ul li {
+    @include text-over();
+}
+
+#blog-news {
+    @include center();
+    #profile_block {
+        margin-top: 0;
+    }
+}
+
+// 侧边栏 end
 .PostList {
     margin-left: 0;
     padding: 5.4px 14.418px;

@@ -1,6 +1,4 @@
 // 设置网站图标和标题
-// 引入即可
-
 function setTitle() {
     const { title } = window.opts.theme
     if (title === '') return

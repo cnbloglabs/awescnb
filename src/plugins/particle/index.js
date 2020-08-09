@@ -34,7 +34,7 @@ function particle() {
     function i() {
         r.clearRect(0, 0, a, c)
         var n, e, t, o, m, l
-        s.forEach(function (i, x) {
+        s.forEach(function(i, x) {
             for (
                 i.x += i.xa,
                     i.y += i.ya,
@@ -79,7 +79,7 @@ function particle() {
             window.mozRequestAnimationFrame ||
             window.oRequestAnimationFrame ||
             window.msRequestAnimationFrame ||
-            function (n) {
+            function(n) {
                 window.setTimeout(n, 1e3 / 45)
             },
         w = Math.random,
@@ -94,10 +94,10 @@ function particle() {
         e('body')[0].appendChild(m),
         o(),
         (window.onresize = o),
-        (window.onmousemove = function (n) {
+        (window.onmousemove = function(n) {
             ;(n = n || window.event), (y.x = n.clientX), (y.y = n.clientY)
         }),
-        (window.onmouseout = function () {
+        (window.onmouseout = function() {
             ;(y.x = null), (y.y = null)
         })
     for (var s = [], f = 0; d.n > f; f++) {
@@ -114,7 +114,7 @@ function particle() {
         })
     }
     ;(u = s.concat([y])),
-        setTimeout(function () {
+        setTimeout(function() {
             i()
         }, 100)
 }

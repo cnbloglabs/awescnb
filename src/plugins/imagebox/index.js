@@ -1,7 +1,5 @@
 // 设置图片灯箱
 // 仅引入即可
-
-import './index.css'
 import { pageName, poll, isMd } from '@/assets/utils/tools'
 import mediumZoom from 'medium-zoom'
 

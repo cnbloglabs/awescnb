@@ -1,26 +1,33 @@
-body {
-    .aplayer.aplayer-fixed {
-        .aplayer-body {
-            left: -66px !important;
-            &:hover {
-                left: 0 !important;
-            }
-            &:hover .aplayer-miniswitcher {
-                background-color: #eee;
-            }
+$player: (
+    lrcColor: var(--themeColor),
+    bodyBackground: var(--background-e),
+) !default;
+
+$playerLrcColor: map-get($player, lrcColor);
+$playerBodyBackground: map-get($player, bodyBackground);
+
+#player {
+    .aplayer-body {
+        left: -66px;
+        background-color: $playerBodyBackground;
+        &:hover {
+            left: 0;
         }
-        .aplayer-lrc {
-            display: none;
-            // top: 10px;
-            // bottom: auto;
-            // left: -21px;
-            // right: auto;
-            .aplayer-lrc-contents {
-                p {
-                    font-size: 14px;
-                    color: #10ac84;
-                    text-shadow: none;
-                }
+        .aplayer-info {
+            border-top: none;
+        }
+        .aplayer-miniswitcher {
+            background-color: $playerBodyBackground;
+            border-left: 1px solid #999;
+        }
+    }
+    .aplayer-lrc {
+        display: none;
+        .aplayer-lrc-contents {
+            p {
+                font-size: 14px;
+                color: $playerLrcColor;
+                text-shadow: none;
             }
         }
     }

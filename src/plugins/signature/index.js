@@ -1,5 +1,4 @@
 // 个性签名在侧边栏构建
-import './index.css'
 import Typed from 'typed.js'
 
 const { enable, contents } = window.opts.signature

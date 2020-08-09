@@ -1,9 +1,15 @@
+$footer: (
+    background: #232323,
+) !default;
+
+$footerBackground: map-get($footer, background);
+
 #footer {
     margin: 54px 0 0;
     padding: 32.4px 0;
     text-align: center;
     color: #979b9e;
-    background-color: #232323;
+    background: $footerBackground;
     #links {
         display: flex;
         justify-content: center;

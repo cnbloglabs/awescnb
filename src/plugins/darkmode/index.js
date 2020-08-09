@@ -1,5 +1,4 @@
 import Darkmode from 'darkmode-js'
-import './index.css'
 
 var options = {
     bottom: '64px', // default: '32px'

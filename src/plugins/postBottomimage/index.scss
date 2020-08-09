@@ -1,6 +1,12 @@
+$postBottomimage: (
+    imageHeight: 200px,
+) !default;
+
+$bottomImageHeight: map-get($postBottomimage, imageHeight);
+
 #custom-post-bottomimage {
     width: 100%;
-    height: 200px;
+    height: $bottomImageHeight;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 10px;

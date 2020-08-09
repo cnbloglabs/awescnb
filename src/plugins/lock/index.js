@@ -1,6 +1,4 @@
-// 双击 header 下拉锁屏
-
-import './index.css'
+// 锁屏
 import Typed from 'typed.js'
 import { randomImage } from '@constants/urls'
 
@@ -9,7 +7,7 @@ const { avatar } = window.opts.theme
 let typed
 
 const typedOpts = {
-    strings,
+    strings: strings.length ? strings : ['快去自定义你的个性签名吧~'],
     typeSpeed: 100,
 }
 
@@ -37,7 +35,7 @@ function setBackground() {
 
 // 打开
 function open() {
-    $('#header').dblclick(function () {
+    $('#header').dblclick(function() {
         $('body').addClass('overflow')
         $('.lock-screen').css('top', '0')
         typed = new Typed('.lock-screen-text span', typedOpts)

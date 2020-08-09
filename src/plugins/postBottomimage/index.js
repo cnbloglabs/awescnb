@@ -1,7 +1,5 @@
 // 在随笔详情页尾部图片
-// 引入即可
 import { pageName } from '@tools'
-import './index.css'
 
 function postBottomimage() {
     const { enable, img, height } = window.opts.postBottomimage

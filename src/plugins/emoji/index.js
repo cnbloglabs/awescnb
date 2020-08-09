@@ -1,7 +1,6 @@
 // 评论输入表情
 import { pageName, cacheScript, userAgent } from '@tools'
 import { emojijs } from '@constants/urls'
-import './index.css'
 
 const {
     enable,

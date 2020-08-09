@@ -1,11 +1,12 @@
+import './index.scss'
 import dragMenu from '@plugins/dragMenu'
 import footer from '@plugins/footer'
 import themeColor from '@plugins/themeColor'
-import setBodyBackground from '@plugins/background'
+import background from '@plugins/background'
 import imagebox from '@plugins/imagebox'
-import setLive2d from '@plugins/live2d'
-import setMusicPlayer from '@plugins/player'
-import setClickEffects from '@plugins/click'
+import live2d from '@plugins/live2d'
+import player from '@plugins/player'
+import click from '@plugins/click'
 import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
@@ -22,18 +23,18 @@ import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
 import donation from '@plugins/donation'
 import { shootInitial } from '@plugins/barrage'
-import './index.scss'
+import notice from '@plugins/notice'
 
 function plugins() {
     dragMenu()
     footer()
     themeColor()
-    setBodyBackground()
+    background()
     imagebox()
     shootInitial()
-    setLive2d()
-    setMusicPlayer()
-    setClickEffects()
+    live2d()
+    player()
+    click()
     linenumbers()
     titleFavicon()
     commentsAvatars()
@@ -49,6 +50,7 @@ function plugins() {
     qrcode()
     charts()
     donation()
+    notice()
 }
 
 module.exports = plugins

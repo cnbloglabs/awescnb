@@ -33,7 +33,7 @@
         li {
             margin-top: 3.618px;
             &:hover {
-                color: #01a3a4;
+                color: var(--themeColor);
             }
             a {
                 display: inline-block;

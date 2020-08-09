@@ -13,8 +13,10 @@ import signature from '@plugins/signature'
 import highlight from '@plugins/highlight'
 import btns from '@plugins/btns'
 import setIcons from './icons'
+import themeColor from '@plugins/themeColor'
 
 function plugins() {
+    themeColor()
     setIcons()
     setBodyBackground()
     imagebox()

@@ -1,6 +1,5 @@
 import { annotate, annotationGroup } from 'rough-notation'
 import { pageName as currentPage } from '@tools'
-import './index.scss'
 
 const pageName = currentPage()
 const group = []
@@ -14,16 +13,6 @@ const annotateList = [
             color: '#2196F3',
         },
     },
-    // {
-    //     page: 'all',
-    //     selector: '#copyright span:last-child',
-    //     config: {
-    //         type: 'highlight',
-    //         color: '#FFF176',
-    //         animationDuration: 2000,
-    //         iterations: 6,
-    //     },
-    // },
     {
         page: 'post',
         selector: '#cb_post_title_url',
@@ -64,32 +53,6 @@ const annotateList = [
             color: '#F44336',
         },
     },
-    // {
-    //     page: 'index',
-    //     selector: '.postTitle2',
-    //     config: {
-    //         type: 'highlight',
-    //         color: '#FFF176',
-    //         animationDuration: 2000,
-    //         iterations: 6,
-    //     },
-    // },
-    // {
-    //     page: 'post',
-    //     selector: '#cnblogs_post_body>p',
-    //     config: {
-    //         type: 'box',
-    //         color: '#2196F3',
-    //     },
-    // },
-    // {
-    //     page: 'post',
-    //     selector: '#cnblogs_post_body>h2',
-    //     config: {
-    //         type: 'highlight',
-    //         color: '#eee',
-    //     },
-    // },
 ]
 
 const buildGroup = items => {

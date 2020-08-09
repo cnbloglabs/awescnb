@@ -1,5 +1,4 @@
 import { pageName } from '@/assets/utils/tools'
-import './index.css'
 const opts = window.opts.postSignature
 
 // 设置随笔签名

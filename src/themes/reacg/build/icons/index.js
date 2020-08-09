@@ -142,7 +142,7 @@ function nav() {
     ]
 
     for (let { selector, icon } of items) {
-        if ($(selector).length !== 0) {
+        if ($(selector).length) {
             $(selector).prepend(iconInSvg(icon))
         }
     }

@@ -1,5 +1,13 @@
+$donation: (
+    btnColors: #10ac84,
+    qrcodeBackground: #fff,
+) !default;
+
+$donationBtnColors: map-get($donation, btnColors);
+$donationQrcodeBackground: map-get($donation, qrcodeBackground);
+
 #custom-donation-btn {
-    background-color: #10ac84 !important;
+    background-color: $donationBtnColors !important;
     padding: 4px 10px !important;
     user-select: none;
     &:hover {
@@ -9,6 +17,7 @@
         transition: all 0.2s;
     }
 }
+
 #custom-donation-qrcode {
     display: none;
     position: relative;
@@ -24,7 +33,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         border-radius: 5px;
-        background-color: (--themeColor, #fff);
+        background-color: $donationQrcodeBackground;
     }
 }
 

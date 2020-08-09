@@ -64,25 +64,25 @@
             height: 1.8em;
         }
     }
+}
 
-    .sidebar-block,
-    #sidebar_search_box,
-    #sidebar_shortcut ul li a,
-    #sidebar_recentposts ul li a,
-    .icon #sidebar_scorerank ul li a,
-    #sidebar_toptags ul li a,
-    #sidebar_postcategory ul li a,
-    #sidebar_imagecategory ul li a,
-    #sidebar_postarchive ul li a,
-    #sidebar_recentcomments .RecentCommentBlock,
-    #TopViewPostsBlock,
-    #TopFeedbackPostsBlock,
-    #TopDiggPostsBlock {
-        .icon {
-            width: 1.2em;
-            height: 1.8em;
-            margin-right: 2px;
-        }
+.sidebar-block,
+#sidebar_search_box,
+#sidebar_shortcut ul li a,
+#sidebar_recentposts ul li a,
+.icon #sidebar_scorerank ul li a,
+#sidebar_toptags ul li a,
+#sidebar_postcategory ul li a,
+#sidebar_imagecategory ul li a,
+#sidebar_postarchive ul li a,
+#sidebar_recentcomments .RecentCommentBlock,
+#TopViewPostsBlock,
+#TopFeedbackPostsBlock,
+#TopDiggPostsBlock {
+    .icon {
+        width: 1.2em;
+        height: 1.8em;
+        margin-right: 2px;
     }
 }
 

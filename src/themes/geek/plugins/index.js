@@ -1,3 +1,7 @@
+import './coverPlugins.scss'
+import './index.scss'
+import catalog from './catalog'
+import menu from './menu'
 import highlight from '@plugins/highlight'
 import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
@@ -5,14 +9,9 @@ import postMessage from '@plugins/postMessage'
 import commentsAvatars from '@plugins/commentsAvatars'
 import signature from '@plugins/signature'
 import emoji from '@plugins/emoji'
-import menu from './menu'
-import catalog from './catalog'
-import './coverPlugins.scss'
-// import imagebox from '@plugins/imagebox'
-// import player from '@plugins/player'
-// import postSignature from '@plugins/postSignature'
-// import notice from '@plugins/notice'
-// import notation from '@plugins/notation'
+import imagebox from '@plugins/imagebox'
+import notice from '@plugins/notice'
+import postSignature from '@plugins/postSignature'
 
 const plugins = () => {
     highlight()
@@ -26,9 +25,9 @@ const plugins = () => {
     postMessage()
     commentsAvatars()
     catalog()
-    // postSignature()
-    // imagebox()
-    // notice()
+    imagebox()
+    postSignature()
+    notice()
 }
 
 module.exports = plugins

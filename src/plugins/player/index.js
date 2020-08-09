@@ -1,7 +1,4 @@
 // 音乐播放器
-// 引入即可
-
-import './index.scss'
 import { pageName, userAgent, cacheScript, addCss } from '@/assets/utils/tools'
 import { aplayerjs, aplayercss } from '@constants/urls'
 

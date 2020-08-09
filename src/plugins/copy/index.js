@@ -1,7 +1,5 @@
 // 代码块复制按钮
 // 引入即可
-
-import './index.css'
 import { pageName, isMd } from '@/assets/utils/tools'
 import toast from '@plugins/toast'
 
