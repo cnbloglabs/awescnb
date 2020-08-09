@@ -379,9 +379,9 @@ body {
             .blog_comment_body {
                 background-color: var(--themeColor) !important;
                 color: #333;
-                a:nth-child(1) {
-                    color: var(--themeColor);
-                }
+                // a:nth-child(1) {
+                //     color: var(--themeColor);
+                // }
                 a:not(:nth-child(1)):hover {
                     color: var(--themeColor);
                     transition: all 0.25s;
