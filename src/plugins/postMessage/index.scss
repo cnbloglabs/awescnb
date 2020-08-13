@@ -1,8 +1,10 @@
 $postMeaage: (
+    categoriesBackground: #ff6b6b,
     tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
 ) !default;
 
 $postMessageTagBackground: map-get($postMeaage, tagsBackground);
+$categoriesBackground: map-get($postMeaage, categoriesBackground);
 
 #EntryTag,
 #BlogPostCategory {
@@ -57,7 +59,7 @@ $postMessageTagBackground: map-get($postMeaage, tagsBackground);
 }
 
 .custom-categories a {
-    background-color: var(--themeColor, #ff7979);
+    background-color: $categoriesBackground;
 }
 
 .custom-post-message-bottom {

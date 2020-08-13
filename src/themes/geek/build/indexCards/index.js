@@ -33,9 +33,11 @@ const build = () => {
         const commentCount = getCounts('.post-comment-count')
         const diggCount = getCounts('.post-digg-count')
 
+        // 'awesCnb'.link(urls.repositories.gitee)
+
         const card = `
         <div class='custom-card'>
-            <div class="postTitle">${title}</div>
+           <a href="${detailUrl}"><div class="postTitle">${title}</div></a>
             ${desc}
             <div class="custom-card-actions">
                 <span><li class="fas fa-eye"></li>${viewCount}</span>
