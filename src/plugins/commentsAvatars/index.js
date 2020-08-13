@@ -1,4 +1,4 @@
-import { pageName } from '@tools'
+import { pageName, poll } from '@tools'
 import env from '@constants/env'
 
 /**
@@ -62,11 +62,13 @@ function build() {
  * 监听 ajax
  */
 function listener() {
-    $(document).ajaxComplete(function(event, xhr, option) {
-        if (option.url.indexOf('GetComments') > -1) {
-            build()
-        }
-    })
+    // $(document).ajaxComplete(function(event, xhr, option) {
+    //     if (option.url.indexOf('GetComments') > -1) {
+    //         build()
+    //     }
+    // })
+
+    poll($('.feedbackItem').length, build)
 }
 
 /**

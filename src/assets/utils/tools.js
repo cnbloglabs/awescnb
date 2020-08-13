@@ -190,6 +190,7 @@ function unpass(show) {
  * @param {func} 函数
  */
 function poll(condition, callback) {
+    console.log(11111, condition)
     if (condition) {
         callback()
     } else {
@@ -203,6 +204,7 @@ function poll(condition, callback) {
                 clearInterval(intervalId)
             }
             count++
+            console.log(222, count, condition)
         }, 100)
     }
 }
