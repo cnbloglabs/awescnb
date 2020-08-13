@@ -1,7 +1,17 @@
-$postMeaage: (
-    categoriesBackground: #ff6b6b,
-    tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
-) !default;
+// $postMeaage: (
+//     categoriesBackground: #ff6b6b,
+//     tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
+// ) !default;
+
+$postMeaage: () !default;
+
+$postMeaage: map-merge(
+    (
+        categoriesBackground: #ff6b6b,
+        tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
+    ),
+    $postMeaage
+);
 
 $postMessageTagBackground: map-get($postMeaage, tagsBackground);
 $categoriesBackground: map-get($postMeaage, categoriesBackground);
