@@ -1,8 +1,10 @@
-// 显示评论列表头像
-import { pageName, poll } from '@tools'
+import { pageName } from '@tools'
 import env from '@constants/env'
 
-function build() {
+/**
+ * 构建头像
+ */
+function buildAvatars() {
     $('.feedbackItem').each(function() {
         let avatar = $(this)
             .children('.feedbackCon')
@@ -19,20 +21,10 @@ function build() {
     })
 }
 
-function show() {
-    if (pageName() !== 'post') return
-    setTimeout(() => {
-        poll($('.feedbackItem').length, build)
-    }, 1000)
-    // $(document).ajaxComplete(function(event, xhr, option) {
-    //     if (option.url.indexOf('GetComments') > -1) {
-    //         window.awesCommentsAvatar()
-    //     }
-    // })
-}
-
-// 调整支持反对按钮位置
-function support() {
+/**
+ * 调整支持反对按钮位置
+ */
+function moveSupport() {
     $('.comment_vote').each(function() {
         $(this).appendTo(
             $(this)
@@ -42,7 +34,9 @@ function support() {
     })
 }
 
-// 作者回复靠右
+/**
+ * 作者回复靠右
+ */
 function authorRight() {
     $('.feedbackItem').each(function() {
         const isAuthor =
@@ -55,12 +49,32 @@ function authorRight() {
     })
 }
 
-function commentsAvatar() {
-    show()
-    support()
+/**
+ * 组合
+ */
+function build() {
+    buildAvatars()
+    moveSupport()
     authorRight()
 }
 
-// window.awesCommentsAvatar = commentsAvatar
+/**
+ * 监听 ajax
+ */
+function listener() {
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (option.url.indexOf('GetComments') > -1) {
+            build()
+        }
+    })
+}
+
+/**
+ * 导出
+ */
+function commentsAvatar() {
+    if (pageName() !== 'post') return
+    env === 'dev' ? build() : listener()
+}
 
 export default commentsAvatar
