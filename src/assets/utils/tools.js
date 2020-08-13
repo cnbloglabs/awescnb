@@ -188,23 +188,25 @@ function unpass(show) {
  * @description 轮询
  * @param {condition} 条件
  * @param {func} 函数
+ * @returns {Boolean} 是否完成 callback
  */
 function poll(condition, callback) {
-    console.log(11111, condition)
     if (condition) {
         callback()
+        return true
     } else {
         let count = 1
         let intervalId = setInterval(() => {
             if (condition) {
                 callback()
                 clearInterval(intervalId)
+                return true
             }
             if (count === 30) {
                 clearInterval(intervalId)
+                return false
             }
             count++
-            console.log(222, count, condition)
         }, 100)
     }
 }
