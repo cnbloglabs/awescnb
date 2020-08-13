@@ -6,25 +6,28 @@ const options = {
         // 返回顶部
         {
             icon: 'fa-arrow-up',
-            backgroundColor: '#fff',
         },
         // 评论
         {
             icon: 'fa-comment-dots',
-            backgroundColor: '#fff',
         },
         // 收藏
         {
             icon: 'fa-star',
-            backgroundColor: '#fff',
         },
         {
             icon: 'fa-heart',
-            backgroundColor: '#fff',
         },
         {
             icon: 'fa-thumbs-up',
-            backgroundColor: '#fff',
+        },
+        {
+            page: 'all',
+            icon: 'fa-adjust',
+            tooltip: '模式',
+            evenType: 'click',
+            callback: () => {},
+            className: 'mode-change',
         },
     ],
 }

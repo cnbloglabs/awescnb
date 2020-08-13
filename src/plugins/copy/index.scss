@@ -1,22 +1,43 @@
+#cnblogs_post_body pre {
+    position: relative;
+}
+
 .cnblogs_code {
     position: relative;
 }
 
 .cnblogs_code .copy-btns {
-    background: none !important;
     z-index: 1;
+}
+
+pre:hover,
+.cnblogs_code:hover {
+    .copy-btns {
+        visibility: visible;
+    }
 }
 
 .copy-btns {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 10px;
+    top: 10px;
+    right: 10px;
+    padding: 6px 8px;
+    visibility: hidden;
+    color: rgb(241, 239, 239);
     font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    user-select: none;
     cursor: pointer;
-    filter: invert(0.8);
+    transition: all 0.2s;
 }
 
-#cnblogs_post_body pre {
-    position: relative;
+#cnblogs_post_body {
+    .copy-btns {
+        background-color: rgba(0, 0, 0, 0.6);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #eee;
+        }
+    }
 }

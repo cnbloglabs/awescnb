@@ -21,9 +21,9 @@
 
 pre,
 code {
-    @include scrollbar-simple(#a8a8a8);
+    @include scrollbar-simple(var(--scrollbar-bg));
 }
 
 #catalog {
-    @include scrollbar-simple(#d8d8d8);
+    @include scrollbar-simple(var(--scrollbar-bg));
 }

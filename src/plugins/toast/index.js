@@ -1,5 +1,6 @@
 import { Notyf } from 'notyf'
 import 'notyf/notyf.min.css'
+import './index.scss'
 
 const notyf = new Notyf({
     position: { x: 'right', y: 'top' },
@@ -15,7 +16,6 @@ const notyf = new Notyf({
 })
 
 function toast(message = 'no message', type = 'success') {
-    console.log(message)
     type !== 'success' && type !== 'error'
         ? notyf.open({
               type,

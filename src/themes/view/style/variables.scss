@@ -1,0 +1,120 @@
+// default-variables
+:root {
+    --header-bg: #fff;
+    --header-text-color: #4a4a4a;
+    --header-border-color: #eee;
+    --header-item-hover-bg: #f3f3f3;
+    --header-nickname-color: #4a4a4a;
+
+    --searchbar-border-color: #ccc;
+    --searchbar-bg: #fff;
+    --searchbar-text-color: #000;
+
+    --body-text-color: #4a4a4a;
+    --main-bg: #f2f1f6;
+    --mainContent-border-color: #ccc;
+    --mainContent-bg: #fff;
+
+    --title-bg: #fff;
+    --postDesc-color: #999;
+    --postCon-color: #888;
+
+    --title-border-color: hsla(0, 0%, 59.2%, 0.1);
+    --pager-btn-bg: #f2f1f6;
+    --tags-bg: #f5f7fa;
+
+    --sidebarWrap-bg: #fff;
+    --sidebar-item-hover: #f5f7fa;
+    --sidebar-title-border-color: #eee;
+
+    --calendar-text-color: #000;
+    --postList-bg: #fff;
+    --areaTitle-bg: #f6f8fa;
+    --area-border-color: #d1d5da;
+    --menu-bg: #fff;
+
+    --scrollbar-bg: #d8d8d8;
+    --ads-bg: #eee;
+
+    --blockquote-bg: #f5f5f5;
+    --blockquote-border-color: #cbcbcb;
+    --table-border-color: rgb(192, 192, 192);
+    --card-bg: #fafafa;
+    --footer-bg: #232323;
+}
+
+// variables in dark mode
+:root[theme='dark'] {
+    --header-bg: #202023;
+    --header-text-color: #bababa;
+    --header-border-color: #444;
+    --header-item-hover-bg: #2c2c2f;
+    --header-nickname-color: #bababa;
+
+    --searchbar-border-color: #2c2c2f;
+    --searchbar-bg: #444;
+    --searchbar-text-color: rgba(163, 97, 97, 0.7);
+
+    --body-text-color: #bababa;
+
+    --main-bg: rgb(53, 52, 52);
+    --mainContent-border-color: #444;
+
+    --title-bg: #2c2c2f;
+    --postDesc-color: #999;
+    --postCon-color: #888;
+    --mainContent-bg: #252528;
+    --title-border-color: hsla(0, 0%, 59.2%, 0.1);
+    --pager-btn-bg: #444;
+    --tags-bg: #2c2c2f;
+
+    --sidebarWrap-bg: #202023;
+    --sidebar-item-hover: #444;
+    --sidebar-title-border-color: #444;
+
+    --calendar-text-color: #000;
+    --postList-bg: #fff;
+
+    --areaTitle-bg: #444;
+    --area-border-color: #666;
+
+    --menu-bg: #353538;
+
+    --scrollbar-bg: #444;
+    --ads-bg: #444;
+
+    --blockquote-bg: #444;
+    --blockquote-border-color: #5e5e60;
+    --table-border-color: #444;
+    --card-bg: #353538;
+    --footer-bg: #000;
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}

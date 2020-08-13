@@ -170,7 +170,7 @@ const defaultOptions = {
     bodyBackground: {
         enable: false,
         value: '',
-        opacity: 1,
+        opacity: 0.9,
         repeat: false,
     },
     // 弹幕

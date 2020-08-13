@@ -8,7 +8,7 @@
     text-overflow: ellipsis;
     border-radius: 2px;
     z-index: 0;
-    background-color: #fff;
+    background-color: var(--sidebarWrap-bg);
     margin-bottom: 1rem;
     h3 {
         &::before {
@@ -16,7 +16,7 @@
         }
     }
     .catalog-title {
-        background-color: #fff;
+        background-color: var(--sidebarWrap-bg);
         font-size: 18px;
         position: relative;
         display: flex;
@@ -25,7 +25,7 @@
         top: 0;
         padding: 1rem;
         font-weight: 600;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--sidebar-title-border-color);
         cursor: pointer;
         user-select: none;
         &::after {
@@ -86,10 +86,6 @@
     top: 0.5rem;
     visibility: visible;
     transition: top 0.2s;
-    .catalog-title,
-    ul {
-        background-color: #fff;
-    }
     h3::before {
         display: none;
     }

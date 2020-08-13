@@ -81,12 +81,12 @@
         th,
         tbody,
         td {
-            border: none;
+            border-color: var(--table-border-color);
         }
         thead {
             tr {
                 th {
-                    // background-color: #ff6b81 !important;
+                    background: none;
                     // color: #fff;
                     padding: 6px 9px;
                     text-align: left;
@@ -94,9 +94,9 @@
             }
         }
         tr {
-            &:nth-child(odd) {
-                background-color: #f5f5f5;
-            }
+            // &:nth-child(odd) {
+            //     background-color: #f5f5f5;
+            // }
             // &:hover {
             //     background-color: #999;
             //     cursor: default;
@@ -111,10 +111,9 @@
     blockquote {
         margin: 5px 0;
         padding: 1px 15px;
-        background: #f5f5f5;
+        background: var(--blockquote-bg);
         border: none;
-        border-left: 6px solid #cbcbcb;
-        color: #555;
+        border-left: 6px solid var(--blockquote-border-color);
         p {
             margin: 6px auto;
             line-height: 1.8;

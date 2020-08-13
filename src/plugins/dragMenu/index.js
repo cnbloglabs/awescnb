@@ -121,14 +121,16 @@ class Menu {
 class Item {
     constructor(
         icon,
-        // backgroundColor,
+        tip = '',
         event = 'click',
         callback = function() {},
-        tip = '',
+        className,
     ) {
         this.$element = $(document.createElement('div'))
         this.$element.addClass('dragmenu-item')
-        // this.$element.css('background-color', backgroundColor)
+        if (className) {
+            this.$element.addClass(className)
+        }
         var i = document.createElement('i')
         var tooltip = document.createElement('span')
         $(tooltip).addClass('dragmenu-item-tooltip')
@@ -186,28 +188,16 @@ function create(options) {
 
     const menu = new Menu('#myMenu')
 
-    // menu.add(
-    //     new Item(icon, backgroundColor, evenType, callback, '收起'),
-    // )
-
     for (const {
         page,
         icon,
-        // backgroundColor,
         tooltip,
         evenType,
         callback,
+        className,
     } of options.items) {
         if (pageName() === page || page === 'all') {
-            menu.add(
-                new Item(
-                    icon,
-                    // backgroundColor,
-                    evenType,
-                    callback,
-                    tooltip,
-                ),
-            )
+            menu.add(new Item(icon, tooltip, evenType, callback, className))
         }
     }
     $(document)
@@ -290,7 +280,6 @@ function dragMenu(options) {
             {
                 page: 'all',
                 icon: '🚀',
-                // backgroundColor: '#f1f2f6',
                 tooltip: '双击',
                 evenType: 'dblclick',
                 callback: back2top,
@@ -298,7 +287,6 @@ function dragMenu(options) {
             {
                 page: 'post',
                 icon: '💬',
-                // backgroundColor: '#f1f2f6',
                 tooltip: '评论',
                 evenType: 'click',
                 callback: comment,
@@ -306,7 +294,6 @@ function dragMenu(options) {
             {
                 page: 'post',
                 icon: '📌',
-                // backgroundColor: '#f1f2f6',
                 tooltip: '收藏',
                 evenType: 'click',
                 callback: collect,
@@ -314,7 +301,6 @@ function dragMenu(options) {
             {
                 page: 'post',
                 icon: '💗',
-                // backgroundColor: '#f1f2f6',
                 tooltip: '关注',
                 evenType: 'click',
                 callback: focus,
@@ -322,7 +308,6 @@ function dragMenu(options) {
             {
                 page: 'post',
                 icon: '👍',
-                // backgroundColor: '#f1f2f6',
                 tooltip: '推荐',
                 evenType: 'click',
                 callback: diggit,
