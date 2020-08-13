@@ -8,7 +8,7 @@ function owoEmoji() {
         '<div class="OwO"><div class="OwO-logo"><i class="fa fa-smile-o" aria-hidden="true"></i></div></div>',
     )
     $('.OwO').click(function() {
-        console.log(4784651)
+        // console.log(4784651)
     })
 }
 

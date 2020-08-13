@@ -18,7 +18,7 @@ const setLive2d = () => {
             ? live2dModels[randomProperty(live2dModels)]
             : live2dModels[options.model]
     if (env === 'dev') {
-        console.log('live2d model：', model)
+        // console.log('live2d model：', model)
     }
 
     const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:30;pointer-events: none;" width="${options.width}"height="${options.height}" > </canvas>`

@@ -71,7 +71,7 @@ function build() {
 }
 
 function postPage() {
-    console.log(build)
+    // console.log(build)
     // build()
 }
 

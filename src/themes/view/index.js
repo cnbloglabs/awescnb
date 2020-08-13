@@ -8,8 +8,8 @@ class View extends AwesCnb {
     }
 
     init() {
-        require('./build')()
         require('./plugins')()
+        require('./build')()
     }
 }
 

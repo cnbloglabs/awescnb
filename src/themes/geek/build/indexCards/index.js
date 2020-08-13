@@ -16,8 +16,6 @@ const build = () => {
             title = title.substring(0, 25) + '...'
         }
 
-        console.log(title)
-
         const desc = secondEl.prop('outerHTML')
         const detailUrl = secondEl.find('a').attr('href')
         const editUrl = thirdEl.find('a').attr('href')

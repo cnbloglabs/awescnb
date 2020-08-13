@@ -12,8 +12,10 @@ function layout() {
 
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect()
-    return rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight)
+    return (
+        rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight)
+    )
 }
 
 function scroll() {
@@ -22,14 +24,13 @@ function scroll() {
         for (var i = 0; i < items.length; i++) {
             if (isElementInViewport(items[i])) {
                 items[i].classList.add('in-view')
-                console.log(1213)
             }
         }
     }
 
-    window.addEventListener('load', throttle(callbackFunc, 1000/60))
-    window.addEventListener('resize', throttle(callbackFunc, 1000/60))
-    window.addEventListener('scroll', throttle(callbackFunc, 1000/60))
+    window.addEventListener('load', throttle(callbackFunc, 1000 / 60))
+    window.addEventListener('resize', throttle(callbackFunc, 1000 / 60))
+    window.addEventListener('scroll', throttle(callbackFunc, 1000 / 60))
 }
 
 function indexTimeline() {

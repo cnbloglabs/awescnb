@@ -17,6 +17,7 @@ import background from '@plugins/background'
 import mode from '@plugins/mode'
 
 const plugins = () => {
+    commentsAvatars()
     footer()
     highlight()
     copy()
@@ -27,7 +28,6 @@ const plugins = () => {
     postSignature()
     notice()
     signature()
-    commentsAvatars()
     menu()
     notation()
     player()

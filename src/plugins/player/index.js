@@ -43,7 +43,7 @@ function build() {
             $('.aplayer-lrc').show()
         })
         ap.on('pause', () => {
-            console.log('pause')
+            // console.log('pause')
             $('.aplayer-lrc').hide()
         })
     }
