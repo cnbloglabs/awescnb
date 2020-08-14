@@ -16,3 +16,5 @@ export const following = `${cnblog}/following`
 export const commented = `${cnblog}/aggsite/mycommented`
 // 我赞
 export const mydigged = `${cnblog}/aggsite/mydigged`
+// 用户博客首页
+export const index = `${cnblog}/${currentBlogApp}`

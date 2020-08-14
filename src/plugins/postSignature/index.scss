@@ -24,6 +24,11 @@ $psignatureBorderRadius: map-get($postSignature, borderRadius);
         line-height: 1.6em;
     }
 
+    a {
+        color: inherit;
+        border-bottom: none;
+    }
+
     &::before {
         content: '!';
         background-color: $psignaturePrimary;

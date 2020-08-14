@@ -254,7 +254,7 @@ function dragMenu(options) {
         window.votePost(parseInt(id), 'Digg')
     }
 
-    // 评论
+    // 跳转到评论输入框
     const comment = () => {
         $('html, body, #mainContent').animate(
             {

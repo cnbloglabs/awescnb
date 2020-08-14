@@ -1,4 +1,5 @@
 import { getMonth, getQuarter } from '@tools'
+import { index } from '@constants/links'
 import { getBlogname } from '@cnblog'
 import './index.scss'
 
@@ -17,7 +18,7 @@ const buildTopBtns = () => {
             <a href="https://msg.cnblogs.com/"><li class="fas fa-bell"></li></a>
         </button>
         <span class="account-user">${getBlogname()}
-            <img src="${avatar}" alt="" class="account-profile">
+            <a href="${index}"><img src="${avatar}" alt="" class="account-profile"></a>
             <span>▼</span>
         </span>
     </div>`

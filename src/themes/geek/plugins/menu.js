@@ -1,4 +1,5 @@
 import dragMenu from '@plugins/dragMenu'
+import toast from '@plugins/toast'
 
 const options = {
     mobileAutoClose: true,
@@ -12,6 +13,22 @@ const options = {
         {
             icon: 'fa-comment-dots',
             backgroundColor: '#202234',
+            callback: function() {
+                const mainContainer = $('#mainContent')
+                const scrollToContainer = mainContainer.find(
+                    '#comment_form:last',
+                )
+                mainContainer.animate(
+                    {
+                        scrollTop:
+                            scrollToContainer.offset().top -
+                            mainContainer.offset().top +
+                            mainContainer.scrollTop(),
+                    },
+                    300,
+                )
+                toast('跳转成功')
+            },
         },
         // 收藏
         {

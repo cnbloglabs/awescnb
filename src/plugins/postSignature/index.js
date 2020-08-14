@@ -22,7 +22,7 @@ function postSignature() {
     const $signature = `<div id='post-signature'>
                             <p>本文作者：${author}</p>
                             <p>本文链接：${href}</p>
-                            <p>版权声明：本作品采用<a href='${opts.licenseLink}'>知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆许可协议</a>进行许可。</p>
+                            <p>版权声明：本作品采用知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆<a href='${opts.licenseLink}'>许可协议</a>进行许可。</p>
                             ${custom}
                           </div>`
     $('#cnblogs_post_body').append($signature)
