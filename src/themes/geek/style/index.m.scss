@@ -1,15 +1,7 @@
 @media screen and (max-width: 1366px) {
     #home {
-        grid-template-columns: 1fr 1fr 260px;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            'main main right'
-            'main main right'
-            'main main right';
-    }
-
-    #left-side {
-        display: none;
+        display: grid;
+        grid-template-columns: 68px 1fr 1fr 280px;
     }
 
     .topicListFooter {
@@ -25,6 +17,18 @@
 }
 
 @media screen and (max-width: 767px) {
+    #home {
+        grid-template-columns: 1fr 1fr 260px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            'main main right'
+            'main main right'
+            'main main right';
+    }
+
+    #left-side {
+        display: none;
+    }
     #home {
         grid-template-columns: 1fr;
     }

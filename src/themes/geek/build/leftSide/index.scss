@@ -1,3 +1,5 @@
+$iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
+
 .logo {
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
@@ -17,42 +19,13 @@
     );
 }
 
-// navlist start
 #navList {
-    #blog_nav_sitehome::before {
-        content: '\f781';
-        font-weight: bold;
-        color: #3273dc;
-    }
-    #blog_nav_myhome::before {
-        content: '\f015';
-        font-weight: bold;
-        color: #00d1b2;
-    }
-    #blog_nav_contact::before {
-        content: '\f0e0';
-        font-weight: bold;
-        color: #48c774;
-    }
-    #blog_nav_rss::before {
-        content: '\f143';
-        font-weight: bold;
-        color: #ffd257;
-    }
-    #blog_nav_admin::before {
-        content: '\f02d';
-        font-weight: bold;
-        color: #00d1b2;
-    }
-    #blog_nav_newpost {
-        &::before {
-            content: '\f14b';
-            font-weight: bold;
-            color: #e7339f;
+    @for $i from 1 through length($iconsColor) {
+        li:nth-child(#{$i}) span::before {
+            color: nth($iconsColor, $i);
         }
     }
 }
-// navlist end
 
 .side-wrapper {
     padding: 30px;
@@ -136,4 +109,43 @@
 }
 
 @media screen and (max-width: 1366px) {
+    #navList {
+        & span::before {
+            margin: 0;
+        }
+        li {
+            // display: block;
+            margin-bottom: 0;
+        }
+    }
+    .side-wrapper {
+        padding: 60px 0 0;
+        h3 {
+            display: none;
+        }
+        ul {
+            li {
+                // display: flex;
+                // padding: 10px 0;
+                padding: 10px 0 5px;
+                flex-direction: column;
+                font-size: 12px;
+                a {
+                    margin-top: 10px;
+                }
+                &:hover {
+                    background-color: #24273b;
+                }
+                &:active {
+                    background-color: #3c4161;
+                }
+            }
+        }
+    }
+    .logo,
+    .favourite,
+    .developer span,
+    .follow-text span {
+        display: none;
+    }
 }

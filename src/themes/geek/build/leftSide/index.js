@@ -7,7 +7,7 @@ const buildLeftside = () => {
         <div class='logo'>
             <a href="https://www.cnblogs.com/">CNBLOG</a>
         </div>
-        <div class="side-wrapper">
+        <div class="favourite side-wrapper">
             <h3>FAVOURITE</h3>
             <ul></ul>
         </div>
@@ -30,6 +30,21 @@ const removeHeaderToLeftside = () => {
         '<h3>MENU</h3>',
     )
     $('#left-side .logo').after(el)
+
+    const icons = {
+        博客园: 'fa-blog',
+        首页: 'fa-home',
+        新随笔: 'fa-pen-square',
+        联系: 'fa-envelope',
+        订阅: 'fa-rss-square',
+        管理: 'fa-cog',
+    }
+    $('#navList li').each(function() {
+        const title = $(this)
+            .text()
+            .trim()
+        $(this).prepend(`<span class="fas ${icons[title]}"></span>`)
+    })
     $('#navList').appendTo($('#cnblog-nav'))
 }
 
@@ -40,10 +55,10 @@ const buildLeftsideBottomBtns = () => {
     const el = `
     <div class="leftside-bottom">
     <a href="${github.url}" class="follow-me" target="_blank">
-        <span class="follow-text"><i class="fas fa-github"></i>Fork me on GitHub</span>
+        <span class="follow-text"><i class="fas fa-github"></i><span>Fork me on GitHub</span></span>
         <span class="developer">
             <img src="${avatar}">
-            ${userName}
+            <span>${userName}</span>
         </span>
     </a>
     </div>`

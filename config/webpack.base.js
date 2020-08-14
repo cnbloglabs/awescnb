@@ -1,8 +1,10 @@
 const path = require('path')
 const { themeName } = require('./options')
 const { eslint } = require('./options')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 
 const jsLoader = [
+    'cache-loader',
     {
         loader: 'babel-loader',
         options: {
@@ -61,4 +63,5 @@ module.exports = {
             '@store': path.resolve('src/store'),
         },
     },
+    plugins: [new HardSourceWebpackPlugin()],
 }
