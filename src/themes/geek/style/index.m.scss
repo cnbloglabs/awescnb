@@ -1,4 +1,7 @@
 @media screen and (max-width: 1366px) {
+    .topicListFooter {
+        grid-column-end: 3;
+    }
     #home {
         display: grid;
         grid-template-columns: 68px 1fr 1fr 280px;
@@ -60,8 +63,12 @@
     }
 
     .topicListFooter {
-        grid-column-start: auto;
-        grid-column-end: auto;
+        grid-column-end: 2;
+    }
+
+    #homepage_bottom_pager .pager a {
+        margin: 0 5px;
+        padding: 0;
     }
 
     #blog_post_info_block #blog_post_info #div_digg {
