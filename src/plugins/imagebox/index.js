@@ -15,7 +15,6 @@ function build() {
         const item = $(imgList[i])
         item.addClass('custom-zoom')
     })
-
     mediumZoom('.custom-zoom', mediumZoomConfig)
 }
 

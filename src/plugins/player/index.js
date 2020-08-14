@@ -49,7 +49,7 @@ function build() {
     }
 
     if (lrc.enable && lrc.color !== '') {
-        $('.aplayer-lrc .aplayer-lrc-contents p').css('color', lrc.color)
+        $('.aplayer-lrc').css('color', lrc.color)
     }
 }
 

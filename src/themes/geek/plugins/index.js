@@ -12,6 +12,7 @@ import emoji from '@plugins/emoji'
 import imagebox from '@plugins/imagebox'
 import notice from '@plugins/notice'
 import postSignature from '@plugins/postSignature'
+import mode from '@plugins/mode'
 
 const plugins = () => {
     highlight()
@@ -28,6 +29,7 @@ const plugins = () => {
     imagebox()
     postSignature()
     notice()
+    mode()
 }
 
 module.exports = plugins

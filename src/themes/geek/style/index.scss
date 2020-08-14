@@ -1,4 +1,5 @@
 @import '@/assets/style/reset.scss';
+@import './variables.scss';
 @import './tools.scss';
 @import './scroll.scss';
 @import './animate.scss';
@@ -12,8 +13,8 @@ html {
 }
 
 body {
-    background-color: #373e57;
-    color: #ccc8db;
+    background-color: var(--body-bg);
+    color: var(--body-color);
     font-size: 1em;
     line-height: 1.5;
     font-family: 'Source Sans Pro', sans-serif;
@@ -41,7 +42,6 @@ body {
     display: grid;
     grid-template-rows: 60px 1fr 30px;
     grid-template-columns: 1fr;
-    background-color: #eee;
     margin-top: 8px;
 }
 
@@ -50,7 +50,7 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 40vh 1fr;
     padding: 20px;
-    background-color: #24273b;
+    background-color: var(--mainContent-bg);
     overflow: auto;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .entrylistPostSummary,
 .postCon {
-    color: #5c5e6e;
+    color: var(--postCon-bg);
     font-size: 14px;
 }
 
@@ -100,7 +100,7 @@ body {
 #sideBar {
     grid-area: right;
     margin: 8px 8px 0 0;
-    background-color: #151728;
+    background-color: var(--sidebar-bg);
 }
 
 #sidebar_news,
@@ -110,10 +110,10 @@ body {
 
 .sidebar-block {
     padding: 25px;
-    border-bottom: 1px solid #272a3a;
+    border-bottom: 1px solid var(--sidebarBlock-border-color);
     h3 {
         font-family: 'DM Sans', sans-serif;
-        color: #5c5e6e;
+        color: var(--sidebarTitle-color);
         font-size: 15px;
         font-weight: 600;
         margin-bottom: 20px;
@@ -126,7 +126,7 @@ body {
             transition: all 0.2s;
             cursor: pointer;
             &:hover {
-                color: #fff;
+                color: var(--sidebarItem-hover-color);
             }
         }
     }
@@ -141,14 +141,14 @@ body {
             margin-bottom: 0.5rem;
             margin-right: 0.5rem;
             padding: 0.2rem 0.4rem;
-            background-color: #202234;
+            background-color: var(--sidebarTags-bg);
             font-size: 12px;
         }
     }
 }
 
 .recent_comment_body {
-    background-color: #24273b;
+    background-color: var(--sidebarTags-bg);
     border-radius: 3px;
 }
 
@@ -188,11 +188,11 @@ body {
                     }
                 }
 
-                .CalNextPrev {
-                    a:hover {
-                        color: #fff;
-                    }
-                }
+                // .CalNextPrev {
+                //     a:hover {
+                //         color: #fff;
+                //    }
+                // }
             }
 
             &:nth-child(2) {
@@ -241,7 +241,7 @@ body {
     display: flex;
     flex-direction: column;
     transition: 0.3s;
-    background-color: #151728;
+    background-color: var(--sidebar-bg);
     flex-shrink: 0;
 }
 
@@ -355,6 +355,10 @@ body {
         padding-bottom: 1rem;
         font-size: 1.2rem;
     }
+}
+
+.forFlow {
+    z-index: 2;
 }
 
 // 当前标签页,随笔分类

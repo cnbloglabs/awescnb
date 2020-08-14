@@ -14,7 +14,7 @@ function footer() {
                             </span>
                             <span>
                                 Powered by you
-                                🍦
+                                🍨
                                 Theme in ${'awescnb'.link(gitee)} 
                             </span>
                         </div>`

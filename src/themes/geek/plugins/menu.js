@@ -43,6 +43,14 @@ const options = {
             icon: 'fa-thumbs-up',
             backgroundColor: '#202234',
         },
+        {
+            page: 'all',
+            icon: 'fa-adjust',
+            tooltip: '模式',
+            evenType: 'click',
+            callback: () => {},
+            className: 'mode-change',
+        },
     ],
 }
 

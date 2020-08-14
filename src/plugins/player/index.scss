@@ -1,18 +1,38 @@
 $player: (
-    lrcColor: var(--themeColor),
-    bodyBackground: var(--background-e),
+    bodyBackground: #fff,
 ) !default;
 
-$playerLrcColor: map-get($player, lrcColor);
 $playerBodyBackground: map-get($player, bodyBackground);
 
+#player.aplayer {
+    background: none;
+}
+
+#player.aplayer .aplayer-list ol li {
+    background: $playerBodyBackground;
+}
+
 #player {
+    &:hover {
+        .aplayer-list {
+            transform: scaleX(1);
+            left: 0;
+        }
+        .aplayer-body {
+            left: 0;
+        }
+    }
+    .aplayer-list {
+        position: relative;
+        transform: scaleX(0.838);
+        left: -34px;
+    }
     .aplayer-body {
         left: -66px;
         background-color: $playerBodyBackground;
-        &:hover {
-            left: 0;
-        }
+        // &:hover {
+        //     left: 0;
+        // }
         .aplayer-info {
             border-top: none;
         }
@@ -24,9 +44,10 @@ $playerBodyBackground: map-get($player, bodyBackground);
     .aplayer-lrc {
         display: none;
         .aplayer-lrc-contents {
+            color: inherit;
             p {
+                color: inherit;
                 font-size: 14px;
-                color: $playerLrcColor;
                 text-shadow: none;
             }
         }

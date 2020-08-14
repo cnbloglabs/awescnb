@@ -1,0 +1,21 @@
+// default-variables
+:root {
+    --body-bg: #373e57;
+    --body-color: #ccc8db;
+
+    --mainContent-bg: #24273b;
+
+    --postCon-bg: #5c5e6e;
+
+    --sidebar-bg: #151728;
+    --sidebarBlock-border-color: #272a3a;
+    --sidebarTitle-color: #5c5e6e;
+    --sidebarItem-hover-color: #fff;
+    --sidebarTags-bg: #24273b;
+
+    // --sidebarItem-bg: #fff;
+}
+
+// variables in dark mode
+:root[theme='dark'] {
+}
