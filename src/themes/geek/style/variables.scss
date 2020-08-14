@@ -62,33 +62,33 @@
 
 // variables in dark mode
 :root[theme='dark'] {
-    --body-bg: #f5f6f7;
-    --body-color: #4d4d4d;
+    --body-bg: #373e57;
+    --body-color: #ccc8db;
 
-    --mainContent-bg: #f5f6f7;
+    --mainContent-bg: #24273b;
 
-    --postCon-bg: #f6f8fa;
+    --postCon-bg: #5c5e6e;
 
-    --sidebar-bg: #fff;
-    --sidebarBlock-border-color: #f5f6f7;
-    --sidebarTitle-color: #333;
-    --sidebarItem-hover-color: #f6f8fa;
+    --sidebar-bg: #151728;
+    --sidebarBlock-border-color: #272a3a;
+    --sidebarTitle-color: #5c5e6e;
+    --sidebarItem-hover-color: #fff;
 
-    --tags-bg: #f6f8fa;
-    --tags-color: #000;
+    --tags-bg: #24273b;
+    --tags-color: #fff;
 
-    --footer-bg: #2d303f;
+    --footer-bg: #24273b;
     --footer-color: #5c5e6e;
 
     --postDesc-color: #5c5e6e;
 
-    --pager-bg: #333;
+    --pager-bg: #151728;
 
     --listItem-bg: #202234;
     --listItemTitle-bg: #202234;
     --listItemTitle-border-color: #202234;
 
-    --form-bg: #ffffff;
+    --form-bg: #151728;
     --formTitle-bg: #202234;
     --form-border-color: #202234;
     --formDesc-color: #5c5e6e;
@@ -106,17 +106,75 @@
     --md-table-border-color: #202234;
     --md-blockquote-bg: #202234;
     --md-summary-bg: #202234;
-    --searchbar-bg: #fff;
-    --searchbar-color: #000;
 
-    --account-bg: #fff;
+    --searchbar-bg: #151728;
+    --searchbar-color: #fff;
+
+    --account-bg: #151728;
     --account-color: #64677a;
 
     --logo-bg: linear-gradient(
         to bottom,
-        #fff 0%,
-        #fff 76%,
+        #151728 0%,
+        #151728 76%,
         rgba(21, 23, 40, 0) 100%
     );
-    --logo-color: #000;
+    --logo-color: #fff;
+    // --body-bg: #f5f6f7;
+    // --body-color: #4d4d4d;
+
+    // --mainContent-bg: #f5f6f7;
+
+    // --postCon-bg: #f6f8fa;
+
+    // --sidebar-bg: #fff;
+    // --sidebarBlock-border-color: #f5f6f7;
+    // --sidebarTitle-color: #333;
+    // --sidebarItem-hover-color: #f6f8fa;
+
+    // --tags-bg: #f6f8fa;
+    // --tags-color: #000;
+
+    // --footer-bg: #2d303f;
+    // --footer-color: #5c5e6e;
+
+    // --postDesc-color: #5c5e6e;
+
+    // --pager-bg: #333;
+
+    // --listItem-bg: #202234;
+    // --listItemTitle-bg: #202234;
+    // --listItemTitle-border-color: #202234;
+
+    // --form-bg: #ffffff;
+    // --formTitle-bg: #202234;
+    // --form-border-color: #202234;
+    // --formDesc-color: #5c5e6e;
+
+    // --commonBody-bg: #202234;
+    // --commonBody-color: #fff;
+
+    // --layer-bg: #202234;
+    // --layer-color: #fff;
+
+    // --ad-bg: #202234;
+    // --ad-color: #5c5e6e;
+
+    // --md-hr-color: #202234;
+    // --md-table-border-color: #202234;
+    // --md-blockquote-bg: #202234;
+    // --md-summary-bg: #202234;
+    // --searchbar-bg: #fff;
+    // --searchbar-color: #000;
+
+    // --account-bg: #fff;
+    // --account-color: #64677a;
+
+    // --logo-bg: linear-gradient(
+    //     to bottom,
+    //     #fff 0%,
+    //     #fff 76%,
+    //     rgba(21, 23, 40, 0) 100%
+    // );
+    // --logo-color: #000;
 }
