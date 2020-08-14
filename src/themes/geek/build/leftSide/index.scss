@@ -3,7 +3,7 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 .logo {
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
-    color: #fff;
+    color: var(--logo-color);
     font-weight: 600;
     text-align: center;
     height: 68px;
@@ -11,12 +11,7 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     letter-spacing: 4px;
     position: sticky;
     top: 0;
-    background: linear-gradient(
-        to bottom,
-        #151728 0%,
-        #151728 76%,
-        rgba(21, 23, 40, 0) 100%
-    );
+    background: var(--logo-bg);
 }
 
 #navList {

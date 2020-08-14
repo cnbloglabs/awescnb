@@ -6,7 +6,7 @@
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: #151728;
+    background-color: var(--account-bg);
     z-index: 3;
     flex-shrink: 0;
 }
@@ -14,7 +14,7 @@
 .account-button {
     border: 0;
     background: 0;
-    color: #64677a;
+    color: var(--account-color);
     padding: 0;
     cursor: pointer;
     position: relative;

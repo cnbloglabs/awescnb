@@ -16,9 +16,10 @@ $linemuber: (
     color: #24273b,
 );
 
-$postMeaage: (
-    categoriesBackground: #24273b,
-    tagsBackground: #24273b,
+$postMessage: (
+    categoriesBackground: var(--tags-bg),
+    tagsBackground: var(--tags-bg),
+    color: var(--tags-color),
 );
 
 $signature: (

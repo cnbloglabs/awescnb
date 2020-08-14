@@ -10,7 +10,7 @@ const defaultOptions = {
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
         contentSize: 'mid',
-        headerBackground: '',
+        headerBackground: 'https://api.uomg.com/api/rand.avatar',
     },
     // 代码高亮
     highLight: {

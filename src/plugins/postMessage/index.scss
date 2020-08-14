@@ -1,20 +1,17 @@
-// $postMeaage: (
-//     categoriesBackground: #ff6b6b,
-//     tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
-// ) !default;
+$postMessage: () !default;
 
-$postMeaage: () !default;
-
-$postMeaage: map-merge(
+$postMessage: map-merge(
     (
         categoriesBackground: #ff6b6b,
         tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
+        color: #fff,
     ),
-    $postMeaage
+    $postMessage
 );
 
-$postMessageTagBackground: map-get($postMeaage, tagsBackground);
-$categoriesBackground: map-get($postMeaage, categoriesBackground);
+$postMessageTagBackground: map-get($postMessage, tagsBackground);
+$categoriesBackground: map-get($postMessage, categoriesBackground);
+$color: map-get($postMessage, color);
 
 #EntryTag,
 #BlogPostCategory {
@@ -54,7 +51,7 @@ $categoriesBackground: map-get($postMeaage, categoriesBackground);
     font-size: 14px;
     line-height: 14px;
     border-radius: 4px;
-    color: #fff;
+    color: $color;
     box-shadow: 1px 1px 5px rgb(211, 207, 207);
 }
 

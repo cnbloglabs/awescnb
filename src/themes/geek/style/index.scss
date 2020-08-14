@@ -141,14 +141,14 @@ body {
             margin-bottom: 0.5rem;
             margin-right: 0.5rem;
             padding: 0.2rem 0.4rem;
-            background-color: var(--sidebarTags-bg);
+            background-color: var(--tags-bg);
             font-size: 12px;
         }
     }
 }
 
 .recent_comment_body {
-    background-color: var(--sidebarTags-bg);
+    background-color: var(--tags-bg);
     border-radius: 3px;
 }
 
@@ -237,7 +237,7 @@ body {
 #left-side {
     grid-area: left;
     margin: 8px 0 0 8px;
-    border-right: 1px solid #272a3a;
+    border-right: 1px solid var(--sidebarBlock-border-color);
     display: flex;
     flex-direction: column;
     transition: 0.3s;
@@ -252,8 +252,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #24273b;
-    color: #5c5e6e;
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
     font-size: 14px;
     #poweredby {
         margin-left: 1rem;
@@ -267,7 +267,7 @@ body {
 
     #topics .postDesc {
         padding: 0;
-        color: #5c5e6e;
+        color: var(--postDesc-color);
         text-align: center;
     }
 }
@@ -276,17 +276,18 @@ body {
 #blog-comments-placeholder,
 #comment_form {
     padding: 1.5rem 1.5rem 0;
-    background-color: #151728;
+    background-color: var(--form-bg);
     overflow: hidden;
 }
 
 #comment_form {
     padding-bottom: 1.5rem;
 }
+// 分页器start
 
 .topicListFooter {
     width: 100%;
-    background-color: #151728;
+    background-color: var(--pager-bg);
     text-align: center;
     margin: 0 0 1rem;
     padding: 0.5rem 0;
@@ -308,9 +309,9 @@ body {
             0 10px 10px rgba(0, 0, 0, 0.22);
     }
 
-    .page {
-        background-color: #151728;
-    }
+    // .page {
+    //     background-color: #151728;
+    // }
 }
 
 .pager {
@@ -324,7 +325,7 @@ body {
 
 #homepage_bottom_pager {
     padding: 0;
-    background-color: #151728;
+    background-color: var(--pager-bg);
     font-size: 16px;
     font-weight: 700;
 
@@ -348,7 +349,7 @@ body {
         }
     }
 }
-
+// 分页器end
 #post_detail {
     .postTitle {
         padding-left: 0;
@@ -367,9 +368,9 @@ body {
 .entrylistTitle,
 .PostListTitle {
     padding: 1rem 1rem;
-    border-bottom: 1px solid #202234;
+    border-bottom: 1px solid var(--listItemTitle-border-color);
     font-weight: 700;
-    background-color: #202234;
+    background-color: var(--listItemTitle-bg);
 }
 
 .entrylistDescription,
@@ -391,7 +392,7 @@ body {
     .PostList {
         padding: 0.5rem;
         margin: 0;
-        background-color: #202234;
+        background-color: var(--listItem-bg);
         border-radius: 3px;
 
         .postTitl2 {
@@ -402,7 +403,7 @@ body {
         .postDesc2 {
             margin-bottom: 0;
             padding-top: 0;
-            color: #5c5e6e;
+            color: var(--postDesc-color);
         }
 
         .postText2 {
@@ -424,8 +425,6 @@ body {
     }
 
     #taglist {
-        background-color: #202234;
-
         table,
         tbody,
         tr,
@@ -442,7 +441,7 @@ body {
         td {
             margin: 0.5rem;
             border-radius: 3px;
-            background-color: #5c5e6e;
+            background-color: var(--tags-bg);
         }
     }
 }
@@ -493,7 +492,7 @@ body {
         display: block;
         margin: 21.6px auto;
         text-align: center;
-        color: #999;
+        color: var(--postDesc-color);
         font-weight: normal;
     }
 }
@@ -621,7 +620,6 @@ body {
                 margin-top: 0;
                 padding: 4px 10px;
                 background: none;
-                background-color: var(--themeColor);
                 border-radius: 3px;
                 font-size: 14px;
 
@@ -698,8 +696,8 @@ body {
 
     .feedback_area_title {
         padding: 7.56px 10.8px;
-        border: 1px solid #202234;
-        background-color: #202234;
+        border: 1px solid var(--form-border-color);
+        background-color: var(--formTitle-bg);
         border-radius: 2px 2px 0 0;
         font-size: 12px;
         font-weight: 700;
@@ -710,12 +708,12 @@ body {
     }
 
     .feedbackItem {
-        border-left: 1px solid #202234;
-        border-right: 1px solid #202234;
+        border-left: 1px solid var(--form-border-color);
+        border-right: 1px solid var(--form-border-color);
         padding: 17.982px 10.8px;
 
         &:nth-last-child(2) {
-            border-bottom: 1px solid #202234;
+            border-bottom: 1px solid var(--form-border-color);
         }
     }
 
@@ -729,8 +727,8 @@ body {
         }
 
         .blog_comment_body {
-            background-color: #202234 !important;
-            color: #fff;
+            background-color: var(--commonBody-bg) !important;
+            color: var(--commonBody-color);
 
             // @
             a:nth-child(1) {
@@ -762,7 +760,7 @@ body {
             top: 5.4px;
             width: 6.258px;
             height: 0;
-            border-left: solid 12.96px #202234;
+            border-left: solid 12.96px var(--commonBody-bg);
             border-top: solid 3.24px rgba(0, 0, 0, 0);
             border-bottom: solid 7.182px rgba(0, 0, 0, 0);
         }
@@ -813,8 +811,8 @@ body {
 
     .layer {
         padding: 0 5.4px;
-        background-color: #202234;
-        color: #fff;
+        background-color: var(--layer-bg);
+        color: var(--layer-color);
         font-weight: 700;
         border-radius: 3px;
         margin-right: 5.4px;
@@ -859,8 +857,6 @@ body {
     .blog_comment_body {
         position: relative;
         margin-left: 10px;
-        // margin-top: 10px;
-        background-color: #202234;
         border-radius: 3px;
         color: #fff;
         font-size: 14px;
@@ -876,16 +872,16 @@ body {
             top: 5.4px;
             width: 12.258px;
             height: 0;
-            border-right: solid 12.96px #202234;
+            border-right: solid 12.96px var(--commonBody-bg);
             border-top: solid 3.24px rgba(0, 0, 0, 0);
             border-bottom: solid 7.182px rgba(0, 0, 0, 0);
         }
     }
 
     .avatar {
-        border: 1px solid #eee;
+        // border: 1px solid #eee;
         border-radius: 50%;
-        transform: scale(0.7);
+        transform: scale(0.8);
     }
 }
 
@@ -899,7 +895,7 @@ body {
 
     #comment_form_container {
         position: relative;
-        border: 1px solid #202234;
+        border: 1px solid var(--form-border-color);
         border-radius: 3px;
 
         & > p:nth-of-type(3),
@@ -908,32 +904,29 @@ body {
         }
 
         & > p:last-of-type {
-            color: var(--text-9);
+            color: var(--formDesc-color);
             margin-left: 10.8px;
             font-size: 14px;
         }
 
         #commentform_title {
-            // padding: 10px 0;
-            // border-bottom: 1px solid #F6F8FA;
             background: none;
-            // font-weight: 700;
             margin-bottom: 0;
             padding: 7.56px 10.8px;
-            border-bottom: 1px solid #202234;
-            background-color: #202234;
+            border-bottom: 1px solid var(--form-border-color);
+            background-color: var(--formTitle-bg);
             border-radius: 2px 2px 0 0;
             font-size: 12px;
             font-weight: 700;
-            color: var(--text-3);
 
             &::before {
                 content: '\f086';
             }
         }
 
-        // #tip_comment {
-        // }
+        #tip_comment {
+            display: none;
+        }
 
         .comment_textarea {
             width: 100%;
@@ -942,7 +935,7 @@ body {
             border: none;
 
             .commentbox_title {
-                border-bottom-color: #202234;
+                border-bottom-color: var(--form-border-color);
             }
 
             .commentbox_title_left {
@@ -955,14 +948,9 @@ body {
                 margin-bottom: 10.8px !important;
                 height: 81px;
                 min-height: 170px;
-                color: var(--text-5);
                 background: none;
                 font-size: 16px;
-                border-bottom: 1px dashed #202234;
-
-                &:hover {
-                    border-bottom-color: var(--themeColor);
-                }
+                border-bottom: 1px dashed var(--form-border-color);
             }
 
             // #tbCommentBodyPreview {
@@ -1009,7 +997,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 14px;
-    color: #5c5e6e;
+    color: var(--ad-color);
     border-radius: 3px;
 
     br {
@@ -1021,7 +1009,7 @@ body {
         margin-right: 0;
         user-select: none;
         @include text-over();
-        background-color: #202234;
+        background-color: var(--ad-bg);
 
         &:not(:nth-child(1)) {
             margin-top: 5px;

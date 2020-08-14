@@ -1,6 +1,6 @@
 @media screen and (max-width: 1366px) {
     .topicListFooter {
-        grid-column-end: 3;
+        grid-column-end: 4;
     }
     #home {
         display: grid;
@@ -16,6 +16,12 @@
     #comment_form,
     #post_detail {
         padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .topicListFooter {
+        grid-column-end: 3;
     }
 }
 

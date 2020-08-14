@@ -1,6 +1,6 @@
 #custom-searchbar {
     height: 60px;
-    background-color: #151728;
+    background-color: var(--searchbar-bg);
     z-index: 3;
     position: relative;
     input {
@@ -14,7 +14,7 @@
         background-repeat: no-repeat;
         background-size: 16px;
         background-position: 25px 50%;
-        color: #fff;
+        color: var(--searchbar-color);
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
         outline: none;

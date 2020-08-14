@@ -42,7 +42,7 @@
         font-size: 16px;
     }
     hr {
-        border-color: #202234;
+        border-color: var(--md-hr-color);
     }
     ol {
         margin: 10px 0;
@@ -87,13 +87,11 @@
         th,
         tbody,
         td {
-            border-color: #202234;
+            border-color: var(--md-table-border-color);
         }
         thead {
             tr {
                 th {
-                    // background-color: #ff6b81 !important;
-                    // color: #fff;
                     padding: 6px 9px;
                     text-align: left;
                 }
@@ -112,7 +110,7 @@
     blockquote {
         margin: 5px 0;
         padding: 1px 15px;
-        background: #202234;
+        background: var(--md-blockquote-bg);
         border: none;
         border-left: 6px solid #1687fa;
         p {
@@ -141,7 +139,7 @@
             width: auto;
             font-weight: bold;
             color: #fff;
-            background: #202234;
+            background: var(--md-summary-bg);
             border-radius: 3px;
             user-select: none;
             font-size: 0.8rem;
