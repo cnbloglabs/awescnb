@@ -1,4 +1,13 @@
-$chartsPadding: 0 13.884px 9.72px !default;
+$charts: () !default;
+
+$charts: map-merge(
+    (
+        padding: 0 13.884px 9.72px,
+    ),
+    $charts
+);
+
+$chartsPadding: map-get($charts, padding);
 
 #charts {
     padding: $chartsPadding;

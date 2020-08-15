@@ -41,3 +41,16 @@
 .medium-zoom-overlay {
     z-index: 2;
 }
+
+// line numbers
+#cnblogs_post_body .hljs {
+    padding: 10px 0 10px 10px !important;
+}
+
+#cnblogs_post_body pre {
+    padding: 10px 0 0;
+}
+
+.hljs-ln-n {
+    padding: 0 10px;
+}

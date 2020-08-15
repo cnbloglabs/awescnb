@@ -1,63 +1,81 @@
 // default-variables
 :root {
-    --body-bg: #373e57;
-    --body-color: #ccc8db;
+    --body-bg: #f5f6f7;
+    --body-color: #4d4d4d;
 
-    --mainContent-bg: #24273b;
+    --mainContent-bg: #f5f6f7;
 
-    --postCon-bg: #5c5e6e;
+    --postCon-bg: #f6f8fa;
 
-    --sidebar-bg: #151728;
-    --sidebarBlock-border-color: #272a3a;
-    --sidebarTitle-color: #5c5e6e;
-    --sidebarItem-hover-color: #fff;
+    --sidebar-bg: #fff;
+    --sidebarBlock-border-color: #f5f6f7;
+    --sidebarTitle-color: #333;
+    --sidebarItem-hover-color: #000;
 
-    --tags-bg: #24273b;
-    --tags-color: #fff;
+    --tags-bg: #f6f8fa;
+    --tags-color: #000;
 
-    --footer-bg: #24273b;
+    --footer-bg: #fff;
     --footer-color: #5c5e6e;
 
-    --postDesc-color: #5c5e6e;
+    --postDesc-color: #ccc;
 
-    --pager-bg: #151728;
+    --pager-bg: #333;
 
     --listItem-bg: #202234;
     --listItemTitle-bg: #202234;
     --listItemTitle-border-color: #202234;
 
-    --form-bg: #151728;
-    --formTitle-bg: #202234;
-    --form-border-color: #202234;
+    --form-bg: #ffffff;
+    --formTitle-bg: #ccc;
+    --form-border-color: #ccc;
     --formDesc-color: #5c5e6e;
 
-    --commonBody-bg: #202234;
-    --commonBody-color: #fff;
+    --commonBody-bg: #eee;
+    --commonBody-color: #333;
 
     --layer-bg: #202234;
     --layer-color: #fff;
 
-    --ad-bg: #202234;
+    --ad-bg: #eee;
     --ad-color: #5c5e6e;
 
-    --md-hr-color: #202234;
+    --md-hr-color: #eee;
     --md-table-border-color: #202234;
-    --md-blockquote-bg: #202234;
-    --md-summary-bg: #202234;
+    --md-blockquote-bg: #f6f8fa;
+    --md-blockquote-border-color: #ccc;
+    --md-summary-bg: #08080a;
+    --md-kbd-bg: #ccc;
 
-    --searchbar-bg: #151728;
-    --searchbar-color: #fff;
+    --searchbar-bg: #fff;
+    --searchbar-color: #000;
 
-    --account-bg: #151728;
+    --account-bg: #fff;
     --account-color: #64677a;
 
     --logo-bg: linear-gradient(
         to bottom,
-        #151728 0%,
-        #151728 76%,
+        #fff 0%,
+        #fff 76%,
         rgba(21, 23, 40, 0) 100%
     );
-    --logo-color: #fff;
+    --logo-color: #000;
+
+    --profileMenu-bg: #eee;
+    --profileAvatar-border-color: rgb(240, 239, 239);
+
+    --catalogList-hover: #000;
+
+    --dragmenuItem-bg: #eee;
+
+    --calendar-bg: #f6f8fa;
+
+    --postSignature-bg: #eee;
+    --postSignature-border-color: #ccc;
+
+    --scrollbarTrack-bg: rgba(0, 0, 0, 0.01);
+    --scrollbarThumb-bg: rgba(0, 0, 0, 0.11);
+    --scrollbarThumb-hover-bg: rgba(0, 0, 0, 0.2);
 }
 
 // variables in dark mode
@@ -105,7 +123,9 @@
     --md-hr-color: #202234;
     --md-table-border-color: #202234;
     --md-blockquote-bg: #202234;
+    --md-blockquote-border-color: #1687fa;
     --md-summary-bg: #202234;
+    --md-kbd-bg: #202234;
 
     --searchbar-bg: #151728;
     --searchbar-color: #fff;
@@ -120,61 +140,20 @@
         rgba(21, 23, 40, 0) 100%
     );
     --logo-color: #fff;
-    // --body-bg: #f5f6f7;
-    // --body-color: #4d4d4d;
 
-    // --mainContent-bg: #f5f6f7;
+    --profileMenu-bg: #151728;
+    --profileAvatar-border-color: #151728;
 
-    // --postCon-bg: #f6f8fa;
+    --catalogList-hover: #fff;
 
-    // --sidebar-bg: #fff;
-    // --sidebarBlock-border-color: #f5f6f7;
-    // --sidebarTitle-color: #333;
-    // --sidebarItem-hover-color: #f6f8fa;
+    --dragmenuItem-bg: #24273b;
 
-    // --tags-bg: #f6f8fa;
-    // --tags-color: #000;
+    --calendar-bg: #202234;
 
-    // --footer-bg: #2d303f;
-    // --footer-color: #5c5e6e;
+    --postSignature-bg: #24273b;
+    --postSignature-border-color: #1b86f9;
 
-    // --postDesc-color: #5c5e6e;
-
-    // --pager-bg: #333;
-
-    // --listItem-bg: #202234;
-    // --listItemTitle-bg: #202234;
-    // --listItemTitle-border-color: #202234;
-
-    // --form-bg: #ffffff;
-    // --formTitle-bg: #202234;
-    // --form-border-color: #202234;
-    // --formDesc-color: #5c5e6e;
-
-    // --commonBody-bg: #202234;
-    // --commonBody-color: #fff;
-
-    // --layer-bg: #202234;
-    // --layer-color: #fff;
-
-    // --ad-bg: #202234;
-    // --ad-color: #5c5e6e;
-
-    // --md-hr-color: #202234;
-    // --md-table-border-color: #202234;
-    // --md-blockquote-bg: #202234;
-    // --md-summary-bg: #202234;
-    // --searchbar-bg: #fff;
-    // --searchbar-color: #000;
-
-    // --account-bg: #fff;
-    // --account-color: #64677a;
-
-    // --logo-bg: linear-gradient(
-    //     to bottom,
-    //     #fff 0%,
-    //     #fff 76%,
-    //     rgba(21, 23, 40, 0) 100%
-    // );
-    // --logo-color: #000;
+    --scrollbarTrack-bg: rgba(255, 255, 255, 0.01);
+    --scrollbarThumb-bg: rgba(255, 255, 255, 0.11);
+    --scrollbarThumb-hover-bg: rgba(255, 255, 255, 0.2);
 }

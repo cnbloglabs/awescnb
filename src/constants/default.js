@@ -14,8 +14,9 @@ const defaultOptions = {
     },
     // 代码高亮
     highLight: {
-        type: 'atomOneDark',
-        inDarkMode: 'atomOneDark',
+        // type: 'atomOneDark',
+        dark: 'atomOneDark',
+        light: 'atomOneLight',
     },
     // 代码行号
     lineNumbers: {
@@ -35,7 +36,7 @@ const defaultOptions = {
     },
     // 图片灯箱
     imagebox: {
-        enable: true,
+        enable: false,
     },
     // 文章目录
     catalog: {

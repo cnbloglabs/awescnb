@@ -1,11 +1,11 @@
 $postSignature: (
-    primary: #1b86f9,
-    background: #24273b,
+    primary: var(--postSignature-border-color),
+    background: var(--postSignature-bg),
     borderRadius: 2px,
 );
 
 $dragMenu: (
-    background: #24273b,
+    background: var(--dragmenuItem-bg),
 );
 
 $footer: (

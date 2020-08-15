@@ -44,7 +44,7 @@
 .profile-menu {
     display: flex;
     padding-left: 185px;
-    background: #151728;
+    background: var(--profileMenu-bg);
     border-radius: 0 0 4px 4px;
     a {
         padding: 20px 16px;
@@ -72,7 +72,7 @@
         height: 150px;
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid #151728;
+        border: 3px solid var(--profileAvatar-border-color);
     }
 }
 

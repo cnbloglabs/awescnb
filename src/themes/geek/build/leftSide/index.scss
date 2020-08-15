@@ -45,7 +45,7 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
                 margin-bottom: 20px;
             }
             &:hover {
-                color: #fff;
+                color: var(--sidebarItem-hover-color);
             }
         }
     }
@@ -66,7 +66,7 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     color: #9c9cab;
     padding: 0 20px;
     height: 52px;
-    border-top: 1px solid #272a3a;
+    border-top: 1px solid var(--sidebarBlock-border-color);
     position: relative;
     .follow-text {
         display: flex;
@@ -75,14 +75,13 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     }
     .developer {
         position: absolute;
-        color: #fff;
         left: 0;
         top: -100%;
         display: flex;
         transition: 0.3s;
         padding: 0 20px;
         align-items: center;
-        background-color: #272a3a;
+        background-color: var(--sidebar-bg);
         width: 100%;
         height: 100%;
         img {

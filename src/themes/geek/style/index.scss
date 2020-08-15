@@ -240,7 +240,6 @@ body {
     border-right: 1px solid var(--sidebarBlock-border-color);
     display: flex;
     flex-direction: column;
-    transition: 0.3s;
     background-color: var(--sidebar-bg);
     flex-shrink: 0;
 }
@@ -951,6 +950,7 @@ body {
                 background: none;
                 font-size: 16px;
                 border-bottom: 1px dashed var(--form-border-color);
+                color: #999;
             }
 
             // #tbCommentBodyPreview {

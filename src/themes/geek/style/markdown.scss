@@ -71,40 +71,11 @@
 
     table {
         display: block;
-        margin-top: 10.8px;
-        overflow-x: auto;
+        overflow: auto;
         border: none;
-        height: auto !important;
-        font-size: 14px;
-        border: none !important;
-        td,
         th,
         td {
-            white-space: pre;
-        }
-        thead,
-        tr,
-        th,
-        tbody,
-        td {
-            border-color: var(--md-table-border-color);
-        }
-        thead {
-            tr {
-                th {
-                    padding: 6px 9px;
-                    text-align: left;
-                }
-            }
-        }
-        tr {
-            // &:nth-child(odd) {
-            //     background-color: #202234;
-            // }
-            td {
-                padding: 6px 9px;
-                text-align: left;
-            }
+            min-width: auto;
         }
     }
     blockquote {
@@ -112,7 +83,7 @@
         padding: 1px 15px;
         background: var(--md-blockquote-bg);
         border: none;
-        border-left: 6px solid #1687fa;
+        border-left: 6px solid var(--md-blockquote-border-color);
         p {
             margin: 6px auto;
             line-height: 1.8;
@@ -121,10 +92,10 @@
     }
     kbd {
         padding: 2px 4px;
-        background-color: #202234;
+        background-color: var(--md-kbd-bg);
         border-radius: 3px;
         color: #fff;
-        box-shadow: 1px 1px 3px #202234;
+        box-shadow: 1px 1px 3px var(--md-kbd-bg);
     }
     iframe {
         width: 100%;
