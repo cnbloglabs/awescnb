@@ -1,12 +1,3 @@
-#mode-change {
-    color: #999;
-    .icon {
-        width: 40px;
-        cursor: pointer;
-        animation: changeModeRotate 20s linear infinite;
-    }
-}
-
 .mode-change {
     transition: all 0.3s cubic-bezier(1, 0.05, 0.29, 0.99);
     .forFlow #blog-comments-placeholder .feedback_area_title,
@@ -38,6 +29,15 @@
     .input_my_zzk {
         will-change: auto;
         transition: all 0.3s cubic-bezier(1, 0.05, 0.29, 0.99);
+    }
+}
+
+#mode-change {
+    color: #999;
+    .icon {
+        width: 40px;
+        cursor: pointer;
+        animation: changeModeRotate 20s linear infinite;
     }
 }
 

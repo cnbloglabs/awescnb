@@ -69,8 +69,8 @@ function init() {
 
 function click() {
     $(document).on('click', '.mode-change', () => {
-        const currentMode = $('html').attr('theme')
-        currentMode === 'dark' ? changeMode() : changeMode('dark')
+        const isDark = $('html').attr('theme')
+        isDark ? changeMode('light') : changeMode('dark')
     })
 }
 

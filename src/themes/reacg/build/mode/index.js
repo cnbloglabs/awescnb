@@ -56,6 +56,7 @@ function setBackground(mode = 'light') {
 function init() {
     const nowHour = new Date().getHours()
     const isNight = nowHour > 19 || nowHour <= 5
+
     const $modeIcon = `<div id='mode-change'>${
         isNight ? iconInSvg(icons.dark) : iconInSvg(icons.light)
     }</div>`

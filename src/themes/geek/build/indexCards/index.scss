@@ -17,12 +17,11 @@
 
 .custom-card,
 .entrylistItem {
-    background-color: #151728;
+    background-color: var(--card-bg);
     border-radius: 3px;
     box-sizing: border-box;
     flex-grow: 1;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     animation: content-in 0.5s ease-in 0s;
     &:nth-child(1) {
         // grid-column-start: 1;
@@ -36,6 +35,7 @@
         }
     }
     &:hover {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
             0 10px 10px rgba(0, 0, 0, 0.22);
     }
@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    border-top: 1px solid #272a3a;
+    border-top: 1px solid var(--sidebarBlock-border-color);
     span {
         margin-right: 10px;
         li::before {

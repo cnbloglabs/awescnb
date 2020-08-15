@@ -24,6 +24,7 @@ import charts from '@plugins/charts'
 import donation from '@plugins/donation'
 import { shootInitial } from '@plugins/barrage'
 import notice from '@plugins/notice'
+import mode from '@plugins/mode'
 
 function plugins() {
     dragMenu()
@@ -51,6 +52,7 @@ function plugins() {
     charts()
     donation()
     notice()
+    mode()
 }
 
 module.exports = plugins

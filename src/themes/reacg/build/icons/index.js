@@ -4,7 +4,9 @@ import { iconInSvg } from '../../utils/tools'
 import { fontUrl, icons, foodIcons } from './icons'
 import './index.scss'
 
-// 设置sidebar icon
+/**
+ * 设置sidebar icon
+ */
 function setSidebarIcon() {
     const iconActions = [
         {
@@ -97,7 +99,9 @@ function setSidebarIcon() {
     // poll($('#blog-sidecolumn').length, insert)
 }
 
-// 设置github icon
+/**
+ * 设置github icon
+ */
 function setGithub() {
     const { enable, color, url } = window.opts.github
     if (!enable) return
@@ -106,14 +110,16 @@ function setGithub() {
         icons.github,
     )}</a>
                         `
-    $('#mode-change').length
-        ? $('#mode-change').after($githubIcon)
+    $('.mode-change').length
+        ? $('.mode-change').after($githubIcon)
         : $('#custom-gitee').length
         ? $('#custom-gitee').before($githubIcon)
         : $('#navigator').prepend($githubIcon)
 }
 
-// gitee icon
+/**
+ * gitee icon
+ */
 function setGitee() {
     const { enable, color, url } = window.opts.gitee
     if (!enable) return
@@ -128,7 +134,9 @@ function setGitee() {
     $('#navList').prepend(icon)
 }
 
-//navlist 图标（博客园  首页 ...）
+/**
+ * navlist 图标（博客园  首页 ...）
+ */
 function nav() {
     const { cnblog, home, pens, contact, rss, admin } = icons
 
@@ -148,7 +156,9 @@ function nav() {
     }
 }
 
-// 首页文章题目 icon
+/**
+ * 首页文章题目 icon
+ */
 function setIndexPosttitleIcon() {
     if (pageName() !== 'index') return
     $('.postTitle').each(function() {
@@ -156,7 +166,9 @@ function setIndexPosttitleIcon() {
     })
 }
 
-// 设置首页列表查看更多按钮
+/**
+ * 设置首页列表查看更多按钮
+ */
 function setIndexPostLookIcon() {
     if (pageName() !== 'index') return
     if ($('.day').length < 1) return
@@ -165,7 +177,9 @@ function setIndexPostLookIcon() {
     })
 }
 
-// 随笔分类页、随笔档案页题目icon
+/**
+ * 随笔分类页、随笔档案页题目icon
+ */
 function setEntrylistPosttitleIcon() {
     if (pageName() !== 'list') return
     $('.entrylistPosttitle').each(function() {
@@ -173,13 +187,9 @@ function setEntrylistPosttitleIcon() {
     })
 }
 
-// 设置随笔页文章题目icon
-// function setHeadlineIcon() {
-//     if (pageName() !== 'post') return
-//     $('#topics .postTitle').prepend(iconInSvg(icons.md))
-// }
-
-// 文章小标题icon
+/**
+ * 文章小标题icon
+ */
 function setPostTitleIcon() {
     if (pageName() !== 'post') return
     const $h1 = $('#cnblogs_post_body:first>h1')
@@ -192,15 +202,34 @@ function setPostTitleIcon() {
     })
 }
 
+/**
+ * 设置切换暗色模式 icon
+ */
+function setModeIcon() {
+    const isDark = $('html').attr('theme') === 'dark'
+    const darkIcon = iconInSvg(icons.dark)
+    const lightIcon = iconInSvg(icons.light)
+    const icon = isDark ? darkIcon : lightIcon
+    $('#navigator').prepend(
+        `<div class='mode-change ${isDark ? 'dark' : ''}'>${icon}</div>`,
+    )
+    $(document).on('click', '.mode-change', function() {
+        $(this).toggleClass('dark')
+        $(this).hasClass('dark')
+            ? $(darkIcon).replaceAll('.mode-change .icon')
+            : $(lightIcon).replaceAll('.mode-change .icon')
+    })
+}
+
 // 调用
 function build() {
+    setModeIcon()
     setSidebarIcon()
     setGitee()
     setGithub()
     setIndexPosttitleIcon()
     setIndexPostLookIcon()
     setEntrylistPosttitleIcon()
-    // setHeadlineIcon()
     setPostTitleIcon()
     nav()
 }

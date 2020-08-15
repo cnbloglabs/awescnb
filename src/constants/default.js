@@ -85,7 +85,7 @@ const defaultOptions = {
     // 暗色模式
     darkMode: {
         enable: true,
-        autoDark: true,
+        autoDark: false,
         autoLight: true,
     },
     // 音乐播放器

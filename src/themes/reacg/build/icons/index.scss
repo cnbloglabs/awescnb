@@ -108,3 +108,30 @@
         line-height: 100%;
     }
 }
+
+.mode-change {
+    color: #999;
+    .icon {
+        width: 40px;
+        cursor: pointer;
+        animation: changeModeRotate 20s linear infinite;
+    }
+}
+
+.mode-change.dark {
+    .icon {
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mode-change {
+        margin-left: 0 !important;
+    }
+}
+
+@keyframes changeModeRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}

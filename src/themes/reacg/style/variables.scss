@@ -1,0 +1,36 @@
+:root {
+    --background-g: rgb(253, 230, 224);
+    --background-w: #fff;
+    --background-e: #f6f8fa;
+    --text-0: #000;
+    --text-3: #333;
+    --text-4: #444;
+    --text-5: #555;
+    --text-9: #999;
+    --text-10: #d1d5da;
+    --text-a: #fff;
+
+    // --background-g: var(--dark-background-g, var(--default-background-g));
+    // --background-w: var(--dark-background-w, var(--default-background-w));
+    // --background-e: var(--dark-background-e, var(--default-background-e));
+    // --text-0: var(--dark-text-0, var(--default-text-0));
+    // --text-3: var(--dark-text-3, var(--default-text-3));
+    // --text-4: var(--dark-text-4, var(--default-text-4));
+    // --text-5: var(--dark-text-5, var(--default-text-5));
+    // --text-9: var(--dark-text-9, var(--default-text-9));
+    // --text-10: var(--dark-text-10, var(--default-text-10));
+    // --text-a: var(--dark-text-a, var(--default-text-a));
+}
+
+:root[theme='dark'] {
+    --background-g: #333;
+    --background-w: #555;
+    --background-e: #7c7c7c;
+    --text-0: #ccc;
+    --text-3: #ccc;
+    --text-4: #c0c0c0;
+    --text-5: #999;
+    --text-9: #7c7c7c;
+    --text-10: #7c7c7c;
+    --text-a: #000;
+}

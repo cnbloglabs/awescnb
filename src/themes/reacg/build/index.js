@@ -1,5 +1,5 @@
 import mobileMenu from './mobileMenu'
-import mode from './mode'
+// import mode from './mode'
 import avatar from './avatar'
 import scroll from './scroll'
 import catalog from './catalog'
@@ -9,7 +9,7 @@ import comments from './comments'
 
 function build() {
     mobileMenu()
-    mode()
+    // mode()
     avatar()
     scroll()
     catalog()

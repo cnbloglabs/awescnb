@@ -20,7 +20,8 @@
 
     --postDesc-color: #ccc;
 
-    --pager-bg: #333;
+    --pager-bg: #fff;
+    --pagerBtn-bg: #eee;
 
     --listItem-bg: #202234;
     --listItemTitle-bg: #202234;
@@ -76,6 +77,8 @@
     --scrollbarTrack-bg: rgba(0, 0, 0, 0.01);
     --scrollbarThumb-bg: rgba(0, 0, 0, 0.11);
     --scrollbarThumb-hover-bg: rgba(0, 0, 0, 0.2);
+
+    --card-bg: #fff;
 }
 
 // variables in dark mode
@@ -101,6 +104,7 @@
     --postDesc-color: #5c5e6e;
 
     --pager-bg: #151728;
+    --pagerBtn-bg: #202234;
 
     --listItem-bg: #202234;
     --listItemTitle-bg: #202234;
@@ -156,4 +160,6 @@
     --scrollbarTrack-bg: rgba(255, 255, 255, 0.01);
     --scrollbarThumb-bg: rgba(255, 255, 255, 0.11);
     --scrollbarThumb-hover-bg: rgba(255, 255, 255, 0.2);
+
+    --card-bg: #151728;
 }
