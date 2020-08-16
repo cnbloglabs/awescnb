@@ -10,9 +10,13 @@ const moveFooterToMain = () => {
 
 const submitComment = () => {
     if (pageName() !== 'post') return
-    $('#btn_comment_submit').click(function() {
+    $(document).on('click', '#btn_comment_submit', function() {
+        $(document).ajaxComplete(function(event, xhr, option) {
+            if (option.url.indexOf('GetComments') > -1) {
+                window.renderCommentsAvatars()
+            }
+        })
         new window.blogCommentManager().renderComments(0)
-        window.renderCommentsAvatars()
     })
 }
 
