@@ -244,7 +244,7 @@ function dragMenu(options) {
     // 关注
     const focus = () => {
         toast('感谢关注🍺')
-        window.follow()()
+        window.followByGroup()
     }
 
     // 推荐

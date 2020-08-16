@@ -13,7 +13,7 @@ const follow = () => {
     $('.profile-msg button').click(function() {
         // $('.profile-msg p button').text('已关注')
         toast('感谢关注')
-        window.follow()
+        window.followByGroup()
     })
 }
 
