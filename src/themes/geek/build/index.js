@@ -8,16 +8,25 @@ const moveFooterToMain = () => {
     $('#footer').appendTo('#main')
 }
 
+const delComment = () => {
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (option.url.indexOf('DeleteComment') > -1) {
+            new window.blogCommentManager().renderComments(0)
+        }
+    })
+}
+
 const submitComment = () => {
     if (pageName() !== 'post') return
-    $('#btn_comment_submit').bind('click', function() {
-        console.log('c')
+    $('#btn_comment_submit').wrap('<div id="custom-submit"></div>')
+    $('#custom-submit').on('click', function() {
         new window.blogCommentManager().renderComments(0)
     })
 }
 
 const build = () => {
     removeClearel()
+    delComment()
     moveFooterToMain()
     submitComment()
     require('./indexCards')()
