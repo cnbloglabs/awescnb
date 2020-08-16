@@ -10,10 +10,8 @@ const moveFooterToMain = () => {
 
 const submitComment = () => {
     if (pageName() !== 'post') return
-    $(document).on('click', '#btn_comment_submit', function() {
-        new window.blogCommentManager().renderComments(0)
-    })
-    $('#btn_comment_submit').click(() => {
+    $('#btn_comment_submit').bind('click', function() {
+        console.log('c')
         new window.blogCommentManager().renderComments(0)
     })
 }
