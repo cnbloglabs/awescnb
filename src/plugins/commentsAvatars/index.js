@@ -1,4 +1,7 @@
-import { pageName, poll } from '@tools'
+import {
+    pageName,
+    // poll
+} from '@tools'
 import env from '@constants/env'
 
 /**
@@ -68,7 +71,14 @@ function listener() {
     //     }
     // })
 
-    poll($('.feedbackItem').length, build)
+    $(document).on('ajaxComplete', function(event, xhr, option) {
+        if (option.url.indexOf('GetComments') > -1) {
+            build()
+        }
+    })
+
+    // poll($('.feedbackItem').length, build)
+    window.renderCommentsAvatars = build
 }
 
 /**
