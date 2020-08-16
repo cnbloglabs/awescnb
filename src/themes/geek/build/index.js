@@ -18,7 +18,6 @@ const delComment = () => {
 
 const submitComment = () => {
     if (pageName() !== 'post') return
-    $('#btn_comment_submit').wrap('<div id="custom-submit"></div>')
     $('#custom-submit').on('click', function() {
         new window.blogCommentManager().renderComments(0)
     })
