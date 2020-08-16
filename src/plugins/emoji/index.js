@@ -71,6 +71,7 @@ function emoji() {
     if (!enable) return
     if (pageName() !== 'post') return
     cacheScript(emojijs, build)
+    window.buildEmojis = build
 }
 
 export default emoji

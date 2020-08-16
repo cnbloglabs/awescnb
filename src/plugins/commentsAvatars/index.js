@@ -74,6 +74,7 @@ function listener() {
     $(document).ajaxComplete(function(event, xhr, option) {
         if (option.url.indexOf('GetComments') > -1) {
             window.renderCommentsAvatars()
+            window.buildEmojis()
         }
     })
     poll($('.feedbackItem').length, build)
