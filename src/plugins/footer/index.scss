@@ -1,6 +1,10 @@
-$footer: (
-    background: #232323,
-) !default;
+$footer: () !default;
+$footer: map-merge(
+    (
+        background: #232323,
+    ),
+    $footer
+);
 
 $footerBackground: map-get($footer, background);
 

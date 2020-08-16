@@ -1,6 +1,11 @@
-$donation: (
-    btnColors: #10ac84,
-    qrcodeBackground: #fff,
+$donation: () !default;
+
+$donation: map-merge(
+    (
+        btnColors: #10ac84,
+        qrcodeBackground: #fff,
+    ),
+    $donation
 ) !default;
 
 $donationBtnColors: map-get($donation, btnColors);

@@ -1,3 +1,19 @@
+$copy: () !default;
+$copy: map-merge(
+    (
+        bg: rgba(0, 0, 0, 0.6),
+        color: rgb(241, 239, 239),
+        hover-bg: rgba(0, 0, 0, 0.2),
+        hover-color: #eee,
+    ),
+    $copy
+);
+
+$bg: map-get($copy, bg);
+$color: map-get($copy, color);
+$hover-bg: map-get($copy, hover-bg);
+$hover-color: map-get($copy, hover-color);
+
 #cnblogs_post_body pre {
     position: relative;
 }
@@ -23,7 +39,7 @@ pre:hover,
     right: 10px;
     padding: 6px 8px;
     visibility: hidden;
-    color: rgb(241, 239, 239);
+    color: $color;
     font-size: 12px;
     font-weight: 700;
     border-radius: 4px;
@@ -34,10 +50,10 @@ pre:hover,
 
 #cnblogs_post_body {
     .copy-btns {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: $bg;
         &:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-            color: #eee;
+            background-color: $hover-bg;
+            color: $hover-color;
         }
     }
 }

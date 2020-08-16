@@ -1,6 +1,10 @@
-$dragMenu: (
-    background: var(--background-e),
-) !default;
+$dragMenu: () !default;
+$dragMenu: map-merge(
+    (
+        background: #ccc,
+    ),
+    $dragMenu
+);
 
 $dragmenuBackground: map-get($dragMenu, background);
 

@@ -1,7 +1,10 @@
-$progress: (
-    background: #0097e6,
-) !default;
-
+$progress: () !default;
+$progress: map-merge(
+    (
+        background: #0097e6,
+    ),
+    $progress
+);
 $background: map-get($progress, background);
 
 #nprogress {

@@ -1,26 +1,12 @@
 module.exports = {
-    themeName: 'view',
+    themeName: 'geek',
     template: 'post',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,
-    cssExtract: true,
+    cssExtract: false,
     openBrowser: false,
 }
-
-///////// themes /////////
-// - geek
-// - reacg
-// - simple
-// - view
-// - gshang
-// - element
-// - acg
-
-///////// description /////////
-// 你无需直接更改webpack配置文件
-// 为了方便，请直接更改这里的配置
-// 当然，有特殊需求可以自行更改
 
 ///////// options /////////
 // themeName - 你创建的主题文件夹名称
@@ -31,9 +17,23 @@ module.exports = {
 // cssExtract 单独抽离css
 // openBrowser - 自动打开浏览器
 
+///////// themes /////////
+// - geek
+// - reacg
+// - simple
+// - view
+// - gshang
+// - element
+// - acg
+
 ///////// template /////////
 // - index 首页
 // - post 随笔详情页
 // - post1 富文本编辑器随笔详情页
 // - tag 标签页
 // - photos 相册
+
+///////// description /////////
+// 你无需直接更改webpack配置文件
+// 为了方便，请直接更改这里的配置
+// 当然，有特殊需求可以自行更改

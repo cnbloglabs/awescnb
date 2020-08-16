@@ -14,7 +14,7 @@ const defaultOptions = {
     },
     // 代码高亮
     highLight: {
-        // type: 'atomOneDark',
+        type: '',
         dark: 'atomOneDark',
         light: 'atomOneLight',
     },
@@ -86,7 +86,7 @@ const defaultOptions = {
     darkMode: {
         enable: true,
         autoDark: false,
-        autoLight: true,
+        autoLight: false,
     },
     // 音乐播放器
     musicPlayer: {

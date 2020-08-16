@@ -1,8 +1,12 @@
-$linemuber: (
-    color: #999999,
-) !default;
+$linemubers: () !default;
+$linemubers: map-merge(
+    (
+        color: #999999,
+    ),
+    $linemubers
+);
 
-$linenumberColor: map-get($linemuber, color);
+$linenumbersColor: map-get($linemubers, color);
 
 /* 覆盖博客园bundle css*/
 @media screen and (max-width: 767px) {
@@ -16,7 +20,7 @@ $linenumberColor: map-get($linemuber, color);
     padding: 2px 0;
     border: none;
     text-align: center;
-    color: $linenumberColor !important;
+    color: $linenumbersColor !important;
     user-select: none;
     word-break: normal;
     white-space: pre;

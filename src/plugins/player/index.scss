@@ -1,6 +1,11 @@
-$player: (
-    bodyBackground: #fff,
-) !default;
+$player: () !default;
+
+$player: map-merge(
+    (
+        bodyBackground: #fff,
+    ),
+    $player
+);
 
 $playerBodyBackground: map-get($player, bodyBackground);
 

@@ -17,12 +17,11 @@ $footer: (
     background: #232323,
 );
 
-$linemuber: (
+$linemubers: (
     color: var(--themeColor),
 );
 
 $player: (
-    lrcColor: var(--themeColor),
     bodyBackground: var(--background-e),
 );
 
@@ -30,7 +29,7 @@ $postBottomimage: (
     imageHeight: 200px,
 );
 
-$postMeaage: (
+$postMessage: (
     categoriesBackground: var(--themeColor),
     tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
 );
