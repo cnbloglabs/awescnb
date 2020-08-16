@@ -165,6 +165,7 @@ const defaultOptions = {
     postSignature: {
         enable: true,
         content: [],
+        licenseName: '',
         licenseLink: '',
     },
     // 背景图片或颜色

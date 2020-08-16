@@ -76,3 +76,13 @@ export const getBlogAge = () => {
 export const getAlbumUrl = () => {
     return ``
 }
+
+/**
+ * 获取当前随笔链接
+ */
+
+export const getCurrentPostUrl = () => {
+    return location.href.indexOf('#') === -1
+        ? location.href
+        : location.href.substring(0, location.href.lastIndexOf('#'))
+}

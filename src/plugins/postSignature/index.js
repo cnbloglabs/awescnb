@@ -1,19 +1,23 @@
 import { pageName } from '@/assets/utils/tools'
-const opts = window.opts.postSignature
-
+import { getBlogname, getCurrentPostUrl } from '@cnblog'
 // 设置随笔签名
 function postSignature() {
-    if (!opts.enable) return
+    const {
+        enable,
+        content,
+        licenseName,
+        licenseLink,
+    } = window.opts.postSignature
+
+    if (!enable) return
     if (pageName() !== 'post') return
 
-    const author = $('#profile_block a:first')
-        .text()
-        .trim()
-    const href =
-        location.href.indexOf('#') === -1
-            ? location.href
-            : location.href.substring(0, location.href.lastIndexOf('#'))
-    const content = opts.content
+    const agreement = licenseName.length
+        ? licenseName
+        : '知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆'
+    const author = getBlogname()
+    const href = getCurrentPostUrl()
+
     let custom = ''
     for (let i = 0; i < content.length; i++) {
         custom += '<p>' + content[i] + '</p>'
@@ -22,7 +26,7 @@ function postSignature() {
     const $signature = `<div id='post-signature'>
                             <p>本文作者：${author}</p>
                             <p>本文链接：${href}</p>
-                            <p>版权声明：本作品采用知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆<a href='${opts.licenseLink}'>许可协议</a>进行许可。</p>
+                            <p>版权声明：本作品采用${agreement}<a href='${licenseLink}'>许可协议</a>进行许可。</p>
                             ${custom}
                           </div>`
     $('#cnblogs_post_body').append($signature)
