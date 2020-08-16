@@ -1,10 +1,10 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'view',
     template: 'post',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,
-    cssExtract: false,
+    cssExtract: true,
     openBrowser: false,
 }
 
