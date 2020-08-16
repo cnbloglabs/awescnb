@@ -62,14 +62,13 @@ function build() {
  * 监听 ajax
  */
 function listener() {
-    // $(document).ajaxComplete(function(event, xhr, option) {
-    //     if (option.url.indexOf('GetComments') > -1) {
-    //         build()
-    //     }
-    // })
-
-    poll($('.feedbackItem').length, build)
     window.renderCommentsAvatars = build
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (option.url.indexOf('GetComments') > -1) {
+            window.renderCommentsAvatars()
+        }
+    })
+    poll($('.feedbackItem').length, build)
 }
 
 /**
