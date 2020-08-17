@@ -734,7 +734,8 @@ body {
         .blog_comment_body {
             background-color: var(--commonBody-bg) !important;
             color: var(--commonBody-color);
-
+            margin-right: 10px;
+            margin-left: 0;
             // @
             a:nth-child(1) {
                 // color: #ffd257;
