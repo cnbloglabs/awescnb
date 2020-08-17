@@ -63,20 +63,23 @@ function build() {
  */
 function listener() {
     window.renderCommentsAvatars = build
-    $(document).ajaxComplete(function(event, xhr, option) {
-        if (
-            option.url.indexOf('PostComment/Add') > -1 ||
-            option.url.indexOf('DeleteComment') > -1
-        ) {
-            new window.blogCommentManager().renderComments(0)
-        }
-    })
-    $(document).ajaxComplete(function(event, xhr, option) {
-        if (option.url.indexOf('GetComments') > -1) {
-            window.renderCommentsAvatars()
-            window.buildEmojis()
-        }
-    })
+    setTimeout(() => {
+        $(document).ajaxComplete(function(event, xhr, option) {
+            if (
+                option.url.indexOf('PostComment/Add') > -1 ||
+                option.url.indexOf('DeleteComment') > -1
+            ) {
+                new window.blogCommentManager().renderComments(0)
+            }
+        })
+        $(document).ajaxComplete(function(event, xhr, option) {
+            if (option.url.indexOf('GetComments') > -1) {
+                window.renderCommentsAvatars()
+                window.buildEmojis()
+                window.imagebox()
+            }
+        })
+    }, 0)
     poll($('.feedbackItem').length, build)
 }
 

@@ -23,5 +23,6 @@ function imagebox() {
     if (pageName() !== 'post') return
     if (!isMd()) return
     poll($('.blog_comment_body').length, build)
+    window.imagebox = build
 }
 export default imagebox

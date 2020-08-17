@@ -4,14 +4,18 @@ const { enable, autoDark, autoLight } = window.opts.darkMode
 
 /**
  * 在暗色主题和亮色主题之间切换
+ * @param { String }
+ * @param { Boolean }
  */
-function changeMode(mode) {
+function changeMode(mode, hasTransition = true) {
     if (mode === 'dark') {
         $('html').attr('theme', 'dark')
         toast('进入暗色模式', 'info')
         setBackground('dark')
         localStorage.modeType = 'dark'
-        $('body').addClass('light-to-dark')
+        if (hasTransition) {
+            $('body').addClass('light-to-dark')
+        }
         setTimeout(() => {
             $('body').removeClass('light-to-dark')
         }, 1200)
@@ -20,7 +24,9 @@ function changeMode(mode) {
         toast('进入亮色模式')
         setBackground()
         localStorage.modeType = 'light'
-        $('body').addClass('dark-to-light')
+        if (hasTransition) {
+            $('body').addClass('dark-to-light')
+        }
         setTimeout(() => {
             $('body').removeClass('dark-to-light')
         }, 1200)
@@ -57,13 +63,15 @@ function init() {
     const storage = localStorage.modeType
 
     const followStorage = () => {
-        storage === 'dark' ? changeMode('dark') : changeMode('light')
+        storage === 'dark'
+            ? changeMode('dark', false)
+            : changeMode('light', false)
     }
 
     if (isNight) {
-        autoDark ? changeMode('dark') : followStorage()
+        autoDark ? changeMode('dark', false) : followStorage()
     } else {
-        autoLight ? changeMode('light') : followStorage()
+        autoLight ? changeMode('light', false) : followStorage()
     }
 }
 
