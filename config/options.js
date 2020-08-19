@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'geek',
     template: 'post',
     eslint: true,
     sourceMap: false,

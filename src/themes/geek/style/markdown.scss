@@ -1,11 +1,34 @@
-#cnblogs_post_body th,
-.cnblogs-post-body th {
-    background: none;
-}
-
 #cnblogs_post_body,
 .cnblogs-post-body,
 .cnblogs-markdown {
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+    h1,
+    h2 {
+        cursor: default;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
     a {
         color: #00a1d6;
         border-bottom: 1px dotted #00a1d6;
@@ -15,31 +38,10 @@
         }
     }
     p {
-        line-height: 1.6em;
-    }
-    h1,
-    h2 {
-        @include center();
-        cursor: default;
-    }
-    h2,
-    h3 {
-        margin: 16.2px 0 7.1982px;
-    }
-    h1 {
-        @include center();
-        margin: 20px 0 7.1982px;
-        font-size: 24px;
-        &:first-of-type {
-            margin-top: 27px;
-        }
-    }
-    h2 {
-        // color: var(--themeColor);
-        font-size: 20px;
-    }
-    h3 {
         font-size: 16px;
+        line-height: 1.6em;
+        margin-top: 22px;
+        margin-bottom: 22px;
     }
     hr {
         border-color: var(--md-hr-color);
@@ -77,6 +79,9 @@
         td {
             min-width: auto;
         }
+        th {
+            background: none;
+        }
     }
     blockquote {
         margin: 5px 0;
@@ -91,11 +96,16 @@
         }
     }
     kbd {
-        padding: 2px 4px;
-        background-color: var(--md-kbd-bg);
+        display: inline-block;
+        padding: 3px 5px;
+        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        line-height: 10px;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: #fafbfc;
+        border: 1px solid #d1d5da;
         border-radius: 3px;
-        color: #fff;
-        box-shadow: 1px 1px 3px var(--md-kbd-bg);
+        box-shadow: inset 0 -1px 0 #d1d5da;
     }
     iframe {
         width: 100%;
