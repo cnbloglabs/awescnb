@@ -26,10 +26,20 @@ const buildTopBtns = () => {
 }
 
 const buildCalendar = () => {
+    const quarterImgs = {
+        Spring: ' https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
+        Summer: ' https://guangzan.gitee.io/imagehost/Illustrations/summer.svg',
+        Autumn: ' https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg',
+        Windter:
+            ' https://guangzan.gitee.io/imagehost/Illustrations/winter.svg',
+    }
     //  https://api.ixiaowai.cn/mcapi/mcapi.php
-    const background =
-        'https://tva1.sinaimg.cn/large/0060lm7Tly1ftg6wuhgywj31hc0u0wjr.jpg'
+    // const background =
+    //     'https://tva1.sinaimg.cn/large/0060lm7Tly1ftg6wuhgywj31hc0u0wjr.jpg'
     // 'https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqjlmezj21kw0w07ix.jpg'
+
+    const quarter = getQuarter()
+    const quarterImg = quarterImgs[quarter]
     const month = getMonth()
     const instance = new Date()
     const year = instance.getFullYear()
@@ -39,8 +49,8 @@ const buildCalendar = () => {
     const el = `
     <section id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">
-            <img src="${background}" class="event-img">
-            <div class="event-title">${getQuarter()} Wonderland</div>
+            <img src="${quarterImg}" class="event-img">
+            <div class="event-title">${quarter} Wonderland</div>
             <div class="event-subtitle">${date} ${month}, ${year}</div>
             <div class="event-date">
                 <div class="event-month">${month}</div>

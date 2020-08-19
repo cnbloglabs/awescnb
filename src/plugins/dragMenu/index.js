@@ -1,11 +1,11 @@
-import anime from 'animejs/lib/anime.es.js'
 import toast from '@plugins/toast'
 import { pageName, cacheScript, userAgent } from '@tools'
-import { jqueryui } from '@constants/urls'
+import { jqueryui, animeJs } from '@constants/urls'
 
 const back2topConfig = window.opts.back2top
 const { enable, initialOpen, draggable } = window.opts.tools
 
+let anime
 let timeOut
 // dbclick timer
 let timer = null
@@ -316,7 +316,10 @@ function dragMenu(options) {
     }
 
     if (options) $.extend(true, defaultOptions, options)
-    create(defaultOptions)
+    cacheScript(animeJs, () => {
+        anime = window.anime
+        create(defaultOptions)
+    })
 }
 
 export default dragMenu

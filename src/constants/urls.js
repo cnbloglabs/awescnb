@@ -33,3 +33,5 @@ export const linenumbersjs =
 export const jqueryui = 'https://code.jquery.com/ui/1.12.0/jquery-ui.js'
 export const clipboard =
     'https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js'
+export const animeJs =
+    'https://cdn.bootcdn.net/ajax/libs/animejs/3.2.0/anime.min.js'

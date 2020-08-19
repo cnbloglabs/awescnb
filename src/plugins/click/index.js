@@ -1,10 +1,10 @@
-// 点击特效
-import anime from 'animejs/lib/anime.es.js'
-import { userAgent } from '@tools'
+import { userAgent, cacheScript } from '@tools'
+import { animeJs } from '@constants/urls'
 
 const options = window.opts.click
 
 function build() {
+    const anime = window.anime
     if (options.enable && userAgent() === 'pc') {
         $('body').append(`<canvas id="click-effects"></canvas>`)
         window.human = false
@@ -165,7 +165,8 @@ function build() {
 }
 
 function setClickEffects() {
-    build()
+    cacheScript(animeJs, build)
+    // build()
 }
 
 export default setClickEffects

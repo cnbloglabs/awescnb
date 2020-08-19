@@ -7,7 +7,7 @@ function getQuarter() {
     } else if (month < 9) {
         return 'Autumn'
     } else if (month < 12) {
-        return 'Windter'
+        return 'Winter'
     }
 }
 

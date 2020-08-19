@@ -3,6 +3,7 @@
 @import url(https://at.alicdn.com/t/font_438759_kmvtb0te1nd.css) screen and
     (min-width: 0px);
 @import './scroll.scss';
+@import './plugins.scss';
 /* 新增 */
 #home {
     display: block;
@@ -179,10 +180,10 @@ html {
     margin: 10px 0;
 }
 
-#main {
-    transition: all 200ms ease-in-out;
-    -webkit-transition: all 200ms ease-in-out;
-}
+// #main {
+//     transition: all 200ms ease-in-out;
+//     -webkit-transition: all 200ms ease-in-out;
+// }
 
 tbody tr:nth-child(n + 2) {
     padding: 20px 0;
@@ -193,37 +194,37 @@ tbody tr:nth-child(n + 2) {
 }
 
 /**********/
-#slideContainer,
-.day,
-.shortcut,
-#topics,
-#myposts .PostList,
-.entrylist,
-.mySearch,
-#comment_form_container,
-#blog-comments-placeholder,
-#under_post_news,
-#sidebar_news,
-#blog-calendar,
-#sidebar_shortcut,
-#sidebar_articlearchive,
-#sidebar_imagecategory,
-#sidebar_recentposts,
-#sidebar_toptags,
-#sidebar_scorerank,
-#sidebar_postcategory,
-.catList.sidebar-block,
-#sidebar_postarchive,
-#sidebar_recentcomments,
-#sidebar_topviewedposts,
-#sidebar_topcommentedposts,
-#sidebar_topdiggedposts,
-#sidebar_articlecategory,
-#sidebar_scroller {
-    transition: all 300ms ease-in-out;
-    /*box-shadow: 0 0 0 1px #eee;*/
-    /*border: 1px solid var(--DividColor);*/
-}
+// #slideContainer,
+// .day,
+// .shortcut,
+// #topics,
+// #myposts .PostList,
+// .entrylist,
+// .mySearch,
+// #comment_form_container,
+// #blog-comments-placeholder,
+// #under_post_news,
+// #sidebar_news,
+// #blog-calendar,
+// #sidebar_shortcut,
+// #sidebar_articlearchive,
+// #sidebar_imagecategory,
+// #sidebar_recentposts,
+// #sidebar_toptags,
+// #sidebar_scorerank,
+// #sidebar_postcategory,
+// .catList.sidebar-block,
+// #sidebar_postarchive,
+// #sidebar_recentcomments,
+// #sidebar_topviewedposts,
+// #sidebar_topcommentedposts,
+// #sidebar_topdiggedposts,
+// #sidebar_articlecategory,
+// #sidebar_scroller {
+//     transition: all 300ms ease-in-out;
+//     /*box-shadow: 0 0 0 1px #eee;*/
+//     /*border: 1px solid var(--DividColor);*/
+// }
 
 /************/
 .postText2 {
@@ -385,6 +386,7 @@ li.recent_comment_body {
 }
 
 .feedbackListSubtitle a:last-child:hover {
+    transition: color 0.2s;
     color: var(--ThemeColor);
 }
 
@@ -3152,7 +3154,7 @@ code .matlab-comment span {
                 display: none;
             }
             .commentbox_title_right {
-                 transform: translateY(10px);
+                transform: translateY(10px);
             }
             #tbCommentBody {
                 margin-bottom: 10.8px !important;
