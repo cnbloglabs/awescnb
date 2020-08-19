@@ -40,8 +40,8 @@
     p {
         font-size: 16px;
         line-height: 1.6em;
-        margin-top: 22px;
-        margin-bottom: 22px;
+        // margin-top: 22px;
+        // margin-bottom: 22px;
     }
     hr {
         border-color: var(--md-hr-color);
@@ -169,6 +169,12 @@
     // mark {
     //     background-color: var(--themeColor);
     // }
+}
+
+#blog-comments-placeholder {
+    p {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 1023px) {
