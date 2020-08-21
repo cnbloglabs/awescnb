@@ -54,10 +54,10 @@ const emojiConfig = {
 }
 
 function build() {
-    const ele = `<span id='emoji-button'>🍺</span>`
+    const ele = `<span class='emoji-button'>🍺</span>`
     $('.commentbox_title_right').prepend(ele)
     const EmojiButton = window.EmojiButton
-    const button = document.querySelector('#emoji-button')
+    const button = document.querySelector('.emoji-button')
     const picker = new EmojiButton(emojiConfig)
     picker.on('emoji', emoji => {
         document.querySelector('#tbCommentBody').value += emoji
@@ -70,7 +70,7 @@ function build() {
 function emoji() {
     if (!enable) return
     if (pageName() !== 'post') return
-    if ($('#emoji-button').length) return
+    if ($('.emoji-button').length) return
     cacheScript(emojijs, build)
     window.buildEmojis = build
 }

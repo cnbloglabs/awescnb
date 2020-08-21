@@ -22,7 +22,7 @@ $tabTitle-color: map-get($emoji, tabTitle-color);
 $emoji-hover-color: map-get($emoji, emoji-hover-color);
 $primary: map-get($emoji, primary);
 
-#emoji-button {
+.emoji-button {
     cursor: pointer;
 }
 
