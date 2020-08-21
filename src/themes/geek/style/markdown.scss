@@ -2,9 +2,6 @@
 .cnblogs-post-body,
 .cnblogs-markdown {
     line-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-        sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
     h1,
@@ -15,9 +12,6 @@
     h6 {
         margin-top: 35px;
         margin-bottom: 10px;
-    }
-    h1,
-    h2 {
         cursor: default;
     }
     h1 {
@@ -38,10 +32,10 @@
         }
     }
     p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.6em;
-        // margin-top: 22px;
-        // margin-bottom: 22px;
+        margin-top: 22px;
+        margin-bottom: 22px;
     }
     hr {
         border-color: var(--md-hr-color);
@@ -89,11 +83,6 @@
         background: var(--md-blockquote-bg);
         border: none;
         border-left: 6px solid var(--md-blockquote-border-color);
-        p {
-            margin: 6px auto;
-            line-height: 1.8;
-            font-size: 14px;
-        }
     }
     kbd {
         display: inline-block;
@@ -122,7 +111,6 @@
             background: var(--md-summary-bg);
             border-radius: 3px;
             user-select: none;
-            font-size: 0.8rem;
             cursor: pointer;
             &::-webkit-details-marker {
                 display: none;
@@ -138,7 +126,6 @@
                 content: '展开';
                 float: right;
                 opacity: 0;
-                font-size: 0.8em;
                 transition: opacity 0.8s;
             }
             &:hover:after {

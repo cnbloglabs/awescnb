@@ -14,9 +14,9 @@ const {
 const emojiConfig = {
     position: 'top-start',
     style: 'native', //native twemoji
-    showVariants: false,
+    showVariants: true,
     autoHide: true,
-    autoFocusSearch: false,
+    autoFocusSearch: true,
     emojiSize: '1.8em',
     categories: [
         'smileys',
@@ -70,6 +70,7 @@ function build() {
 function emoji() {
     if (!enable) return
     if (pageName() !== 'post') return
+    if ($('#emoji-button').length) return
     cacheScript(emojijs, build)
     window.buildEmojis = build
 }

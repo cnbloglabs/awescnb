@@ -63,23 +63,24 @@ function build() {
  */
 function listener() {
     window.renderCommentsAvatars = build
-    setTimeout(() => {
-        $(document).ajaxComplete(function(event, xhr, option) {
-            if (
-                option.url.indexOf('PostComment/Add') > -1 ||
-                option.url.indexOf('DeleteComment') > -1
-            ) {
-                new window.blogCommentManager().renderComments(0)
-            }
-        })
-        $(document).ajaxComplete(function(event, xhr, option) {
-            if (option.url.indexOf('GetComments') > -1) {
-                window.renderCommentsAvatars()
-                window.buildEmojis()
-                window.imagebox()
-            }
-        })
-    }, 0)
+    // setTimeout(() => {   }, 0)
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (
+            option.url.indexOf('PostComment/Add') > -1 ||
+            option.url.indexOf('DeleteComment') > -1
+        ) {
+            new window.blogCommentManager().renderComments(0)
+        }
+    })
+
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (option.url.indexOf('GetComments') > -1) {
+            window.renderCommentsAvatars()
+            window.buildEmojis()
+            window.imagebox()
+        }
+    })
+
     poll($('.feedbackItem').length, build)
 }
 
@@ -88,6 +89,7 @@ function listener() {
  */
 function commentsAvatar() {
     if (pageName() !== 'post') return
+    if ($('.custom-comment-avatar').lenght) return
     env === 'dev' ? build() : listener()
 }
 

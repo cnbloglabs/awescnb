@@ -17,7 +17,9 @@ body {
     color: var(--body-color);
     font-size: 1em;
     line-height: 1.5;
-    font-family: 'Source Sans Pro', sans-serif;
+    // font-family: 'Source Sans Pro', sans-serif;
+    font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
+        Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 
 #home {
@@ -552,11 +554,8 @@ body {
                 &:nth-child(2),
                 &:nth-child(3) {
                     padding: 4px 10px;
-
-                    // background-color: #202234;
                     &:hover {
-                        box-shadow: 0 0 5px #202234;
-                        transform: scale(1.1);
+                        filter: brightness(0.9);
                         transition: all 0.2s;
                     }
                 }
@@ -639,15 +638,16 @@ body {
                 }
             }
 
-            .diggit {
-                background-color: #ff6b81;
-
+            .diggit,
+            .buryit {
                 &:hover {
-                    box-shadow: 0 0 5px #ff6b81;
-                    transform: translateY(-2px);
+                    filter: brightness(0.9);
                     transition: all 0.2s;
                 }
+            }
 
+            .diggit {
+                background-color: #ff6b81;
                 &::before {
                     content: '\f004';
                     color: #fff;
@@ -658,13 +658,6 @@ body {
             .buryit {
                 margin-left: 10.8px;
                 background-color: #ced6e0;
-
-                &:hover {
-                    box-shadow: 0 0 5px #ced6e0;
-                    transform: translateY(-2px);
-                    transition: all 0.2s;
-                }
-
                 &::before {
                     content: '\f004';
                     color: #fff;

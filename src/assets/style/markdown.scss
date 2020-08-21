@@ -1,0 +1,185 @@
+#cnblogs_post_body,
+.cnblogs-post-body,
+.cnblogs-markdown {
+    line-height: 1.5;
+    line-height: 1.5;
+    word-wrap: break-word;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 35px;
+        margin-bottom: 10px;
+        cursor: default;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    a {
+        color: #00a1d6;
+        border-bottom: 1px dotted #00a1d6;
+        &:hover {
+            color: #0582ac;
+            transition: color 0.2s;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.6em;
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+    hr {
+        border-color: var(--md-hr-color);
+    }
+    ol {
+        margin: 10px 0;
+        padding-left: 18px;
+        li {
+            line-height: 28px;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+    ul {
+        margin: 10px 0px 10px 21.6px;
+        li {
+            line-height: 24px;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+    img {
+        max-width: 100%;
+        margin-top: 10px;
+        border-radius: 2px;
+    }
+
+    table {
+        display: block;
+        overflow: auto;
+        border: none;
+        th,
+        td {
+            min-width: auto;
+        }
+        th {
+            background: none;
+        }
+    }
+    blockquote {
+        margin: 5px 0;
+        padding: 1px 15px;
+        background: var(--md-blockquote-bg);
+        border: none;
+        border-left: 6px solid var(--md-blockquote-border-color);
+    }
+    kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        line-height: 10px;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: #fafbfc;
+        border: 1px solid #d1d5da;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #d1d5da;
+    }
+    iframe {
+        width: 100%;
+        height: 45vw;
+    }
+    details {
+        font-family: 'Roboto', 'sans-serif';
+        margin: 0 0 0.6em 0;
+        summary {
+            display: inine-block;
+            padding: 0.3em 0.6em;
+            width: auto;
+            font-weight: bold;
+            background: var(--md-summary-bg);
+            border-radius: 3px;
+            user-select: none;
+            cursor: pointer;
+            &::-webkit-details-marker {
+                display: none;
+            }
+            &:before {
+                content: '​​\25B6';
+                float: left;
+                margin-right: 0.5em;
+                transform: rotate(0deg);
+                transition: transform 0.3s ease-out;
+            }
+            &:after {
+                content: '展开';
+                float: right;
+                opacity: 0;
+                transition: opacity 0.8s;
+            }
+            &:hover:after {
+                opacity: 0.7;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &[open] {
+            summary {
+                color: darken(#0984e3, 10%);
+                background: lighten(#0984e3, 45%);
+                text-shadow: none;
+                border-radius: 0.3em 0.3em 0 0;
+                &:before {
+                    transform: rotate(90deg);
+                }
+                &:after {
+                    content: '收起';
+                }
+            }
+        }
+    }
+    .hljs-ln-n:before {
+        font-weight: normal;
+    }
+    // mark {
+    //     background-color: var(--themeColor);
+    // }
+}
+
+#blog-comments-placeholder {
+    p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #cnblogs_post_body,
+    .cnblogs-post-body,
+    .cnblogs-markdown {
+        iframe {
+            height: 60vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cnblogs_post_body,
+    .cnblogs-post-body,
+    .cnblogs-markdown {
+        iframe {
+            height: 50vw;
+        }
+    }
+}
