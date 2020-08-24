@@ -1,5 +1,5 @@
 /**
- * 博客园辅助工具函数
+ * 博客园
  */
 
 const { currentBlogApp } = window
@@ -60,6 +60,9 @@ export const getFollowState = () => {
     )
 }
 
+/**
+ * 获取园龄
+ */
 export const getBlogAge = () => {
     const age = openNews()
         ? $('#profile_block a:nth-of-type(2)')
@@ -72,7 +75,6 @@ export const getBlogAge = () => {
 /**
  * 获取相册地址
  */
-
 export const getAlbumUrl = () => {
     return ``
 }
@@ -80,7 +82,6 @@ export const getAlbumUrl = () => {
 /**
  * 获取当前随笔链接
  */
-
 export const getCurrentPostUrl = () => {
     return location.href.indexOf('#') === -1
         ? location.href

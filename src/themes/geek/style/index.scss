@@ -125,9 +125,9 @@ body {
         li {
             padding: 0.2rem 0.5rem;
             font-size: 12px;
-            transition: all 0.2s;
             cursor: pointer;
             &:hover {
+                transition: all 0.2s;
                 color: var(--sidebarItem-hover-color);
             }
         }

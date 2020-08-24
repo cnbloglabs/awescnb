@@ -72,9 +72,9 @@ const buildGroup = items => {
 }
 
 const notation = (customList = annotateList) => {
-    buildGroup(customList)
-    const ag = annotationGroup(group)
     setTimeout(() => {
+        buildGroup(customList)
+        const ag = annotationGroup(group)
         ag.show()
     }, 1000)
 }
