@@ -7,6 +7,8 @@
 /* 新增 */
 #home {
     display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 #back2Top {
@@ -1098,7 +1100,7 @@ h6 {
     margin-bottom: 10px;
     /*box-shadow: 0 0 0 1px var(--DividColor);*/
     background-color: var(--BlockColor);
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
 }
 

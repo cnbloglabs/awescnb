@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'view',
-    template: 'catalog',
+    themeName: 'gshang',
+    template: 'post',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,
