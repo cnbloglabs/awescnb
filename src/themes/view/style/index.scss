@@ -247,12 +247,16 @@ body {
         padding-top: 0.5rem;
         font-size: 16px;
         li {
+            display: flex;
             margin-bottom: 0.5rem;
             padding: 0.3rem 0.5rem;
             cursor: pointer;
             &:hover {
                 transition: all 0.2s;
                 background-color: var(--sidebar-item-hover);
+            }
+            a {
+                flex: 1;
             }
         }
     }
