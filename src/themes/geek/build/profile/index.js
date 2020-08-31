@@ -1,5 +1,5 @@
 import toast from '@plugins/toast'
-import { isVisitor } from '@cnblog'
+import { isVisitor } from '@constants/cnblog'
 import { followersDetailsUrl, followingDetailsUrl, index } from '@links'
 import {
     getFollowState,
@@ -10,7 +10,9 @@ import {
 } from '@cnblog'
 import './index.scss'
 
-let followState = getFollowState()
+console.log(isVisitor)
+
+const followState = getFollowState()
 
 const build = () => {
     const { avatar } = window.opts.theme
@@ -38,9 +40,9 @@ const build = () => {
         <div class="profile-msg">
             <p>
                 <a href="${index}"><span>${userName}</span></a>
-                <button class="followState">${
-                    followState ? '取消关注' : '关注'
-                }</button>
+                <button class="followState${isVisitor ? ' disabled' : ''}">${
+        followState ? '取消关注' : '关注'
+    }</button>
             </p>
             <p>
                 <span>园龄：${age}</span>
@@ -54,10 +56,13 @@ const build = () => {
 
 const follow = () => {
     $('.profile-msg button').click(function() {
+        console.log(isVisitor)
+
         if (!isVisitor) {
-            toast('不可关注自己哦', 'error')
+            toast('无法关注自己', 'error')
             return
         }
+
         const content = followState ? '取消关注成功' : '感谢关注'
         $('.followState').text(followState ? '关注' : '取消关注')
         toast(content)
