@@ -1,4 +1,5 @@
 import toast from '@plugins/toast'
+import { isVisitor } from '@cnblog'
 import { followersDetailsUrl, followingDetailsUrl, index } from '@links'
 import {
     getFollowState,
@@ -53,6 +54,10 @@ const build = () => {
 
 const follow = () => {
     $('.profile-msg button').click(function() {
+        if (isVisitor) {
+            toast('不可关注自己哦', 'error')
+            return
+        }
         const content = followState ? '取消关注成功' : '感谢关注'
         $('.followState').text(followState ? '关注' : '取消关注')
         toast(content)
