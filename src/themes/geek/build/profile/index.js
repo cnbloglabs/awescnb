@@ -56,13 +56,10 @@ const build = () => {
 
 const follow = () => {
     $('.profile-msg button').click(function() {
-        console.log(isVisitor)
-
         if (!isVisitor) {
             toast('无法关注自己', 'error')
             return
         }
-
         const content = followState ? '取消关注成功' : '感谢关注'
         $('.followState').text(followState ? '关注' : '取消关注')
         toast(content)

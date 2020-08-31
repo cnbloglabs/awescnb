@@ -19,7 +19,6 @@ function build() {
 }
 
 function imagebox() {
-    console.log(11111)
     if (!options.enable) return
     if (pageName() !== 'post') return
     if (!isMd()) return
