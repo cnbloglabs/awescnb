@@ -61,7 +61,7 @@ const followAndUnfollow = () => {
             toast('无法关注自己', 'error')
             return
         }
-        const isUnfollowed = $('.followState').text() === '取消关注'
+        const isUnfollowed = $('.followState').text() === '关注'
         if (isUnfollowed) {
             toast('感谢关注')
             follow()
