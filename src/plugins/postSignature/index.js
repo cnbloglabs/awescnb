@@ -1,14 +1,10 @@
 import { pageName } from '@/assets/utils/tools'
 import { getBlogname, getCurrentPostUrl } from '@cnblog'
+
+const { enable, content, licenseName, licenseLink } = window.opts.postSignature
+
 // 设置随笔签名
 function postSignature() {
-    const {
-        enable,
-        content,
-        licenseName,
-        licenseLink,
-    } = window.opts.postSignature
-
     if (!enable) return
     if (pageName() !== 'post') return
 

@@ -7,18 +7,21 @@ import {
     getBlogAge,
     getFollowers,
     getFollowing,
+    follow,
+    unfollow,
 } from '@cnblog'
 import './index.scss'
 
 const followState = getFollowState()
+const userName = getBlogname()
+const age = getBlogAge()
+const fans = getFollowers()
+const focus = getFollowing()
 
 const build = () => {
     const { avatar } = window.opts.theme
     const { headerBackground } = window.opts.theme
-    const userName = getBlogname()
-    const age = getBlogAge()
-    const fans = getFollowers()
-    const focus = getFollowing()
+
     const el = `
     <section class="profile">
         <div class="profile-banner" style="background-image:url(${headerBackground})">
@@ -52,22 +55,28 @@ const build = () => {
     $('#mainContent').prepend(el)
 }
 
-const follow = () => {
+const followAndUnfollow = () => {
     $('.profile-msg button').click(function() {
         if (isOwner) {
             toast('无法关注自己', 'error')
             return
         }
-        const content = followState ? '取消关注成功' : '感谢关注'
-        $('.followState').text(followState ? '关注' : '取消关注')
-        toast(content)
-        window.follow()
+        const isFollowed = $('.followState').text() === '取消关注'
+        if (isFollowed) {
+            toast('取消关注成功')
+            follow()
+            $('.followState').text('取消关注')
+        } else {
+            toast('感谢关注')
+            unfollow()
+            $('.followState').text('关注')
+        }
     })
 }
 
 const profile = () => {
     build()
-    follow()
+    followAndUnfollow()
 }
 
 module.exports = profile

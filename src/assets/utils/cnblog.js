@@ -1,6 +1,4 @@
-/**
- * 博客园
- */
+import { pageName } from '@tools'
 
 const { currentBlogApp } = window
 
@@ -9,14 +7,12 @@ const { currentBlogApp } = window
  * 是否开启公告
  * @returns {Boolean}
  */
-const openNews = () => {
-    return !!$('#profile_block').length
-}
+const openNews = () => !!$('#profile_block').length
 
 /**
  * 获取博客园昵称
  */
-export const getBlogname = () => {
+const getBlogname = () => {
     if (openNews()) {
         return $('#profile_block>a:nth-of-type(1)').text()
     }
@@ -28,7 +24,7 @@ export const getBlogname = () => {
 /**
  * 获取粉丝数
  */
-export const getFollowers = () => {
+const getFollowers = () => {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(3)')
               .text()
@@ -40,7 +36,7 @@ export const getFollowers = () => {
 /**
  * 获取关注的人数
  */
-export const getFollowing = () => {
+const getFollowing = () => {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(4)')
               .text()
@@ -52,7 +48,7 @@ export const getFollowing = () => {
 /**
  * 是否被关注
  */
-export const getFollowState = () => {
+const getFollowState = () => {
     return (
         $('#p_b_follow')
             .text()
@@ -63,7 +59,7 @@ export const getFollowState = () => {
 /**
  * 获取园龄
  */
-export const getBlogAge = () => {
+const getBlogAge = () => {
     const age = openNews()
         ? $('#profile_block a:nth-of-type(2)')
               .text()
@@ -73,17 +69,50 @@ export const getBlogAge = () => {
 }
 
 /**
- * 获取相册地址
- */
-export const getAlbumUrl = () => {
-    return ``
-}
-
-/**
  * 获取当前随笔链接
  */
-export const getCurrentPostUrl = () => {
+const getCurrentPostUrl = () => {
     return location.href.indexOf('#') === -1
         ? location.href
         : location.href.substring(0, location.href.lastIndexOf('#'))
+}
+
+/**
+ * get blog user guid
+ */
+const getBlogUserGuid = () => {
+    const page = pageName()
+    if (page === 'index') {
+        return $('#profile_block script')
+            .text()
+            .substr(17, 40)
+    } else {
+        return window.cb_blogUserGuid
+    }
+}
+
+/**
+ * follow
+ */
+const follow = () => {
+    window.follow(getBlogUserGuid())
+}
+
+/**
+ * unfollow
+ */
+const unfollow = () => {
+    window.unfollow(getBlogUserGuid())
+}
+
+export {
+    getBlogname,
+    getFollowers,
+    getFollowing,
+    getFollowState,
+    getBlogAge,
+    getCurrentPostUrl,
+    getBlogUserGuid,
+    follow,
+    unfollow,
 }
