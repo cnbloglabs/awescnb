@@ -64,12 +64,12 @@ const followAndUnfollow = () => {
         const isUnfollowed = $('.followState').text() === '关注'
         if (isUnfollowed) {
             toast('感谢关注')
-            follow()
             $('.followState').text('取消关注')
+            follow()
         } else {
             toast('取消关注成功')
-            unfollow()
             $('.followState').text('关注')
+            unfollow()
         }
     })
 }

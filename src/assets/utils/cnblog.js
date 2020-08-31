@@ -1,5 +1,3 @@
-import { pageName } from '@tools'
-
 const { currentBlogApp } = window
 
 /**
@@ -81,14 +79,9 @@ const getCurrentPostUrl = () => {
  * get blog user guid
  */
 const getBlogUserGuid = () => {
-    const page = pageName()
-    if (page === 'index') {
-        return $('body script:last')
-            .text()
-            .substr(17, 40)
-    } else {
-        return window.cb_blogUserGuid
-    }
+    return $('body script:last')
+        .text()
+        .substr(17, 40)
 }
 
 /**
