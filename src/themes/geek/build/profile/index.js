@@ -1,5 +1,5 @@
 import toast from '@plugins/toast'
-import { isVisitor } from '@constants/cnblog'
+import { isOwner } from '@constants/cnblog'
 import { followersDetailsUrl, followingDetailsUrl, index } from '@links'
 import {
     getFollowState,
@@ -9,8 +9,6 @@ import {
     getFollowing,
 } from '@cnblog'
 import './index.scss'
-
-console.log(isVisitor)
 
 const followState = getFollowState()
 
@@ -40,7 +38,7 @@ const build = () => {
         <div class="profile-msg">
             <p>
                 <a href="${index}"><span>${userName}</span></a>
-                <button class="followState${isVisitor ? ' disabled' : ''}">${
+                <button class="followState${isOwner ? ' disabled' : ''}">${
         followState ? '取消关注' : '关注'
     }</button>
             </p>
@@ -56,7 +54,7 @@ const build = () => {
 
 const follow = () => {
     $('.profile-msg button').click(function() {
-        if (!isVisitor) {
+        if (isOwner) {
             toast('无法关注自己', 'error')
             return
         }
