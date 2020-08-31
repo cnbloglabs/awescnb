@@ -46,7 +46,7 @@ const getFollowing = () => {
 }
 
 /**
- * 是否被关注
+ * 是否已经关注
  */
 const getFollowState = () => {
     return (
@@ -83,7 +83,7 @@ const getCurrentPostUrl = () => {
 const getBlogUserGuid = () => {
     const page = pageName()
     if (page === 'index') {
-        return $('#profile_block script')
+        return $('body script:last')
             .text()
             .substr(17, 40)
     } else {
