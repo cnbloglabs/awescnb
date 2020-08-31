@@ -54,7 +54,7 @@ const build = () => {
 
 const follow = () => {
     $('.profile-msg button').click(function() {
-        if (isVisitor) {
+        if (!isVisitor) {
             toast('不可关注自己哦', 'error')
             return
         }
