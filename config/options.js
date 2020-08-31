@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'gshang',
-    template: 'post',
+    themeName: 'geek',
+    template: 'index',
     eslint: true,
     sourceMap: false,
     openAnalyzer: false,

@@ -55,7 +55,16 @@ const build = () => {
     $('.day').remove()
 }
 
+const initPager = () => {
+    const isFirstPage = $('#nav_next_page').children().length
+    if (isFirstPage) {
+        $('.forFlow').addClass('first-page')
+    }
+}
+
 const indexCards = () => {
+    if (pageName() !== 'index') return
+    initPager()
     build()
 }
 

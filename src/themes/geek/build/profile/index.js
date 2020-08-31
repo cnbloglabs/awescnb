@@ -1,5 +1,5 @@
 import toast from '@plugins/toast'
-import { followersDetailsUrl, followingDetailsUrl } from '@links'
+import { followersDetailsUrl, followingDetailsUrl, index } from '@links'
 import {
     getFollowState,
     getBlogname,
@@ -9,13 +9,7 @@ import {
 } from '@cnblog'
 import './index.scss'
 
-const follow = () => {
-    $('.profile-msg button').click(function() {
-        // $('.profile-msg p button').text('已关注')
-        toast('感谢关注')
-        window.followByGroup()
-    })
-}
+let followState = getFollowState()
 
 const build = () => {
     const { avatar } = window.opts.theme
@@ -38,12 +32,14 @@ const build = () => {
         </div>
         <div class="profile-blur" style="background-image:url(${headerBackground})"></div>
         <div class="profile-avatar">
-            <img src="${avatar}" />
+            <a href="${index}"><img src="${avatar}" /></a>
         </div>
         <div class="profile-msg">
             <p>
-                <span>${userName}</span>
-                <button>${getFollowState() ? '取消关注' : '关注'}</button>
+                <a href="${index}"><span>${userName}</span></a>
+                <button class="followState">${
+                    followState ? '取消关注' : '关注'
+                }</button>
             </p>
             <p>
                 <span>园龄：${age}</span>
@@ -52,9 +48,16 @@ const build = () => {
             </p>
         </div>
     </section>`
-    // add class active for activing tag a
-    // $('.profile:before').css('background-image', `url(${headerBackground})`)
     $('#mainContent').prepend(el)
+}
+
+const follow = () => {
+    $('.profile-msg button').click(function() {
+        const content = followState ? '取消关注成功' : '感谢关注'
+        $('.followState').text(followState ? '关注' : '取消关注')
+        toast(content)
+        window.follow()
+    })
 }
 
 const profile = () => {

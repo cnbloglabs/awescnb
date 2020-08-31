@@ -1,0 +1,144 @@
+@media screen and (max-width: 767px) {
+    #side-btn-wrap {
+        visibility: visible;
+        position: fixed;
+        bottom: 21.6px;
+        right: 27px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 1px 1px 8px var(--themeColor);
+        border-radius: 50%;
+        z-index: 20;
+    }
+
+    #custom-mobile-nav .icon {
+        width: 27px;
+        margin-left: 5px;
+        transform: rotate(90deg);
+    }
+
+    #side-btn {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    #side-btn-burger {
+        position: absolute;
+        background: var(--themeColor);
+        width: 100%;
+        height: 3px;
+        top: 50%;
+        right: 0;
+        margin-top: -1px;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #side-btn-burger:after,
+    #side-btn-burger:before {
+        border-radius: 2px;
+        background: var(--themeColor);
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        content: '';
+        display: block;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #side-btn-burger:before {
+        top: 8px;
+    }
+
+    #side-btn-burger:after {
+        bottom: 8px;
+    }
+
+    #side-btn.side-btn-active #side-btn-burger {
+        background: 0 0;
+    }
+
+    #side-btn.side-btn-active #side-btn-burger:before {
+        transition: all 0.2s;
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #side-btn.side-btn-active #side-btn-burger:after,
+    #side-btn.side-btn-active #side-btn-burger:before {
+        transition: all 0.2;
+    }
+
+    #side-btn.side-btn-active #side-btn-burger:after {
+        transition: all 0.3s;
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    #side-btn.side-btn-active #side-btn-burger:after,
+    #side-btn.side-btn-active #side-btn-burger:before {
+        transition: all 0.2s;
+    }
+    // header trigger
+
+    .navbar-burger {
+        cursor: pointer;
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-left: auto;
+        span {
+            background-color: currentColor;
+            display: block;
+            height: 1px;
+            left: calc(50% - 8px);
+            position: absolute;
+            transform-origin: center;
+            transition-duration: 86ms;
+            transition-property: background-color, opacity, transform;
+            transition-timing-function: ease-out;
+            width: 16px;
+            &:nth-child(1) {
+                top: calc(50% - 6px);
+            }
+            &:nth-child(2) {
+                top: calc(50% - 1px);
+            }
+            &:nth-child(3) {
+                top: calc(50% + 4px);
+            }
+        }
+        &.is-active {
+            span {
+                &:nth-child(1) {
+                    transform: translateY(5px) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-5px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.mobile-menu.is-active {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -10,11 +10,11 @@ const build = () => {
     removeClearel()
     moveFooterToMain()
     require('./indexCards')()
-    require('./header')()
     require('./rightSide')()
     require('./searchbar')()
     require('./profile')()
     require('./leftSide')()
+    require('./mobileMenu')()
 }
 
 module.exports = build

@@ -81,7 +81,16 @@ $dragmenuBackground: map-get($dragMenu, background);
     background: none;
 }
 
+@media screen and (max-width: 1366px) {
+    .dragmenu-item-tooltip {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 767px) {
+    .custom-drag-menu .dragmenu-item:not(:last-child):hover {
+        transform: none;
+    }
     .custom-drag-menu {
         right: 20px;
         bottom: 20px;
