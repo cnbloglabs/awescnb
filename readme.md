@@ -33,8 +33,8 @@
 ## 贡献者
 
 <table>
-    <tr>
-        <td align="center">
+    <tr style="border-top: none;">
+        <td align="center" style="border: none;">
             <a href="https://www.cnblogs.com/guangzan/">
                 <img src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1579449067.png!avatar100" width="100px;" alt="GZ"/>
                 <br />
@@ -48,7 +48,7 @@
             <a href="" title="Documentation">📖</a> 
             <a href="" title="Answering Questions">💬</a>
         </td>
-        <td align="center">
+        <td align="center" style="border: none;">
             <a href="https://gitee.com/aaabingbingbing">
                 <img src="https://portrait.gitee.com/uploads/avatars/user/2449/7348543_aaabingbingbing_1584778574.png!avatar200" width="100px;" alt="ABing"/>
                 <br />
@@ -60,7 +60,7 @@
             <a href="" title="Code">💻</a> 
             <a href="" title="Ideas, Planning, & Feedback">🤔</a>
         </td>
-        <td align="center">
+        <td align="center" style="border: none;">
             <a href="https://www.cnblogs.com/guoxinyu/">
                 <img src="https://portrait.gitee.com/uploads/avatars/user/746/2240671_njit-guoxinyu_1586413047.png!avatar200" width="100px;" alt="青墟"/>
                 <br />
@@ -72,7 +72,7 @@
             <a href="" title="Documentation">📖</a> 
             <a href="" title="Ideas, Planning, & Feedback">🤔</a>
         </td>
-        <td align="center">
+        <td align="center" style="border: none;">
             <a href="https://www.cnblogs.com/gshang/">
                 <img src="https://pic.cnblogs.com/avatar/1489774/20200810193123.png" width="100px;" alt="GShang"/>
                 <br />
@@ -84,7 +84,7 @@
             <a href="" title="Theme Provider">🌈</a> 
             <a href="" title="Ideas, Planning, & Feedback">🤔</a>
         </td>
-        <td align="center">
+        <td align="center" style="border: none;">
             <a href="https://www.cnblogs.com/masterchd">
                 <img src="https://pic.cnblogs.com/avatar/1141382/20170708171334.png" width="100px;" alt="Kindear_chen"/>
                 <br />
