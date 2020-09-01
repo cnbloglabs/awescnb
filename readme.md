@@ -82,6 +82,7 @@
             </a>
             <br />
             <a href="" title="Theme Provider">🌈</a> 
+            <a href="" title="Code">💻</a>
             <a href="" title="Ideas, Planning, & Feedback">🤔</a>
         </td>
         <td align="center">
