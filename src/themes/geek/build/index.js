@@ -1,5 +1,3 @@
-import { isOwner } from '@constants/cnblog'
-
 /**
  * Remove clear elements.
  */
@@ -17,17 +15,17 @@ const moveFooterToMain = () => {
 /**
  * Hidden some elements when visitors visit
  */
-const hideVisitorEls = () => {
-    if (isOwner) return
-    const els = [
-        '#navList>li:last',
-        '#navList>li:nth-child(3)',
-        // '.account-user span',
-    ]
-    for (const el of els) {
-        $(el).hide()
-    }
-}
+// const hideVisitorEls = () => {
+//     if (isOwner) return
+//     const els = [
+//         '#navList>li:last',
+//         '#navList>li:nth-child(3)',
+//         // '.account-user span',
+//     ]
+//     for (const el of els) {
+//         $(el).hide()
+//     }
+// }
 
 const build = () => {
     require('./indexCards')()
@@ -38,7 +36,7 @@ const build = () => {
     require('./mobileMenu')()
     removeClearel()
     moveFooterToMain()
-    hideVisitorEls()
+    // hideVisitorEls()
 }
 
 module.exports = build

@@ -14,9 +14,18 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     background: var(--logo-bg);
 }
 
-#navList {
+#cnblog-nav {
+    ul {
+        a {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+#cnblog-nav {
     @for $i from 1 through length($iconsColor) {
-        li:nth-child(#{$i}) span::before {
+        a:nth-child(#{$i}) span::before {
             color: nth($iconsColor, $i);
         }
     }
@@ -103,13 +112,19 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 }
 
 @media screen and (max-width: 1366px) {
-    #navList {
+    #cnblog-nav {
         & span::before {
             margin: 0;
         }
-        li {
-            // display: block;
-            margin-bottom: 0;
+        ul {
+            a {
+                margin-bottom: 5px;
+                li {
+                    span:last-child {
+                        margin-top: 10px;
+                    }
+                }
+            }
         }
     }
     .side-wrapper {
@@ -136,5 +151,49 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     .developer span,
     .follow-text span {
         display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #blog_nav_rss,
+    #blog_nav_newpost {
+        display: block;
+    }
+
+    .side-wrapper {
+        padding: 30px;
+    }
+
+    #left-side {
+        #cnblog-nav {
+            padding-top: 60px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--sidebarBlock-border-color);
+            ul {
+                flex-direction: row;
+                a {
+                    width: 20%;
+                    li {
+                        span:first-child {
+                            background-color: var(--tags-bg);
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 10vw;
+                            height: 10vw;
+                            &::before {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .favourite {
+            display: block;
+        }
     }
 }

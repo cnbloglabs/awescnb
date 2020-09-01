@@ -11,6 +11,32 @@
         z-index: 20;
     }
 
+    #left-side {
+        .favourite {
+            padding: 30px;
+            border-bottom: 1px solid var(--sidebarBlock-border-color);
+            h3 {
+                display: block;
+                padding-left: 0;
+            }
+            ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                li {
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 2px;
+                    margin-bottom: 0.5rem;
+                    margin-right: 0.5rem;
+                    background-color: var(--tags-bg);
+                    font-size: 12px;
+                    a {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
     #custom-mobile-nav .icon {
         width: 27px;
         margin-left: 5px;

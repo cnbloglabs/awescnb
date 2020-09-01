@@ -1,4 +1,5 @@
 import { getBlogname } from '@cnblog'
+import { isVisitor } from '@constants/cnblog'
 
 import './index.scss'
 
@@ -27,26 +28,68 @@ const buildCustomLinksToLeftSide = () => {
 }
 
 const removeHeaderToLeftside = () => {
-    const el = $('<div id="cnblog-nav" class="side-wrapper">').append(
-        '<h3>MENU</h3>',
-    )
-    $('#left-side .logo').after(el)
+    const navList = [
+        {
+            icon: 'fa-blog',
+            title: '博客园',
+            url: '',
+            allowVisit: true,
+        },
+        {
+            icon: 'fa-home',
+            title: '首页',
+            url: '',
+            allowVisit: true,
+        },
+        {
+            icon: 'fa-pen-square',
+            title: '新随笔',
+            url: '',
+            allowVisit: true,
+        },
+        {
+            icon: 'fa-envelope',
+            title: '联系',
+            url: '',
+            allowVisit: true,
+        },
+        {
+            icon: 'fa-rss-square',
+            title: '订阅',
+            url: '',
+            allowVisit: true,
+        },
+        {
+            icon: 'fa-cog',
+            title: '管理',
+            url: '',
+            allowVisit: false,
+        },
+    ]
 
-    const icons = {
-        博客园: 'fa-blog',
-        首页: 'fa-home',
-        新随笔: 'fa-pen-square',
-        联系: 'fa-envelope',
-        订阅: 'fa-rss-square',
-        管理: 'fa-cog',
+    const el = $(`
+    <div id="cnblog-nav" class="side-wrapper">
+        <h3>MENU</h3>
+        <ul></ul>
+    </div>
+    `)
+
+    for (const { icon, title, url, allowVisit } of navList) {
+        const item = `<a href="${url}">
+            <li>
+                <span class="fas ${icon}"></span>
+                <span>${title}</span>
+            </li>
+        </a>`
+
+        if (isVisitor && !allowVisit) {
+            continue
+        }
+
+        el.find('ul').append(item)
     }
-    $('#navList li').each(function() {
-        const title = $(this)
-            .text()
-            .trim()
-        $(this).prepend(`<span class="fas ${icons[title]}"></span>`)
-    })
-    $('#navList').appendTo($('#cnblog-nav'))
+
+    $('#left-side .logo').after(el)
 }
 
 const buildLeftsideBottomBtns = () => {
