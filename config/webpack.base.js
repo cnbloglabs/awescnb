@@ -4,7 +4,7 @@ const { eslint } = require('./options')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 
 const jsLoader = [
-    'cache-loader',
+    // 'cache-loader',
     {
         loader: 'babel-loader',
         options: {

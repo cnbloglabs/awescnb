@@ -1,4 +1,5 @@
 import { getBlogname } from '@cnblog'
+
 import './index.scss'
 
 const buildLeftside = () => {

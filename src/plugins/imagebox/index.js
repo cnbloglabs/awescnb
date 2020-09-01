@@ -9,7 +9,7 @@ const mediumZoomConfig = {
 }
 
 function build() {
-    const imgList = $('.forFlow img')
+    const imgList = $('#cnblogs_post_body img, .blog_comment_body img')
     if (imgList === 0) return
     $.each(imgList, i => {
         const item = $(imgList[i])
