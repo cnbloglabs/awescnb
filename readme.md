@@ -38,6 +38,25 @@
 -   [DIVMonster](https://www.cnblogs.com/guangzan/)
 -   [Kindear_chen](https://www.cnblogs.com/masterchd)
 
+<table>
+    <tr>
+        <td align="center">
+            <a href="">
+                <img src="https://pic.cnblogs.com/avatar/1501373/20200819130243.png" width="100px;" alt="GZ"/>
+                <br />
+                <sub>
+                    <b>GZ</b>
+                </sub>
+            </a>
+            <br />
+            <a href="" title="Project Management">📆</a> 
+            <a href="" title="Code">💻</a> 
+            <a href="" title="Documentation">📖</a> 
+            <a href="" title="Answering Questions">💬</a>
+        </td>
+    </tr>
+</table>
+
 ## 许可
 
 如果您引用了此项目的代码请在您的项目中说明, 谢谢合作。

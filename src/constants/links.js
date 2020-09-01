@@ -1,7 +1,6 @@
 /**
  * 博客园相关链接 url
  */
-
 const { currentBlogApp } = window
 const home = 'https://home.cnblogs.com'
 const cnblog = 'https://www.cnblogs.com'

@@ -76,7 +76,7 @@ const removeHeaderToLeftside = () => {
     `)
 
     for (const { icon, title, url, allowVisit } of navList) {
-        const item = `<a href="${url}">
+        const item = `<a href="${url}" target="_blank">
             <li>
                 <span class="fas ${icon}"></span>
                 <span>${title}</span>
