@@ -18,3 +18,9 @@ export const commented = `${cnblog}/aggsite/mycommented`
 export const mydigged = `${cnblog}/aggsite/mydigged`
 // 用户博客首页
 export const index = `${cnblog}/${currentBlogApp}`
+//
+export const cnblogHome = 'https://www.cnblogs.com/'
+export const newPost = 'https://i.cnblogs.com/posts/edit'
+export const send = `https://msg.cnblogs.com/send/${currentBlogApp}`
+export const rss = 'about:blank#blocked'
+export const admin = 'https://i.cnblogs.com/'

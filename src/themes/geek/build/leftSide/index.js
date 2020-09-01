@@ -1,5 +1,6 @@
 import { getBlogname } from '@cnblog'
 import { isVisitor } from '@constants/cnblog'
+import { cnblogHome, index, newPost, send, rss, admin } from '@constants/links'
 
 import './index.scss'
 
@@ -32,37 +33,37 @@ const removeHeaderToLeftside = () => {
         {
             icon: 'fa-blog',
             title: '博客园',
-            url: '',
+            url: cnblogHome,
             allowVisit: true,
         },
         {
             icon: 'fa-home',
             title: '首页',
-            url: '',
+            url: index,
             allowVisit: true,
         },
         {
             icon: 'fa-pen-square',
             title: '新随笔',
-            url: '',
+            url: newPost,
             allowVisit: true,
         },
         {
             icon: 'fa-envelope',
             title: '联系',
-            url: '',
+            url: send,
             allowVisit: true,
         },
         {
             icon: 'fa-rss-square',
             title: '订阅',
-            url: '',
+            url: rss,
             allowVisit: true,
         },
         {
             icon: 'fa-cog',
             title: '管理',
-            url: '',
+            url: admin,
             allowVisit: false,
         },
     ]
