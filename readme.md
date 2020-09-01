@@ -32,16 +32,15 @@
 
 ## 贡献者
 
--   [青墟](https://www.cnblogs.com/guoxinyu/)
--   [ABing](https://www.cnblogs.com/A-Bing/)
--   [GShang](https://www.cnblogs.com/gshang/)
--   [DIVMonster](https://www.cnblogs.com/guangzan/)
--   [Kindear_chen](https://www.cnblogs.com/masterchd)
+<!-- -   [青墟](https://www.cnblogs.com/guoxinyu/) -->
+<!-- -   [ABing](https://www.cnblogs.com/A-Bing/) -->
+<!-- -   [GShang](https://www.cnblogs.com/gshang/) -->
+<!-- -   [Kindear_chen](https://www.cnblogs.com/masterchd) -->
 
 <table>
     <tr>
         <td align="center">
-            <a href="">
+            <a href="https://www.cnblogs.com/guangzan/">
                 <img src="https://pic.cnblogs.com/avatar/1501373/20200819130243.png" width="100px;" alt="GZ"/>
                 <br />
                 <sub>
@@ -53,6 +52,41 @@
             <a href="" title="Code">💻</a> 
             <a href="" title="Documentation">📖</a> 
             <a href="" title="Answering Questions">💬</a>
+        </td>
+        <td align="center">
+            <a href="https://www.cnblogs.com/guoxinyu/">
+                <img src="https://pic.cnblogs.com/avatar/1735731/20191219203118.png" width="100px;" alt="青墟"/>
+                <br />
+                <sub>
+                    <b>青墟</b>
+                </sub>
+            </a>
+            <br />
+            <a href="" title="Documentation">📖</a> 
+            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
+        </td>
+        <td align="center">
+            <a href="https://www.cnblogs.com/gshang/">
+                <img src="https://pic.cnblogs.com/avatar/1489774/20200810193123.png" width="100px;" alt="GShang"/>
+                <br />
+                <sub>
+                    <b>GShang</b>
+                </sub>
+            </a>
+            <br />
+            <a href="" title="Theme Provider">🎨</a> 
+            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
+        </td>
+        <td align="center">
+            <a href="https://www.cnblogs.com/masterchd">
+                <img src="https://pic.cnblogs.com/avatar/1141382/20170708171334.png" width="100px;" alt="Kindear_chen"/>
+                <br />
+                <sub>
+                    <b>Kindear_chen</b>
+                </sub>
+            </a>
+            <br />
+            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
         </td>
     </tr>
 </table>
