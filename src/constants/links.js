@@ -18,9 +18,13 @@ export const commented = `${cnblog}/aggsite/mycommented`
 export const mydigged = `${cnblog}/aggsite/mydigged`
 // 用户博客首页
 export const index = `${cnblog}/${currentBlogApp}`
-//
+// 博客园首页
 export const cnblogHome = 'https://www.cnblogs.com/'
+// 新随笔
 export const newPost = 'https://i.cnblogs.com/posts/edit'
-export const send = `https://msg.cnblogs.com/send/${currentBlogApp}`
+// 联系
+export const send = $('#blog_nav_contact').attr('href')
+// 订阅
 export const rss = 'about:blank#blocked'
+// 管理
 export const admin = 'https://i.cnblogs.com/'
