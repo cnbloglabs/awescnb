@@ -5,7 +5,8 @@ import mediumZoom from 'medium-zoom'
 
 const options = window.opts.imagebox
 const mediumZoomConfig = {
-    background: 'rgba(0,0,0,0.3)',
+    background: 'rgba(0,0,0,0.5)',
+    // template: '#mainContent',
 }
 
 function build() {
@@ -15,7 +16,8 @@ function build() {
         const item = $(imgList[i])
         item.addClass('custom-zoom')
     })
-    mediumZoom('.custom-zoom', mediumZoomConfig)
+    const zoom = mediumZoom('.custom-zoom', mediumZoomConfig)
+    zoom.on('close', () => {})
 }
 
 function imagebox() {
