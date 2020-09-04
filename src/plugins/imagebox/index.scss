@@ -1,3 +1,20 @@
+$imagebox: () !default;
+$imagebox: map-merge(
+    (
+        background: rgba(0, 0, 0, 0.5),
+    ),
+    $imagebox
+);
+
+$imageboxBackground: map-get($imagebox, background);
+
+body {
+    .medium-zoom-overlay {
+        background: $imageboxBackground !important;
+        z-index: 6;
+    }
+}
+
 .lightbox-post {
     cursor: zoom-in;
 }

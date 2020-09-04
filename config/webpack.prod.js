@@ -6,10 +6,12 @@ const { openAnalyzer, cssExtract } = require('./options')
 const plugins = [
     // new CleanWebpackPlugin()
 ]
+
 let output = {
     filename: '[name].js',
     path: path.join(__dirname, '..', 'dist'),
 }
+
 let cssLoader = [
     'style-loader',
     {
@@ -20,6 +22,7 @@ let cssLoader = [
     },
     'postcss-loader',
 ]
+
 let scssLoader = [
     'style-loader',
     {
@@ -72,23 +75,21 @@ if (cssExtract) {
     scssLoader[0] = MiniCssExtractPluginLoader
 }
 
+const rules = [
+    {
+        test: /\.css$/,
+        use: cssLoader,
+    },
+    {
+        test: /\.scss$/,
+        use: scssLoader,
+    },
+]
+
 module.exports = merge(baseWebpackConfig, {
     mode: 'production',
     output,
     plugins,
-    externals: {
-        jquery: 'window.jquery',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: cssLoader,
-            },
-            {
-                test: /\.scss$/,
-                use: scssLoader,
-            },
-        ],
-    },
+    externals: { jquery: 'window.jquery' },
+    module: { rules },
 })

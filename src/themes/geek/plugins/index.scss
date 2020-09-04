@@ -27,6 +27,10 @@ $signature: (
     fontSize: 1em,
 );
 
+$imagebox: (
+    background: var(--dragmenuItem-bg),
+);
+
 @import '@plugins/highlight/index.scss';
 @import '@plugins/copy/index.scss';
 @import '@plugins/linenumbers/index.scss';

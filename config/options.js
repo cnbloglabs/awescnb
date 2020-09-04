@@ -2,10 +2,10 @@ module.exports = {
     themeName: 'geek',
     template: 'post',
     eslint: true,
-    sourceMap: false,
+    sourceMap: true,
+    openBrowser: true,
     openAnalyzer: false,
     cssExtract: false,
-    openBrowser: false,
 }
 
 ///////// options /////////

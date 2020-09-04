@@ -1,3 +1,32 @@
+/**
+ * 监听鼠标滚轮
+ * @param {Function} upCallback 向上滚动回调
+ * @param {Function} downCallback 向下滚动回调
+ */
+function mousewheel(upCallback, downCallback) {
+    if (!downCallback) downCallback = upCallback
+    const removeListener = () => {
+        $(document).unbind('mousewheel DOMMouseScroll')
+    }
+    const up = () => {
+        upCallback()
+        removeListener()
+    }
+    const down = () => {
+        upCallback()
+        removeListener()
+    }
+    $(document).on('mousewheel DOMMouseScroll', function(e) {
+        // e.preventDefault()
+        const wheel = e.originalEvent.wheelDelta || -e.originalEvent.detail
+        const delta = Math.max(-1, Math.min(1, wheel))
+        delta < 0 ? up() : down()
+    })
+}
+
+/**
+ * 获取季节
+ */
 function getQuarter() {
     var month = new Date().getMonth()
     if (month < 3) {
@@ -412,4 +441,5 @@ export {
     isElementInViewport,
     getMonth,
     getQuarter,
+    mousewheel,
 }

@@ -6,7 +6,7 @@ const { light, dark, type } = window.opts.highLight
 
 function buildMarkdownLinenumber() {
     let style
-    if (type.length) {
+    if (type.length && !dark.length && !light.length) {
         style = `<style>:root{${themes[type]}}</style>`
     } else {
         style = `<style>
