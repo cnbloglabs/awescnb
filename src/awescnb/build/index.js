@@ -1,5 +1,5 @@
 import printing from './printing'
-import grayDay from './grayDay'
+// import grayDay from './grayDay'
 
 function hideLoading() {
     $('#loading').fadeOut(300)
@@ -8,7 +8,7 @@ function hideLoading() {
 function build() {
     hideLoading()
     printing()
-    grayDay()
+    // grayDay()
 }
 
 module.exports = build

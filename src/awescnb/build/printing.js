@@ -1,6 +1,6 @@
 // 控制台打印
 import { prettyLog } from '@tools'
-import env from '@/constants/env'
+// import env from '@/constants/env'
 
 // const themes = [
 //     {
@@ -32,19 +32,19 @@ import env from '@/constants/env'
 const log = [
     {
         str: '# # # # # # # # # # # # # # # # # # # # # # # #',
-        color: '#1e3799',
+        color: '#1e90ff',
     },
     {
-        str: '# ⛷ Awescnb: awesome cnblog!',
+        str: '# 🔮 Awescnb: awesome cnblog!',
         color: '#eb4d4b',
     },
     {
-        str: '# 🎉 为博客园发烧友而生！',
+        str: '# 🎉 博客园发烧友而生！',
         color: '#f0932b',
     },
     {
-        str: '# 👌 使用awescnb快速构建、安装、分享博客园皮肤',
-        color: '#341f97',
+        str: '# 👌 使用 awescnb 快速安装、构建、分享皮肤',
+        color: '#a29bfe',
     },
     // {
     //     str: `# 🎨 The theme you are using is ${name}`,
@@ -56,7 +56,7 @@ const log = [
     // },
     {
         str: '# 📧 QQ群:541802647(活跃)',
-        color: '#6ab04c',
+        color: '#55efc4',
     },
     {
         str: '# 📑 文档:https://guangzan.gitee.io/awescnb-docs',
@@ -64,7 +64,7 @@ const log = [
     },
     {
         str: '# 📌 码云:https://gitee.com/guangzan/awescnb',
-        color: '#4834d4',
+        color: '#7ed6df',
     },
     {
         str: '# 🌏 GitHub:https://github.com/guangzan/awescnb',
@@ -72,12 +72,12 @@ const log = [
     },
     {
         str: '# # # # # # # # # # # # # # # # # # # # # # # #',
-        color: '#1e3799',
+        color: '#1e90ff',
     },
 ]
 
 function printing() {
-    if (env === 'dev') return
+    // if (env === 'dev') return
     for (const { str, color } of log) {
         prettyLog(str, color)
     }

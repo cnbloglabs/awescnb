@@ -38,7 +38,7 @@
     <tr>
         <td align="center">
             <a href="https://www.cnblogs.com/guangzan/">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1579449067.png!avatar100" width="100px;" alt="GZ"/>
+                <img src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1598958714.png!avatar200" width="100px;" alt="GZ"/>
                 <br />
                 <sub>
                     <b>GZ</b>
@@ -52,7 +52,7 @@
         </td>
         <td align="center">
             <a href="https://gitee.com/aaabingbingbing">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1598958714.png!avatar200" width="100px;" alt="ABing"/>
+                <img src="https://portrait.gitee.com/uploads/avatars/user/2449/7348543_aaabingbingbing_1584778574.png!avatar200" width="100px;" alt="ABing"/>
                 <br />
                 <sub>
                     <b>ABing</b>
