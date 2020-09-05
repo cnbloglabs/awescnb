@@ -3,7 +3,7 @@
     display: none;
 }
 
-.index,
+.cards-list,
 .entrylist {
     margin: 1rem 0;
     display: grid;
@@ -88,30 +88,14 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .index {
+    .cards-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 767px) {
-    .index {
+@media screen and (max-width: 768px) {
+    .cards-list {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-    // .index {
-    //     flex-direction: column;
-    // }
-
-    // #mainContent {
-    //     .entrylistItem,
-    //     .custom-card {
-    //         margin-bottom: 0.5rem;
-    //         margin-left: 0;
-    //         margin-right: 0;
-    //         width: 100%;
-    //         &:nth-child(1) {
-    //             width: 100%;
-    //         }
-    //     }
-    // }
 }

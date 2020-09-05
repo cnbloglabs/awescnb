@@ -2,7 +2,10 @@ import { pageName } from '@tools'
 import './index.scss'
 
 const build = () => {
-    if (pageName() === 'index') $('.forFlow').addClass('index')
+    $('.forFlow')
+        .addClass('index')
+        .prepend('<div class="cards-list">')
+
     const el = $('.day').find('.postTitle,.postCon,.postDesc')
 
     for (var i = 0; i < el.length; i += 3) {
@@ -49,7 +52,7 @@ const build = () => {
 
         $('.custom-card').length
             ? $('.custom-card:last').after(card)
-            : $('.forFlow').prepend(card)
+            : $('.cards-list').prepend(card)
     }
 
     $('.day').remove()

@@ -35,3 +35,5 @@ export const clipboard =
     'https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js'
 export const animeJs =
     'https://cdn.bootcdn.net/ajax/libs/animejs/3.2.0/anime.min.js'
+export const mediaZoomJs =
+    'https://cdn.bootcdn.net/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js'

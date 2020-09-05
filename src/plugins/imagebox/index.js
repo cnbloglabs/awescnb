@@ -1,7 +1,12 @@
 // 设置图片灯箱
-import { pageName, poll, isMd, mousewheel } from '@/assets/utils/tools'
-import mediumZoom from 'medium-zoom'
-
+import {
+    pageName,
+    poll,
+    isMd,
+    mousewheel,
+    cacheScript,
+} from '@/assets/utils/tools'
+import { mediaZoomJs } from '@constants/urls'
 const options = window.opts.imagebox
 const mediumZoomConfig = {}
 
@@ -12,7 +17,8 @@ function build() {
         const item = $(imgList[i])
         item.addClass('custom-zoom')
     })
-    const zoom = mediumZoom('.custom-zoom', mediumZoomConfig)
+
+    const zoom = window.mediumZoom('.custom-zoom', mediumZoomConfig)
 
     zoom.on('open', () => {
         mousewheel(() => {
@@ -26,8 +32,9 @@ function imagebox() {
     if (pageName() !== 'post') return
     if (!isMd()) return
     if ($('.custom-zoom').length) return
-
-    poll($('.blog_comment_body').length, build)
+    cacheScript(mediaZoomJs, () => {
+        poll($('.blog_comment_body').length, build)
+    })
     window.imagebox = build
 }
 
