@@ -23,7 +23,7 @@ function images() {
 
 function indexPage() {
     if (pageName() !== 'index') return
-    // content()
+    content()
     // console.log(content)
 }
 

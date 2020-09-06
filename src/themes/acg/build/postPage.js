@@ -72,7 +72,7 @@ function build() {
 
 function postPage() {
     // console.log(build)
-    // build()
+    build()
 }
 
 export default postPage

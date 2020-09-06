@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'acg',
     template: 'index',
     eslint: true,
     sourceMap: true,

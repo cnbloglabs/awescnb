@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --themeColor: #ffb3cc;
 }
@@ -79,6 +84,7 @@ body::-webkit-scrollbar-track {
 header {
     position: relative;
     width: 100vw;
+    overflow: hidden;
 }
 
 #blogTitle {
@@ -86,10 +92,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 287.982px;
     border-bottom: 1px;
-    background-image: url(https://guangzan.gitee.io/awescnb-files/images/acg/22.jpg);
+    background-image: url(https://guangzan.gitee.io/imagehost/awescnb/images/anime/22.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     animation: bg-move 20s linear infinite;
@@ -105,9 +111,11 @@ header {
     content: ' ';
     bottom: 0;
     height: 33%;
-    background: linear-gradient(180deg,
-            hsla(0, 0%, 100%, 0) 0,
-            hsla(0, 0%, 100%, 1));
+    background: linear-gradient(
+        180deg,
+        hsla(0, 0%, 100%, 0) 0,
+        hsla(0, 0%, 100%, 1)
+    );
 }
 
 #blogTitle h1 {
@@ -130,11 +138,17 @@ header {
     z-index: 10;
     backdrop-filter: blur(5px);
 }
+.sidebar-block {
+    h3 {
+        white-space: nowrap;
+    }
+}
 
 #navigator a {
     padding: 0 15.822px;
     transition: background-color 0.2s;
     background-color: transparent;
+    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -149,11 +163,13 @@ header {
 
 #navList {
     display: flex;
+    padding-left: 0;
 }
 
 .blogStats {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
+    display: none;
 }
 
 #topdigg_posts_wrap,
@@ -174,7 +190,7 @@ header {
     height: 100%;
 }
 
-#user-msg>a {
+#user-msg > a {
     font-size: 27px;
     font-weight: bold;
 }
@@ -282,7 +298,7 @@ body footer {
     text-shadow: 0 0 2px var(--themeColor);
 }
 
-#links>ul>li:not(:first-child) {
+#links > ul > li:not(:first-child) {
     margin-left: 21.6px;
 }
 
@@ -307,9 +323,12 @@ body footer {
     right: 0;
     left: 0;
     bottom: 0;
-    background: linear-gradient(to right top,
+    background: linear-gradient(
+            to right top,
             var(--themeColor) 50%,
-            transparent 50%) no-repeat;
+            transparent 50%
+        )
+        no-repeat;
     background-size: 100% calc(100% - 100vh + 5px);
     z-index: 1;
     pointer-events: none;
@@ -367,7 +386,7 @@ body footer {
     text-shadow: 0 0 2px #fff, 0 0 2px #fff;
 }
 
-.post-item:hover>.postTitle {
+.post-item:hover > .postTitle {
     transition: opacity 0.2s;
     opacity: 1;
 }
@@ -497,7 +516,7 @@ body footer {
     white-space: nowrap;
 }
 
-#catalog ul>li>a:hover {
+#catalog ul > li > a:hover {
     text-decoration: none;
 }
 
@@ -505,11 +524,11 @@ body footer {
     font-weight: 700;
 }
 
-.h1-list~.h2-list {
+.h1-list ~ .h2-list {
     margin-left: 0.7em;
 }
 
-.h2-list~.h3-list {
+.h2-list ~ .h3-list {
     margin-left: 1.4em;
 }
 
@@ -519,17 +538,17 @@ body footer {
 
 /* 写评论 start */
 
-#comment_form_container>p:nth-of-type(3),
-#comment_form_container>a:first-of-type,
+#comment_form_container > p:nth-of-type(3),
+#comment_form_container > a:first-of-type,
 #divCommentShow,
 #ad_text_under_commentbox,
 #comment_nav,
-#commentbox_opt>a,
+#commentbox_opt > a,
 #tip_comment2 {
     display: none;
 }
 
-#comment_form_container>p:last-of-type {
+#comment_form_container > p:last-of-type {
     color: var(--text-9);
 }
 
@@ -763,12 +782,12 @@ body footer {
     height: 27px;
 }
 
-.blog_comment_body>a:first-of-type,
+.blog_comment_body > a:first-of-type,
 .blog_comment_body p a:nth-child(1) {
     color: #fff;
 }
 
-.feedbackListSubtitle>a:last-of-type {
+.feedbackListSubtitle > a:last-of-type {
     color: #00a1d6;
     order: 1;
 }
@@ -778,7 +797,7 @@ body footer {
     order: 3;
 }
 
-.feedbackListSubtitle>a:last-of-type:hover {
+.feedbackListSubtitle > a:last-of-type:hover {
     color: var(--themeColor);
     transition: all 0.2s;
 }
@@ -868,8 +887,6 @@ body footer {
 #cnblogs_post_body .hljs-ln-code {
     border: none;
 }
-
-
 
 #cnblogs_post_body .hljs-ln-code {
     padding: 02px 5.0382px;
@@ -996,7 +1013,8 @@ pre::before {
     content: ' ';
     display: block;
     height: 24px;
-    background: url(https://guangzan.gitee.io/awescnb-files/images/background/mac.png) no-repeat;
+    background: url(https://guangzan.gitee.io/awescnb-files/images/background/mac.png)
+        no-repeat;
     background-size: 65px 23px;
     background-position-x: 10px;
 }
@@ -1185,7 +1203,7 @@ pre:after {
         display: none;
     }
 
-    #blog-comments-placeholder .feedbackListSubtitle>a:last-of-type {
+    #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
         /* width: 118.8px; */
         white-space: nowrap;
         overflow: hidden;
@@ -1335,7 +1353,7 @@ pre:after {
         filter: none;
     }
 
-    #navigator>li {
+    #navigator > li {
         display: flex;
         justify-content: center;
         height: auto;
@@ -1368,13 +1386,13 @@ pre:after {
         height: auto;
     }
 
-    #navigator>li:nth-child(3),
-    #navigator>li:nth-child(4),
-    #navigator>li:nth-child(6) {
+    #navigator > li:nth-child(3),
+    #navigator > li:nth-child(4),
+    #navigator > li:nth-child(6) {
         display: none;
     }
 
-    #navigator>li,
+    #navigator > li,
     #topdigg_posts_wrap,
     #topdigg_posts_wrap .catListView,
     #sidebar_topcommentedposts .catListFeedback,
@@ -1393,7 +1411,7 @@ pre:after {
         height: auto;
     }
 
-    #navigator>li,
+    #navigator > li,
     .catListTitle {
         padding: 10px 0;
         width: 100%;

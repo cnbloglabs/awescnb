@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import AwesCnb from '@awescnb'
 
 class ACG extends AwesCnb {
