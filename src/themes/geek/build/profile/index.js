@@ -74,38 +74,38 @@ const followAndUnfollow = () => {
     })
 }
 
-const buildMeteor = () => {
-    const el = `
-    <div class="night">
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-        <div class="shooting_star"></div>
-    </div>
-    `
-    $('.profile-banner').append(el)
-}
+// const buildMeteor = () => {
+//     const el = `
+//     <div class="night">
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//         <div class="shooting_star"></div>
+//     </div>
+//     `
+//     $('.profile-banner').append(el)
+// }
 
 const profile = () => {
     build()
     followAndUnfollow()
-    buildMeteor()
+    // buildMeteor()
 }
 
 module.exports = profile
