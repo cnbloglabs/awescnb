@@ -67,8 +67,6 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 .follow-me {
     display: flex;
     align-items: center;
-    // flex-shrink: 0;
-
     text-decoration: none;
     font-size: 14px;
     overflow: hidden;
@@ -155,6 +153,12 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 }
 
 @media screen and (max-width: 767px) {
+    #home {
+        #left-side {
+            display: none;
+        }
+    }
+
     #blog_nav_rss,
     #blog_nav_newpost {
         display: block;

@@ -127,3 +127,10 @@
 // }
 
 // 日历 end
+@media screen and (max-width: 767px) {
+    #home {
+        #sideBar {
+            display: none;
+        }
+    }
+}

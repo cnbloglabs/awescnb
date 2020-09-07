@@ -1,8 +1,8 @@
 import './index.scss'
-import {
-    userAgent,
-    // unpass
-} from '@tools'
+// import {
+//     // userAgent,
+//     // unpass
+// } from '@tools'
 
 /**
  * 构建移动端菜单
@@ -12,8 +12,12 @@ const buildMobileMenu = () => {
         <div class="mobile-menu"></div>
     `
     $('body').append(el)
-    $('#left-side').appendTo('.mobile-menu')
-    $('#sideBar').appendTo('.mobile-menu')
+    $('#left-side')
+        .clone()
+        .appendTo('.mobile-menu')
+    $('#sideBar')
+        .clone()
+        .appendTo('.mobile-menu')
 }
 
 /**
@@ -34,7 +38,7 @@ const buildHeaderTrigger = () => {
 }
 
 function mobileMenu() {
-    if (userAgent() !== 'phone') return
+    // if (userAgent() !== 'phone') return
     buildMobileMenu()
     buildHeaderTrigger()
 }

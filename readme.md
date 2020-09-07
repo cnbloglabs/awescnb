@@ -10,15 +10,11 @@
 
 ## 文档
 
-我们为本项目构建了事无巨细的文档，它简洁并保证任何人能够快速上手!
-
--   🍨 [安装皮肤](https://guangzan.gitee.io/awescnb-docs/)
+-   👔 [安装皮肤到博客园](https://guangzan.gitee.io/awescnb-docs/)
 -   🔨 [配置皮肤](https://guangzan.gitee.io/awescnb-docs/options)
 -   🎨 [构建皮肤](https://guangzan.gitee.io/awescnb-docs/dev)
 -   🎊 [皮肤列表](https://guangzan.gitee.io/awescnb-docs/themes)
 -   📑 [更新日志](https://guangzan.gitee.io/awescnb-docs/log)
-
-> 🔮 您也可以前往哔哩哔哩观看[视频教程](https://www.bilibili.com/video/BV1ik4y167BY)。
 
 ## 交流
 
