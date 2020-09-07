@@ -1,9 +1,16 @@
 import toast from '@plugins/toast'
 import { pageName, cacheScript, userAgent } from '@tools'
-import { jqueryui, animeJs } from '@constants/urls'
+import {
+    // jqueryui,
+    animeJs,
+} from '@constants/urls'
 
 const back2topConfig = window.opts.back2top
-const { enable, initialOpen, draggable } = window.opts.tools
+const {
+    enable,
+    initialOpen,
+    //  draggable
+} = window.opts.tools
 
 let anime
 let timeOut
@@ -33,31 +40,31 @@ class Menu {
                     menu.click()
                 }
             })
-            if (draggable) {
-                cacheScript(jqueryui, () => {
-                    item.$element.draggable(
-                        {
-                            start() {
-                                menu.close()
-                                item.isMoving = true
-                            },
-                        },
-                        {
-                            drag() {
-                                if (item.next) {
-                                    item.next.updatePosition()
-                                }
-                            },
-                        },
-                        {
-                            stop() {
-                                item.isMoving = false
-                                item.next.moveTo(item)
-                            },
-                        },
-                    )
-                })
-            }
+            // if (draggable) {
+            //     cacheScript(jqueryui, () => {
+            //         item.$element.draggable(
+            //             {
+            //                 start() {
+            //                     menu.close()
+            //                     item.isMoving = true
+            //                 },
+            //             },
+            //             {
+            //                 drag() {
+            //                     if (item.next) {
+            //                         item.next.updatePosition()
+            //                     }
+            //                 },
+            //             },
+            //             {
+            //                 stop() {
+            //                     item.isMoving = false
+            //                     item.next.moveTo(item)
+            //                 },
+            //             },
+            //         )
+            //     })
+            // }
         } else {
             this.last.next = item
             item.prev = this.last
