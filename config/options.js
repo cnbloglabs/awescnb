@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'acg',
-    template: 'index',
+    themeName: 'geek',
+    template: 'post',
     eslint: true,
     sourceMap: true,
     openBrowser: true,

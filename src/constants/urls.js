@@ -30,7 +30,8 @@ export const materialize =
     'https://cdn.bootcdn.net/ajax/libs/materialize/0.98.0/js/materialize.min.js'
 export const linenumbersjs =
     'https://cdn.bootcdn.net/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js'
-export const jqueryui = 'https://code.jquery.com/ui/1.12.0/jquery-ui.js'
+export const jqueryui =
+    'https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'
 export const clipboard =
     'https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js'
 export const animeJs =
