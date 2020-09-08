@@ -17,7 +17,8 @@ module.exports = {
 // cssExtract 单独抽离css
 // openBrowser - 自动打开浏览器
 
-///////// themes /////////
+///////// themes /////////s
+
 // - geek
 // - reacg
 // - simple

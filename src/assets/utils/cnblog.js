@@ -11,9 +11,7 @@ const openNews = () => !!$('#profile_block').length
  * 获取博客园昵称
  */
 const getBlogname = () => {
-    if (openNews()) {
-        return $('#profile_block>a:nth-of-type(1)').text()
-    }
+    if (openNews()) return $('#profile_block>a:nth-of-type(1)').html()
     const headerTitle = $('#Header1_HeaderTitle').text()
     if (headerTitle.length) return headerTitle
     return currentBlogApp

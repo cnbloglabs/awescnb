@@ -14,6 +14,8 @@ function postSignature() {
     const author = getBlogname()
     const href = getCurrentPostUrl()
 
+    // console.log(author)
+
     let custom = ''
     for (let i = 0; i < content.length; i++) {
         custom += '<p>' + content[i] + '</p>'

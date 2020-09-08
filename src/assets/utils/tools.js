@@ -396,6 +396,41 @@ function hasPostTitle() {
 }
 
 /**
+ * 是否为随笔详情页
+ */
+function isPostDetailsPage() {
+    return !!$('#post_detail').length
+}
+
+/**
+ * 是否为首页
+ */
+function isHomePage() {
+    return !!$('.day').length
+}
+
+/**
+ * 是否为标签列表页
+ */
+function isTagListPage() {
+    return !!$('#taglist_main').length
+}
+
+/**
+ * 是否为随笔详情页
+ */
+function isEntrylistPage() {
+    return !!$('.entrylistPosttitle').length
+}
+
+/**
+ * 是否相册页
+ */
+function isAlbumPage() {
+    return !!$('.gallery').length
+}
+
+/**
  * @description 返回当前页面名称
  * @returns 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
  */
@@ -442,4 +477,9 @@ export {
     getMonth,
     getQuarter,
     mousewheel,
+    isPostDetailsPage,
+    isHomePage,
+    isTagListPage,
+    isEntrylistPage,
+    isAlbumPage,
 }
