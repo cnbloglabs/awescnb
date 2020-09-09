@@ -4,29 +4,6 @@
 @import './scroll.scss';
 @import './markdown.scss';
 
-// :root {
-//     --default-background-g: rgb(253, 230, 224);
-//     --default-background-w: #fff;
-//     --default-background-e: #f6f8fa;
-//     --default-text-0: #000;
-//     --default-text-3: #333;
-//     --default-text-4: #444;
-//     --default-text-5: #555;
-//     --default-text-9: #999;
-//     --default-text-10: #d1d5da;
-//     --default-text-a: #fff;
-//     --background-g: var(--dark-background-g, var(--default-background-g));
-//     --background-w: var(--dark-background-w, var(--default-background-w));
-//     --background-e: var(--dark-background-e, var(--default-background-e));
-//     --text-0: var(--dark-text-0, var(--default-text-0));
-//     --text-3: var(--dark-text-3, var(--default-text-3));
-//     --text-4: var(--dark-text-4, var(--default-text-4));
-//     --text-5: var(--dark-text-5, var(--default-text-5));
-//     --text-9: var(--dark-text-9, var(--default-text-9));
-//     --text-10: var(--dark-text-10, var(--default-text-10));
-//     --text-a: var(--dark-text-a, var(--default-text-a));
-// }
-
 html {
     font-size: 12px;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
@@ -230,50 +207,13 @@ body {
         }
     }
     // 相册页、标签页
-    .thumbTitle,
+    .custom-gallery h3,
     .PostListTitle {
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
         padding: 1rem;
         color: var(--text-4);
         font-size: 16px;
     }
-
-    // 相册内容容器
-    #GalleryThumbNailViewer1_ThumbNails {
-        display: block;
-        padding: 1rem;
-        & > tbody > tr:not(:nth-child(1)) {
-            margin-top: 8px;
-        }
-        tbody,
-        tr,
-        td,
-        img {
-            display: block;
-        }
-        img {
-            width: 150px;
-            height: 150px;
-        }
-        tr {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        td {
-            margin-right: 5px;
-        }
-    }
-
-    .gallery {
-        & > img {
-            width: 100%;
-            height: auto;
-        }
-        & > br {
-            display: none;
-        }
-    }
-
     // 我的标签
     #taglist_main {
         margin-top: 0;

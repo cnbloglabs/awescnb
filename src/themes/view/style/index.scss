@@ -117,36 +117,13 @@ body {
     }
 }
 
-#GalleryThumbNailViewer1_ThumbNails {
-    display: block;
-    padding: 1rem;
-    & > tbody > tr:not(:nth-child(1)) {
-        margin-top: 8px;
+.custom-gallery {
+    h3 {
+        padding: 1rem;
+        border-bottom: 1px solid var(--title-border-color);
+        background-color: var(--title-bg);
+        font-size: 16px;
     }
-    tbody,
-    tr,
-    td,
-    img {
-        display: block;
-    }
-    img {
-        width: 150px;
-        height: 150px;
-    }
-    tr {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    td {
-        margin-right: 5px;
-    }
-}
-
-.thumbTitle {
-    padding: 1rem;
-    border-bottom: 1px solid var(--title-border-color);
-    background-color: var(--title-bg);
-    font-size: 16px;
 }
 
 // 相册 end

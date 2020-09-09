@@ -366,7 +366,7 @@ body {
 
 // 当前标签页,随笔分类
 #taglist_title,
-.thumbTitle,
+.custom-gallery h3,
 .entrylistTitle,
 .PostListTitle {
     padding: 1rem 1rem;
@@ -453,48 +453,6 @@ body {
         }
     }
 }
-
-// 相册start
-
-// 相册内容容器
-#GalleryThumbNailViewer1_ThumbNails {
-    display: block;
-    padding: 1rem 0;
-    & > tbody > tr:not(:nth-child(1)) {
-        margin-top: 8px;
-    }
-    tbody,
-    tr,
-    td,
-    img {
-        display: block;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 4px;
-    }
-
-    & > tbody > tr {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 1rem;
-    }
-}
-
-.gallery {
-    // & > img {
-    //     // width: 100%;
-    //     // height: auto;
-    // }
-
-    & > br {
-        display: none;
-    }
-}
-
-// 相册end
 
 #cnblogs_post_body {
     &:after {
