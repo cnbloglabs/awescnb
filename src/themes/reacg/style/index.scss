@@ -242,6 +242,9 @@ body {
     #GalleryThumbNailViewer1_ThumbNails {
         display: block;
         padding: 1rem;
+        & > tbody > tr:not(:nth-child(1)) {
+            margin-top: 8px;
+        }
         tbody,
         tr,
         td,

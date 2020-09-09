@@ -460,7 +460,9 @@ body {
 #GalleryThumbNailViewer1_ThumbNails {
     display: block;
     padding: 1rem 0;
-
+    & > tbody > tr:not(:nth-child(1)) {
+        margin-top: 8px;
+    }
     tbody,
     tr,
     td,

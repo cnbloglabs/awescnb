@@ -6,12 +6,12 @@ const { eslint } = require('./options')
 const entry = {
     index: './src/main.js',
     [themeName]: `./src/themes/${themeName}/index.js`,
+    reacg: './src/themes/reacg/index.js',
+    view: './src/themes/view/index.js',
     // acg: './src/themes/acg/index.js',
-    // reacg: './src/themes/reacg/index.js',
+    // simple: './src/themes/simple/index.js',
     // gshang: './src/themes/gshang/index.js',
     // element: './src/themes/element/index.js',
-    // simple: './src/themes/simple/index.js',
-    // view: './src/themes/view/index.js',
 }
 
 const output = {
