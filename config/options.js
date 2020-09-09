@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'view',
-    template: 'photos',
+    themeName: 'geek',
+    template: 'post',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
@@ -20,7 +20,7 @@ module.exports = {
 ///////// themes /////////s
 
 // - geek
-// - reacg
+// - reacggit
 // - simple
 // - view
 // - gshang
