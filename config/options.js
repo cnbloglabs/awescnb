@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'geek',
-    template: 'post',
+    themeName: 'view',
+    template: 'photos',
     eslint: true,
     sourceMap: true,
     openBrowser: true,

@@ -1,7 +1,7 @@
 // 设置图片灯箱
 import { mediaZoomJs } from '@constants/urls'
 import {
-    // isPostDetailsPage,
+    isPostDetailsPage,
     isAlbumPage,
     poll,
     isMd,
@@ -31,12 +31,20 @@ function build() {
     })
 }
 
+function removePhototsOuterLink() {
+    if (!isAlbumPage()) return
+    $('.divPhoto a').removeAttr('href')
+}
+
 function imagebox() {
     if (!options.enable) return
-    if (!isMd() && !isAlbumPage()) return
+    if (!isMd() && !isAlbumPage() && !isPostDetailsPage()) return
     if ($('.custom-zoom').length) return
+    removePhototsOuterLink()
     cacheScript(mediaZoomJs, () => {
-        poll($('.blog_comment_body').length, build)
+        const condition =
+            $('.blog_comment_body').length || $('.divPhoto').length
+        poll(condition, build)
     })
     window.imagebox = build
 }
