@@ -1,10 +1,24 @@
 // comments avatars
 .custom-comment-avatar {
-    align-self: baseline;
+    position: relative;
     img {
         width: 50px;
         height: 50px;
         border-radius: 50%;
+    }
+}
+
+.custom-comments-author {
+    &::after {
+        position: absolute;
+        bottom: 29px;
+        right: 14px;
+        content: '\f058';
+        color: #4ac7ff;
+        background-color: #fff;
+        line-height: 1em;
+        border-radius: 50%;
+        margin-right: 0;
     }
 }
 

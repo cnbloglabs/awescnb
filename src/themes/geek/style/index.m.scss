@@ -64,8 +64,19 @@
         margin-top: 1rem;
     }
 
-    .feedbackManage,
+    .comment_actions {
+        margin: 0 8px;
+    }
+
+    .comment_vote {
+        a:last-child {
+            padding-right: 8px;
+        }
+    }
+
+    // .feedbackManage,
     .comment_vote,
+    .comment_date,
     #poweredby {
         display: none;
     }
@@ -82,6 +93,10 @@
         & > tbody > tr {
             grid-template-columns: repeat(3, 1fr);
         }
+    }
+
+    #post_detail #topics .postDesc {
+        display: none;
     }
 
     // menu

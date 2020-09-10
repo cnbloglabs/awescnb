@@ -535,22 +535,23 @@ body {
 
             #green_channel_weibo,
             #green_channel_wechat {
-                background: none;
+                display: none;
+                // background: none;
 
-                img {
-                    width: 24px;
-                    height: 24px;
-                    margin-left: 0;
-                }
+                // img {
+                //     width: 24px;
+                //     height: 24px;
+                //     margin-left: 0;
+                // }
             }
 
-            #green_channel_weibo {
-                margin-left: 21.6px;
-            }
+            // #green_channel_weibo {
+            //     margin-left: 21.6px;
+            // }
 
-            #green_channel_wechat {
-                margin-right: 21.6px;
-            }
+            // #green_channel_wechat {
+            //     margin-right: 21.6px;
+            // }
         }
 
         #author_profile {
@@ -670,7 +671,6 @@ body {
         border-left: 1px solid var(--form-border-color);
         border-right: 1px solid var(--form-border-color);
         padding: 17.982px 10.8px;
-
         &:nth-last-child(2) {
             border-bottom: 1px solid var(--form-border-color);
         }
@@ -680,9 +680,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
+        position: relative;
         .louzhu {
-            color: #f14668;
+            display: none;
         }
 
         .blog_comment_body {
@@ -783,6 +783,7 @@ body {
     .comment_date {
         margin: 0 5.4px;
         order: 2;
+        font-size: 14px;
     }
 }
 
@@ -790,16 +791,18 @@ body {
     @include center();
     flex-wrap: wrap;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 0;
 
     & > a:last-of-type {
+        margin-left: 8px;
         color: #00a1d6;
         order: 1;
+        font-size: 14px;
     }
 
     .feedbackManage {
         order: 3;
-
+        font-size: 14px;
         .comment_actions {
             border-bottom: 1px solid #3273dc;
         }
@@ -807,13 +810,17 @@ body {
 
     .comment_vote {
         order: 4;
+        font-size: 14px;
+        a {
+            padding-left: 8px;
+        }
     }
 }
 
 .feedbackCon {
     @include center();
     margin-top: 5px;
-
+    align-items: flex-start;
     .blog_comment_body {
         position: relative;
         margin-left: 10px;
@@ -839,7 +846,6 @@ body {
     }
 
     .avatar {
-        // border: 1px solid #eee;
         border-radius: 50%;
         transform: scale(0.8);
     }

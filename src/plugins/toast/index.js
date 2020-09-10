@@ -5,7 +5,7 @@ import './index.scss'
 const notyf = new Notyf({
     position: { x: 'right', y: 'top' },
     icon: false,
-    duration: 3000,
+    duration: 2000,
     types: [
         {
             type: 'info',
@@ -15,13 +15,21 @@ const notyf = new Notyf({
     ],
 })
 
-function toast(message = 'no message', type = 'success') {
-    type !== 'success' && type !== 'error'
-        ? notyf.open({
-              type,
-              message,
-          })
-        : notyf[type](message)
+function toast(message = 'no message', type = 'success', duration = 2000) {
+    if (type !== 'success' && type !== 'error') {
+        const options = {
+            type,
+            message,
+            duration,
+        }
+        notyf.open(options)
+    } else {
+        const options = {
+            message,
+            duration,
+        }
+        notyf[type](options)
+    }
 }
 
 export default toast

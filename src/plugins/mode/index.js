@@ -10,7 +10,7 @@ const { enable, autoDark, autoLight } = window.opts.darkMode
 function changeMode(mode, hasTransition = true) {
     if (mode === 'dark') {
         $('html').attr('theme', 'dark')
-        toast('进入暗色模式', 'info')
+        toast('进入暗色模式', 'info', 1000)
         setBackground('dark')
         localStorage.modeType = 'dark'
         if (hasTransition) {
@@ -21,7 +21,7 @@ function changeMode(mode, hasTransition = true) {
         }, 1200)
     } else {
         $('html').removeAttr('theme')
-        toast('进入亮色模式')
+        toast('进入亮色模式', 'success', 1000)
         setBackground()
         localStorage.modeType = 'light'
         if (hasTransition) {
