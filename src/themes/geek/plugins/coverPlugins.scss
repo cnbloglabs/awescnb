@@ -9,10 +9,10 @@
 }
 
 .custom-comments-author {
-    &::after {
+    .custom-comment-avatar::after {
         position: absolute;
-        bottom: 29px;
-        right: 14px;
+        bottom: 11px;
+        right: 5px;
         content: '\f058';
         color: #4ac7ff;
         background-color: #fff;

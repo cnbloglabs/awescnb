@@ -16,20 +16,16 @@ const notyf = new Notyf({
 })
 
 function toast(message = 'no message', type = 'success', duration = 2000) {
-    if (type !== 'success' && type !== 'error') {
-        const options = {
-            type,
-            message,
-            duration,
-        }
-        notyf.open(options)
-    } else {
-        const options = {
-            message,
-            duration,
-        }
-        notyf[type](options)
-    }
+    type !== 'success' && type !== 'error'
+        ? notyf.open({
+              type,
+              message,
+              duration,
+          })
+        : notyf[type]({
+              message,
+              duration,
+          })
 }
 
 export default toast
