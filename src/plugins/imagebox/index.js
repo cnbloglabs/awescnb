@@ -50,7 +50,7 @@ function buildGallery() {
         gallery.find('div').append(`<img src="${openSrc}"/>`)
     })
     $('.forFlow').append(gallery)
-    // $('.gallery').remove()
+    $('.gallery').remove()
 }
 
 function imagebox() {

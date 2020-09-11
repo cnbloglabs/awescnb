@@ -1,26 +1,30 @@
 import { getBlogname } from '@cnblog'
 import { isVisitor } from '@constants/cnblog'
 import { cnblogHome, index, newPost, send, rss, admin } from '@constants/links'
-
 import './index.scss'
 
+const links = window.opts.links
+
 const buildLeftside = () => {
-    const el = `
+    const el = $(`
     <div id='left-side'>
         <div class='logo'>
             <a href="https://www.cnblogs.com/">CNBLOG</a>
         </div>
+    </div>`)
+    if (links.length) {
+        const favourite = `
         <div class="favourite side-wrapper">
             <h3>FAVOURITE</h3>
             <ul></ul>
         </div>
-    </div>`
-
+        `
+        el.append(favourite)
+    }
     $('#home').append(el)
 }
 
 const buildCustomLinksToLeftSide = () => {
-    const links = window.opts.links
     for (const { name, link } of links) {
         $('#left-side').find('ul').append(`
             <li><a href="${link}" target="_blank">${name}</a></li>
