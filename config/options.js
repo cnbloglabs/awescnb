@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'geek',
-    template: 'post',
+    template: 'photos',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
@@ -17,6 +17,13 @@ module.exports = {
 // cssExtract 单独抽离css
 // openBrowser - 自动打开浏览器
 
+///////// template /////////
+// - index 首页
+// - post 随笔详情页
+// - post1 富文本编辑器随笔详情页
+// - tag 标签页
+// - photos 相册
+
 ///////// themes /////////s
 
 // - geek
@@ -26,13 +33,6 @@ module.exports = {
 // - gshang
 // - element
 // - acg
-
-///////// template /////////
-// - index 首页
-// - post 随笔详情页
-// - post1 富文本编辑器随笔详情页
-// - tag 标签页
-// - photos 相册
 
 ///////// description /////////
 // 你无需直接更改webpack配置文件

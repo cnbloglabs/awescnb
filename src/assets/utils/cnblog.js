@@ -77,7 +77,7 @@ const getCurrentPostUrl = () => {
  * get blog user guid
  */
 const getBlogUserGuid = () => {
-    const strValue = $('body script:last').text()
+    const strValue = $('body>script:last').text()
     const regex = /'([^"]*)'/g
     return regex.exec(strValue)[1]
 }
