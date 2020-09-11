@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'geek',
     template: 'photos',
     eslint: true,
     sourceMap: true,
@@ -23,6 +23,7 @@ module.exports = {
 // - post1 富文本编辑器随笔详情页
 // - tag 标签页
 // - photos 相册
+// - imgview 管理 > 相册 > 打开相册 > 点击预览
 
 ///////// themes /////////s
 

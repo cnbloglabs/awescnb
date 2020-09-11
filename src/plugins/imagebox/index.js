@@ -35,7 +35,7 @@ function build() {
 
 function buildGallery() {
     if (!isAlbumPage()) return
-    const title = $('.thumbTitle')
+    const title = $('.thumbTitle, .galleryTitle')
         .text()
         .trim()
     const el = `
@@ -44,7 +44,7 @@ function buildGallery() {
         <div></div>
     </section>`
     let gallery = $(el)
-    $('.divPhoto img').each(function() {
+    $('.gallery img').each(function() {
         const src = $(this).attr('src')
         const openSrc = src.replace(/t_/, 'o_')
         gallery.find('div').append(`<img src="${openSrc}"/>`)
