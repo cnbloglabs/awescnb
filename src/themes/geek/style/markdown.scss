@@ -60,11 +60,11 @@
         }
     }
     img {
+        margin: 10px auto;
+        display: flex;
         max-width: 100%;
-        margin-top: 10px;
         border-radius: 2px;
     }
-
     table {
         display: block;
         overflow: auto;
