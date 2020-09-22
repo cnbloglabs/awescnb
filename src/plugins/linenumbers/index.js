@@ -1,5 +1,4 @@
-// 设置代码行号
-// 引入即可
+// 构建代码行号
 import { pageName, cacheScript } from '@tools'
 import { linenumbersjs } from '@constants/urls'
 

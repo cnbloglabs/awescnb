@@ -31,6 +31,10 @@ $imagebox: (
     background: var(--dragmenuItem-bg),
 );
 
+$player: (
+    bodyBackground: var(--tags-bg),
+);
+
 @import '@plugins/highlight/index.scss';
 @import '@plugins/copy/index.scss';
 @import '@plugins/linenumbers/index.scss';
@@ -43,4 +47,6 @@ $imagebox: (
 @import '@plugins/postSignature/index.scss';
 @import '@plugins/dragMenu/index.scss';
 @import '@plugins/mode/index.scss';
+@import '@plugins/click/index.scss';
+@import '@plugins/player/index.scss';
 @import './coverPlugins.scss';

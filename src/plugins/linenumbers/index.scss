@@ -47,7 +47,7 @@ $linenumbersColor: map-get($linemubers, color);
         padding: 2px 0;
         border: none;
         text-align: center;
-        color: var(--themeColor, #999999);
+        color: $linenumbersColor;
         user-select: none;
         word-break: normal;
         white-space: pre;
