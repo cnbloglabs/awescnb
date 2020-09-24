@@ -77,7 +77,7 @@ const buildGithub = () => {
 //     $('.custom-links').append(`<a class="zhihu"></a>`)
 // }
 
-const header = () => {
+export default () => {
     headerNickname()
     // buildHeader()
     buildAva()
@@ -87,5 +87,3 @@ const header = () => {
     buildSearchbar()
     buildGithub()
 }
-
-module.exports = header

@@ -21,7 +21,7 @@ import menu from './menu'
 // import lock from '@plugins/lock'
 // import postBottomimage from '@plugins/postBottomimage'
 
-const plugins = () => {
+export default () => {
     footer()
     highlight()
     copy()
@@ -43,5 +43,3 @@ const plugins = () => {
     // lock()
     // click()
 }
-
-module.exports = plugins

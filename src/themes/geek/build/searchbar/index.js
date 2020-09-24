@@ -7,6 +7,7 @@ const buildSearchbar = () => {
         <input id="q" class="custom-searchbar" type="search" placeholder="Search by pressing enter" onkeydown="return zzk_go_enter(event);"/>
     </div>`
     $('#main').prepend(el)
+    $('#sidebar_search').remove()
 }
 
-module.exports = buildSearchbar
+export default buildSearchbar

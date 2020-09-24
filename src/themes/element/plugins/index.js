@@ -15,7 +15,7 @@ import toast from './toast'
 import copy from './copy'
 import fancyImgbox from './fancyImgbox'
 
-function plugins() {
+export default () => {
     themeColor()
     setBodyBackground()
     shootInitial()
@@ -33,5 +33,3 @@ function plugins() {
     emoji()
     toast()
 }
-
-module.exports = plugins

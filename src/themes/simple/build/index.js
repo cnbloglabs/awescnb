@@ -1,8 +1,11 @@
-const build = () => {
-    require('./header')()
-    require('./side')()
-    require('./catalog')()
-    require('./scroll')()
-}
+import header from './header'
+import side from './side'
+import catalog from './catalog'
+import scroll from './scroll'
 
-module.exports = build
+export default () => {
+    header()
+    side()
+    catalog()
+    scroll()
+}

@@ -77,11 +77,9 @@ const addCalendarTitle = () => {
     $('#blog-calendar').prepend(`<div id="blog-calendar-title">博客日历</div>`)
 }
 
-const side = () => {
+export default () => {
     addCalendarTitle()
     setTimeout(() => {
         poll($('#blog-sidecolumn').length, sideItemToggle)
     }, 0)
 }
-
-module.exports = side

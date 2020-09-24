@@ -21,8 +21,6 @@ const build = () => {
     }
 }
 
-const indexCards = () => {
+export default () => {
     build()
 }
-
-module.exports = indexCards

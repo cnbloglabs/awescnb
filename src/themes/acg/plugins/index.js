@@ -40,4 +40,4 @@ function plugins() {
     copy()
 }
 
-module.exports = plugins
+export default plugins

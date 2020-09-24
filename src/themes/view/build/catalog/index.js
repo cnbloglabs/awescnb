@@ -131,7 +131,7 @@ function toggle() {
     })
 }
 
-function catalog() {
+export default () => {
     if (
         enable &&
         hasPostTitle() &&
@@ -146,6 +146,3 @@ function catalog() {
         noCatalog()
     }
 }
-
-// export default catalog
-module.exports = catalog

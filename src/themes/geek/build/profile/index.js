@@ -108,4 +108,4 @@ const profile = () => {
     // buildMeteor()
 }
 
-module.exports = profile
+export default profile

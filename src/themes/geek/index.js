@@ -1,5 +1,7 @@
 import './style/index.scss'
 import AwesCnb from '@awescnb'
+import plugins from './plugins'
+import build from './build'
 
 class Geek extends AwesCnb {
     constructor() {
@@ -8,8 +10,8 @@ class Geek extends AwesCnb {
     }
 
     init() {
-        require('./build')()
-        require('./plugins')()
+        build()
+        plugins()
     }
 }
 

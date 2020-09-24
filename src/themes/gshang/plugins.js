@@ -8,7 +8,7 @@ import titleFavicon from '@plugins/titleFavicon'
 import highlight from '@plugins/highlight'
 import postBottomimage from '@plugins/postBottomimage'
 
-function plugins() {
+export default () => {
     setBodyBackground()
     imagebox()
     setLive2d()
@@ -19,5 +19,3 @@ function plugins() {
     highlight()
     postBottomimage()
 }
-
-module.exports = plugins

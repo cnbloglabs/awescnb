@@ -1,3 +1,10 @@
+import indexCards from './indexCards'
+import rightSide from './rightSide'
+import searchbar from './searchbar'
+import profile from './profile'
+import leftSide from './leftSide'
+import mobileMenu from './mobileMenu'
+
 /**
  * Remove clear elements.
  */
@@ -28,15 +35,14 @@ const moveFooterToMain = () => {
 // }
 
 const build = () => {
-    require('./indexCards')()
-    require('./rightSide')()
-    require('./searchbar')()
-    require('./profile')()
-    require('./leftSide')()
-    require('./mobileMenu')()
     removeClearel()
     moveFooterToMain()
-    // hideVisitorEls()
+    indexCards()
+    rightSide()
+    searchbar()
+    profile()
+    leftSide()
+    mobileMenu()
 }
 
-module.exports = build
+export default build

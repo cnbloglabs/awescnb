@@ -121,4 +121,4 @@ const leftSide = () => {
     buildLeftsideBottomBtns()
 }
 
-module.exports = leftSide
+export default leftSide

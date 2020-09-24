@@ -78,10 +78,10 @@
         border-radius: 4px;
         padding: 5px 10px;
         margin-left: auto;
-        box-shadow: 0 0 5px #1b86f9;
+        box-shadow: 0 0 3px #1b86f9;
         cursor: pointer;
         &:hover {
-            box-shadow: 0 0 20px #1b86f9;
+            box-shadow: 0 0 5px #1b86f9;
             transition: all 0.2s;
         }
     }

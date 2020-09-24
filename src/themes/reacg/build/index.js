@@ -7,7 +7,7 @@ import indexList from './indexList'
 import setIcons from './icons'
 import comments from './comments'
 
-function build() {
+export default () => {
     mobileMenu()
     // mode()
     avatar()
@@ -17,5 +17,3 @@ function build() {
     setIcons()
     comments()
 }
-
-module.exports = build

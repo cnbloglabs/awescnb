@@ -26,7 +26,7 @@ import { shootInitial } from '@plugins/barrage'
 import notice from '@plugins/notice'
 import mode from '@plugins/mode'
 
-function plugins() {
+export default () => {
     dragMenu()
     footer()
     themeColor()
@@ -54,5 +54,3 @@ function plugins() {
     notice()
     mode()
 }
-
-module.exports = plugins

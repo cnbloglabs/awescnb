@@ -67,7 +67,7 @@ const defaultOptions = {
     },
     // 点击特效
     click: {
-        enable: true,
+        enable: false,
         auto: false,
         colors: [],
         size: 30,

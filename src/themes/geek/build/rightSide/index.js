@@ -70,4 +70,4 @@ const side = () => {
     buildCalendar()
 }
 
-module.exports = side
+export default side

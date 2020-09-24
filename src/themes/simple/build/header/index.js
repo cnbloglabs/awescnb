@@ -92,7 +92,7 @@ const preventHeaderChange = () => {
     $('#header').addClass('navlist-fix')
 }
 
-const header = () => {
+export default () => {
     headerNickname()
     buildHeader()
     buildAva()
@@ -101,5 +101,3 @@ const header = () => {
     headerInnerPostTitle()
     preventHeaderChange()
 }
-
-module.exports = header

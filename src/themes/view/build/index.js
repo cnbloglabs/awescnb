@@ -1,9 +1,9 @@
-const build = () => {
-    require('./indexCards')()
-    require('./header')()
-    require('./side')()
-    require('./catalog')()
-    // require('./scroll')()
-}
+import indexCards from './indexCards'
+import header from './header'
+import catalog from './catalog'
 
-module.exports = build
+export default () => {
+    header()
+    indexCards()
+    catalog()
+}

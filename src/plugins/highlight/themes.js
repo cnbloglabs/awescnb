@@ -25,7 +25,7 @@ const themes = {
 
     github: `--hl-base: #f6f8fa;
     --hl-mono-1: #333333;
-    --hl-mono-3: #d73a49;
+    --hl-mono-3: #6a737d;
     --hl-hue-1: #0086b3;
     --hl-hue-2: #0086b3;
     --hl-hue-3: #d73a49;

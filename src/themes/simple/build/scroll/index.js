@@ -46,8 +46,6 @@ function scrollOnce() {
     })
 }
 
-function scroll() {
+export default () => {
     scrollOnce()
 }
-
-module.exports = scroll

@@ -6,7 +6,7 @@
             "@babel/plugin-transform-runtime",
             {
                 "corejs": false,
-                "useESModules": false,
+                "useESModules": true,
                 "absoluteRuntime": false,
                 "helpers": true,
                 "regenerator": true,

@@ -54,8 +54,6 @@ const options = {
     ],
 }
 
-const menu = () => {
+export default () => {
     dragMenu(options)
 }
-
-export default menu

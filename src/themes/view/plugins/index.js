@@ -16,7 +16,7 @@ import notice from '@plugins/notice'
 import background from '@plugins/background'
 import mode from '@plugins/mode'
 
-const plugins = () => {
+export default () => {
     commentsAvatars()
     footer()
     highlight()
@@ -34,5 +34,3 @@ const plugins = () => {
     background()
     mode()
 }
-
-module.exports = plugins

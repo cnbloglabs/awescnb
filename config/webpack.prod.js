@@ -1,11 +1,35 @@
 const path = require('path')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
+const TerserPlugin = require('terser-webpack-plugin')
 const { openAnalyzer, cssExtract } = require('./options')
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const plugins = [
-    // new CleanWebpackPlugin()
-]
+
+let plugins = []
+
+let optimization = {
+    usedExports: true,
+    minimize: true,
+    minimizer: [
+        new TerserPlugin({
+            test: /\.js(\?.*)?$/i,
+            parallel: true,
+            terserOptions: {
+                ecma: undefined,
+                parse: {},
+                compress: {},
+                mangle: true,
+                module: false,
+                output: null,
+                toplevel: false,
+                nameCache: null,
+                ie8: false,
+                keep_classnames: undefined,
+                keep_fnames: false,
+                safari10: false,
+            },
+        }),
+    ],
+}
 
 let output = {
     filename: '[name].js',
@@ -89,7 +113,8 @@ const rules = [
 module.exports = merge(baseWebpackConfig, {
     mode: 'production',
     output,
-    plugins,
     externals: { jquery: 'window.jquery' },
     module: { rules },
+    plugins,
+    optimization,
 })

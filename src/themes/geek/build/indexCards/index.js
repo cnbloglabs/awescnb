@@ -71,4 +71,4 @@ const indexCards = () => {
     build()
 }
 
-module.exports = indexCards
+export default indexCards

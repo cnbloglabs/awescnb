@@ -1,5 +1,4 @@
 const path = require('path')
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const { themeName } = require('./options')
 const { eslint } = require('./options')
 
@@ -31,14 +30,24 @@ const alias = {
     '@store': path.resolve('src/store'),
 }
 
-const plugins = [new HardSourceWebpackPlugin()]
+const plugins = []
 
 const jsLoader = [
-    // 'cache-loader',
     {
         loader: 'babel-loader',
         options: {
-            presets: ['@babel/preset-env'],
+            presets: [
+                [
+                    '@babel/preset-env',
+                    {
+                        modules: false,
+                        loose: true,
+                        targets: {
+                            esmodules: true,
+                        },
+                    },
+                ],
+            ],
         },
     },
 ]
@@ -57,6 +66,7 @@ const rules = [
         test: /\.js$/,
         exclude: /node_modules/,
         use: jsLoader,
+        sideEffects: true,
     },
     {
         test: /\.(gif|png|jpg|woff|woff2|svg|ttf|eot)$/i,
@@ -67,7 +77,7 @@ const rules = [
 module.exports = {
     entry,
     output,
+    plugins,
     module: { rules },
     resolve: { alias },
-    plugins,
 }

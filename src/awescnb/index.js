@@ -1,11 +1,12 @@
 import env from '@/constants/env'
 import defaultOptions from '@/constants/default'
+import build from './build'
 
 class AwesCnb {
     init(building) {
         if (env === 'dev' || $.awesCnb) {
             building()
-            require('./build/index')()
+            build()
         }
         if (!$.awesCnb) {
             $.extend({
@@ -13,7 +14,7 @@ class AwesCnb {
                     if (options) $.extend(true, defaultOptions, options)
                     window.opts = defaultOptions
                     building()
-                    require('./build/index')()
+                    build()
                 },
             })
         }

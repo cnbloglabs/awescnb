@@ -43,4 +43,4 @@ function mobileMenu() {
     buildHeaderTrigger()
 }
 
-module.exports = mobileMenu
+export default mobileMenu

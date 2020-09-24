@@ -1,9 +1,7 @@
 import avator from './avator'
 import init from './init'
 
-function build() {
+export default () => {
     avator()
     init()
 }
-
-module.exports = build

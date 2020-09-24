@@ -38,7 +38,9 @@
         margin-bottom: 22px;
     }
     hr {
-        border-color: var(--md-hr-color);
+        margin: 24px 0;
+        border: none;
+        border-bottom: 1px solid var(--md-hr-color);
     }
     ol {
         margin: 10px 0;

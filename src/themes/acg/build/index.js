@@ -18,4 +18,3 @@ function build() {
 }
 
 export default build
-module.exports = build
