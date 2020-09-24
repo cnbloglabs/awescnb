@@ -1,4 +1,16 @@
 /**
+ * 合并对象
+ * @param {Object} 原对象
+ * @param {Object} 新对象
+ * @return {Object} 合并后的配置
+ */
+function mergeOptions(def = {}, dev = {}, user = {}) {
+    const defaultOptions = Object.assign({}, def, dev)
+    const options = Object.assign({}, defaultOptions, user)
+    return options
+}
+
+/**
  * 监听鼠标滚轮
  * @param {Function} upCallback 向上滚动回调
  * @param {Function} downCallback 向下滚动回调
@@ -482,4 +494,5 @@ export {
     isTagListPage,
     isEntrylistPage,
     isAlbumPage,
+    mergeOptions,
 }
