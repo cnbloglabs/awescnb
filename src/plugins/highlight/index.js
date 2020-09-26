@@ -3,16 +3,11 @@ import { highlightConfig } from '@config/plugins'
 import { pageName, isMd } from '@tools'
 import themes from './themes.js'
 
-function buildMarkdownLinenumber(light, dark, type) {
-    let style
-    if (type.length && !dark.length && !light.length) {
-        style = `<style>:root{${themes[type]}}</style>`
-    } else {
-        style = `<style>
+function buildMarkdownLinenumber(light, dark) {
+    const style = `<style>
         :root{${themes[light]}}
         :root[theme="dark"]{${themes[dark]}}
         </style>`
-    }
     $('head').append(style)
 }
 
@@ -33,9 +28,7 @@ function otherEditorLinenumberPadding() {
 export default devOptions => {
     if (pageName() !== 'post') return
     if ($('pre').length === 0) return
-    const { light, dark, type } = highlightConfig(
-        devOptions,
-    )
-    buildMarkdownLinenumber(light, dark, type)
+    const { light, dark } = highlightConfig(devOptions)
+    buildMarkdownLinenumber(light, dark)
     otherEditorLinenumberPadding()
 }

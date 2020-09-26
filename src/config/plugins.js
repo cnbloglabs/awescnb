@@ -124,13 +124,12 @@ export const emojiConfig = devOptions => {
 
 export const highlightConfig = devOptions => {
     const defaultOptions = {
-        type: '',
         dark: 'atomOneDark',
         light: 'atomOneLight',
     }
     return mergeOptions(
         defaultOptions,
-        window.opts.highlight,
+        window.opts.highLight,
         devOptions,
     )
 }
