@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'gshang',
     template: 'post',
     eslint: true,
     sourceMap: true,

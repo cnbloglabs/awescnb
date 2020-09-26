@@ -1,7 +1,7 @@
 @import url(https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css)
     screen and (min-width: 0px);
-@import url(https://at.alicdn.com/t/font_438759_kmvtb0te1nd.css) screen and
-    (min-width: 0px);
+@import url(https://at.alicdn.com/t/font_438759_kmvtb0te1nd.css)
+    screen and (min-width: 0px);
 @import './scroll.scss';
 @import './plugins.scss';
 /* 新增 */
@@ -461,7 +461,11 @@ display:block;
 
 /* 璇楀彞 */
 .poem {
-    background: linear-gradient(to right, #90caf9, #047edf 99%);
+    background: linear-gradient(
+        to right,
+        #90caf9,
+        #047edf 99%
+    );
     border-radius: 4px;
     color: #fff;
     padding: 40px 20px;
@@ -2253,8 +2257,9 @@ legend {
     padding: 5px 20px;
     /*font-size: 12px;*/
     border-radius: 5px;
-    transition: color 0.2s linear, background-color 0.2s linear,
-        border 0.2s linear, box-shadow 0.2s linear;
+    transition: color 0.2s linear,
+        background-color 0.2s linear, border 0.2s linear,
+        box-shadow 0.2s linear;
 }
 
 #btn_comment_submit:hover {
@@ -2541,8 +2546,8 @@ legend {
     padding-right: 1em;
     border: none !important;
     border-radius: 3px !important;
-    font-family: Lucida Console, Consolas, Monaco, Andale Mono, Ubuntu Mono,
-        monospace !important;
+    font-family: Lucida Console, Consolas, Monaco,
+        Andale Mono, Ubuntu Mono, monospace !important;
 }
 
 .cnblogs_code div {
@@ -2612,7 +2617,8 @@ kbd {
     background: #fff;
     border: 1px solid #adb3b9;
     border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset;
+    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2),
+        0 0 0 2px #fff inset;
     white-space: nowrap;
     vertical-align: middle;
 }
@@ -3195,4 +3201,8 @@ code .matlab-comment span {
             display: none;
         }
     }
+}
+
+#cnblogs_post_body code {
+    padding: 0.2em 0.3em !important;
 }

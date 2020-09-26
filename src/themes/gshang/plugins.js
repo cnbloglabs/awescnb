@@ -7,6 +7,11 @@ import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
 import highlight from '@plugins/highlight'
 import postBottomimage from '@plugins/postBottomimage'
+import copy from '@plugins/copy'
+
+const linenumbersConfig = {
+    enable: false,
+}
 
 module.exports = () => {
     setBodyBackground()
@@ -14,8 +19,9 @@ module.exports = () => {
     setLive2d()
     setMusicPlayer()
     setClickEffects()
-    linenumbers()
+    linenumbers(linenumbersConfig)
     titleFavicon()
     highlight()
     postBottomimage()
+    copy()
 }
