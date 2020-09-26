@@ -2,13 +2,12 @@ import userMessage from '../constants/userMessage'
 import headerElements from '../constants/headerElements'
 import { mouseoverOrmouseout } from '../tools'
 import { pageName, userAgent } from '@tools'
+import { getThemeOptions } from '@config/extra'
 
 function user() {
     const el = ` 
                         <li id='user-msg'>
-                            <a>${
-        userMessage.nickName
-    }</a>
+                            <a>${userMessage.nickName}</a>
                             <ul>
                                 <li>园龄：${$(
                                     '#profile_block a:nth-child(3)',
@@ -31,16 +30,21 @@ function sidebar() {
 
 // 设置头部背景图
 function background() {
-    const option = window.opts.theme.headerBackground
-    if (option === '') return
-    $('#blogTitle').css('background-image', `url(${option})`)
+    const { headerBackground } = getThemeOptions()
+    if (headerBackground === '') return
+    $('#blogTitle').css(
+        'background-image',
+        `url(${headerBackground})`,
+    )
 }
 
 // post title
 function title() {
     if (pageName() !== 'post') return
     // 随笔题目
-    $('#blogTitle').html(`<h1>${$('#cb_post_title_url').text()}</h1>`)
+    $('#blogTitle').html(
+        `<h1>${$('#cb_post_title_url').text()}</h1>`,
+    )
 }
 
 // hover

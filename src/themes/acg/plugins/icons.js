@@ -1,13 +1,16 @@
 import { iconInSvg } from '../tools'
 import urls from '../constants/urls'
 import icons from '../constants/icons'
+import { getGithubOptions } from '@config/extra'
 
-const options = window.opts.github
+const options = getGithubOptions()
 
 // 设置github
 function github() {
     if (!options.enable) return
-    const $githubIcon = `<a id="custom-github" href=${options.url}>${iconInSvg(icons.github)}</a>`
+    const $githubIcon = `<a id="custom-github" href=${
+        options.url
+    }>${iconInSvg(icons.github)}</a>`
     $('#navigator').prepend($githubIcon)
     $('#navigator .icon').css('color', `${options.color}`)
 }

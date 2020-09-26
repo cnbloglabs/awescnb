@@ -29,7 +29,9 @@ module.exports = () => {
     setIcons()
     setBodyBackground()
     imagebox()
-    setLive2d()
+    setLive2d({
+        position: 'right',
+    })
     setMusicPlayer()
     setClickEffects()
     linenumbers()

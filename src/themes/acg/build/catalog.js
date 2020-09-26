@@ -1,6 +1,8 @@
 import { userAgent, pageName, getClientRect } from '@tools'
 import { getRandomFoodicons, iconInSvg } from '../tools'
-const options = window.opts.catalog
+import { catalogConfig } from '@config/plugins'
+
+const options = catalogConfig()
 
 // 设置随笔目录
 function build() {
@@ -10,20 +12,31 @@ function build() {
     const titleReg = /^h[1-3]$/
     $catalogContainer
         .attr('id', 'catalog')
-        .append($(`<div id='catalog-title'><h3>目录</h3></div>`))
+        .append(
+            $(
+                `<div id='catalog-title'><h3>目录</h3></div>`,
+            ),
+        )
     $parentEle.children().each(function() {
         if (titleReg.test(this.tagName.toLowerCase())) {
-            $(this).append("<a href='#catalog' class='title_back'></a>")
+            $(this).append(
+                "<a href='#catalog' class='title_back'></a>",
+            )
             let aEle = $('<a></a>')
             let hEle = $('<li></li>')
-            aEle.attr('href', '#' + this.id).text(this.childNodes[0].nodeValue)
-            hEle.attr('class', this.nodeName.toLowerCase() + '-list').append(
-                aEle,
+            aEle.attr('href', '#' + this.id).text(
+                this.childNodes[0].nodeValue,
             )
+            hEle.attr(
+                'class',
+                this.nodeName.toLowerCase() + '-list',
+            ).append(aEle)
             $ulContainer.append(hEle)
         }
     })
-    $($catalogContainer.append($ulContainer)).appendTo('body')
+    $($catalogContainer.append($ulContainer)).appendTo(
+        'body',
+    )
     // 给h1标题添加icon
     $('#cnblogs_post_body:first>h1').each(function() {
         const icon = getRandomFoodicons()
@@ -56,7 +69,11 @@ function active() {
                 }
             })
         } else {
-            for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
+            for (
+                let i = $('#catalog ul li').length - 1;
+                i >= 0;
+                i--
+            ) {
                 const titleId = $($('#catalog ul li')[i])
                     .find('a')
                     .attr('href')
@@ -65,7 +82,9 @@ function active() {
                     `#cnblogs_post_body [id='${titleId}']`,
                 )
                 if (getClientRect(postTitle).bottom <= 50) {
-                    $($('#catalog ul li')[i]).addClass('catalog-active')
+                    $($('#catalog ul li')[i]).addClass(
+                        'catalog-active',
+                    )
                     $($('#catalog ul li')[i])
                         .siblings()
                         .removeClass('catalog-active')

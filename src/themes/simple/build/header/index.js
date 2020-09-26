@@ -1,10 +1,16 @@
 import './index.scss'
 import { pageName, userAgent } from '@tools'
+import {
+    getGithubOptions,
+    getGiteeOptions,
+    getThemeOptions,
+} from '@config/extra'
+
+const github = getGithubOptions()
+const gitee = getGiteeOptions()
 
 // header右侧按钮容器
 const buildHeader = () => {
-    const github = window.opts.github
-
     $('#navList').after(`<div class="navbar-end"></div>`)
     $('#blog_nav_newpost').appendTo('.navbar-end')
 
@@ -16,12 +22,14 @@ const buildHeader = () => {
 
 // 构建header昵称
 const headerNickname = () => {
-    $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
+    $('#Header1_HeaderTitle').text(
+        $('#profile_block a:first').text(),
+    )
 }
 
 // header头像
 const buildAva = () => {
-    const { avatar } = window.opts.theme
+    const { avatar } = getThemeOptions()
     $('#blogLogo').attr('src', `${avatar}`)
 }
 
@@ -35,16 +43,23 @@ const headerInnerPostTitle = () => {
     const titleLength = title.length
 
     let offset = ''
-    if (0 <= titleLength && titleLength < 10) offset = '-180%'
-    if (10 <= titleLength && titleLength < 15) offset = '-140%'
-    if (15 <= titleLength && titleLength < 20) offset = '-100%'
-    if (20 <= titleLength && titleLength < 25) offset = '-65%'
-    if (25 <= titleLength && titleLength < 28) offset = '-60%'
+    if (0 <= titleLength && titleLength < 10)
+        offset = '-180%'
+    if (10 <= titleLength && titleLength < 15)
+        offset = '-140%'
+    if (15 <= titleLength && titleLength < 20)
+        offset = '-100%'
+    if (20 <= titleLength && titleLength < 25)
+        offset = '-65%'
+    if (25 <= titleLength && titleLength < 28)
+        offset = '-60%'
     if (titleLength >= 28) {
         title = title.substring(0, 28) + '...'
         offset = '-60%'
     }
-    $('#navList').append(`<span class='header-posttitle'>${title}</span>`)
+    $('#navList').append(
+        `<span class='header-posttitle'>${title}</span>`,
+    )
     $('head').append(
         `<style>
                .header-posttitle {transform: translate3d(${offset}, 300%, 0);}
@@ -69,18 +84,24 @@ const headerBtn = () => {
 
 // 创建自定义图标容器及其图标
 const customLinks = () => {
-    const github = window.opts.github
-    const gitee = window.opts.gitee
     // wrap
-    $('.navbar-end').prepend(`<div class="custom-links"></div>`)
-    $('#blogTitle h2').after(`<div class="custom-links"></div>`)
+    $('.navbar-end').prepend(
+        `<div class="custom-links"></div>`,
+    )
+    $('#blogTitle h2').after(
+        `<div class="custom-links"></div>`,
+    )
     // 码云
     if (gitee.enable) {
-        $('.custom-links').append(`<a class="gitee" href="${gitee.url}"></a>`)
+        $('.custom-links').append(
+            `<a class="gitee" href="${gitee.url}"></a>`,
+        )
     }
     // github icon
     if (github.enable) {
-        $('.custom-links').append(`<a class="github" href="${github.url}"></a>`)
+        $('.custom-links').append(
+            `<a class="github" href="${github.url}"></a>`,
+        )
     }
     // 知乎
     // $('.custom-links').append(`<a class="zhihu"></a>`)

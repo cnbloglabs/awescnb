@@ -1,4 +1,3 @@
-import { shootInitial } from '@plugins/barrage'
 import setBodyBackground from '@plugins/background'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
@@ -18,7 +17,6 @@ import fancyImgbox from './fancyImgbox'
 module.exports = () => {
     themeColor()
     setBodyBackground()
-    shootInitial()
     setLive2d()
     setMusicPlayer()
     setTopProgress()

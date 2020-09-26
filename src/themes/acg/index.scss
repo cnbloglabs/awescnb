@@ -122,7 +122,8 @@ header {
     color: #fff;
     font-size: 28.7982px;
     text-align: center;
-    text-shadow: 0 0 2px var(--themeColor), 0 0 2px var(--themeColor);
+    text-shadow: 0 0 2px var(--themeColor),
+        0 0 2px var(--themeColor);
 }
 
 #navigator {
@@ -840,8 +841,16 @@ body footer {
 }
 
 /* markdown */
+
+#cnblogs_post_body {
+    overflow: hidden;
+}
 #cnblogs_post_body ol {
     padding-left: 30px;
+}
+
+#cnblogs_post_body img {
+    max-width: 100%;
 }
 
 #cnblogs_post_body img,
@@ -995,42 +1004,6 @@ mark {
     color: #fff;
     background-color: #333;
     border-radius: 2.16px;
-}
-
-#cnblogs_post_body pre {
-    position: relative;
-    padding-top: 10px;
-    background: var(--hl-base);
-    border-radius: 4px;
-}
-
-pre:hover {
-    box-shadow: 1px 1px 10px blue;
-}
-
-pre::before {
-    border-radius: 4px;
-    content: ' ';
-    display: block;
-    height: 24px;
-    background: url(https://guangzan.gitee.io/awescnb-files/images/background/mac.png)
-        no-repeat;
-    background-size: 65px 23px;
-    background-position-x: 10px;
-}
-
-pre:after {
-    color: #ccc;
-    content: attr(data-lang);
-    font-size: 32.4px;
-    font-weight: 600;
-    height: 15px;
-    line-height: 15px;
-    padding: 5px 10px 0;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    top: 0;
 }
 
 /* 随笔签名 */
@@ -1203,7 +1176,9 @@ pre:after {
         display: none;
     }
 
-    #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
+    #blog-comments-placeholder
+        .feedbackListSubtitle
+        > a:last-of-type {
         /* width: 118.8px; */
         white-space: nowrap;
         overflow: hidden;
@@ -1248,7 +1223,9 @@ pre:after {
 
     /* 随笔页 */
     #post-wrap {
-        width: 92%;
+        display: none;
+        width: 70%;
+        margin: 80px auto 0;
     }
 
     /* 返回顶部按钮 */

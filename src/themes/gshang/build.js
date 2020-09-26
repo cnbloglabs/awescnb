@@ -1,14 +1,17 @@
-const opts = window.opts
+import { getThemeOptions } from '@config/extra'
+
+const {
+    avatar,
+    headerBackground,
+    color,
+} = getThemeOptions()
+
 const icons = {
     back2top: '#ac-back2top', //返回顶部
 }
 
 // 返回顶部
 function setBack2Top() {
-    const option = opts.back2top
-    if (!option.enable) {
-        return
-    }
     const svg = iconInSvg(icons.back2top)
     let elements = $(`<div id="back2Top">${svg}</div>`)
         .appendTo('body')
@@ -25,10 +28,7 @@ function setBack2Top() {
 
 // 设置头像
 function setAvatar() {
-    const avatar = opts.theme.avatar
-    if (avatar === '') {
-        return false
-    }
+    if (avatar === '') return
     $('#blogLogo').css({
         'background-image': `url(${avatar})`,
     })
@@ -36,10 +36,7 @@ function setAvatar() {
 
 // 设置头部背景图
 function setHeaderBackground() {
-    const headerBackground = opts.theme.headerBackground
-    if (headerBackground === '') {
-        return false
-    }
+    if (headerBackground === '') return
     $('#blogTitle').css({
         'background-image': `url(${headerBackground})`,
     })
@@ -47,12 +44,11 @@ function setHeaderBackground() {
 
 // 设置主题色
 function setThemeColor() {
-    const option = opts.theme.color
     let themeColor = ''
-    if (option === 'random') {
+    if (color === 'random') {
         themeColor = getRandomRgba()
     } else {
-        themeColor = option
+        themeColor = color
     }
     $('head').append(
         `<style>:root{--ThemeColor: ${themeColor}}<style>`,

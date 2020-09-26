@@ -3,6 +3,7 @@
 // catalog.enable & catalog.position
 
 import './index.scss'
+import { catalogConfig } from '@config/plugins'
 import {
     pageName,
     userAgent,
@@ -11,7 +12,7 @@ import {
     throttle,
 } from '@tools'
 
-const { enable } = window.opts.catalog
+const { enable } = catalogConfig()
 
 // 构建目录
 function build() {
@@ -26,7 +27,9 @@ function build() {
     $('#cnblogs_post_body')
         .children()
         .each(function() {
-            if (titleRegExp.test(this.tagName.toLowerCase())) {
+            if (
+                titleRegExp.test(this.tagName.toLowerCase())
+            ) {
                 if ($(this).text().length === 0) return // 如果标题为空 只有 #
                 let id
                 let text
@@ -40,11 +43,17 @@ function build() {
                     text = $(this).text()
                 } else {
                     if (this.childNodes.length === 2) {
-                        const value = this.childNodes[1].nodeValue
-                        text = value ? value : $(this.childNodes[1]).text()
+                        const value = this.childNodes[1]
+                            .nodeValue
+                        text = value
+                            ? value
+                            : $(this.childNodes[1]).text()
                     } else {
-                        const value = this.childNodes[0].nodeValue
-                        text = value ? value : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
+                        const value = this.childNodes[0]
+                            .nodeValue
+                        text = value
+                            ? value
+                            : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
                     }
                     id = text.trim()
                     $(this).attr('id', id)
@@ -60,7 +69,9 @@ function build() {
             }
         })
 
-    const $catalog = $($catalogContainer.append($ulContainer))
+    const $catalog = $(
+        $catalogContainer.append($ulContainer),
+    )
     $('#sidebar_news').after($catalog)
 }
 
@@ -76,20 +87,32 @@ function setActiveCatalogTitle() {
     $(window).scroll(
         throttle(
             function() {
-                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
-                    const titleId = $($('#catalog ul li')[i])
+                for (
+                    let i = $('#catalog ul li').length - 1;
+                    i >= 0;
+                    i--
+                ) {
+                    const titleId = $(
+                        $('#catalog ul li')[i],
+                    )
                         .find('a')
                         .attr('href')
                         .replace(/[#]/g, '')
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (getClientRect(postTitle).top <= 10) {
+                    if (
+                        getClientRect(postTitle).top <= 10
+                    ) {
                         if (
-                            $($('#catalog ul li')[i]).hasClass('catalog-active')
+                            $(
+                                $('#catalog ul li')[i],
+                            ).hasClass('catalog-active')
                         )
                             return
-                        $($('#catalog ul li')[i]).addClass('catalog-active')
+                        $($('#catalog ul li')[i]).addClass(
+                            'catalog-active',
+                        )
                         $($('#catalog ul li')[i])
                             .siblings()
                             .removeClass('catalog-active')
@@ -109,7 +132,11 @@ function setCatalogToggle() {
     $(window).scroll(
         throttle(
             function() {
-                if ($('#catalog ul').css('display') === 'none') return
+                if (
+                    $('#catalog ul').css('display') ===
+                    'none'
+                )
+                    return
                 const bottom = getClientRect(
                     document.querySelector('#sideBarMain'),
                 ).bottom
@@ -123,7 +150,9 @@ function setCatalogToggle() {
                     //     t = p
                     // }, 0)
                 } else {
-                    $('#catalog').removeClass('catalog-sticky')
+                    $('#catalog').removeClass(
+                        'catalog-sticky',
+                    )
                 }
             },
             50,
@@ -134,11 +163,19 @@ function setCatalogToggle() {
 
 function toggle() {
     $('.catalog-title').click(function() {
-        $('#catalog ul').toggle('fast', 'linear', function() {
-            $(this).css('display') === 'none'
-                ? $('.catalog-title').removeClass('is-active')
-                : $('.catalog-title').addClass('is-active')
-        })
+        $('#catalog ul').toggle(
+            'fast',
+            'linear',
+            function() {
+                $(this).css('display') === 'none'
+                    ? $('.catalog-title').removeClass(
+                          'is-active',
+                      )
+                    : $('.catalog-title').addClass(
+                          'is-active',
+                      )
+            },
+        )
     })
 }
 
