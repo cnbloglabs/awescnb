@@ -1,5 +1,5 @@
 // 代码高亮
-import { highlightConfig } from '@config/plugins.js'
+import { highlightConfig } from '@config/plugins'
 import { pageName, isMd } from '@tools'
 import themes from './themes.js'
 
