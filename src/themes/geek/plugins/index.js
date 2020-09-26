@@ -55,12 +55,9 @@ module.exports = () => {
     linenumbers()
     postMessage()
     commentsAvatars()
-    signature(
-        {
-            selector: '.profile-signature',
-        },
-        signatureOptions,
-    )
+    signature(signatureOptions, {
+        selector: '.profile-signature',
+    })
     emoji()
     imagebox()
     postSignature()

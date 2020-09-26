@@ -15,19 +15,15 @@ function typed(contents) {
     })
 }
 
-export default (pluginOptions = {}, devOptions) => {
+export default (devOptions, pluginOptions) => {
     const { enable, contents } = signatureConfig(devOptions)
     if (!enable) return
-    if (pluginOptions) {
-        $.extend(
-            true,
-            {
-                selector: '#sidebar_news',
-            },
-            pluginOptions,
-        )
+    const pluginConfig = {
+        selector: '#sidebar_news',
     }
-
-    build(pluginOptions)
+    if (pluginOptions) {
+        Object.assign({}, pluginConfig, pluginOptions)
+    }
+    build(pluginConfig)
     typed(contents)
 }

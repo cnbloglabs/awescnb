@@ -314,8 +314,8 @@ export const qrcodeConfig = devOptions => {
 
 export const signatureConfig = devOptions => {
     const defaultOptions = {
-        enable: false,
-        contents: [],
+        enable: true,
+        contents: ['123'],
     }
     return mergeOptions(
         defaultOptions,
