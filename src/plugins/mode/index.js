@@ -1,6 +1,5 @@
 import toast from '@plugins/toast'
-
-const { enable, autoDark, autoLight } = window.opts.darkMode
+import { darkModeConfig } from '@config/plugins'
 
 /**
  * 在暗色主题和亮色主题之间切换
@@ -11,7 +10,7 @@ function changeMode(mode, hasTransition = true) {
     if (mode === 'dark') {
         $('html').attr('theme', 'dark')
         toast('进入暗色模式', 'info', 1000)
-        setBackground('dark')
+        // setBackground('dark')
         localStorage.modeType = 'dark'
         if (hasTransition) {
             $('body').addClass('light-to-dark')
@@ -22,7 +21,7 @@ function changeMode(mode, hasTransition = true) {
     } else {
         $('html').removeAttr('theme')
         toast('进入亮色模式', 'success', 1000)
-        setBackground()
+        // setBackground('light')
         localStorage.modeType = 'light'
         if (hasTransition) {
             $('body').addClass('dark-to-light')
@@ -37,27 +36,31 @@ function changeMode(mode, hasTransition = true) {
  * 覆盖自定义背景色
  * @param {String} mode
  */
-function setBackground(mode = 'light') {
-    const { enable, value, type } = window.opts.bodyBackground
-    if (!enable) return
+// function setBackground(mode) {
+//     const {
+//         enable,
+//         value,
+//         type,
+//     } = window.opts.bodyBackground
+//     if (!enable) return
 
-    if (mode === 'dark') {
-        if (type !== 'color') return
-        setTimeout(() => {
-            $('body').css('background-color', '#333')
-        }, 0)
-    }
+//     if (mode === 'dark') {
+//         if (type !== 'color') return
+//         setTimeout(() => {
+//             $('body').css('background-color', '#333')
+//         }, 0)
+//     }
 
-    if (mode === 'light') {
-        if (type !== 'color') return
-        $('body').css('background-color', `${value}`) // bodybgc设置
-    }
-}
+//     if (mode === 'light') {
+//         if (type !== 'color') return
+//         $('body').css('background-color', `${value}`) // bodybgc设置
+//     }
+// }
 
 /**
  * 初始化
  */
-function init() {
+function init(autoDark, autoLight) {
     const hour = new Date().getHours()
     const isNight = hour > 19 || hour <= 5
     const storage = localStorage.modeType
@@ -69,9 +72,13 @@ function init() {
     }
 
     if (isNight) {
-        autoDark ? changeMode('dark', false) : followStorage()
+        autoDark
+            ? changeMode('dark', false)
+            : followStorage()
     } else {
-        autoLight ? changeMode('light', false) : followStorage()
+        autoLight
+            ? changeMode('light', false)
+            : followStorage()
     }
 }
 
@@ -82,10 +89,11 @@ function click() {
     })
 }
 
-function mode() {
+export default devOptions => {
+    const { enable, autoDark, autoLight } = darkModeConfig(
+        devOptions,
+    )
     if (!enable) return
-    init()
+    init(autoDark, autoLight)
     click()
 }
-
-export default mode

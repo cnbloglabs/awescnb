@@ -15,7 +15,7 @@ import toast from './toast'
 import copy from './copy'
 import fancyImgbox from './fancyImgbox'
 
-export default () => {
+module.exports = () => {
     themeColor()
     setBodyBackground()
     shootInitial()

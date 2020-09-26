@@ -7,7 +7,7 @@ import postPage from './postPage'
 
 // import indexPage from './indexPage'
 
-function build() {
+module.exports = () => {
     mobileMenu()
     catalog()
     comments()
@@ -16,5 +16,3 @@ function build() {
     postPage()
     // indexPage()
 }
-
-export default build

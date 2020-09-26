@@ -1,7 +1,5 @@
 import './style/index.scss'
 import AwesCnb from '@awescnb'
-import build from './build'
-import plugins from './plugins'
 
 class Gshang extends AwesCnb {
     constructor() {
@@ -10,9 +8,11 @@ class Gshang extends AwesCnb {
     }
 
     init() {
-        $.getScript('//at.alicdn.com/t/font_1416496_14nsmkubys8.js')
-        build()
-        plugins()
+        $.getScript(
+            '//at.alicdn.com/t/font_1416496_14nsmkubys8.js',
+        )
+        require('./build')()
+        require('./plugins')()
     }
 }
 

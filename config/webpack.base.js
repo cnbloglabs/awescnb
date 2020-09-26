@@ -28,6 +28,7 @@ const alias = {
     '@plugins': path.resolve('src/plugins'),
     '@constants': path.resolve('src/constants'),
     '@store': path.resolve('src/store'),
+    '@config': path.resolve('src/config'),
 }
 
 const plugins = []

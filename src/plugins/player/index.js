@@ -1,20 +1,19 @@
 // 音乐播放器
-import { pageName, userAgent, cacheScript, addCss } from '@/assets/utils/tools'
 import { aplayerjs, aplayercss } from '@constants/urls'
+import { musicPlayerConfig } from '@config/plugins'
 
-const {
-    enable,
-    autoplay,
-    audio,
-    page,
-    agent,
-    volume,
-    lrc,
-} = window.opts.musicPlayer
+import {
+    pageName,
+    userAgent,
+    cacheScript,
+    addCss,
+} from '@/assets/utils/tools'
 
 // 音乐播放器
-function build() {
-    $('body').append('<div id="player" class="aplayer music-APlayer"></div>')
+function build(autoplay, audio, volume, lrc) {
+    $('body').append(
+        '<div id="player" class="aplayer music-APlayer"></div>',
+    )
 
     const ap = new APlayer({
         container: document.getElementById('player'),
@@ -31,7 +30,11 @@ function build() {
         localStorage.audioTime = audioTime
     }
     window.onload = () => {
-        ap.seek(localStorage.audioTime ? Number(localStorage.audioTime) : 0)
+        ap.seek(
+            localStorage.audioTime
+                ? Number(localStorage.audioTime)
+                : 0,
+        )
     }
 
     if (autoplay) {
@@ -53,12 +56,22 @@ function build() {
     }
 }
 
-function setMusicPlayer() {
+export default devOptions => {
+    const {
+        enable,
+        page,
+        agent,
+        autoplay,
+        audio,
+        volume,
+        lrc,
+    } = musicPlayerConfig(devOptions)
+
     if (!enable) return
     if (page !== pageName() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
     addCss(aplayercss)
-    cacheScript(aplayerjs, build)
+    cacheScript(aplayerjs, () => {
+        build(autoplay, audio, volume, lrc)
+    })
 }
-
-export default setMusicPlayer

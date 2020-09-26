@@ -1,14 +1,16 @@
+import './index.scss'
 import { getMonth, getQuarter } from '@tools'
 import { index } from '@constants/links'
+import { getThemeOptions } from '@config/extra'
 import { getBlogname } from '@cnblog'
-import './index.scss'
+
+const { avatar } = getThemeOptions()
 
 const flat = () => {
     $('#sideBar').appendTo($('#home'))
 }
 
 const buildTopBtns = () => {
-    const { avatar } = window.opts.theme
     const el = `
     <div class="account">
         <button class="account-button">
@@ -27,25 +29,24 @@ const buildTopBtns = () => {
 
 const buildCalendar = () => {
     const quarterImgs = {
-        Spring: ' https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
-        Summer: ' https://guangzan.gitee.io/imagehost/Illustrations/summer.svg',
-        Autumn: ' https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg',
+        Spring:
+            ' https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
+        Summer:
+            ' https://guangzan.gitee.io/imagehost/Illustrations/summer.svg',
+        Autumn:
+            ' https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg',
         Windter:
             ' https://guangzan.gitee.io/imagehost/Illustrations/winter.svg',
     }
-    //  https://api.ixiaowai.cn/mcapi/mcapi.php
-    // const background =
-    //     'https://tva1.sinaimg.cn/large/0060lm7Tly1ftg6wuhgywj31hc0u0wjr.jpg'
-    // 'https://tva4.sinaimg.cn/large/87c01ec7gy1fsnqqjlmezj21kw0w07ix.jpg'
-
     const quarter = getQuarter()
     const quarterImg = quarterImgs[quarter]
     const month = getMonth()
     const instance = new Date()
     const year = instance.getFullYear()
     const date =
-        instance.getDate() < 10 ? '0' + instance.getDate() : instance.getDate()
-
+        instance.getDate() < 10
+            ? '0' + instance.getDate()
+            : instance.getDate()
     const el = `
     <section id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">
@@ -64,10 +65,8 @@ const buildCalendar = () => {
         .hide()
 }
 
-const side = () => {
+export default () => {
     flat()
     buildTopBtns()
     buildCalendar()
 }
-
-export default side

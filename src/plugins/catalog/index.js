@@ -1,3 +1,4 @@
+import { catalogConfig } from '@config/plugins.js'
 import {
     pageName,
     userAgent,
@@ -5,8 +6,6 @@ import {
     getClientRect,
     throttle,
 } from '@tools'
-
-const { enable } = window.opts.catalog
 
 /**
  * 构建目录元素
@@ -52,20 +51,32 @@ function setActiveTitle() {
     $('#mainContent').scroll(
         throttle(
             function() {
-                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
-                    const titleId = $($('#catalog ul li')[i])
+                for (
+                    let i = $('#catalog ul li').length - 1;
+                    i >= 0;
+                    i--
+                ) {
+                    const titleId = $(
+                        $('#catalog ul li')[i],
+                    )
                         .find('a')
                         .attr('href')
                         .replace(/[#]/g, '')
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (getClientRect(postTitle).top <= 100) {
+                    if (
+                        getClientRect(postTitle).top <= 100
+                    ) {
                         if (
-                            $($('#catalog ul li')[i]).hasClass('catalog-active')
+                            $(
+                                $('#catalog ul li')[i],
+                            ).hasClass('catalog-active')
                         )
                             return
-                        $($('#catalog ul li')[i]).addClass('catalog-active')
+                        $($('#catalog ul li')[i]).addClass(
+                            'catalog-active',
+                        )
                         $($('#catalog ul li')[i])
                             .siblings()
                             .removeClass('catalog-active')
@@ -84,15 +95,24 @@ function setActiveTitle() {
  */
 function toggle() {
     $('.catalog-title').click(function() {
-        $('#catalog ul').toggle('fast', 'linear', function() {
-            $(this).css('display') === 'none'
-                ? $('.catalog-title').removeClass('is-active')
-                : $('.catalog-title').addClass('is-active')
-        })
+        $('#catalog ul').toggle(
+            'fast',
+            'linear',
+            function() {
+                $(this).css('display') === 'none'
+                    ? $('.catalog-title').removeClass(
+                          'is-active',
+                      )
+                    : $('.catalog-title').addClass(
+                          'is-active',
+                      )
+            },
+        )
     })
 }
 
-function catalog() {
+export default (devOptions = {}) => {
+    const { enable } = catalogConfig(devOptions)
     if (
         enable &&
         hasPostTitle() &&
@@ -104,5 +124,3 @@ function catalog() {
         toggle()
     }
 }
-
-export default catalog

@@ -71,7 +71,7 @@
     --calendar-bg: #f6f8fa;
 
     --postSignature-bg: #f6f8fa;
-    --postSignature-border-color: #1b86f9;
+    --postSignature-border-color: var(--themeColor);
 
     --scrollbarTrack-bg: rgba(0, 0, 0, 0.01);
     --scrollbarThumb-bg: rgba(0, 0, 0, 0.11);
@@ -125,7 +125,7 @@
     --md-hr-color: #5c5e6e;
     --md-table-border-color: #202234;
     --md-blockquote-bg: #202234;
-    --md-blockquote-border-color: #1687fa;
+    --md-blockquote-border-color: var(--themeColor);
     --md-summary-bg: #202234;
     --md-kbd-bg: #202234;
 
@@ -153,7 +153,7 @@
     --calendar-bg: #202234;
 
     --postSignature-bg: #24273b;
-    --postSignature-border-color: #1b86f9;
+    --postSignature-border-color: var(--themeColor);
 
     --scrollbarTrack-bg: rgba(255, 255, 255, 0.01);
     --scrollbarThumb-bg: rgba(255, 255, 255, 0.11);

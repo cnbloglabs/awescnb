@@ -1,15 +1,11 @@
 // 锁屏
 import Typed from 'typed.js'
+import { getThemeOptions } from '@config/extra'
 import { randomImage } from '@constants/urls'
+import { lockConfig } from '@config/plugins'
 
-const { enable, background, strings } = window.opts.lock
-const { avatar } = window.opts.theme
+const { avatar } = getThemeOptions()
 let typed
-
-const typedOpts = {
-    strings: strings.length ? strings : ['快去自定义你的个性签名吧~'],
-    typeSpeed: 100,
-}
 
 // 创建元素
 function build() {
@@ -28,17 +24,30 @@ function build() {
 }
 
 // 设置背景
-function setBackground() {
-    const image = background === '' ? randomImage : background
-    $('.lock-screen').css('background-image', `url(${image}/red)`)
+function setBackground(background) {
+    const image =
+        background === '' ? randomImage : background
+    $('.lock-screen').css(
+        'background-image',
+        `url(${image}/red)`,
+    )
 }
 
 // 打开
-function open() {
+function open(strings) {
+    const typedOpts = {
+        strings: strings.length
+            ? strings
+            : ['快去自定义你的个性签名吧~'],
+        typeSpeed: 100,
+    }
     $('#header').dblclick(function() {
         $('body').addClass('overflow')
         $('.lock-screen').css('top', '0')
-        typed = new Typed('.lock-screen-text span', typedOpts)
+        typed = new Typed(
+            '.lock-screen-text span',
+            typedOpts,
+        )
     })
 }
 
@@ -53,12 +62,13 @@ function close() {
     })
 }
 
-function lock() {
+export default devOptions => {
+    const { enable, background, strings } = lockConfig(
+        devOptions,
+    )
     if (!enable) return
     build()
-    setBackground()
-    open()
+    setBackground(background)
+    open(strings)
     close()
 }
-
-export default lock

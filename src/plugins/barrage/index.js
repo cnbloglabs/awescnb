@@ -1,45 +1,45 @@
 // 发送弹幕
-import { pageName, getClientRect, randomNum, randomColor, sleep } from '@tools'
-
-const {
-    enable,
-    opacity,
-    colors,
-    fontSize,
-    barrages,
-    indexBarrages,
-    postPageBarrages,
-} = window.opts.barrage
-
-const fontSz = fontSize.length ? fontSize : '20px'
-
-const barragesColors = colors.length
-    ? colors
-    : [
-          '#FE0302',
-          '#FF7204',
-          '#FFAA02',
-          '#FFD302',
-          '#FFFF00',
-          '#A0EE00',
-          '#00CD00',
-          '#019899',
-          '#4266BE',
-          '#89D5FF',
-          '#CC0273',
-          '#CC0273',
-      ]
+import { barrageConfig } from '@config/plugins'
+import {
+    pageName,
+    getClientRect,
+    randomNum,
+    randomColor,
+    sleep,
+} from '@tools'
 
 /**
  * @description 发送弹幕
  * @param {Array} textList 弹幕列表
  */
-async function shootBarrage(textList) {
+async function shootBarrage(
+    textList,
+    enable,
+    opacity,
+    colors,
+    fontSize,
+) {
     if (!enable) return
+    const fontSz = fontSize.length ? fontSize : '20px'
+    const barragesColors = colors.length
+        ? colors
+        : [
+              '#FE0302',
+              '#FF7204',
+              '#FFAA02',
+              '#FFD302',
+              '#FFFF00',
+              '#A0EE00',
+              '#00CD00',
+              '#019899',
+              '#4266BE',
+              '#89D5FF',
+              '#CC0273',
+              '#CC0273',
+          ]
     if (!document.querySelector('#barrage-wrap')) {
         $('body').append(`<div id='barrage-wrap'></div>`)
     }
-
     const $wrap = document.querySelector('#barrage-wrap')
     const rect = getClientRect($wrap)
     const wrapWidth = rect.right - rect.left
@@ -85,34 +85,48 @@ async function shootBarrage(textList) {
     }
 }
 
-// 发送预定义弹幕
-// 随笔页首页
-function shootInitial() {
+export default devOptions => {
+    const {
+        enable,
+        opacity,
+        colors,
+        fontSize,
+        barrages,
+        indexBarrages,
+        postPageBarrages,
+    } = barrageConfig(devOptions)
     const page = pageName()
-
     if (barrages.length) {
         setTimeout(() => {
-            shootBarrage(barrages)
+            shootBarrage(
+                barrages,
+                enable,
+                opacity,
+                colors,
+                fontSize,
+            )
         }, 3000)
     }
-
     if (page === 'post' && postPageBarrages.length) {
         setTimeout(() => {
-            shootBarrage(postPageBarrages)
+            shootBarrage(
+                postPageBarrages,
+                enable,
+                opacity,
+                colors,
+                fontSize,
+            )
         }, 3000)
     }
-
     if (page === 'index' && indexBarrages.length) {
         setTimeout(() => {
-            shootBarrage(indexBarrages)
+            shootBarrage(
+                indexBarrages,
+                enable,
+                opacity,
+                colors,
+                fontSize,
+            )
         }, 3000)
     }
 }
-
-// 发送自定义弹幕
-// 类似消息弹窗
-function shootCustom(list) {
-    shootBarrage(list)
-}
-
-export { shootInitial, shootCustom }

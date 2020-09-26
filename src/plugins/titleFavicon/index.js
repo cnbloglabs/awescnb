@@ -1,19 +1,18 @@
 // 设置网站图标和标题
-function setTitle() {
-    const { title } = window.opts.theme
+import { getThemeOptions } from '@config/extra'
+
+function setTitle(title) {
     if (title === '') return
     document.title = title
 }
 
-function setFavicon() {
-    const { favicon } = window.opts.theme
+function setFavicon(favicon) {
     if (favicon === '') return
     document.getElementById('favicon').href = favicon
 }
 
-function titleFavicon() {
-    setTitle()
-    setFavicon()
+export default devOptions => {
+    const { title, favicon } = getThemeOptions(devOptions)
+    setTitle(title)
+    setFavicon(favicon)
 }
-
-export default titleFavicon

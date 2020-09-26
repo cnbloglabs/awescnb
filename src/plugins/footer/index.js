@@ -1,8 +1,8 @@
 import { gitee } from '../../constants/message'
+import { getLinksOptions } from '@config/extra'
 
-function footer() {
-    const { links } = window.opts
-    const config = links
+export default devOptions => {
+    const config = getLinksOptions(devOptions)
     const nickName = $('#profile_block a:first')
         .text()
         .trim()
@@ -15,7 +15,9 @@ function footer() {
                             <span>
                                 Powered by you
                                 🍨
-                                Theme in ${'awescnb'.link(gitee)} 
+                                Theme in ${'awescnb'.link(
+                                    gitee,
+                                )} 
                             </span>
                         </div>`
 
@@ -26,10 +28,10 @@ function footer() {
     if (config.length) {
         let $links = $('<ul id="links"></ul>')
         for (let { name, link } of config) {
-            $links.append(`<li><a href='${link}'>${name}</a></li>`)
+            $links.append(
+                `<li><a href='${link}'>${name}</a></li>`,
+            )
         }
         $('#footer').prepend($links.prop('outerHTML'))
     }
 }
-
-export default footer

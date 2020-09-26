@@ -22,20 +22,24 @@ import lock from '@plugins/lock'
 import qrcode from '@plugins/qrcode'
 import charts from '@plugins/charts'
 import donation from '@plugins/donation'
-import { shootInitial } from '@plugins/barrage'
+import barrage from '@plugins/barrage'
 import notice from '@plugins/notice'
 import mode from '@plugins/mode'
 
-export default () => {
+const clickConfig = {
+    enable: true,
+}
+
+module.exports = () => {
     dragMenu()
     footer()
     themeColor()
     background()
     imagebox()
-    shootInitial()
+    barrage()
     live2d()
     player()
-    click()
+    click(clickConfig)
     linenumbers()
     titleFavicon()
     commentsAvatars()

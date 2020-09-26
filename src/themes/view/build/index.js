@@ -2,7 +2,7 @@ import indexCards from './indexCards'
 import header from './header'
 import catalog from './catalog'
 
-export default () => {
+module.exports = () => {
     header()
     indexCards()
     catalog()

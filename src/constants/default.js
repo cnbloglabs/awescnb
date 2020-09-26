@@ -1,5 +1,7 @@
 /**
  * awescnb 配置
+ * 停止使用
+ * 仅用作参考
  */
 const defaultOptions = {
     // 基本配置
@@ -12,6 +14,13 @@ const defaultOptions = {
         contentSize: 'mid',
         headerBackground: 'https://api.uomg.com/api/rand.avatar',
     },
+    // 自定义链接
+    links: [
+        {
+            name: '自定义链接',
+            link: '',
+        },
+    ],
     // 代码高亮
     highLight: {
         type: '',
@@ -202,13 +211,6 @@ const defaultOptions = {
         background: '',
         strings: [],
     },
-    // footer链接
-    links: [
-        {
-            name: '自定义链接',
-            link: '',
-        },
-    ],
 }
 
 export default defaultOptions

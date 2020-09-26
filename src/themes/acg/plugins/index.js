@@ -24,7 +24,7 @@ import '@plugins/commentsAvatars/index.scss'
 import '@plugins/signature/index.scss'
 import '@plugins/highlight/index.scss'
 
-function plugins() {
+module.exports = () => {
     themeColor()
     setIcons()
     setBodyBackground()
@@ -39,5 +39,3 @@ function plugins() {
     highlight()
     copy()
 }
-
-export default plugins

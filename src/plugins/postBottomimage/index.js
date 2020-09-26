@@ -1,8 +1,11 @@
 // 在随笔详情页尾部图片
 import { pageName } from '@tools'
+import { postBottomimageConfig } from '@config/plugins'
 
-function postBottomimage() {
-    const { enable, img, height } = window.opts.postBottomimage
+export default devOptions => {
+    const { enable, img, height } = postBottomimageConfig(
+        devOptions,
+    )
 
     if (!enable) return
     if (pageName() !== 'post') return
@@ -16,5 +19,3 @@ function postBottomimage() {
     $('#cnblogs_post_body').after(ele)
     $('#custom-post-bottomimage').css(style)
 }
-
-export default postBottomimage

@@ -4,7 +4,7 @@
  * @param {Object} 新对象
  * @return {Object} 合并后的配置
  */
-function mergeOptions(def = {}, dev = {}, user = {}) {
+function mergeOptions(def = {}, user = {}, dev = {}) {
     const defaultOptions = Object.assign({}, def, dev)
     const options = Object.assign({}, defaultOptions, user)
     return options

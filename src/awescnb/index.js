@@ -1,30 +1,30 @@
 import env from '@/constants/env'
-import defaultOptions from '@/constants/default'
 import build from './build'
 
 class AwesCnb {
     init(building) {
-        if (env === 'dev' || $.awesCnb) {
+        const buildTheme = () => {
             building()
             build()
         }
-        if (!$.awesCnb) {
+
+        if (env === 'dev' || $.awesCnb) {
+            buildTheme()
+        }
+
+        if (!$.awesCnb && env !== 'dev') {
             $.extend({
-                awesCnb: options => {
-                    if (options) $.extend(true, defaultOptions, options)
-                    window.opts = defaultOptions
-                    building()
-                    build()
+                awesCnb: (options = {}) => {
+                    window.opts = options
+                    buildTheme()
                 },
             })
         }
     }
-
     devOpts() {
-        if (env === 'dev') window.opts = defaultOptions
+        if (env === 'dev') window.opts = {}
     }
 }
 
 new AwesCnb().devOpts()
-
 export default AwesCnb

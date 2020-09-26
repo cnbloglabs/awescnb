@@ -1,9 +1,23 @@
+import './index.scss'
 import { getBlogname } from '@cnblog'
 import { isVisitor } from '@constants/cnblog'
-import { cnblogHome, index, newPost, send, rss, admin } from '@constants/links'
-import './index.scss'
+import {
+    cnblogHome,
+    index,
+    newPost,
+    send,
+    rss,
+    admin,
+} from '@constants/links'
+import {
+    getLinksOptions,
+    getThemeOptions,
+    getGithubOptions,
+} from '@config/extra'
 
-const links = window.opts.links
+const links = getLinksOptions()
+const githubOptions = getGithubOptions()
+const { avatar } = getThemeOptions()
 
 const buildLeftside = () => {
     const el = $(`
@@ -79,7 +93,12 @@ const removeHeaderToLeftside = () => {
     </div>
     `)
 
-    for (const { icon, title, url, allowVisit } of navList) {
+    for (const {
+        icon,
+        title,
+        url,
+        allowVisit,
+    } of navList) {
         const item = `<a href="${url}" target="_blank">
             <li>
                 <span class="fas ${icon}"></span>
@@ -98,12 +117,10 @@ const removeHeaderToLeftside = () => {
 }
 
 const buildLeftsideBottomBtns = () => {
-    const { avatar } = window.opts.theme
-    const github = window.opts.github
     const userName = getBlogname()
     const el = `
     <div class="leftside-bottom">
-    <a href="${github.url}" class="follow-me" target="_blank">
+    <a href="${githubOptions.url}" class="follow-me" target="_blank">
         <span class="follow-text"><i class="fas fa-github"></i><span>Fork me on GitHub</span></span>
         <span class="developer">
             <img src="${avatar}">
@@ -114,11 +131,9 @@ const buildLeftsideBottomBtns = () => {
     $('#left-side').append(el)
 }
 
-const leftSide = () => {
+export default () => {
     buildLeftside()
     buildCustomLinksToLeftSide()
     removeHeaderToLeftside()
     buildLeftsideBottomBtns()
 }
-
-export default leftSide

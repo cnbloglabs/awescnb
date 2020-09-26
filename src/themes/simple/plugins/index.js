@@ -21,7 +21,7 @@ import menu from './menu'
 // import lock from '@plugins/lock'
 // import postBottomimage from '@plugins/postBottomimage'
 
-export default () => {
+module.exports = () => {
     footer()
     highlight()
     copy()

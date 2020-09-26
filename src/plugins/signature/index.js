@@ -1,7 +1,6 @@
 // 个性签名在侧边栏构建
 import Typed from 'typed.js'
-
-const { enable, contents } = window.opts.signature
+import { signatureConfig } from '@config/plugins'
 
 function build(options) {
     const { selector } = options
@@ -9,21 +8,26 @@ function build(options) {
     $(selector).append(signature)
 }
 
-function typed() {
+function typed(contents) {
     new Typed('.custom-signature span', {
         strings: contents,
         typeSpeed: 70,
     })
 }
 
-function signature(options) {
+export default (pluginOptions = {}, devOptions) => {
+    const { enable, contents } = signatureConfig(devOptions)
     if (!enable) return
-    const defaultOptions = {
-        selector: '#sidebar_news',
+    if (pluginOptions) {
+        $.extend(
+            true,
+            {
+                selector: '#sidebar_news',
+            },
+            pluginOptions,
+        )
     }
-    if (options) $.extend(true, defaultOptions, options)
-    build(defaultOptions)
-    typed()
-}
 
-export default signature
+    build(pluginOptions)
+    typed(contents)
+}

@@ -17,7 +17,9 @@ function setBack2Top() {
         })
     $(window).bind('scroll', () => {
         let scrollTop = $(document).scrollTop()
-        scrollTop > 0 ? elements.fadeIn(500) : elements.fadeOut(500)
+        scrollTop > 0
+            ? elements.fadeIn(500)
+            : elements.fadeOut(500)
     })
 }
 
@@ -27,7 +29,9 @@ function setAvatar() {
     if (avatar === '') {
         return false
     }
-    $('#blogLogo').css({ 'background-image': `url(${avatar})` })
+    $('#blogLogo').css({
+        'background-image': `url(${avatar})`,
+    })
 }
 
 // 设置头部背景图
@@ -36,7 +40,9 @@ function setHeaderBackground() {
     if (headerBackground === '') {
         return false
     }
-    $('#blogTitle').css({ 'background-image': `url(${headerBackground})` })
+    $('#blogTitle').css({
+        'background-image': `url(${headerBackground})`,
+    })
 }
 
 // 设置主题色
@@ -48,7 +54,9 @@ function setThemeColor() {
     } else {
         themeColor = option
     }
-    $('head').append(`<style>:root{--ThemeColor: ${themeColor}}<style>`)
+    $('head').append(
+        `<style>:root{--ThemeColor: ${themeColor}}<style>`,
+    )
 }
 
 // 获取随机颜色
@@ -65,7 +73,7 @@ function iconInSvg(icon) {
     return `<svg class="icon" aria-hidden="true"><use xlink:href="${icon}"></use></svg>`
 }
 
-export default () => {
+module.exports = () => {
     setBack2Top()
     setAvatar()
     setHeaderBackground()

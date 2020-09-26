@@ -1,8 +1,16 @@
+import './index.scss'
 import { sidebarWraps } from '@/constants/elements'
-import { pageName, randomProperty, cacheScript } from '@tools'
 import { iconInSvg } from '../../utils/tools'
 import { fontUrl, icons, foodIcons } from './icons'
-import './index.scss'
+import {
+    pageName,
+    randomProperty,
+    cacheScript,
+} from '@tools'
+import {
+    getGiteeOptions,
+    getGithubOptions,
+} from '@config/extra'
 
 /**
  * 设置sidebar icon
@@ -83,11 +91,17 @@ function setSidebarIcon() {
     ]
 
     const insert = () => {
-        for (const { title, icon, sonIcon } of iconActions) {
+        for (const {
+            title,
+            icon,
+            sonIcon,
+        } of iconActions) {
             if ($(title).length) {
                 $(`${title} h3`).prepend(iconInSvg(icon))
                 if (sonIcon) {
-                    $(`${title} ul li a`).prepend(iconInSvg(sonIcon))
+                    $(`${title} ul li a`).prepend(
+                        iconInSvg(sonIcon),
+                    )
                 }
             }
         }
@@ -103,7 +117,7 @@ function setSidebarIcon() {
  * 设置github icon
  */
 function setGithub() {
-    const { enable, color, url } = window.opts.github
+    const { enable, color, url } = getGithubOptions()
     if (!enable) return
     const $githubIcon = `
                         <a id="custom-github" style="color:${color}" href=${url}>${iconInSvg(
@@ -121,7 +135,7 @@ function setGithub() {
  * gitee icon
  */
 function setGitee() {
-    const { enable, color, url } = window.opts.gitee
+    const { enable, color, url } = getGiteeOptions()
     if (!enable) return
     const icon = `
     <li>
@@ -138,7 +152,14 @@ function setGitee() {
  * navlist 图标（博客园  首页 ...）
  */
 function nav() {
-    const { cnblog, home, pens, contact, rss, admin } = icons
+    const {
+        cnblog,
+        home,
+        pens,
+        contact,
+        rss,
+        admin,
+    } = icons
 
     const items = [
         { selector: '#blog_nav_sitehome', icon: cnblog },
@@ -211,7 +232,9 @@ function setModeIcon() {
     const lightIcon = iconInSvg(icons.light)
     const icon = isDark ? darkIcon : lightIcon
     $('#navigator').prepend(
-        `<div class='mode-change ${isDark ? 'dark' : ''}'>${icon}</div>`,
+        `<div class='mode-change ${
+            isDark ? 'dark' : ''
+        }'>${icon}</div>`,
     )
     $(document).on('click', '.mode-change', function() {
         $(this).toggleClass('dark')

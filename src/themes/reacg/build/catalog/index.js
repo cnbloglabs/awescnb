@@ -1,9 +1,6 @@
-// 相关options:
-// theme.contentSize
-// catalog.enable
-// catalog.position
-
 import './index.scss'
+import { catalogConfig } from '@config/plugins'
+import { getThemeOptions } from '@config/extra'
 import {
     pageName,
     userAgent,
@@ -12,8 +9,8 @@ import {
     throttle,
 } from '@tools'
 
-const { enable, position } = window.opts.catalog
-const { contentSize } = window.opts.theme
+const { enable, position } = catalogConfig()
+const { contentSize } = getThemeOptions()
 
 // 构建目录
 function build() {
@@ -28,7 +25,9 @@ function build() {
     $('#cnblogs_post_body')
         .children()
         .each(function() {
-            if (titleRegExp.test(this.tagName.toLowerCase())) {
+            if (
+                titleRegExp.test(this.tagName.toLowerCase())
+            ) {
                 if ($(this).text().length === 0) return // 如果标题为空 只有 #
                 let id
                 let text
@@ -42,11 +41,17 @@ function build() {
                     text = $(this).text()
                 } else {
                     if (this.childNodes.length === 2) {
-                        const value = this.childNodes[1].nodeValue
-                        text = value ? value : $(this.childNodes[1]).text()
+                        const value = this.childNodes[1]
+                            .nodeValue
+                        text = value
+                            ? value
+                            : $(this.childNodes[1]).text()
                     } else {
-                        const value = this.childNodes[0].nodeValue
-                        text = value ? value : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
+                        const value = this.childNodes[0]
+                            .nodeValue
+                        text = value
+                            ? value
+                            : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
                     }
                     id = text.trim()
                     $(this).attr('id', id)
@@ -62,7 +67,9 @@ function build() {
             }
         })
 
-    $($catalogContainer.append($ulContainer)).appendTo('#sideBar')
+    $($catalogContainer.append($ulContainer)).appendTo(
+        '#sideBar',
+    )
     setCatalogPosition()
 }
 
@@ -138,8 +145,13 @@ const layout = {
 function setIndexContentWidth() {
     if (pageName() !== 'index') return
     if (userAgent() !== 'pc') return
-    $('#mainContent').css({ width: layout[contentSize].contentWidthWhenL })
-    $('#header').css('padding-left', layout[contentSize].indexHeaderPaddingLeft)
+    $('#mainContent').css({
+        width: layout[contentSize].contentWidthWhenL,
+    })
+    $('#header').css(
+        'padding-left',
+        layout[contentSize].indexHeaderPaddingLeft,
+    )
 }
 
 function noCatalog() {
@@ -154,13 +166,18 @@ function setCatalogPosition() {
     const actions = {
         left: () => {
             $('#mainContent').css({
-                width: layout[contentSize].contentWidthWhenL,
-                'margin-left': layout[contentSize].contentMarginLeftWhenL,
+                width:
+                    layout[contentSize].contentWidthWhenL,
+                'margin-left':
+                    layout[contentSize]
+                        .contentMarginLeftWhenL,
             })
             $('#catalog').addClass('catalog-sticky-left')
             $('#catalog').css({
                 left: layout[contentSize].catalogLeftWhenL,
-                'max-height': layout[contentSize].catalogMaxHeightWhenL,
+                'max-height':
+                    layout[contentSize]
+                        .catalogMaxHeightWhenL,
             })
             $('#header').css(
                 'padding-left',
@@ -171,8 +188,11 @@ function setCatalogPosition() {
             $('#catalog').addClass('catalog-sticky-right')
             $('#main').css('flex-direction', 'row-reverse')
             $('#mainContent').css({
-                width: layout[contentSize].contentWidthWhenR,
-                'margin-right': layout[contentSize].contentMarginRightWhenR,
+                width:
+                    layout[contentSize].contentWidthWhenR,
+                'margin-right':
+                    layout[contentSize]
+                        .contentMarginRightWhenR,
             })
             $('#sideBar').css(
                 'margin-right',
@@ -183,14 +203,18 @@ function setCatalogPosition() {
                 layout[contentSize].headerPaddingLeftWhenR,
             )
             $('#catalog').css({
-                right: layout[contentSize].catalogRightWhenR,
-                'max-height': layout[contentSize].catalogMaxHeightWhenR,
+                right:
+                    layout[contentSize].catalogRightWhenR,
+                'max-height':
+                    layout[contentSize]
+                        .catalogMaxHeightWhenR,
             })
         },
         sidebar: () => {
             $('#header').css(
                 'padding-left',
-                layout[contentSize].headerPaddingLeftWhenSidebar,
+                layout[contentSize]
+                    .headerPaddingLeftWhenSidebar,
             )
             $('#mainContent').css(
                 'width',
@@ -198,7 +222,8 @@ function setCatalogPosition() {
             )
             $('#catalog').css(
                 'max-height',
-                layout[contentSize].catalogMaxHeightWhenSidebar,
+                layout[contentSize]
+                    .catalogMaxHeightWhenSidebar,
             )
             setCatalogToggle()
         },
@@ -212,20 +237,32 @@ function setActiveCatalogTitle() {
     $(window).scroll(
         throttle(
             function() {
-                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
-                    const titleId = $($('#catalog ul li')[i])
+                for (
+                    let i = $('#catalog ul li').length - 1;
+                    i >= 0;
+                    i--
+                ) {
+                    const titleId = $(
+                        $('#catalog ul li')[i],
+                    )
                         .find('a')
                         .attr('href')
                         .replace(/[#]/g, '')
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (getClientRect(postTitle).top <= 10) {
+                    if (
+                        getClientRect(postTitle).top <= 10
+                    ) {
                         if (
-                            $($('#catalog ul li')[i]).hasClass('catalog-active')
+                            $(
+                                $('#catalog ul li')[i],
+                            ).hasClass('catalog-active')
                         )
                             return
-                        $($('#catalog ul li')[i]).addClass('catalog-active')
+                        $($('#catalog ul li')[i]).addClass(
+                            'catalog-active',
+                        )
                         $($('#catalog ul li')[i])
                             .siblings()
                             .removeClass('catalog-active')
@@ -256,13 +293,19 @@ function setCatalogToggle() {
                     $('#catalog').addClass('catalog-sticky')
                     p = $(this).scrollTop()
                     t <= p
-                        ? $('#catalog').addClass('catalog-scroll-up')
-                        : $('#catalog').removeClass('catalog-scroll-up')
+                        ? $('#catalog').addClass(
+                              'catalog-scroll-up',
+                          )
+                        : $('#catalog').removeClass(
+                              'catalog-scroll-up',
+                          )
                     setTimeout(function() {
                         t = p
                     }, 0)
                 } else {
-                    $('#catalog').removeClass('catalog-sticky')
+                    $('#catalog').removeClass(
+                        'catalog-sticky',
+                    )
                 }
             },
             50,

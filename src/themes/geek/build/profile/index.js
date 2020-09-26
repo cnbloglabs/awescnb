@@ -1,6 +1,11 @@
 import toast from '@plugins/toast'
 import { isOwner } from '@constants/cnblog'
-import { followersDetailsUrl, followingDetailsUrl, index } from '@links'
+import {
+    followersDetailsUrl,
+    followingDetailsUrl,
+    index,
+} from '@links'
+import { getThemeOptions } from '@config/extra'
 import {
     getFollowState,
     getBlogname,
@@ -12,6 +17,7 @@ import {
 } from '@cnblog'
 import './index.scss'
 
+const { avatar, headerBackground } = getThemeOptions()
 const followState = getFollowState()
 const userName = getBlogname()
 const age = getBlogAge()
@@ -19,9 +25,6 @@ const fans = getFollowers()
 const focus = getFollowing()
 
 const build = () => {
-    const { avatar } = window.opts.theme
-    const { headerBackground } = window.opts.theme
-
     const el = `
     <section class="profile">
         <div class="profile-banner" style="background-image:url(${headerBackground})">
@@ -41,7 +44,9 @@ const build = () => {
         <div class="profile-msg">
             <p>
                 <a href="${index}"><span>${userName}</span></a>
-                <button class="followState${isOwner ? ' disabled' : ''}">${
+                <button class="followState${
+                    isOwner ? ' disabled' : ''
+                }">${
         followState ? '取消关注' : '关注'
     }</button>
             </p>
@@ -61,7 +66,8 @@ const followAndUnfollow = () => {
             toast('无法关注自己', 'error')
             return
         }
-        const isUnfollowed = $('.followState').text() === '关注'
+        const isUnfollowed =
+            $('.followState').text() === '关注'
         if (isUnfollowed) {
             toast('感谢关注')
             $('.followState').text('取消关注')

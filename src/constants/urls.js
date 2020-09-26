@@ -14,7 +14,7 @@ export const dummyimage = 'https://www.dummyimage.com/50'
 // 随机返回一个人物头像，只在开发环境使用
 export const randomAva = 'https://i.pravatar.cc/125?image=3'
 // 主题 js 存放的仓库
-export const themeRepository = 'https://guangzan.gitee.io/awescnb'
+export const themeRepository = 'https://guangzan.gitee.io/awescnb-dev'
 // imagehost 文件
 export const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
 export const emojijs =

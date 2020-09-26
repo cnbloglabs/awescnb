@@ -1,21 +1,25 @@
-import { userAgent, cacheScript } from '@tools'
 import { animeJs } from '@constants/urls'
+import { clickConfig } from '@config/plugins.js'
+import { userAgent, cacheScript } from '@tools'
 
-const options = window.opts.click
-
-function build() {
+function build(options) {
     const anime = window.anime
     if (options.enable && userAgent() === 'pc') {
-        $('body').append(`<canvas id="click-effects"></canvas>`)
+        $('body').append(
+            `<canvas id="click-effects"></canvas>`,
+        )
         window.human = false
-        let canvasEl = document.querySelector('#click-effects')
+        let canvasEl = document.querySelector(
+            '#click-effects',
+        )
         let ctx = canvasEl.getContext('2d')
         let numberOfParticules = options.maxCount
         let pointerX = 0
         let pointerY = 0
 
         let tap =
-            'ontouchstart' in window || navigator.msMaxTouchPoints
+            'ontouchstart' in window ||
+            navigator.msMaxTouchPoints
                 ? 'touchstart'
                 : 'mousedown'
 
@@ -29,7 +33,8 @@ function build() {
             canvasEl.width = window.innerWidth * 2
             canvasEl.height = window.innerHeight * 2
             canvasEl.style.width = window.innerWidth + 'px'
-            canvasEl.style.height = window.innerHeight + 'px'
+            canvasEl.style.height =
+                window.innerHeight + 'px'
             canvasEl.getContext('2d').scale(2, 2)
         }
 
@@ -39,7 +44,8 @@ function build() {
         }
 
         const setParticuleDirection = p => {
-            let angle = (anime.random(0, 360) * Math.PI) / 180
+            let angle =
+                (anime.random(0, 360) * Math.PI) / 180
             let value = anime.random(50, 180)
             let radius = [-1, 1][anime.random(0, 1)] * value
             return {
@@ -52,12 +58,20 @@ function build() {
             let p = {}
             p.x = x
             p.y = y
-            p.color = colors[anime.random(0, colors.length - 1)]
+            p.color =
+                colors[anime.random(0, colors.length - 1)]
             p.radius = anime.random(16, 32)
             p.endPos = setParticuleDirection(p)
             p.draw = function() {
                 ctx.beginPath()
-                ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true)
+                ctx.arc(
+                    p.x,
+                    p.y,
+                    p.radius,
+                    0,
+                    2 * Math.PI,
+                    true,
+                )
                 ctx.fillStyle = p.color
                 ctx.fill()
             }
@@ -75,7 +89,14 @@ function build() {
             p.draw = function() {
                 ctx.globalAlpha = p.alpha
                 ctx.beginPath()
-                ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true)
+                ctx.arc(
+                    p.x,
+                    p.y,
+                    p.radius,
+                    0,
+                    2 * Math.PI,
+                    true,
+                )
                 ctx.lineWidth = p.lineWidth
                 ctx.strokeStyle = p.color
                 ctx.stroke()
@@ -85,7 +106,11 @@ function build() {
         }
 
         const renderParticule = anim => {
-            for (let i = 0; i < anim.animatables.length; i++) {
+            for (
+                let i = 0;
+                i < anim.animatables.length;
+                i++
+            ) {
                 anim.animatables[i].target.draw()
             }
         }
@@ -130,7 +155,12 @@ function build() {
         const render = anime({
             duration: Infinity,
             update() {
-                ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
+                ctx.clearRect(
+                    0,
+                    0,
+                    canvasEl.width,
+                    canvasEl.height,
+                )
             },
         })
 
@@ -159,14 +189,18 @@ function build() {
         }
 
         if (options.auto) autoClick()
-        window.addEventListener('resize', clickEffects, false)
+        window.addEventListener(
+            'resize',
+            clickEffects,
+            false,
+        )
         clickEffects()
     }
 }
 
-function setClickEffects() {
-    cacheScript(animeJs, build)
-    // build()
+export default devOptions => {
+    const options = clickConfig(devOptions)
+    cacheScript(animeJs, () => {
+        build(options)
+    })
 }
-
-export default setClickEffects

@@ -1,5 +1,6 @@
 import toast from '@plugins/toast'
 import { sleep } from '@tools'
+import { noticeConfig } from '@config/plugins'
 
 async function shoot(textList) {
     const length = textList.length
@@ -9,10 +10,8 @@ async function shoot(textList) {
     }
 }
 
-function notice() {
-    const { enable, text } = window.opts.notice
+export default devOptions => {
+    const { enable, text } = noticeConfig(devOptions)
     if (!enable && text.length) return
     shoot(text)
 }
-
-export default notice

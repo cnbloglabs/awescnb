@@ -1,7 +1,8 @@
 import './style/index.scss'
-import menu from './menu'
-import highlight from '@plugins/highlight'
+import background from '@plugins/background'
 import catalog from '@plugins/catalog'
+import themeColor from '@plugins/themeColor'
+import highlight from '@plugins/highlight'
 import copy from '@plugins/copy'
 import linenumbers from '@plugins/linenumbers'
 import postMessage from '@plugins/postMessage'
@@ -9,47 +10,63 @@ import commentsAvatars from '@plugins/commentsAvatars'
 import signature from '@plugins/signature'
 import emoji from '@plugins/emoji'
 import imagebox from '@plugins/imagebox'
-import notice from '@plugins/notice'
 import postSignature from '@plugins/postSignature'
-import mode from '@plugins/mode'
+import notice from '@plugins/notice'
 import click from '@plugins/click'
 import player from '@plugins/player'
+import mode from '@plugins/mode'
+import menu from './menu'
 
-// import {
-//     highlight,
-//     catalog,
-//     copy,
-//     linenumbers,
-//     postMessage,
-//     commentsAvatars,
-//     signature,
-//     emoji,
-//     imagebox,
-//     notice,
-//     postSignature,
-//     mode,
-//     click,
-//     player,
-// } from '@plugins'
-
-const plugins = () => {
-    menu()
-    highlight()
-    catalog()
-    copy()
-    linenumbers()
-    emoji()
-    postMessage()
-    commentsAvatars()
-    imagebox()
-    postSignature()
-    notice()
-    mode()
-    signature({
-        selector: '.profile-signature',
-    })
-    click()
-    player()
+const themeColotOptions = {
+    color: '#1B86F9',
 }
 
-export default plugins
+const signatureOptions = {
+    enable: true,
+    contents: [
+        '欢迎使用皮肤<b style="color:#3742fa">Geek</b>',
+        '快去自定义签名吧~',
+    ],
+}
+
+const noticeOptions = {
+    enable: true,
+    text: ['试试自定义通知功能~'],
+}
+
+const clickOptions = {
+    enable: false,
+    auto: false,
+    colors: [],
+    size: 30,
+    maxCount: 15,
+}
+
+const playerOptions = {
+    enable: false,
+}
+
+module.exports = () => {
+    background()
+    catalog()
+    themeColor(themeColotOptions)
+    highlight()
+    copy()
+    linenumbers()
+    postMessage()
+    commentsAvatars()
+    signature(
+        {
+            selector: '.profile-signature',
+        },
+        signatureOptions,
+    )
+    emoji()
+    imagebox()
+    postSignature()
+    notice(noticeOptions)
+    click(clickOptions)
+    player(playerOptions)
+    menu()
+    mode()
+}

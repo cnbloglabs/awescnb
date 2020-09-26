@@ -1,15 +1,21 @@
-// 设置页面背景色
-// 设置内容透明度
+/**
+ * 设置页面背景、内容透明度
+ */
 import { userAgent } from '@tools'
+import { backgroundConfig } from '@config/plugins.js'
 
-function setBodyBackground() {
-    const { enable, opacity, value, repeat } = window.opts.bodyBackground
-    if (!enable) return
+const setOpacity = opacity => {
     $('#main,#navigator').css('opacity', `${opacity}`)
-    if ($('#catalog').length) $('#main').css('opacity', `${opacity}`)
+    if ($('#catalog').length)
+        $('#main').css('opacity', `${opacity}`)
+}
 
-    const type = new RegExp('http').test(value) ? 'img' : 'color'
-    if (type === 'color') $('body').css('background-color', `${value}`)
+const setBackground = (value, repeat) => {
+    const type = new RegExp('http').test(value)
+        ? 'img'
+        : 'color'
+    if (type === 'color')
+        $('body').css('background-color', `${value}`)
     if (type === 'img') {
         $('body').css('background-image', `url(${value})`)
         if (!repeat) {
@@ -25,4 +31,14 @@ function setBodyBackground() {
     }
 }
 
-export default setBodyBackground
+export default (devOptions = {}) => {
+    const {
+        enable,
+        opacity,
+        value,
+        repeat,
+    } = backgroundConfig(devOptions)
+    if (!enable) return
+    setOpacity(opacity)
+    setBackground(value, repeat)
+}

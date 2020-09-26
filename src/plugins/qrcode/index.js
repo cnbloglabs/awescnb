@@ -1,27 +1,24 @@
 // 二维码
-const { enable, img, desc } = window.opts.qrcode
-const qrcodeImg = window.opts.theme.qrcode //兼容旧的api
+import { qrcodeConfig } from '@config/plugins'
 
-function buildImage() {
+function buildImage(img) {
     if (img === '') return
-    const ele = `<img class='custom-qrcode' src='${qrcodeImg || img}' />`
+    const ele = `<img class='custom-qrcode' src='${img}' />`
     $('.custom-signature').length
         ? $('.custom-signature').after(ele)
         : $('#blog-news').after(ele)
 }
 
-function buildDesc() {
+function buildDesc(desc) {
     if (desc === '') return
     const ele = `<div class='custom-qrcode-desc'>${desc}</div>`
     $('.custom-qrcode').after(ele)
 }
 
-function qrcode() {
+export default devOptions => {
+    const { enable, img, desc } = qrcodeConfig(devOptions)
     if ($('#blog-news').length === 0) return
-    if (qrcodeImg || enable) {
-        buildImage()
-        buildDesc()
-    }
+    if (!enable) return
+    buildImage(img)
+    buildDesc(desc)
 }
-
-export default qrcode

@@ -1,19 +1,17 @@
 import mobileMenu from './mobileMenu'
-// import mode from './mode'
 import avatar from './avatar'
 import scroll from './scroll'
 import catalog from './catalog'
-import indexList from './indexList'
 import setIcons from './icons'
 import comments from './comments'
+// import indexList from './indexList'
 
-export default () => {
+module.exports = () => {
     mobileMenu()
-    // mode()
     avatar()
     scroll()
     catalog()
-    indexList()
     setIcons()
     comments()
+    // indexList()
 }

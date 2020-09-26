@@ -1,10 +1,9 @@
 // 代码高亮
-import { pageName, isMd } from '@/assets/utils/tools'
+import { highlightConfig } from '@config/plugins.js'
+import { pageName, isMd } from '@tools'
 import themes from './themes.js'
 
-const { light, dark, type } = window.opts.highLight
-
-function buildMarkdownLinenumber() {
+function buildMarkdownLinenumber(light, dark, type) {
     let style
     if (type.length && !dark.length && !light.length) {
         style = `<style>:root{${themes[type]}}</style>`
@@ -21,7 +20,8 @@ function otherEditorLinenumberPadding() {
     if (isMd()) return
     $('pre').each(function() {
         const hasLineNumber =
-            $(this).find('span[style="color: #008080;"]').length !== 0
+            $(this).find('span[style="color: #008080;"]')
+                .length !== 0
         if (!hasLineNumber) {
             $(this).css({
                 padding: '10px 14px',
@@ -30,11 +30,12 @@ function otherEditorLinenumberPadding() {
     })
 }
 
-function highlight() {
+export default devOptions => {
     if (pageName() !== 'post') return
     if ($('pre').length === 0) return
-    buildMarkdownLinenumber()
+    const { light, dark, type } = highlightConfig(
+        devOptions,
+    )
+    buildMarkdownLinenumber(light, dark, type)
     otherEditorLinenumberPadding()
 }
-
-export default highlight

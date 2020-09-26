@@ -1,7 +1,5 @@
 import './index.css'
 import AwesCnb from '@awescnb'
-import build from './build'
-import plugins from './plugins'
 
 class Reacg extends AwesCnb {
     constructor() {
@@ -10,8 +8,8 @@ class Reacg extends AwesCnb {
     }
 
     init() {
-        build()
-        plugins()
+        require('./build')()
+        require('./plugins')()
     }
 }
 

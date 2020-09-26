@@ -8,7 +8,7 @@ import titleFavicon from '@plugins/titleFavicon'
 import highlight from '@plugins/highlight'
 import postBottomimage from '@plugins/postBottomimage'
 
-export default () => {
+module.exports = () => {
     setBodyBackground()
     imagebox()
     setLive2d()

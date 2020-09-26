@@ -1,14 +1,13 @@
 import { cacheScript } from '@tools'
 import { viz } from '@constants/urls'
-
-const { enable, pie } = window.opts.charts
+import { chartsConfig } from '@config/plugins.js'
 
 function wrap() {
     const wrap = '<div id="charts"></div>'
     $('#sidebar_news').append(wrap)
 }
 
-function skill() {
+function skill(pie) {
     const skill = '<div id="charts-skill"></div>'
     $('#charts').append(skill)
 
@@ -35,12 +34,12 @@ function skill() {
     })
 }
 
-function charts() {
+export default devOptions => {
+    const { enable, pie } = chartsConfig(devOptions)
     if (!enable) return
+
     cacheScript(viz, () => {
         wrap()
-        skill()
+        skill(pie)
     })
 }
-
-export default charts

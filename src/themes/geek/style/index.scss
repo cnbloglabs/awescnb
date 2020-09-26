@@ -227,7 +227,7 @@ body {
 
         .CalTodayDay {
             background-color: #24273b;
-            color: #1b86f9;
+            color: var(--themeColor);
             border-radius: 2px;
             font-size: 0.7em;
         }
@@ -941,7 +941,7 @@ body {
                 height: 32.4px;
                 border-radius: 4px;
                 border: none;
-                background-color: #1b86f9;
+                background-color: var(--themeColor);
                 user-select: none;
                 outline: none;
                 cursor: pointer;
@@ -950,7 +950,7 @@ body {
 
                 &:hover {
                     transition: all 0.2s;
-                    background-color: #0e58a7;
+                    filter: brightness(0.8);
                 }
             }
         }

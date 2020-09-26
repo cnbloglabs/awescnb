@@ -16,7 +16,7 @@ import notice from '@plugins/notice'
 import background from '@plugins/background'
 import mode from '@plugins/mode'
 
-export default () => {
+module.exports = () => {
     commentsAvatars()
     footer()
     highlight()

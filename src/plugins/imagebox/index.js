@@ -1,6 +1,7 @@
 // 随笔详情页图片灯箱
 // 相册查看图像
 import { mediaZoomJs } from '@constants/urls'
+import { imageboxConfig } from '@config/plugins.js'
 import {
     isPostDetailsPage,
     isAlbumPage,
@@ -8,9 +9,8 @@ import {
     isMd,
     mousewheel,
     cacheScript,
-} from '@/assets/utils/tools'
+} from '@tools'
 
-const { enable } = window.opts.imagebox
 const mediumZoomConfig = {}
 const customGalleryClass = 'custom-gallery'
 
@@ -24,7 +24,10 @@ function build() {
         item.addClass('custom-zoom')
     })
 
-    const zoom = window.mediumZoom('.custom-zoom', mediumZoomConfig)
+    const zoom = window.mediumZoom(
+        '.custom-zoom',
+        mediumZoomConfig,
+    )
 
     zoom.on('open', () => {
         mousewheel(() => {
@@ -47,23 +50,26 @@ function buildGallery() {
     $('.gallery img').each(function() {
         const src = $(this).attr('src')
         const openSrc = src.replace(/t_/, 'o_')
-        gallery.find('div').append(`<img src="${openSrc}"/>`)
+        gallery
+            .find('div')
+            .append(`<img src="${openSrc}"/>`)
     })
     $('.forFlow').append(gallery)
     $('.gallery').remove()
 }
 
-function imagebox() {
+export default devOptions => {
+    const { enable } = imageboxConfig(devOptions)
     if (!enable) return
-    if (!isMd() && !isAlbumPage() && !isPostDetailsPage()) return
+    if (!isMd() && !isAlbumPage() && !isPostDetailsPage())
+        return
     if ($('.custom-zoom').length) return
     buildGallery()
     cacheScript(mediaZoomJs, () => {
         const condition =
-            $('.blog_comment_body').length || $('.' + customGalleryClass).length
+            $('.blog_comment_body').length ||
+            $('.' + customGalleryClass).length
         poll(condition, build)
     })
     window.imagebox = build
 }
-
-export default imagebox
