@@ -4,7 +4,8 @@
 
 // 看板娘模型仓库
 export const live2d = {
-    url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
+    url:
+        'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
     version: '1.7',
 }
 // 随机返回一张动漫图片
@@ -14,9 +15,11 @@ export const dummyimage = 'https://www.dummyimage.com/50'
 // 随机返回一个人物头像，只在开发环境使用
 export const randomAva = 'https://i.pravatar.cc/125?image=3'
 // 主题 js 存放的仓库
-export const themeRepository = 'https://guangzan.gitee.io/awescnb-dev'
+export const themeRepository =
+    'https://guangzan.gitee.io/awescnb'
 // imagehost 文件
-export const viz = 'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
+export const viz =
+    'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
 export const emojijs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js'
 export const live2djs =
