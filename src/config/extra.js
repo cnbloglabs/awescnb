@@ -61,9 +61,23 @@ const getGiteeOptions = devOptions => {
     return options
 }
 
+const getIndexListImgOptions = devOptions => {
+    const defaultThemeOptions = {
+        enable: false,
+        imgs: [],
+    }
+    const options = mergeOptions(
+        defaultThemeOptions,
+        window.opts.indexListImg,
+        devOptions,
+    )
+    return options
+}
+
 export {
     getThemeOptions,
     getLinksOptions,
     getGithubOptions,
     getGiteeOptions,
+    getIndexListImgOptions,
 }

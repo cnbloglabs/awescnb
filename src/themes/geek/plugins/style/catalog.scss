@@ -4,7 +4,8 @@
     overflow-x: hidden;
     word-wrap: nowrap;
     text-overflow: ellipsis;
-    border-bottom: 1px solid var(--sidebarBlock-border-color);
+    border-bottom: 1px solid
+        var(--sidebarBlock-border-color);
     .catalog-title {
         display: flex;
         align-items: center;
@@ -31,7 +32,8 @@
         }
     }
     ul {
-        border-left: 1px solid var(--sidebarBlock-border-color);
+        border-left: 1px solid
+            var(--sidebarBlock-border-color);
         .h1-list {
             font-weight: 700;
             font-size: 16px;
@@ -89,7 +91,7 @@
     }
 }
 .catalog-active {
-    color: #3273dc;
+    color: var(--themeColor);
     font-weight: 700;
     transition: all 0.3s;
 }
