@@ -1,14 +1,19 @@
 import './index.scss'
-// import { pageName, userAgent } from '@tools'
+import {
+    getThemeOptions,
+    getGithubOptions,
+} from '@config/extra'
 
 // 构建header昵称
 const headerNickname = () => {
-    $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
+    $('#Header1_HeaderTitle').text(
+        $('#profile_block a:first').text(),
+    )
 }
 
 // header头像
 const buildAva = () => {
-    const { avatar } = window.opts.theme
+    const { avatar } = getThemeOptions()
     $('#blogLogo').attr('src', `${avatar}`)
 }
 
@@ -36,7 +41,7 @@ const buildSearchbar = () => {
 
 // GitHub 图标
 const buildGithub = () => {
-    const { url } = window.opts.github
+    const { url } = getGithubOptions()
     const ele = `
     <li>
         <a id="custom-gtihub" href="${url}">Github</a>

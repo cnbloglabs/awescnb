@@ -1,3 +1,19 @@
+$md: () !default;
+$md: map-merge(
+    (
+        primary: #ccc,
+        hrColor: #ddd,
+        blockquoteBg: #f6f8fa,
+        blockquoteBorderColor: #ccc,
+    ),
+    $md
+);
+
+$primary: map-get($md, primary);
+$hrColor: map-get($md, hrColor);
+$blockquoteBg: map-get($md, blockquoteBg);
+$blockquoteBorderColor: map-get($md, blockquoteBorderColor);
+
 #cnblogs_post_body,
 .cnblogs-post-body,
 .cnblogs-markdown {
@@ -24,10 +40,10 @@
         font-size: 16px;
     }
     a {
-        color: #00a1d6;
-        border-bottom: 1px dotted #00a1d6;
+        color: $primary;
+        border-bottom: 1px dotted $primary;
         &:hover {
-            color: #0582ac;
+            filter: brightness(0.8);
             transition: color 0.2s;
         }
     }
@@ -38,7 +54,9 @@
         margin-bottom: 22px;
     }
     hr {
-        border-color: var(--md-hr-color);
+        margin: 24px 0;
+        border: none;
+        border-bottom: 1px solid $hrColor;
     }
     ol {
         margin: 10px 0;
@@ -60,11 +78,11 @@
         }
     }
     img {
+        margin: 10px auto;
+        display: flex;
         max-width: 100%;
-        margin-top: 10px;
         border-radius: 2px;
     }
-
     table {
         display: block;
         overflow: auto;
@@ -80,14 +98,15 @@
     blockquote {
         margin: 5px 0;
         padding: 1px 15px;
-        background: var(--md-blockquote-bg);
+        background: $blockquoteBg;
         border: none;
-        border-left: 6px solid var(--md-blockquote-border-color);
+        border-left: 6px solid $blockquoteBorderColor;
     }
     kbd {
         display: inline-block;
         padding: 3px 5px;
-        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font: 11px SFMono-Regular, Consolas, Liberation Mono,
+            Menlo, monospace;
         line-height: 10px;
         color: #444d56;
         vertical-align: middle;
