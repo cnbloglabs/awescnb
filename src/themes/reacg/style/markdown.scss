@@ -38,7 +38,9 @@
         font-size: 16px;
     }
     hr {
-        border-color: var(--text-10);
+        margin: 24px 0;
+        border: none;
+        border-bottom: 1px solid var(--md-hr-color);
     }
     ol {
         margin: 10px 0;

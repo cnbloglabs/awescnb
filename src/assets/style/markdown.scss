@@ -1,18 +1,26 @@
 $md: () !default;
 $md: map-merge(
     (
-        primary: #ccc,
+        linkColor: #ccc,
         hrColor: #ddd,
         blockquoteBg: #f6f8fa,
         blockquoteBorderColor: #ccc,
+        summary: #f6f8fa,
+        summaryOpen: #0984e3,
+        markBg: yellow,
+        kbdBg: #fafbfc,
     ),
     $md
 );
 
-$primary: map-get($md, primary);
+$linkColor: map-get($md, linkColor);
 $hrColor: map-get($md, hrColor);
 $blockquoteBg: map-get($md, blockquoteBg);
 $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
+$summary: map-get($md, summary);
+$summaryOpen: map-get($md, summaryOpen);
+$markBg: map-get($md, markBg);
+$kbdBg: map-get($md, kbdBg);
 
 #cnblogs_post_body,
 .cnblogs-post-body,
@@ -40,8 +48,8 @@ $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
         font-size: 16px;
     }
     a {
-        color: $primary;
-        border-bottom: 1px dotted $primary;
+        color: $linkColor;
+        border-bottom: 1px dotted $linkColor;
         &:hover {
             filter: brightness(0.8);
             transition: color 0.2s;
@@ -110,7 +118,7 @@ $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
         line-height: 10px;
         color: #444d56;
         vertical-align: middle;
-        background-color: #fafbfc;
+        background-color: $kbdBg;
         border: 1px solid #d1d5da;
         border-radius: 3px;
         box-shadow: inset 0 -1px 0 #d1d5da;
@@ -127,7 +135,7 @@ $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
             padding: 0.3em 0.6em;
             width: auto;
             font-weight: bold;
-            background: var(--md-summary-bg);
+            background: $summary;
             border-radius: 3px;
             user-select: none;
             cursor: pointer;
@@ -156,8 +164,8 @@ $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
         }
         &[open] {
             summary {
-                color: darken(#0984e3, 10%);
-                background: lighten(#0984e3, 45%);
+                color: darken($summaryOpen, 10%);
+                background: lighten($summaryOpen, 45%);
                 text-shadow: none;
                 border-radius: 0.3em 0.3em 0 0;
                 &:before {
@@ -172,9 +180,9 @@ $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
     .hljs-ln-n:before {
         font-weight: normal;
     }
-    // mark {
-    //     background-color: var(--themeColor);
-    // }
+    mark {
+        background-color: $markBg;
+    }
 }
 
 #blog-comments-placeholder {

@@ -109,6 +109,7 @@ export const toolsConfig = devOptions => {
 
 export const emojiConfig = devOptions => {
     const defaultOptions = {
+        enable: true,
         showRecents: true,
         showSearch: true,
         showPreview: false,
@@ -190,8 +191,8 @@ export const lockConfig = devOptions => {
 export const darkModeConfig = devOptions => {
     const defaultOptions = {
         enable: true,
-        autoDark: false,
-        autoLight: false,
+        autoDark: true,
+        autoLight: true,
     }
     return mergeOptions(
         defaultOptions,
@@ -272,7 +273,7 @@ export const postSignatureConfig = devOptions => {
 
 export const postTopimageConfig = devOptions => {
     const defaultOptions = {
-        enable: true,
+        enable: false,
         fixed: false,
         imgs: [],
     }
@@ -313,8 +314,8 @@ export const qrcodeConfig = devOptions => {
 
 export const signatureConfig = devOptions => {
     const defaultOptions = {
-        enable: true,
-        contents: ['123'],
+        enable: false,
+        contents: [],
     }
     return mergeOptions(
         defaultOptions,
