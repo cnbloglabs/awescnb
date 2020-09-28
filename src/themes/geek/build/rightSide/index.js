@@ -21,7 +21,7 @@ const buildTopBtns = () => {
         </button>
         <span class="account-user">${getBlogname()}
             <a href="${index}"><img src="${avatar}" alt="" class="account-profile"></a>
-            <span>▼</span>
+            <span style="display:none">▼</span>
         </span>
     </div>`
     $('#sideBarMain').prepend(el)
@@ -48,7 +48,7 @@ const buildCalendar = () => {
             ? '0' + instance.getDate()
             : instance.getDate()
     const el = `
-    <section id="custom-calendar" class="sidebar-block">
+    <div id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">
             <img src="${quarterImg}" class="event-img">
             <div class="event-title">${quarter} Wonderland</div>
@@ -58,11 +58,10 @@ const buildCalendar = () => {
                 <div class="event-day">${date}</div>
             </div>
         </div>
-    </section>
+    </div>
     `
-    $('#blog-calendar')
-        .after($(el))
-        .hide()
+
+    $('#leftcontentcontainer').before($(el))
 }
 
 export default () => {

@@ -29,11 +29,6 @@ const signatureOptions = {
     ],
 }
 
-const noticeOptions = {
-    enable: true,
-    text: ['试试自定义通知功能~'],
-}
-
 const clickOptions = {
     enable: false,
     auto: false,
@@ -61,7 +56,7 @@ module.exports = () => {
     emoji()
     imagebox()
     postSignature()
-    notice(noticeOptions)
+    notice()
     click(clickOptions)
     player(playerOptions)
     menu()
