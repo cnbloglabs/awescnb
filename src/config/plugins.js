@@ -191,8 +191,8 @@ export const lockConfig = devOptions => {
 export const darkModeConfig = devOptions => {
     const defaultOptions = {
         enable: true,
-        autoDark: true,
-        autoLight: true,
+        autoDark: false,
+        autoLight: false,
     }
     return mergeOptions(
         defaultOptions,

@@ -29,6 +29,12 @@ const signatureOptions = {
     ],
 }
 
+const modeOptions = {
+    enable: true,
+    autoDark: false,
+    autoLight: false,
+}
+
 const clickOptions = {
     enable: false,
     auto: false,
@@ -60,5 +66,5 @@ module.exports = () => {
     click(clickOptions)
     player(playerOptions)
     menu()
-    mode()
+    mode(modeOptions)
 }
