@@ -6,8 +6,9 @@
 
 html {
     font-size: 12px;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
-        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    font-family: -apple-system, system-ui,
+        BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+        Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
     word-break: break-word;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
@@ -96,8 +97,11 @@ body {
 
 #main {
     padding-top: 64.8px;
-    @include center(h);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     #mainContent {
+        margin: 0 1vw;
         width: 54vw;
         border-radius: 2px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -114,7 +118,8 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid
+                    hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .postTitle {
@@ -169,7 +174,8 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid
+                    hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .entrylistItem {
@@ -260,7 +266,8 @@ body {
                         }
                         &:hover {
                             transform: scale(1.05);
-                            box-shadow: 0 0 5px var(--themeColor);
+                            box-shadow: 0 0 5px
+                                var(--themeColor);
                             transition: all 0.2s;
                         }
                     }
@@ -321,7 +328,9 @@ body {
                 color: var(--themeColor);
             }
             .blog_comment_body {
-                background-color: var(--themeColor) !important;
+                background-color: var(
+                    --themeColor
+                ) !important;
                 color: #333;
                 // a:nth-child(1) {
                 //     color: var(--themeColor);
@@ -341,9 +350,12 @@ body {
                     top: 5.4px;
                     width: 12.258px;
                     height: 0;
-                    border-left: solid 12.96px var(--themeColor);
-                    border-top: solid 3.24px rgba(0, 0, 0, 0);
-                    border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+                    border-left: solid 12.96px
+                        var(--themeColor);
+                    border-top: solid 3.24px
+                        rgba(0, 0, 0, 0);
+                    border-bottom: solid 7.182px
+                        rgba(0, 0, 0, 0);
                 }
             }
 
@@ -500,7 +512,6 @@ body {
 // 侧边栏 start
 #sideBar {
     width: 15.5vw;
-    margin-left: 1vw;
     font-size: 14px;
     overflow: hidden;
 }
@@ -690,8 +701,7 @@ body {
                     padding: 4px 10px;
                     &:hover {
                         box-shadow: 0 0 5px #999;
-                        transform: scale(1.1);
-                        transform: translateY(-2px);
+                        filter: brightness(0.8);
                         transition: all 0.2s;
                     }
                 }
@@ -764,8 +774,7 @@ body {
                 background-color: #ff6b81;
                 &:hover {
                     box-shadow: 0 0 5px #ff6b81;
-                    transform: scale(1.1);
-                    transform: translateY(-2px);
+                    filter: brightness(0.8);
                     transition: all 0.2s;
                 }
             }
@@ -774,8 +783,7 @@ body {
                 background-color: #ced6e0;
                 &:hover {
                     box-shadow: 0 0 5px #ced6e0;
-                    transform: scale(1.1);
-                    transform: translateY(-2px);
+                    filter: brightness(0.8);
                     transition: all 0.2s;
                 }
             }
@@ -835,7 +843,6 @@ body {
     .feedbackManage {
         order: 3;
     }
-
     .comment_vote {
         order: 4;
     }
@@ -975,6 +982,7 @@ body {
         display: none;
     }
     a {
+        filter: brightness(0.9);
         border-radius: 3px;
         margin-right: 0;
         @include text-over();

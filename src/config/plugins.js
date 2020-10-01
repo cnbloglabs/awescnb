@@ -159,7 +159,7 @@ export const linenumbersConfig = devOptions => {
 
 export const live2dConfig = devOptions => {
     const defaultOptions = {
-        enable: true,
+        enable: false,
         page: 'all',
         agent: 'pc',
         model: 'haru-01',
@@ -273,7 +273,7 @@ export const postSignatureConfig = devOptions => {
 
 export const postTopimageConfig = devOptions => {
     const defaultOptions = {
-        enable: false,
+        enable: true,
         fixed: false,
         imgs: [],
     }

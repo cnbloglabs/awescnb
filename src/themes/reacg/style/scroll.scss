@@ -18,7 +18,8 @@
             transparent
         );
         border-radius: 30px;
-        box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+        box-shadow: inset 2px 2px 2px
+                hsla(0, 0%, 100%, 0.25),
             inset -2px -2px 2px rgba(0, 0, 0, 0.25);
     }
 
@@ -49,7 +50,7 @@ body,
     @extend .scrollbar-gradient;
 }
 
-#catalog,
+#catalog ul,
 pre,
 code {
     @include scrollbar-simple(var(--themeColor));

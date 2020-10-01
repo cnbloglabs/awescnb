@@ -30,13 +30,13 @@ const buildTopBtns = () => {
 const buildCalendar = () => {
     const quarterImgs = {
         Spring:
-            ' https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
+            'https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
         Summer:
-            ' https://guangzan.gitee.io/imagehost/Illustrations/summer.svg',
+            'https://guangzan.gitee.io/imagehost/Illustrations/summer.svg',
         Autumn:
-            ' https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg',
-        Windter:
-            ' https://guangzan.gitee.io/imagehost/Illustrations/winter.svg',
+            'https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg',
+        Winter:
+            'https://guangzan.gitee.io/imagehost/Illustrations/winter.svg',
     }
     const quarter = getQuarter()
     const quarterImg = quarterImgs[quarter]

@@ -3,7 +3,12 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { template, themeName, sourceMap, openBrowser } = require('./options')
+const {
+    template,
+    themeName,
+    sourceMap,
+    openBrowser,
+} = require('./options')
 
 const devServer = {
     host: 'localhost',
@@ -37,7 +42,7 @@ const rules = [
                     importLoaders: 1,
                 },
             },
-            'postcss-loader',
+            // 'postcss-loader',
         ],
     },
     {
@@ -50,7 +55,7 @@ const rules = [
                     importLoaders: 2,
                 },
             },
-            'postcss-loader',
+            // 'postcss-loader',
             'sass-loader',
         ],
     },

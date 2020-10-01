@@ -1,3 +1,9 @@
+@media screen and (max-width: 1366px) {
+    #sideBarMain {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .postBody {
         padding: 0;
@@ -12,7 +18,7 @@
     #header {
         overflow: auto;
         word-break: keep-all;
-        padding-left: 2vw!important;
+        padding-left: 2vw !important;
         width: 100%;
         &::after {
             position: fixed;
@@ -72,7 +78,9 @@
     .feedbackCon .blog_comment_body {
         max-width: 324px;
     }
-    .forFlow #blog-comments-placeholder .feedbackListSubtitle {
+    .forFlow
+        #blog-comments-placeholder
+        .feedbackListSubtitle {
         font-size: 12px;
         line-height: 2em;
     }
@@ -80,7 +88,10 @@
         overflow: hidden;
         white-space: nowrap;
     }
-    .forFlow #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
+    .forFlow
+        #blog-comments-placeholder
+        .feedbackListSubtitle
+        > a:last-of-type {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

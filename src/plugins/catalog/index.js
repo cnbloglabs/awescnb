@@ -10,12 +10,13 @@ import {
 /**
  * 构建目录元素
  */
-function build() {
+function build(selector, fn) {
     let $container = $(
         `<nav id="catalog">
-            <div class='catalog-title'><h3>目录</h3></div>
+            <h3 class='catalog-title'>目录</h3>
         </nav>`,
     )
+
     const $list = $('<ul>')
     const regExp = /^h[1-3]$/
 
@@ -41,7 +42,8 @@ function build() {
                 $list.append(title)
             }
         })
-    $('#blog-calendar').before($($container.append($list)))
+
+    $(selector)[fn]($($container.append($list)))
 }
 
 /**
@@ -111,15 +113,23 @@ function toggle() {
     })
 }
 
-export default (devOptions = {}) => {
+export default (pluginOptions = {}, devOptions) => {
+    const extraOptions = {
+        selector: '',
+        fn: 'before',
+    }
+
+    $.extend(true, extraOptions, pluginOptions)
     const { enable } = catalogConfig(devOptions)
+    const { selector, fn } = extraOptions
+
     if (
         enable &&
         hasPostTitle() &&
         pageName() === 'post' &&
         userAgent() === 'pc'
     ) {
-        build()
+        build(selector, fn)
         setActiveTitle()
         toggle()
     }

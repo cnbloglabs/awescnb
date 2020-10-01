@@ -1,0 +1,96 @@
+#catalog {
+    position: relative;
+    height: auto;
+    width: 15.5vw;
+    font-size: 14px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    margin-bottom: 16.2px;
+    color: var(--text-3);
+    h3 {
+        background-color: var(--background-w);
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        padding: 10.098px 14.418px;
+        background-color: var(--background-w);
+        border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 5px;
+        }
+    }
+    ul {
+        background-color: var(--background-w);
+        max-height: 550px;
+        padding: 10.098px 14.418px;
+        overflow-y: scroll；;
+        overflow-x: hidden;
+        .h1-list {
+            font-weight: 700;
+        }
+        .h1-list ~ .h2-list {
+            margin-left: 0.7em;
+        }
+        .h2-list ~ .h3-list {
+            margin-left: 1.4em;
+        }
+        li {
+            margin-top: 3.618px;
+            &:hover {
+                color: var(--themeColor);
+            }
+            a {
+                display: inline-block;
+                user-select: none;
+                width: 100%;
+                .icon {
+                    width: 1.2em;
+                    height: 1.8em;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.catalog-active {
+    background: var(--themeColor);
+    padding: 5.4px 5.4px;
+    border-radius: 3px;
+    transition: background 0.4s;
+    color: var(--text-a);
+}
+
+.catalog-sticky {
+    position: fixed;
+    top: 64.8px;
+    visibility: visible;
+    transition: top 0.2s;
+}
+
+.catalog-sticky-left {
+    position: fixed;
+    top: 64.8px;
+    transition: top 0.2s;
+}
+
+.catalog-sticky-right {
+    position: fixed;
+    top: 64.8px;
+    right: 5vw;
+    transition: top 0.2s;
+}
+
+.catalog-scroll-up {
+    position: fixed;
+    top: 10.8px;
+}
+
+.catalog-scroll-down {
+    top: 64.8px;
+}

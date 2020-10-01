@@ -1,4 +1,4 @@
-import './index.scss'
+import './style/index.scss'
 import dragMenu from '@plugins/dragMenu'
 import footer from '@plugins/footer'
 import themeColor from '@plugins/themeColor'
@@ -25,8 +25,18 @@ import donation from '@plugins/donation'
 import barrage from '@plugins/barrage'
 import notice from '@plugins/notice'
 import mode from '@plugins/mode'
+import catalog from '@plugins/catalog'
+
+const catalogConfig = {
+    selector: '#main',
+    fn: 'prepend',
+}
 
 const clickConfig = {
+    enable: true,
+}
+
+const live2dConfig = {
     enable: true,
 }
 
@@ -37,7 +47,7 @@ module.exports = () => {
     background()
     imagebox()
     barrage()
-    live2d()
+    live2d(live2dConfig)
     player()
     click(clickConfig)
     linenumbers()
@@ -57,4 +67,5 @@ module.exports = () => {
     donation()
     notice()
     mode()
+    catalog(catalogConfig)
 }

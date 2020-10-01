@@ -1,3 +1,4 @@
+/** disabled */
 import './index.scss'
 import { catalogConfig } from '@config/plugins'
 import { getThemeOptions } from '@config/extra'
