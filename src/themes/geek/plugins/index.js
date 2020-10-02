@@ -29,6 +29,10 @@ const signatureOptions = {
     ],
 }
 
+const signaturePluginConfig = {
+    selector: '.profile-signature',
+}
+
 const modeOptions = {
     enable: true,
     autoDark: false,
@@ -47,18 +51,21 @@ const playerOptions = {
     enable: false,
 }
 
+const catalogPluginConfig = {
+    selector: '#sidebar_news',
+    fn: 'before',
+}
+
 module.exports = () => {
     background()
-    catalog()
+    catalog(catalogPluginConfig)
     themeColor(themeColotOptions)
     highlight()
     copy()
     linenumbers()
     postMessage()
     commentsAvatars()
-    signature(signatureOptions, {
-        selector: '.profile-signature',
-    })
+    signature(signatureOptions, signaturePluginConfig)
     emoji()
     imagebox()
     postSignature()

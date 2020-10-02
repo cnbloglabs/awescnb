@@ -25,8 +25,8 @@ $linenumbersColor: map-get($linemubers, color);
     word-break: normal;
     white-space: pre;
 }
-
 /* 富文本end */
+
 #cnblogs_post_body pre {
     table tr,
     table td {
@@ -64,4 +64,11 @@ $linenumbersColor: map-get($linemubers, color);
         }
     }
 }
-/* linember sticker end */
+
+.hljs-ln {
+    padding-bottom: 10px;
+}
+
+.hljs-ln-n {
+    padding: 0 10px;
+}

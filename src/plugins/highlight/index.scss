@@ -16,13 +16,10 @@
     padding: 0;
     padding-top: 10px;
     border-radius: 4px;
-    // &:hover {
-    //     box-shadow: 1px 1px 5px var(--themeColor, red);
-    // }
     pre {
         overflow: auto;
-        font-family: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
-            monospace !important;
+        font-family: Consolas, Lucida Console, Monaco,
+            Andale Mono, Ubuntu Mono, monospace !important;
         display: block !important;
         padding: 0.5em;
         color: var(--hl-mono-1) !important;
@@ -33,33 +30,27 @@
             height: 35px;
         }
     }
-
     /* 注释 */
     span[style='color: #008000;'] {
         color: var(--hl-mono-3) !important;
         font-style: italic;
     }
-
     span[style='background-color: #f5f5f5; color: #000000;'],
     span[style='color: #000000;'] {
         color: var(--hl-mono-1) !important;
     }
-
     span[style='background-color: #f5f5f5; color: #800000;'] {
         color: var(--hl-hue-2) !important;
     }
-
     span[style='color: #0000ff;'],
     span[style='background-color: #f5f5f5; color: #0000ff;'] {
         color: var(--hl-hue-3) !important;
     }
-
     span[style='color: #800000;'],
     span[style='color: #ff0000;'],
     span[style='background-color: #f5f5f5; color: #ff0000;'] {
         color: var(--hl-hue-4) !important;
     }
-
     span[style='color: #8b0000;'] {
         color: var(--hl-hue-6) !important;
     }
@@ -78,11 +69,8 @@
         background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
             no-repeat;
         background-size: 65px 23px;
-        background-position-x: 10px;
+        background-position-x: 15px;
     }
-    // &:hover {
-    //     box-shadow: 0 0 6px var(--themeColor, red);
-    // }
 }
 
 #blog-comments-placeholder,
@@ -93,15 +81,15 @@
         border-radius: 4px;
     }
     code {
-        font-family: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
-            monospace !important;
-        color: #c7254e !important;
+        font-family: Consolas, Lucida Console, Monaco,
+            Andale Mono, Ubuntu Mono, monospace !important;
         font-size: 0.87em !important;
-        padding: 0 !important;
         margin: 0;
         word-break: break-word !important;
         border: none !important;
-        background: none !important;
+        // padding: 0 !important;
+        // background: none !important;
+        // color: #c7254e !important;
     }
     li code {
         font-size: 12px !important;
@@ -112,7 +100,8 @@
         color: var(--hl-mono-1) !important;
         background: var(--hl-base) !important;
         border: none !important;
-        padding-bottom: 10px !important;
+        padding: 10px 10px 0 !important;
+        font-weight: normal;
     }
     .hljs-tag {
         color: var(--hl-tag);

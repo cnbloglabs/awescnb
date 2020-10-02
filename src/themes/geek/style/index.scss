@@ -18,9 +18,9 @@ body {
     color: var(--body-color);
     font-size: 1em;
     line-height: 1.5;
-    // font-family: 'Source Sans Pro', sans-serif;
-    font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
-        Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+    font-family: UbuntuMono, 'Varela Round', 'PingFang SC',
+        'Microsoft YaHei', Helvetica, Arial, Menlo, Monaco,
+        monospace, sans-serif;
 }
 
 #home {
@@ -113,7 +113,8 @@ body {
 
 .sidebar-block {
     padding: 25px;
-    border-bottom: 1px solid var(--sidebarBlock-border-color);
+    border-bottom: 1px solid
+        var(--sidebarBlock-border-color);
     h3 {
         font-family: 'DM Sans', sans-serif;
         color: var(--sidebarTitle-color);
@@ -371,7 +372,8 @@ body {
 .entrylistTitle,
 .PostListTitle {
     padding: 1rem 1rem;
-    border-bottom: 1px solid var(--listItemTitle-border-color);
+    border-bottom: 1px solid
+        var(--listItemTitle-border-color);
     font-weight: 700;
     background-color: var(--listItemTitle-bg);
 }
@@ -413,7 +415,8 @@ body {
             display: none;
         }
         &:hover {
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.3s
+                cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
                 0 10px 10px rgba(0, 0, 0, 0.22);
         }
@@ -452,17 +455,6 @@ body {
             border-radius: 3px;
             background-color: var(--tags-bg);
         }
-    }
-}
-
-#cnblogs_post_body {
-    &:after {
-        content: '——— EOF ———';
-        display: block;
-        margin: 21.6px auto;
-        text-align: center;
-        color: var(--postDesc-color);
-        font-weight: normal;
     }
 }
 
@@ -673,7 +665,8 @@ body {
         border-right: 1px solid var(--form-border-color);
         padding: 17.982px 10.8px;
         &:nth-last-child(2) {
-            border-bottom: 1px solid var(--form-border-color);
+            border-bottom: 1px solid
+                var(--form-border-color);
         }
     }
 
@@ -687,7 +680,9 @@ body {
         }
 
         .blog_comment_body {
-            background-color: var(--commonBody-bg) !important;
+            background-color: var(
+                --commonBody-bg
+            ) !important;
             color: var(--commonBody-color);
             margin-right: 10px;
             margin-left: 0;
@@ -881,7 +876,8 @@ body {
             background: none;
             margin-bottom: 0;
             padding: 7.56px 10.8px;
-            border-bottom: 1px solid var(--form-border-color);
+            border-bottom: 1px solid
+                var(--form-border-color);
             background-color: var(--formTitle-bg);
             border-radius: 2px 2px 0 0;
             font-size: 12px;
@@ -903,7 +899,9 @@ body {
             border: none;
 
             .commentbox_title {
-                border-bottom-color: var(--form-border-color);
+                border-bottom-color: var(
+                    --form-border-color
+                );
             }
 
             .commentbox_title_left {
@@ -918,7 +916,8 @@ body {
                 min-height: 170px;
                 background: none;
                 font-size: 16px;
-                border-bottom: 1px dashed var(--form-border-color);
+                border-bottom: 1px dashed
+                    var(--form-border-color);
                 color: #999;
             }
 

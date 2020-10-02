@@ -9,6 +9,8 @@ $md: map-merge(
         summaryOpen: #0984e3,
         markBg: yellow,
         kbdBg: #fafbfc,
+        singleLineCoodeBg: #eeeeee,
+        singleLineCoodeColor: #15a7a7,
     ),
     $md
 );
@@ -21,11 +23,23 @@ $summary: map-get($md, summary);
 $summaryOpen: map-get($md, summaryOpen);
 $markBg: map-get($md, markBg);
 $kbdBg: map-get($md, kbdBg);
+$singleLineCoodeBg: map-get($md, singleLineCoodeBg);
+$singleLineCoodeColor: map-get($md, singleLineCoodeColor);
+
+#cnblogs_post_body {
+    &:after {
+        content: '——— EOF ———';
+        display: block;
+        margin: 21.6px auto;
+        text-align: center;
+        color: var(--postDesc-color);
+        font-weight: normal;
+    }
+}
 
 #cnblogs_post_body,
 .cnblogs-post-body,
 .cnblogs-markdown {
-    line-height: 1.5;
     line-height: 1.5;
     word-wrap: break-word;
     h1,
@@ -47,6 +61,12 @@ $kbdBg: map-get($md, kbdBg);
     h3 {
         font-size: 16px;
     }
+    code {
+        font-weight: 700;
+        padding: 0 5px;
+        color: $singleLineCoodeColor !important;
+        background-color: $singleLineCoodeBg !important;
+    }
     a {
         color: $linkColor;
         border-bottom: 1px dotted $linkColor;
@@ -56,7 +76,7 @@ $kbdBg: map-get($md, kbdBg);
         }
     }
     p {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.6em;
         margin-top: 22px;
         margin-bottom: 22px;
@@ -109,6 +129,9 @@ $kbdBg: map-get($md, kbdBg);
         background: $blockquoteBg;
         border: none;
         border-left: 6px solid $blockquoteBorderColor;
+        & > p {
+            margin: 10px 0;
+        }
     }
     kbd {
         display: inline-block;

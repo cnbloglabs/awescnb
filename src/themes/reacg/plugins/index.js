@@ -37,7 +37,11 @@ const clickConfig = {
 }
 
 const live2dConfig = {
-    enable: true,
+    enable: false,
+}
+
+const postTopimageConfig = {
+    enable: false,
 }
 
 module.exports = () => {
@@ -50,7 +54,9 @@ module.exports = () => {
     live2d(live2dConfig)
     player()
     click(clickConfig)
-    linenumbers()
+    linenumbers({
+        enable: true,
+    })
     titleFavicon()
     commentsAvatars()
     signature()
@@ -60,7 +66,7 @@ module.exports = () => {
     emoji()
     lock()
     postMessage()
-    postTopimage()
+    postTopimage(postTopimageConfig)
     postBottomimage()
     qrcode()
     charts()

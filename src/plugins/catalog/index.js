@@ -50,7 +50,7 @@ function build(selector, fn) {
  * 标题动态高亮
  */
 function setActiveTitle() {
-    $('#mainContent').scroll(
+    $('#mainContent, body').scroll(
         throttle(
             function() {
                 for (

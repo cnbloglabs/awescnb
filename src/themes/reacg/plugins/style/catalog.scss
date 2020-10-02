@@ -1,6 +1,6 @@
 #catalog {
-    position: relative;
-    height: auto;
+    position: sticky;
+    top: 60px;
     width: 15.5vw;
     font-size: 14px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -8,11 +8,8 @@
     margin-bottom: 16.2px;
     color: var(--text-3);
     h3 {
-        background-color: var(--background-w);
         display: flex;
         align-items: center;
-        position: sticky;
-        top: 0;
         padding: 10.098px 14.418px;
         background-color: var(--background-w);
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
@@ -39,9 +36,6 @@
         }
         li {
             margin-top: 3.618px;
-            &:hover {
-                color: var(--themeColor);
-            }
             a {
                 display: inline-block;
                 user-select: none;
@@ -54,7 +48,23 @@
                     text-decoration: none;
                 }
             }
+            &:hover {
+                color: var(--themeColor);
+            }
         }
+    }
+}
+
+#catalog {
+    &.catalog-scroll-up {
+        top: 10px;
+        transition: top 0.2s;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #catalog {
+        display: none;
     }
 }
 
@@ -66,31 +76,27 @@
     color: var(--text-a);
 }
 
-.catalog-sticky {
-    position: fixed;
-    top: 64.8px;
-    visibility: visible;
-    transition: top 0.2s;
-}
+// .catalog-sticky {
+//     position: fixed;
+//     top: 64.8px;
+//     visibility: visible;
+//     transition: top 0.2s;
+// }
 
-.catalog-sticky-left {
-    position: fixed;
-    top: 64.8px;
-    transition: top 0.2s;
-}
+// .catalog-sticky-left {
+//     position: fixed;
+//     top: 64.8px;
+//     transition: top 0.2s;
+// }
 
-.catalog-sticky-right {
-    position: fixed;
-    top: 64.8px;
-    right: 5vw;
-    transition: top 0.2s;
-}
+// .catalog-sticky-right {
+//     position: fixed;
+//     top: 64.8px;
+//     right: 5vw;
+//     transition: top 0.2s;
+// }
 
-.catalog-scroll-up {
-    position: fixed;
-    top: 10.8px;
-}
-
-.catalog-scroll-down {
-    top: 64.8px;
-}
+// .catalog-scroll-down {
+//     top: 64.8px;
+//     transition: top 0.2s;
+// }

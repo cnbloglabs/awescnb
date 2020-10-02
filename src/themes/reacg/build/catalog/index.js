@@ -1,4 +1,5 @@
 /** disabled */
+// use @plugin
 import './index.scss'
 import { catalogConfig } from '@config/plugins'
 import { getThemeOptions } from '@config/extra'

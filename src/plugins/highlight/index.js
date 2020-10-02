@@ -4,10 +4,17 @@ import { pageName, isMd } from '@tools'
 import themes from './themes.js'
 
 function buildMarkdownLinenumber(light, dark) {
-    const style = `<style>
+    let style
+    if (!isMd()) {
+        style = `<style>
+        :root{${themes['github']}}
+        </style>`
+    } else {
+        style = `<style>
         :root{${themes[light]}}
         :root[theme="dark"]{${themes[dark]}}
         </style>`
+    }
     $('head').append(style)
 }
 

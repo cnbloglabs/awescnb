@@ -34,6 +34,8 @@ function build() {
             zoom.close()
         })
     })
+
+    removeImageOuterHref()
 }
 
 function buildGallery() {
@@ -56,6 +58,13 @@ function buildGallery() {
     })
     $('.forFlow').append(gallery)
     $('.gallery').remove()
+}
+
+function removeImageOuterHref() {
+    if (isMd()) return
+    $('.medium-zoom-image')
+        .parent('a')
+        .removeAttr('href')
 }
 
 export default devOptions => {

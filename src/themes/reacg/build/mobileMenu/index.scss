@@ -1,14 +1,17 @@
 @media screen and (max-width: 767px) {
     #side-btn-wrap {
-        visibility: visible;
         position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         bottom: 21.6px;
         right: 27px;
-        padding: 10px;
-        background: #fff;
-        box-shadow: 1px 1px 8px var(--themeColor);
+        background: var(--background-e);
+        box-shadow: 1px 1px 6px var(--background-e);
         border-radius: 50%;
         z-index: 20;
+        width: 40px;
+        height: 40px;
     }
 
     #custom-mobile-nav .icon {
@@ -19,8 +22,8 @@
 
     #side-btn {
         position: relative;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
     }
 
@@ -31,7 +34,7 @@
         height: 3px;
         top: 50%;
         right: 0;
-        margin-top: -1px;
+        // margin-top: -1px;
         opacity: 1;
         transition: all 0.2s ease-in-out;
     }
@@ -49,11 +52,11 @@
     }
 
     #side-btn-burger:before {
-        top: 8px;
+        top: 6px;
     }
 
     #side-btn-burger:after {
-        bottom: 8px;
+        bottom: 6px;
     }
 
     #side-btn.side-btn-active #side-btn-burger {

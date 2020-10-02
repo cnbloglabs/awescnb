@@ -27,3 +27,5 @@ export const send = $('#blog_nav_contact').attr('href')
 export const rss = 'about:blank#blocked'
 // 管理
 export const admin = 'https://i.cnblogs.com/'
+// 用户详情页
+export const userDetails = `https://home.cnblogs.com/u/${currentBlogApp}/`

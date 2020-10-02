@@ -262,7 +262,7 @@ function dragMenu(pluginOptions = {}, devOptions) {
             {
                 scrollTop: 0,
             },
-            300,
+            200,
         )
     }
 

@@ -68,10 +68,20 @@ $dragmenuBackground: map-get($dragMenu, background);
     color: inherit;
 }
 
-.custom-drag-menu .dragmenu-item:not(:last-child):hover {
-    transform: translateY(-5px);
-    transition: 0.25s all;
+.custom-drag-menu .dragmenu-item {
+    &:hover {
+        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+        transition: 0.25s all;
+    }
+    &:active {
+        filter: brightness(0.8);
+        transition: 0.25s all;
+    }
 }
+
+// .custom-drag-menu .dragmenu-item:not(:last-child):hover {
+//     // transform: translateY(-5px);
+// }
 
 .dragmenu-item i {
     font-style: normal;
@@ -88,7 +98,8 @@ $dragmenuBackground: map-get($dragMenu, background);
 }
 
 @media screen and (max-width: 767px) {
-    .custom-drag-menu .dragmenu-item:not(:last-child):hover {
+    .custom-drag-menu
+        .dragmenu-item:not(:last-child):hover {
         transform: none;
     }
     .custom-drag-menu {

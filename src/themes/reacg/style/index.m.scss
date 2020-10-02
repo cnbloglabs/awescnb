@@ -1,9 +1,3 @@
-@media screen and (max-width: 1366px) {
-    #sideBarMain {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 767px) {
     .postBody {
         padding: 0;
@@ -97,7 +91,7 @@
         text-overflow: ellipsis;
     }
     #sideBar {
-        visibility: hidden;
+        display: none;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -108,7 +102,7 @@
         max-width: 100vw;
         background-color: var(--background-w);
         overflow-y: scroll;
-        clip-path: circle(30px at calc(100%) 100%);
+        // clip-path: circle(30px at calc(100%) 100%);
         z-index: 12;
         #sidebar_news {
             margin-bottom: 0;
@@ -133,11 +127,6 @@
             width: 43.2px;
             height: 43.2px;
         }
-    }
-    // 插件样式覆盖
-    body .custom-drag-menu {
-        right: 86px !important;
-        bottom: 22px;
     }
     // 分页器
     .topicListFooter {

@@ -2,10 +2,9 @@
 import Typed from 'typed.js'
 import { signatureConfig } from '@config/plugins'
 
-function build(options) {
-    const { selector } = options
-    const signature = `<div class='custom-signature'><span></span></div>`
-    $(selector).append(signature)
+function build(selector) {
+    const el = `<div class='custom-signature'><span></span></div>`
+    $(selector).append(el)
 }
 
 function typed(contents) {
@@ -18,12 +17,21 @@ function typed(contents) {
 export default (devOptions, pluginOptions) => {
     const { enable, contents } = signatureConfig(devOptions)
     if (!enable) return
-    const pluginConfig = {
+
+    let pluginConfig = {
         selector: '#sidebar_news',
     }
+
     if (pluginOptions) {
-        Object.assign({}, pluginConfig, pluginOptions)
+        pluginConfig = Object.assign(
+            {},
+            pluginConfig,
+            pluginOptions,
+        )
     }
-    build(pluginConfig)
+
+    const { selector } = pluginConfig
+
+    build(selector)
     typed(contents)
 }

@@ -69,3 +69,14 @@ $signature: (
 @import '@plugins/barrage/index.scss';
 @import '@plugins/mode/index.scss';
 @import './catalog.scss';
+
+// add - start
+
+// drag menu start
+@media screen and (max-width: 767px) {
+    body .custom-drag-menu {
+        right: 86px !important;
+        bottom: 22px;
+    }
+}
+// drag menu end

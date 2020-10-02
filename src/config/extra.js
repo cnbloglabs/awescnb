@@ -10,7 +10,7 @@ const getThemeOptions = devOptions => {
         title: '',
         avatar: 'https://api.uomg.com/api/rand.avatar',
         favicon: '',
-        contentSize: 'mid',
+        contentSize: 'mid', // disabled
         headerBackground:
             'https://api.uomg.com/api/rand.avatar',
     }
