@@ -7,6 +7,8 @@ $md: (
     summaryOpen: #0984e3,
     markBg: var(--themeColor),
     kbdBg: #fafbfc,
+    singleLineCoodeBg: var(--md-singlelinecode-bg),
+    singleLineCoodeColor: #15a7a7,
 );
 
 @import '@/assets/style/markdown';

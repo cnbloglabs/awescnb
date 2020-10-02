@@ -249,7 +249,8 @@
 											<li>第二项</li>
 										</ul>
 										<h2 id="代码">代码</h2>
-										<p><code>single</code></p>
+										<p>如果使用 css <code>transition</code> 属性，在您切换模式时应该给顶层元素一个 class，例如
+											<code>mode-change</code> ，在切换完成之后再将它移除。scss 代码大至如下：</p>
 										<pre><code class="language-javascript hljs">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   alert(<span class="hljs-string">'RUNOOB'</span>)
 })

@@ -54,14 +54,17 @@ function build(
     }
     const ele = `<span class='emoji-button'>🍺</span>`
     $('.commentbox_title_right').prepend(ele)
+
     const EmojiButton = window.EmojiButton
-    const button = document.querySelector('.emoji-button')
     const picker = new EmojiButton(emojiConfig)
+
     picker.on('emoji', emoji => {
         document.querySelector(
             '#tbCommentBody',
         ).value += emoji
     })
+
+    const button = document.querySelector('.emoji-button')
     button.addEventListener('click', () => {
         picker.togglePicker(button)
     })
