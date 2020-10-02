@@ -15,13 +15,14 @@ import notice from '@plugins/notice'
 import click from '@plugins/click'
 import player from '@plugins/player'
 import mode from '@plugins/mode'
+import titleFavicon from '@plugins/titleFavicon'
 import menu from './menu'
 
-const themeColotOptions = {
+const themeColorConfig = {
     color: '#1B86F9',
 }
 
-const signatureOptions = {
+const signatureConfig = {
     enable: true,
     contents: [
         '欢迎使用皮肤<b style="color:#3742fa">Geek</b>',
@@ -59,13 +60,13 @@ const catalogPluginConfig = {
 module.exports = () => {
     background()
     catalog(catalogPluginConfig)
-    themeColor(themeColotOptions)
+    themeColor(themeColorConfig)
     highlight()
     copy()
     linenumbers()
     postMessage()
     commentsAvatars()
-    signature(signatureOptions, signaturePluginConfig)
+    signature(signatureConfig, signaturePluginConfig)
     emoji()
     imagebox()
     postSignature()
@@ -74,4 +75,5 @@ module.exports = () => {
     player(playerOptions)
     menu()
     mode(modeOptions)
+    titleFavicon()
 }
