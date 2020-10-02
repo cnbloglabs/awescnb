@@ -40,7 +40,7 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
 #cnblogs_post_body,
 .cnblogs-post-body,
 .cnblogs-markdown {
-    line-height: 1.5;
+    line-height: 1.75;
     word-wrap: break-word;
     h1,
     h2,
@@ -77,7 +77,7 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
     }
     p {
         font-size: 15px;
-        line-height: 1.6em;
+        line-height: inherit;
         margin-top: 22px;
         margin-bottom: 22px;
     }
@@ -90,7 +90,7 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
         margin: 10px 0;
         padding-left: 18px;
         li {
-            line-height: 28px;
+            line-height: inherit;
             &:hover {
                 cursor: default;
             }
@@ -99,7 +99,7 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
     ul {
         margin: 10px 0px 10px 21.6px;
         li {
-            line-height: 24px;
+            line-height: inherit;
             &:hover {
                 cursor: default;
             }

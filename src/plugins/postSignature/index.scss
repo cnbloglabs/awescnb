@@ -6,7 +6,10 @@ $postSignature: (
 
 $psignaturePrimary: map-get($postSignature, primary);
 $psignatureBackground: map-get($postSignature, background);
-$psignatureBorderRadius: map-get($postSignature, borderRadius);
+$psignatureBorderRadius: map-get(
+    $postSignature,
+    borderRadius
+);
 
 #post-signature {
     position: relative;
@@ -33,7 +36,7 @@ $psignatureBorderRadius: map-get($postSignature, borderRadius);
         content: '!';
         background-color: $psignaturePrimary;
         position: absolute;
-        top: 20px;
+        top: 16px;
         left: -12px;
         color: #fff;
         width: 18px;
