@@ -29,7 +29,7 @@ function buildInfo() {
     const followers = getFollowers()
     const following = getFollowing()
     const el = `<div class="custom-info">
-        <a class='custom-name' href="${index}">${name}</a>
+        <a class='custom-name' href="${index}">昵称：${name}</a>
         <a href="${userDetails}">园龄：${date}</a>
         <a href="${followersDetailsUrl}">粉丝：${followers}</a>
         <a href="${followingDetailsUrl}">关注：${following}</a>

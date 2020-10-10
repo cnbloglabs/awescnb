@@ -73,6 +73,6 @@
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 #ef8f6e;
+        box-shadow: 0 0 0 0 var(--themeColor);
     }
 }
