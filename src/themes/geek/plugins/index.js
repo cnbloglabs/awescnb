@@ -108,8 +108,8 @@ const catalogPluginConfig = {
 }
 
 if (
-    (notationConfig.enable && env === 'dev') ||
-    window.opts.notation
+    (env === 'dev' && notationConfig.enable) ||
+    (env === 'prod' && window.opts.notation.enable)
 ) {
     require('./style/notation.scss')
 }
