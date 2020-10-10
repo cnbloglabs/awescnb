@@ -7,16 +7,6 @@ import {
 
 const pageName = currentPage()
 const annotateList = []
-// const annotateList = [
-//     {
-//         page: 'all',
-//         selector: '#Header1_HeaderTitle',
-//         config: {
-//             type: 'underline',
-//             color: '#2196F3',
-//         },
-//     },
-// ]
 
 const buildGroup = (annotate, customList) => {
     const group = []
@@ -26,13 +16,14 @@ const buildGroup = (annotate, customList) => {
                 selector,
             )
             if (!element.length) return
-            if (element.length === 1)
+            if (element.length === 1) {
                 group.push(
                     annotate(
                         document.querySelector(selector),
                         config,
                     ),
                 )
+            }
             if (element.length > 1) {
                 element.forEach(function(item) {
                     group.push(annotate(item, config))
@@ -50,15 +41,18 @@ const buildNotation = (
 ) => {
     setTimeout(() => {
         const group = buildGroup(annotate, customList)
+        console.log('buildNotation', group)
         const ag = annotationGroup(group)
         ag.show()
     }, 1000)
 }
 
 export default (customList = annotateList, devOptions) => {
+    if (pageName !== 'post') return
     const { enable } = notationConfig(devOptions)
     if (!enable) return
     if (!customList.length) return
+
     cacheScript(notationJs, () => {
         const {
             annotate,
@@ -67,3 +61,15 @@ export default (customList = annotateList, devOptions) => {
         buildNotation(annotate, annotationGroup, customList)
     })
 }
+
+// How to use ?
+// const annotateList = [
+//     {
+//         page: 'all',
+//         selector: '#Header1_HeaderTitle',
+//         config: {
+//             type: 'underline',
+//             color: '#2196F3',
+//         },
+//     },
+// ]
