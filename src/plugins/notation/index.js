@@ -15,7 +15,7 @@ const buildGroup = (annotate, customList) => {
             const element = document.querySelectorAll(
                 selector,
             )
-            if (!element.length) return
+            if (!element.length) continue
             if (element.length === 1) {
                 group.push(
                     annotate(
@@ -41,7 +41,6 @@ const buildNotation = (
 ) => {
     setTimeout(() => {
         const group = buildGroup(annotate, customList)
-        console.log('buildNotation', group)
         const ag = annotationGroup(group)
         ag.show()
     }, 1000)
