@@ -33,6 +33,14 @@ const annotateList = [
         page: 'post',
         selector: '#cnblogs_post_body strong',
         config: {
+            type: 'circle',
+            color: '#eb4d4b',
+        },
+    },
+    {
+        page: 'post',
+        selector: '#cnblogs_post_body mark',
+        config: {
             type: 'highlight',
             color: 'yellow',
         },
