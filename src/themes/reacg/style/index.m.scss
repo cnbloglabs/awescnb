@@ -1,3 +1,19 @@
+@media screen and (max-width: 1024px) {
+    #header {
+        padding-left: 2vw;
+    }
+    #catalog {
+        display: none;
+    }
+    #mainContent {
+        margin-left: 0;
+        width: 73vw;
+    }
+    #sideBar {
+        width: 23vw;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .postBody {
         padding: 0;

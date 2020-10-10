@@ -2,7 +2,8 @@ import './index.scss'
 
 // 只触发一次向上或向下
 // 如果又重新反向滚动则再触发一次
-function scrollOnce() {
+
+export default () => {
     function scrollFunc() {
         let scrollDirection
         if (!scrollAction) {
@@ -29,15 +30,11 @@ function scrollOnce() {
                 $('#catalog').addClass('catalog-scroll-up') // 当头部导航隐藏目录随之向上移动
             } else {
                 $('#header').removeClass('header-hide')
-                $('#catalog').removeClass('catalog-scroll-up')
+                $('#catalog').removeClass(
+                    'catalog-scroll-up',
+                )
             }
             originalDir = direction
         }
     })
 }
-
-function scroll() {
-    scrollOnce()
-}
-
-export default scroll

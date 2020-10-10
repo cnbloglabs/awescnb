@@ -69,6 +69,7 @@
             <br />
             <a href="" title="Documentation">📖</a> 
             <a href="" title="Ideas, Planning, & Feedback">🤔</a>
+            <a href="" title="Popularize">📣</a>
         </td>
         <td align="center">
             <a href="https://www.cnblogs.com/gshang/">

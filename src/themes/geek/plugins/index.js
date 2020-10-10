@@ -16,7 +16,31 @@ import click from '@plugins/click'
 import player from '@plugins/player'
 import mode from '@plugins/mode'
 import titleFavicon from '@plugins/titleFavicon'
+import notation from '@plugins/notation'
 import menu from './menu'
+
+const annotateList = [
+    {
+        page: 'post',
+        selector: '#cb_post_title_url',
+        config: {
+            type: 'underline',
+            color: '#6D6DFF',
+        },
+    },
+    // {
+    //     page: 'post',
+    //     selector: '#cnblogs_post_body>h2',
+    //     config: {
+    //         type: 'box',
+    //         color: 'var(--themeColor)',
+    //     },
+    // },
+]
+
+const notationConfig = {
+    enable: false,
+}
 
 const themeColorConfig = {
     color: '#1B86F9',
@@ -55,6 +79,7 @@ const playerOptions = {
 const catalogPluginConfig = {
     selector: '#sidebar_news',
     fn: 'before',
+    scrollContainer: '#mainContent',
 }
 
 module.exports = () => {
@@ -76,4 +101,5 @@ module.exports = () => {
     menu()
     mode(modeOptions)
     titleFavicon()
+    notation(annotateList, notationConfig)
 }

@@ -49,8 +49,8 @@ function build(selector, fn) {
 /**
  * 标题动态高亮
  */
-function setActiveTitle() {
-    $('#mainContent, body').scroll(
+function setActiveTitle(scrollContainer) {
+    $(scrollContainer).scroll(
         throttle(
             function() {
                 for (
@@ -117,11 +117,12 @@ export default (pluginOptions = {}, devOptions) => {
     const extraOptions = {
         selector: '',
         fn: 'before',
+        scrollContainer: window,
     }
 
     $.extend(true, extraOptions, pluginOptions)
     const { enable } = catalogConfig(devOptions)
-    const { selector, fn } = extraOptions
+    const { selector, fn, scrollContainer } = extraOptions
 
     if (
         enable &&
@@ -130,7 +131,7 @@ export default (pluginOptions = {}, devOptions) => {
         userAgent() === 'pc'
     ) {
         build(selector, fn)
-        setActiveTitle()
+        setActiveTitle(scrollContainer)
         toggle()
     }
 }

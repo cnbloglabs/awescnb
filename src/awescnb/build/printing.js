@@ -31,7 +31,8 @@ import env from '@/constants/env'
 
 const log = [
     {
-        str: '# # # # # # # # # # # # # # # # # # # # # # # #',
+        str:
+            '# # # # # # # # # # # # # # # # # # # # # # # #',
         color: '#1e90ff',
     },
     {
@@ -39,7 +40,7 @@ const log = [
         color: '#eb4d4b',
     },
     {
-        str: '# 🎉 博客园发烧友而生！',
+        str: '# 🎉 为博客园发烧友而生！',
         color: '#f0932b',
     },
     {
@@ -59,7 +60,8 @@ const log = [
         color: '#55efc4',
     },
     {
-        str: '# 📑 文档:https://guangzan.gitee.io/awescnb-docs',
+        str:
+            '# 📑 文档:https://guangzan.gitee.io/awescnb-docs',
         color: '#fd79a8',
     },
     {
@@ -67,11 +69,13 @@ const log = [
         color: '#7ed6df',
     },
     {
-        str: '# 🌏 GitHub:https://github.com/guangzan/awescnb',
+        str:
+            '# 🌏 GitHub:https://github.com/guangzan/awescnb',
         color: '#f368e0',
     },
     {
-        str: '# # # # # # # # # # # # # # # # # # # # # # # #',
+        str:
+            '# # # # # # # # # # # # # # # # # # # # # # # #',
         color: '#1e90ff',
     },
 ]

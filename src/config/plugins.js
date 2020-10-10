@@ -260,6 +260,7 @@ export const postBottomimageConfig = devOptions => {
 export const postSignatureConfig = devOptions => {
     const defaultOptions = {
         enable: true,
+        enableLicense: true,
         content: [],
         licenseName: '',
         licenseLink: '',
@@ -320,6 +321,17 @@ export const signatureConfig = devOptions => {
     return mergeOptions(
         defaultOptions,
         window.opts.signature,
+        devOptions,
+    )
+}
+
+export const notationConfig = devOptions => {
+    const defaultOptions = {
+        enable: false,
+    }
+    return mergeOptions(
+        defaultOptions,
+        window.opts.notation,
         devOptions,
     )
 }

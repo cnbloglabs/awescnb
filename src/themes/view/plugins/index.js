@@ -16,6 +16,61 @@ import notice from '@plugins/notice'
 import background from '@plugins/background'
 import mode from '@plugins/mode'
 
+const annotateList = [
+    {
+        page: 'all',
+        selector: '#Header1_HeaderTitle',
+        config: {
+            type: 'underline',
+            color: '#2196F3',
+        },
+    },
+    {
+        page: 'post',
+        selector: '#cb_post_title_url',
+        config: {
+            type: 'highlight',
+            color: '#FFF176',
+        },
+    },
+    {
+        page: 'post',
+        selector: 'mark',
+        config: {
+            type: 'highlight',
+            color: '#FFD54F',
+        },
+    },
+    {
+        page: 'post',
+        selector: 's',
+        config: {
+            type: 'strike-through',
+            color: '#FF0000',
+        },
+    },
+    {
+        page: 'post',
+        selector: 'u',
+        config: {
+            type: 'underline',
+            color: '#2196F3',
+        },
+    },
+    {
+        page: 'post',
+        selector: 'strong',
+        config: {
+            type: 'circle',
+            color: '#F44336',
+        },
+    },
+]
+
+const notationConfig = {
+    enable: true,
+}
+
 module.exports = () => {
     commentsAvatars()
     footer()
@@ -29,7 +84,7 @@ module.exports = () => {
     notice()
     signature()
     menu()
-    notation()
+    notation(annotateList, notationConfig)
     player()
     background()
     mode()

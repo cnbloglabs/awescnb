@@ -49,6 +49,7 @@ body {
 }
 
 #mainContent {
+    position: relative;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 40vh 1fr;
@@ -995,6 +996,12 @@ body {
 
 /* 历史上的今天 */
 #HistoryToday {
+    display: none;
+}
+
+// 评论输入框下方导航栏
+.under-comment-nav,
+.under-comment-box-nav {
     display: none;
 }
 

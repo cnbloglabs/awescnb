@@ -41,3 +41,5 @@ export const animeJs =
     'https://cdn.bootcdn.net/ajax/libs/animejs/3.2.0/anime.min.js'
 export const mediaZoomJs =
     'https://cdn.bootcdn.net/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js'
+export const notationJs =
+    'https://unpkg.com/rough-notation@0.4.0/lib/rough-notation.iife.js'
