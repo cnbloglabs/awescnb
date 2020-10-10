@@ -63,7 +63,6 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
     }
     code {
         font-weight: 700;
-        // padding: 0.065em 0.4em !important;
         color: $singleLineCoodeColor !important;
         background-color: $singleLineCoodeBg !important;
     }

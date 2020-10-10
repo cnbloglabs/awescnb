@@ -1,107 +1,46 @@
-/* 富文本编辑器 start*/
-.cnblogs_code_collapse,
-.cnblogs_code_toolbar,
-.code_img_opened,
-.code_img_closed {
-    display: none;
-}
-.cnblogs_code_hide {
-    display: block !important;
-}
-.cnblogs_code span {
-    background-color: var(--hl-base) !important;
-}
-#cnblogs_post_body .cnblogs_code {
-    border: none;
-    padding: 0;
-    padding-top: 10px;
-    border-radius: 4px;
-    pre {
-        overflow: auto;
-        font-family: Consolas, Lucida Console, Monaco,
-            Andale Mono, Ubuntu Mono, monospace !important;
-        display: block !important;
-        padding: 0.5em;
-        color: var(--hl-mono-1) !important;
-        background-color: var(--hl-base) !important;
-        border: none !important;
-        white-space: pre;
-        &:before {
-            height: 35px;
-        }
-    }
-    /* 注释 */
-    span[style='color: #008000;'] {
-        color: var(--hl-mono-3) !important;
-        font-style: italic;
-    }
-    span[style='background-color: #f5f5f5; color: #000000;'],
-    span[style='color: #000000;'] {
-        color: var(--hl-mono-1) !important;
-    }
-    span[style='background-color: #f5f5f5; color: #800000;'] {
-        color: var(--hl-hue-2) !important;
-    }
-    span[style='color: #0000ff;'],
-    span[style='background-color: #f5f5f5; color: #0000ff;'] {
-        color: var(--hl-hue-3) !important;
-    }
-    span[style='color: #800000;'],
-    span[style='color: #ff0000;'],
-    span[style='background-color: #f5f5f5; color: #ff0000;'] {
-        color: var(--hl-hue-4) !important;
-    }
-    span[style='color: #8b0000;'] {
-        color: var(--hl-hue-6) !important;
-    }
-}
-/* 富文本编辑器 end */
+$background: var(--hl-base);
+$codeFontFamily: Consolas, Lucida Console, Monaco,
+    Andale Mono, Ubuntu Mono, monospace;
 
-.cnblogs-markdown pre,
-.cnblogs_code {
-    padding-top: 10px;
-    background: var(--hl-base);
-    &::before {
-        border-radius: 4px;
-        content: ' ';
-        display: block;
-        height: 24px;
-        background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
-            no-repeat;
-        background-size: 65px 23px;
-        background-position-x: 15px;
-    }
-}
-
+// !markdown
 #blog-comments-placeholder,
 #cnblogs_post_body {
     pre {
         position: relative;
         padding: 10px 0;
         border-radius: 4px;
+        background: $background;
+        &::before {
+            border-radius: 4px;
+            content: ' ';
+            display: block;
+            height: 24px;
+            background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
+                no-repeat;
+            background-size: 65px 23px;
+            background-position-x: 15px;
+        }
     }
+    // 单行代码及代码块
     code {
-        font-family: Consolas, Lucida Console, Monaco,
-            Andale Mono, Ubuntu Mono, monospace !important;
+        font-family: $codeFontFamily !important;
         font-size: 0.87em !important;
         margin: 0;
         word-break: break-word !important;
         border: none !important;
-        // padding: 0 !important;
-        // background: none !important;
-        // color: #c7254e !important;
+    }
+    // 代码块
+    .hljs {
+        display: block !important;
+        color: var(--hl-mono-1) !important;
+        background: $background !important;
+        border: none !important;
+        padding: 10px 10px 0 !important;
+        font-weight: normal;
     }
     li code {
         font-size: 12px !important;
         font-weight: 700;
-    }
-    .hljs {
-        display: block !important;
-        color: var(--hl-mono-1) !important;
-        background: var(--hl-base) !important;
-        border: none !important;
-        padding: 10px 10px 0 !important;
-        font-weight: normal;
     }
     .hljs-tag {
         color: var(--hl-tag);
@@ -163,5 +102,60 @@
     }
     .hljs-link {
         text-decoration: underline;
+    }
+}
+
+// *TinyMCE
+#cnblogs_post_body {
+    .cnblogs_code {
+        border: none;
+        background: $background;
+        pre {
+            &::before {
+                background-size: 65px 23px;
+                background-position: -3px -5px;
+            }
+        }
+        & > img {
+            display: none;
+        }
+        span {
+            background-color: $background !important;
+            &[style='color: #008000;'] {
+                color: var(--hl-mono-3) !important;
+                font-style: italic;
+            }
+            &[style='color: rgba(0, 128, 128, 1);'] {
+                color: red !important;
+            }
+            &[style='background-color: #f5f5f5; color: #000000;'],
+            &[style='color: #000000;'] {
+                color: var(--hl-mono-1) !important;
+            }
+            &[style='background-color: #f5f5f5; color: #800000;'] {
+                color: var(--hl-hue-2) !important;
+            }
+            &[style='color: #0000ff;'],
+            &[style='background-color: #f5f5f5; color: #0000ff;'] {
+                color: var(--hl-hue-3) !important;
+            }
+            &[style='color: #800000;'],
+            &[style='color: #ff0000;'],
+            &[style='background-color: #f5f5f5; color: #ff0000;'] {
+                color: var(--hl-hue-4) !important;
+            }
+            &[style='color: #8b0000;'] {
+                color: var(--hl-hue-6) !important;
+            }
+        }
+    }
+    .cnblogs_code_collapse,
+    .cnblogs_code_toolbar,
+    .code_img_opened,
+    .code_img_closed {
+        display: none;
+    }
+    .cnblogs_code_hide {
+        display: block;
     }
 }
