@@ -515,7 +515,8 @@ body {
                 right: 10.8px;
                 width: 75.6px;
                 height: 32.4px;
-                color: var(--text-a);
+                color: #fff;
+                font-weight: 700;
                 border-radius: 4px;
                 border: none;
                 background-color: #00a1d6;
@@ -990,24 +991,11 @@ body {
         filter: brightness(0.9);
         border-radius: 3px;
         margin-right: 0;
+        background-color: var(--background-e);
+        color: var(--text-3);
         @include text-over();
         &:not(:nth-child(1)) {
             margin-top: 5px;
-        }
-        &:nth-child(1) {
-            background-color: var(--themeColor);
-        }
-        &:nth-child(3) {
-            background-color: #feca57;
-        }
-        &:nth-child(5) {
-            background-color: #ff6b6b;
-        }
-        &:nth-child(7) {
-            background-color: #48dbfb;
-        }
-        &:nth-child(9) {
-            background-color: #10ac84;
         }
     }
 }

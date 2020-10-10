@@ -11,7 +11,6 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
         border-radius: 4px;
         background: $background;
         &::before {
-            border-radius: 4px;
             content: ' ';
             display: block;
             height: 24px;
@@ -110,6 +109,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
     .cnblogs_code {
         border: none;
         background: $background;
+        border-radius: 4px;
         pre {
             &::before {
                 background-size: 65px 23px;
