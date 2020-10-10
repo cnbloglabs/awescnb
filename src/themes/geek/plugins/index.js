@@ -65,7 +65,7 @@ const annotateList = [
 ]
 
 const notationConfig = {
-    enable: true,
+    enable: false,
 }
 
 const themeColorConfig = {
@@ -108,9 +108,14 @@ const catalogPluginConfig = {
     scrollContainer: '#mainContent',
 }
 
+const userNotationConfig = window.opts.notation
+const enableNotation = userNotationConfig
+    ? userNotationConfig.enable
+    : false
+
 if (
     (env === 'dev' && notationConfig.enable) ||
-    (env !== 'dev' && window.opts.notation.enable)
+    (env !== 'dev' && enableNotation)
 ) {
     insertStyle(`
         #cnblogs_post_body u,s {
