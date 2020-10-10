@@ -109,7 +109,7 @@ const catalogPluginConfig = {
 
 if (
     (env === 'dev' && notationConfig.enable) ||
-    (env === 'prod' && window.opts.notation.enable)
+    (env !== 'dev' && window.opts.notation.enable)
 ) {
     require('./style/notation.scss')
 }
