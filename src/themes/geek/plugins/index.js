@@ -18,6 +18,7 @@ import mode from '@plugins/mode'
 import titleFavicon from '@plugins/titleFavicon'
 import notation from '@plugins/notation'
 import menu from './menu'
+import env from '@constants/env'
 
 const annotateList = [
     {
@@ -28,14 +29,30 @@ const annotateList = [
             color: '#6D6DFF',
         },
     },
-    // {
-    //     page: 'post',
-    //     selector: '#cnblogs_post_body>h2',
-    //     config: {
-    //         type: 'box',
-    //         color: 'var(--themeColor)',
-    //     },
-    // },
+    {
+        page: 'post',
+        selector: '#cnblogs_post_body strong',
+        config: {
+            type: 'highlight',
+            color: 'yellow',
+        },
+    },
+    {
+        page: 'post',
+        selector: '#cnblogs_post_body u',
+        config: {
+            type: 'underline',
+            color: '#10ac84',
+        },
+    },
+    {
+        page: 'post',
+        selector: '#cnblogs_post_body s',
+        config: {
+            type: 'strike-through',
+            color: '#ff4757',
+        },
+    },
 ]
 
 const notationConfig = {
@@ -80,6 +97,13 @@ const catalogPluginConfig = {
     selector: '#sidebar_news',
     fn: 'before',
     scrollContainer: '#mainContent',
+}
+
+if (
+    (notationConfig.enable && env === 'dev') ||
+    window.opts.notation
+) {
+    require('./style/notation.scss')
 }
 
 module.exports = () => {

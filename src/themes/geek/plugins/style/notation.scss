@@ -6,4 +6,11 @@
     & > h2 {
         display: inline-block;
     }
+    u,
+    s {
+        text-decoration: none;
+    }
+    strong {
+        font-weight: normal;
+    }
 }
