@@ -1,4 +1,5 @@
 import './style/index.scss'
+import { insertStyle } from '@tools'
 import background from '@plugins/background'
 import catalog from '@plugins/catalog'
 import themeColor from '@plugins/themeColor'
@@ -64,7 +65,7 @@ const annotateList = [
 ]
 
 const notationConfig = {
-    enable: false,
+    enable: true,
 }
 
 const themeColorConfig = {
@@ -111,7 +112,17 @@ if (
     (env === 'dev' && notationConfig.enable) ||
     (env !== 'dev' && window.opts.notation.enable)
 ) {
-    require('./style/notation.scss')
+    insertStyle(`
+        #cnblogs_post_body u,s {
+            text-decoration: none;
+        }
+        #cnblogs_post_body  strong {
+            font-weight: normal;
+        }
+        #cnblogs_post_body mark {
+            background: none;
+        }
+    `)
 }
 
 module.exports = () => {

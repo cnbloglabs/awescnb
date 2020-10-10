@@ -4,7 +4,7 @@ module.exports = {
     eslint: true,
     sourceMap: true,
     openBrowser: true,
-    openAnalyzer: true,
+    openAnalyzer: false,
     cssExtract: false,
 }
 

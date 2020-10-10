@@ -1,4 +1,16 @@
 /**
+ * 插入css
+ * @param {String} stylesheet
+ */
+function insertStyle(style) {
+    let styleElement = document.createElement('style')
+    styleElement.innerHTML = style
+    document
+        .getElementsByTagName('head')[0]
+        .appendChild(styleElement)
+}
+
+/**
  * 合并对象
  * @param {Object} 原对象
  * @param {Object} 新对象
@@ -28,9 +40,13 @@ function mousewheel(upCallback, downCallback) {
         upCallback()
         removeListener()
     }
-    $(document).on('mousewheel DOMMouseScroll', function(e) {
+    $(document).on('mousewheel DOMMouseScroll', function(
+        e,
+    ) {
         // e.preventDefault()
-        const wheel = e.originalEvent.wheelDelta || -e.originalEvent.detail
+        const wheel =
+            e.originalEvent.wheelDelta ||
+            -e.originalEvent.detail
         const delta = Math.max(-1, Math.min(1, wheel))
         delta < 0 ? up() : down()
     })
@@ -84,9 +100,11 @@ function isElementInViewport(el) {
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
+            (window.innerHeight ||
+                document.documentElement.clientHeight) &&
         rect.right <=
-            (window.innerWidth || document.documentElement.clientWidth)
+            (window.innerWidth ||
+                document.documentElement.clientWidth)
     )
 }
 
@@ -118,7 +136,9 @@ function isNight() {
  * @retuens Boolean
  */
 function isMd() {
-    const bool = $('#cnblogs_post_body').hasClass('cnblogs-markdown')
+    const bool = $('#cnblogs_post_body').hasClass(
+        'cnblogs-markdown',
+    )
     return bool
 }
 
@@ -128,7 +148,10 @@ function isMd() {
  * @param {color} String
  */
 function prettyLog(str, color = '#ffb3cc') {
-    console.log(`%c  ${str}`, `color: ${color}; font-weight: bold;`)
+    console.log(
+        `%c  ${str}`,
+        `color: ${color}; font-weight: bold;`,
+    )
 }
 
 /**
@@ -219,9 +242,12 @@ function unpass(show) {
         body.style.top = ''
     } else {
         let scrollTop =
-            document.body.scrollTop || document.documentElement.scrollTop
+            document.body.scrollTop ||
+            document.documentElement.scrollTop
         document.body.style.cssText +=
-            'position:fixed;width:100%;top:-' + scrollTop + 'px;'
+            'position:fixed;width:100%;top:-' +
+            scrollTop +
+            'px;'
     }
 }
 
@@ -322,7 +348,8 @@ const throttle = (func, wait, mustRun) => {
 const randomProperty = obj => {
     let result
     let count = 0
-    for (let prop in obj) if (Math.random() < 1 / ++count) result = prop
+    for (let prop in obj)
+        if (Math.random() < 1 / ++count) result = prop
     return result
 }
 
@@ -340,7 +367,11 @@ const randomColor = type => {
         const a = 0.6
         res = `rgba(${r},${g},${b},${a})`
     } else if (type === '16') {
-        res = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+        res =
+            '#' +
+            Math.floor(Math.random() * 0xffffff).toString(
+                16,
+            )
     } else {
         const colors = type || [
             '#FE0302',
@@ -356,7 +387,9 @@ const randomColor = type => {
             '#CC0273',
             '#CC0273',
         ]
-        const random = Math.floor(Math.random() * colors.length)
+        const random = Math.floor(
+            Math.random() * colors.length,
+        )
         res = colors[random]
     }
     return res
@@ -495,4 +528,5 @@ export {
     isEntrylistPage,
     isAlbumPage,
     mergeOptions,
+    insertStyle,
 }
