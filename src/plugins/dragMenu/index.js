@@ -247,7 +247,7 @@ function create(options, initialOpen) {
         })
 }
 
-function dragMenu(pluginOptions = {}, devOptions) {
+function dragMenu(devOptions, pluginOptions = {}) {
     const {
         enable,
         initialOpen,

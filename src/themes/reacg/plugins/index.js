@@ -27,7 +27,11 @@ import notice from '@plugins/notice'
 import mode from '@plugins/mode'
 import catalog from '@plugins/catalog'
 
-const catalogConfig = {
+const catalogDevConfig = {
+    enable: true,
+}
+
+const catalogPluginConfig = {
     selector: '#main',
     fn: 'prepend',
 }
@@ -73,5 +77,5 @@ module.exports = () => {
     donation()
     notice()
     mode()
-    catalog(catalogConfig)
+    catalog(catalogDevConfig, catalogPluginConfig)
 }

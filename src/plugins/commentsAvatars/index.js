@@ -13,7 +13,8 @@ function buildAvatars() {
         avatar = avatar
             ? avatar.replace('http://', 'https://')
             : 'https://pic.cnblogs.com/face/sample_face.gif'
-        if (env === 'dev') avatar = 'https://www.dummyimage.com/50'
+        if (env === 'dev')
+            avatar = 'https://www.dummyimage.com/50'
         const ele = `<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`
         $(this)
             .children('.feedbackCon')
@@ -45,7 +46,8 @@ function authorRight() {
                 .text() === '楼主'
                 ? true
                 : false
-        if (isAuthor) $(this).addClass('custom-comments-author')
+        if (isAuthor)
+            $(this).addClass('custom-comments-author')
     })
 }
 
@@ -69,7 +71,9 @@ function listener() {
             option.url.indexOf('PostComment/Add') > -1 ||
             option.url.indexOf('DeleteComment') > -1
         ) {
-            new window.blogCommentManager().renderComments(0)
+            new window.blogCommentManager().renderComments(
+                0,
+            )
         }
     })
 
@@ -84,13 +88,8 @@ function listener() {
     poll($('.feedbackItem').length, build)
 }
 
-/**
- * 导出
- */
-function commentsAvatar() {
+export default () => {
     if (pageName() !== 'post') return
     if ($('.custom-comment-avatar').lenght) return
     env === 'dev' ? build() : listener()
 }
-
-export default commentsAvatar

@@ -7,7 +7,8 @@
 
 *::before,
 *::after {
-    font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
+    font-family: 'Font Awesome 5 free',
+        'Font Awesome 5 Brands';
     margin-right: 0.5em;
     font-weight: bold;
 }
@@ -30,8 +31,9 @@ body {
     color: var(--body-text-color);
     font-size: 1em;
     line-height: 1.5;
-    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    font-family: BlinkMacSystemFont, -apple-system,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         Helvetica, Arial, sans-serif;
 }
 
@@ -217,7 +219,8 @@ body {
         font-weight: 600;
         border-radius: 2px;
         font-size: 18px;
-        border-bottom: 1px solid var(--sidebar-title-border-color);
+        border-bottom: 1px solid
+            var(--sidebar-title-border-color);
         padding-bottom: 0.5rem;
     }
 
@@ -588,7 +591,8 @@ body {
         border-right: 1px solid var(--area-border-color);
         padding: 17.982px 10.8px;
         &:nth-last-child(2) {
-            border-bottom: 1px solid var(--area-border-color);
+            border-bottom: 1px solid
+                var(--area-border-color);
         }
     }
     .custom-comments-author {
@@ -767,7 +771,8 @@ body {
             background: none;
             margin-bottom: 0;
             padding: 7.56px 10.8px;
-            border-bottom: 1px solid var(--area-border-color);
+            border-bottom: 1px solid
+                var(--area-border-color);
             background-color: var(--areaTitle-bg);
             border-radius: 2px 2px 0 0;
             font-size: 12px;
@@ -786,7 +791,9 @@ body {
             background: none;
             border: none;
             .commentbox_title {
-                border-bottom-color: var(--area-border-color);
+                border-bottom-color: var(
+                    --area-border-color
+                );
             }
             .commentbox_title_left {
                 display: none;
@@ -800,7 +807,8 @@ body {
                 color: var(--text-5);
                 background: none;
                 font-size: 16px;
-                border-bottom: 1px dashed var(--area-border-color);
+                border-bottom: 1px dashed
+                    var(--area-border-color);
                 &:hover {
                     border-bottom-color: var(--themeColor);
                 }
@@ -871,6 +879,11 @@ body {
 
 /* 历史上的今天 */
 #HistoryToday {
+    display: none;
+}
+
+// new nav
+.under-comment-nav {
     display: none;
 }
 

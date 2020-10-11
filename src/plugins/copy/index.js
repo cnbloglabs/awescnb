@@ -5,16 +5,22 @@ import toast from '@plugins/toast'
 
 // 添加按钮
 function addBtns() {
-    let pres = $('#cnblogs_post_body, #blog-comments-placeholder').find('pre')
+    let pres = $(
+        '#cnblogs_post_body, #blog-comments-placeholder',
+    ).find('pre')
     if (!pres.length) return
 
     if (isMd()) {
         $.each(pres, (index, pre) => {
-            $(pre).prepend(`<div class="copy-btns">copy</div>`)
+            $(pre).prepend(
+                `<div class="copy-btns">copy</div>`,
+            )
         })
     } else {
         $.each(pres, (index, pre) => {
-            $(pre).before(`<div class="copy-btns">copy</div>`)
+            $(pre).before(
+                `<div class="copy-btns">copy</div>`,
+            )
         })
     }
 }
@@ -51,10 +57,8 @@ function click() {
     })
 }
 
-function copy() {
+export default () => {
     if (pageName() !== 'post') return
     addBtns()
     click()
 }
-
-export default copy

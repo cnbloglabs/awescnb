@@ -46,7 +46,7 @@ const buildNotation = (
     }, 1000)
 }
 
-export default (customList = annotateList, devOptions) => {
+export default (devOptions, customList = annotateList) => {
     if (pageName !== 'post') return
     const { enable } = notationConfig(devOptions)
     if (!enable) return

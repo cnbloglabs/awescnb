@@ -113,7 +113,7 @@ function toggle() {
     })
 }
 
-export default (pluginOptions = {}, devOptions) => {
+export default (devOptions, pluginOptions = {}) => {
     const extraOptions = {
         selector: '',
         fn: 'before',

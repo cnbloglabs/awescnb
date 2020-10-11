@@ -1,5 +1,4 @@
 import './style/index.scss'
-import { insertStyle } from '@tools'
 import background from '@plugins/background'
 import catalog from '@plugins/catalog'
 import themeColor from '@plugins/themeColor'
@@ -21,7 +20,7 @@ import notation from '@plugins/notation'
 import menu from './menu'
 import env from '@constants/env'
 
-const annotateList = [
+const notationPluginConfig = [
     {
         page: 'post',
         selector: '#cb_post_title_url',
@@ -64,8 +63,8 @@ const annotateList = [
     },
 ]
 
-const notationConfig = {
-    enable: false,
+const notationDevConfig = {
+    enable: true,
 }
 
 const themeColorConfig = {
@@ -102,6 +101,10 @@ const playerOptions = {
     enable: false,
 }
 
+const catalogDevConfig = {
+    enable: true,
+}
+
 const catalogPluginConfig = {
     selector: '#sidebar_news',
     fn: 'before',
@@ -114,25 +117,27 @@ const enableNotation = userNotationConfig
     : false
 
 if (
-    (env === 'dev' && notationConfig.enable) ||
+    (env === 'dev' && notationDevConfig.enable) ||
     (env !== 'dev' && enableNotation)
 ) {
-    insertStyle(`
-        #cnblogs_post_body u,s {
-            text-decoration: none;
-        }
-        #cnblogs_post_body  strong {
-            font-weight: normal;
-        }
-        #cnblogs_post_body mark {
-            background: none;
-        }
-    `)
+    $('head').append(
+        `<style>
+            #cnblogs_post_body u,s {
+                text-decoration: none;
+            }
+            #cnblogs_post_body  strong {
+                font-weight: normal;
+            }
+            #cnblogs_post_body mark {
+                background: none;
+            }
+        </style>`,
+    )
 }
 
 module.exports = () => {
     background()
-    catalog(catalogPluginConfig)
+    catalog(catalogDevConfig, catalogPluginConfig)
     themeColor(themeColorConfig)
     highlight()
     copy()
@@ -149,5 +154,5 @@ module.exports = () => {
     menu()
     mode(modeOptions)
     titleFavicon()
-    notation(annotateList, notationConfig)
+    notation(notationDevConfig, notationPluginConfig)
 }

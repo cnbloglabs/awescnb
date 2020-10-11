@@ -15,7 +15,11 @@ const notyf = new Notyf({
     ],
 })
 
-function toast(message = 'no message', type = 'success', duration = 2000) {
+export default (
+    message = 'no message',
+    type = 'success',
+    duration = 2000,
+) => {
     type !== 'success' && type !== 'error'
         ? notyf.open({
               type,
@@ -27,5 +31,3 @@ function toast(message = 'no message', type = 'success', duration = 2000) {
               duration,
           })
 }
-
-export default toast

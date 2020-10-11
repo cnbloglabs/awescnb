@@ -10,6 +10,7 @@ function build(
     showPreview,
     theme,
 ) {
+    if ($('.emoji-picker').length) return
     const emojiConfig = {
         position: 'top-start',
         style: 'native', //native twemoji
@@ -25,8 +26,8 @@ function build(
             'activities',
             'travel',
             'objects',
-            'symbols',
-            'flags',
+            // 'symbols',
+            // 'flags',
         ],
         theme,
         showRecents,
@@ -82,7 +83,6 @@ export default devOptions => {
 
     if (!enable) return
     if (pageName() !== 'post') return
-    if ($('.emoji-picker').length) return
 
     const builder = () => {
         build(
@@ -93,6 +93,7 @@ export default devOptions => {
             theme,
         )
     }
+
     cacheScript(emojijs, builder)
     window.buildEmojis = builder
 }

@@ -85,6 +85,7 @@ $dragmenuBackground: map-get($dragMenu, background);
 
 .dragmenu-item i {
     font-style: normal;
+    outline: none;
 }
 
 .dragmenu-item i::selection {

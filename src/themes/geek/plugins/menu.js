@@ -1,7 +1,11 @@
 import dragMenu from '@plugins/dragMenu'
 import toast from '@plugins/toast'
 
-const options = {
+const dragMenuDevConfig = {
+    enable: true,
+}
+
+const dragMenuPluginConfig = {
     mobileAutoClose: true,
     items: [
         // 返回顶部
@@ -55,5 +59,5 @@ const options = {
 }
 
 export default () => {
-    dragMenu(options)
+    dragMenu(dragMenuDevConfig, dragMenuPluginConfig)
 }

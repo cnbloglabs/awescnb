@@ -8,7 +8,8 @@ const enableLive2d = window.opts.live2d.enable
 function compute() {
     const percentScrolled = (
         ($(document).scrollTop() /
-            ($(document).height() - $(window).outerHeight())) *
+            ($(document).height() -
+                $(window).outerHeight())) *
         100
     ).toFixed(2)
     const percentageHeight = percentScrolled + '%'
@@ -64,8 +65,6 @@ function setBack2Top() {
     })
 }
 
-function back2top() {
+export default () => {
     setBack2Top()
 }
-
-export default back2top

@@ -1,6 +1,10 @@
 import dragMenu from '@plugins/dragMenu'
 
-const options = {
+const dragMenuDevConfig = {
+    enable: true,
+}
+
+const dragMenuPluginConfig = {
     mobileAutoClose: true,
     items: [
         // 返回顶部
@@ -32,8 +36,6 @@ const options = {
     ],
 }
 
-const menu = () => {
-    dragMenu(options)
+export default () => {
+    dragMenu(dragMenuDevConfig, dragMenuPluginConfig)
 }
-
-export default menu
