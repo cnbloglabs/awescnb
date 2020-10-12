@@ -10,19 +10,12 @@ function addBtns() {
     ).find('pre')
     if (!pres.length) return
 
-    if (isMd()) {
-        $.each(pres, (index, pre) => {
-            $(pre).prepend(
-                `<div class="copy-btns">copy</div>`,
-            )
-        })
-    } else {
-        $.each(pres, (index, pre) => {
-            $(pre).before(
-                `<div class="copy-btns">copy</div>`,
-            )
-        })
-    }
+    const position = isMd() ? 'prepend' : 'before'
+    $.each(pres, (index, pre) => {
+        $(pre)[position](
+            `<div class="copy-btns">copy</div>`,
+        )
+    })
 }
 
 // 点击事件
