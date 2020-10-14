@@ -13,4 +13,12 @@ const isLogined = window.isLogined
 //
 const skinName = window.skinName
 
-export { isVisitor, isOwner, blogId, blogApp, isLogined, skinName, visitorId }
+export {
+    isVisitor,
+    isOwner,
+    blogId,
+    blogApp,
+    isLogined,
+    skinName,
+    visitorId,
+}

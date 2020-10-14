@@ -1,6 +1,6 @@
 import './index.scss'
 import { getThemeOptions } from '@config/extra'
-
+import { isVisitor } from '@constants/cnblog'
 import {
     followersDetailsUrl,
     followingDetailsUrl,
@@ -23,6 +23,11 @@ function buildAvatar() {
     )
 }
 
+function hideFollowButton() {
+    if (isVisitor) return
+    $('#p_b_follow').hide()
+}
+
 function buildInfo() {
     const name = getBlogname()
     const date = getBlogAge()
@@ -40,4 +45,5 @@ function buildInfo() {
 export default () => {
     buildAvatar()
     buildInfo()
+    hideFollowButton()
 }

@@ -498,6 +498,11 @@ function userAgent() {
 
 export {
     isMd,
+    isPostDetailsPage,
+    isHomePage,
+    isTagListPage,
+    isEntrylistPage,
+    isAlbumPage,
     randomProperty,
     randomImgurl,
     randomColor,
@@ -522,11 +527,6 @@ export {
     getMonth,
     getQuarter,
     mousewheel,
-    isPostDetailsPage,
-    isHomePage,
-    isTagListPage,
-    isEntrylistPage,
-    isAlbumPage,
     mergeOptions,
     insertStyle,
 }
