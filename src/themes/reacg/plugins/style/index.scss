@@ -43,6 +43,10 @@ $signature: (
     fontSize: 1em,
 );
 
+#sidebar_news .custom-signature {
+    padding-top: 0;
+}
+
 @import '@plugins/dragMenu/index.scss';
 @import '@plugins/footer/index.scss';
 @import '@plugins/themeColor/index.scss';
