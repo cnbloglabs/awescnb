@@ -30,18 +30,16 @@
         }
     }
 }
-
+// #blog-news {
 #profile_block {
     grid-area: follow;
+    margin-top: 10px;
     font-size: 0;
     & > a {
         display: none;
     }
-    // & > :nth-child(1),
-    // & > a:first-of-type {
-    //     display: none;
-    // }
 }
+// }
 
 #p_b_follow {
     display: flex;
