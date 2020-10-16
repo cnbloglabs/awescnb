@@ -67,11 +67,11 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
         background-color: $singleLineCoodeBg !important;
     }
     a {
-        color: $linkColor;
-        border-bottom: 1px dotted $linkColor;
+        border-bottom: 2px solid $linkColor;
+        background-color: transparent;
         &:hover {
-            filter: brightness(0.8);
-            transition: color 0.2s;
+            transition: box-shadow 0.2s linear;
+            box-shadow: inset 0 -10px $linkColor;
         }
     }
     p {

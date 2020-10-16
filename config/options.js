@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'geek',
     template: 'post',
     eslint: true,
     sourceMap: true,
@@ -7,7 +7,6 @@ module.exports = {
     openAnalyzer: false,
     cssExtract: false,
 }
-
 ///////// options /////////
 // themeName - 你创建的主题文件夹名称
 // template - 本地开发要启动的页面
