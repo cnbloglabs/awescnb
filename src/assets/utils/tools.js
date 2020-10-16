@@ -476,6 +476,13 @@ function isAlbumPage() {
 }
 
 /**
+ * 是否为随笔分类页
+ */
+function isCategoryPage() {
+    return !!$('.entrylistItem').length
+}
+
+/**
  * @description 返回当前页面名称
  * @returns 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
  */
@@ -497,12 +504,15 @@ function userAgent() {
 }
 
 export {
+    isNight,
+    isElementInViewport,
     isMd,
     isPostDetailsPage,
     isHomePage,
     isTagListPage,
     isEntrylistPage,
     isAlbumPage,
+    isCategoryPage,
     randomProperty,
     randomImgurl,
     randomColor,
@@ -522,8 +532,6 @@ export {
     cacheScript,
     sleep,
     addCss,
-    isNight,
-    isElementInViewport,
     getMonth,
     getQuarter,
     mousewheel,

@@ -11,6 +11,10 @@
     grid-gap: 1rem;
 }
 
+.entrylistTitle {
+    margin-top: 1rem;
+}
+
 .custom-card,
 .entrylistItem {
     background-color: var(--card-bg);
@@ -25,23 +29,6 @@
             cubic-bezier(0.25, 0.8, 0.25, 1);
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
             0 10px 10px rgba(0, 0, 0, 0.22);
-    }
-}
-
-.first-page {
-    .custom-card,
-    .entrylistItem {
-        &:nth-child(1) {
-            // grid-column-start: 1;
-            // grid-column-end: 3;
-            .postTitle {
-                &::before {
-                    content: '\f004';
-                    font-weight: 700 !important;
-                    color: #f14668;
-                }
-            }
-        }
     }
 }
 

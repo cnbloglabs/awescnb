@@ -1,5 +1,5 @@
-import { pageName } from '@tools'
 import './index.scss'
+import { isCategoryPage, isHomePage } from '@tools'
 
 const createElements = (
     top,
@@ -36,16 +36,27 @@ const isTop = string => {
     return string.indexOf('置顶') === -1 ? false : true
 }
 
-export default () => {
-    if (pageName() !== 'index') return
+const pageElementInit = () => {
     $('.c_b_p_desc_readmore').remove()
-    $('.forFlow')
-        .addClass('index')
-        .prepend('<div class="cards-list">')
+}
 
-    const el = $('.day').find(
-        '.postTitle,.postCon,.postDesc',
-    )
+const initHomePageElement = () => {}
+
+const initCategoryPageElement = () => {
+    $('.forFlow').prepend($('.entrylistTitle'))
+}
+
+const main = ({ page, wrap, find, callback }) => {
+    const fnActions = {
+        home: 'prepend',
+        category: 'append',
+    }
+
+    const fn = fnActions[page]
+
+    $('.forFlow')[fn]('<div class="cards-list">')
+
+    const el = $(wrap).find(find)
 
     for (var i = 0; i < el.length; i += 3) {
         const firstEl = $(el.slice(i, i + 3)[0])
@@ -85,5 +96,40 @@ export default () => {
             : $('.cards-list').prepend(card)
     }
 
-    $('.day').remove()
+    callback()
+}
+
+export default () => {
+    const home = isHomePage()
+    const category = isCategoryPage()
+    if (!home && !category) return
+
+    pageElementInit()
+    let options = {}
+    if (home) {
+        initHomePageElement()
+        options = {
+            page: 'home',
+            wrap: '.day',
+            find: '.postTitle,.postCon,.postDesc',
+            callback() {
+                $('.day').remove()
+            },
+        }
+    }
+
+    if (category) {
+        initCategoryPageElement()
+        options = {
+            page: 'category',
+            wrap: '.entrylistItem',
+            find:
+                '.entrylistPosttitle,.entrylistPostSummary,.entrylistItemPostDesc',
+            callback() {
+                $('.entrylist').remove()
+            },
+        }
+    }
+
+    main(options)
 }

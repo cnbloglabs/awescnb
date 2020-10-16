@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'geek',
-    template: 'index',
+    template: 'category',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
@@ -24,7 +24,7 @@ module.exports = {
 // - tag 标签页
 // - photos 相册
 // - imgview 管理 > 相册 > 打开相册 > 点击预览
-
+// - category 随笔分类
 ///////// themes /////////s
 
 // - geek

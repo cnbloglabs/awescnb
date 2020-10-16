@@ -1,4 +1,4 @@
-import indexCards from './indexCards'
+import cards from './cards'
 import rightSide from './rightSide'
 import searchbar from './searchbar'
 import profile from './profile'
@@ -16,7 +16,7 @@ const moveFooterToMain = () => {
 module.exports = () => {
     removeClearel()
     moveFooterToMain()
-    indexCards()
+    cards()
     rightSide()
     searchbar()
     profile()
