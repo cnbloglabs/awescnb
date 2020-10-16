@@ -48,14 +48,30 @@
 .custom-card {
     display: flex;
     flex-direction: column;
-    .postTitle {
-        padding: 20px;
+    word-break: break-all;
+    &.top {
+        .custom-card-title {
+            &:before {
+                content: '\f004';
+                font-weight: 700;
+                color: #f14668;
+            }
+        }
     }
-    .postCon {
-        color: #5c5e6e;
-        padding: 0 20px 20px;
-        flex-grow: 1;
+}
+
+.custom-card-title {
+    padding: 20px;
+    &:before {
+        content: '\f15c';
+        font-weight: 400;
     }
+}
+
+.custom-card-desc {
+    color: #5c5e6e;
+    padding: 0 20px 20px;
+    flex-grow: 1;
 }
 
 .custom-card-actions {

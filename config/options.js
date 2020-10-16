@@ -1,12 +1,13 @@
 module.exports = {
     themeName: 'geek',
-    template: 'post',
+    template: 'index',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
     openAnalyzer: false,
     cssExtract: false,
 }
+
 ///////// options /////////
 // themeName - 你创建的主题文件夹名称
 // template - 本地开发要启动的页面
