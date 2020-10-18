@@ -43,7 +43,7 @@ const buildNotation = (
         const group = buildGroup(annotate, customList)
         const ag = annotationGroup(group)
         ag.show()
-    }, 1000)
+    }, 2000)
 }
 
 export default (devOptions, customList = annotateList) => {
