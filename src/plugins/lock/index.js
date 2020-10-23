@@ -29,7 +29,7 @@ function setBackground(background) {
         background === '' ? randomImage : background
     $('.lock-screen').css(
         'background-image',
-        `url(${image}/red)`,
+        `url(${image})`,
     )
 }
 
