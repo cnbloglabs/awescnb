@@ -2,11 +2,13 @@ $dragMenu: () !default;
 $dragMenu: map-merge(
     (
         background: #ccc,
+        color: #fff,
     ),
     $dragMenu
 );
 
 $dragmenuBackground: map-get($dragMenu, background);
+$dragmenuColor: map-get($dragMenu, color);
 
 .custom-drag-menu {
     position: fixed;
@@ -56,11 +58,11 @@ $dragmenuBackground: map-get($dragMenu, background);
     top: -50px;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
-    color: var(--themeColor, #fff);
+    color: $dragmenuColor;
     text-align: center;
     border-radius: 2px;
     padding: 2px 5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .dragmenu-item-tooltip::selection {

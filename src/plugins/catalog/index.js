@@ -18,7 +18,7 @@ function build(selector, fn) {
     )
 
     const $list = $('<ul>')
-    const regExp = /^h[1-3]$/
+    const regExp = /^h[1-6]$/
 
     $('#cnblogs_post_body')
         .children()
@@ -27,6 +27,7 @@ function build(selector, fn) {
                 let id
                 let text = $(this).text()
                 if (text.length === 0) return // 如果标题为空 只有 #
+
                 if (this.id !== '') {
                     id = this.id
                 } else {

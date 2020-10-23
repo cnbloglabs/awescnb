@@ -26,7 +26,7 @@ const notationPluginConfig = [
         selector: '#cb_post_title_url',
         config: {
             type: 'underline',
-            color: '#6D6DFF',
+            color: 'var(--themeColor)',
         },
     },
     // {
@@ -124,9 +124,6 @@ if (
         `<style>
             #cnblogs_post_body u,s {
                 text-decoration: none;
-            }
-            #cnblogs_post_body  strong {
-                font-weight: normal;
             }
             #cnblogs_post_body mark {
                 background: none;

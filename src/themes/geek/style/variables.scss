@@ -66,7 +66,7 @@
     --profileAvatar-border-color: rgb(240, 239, 239);
 
     --catalogList-hover: #000;
-
+    --catalog-color: #4d4d4d;
     --dragmenuItem-bg: #eee;
 
     --calendar-bg: #f6f8fa;
@@ -84,7 +84,7 @@
 // variables in dark mode
 :root[theme='dark'] {
     --body-bg: #373e57;
-    --body-color: #ccc8db;
+    --body-color: #e3e3e3;
 
     --mainContent-bg: #24273b;
 
@@ -149,7 +149,7 @@
     --profileAvatar-border-color: #151728;
 
     --catalogList-hover: #fff;
-
+    --catalog-color: #9c9cab;
     --dragmenuItem-bg: #24273b;
 
     --calendar-bg: #202234;
