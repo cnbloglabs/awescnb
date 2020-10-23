@@ -32,11 +32,10 @@
         }
     }
     ul {
-        // border-left: 1px solid
-        //     var(--sidebarBlock-border-color);
+        border-left: 1px solid
+            var(--sidebarBlock-border-color);
         li {
             margin-top: 3.618px;
-
             color: var(--catalog-color);
             &:hover {
                 color: var(--catalogList-hover);
@@ -62,11 +61,7 @@
                 height: 7px;
                 content: '';
                 border-radius: 50%;
-                background-color: var(--catalog-color);
-
-                opacity: 0;
-                transition: transform 0.2s, opacity 0.2s;
-                transform: scale(0) translateX(-10px);
+                background-color: var(--themeColor);
             }
         }
 
@@ -74,11 +69,6 @@
             color: var(--themeColor);
             font-weight: 700;
             transition: all 0.3s;
-            &::before {
-                background-color: var(--themeColor);
-                opacity: 1;
-                transform: scale(1) translateX(0);
-            }
         }
 
         .h1-list {
