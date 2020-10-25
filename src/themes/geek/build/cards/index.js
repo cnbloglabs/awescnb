@@ -65,7 +65,7 @@ const main = ({ page, wrap, find, callback }) => {
         const title = firstEl.text().trim()
         const detailUrl = firstEl.find('a').attr('href')
         const descText = secondEl.text().trim() + '...'
-        const editUrl = thirdEl.find('a').attr('href')
+        const editUrl = thirdEl.find('a:last').attr('href')
         const top = isTop(title)
         const getCounts = selector => {
             return thirdEl
@@ -106,6 +106,7 @@ export default () => {
 
     pageElementInit()
     let options = {}
+
     if (home) {
         initHomePageElement()
         options = {
