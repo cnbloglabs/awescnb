@@ -1,5 +1,9 @@
 import './index.scss'
-import { isCategoryPage, isHomePage } from '@tools'
+import {
+    isCategoryPage,
+    isHomePage,
+    HTMLDecode,
+} from '@tools'
 
 const createElements = (
     top,
@@ -15,21 +19,22 @@ const createElements = (
         ? 'custom-card top'
         : 'custom-card'
 
-    return `
-    <div class="${cardClass}">
-        <a href="${detailUrl}">
-           <div class="custom-card-title">${title}</div>
-        </a>
-        <div class="custom-card-desc">${descText}</div>
-        <div class="custom-card-actions">
-            <span><li class="fas fa-eye"></li>${viewCount}</span>
-            <span><li class="fas fa-comment-dots"></li>${commentCount}</span>
-            <span><li class="fas fa-thumbs-up"></li>${diggCount}</span>
-            <a href="${detailUrl}"><button>阅读</button></a>
-            <a href="${editUrl}"><button>编辑</button></a>
+    let el = `
+        <div class="${cardClass}">
+            <a href="${detailUrl}">
+               <div class="custom-card-title">${title}</div>
+            </a>
+            <div class="custom-card-desc">${descText}</div>
+            <div class="custom-card-actions">
+                <span><li class="fas fa-eye"></li>${viewCount}</span>
+                <span><li class="fas fa-comment-dots"></li>${commentCount}</span>
+                <span><li class="fas fa-thumbs-up"></li>${diggCount}</span>
+                <a href="${detailUrl}"><button>阅读</button></a>
+                <a href="${editUrl}"><button>编辑</button></a>
+            </div>
         </div>
-    </div>
-    `
+        `
+    return el
 }
 
 const isTop = string => {
@@ -44,6 +49,9 @@ const initHomePageElement = () => {}
 
 const initCategoryPageElement = () => {
     $('.forFlow').prepend($('.entrylistTitle'))
+    if ($('.pager').length == 2) {
+        $('.pager:first').remove()
+    }
 }
 
 const insertWrap = page => {
@@ -68,9 +76,12 @@ const main = ({ page, wrap, find, callback }) => {
         const detailUrl = firstEl.find('a').attr('href')
 
         let descText = secondEl.text().trim() + '...'
-        if (descText.substr(3, 1) === '<') {
-            descText = '&lt;' + descText.substr(4)
-        }
+
+        // 处理富文本编辑器代码块被解析成 html 以及 php 代码被解析成 HTML 注释
+        descText =
+            descText.substr(3, 1) === '<'
+                ? (descText = '&lt;' + descText.substr(4))
+                : HTMLDecode(descText)
 
         const editUrl = thirdEl.find('a:last').attr('href')
         const top = isTop(title)

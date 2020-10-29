@@ -1,4 +1,16 @@
 /**
+ * HTML反转义
+ * @param {String} string
+ */
+function HTMLDecode(text) {
+    let temp = document.createElement('div')
+    temp.innerHTML = text
+    const output = temp.innerText || temp.textContent
+    temp = null
+    return output
+}
+
+/**
  * 插入css
  * @param {String} stylesheet
  */
@@ -537,4 +549,5 @@ export {
     mousewheel,
     mergeOptions,
     insertStyle,
+    HTMLDecode,
 }
