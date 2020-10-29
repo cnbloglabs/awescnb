@@ -1,4 +1,11 @@
 $background: var(--hl-base);
+$keyword: var(--hl-hue-3);
+$string: var(--hl-hue-4);
+$plain: var(--hl-mono-1);
+$comments: var(--hl-mono-3);
+$variable: var(--hl-mono-1);
+$functions: var(--hl-hue-2);
+
 $codeFontFamily: Consolas, Lucida Console, Monaco,
     Andale Mono, Ubuntu Mono, monospace;
 
@@ -52,7 +59,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
     .hljs-doctag,
     .hljs-formula,
     .hljs-keyword {
-        color: var(--hl-hue-3);
+        color: $keyword;
     }
     .hljs-deletion,
     .hljs-name,
@@ -108,7 +115,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
 #cnblogs_post_body {
     .cnblogs_code {
         border: none;
-        background: $background;
+        background-color: $background;
         border-radius: 4px;
         pre {
             overflow: auto;
@@ -138,7 +145,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
             }
             &[style='color: #0000ff;'],
             &[style='background-color: #f5f5f5; color: #0000ff;'] {
-                color: var(--hl-hue-3) !important;
+                color: $keyword !important;
             }
             &[style='color: #800000;'],
             &[style='color: #ff0000;'],
@@ -158,5 +165,37 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
     }
     .cnblogs_code_hide {
         display: block;
+    }
+}
+.syntaxhighlighter {
+    .line.alt1,
+    .line.alt2 {
+        background-color: $background !important;
+    }
+}
+#cnblogs_post_body {
+    .cnblogs_Highlighter {
+        code {
+            background-color: $background !important;
+        }
+        .keyword {
+            color: $keyword !important;
+        }
+        .string {
+            color: $string !important;
+        }
+        .plain {
+            color: $plain !important;
+        }
+        .variable {
+            color: $variable !important;
+        }
+        .comments {
+            color: $comments !important;
+            font-style: italic !important;
+        }
+        .functions {
+            color: $functions !important;
+        }
     }
 }

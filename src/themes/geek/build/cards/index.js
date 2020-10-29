@@ -17,9 +17,9 @@ const createElements = (
 
     return `
     <div class="${cardClass}">
-       <a href="${detailUrl}">
+        <a href="${detailUrl}">
            <div class="custom-card-title">${title}</div>
-       </a>
+        </a>
         <div class="custom-card-desc">${descText}</div>
         <div class="custom-card-actions">
             <span><li class="fas fa-eye"></li>${viewCount}</span>
@@ -46,15 +46,17 @@ const initCategoryPageElement = () => {
     $('.forFlow').prepend($('.entrylistTitle'))
 }
 
-const main = ({ page, wrap, find, callback }) => {
+const insertWrap = page => {
     const fnActions = {
         home: 'prepend',
         category: 'append',
     }
-
     const fn = fnActions[page]
-
     $('.forFlow')[fn]('<div class="cards-list">')
+}
+
+const main = ({ page, wrap, find, callback }) => {
+    insertWrap(page)
 
     const el = $(wrap).find(find)
 
@@ -64,9 +66,15 @@ const main = ({ page, wrap, find, callback }) => {
         const thirdEl = $(el.slice(i, i + 3)[2])
         const title = firstEl.text().trim()
         const detailUrl = firstEl.find('a').attr('href')
-        const descText = secondEl.text().trim() + '...'
+
+        let descText = secondEl.text().trim() + '...'
+        if (descText.substr(3, 1) === '<') {
+            descText = '&lt;' + descText.substr(4)
+        }
+
         const editUrl = thirdEl.find('a:last').attr('href')
         const top = isTop(title)
+
         const getCounts = selector => {
             return thirdEl
                 .find(`${selector}`)
