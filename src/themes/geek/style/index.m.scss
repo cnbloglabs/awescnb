@@ -1,4 +1,9 @@
 @media screen and (max-width: 1366px) {
+    .pager {
+        a {
+            margin: auto;
+        }
+    }
     .topicListFooter {
         grid-column-end: 4;
     }
@@ -53,11 +58,6 @@
 
     .topicListFooter {
         grid-column-end: 2;
-    }
-
-    #homepage_bottom_pager .pager a {
-        margin: 0 5px;
-        padding: 0;
     }
 
     #blog_post_info_block #blog_post_info #div_digg {

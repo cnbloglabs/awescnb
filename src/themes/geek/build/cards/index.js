@@ -2,7 +2,7 @@ import './index.scss'
 import {
     isCategoryPage,
     isHomePage,
-    HTMLDecode,
+    // HTMLDecode,
 } from '@tools'
 
 const createElements = (
@@ -48,19 +48,22 @@ const pageElementInit = () => {
 const initHomePageElement = () => {}
 
 const initCategoryPageElement = () => {
-    $('.forFlow').prepend($('.entrylistTitle'))
     if ($('.pager').length == 2) {
         $('.pager:first').remove()
     }
 }
 
 const insertWrap = page => {
-    const fnActions = {
-        home: 'prepend',
-        category: 'append',
+    const el = '<div class="cards-list">'
+    const actions = {
+        home: () => {
+            $('.forFlow').prepend(el)
+        },
+        category: () => {
+            $('.entrylistTitle').after(el)
+        },
     }
-    const fn = fnActions[page]
-    $('.forFlow')[fn]('<div class="cards-list">')
+    actions[page]()
 }
 
 const main = ({ page, wrap, find, callback }) => {
@@ -74,15 +77,7 @@ const main = ({ page, wrap, find, callback }) => {
         const thirdEl = $(el.slice(i, i + 3)[2])
         const title = firstEl.text().trim()
         const detailUrl = firstEl.find('a').attr('href')
-
-        let descText = secondEl.text().trim() + '...'
-
-        // 处理富文本编辑器代码块被解析成 html 以及 php 代码被解析成 HTML 注释
-        descText =
-            descText.substr(3, 1) === '<'
-                ? (descText = '&lt;' + descText.substr(4))
-                : HTMLDecode(descText)
-
+        const descText = secondEl.html()
         const editUrl = thirdEl.find('a:last').attr('href')
         const top = isTop(title)
 
