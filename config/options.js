@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'geek',
-    template: 'category',
+    template: 'index',
     eslint: true,
     sourceMap: true,
     openBrowser: true,

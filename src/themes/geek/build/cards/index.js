@@ -93,21 +93,18 @@ const main = ({ page, wrap, find, callback }) => {
         const commentCount = getCounts(
             '.post-comment-count',
         )
-
-        const card = createElements(
-            top,
-            title,
-            descText,
-            viewCount,
-            commentCount,
-            diggCount,
-            detailUrl,
-            editUrl,
+        $('.cards-list').append(
+            createElements(
+                top,
+                title,
+                descText,
+                viewCount,
+                commentCount,
+                diggCount,
+                detailUrl,
+                editUrl,
+            ),
         )
-
-        $('.custom-card').length
-            ? $('.custom-card:last').after(card)
-            : $('.cards-list').prepend(card)
     }
 
     callback()
