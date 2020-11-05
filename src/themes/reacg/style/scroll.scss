@@ -51,10 +51,13 @@ body,
 }
 
 .cnblogs_code,
-#catalog ul,
 pre,
 code {
     @include scrollbar-simple(var(--themeColor));
+}
+
+#catalog ul {
+    @include scrollbar-simple(var(--background-e));
 }
 
 #cnblogs_post_body table {
