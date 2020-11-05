@@ -82,10 +82,14 @@ const main = ({ page, wrap, find, callback }) => {
         const top = isTop(title)
 
         const getCounts = selector => {
-            return thirdEl
+            if (!thirdEl.find(`${selector}`).text()) {
+                return 0
+            }
+            const count = thirdEl
                 .find(`${selector}`)
                 .text()
                 .match(/\(([^)]*)\)/)[1]
+            return count
         }
 
         const viewCount = getCounts('.post-view-count')
