@@ -110,6 +110,12 @@
     }
 }
 
+@media screen and (min-width: 1920px) {
+    .cards-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .cards-list {
         grid-template-columns: repeat(2, 1fr);
