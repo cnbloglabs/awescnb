@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'geek',
-    template: 'index',
+    template: 'postarchive',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
@@ -25,6 +25,7 @@ module.exports = {
 // - photos 相册
 // - imgview 管理 > 相册 > 打开相册 > 点击预览
 // - category 随笔分类
+// - postarchive 随笔档案
 ///////// themes /////////s
 
 // - geek

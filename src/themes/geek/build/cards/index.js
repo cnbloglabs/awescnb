@@ -1,11 +1,18 @@
 import './index.scss'
-import {
-    isCategoryPage,
-    isHomePage,
-    // HTMLDecode,
-} from '@tools'
+import { isCategoryPage, isHomePage } from '@tools'
 
-const createElements = (
+/**
+ * 创建 card 元素
+ * @param {Boolean} top
+ * @param {String} title
+ * @param {String} descText
+ * @param {Number} viewCount
+ * @param {Number} commentCount
+ * @param {Number} diggCount
+ * @param {String} detailUrl
+ * @param {String} editUrl
+ */
+function createCard(
     top,
     title,
     descText,
@@ -14,7 +21,7 @@ const createElements = (
     diggCount,
     detailUrl,
     editUrl,
-) => {
+) {
     const cardClass = top
         ? 'custom-card top'
         : 'custom-card'
@@ -37,23 +44,30 @@ const createElements = (
     return el
 }
 
-const isTop = string => {
+function isTop(string) {
     return string.indexOf('置顶') === -1 ? false : true
 }
 
-const pageElementInit = () => {
+function pageElementInit() {
     $('.c_b_p_desc_readmore').remove()
 }
 
-const initHomePageElement = () => {}
+function initHomePageElement() {}
 
-const initCategoryPageElement = () => {
+function initCategoryPageElement() {
     if ($('.pager').length == 2) {
         $('.pager:first').remove()
     }
+    if ($('.forFlow>.entrylistTitle').length === 0) {
+        $('.entrylistTitle').prependTo('.forFlow')
+    }
 }
 
-const insertWrap = page => {
+/**
+ * 插入 cards 外层元素
+ * @param {String} page 当前页面名称
+ */
+function insertWrap(page) {
     const el = '<div class="cards-list">'
     const actions = {
         home: () => {
@@ -66,7 +80,7 @@ const insertWrap = page => {
     actions[page]()
 }
 
-const main = ({ page, wrap, find, callback }) => {
+function build({ page, wrap, find, callback }) {
     insertWrap(page)
 
     const el = $(wrap).find(find)
@@ -97,8 +111,9 @@ const main = ({ page, wrap, find, callback }) => {
         const commentCount = getCounts(
             '.post-comment-count',
         )
+
         $('.cards-list').append(
-            createElements(
+            createCard(
                 top,
                 title,
                 descText,
@@ -117,8 +132,8 @@ const main = ({ page, wrap, find, callback }) => {
 export default () => {
     const home = isHomePage()
     const category = isCategoryPage()
-    if (!home && !category) return
 
+    if (!home && !category) return
     pageElementInit()
     let options = {}
 
@@ -147,5 +162,5 @@ export default () => {
         }
     }
 
-    main(options)
+    build(options)
 }
