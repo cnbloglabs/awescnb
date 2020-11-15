@@ -39,7 +39,7 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;" 
-            alt="GZ · Code · Documentation · Answering Questions"
+            title="GZ · Code · Documentation · Answering Questions"
             src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1598958714.png!avatar100">
     </a>
     <a href="https://gitee.com/aaabingbingbing">
@@ -50,7 +50,7 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;" 
-            alt="ABing · Code"
+            title="ABing · Code"
             src="https://portrait.gitee.com/uploads/avatars/user/2449/7348543_aaabingbingbing_1584778574.png!avatar100">
     </a>
     <a href="https://www.cnblogs.com/guoxinyu">
@@ -61,8 +61,8 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;" 
-            alt="青墟 · Documentation"
-            src="https://files.cnblogs.com/files/guoxinyu/default_avatar.bmp">
+            title="青墟 · Documentation"
+            src="https://pic.cnblogs.com/avatar/1735731/20191219203118.png">
     </a>
     <a href="https://www.cnblogs.com/gshang">
         <img 
@@ -72,7 +72,7 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;" 
-            alt="GShang · Documentation · Feedback"
+            title="GShang · Documentation · Feedback"
             src="https://portrait.gitee.com/uploads/avatars/user/1626/4879515_gshang_1578976296.jpg!avatar100">
     </a>
     <a href="https://www.cnblogs.com/masterchd">
@@ -83,7 +83,7 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;" 
-            alt="Kindear_chen · Documentation · Feedback"
+            title="Kindear_chen · Documentation · Feedback"
             src="https://portrait.gitee.com/uploads/avatars/user/566/1699063_Kindear_1578958026.png!avatar100">
     </a>
     <a href="https://www.cnblogs.com/bingziweb">
@@ -94,7 +94,7 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;" 
-            alt="BingNiTer · Feedback"
+            title="BingNiTer · Feedback"
             src="https://pic.cnblogs.com/avatar/2054869/20200928160547.png">
     </a>
 </div>
