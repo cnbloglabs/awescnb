@@ -30,73 +30,68 @@
 
 ## 贡献者
 
-<table>
-    <tr>
-        <td align="center">
-            <a href="https://www.cnblogs.com/guangzan/">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1598958714.png!avatar200" width="100px;" alt="GZ"/>
-                <br />
-                <sub>
-                    <b>GZ</b>
-                </sub>
-            </a>
-            <br />
-            <a href="" title="Project Management">📆</a> 
-            <a href="" title="Code">💻</a> 
-            <a href="" title="Documentation">📖</a> 
-            <a href="" title="Answering Questions">💬</a>
-        </td>
-        <td align="center">
-            <a href="https://gitee.com/aaabingbingbing">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/2449/7348543_aaabingbingbing_1584778574.png!avatar200" width="100px;" alt="ABing"/>
-                <br />
-                <sub>
-                    <b>ABing</b>
-                </sub>
-            </a>
-            <br />
-            <a href="" title="Code">💻</a> 
-            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
-        </td>
-        <td align="center">
-            <a href="https://www.cnblogs.com/guoxinyu/">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/746/2240671_njit-guoxinyu_1586413047.png!avatar200" width="100px;" alt="青墟"/>
-                <br />
-                <sub>
-                    <b>青墟</b>
-                </sub>
-            </a>
-            <br />
-            <a href="" title="Documentation">📖</a> 
-            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
-            <a href="" title="Popularize">📣</a>
-        </td>
-        <td align="center">
-            <a href="https://www.cnblogs.com/gshang/">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/1626/4879515_gshang_1578976296.jpg!avatar200" width="100px;" alt="GShang"/>
-                <br />
-                <sub>
-                    <b>GShang</b>
-                </sub>
-            </a>
-            <br />
-            <a href="" title="Theme Provider">🌈</a> 
-            <a href="" title="Code">💻</a>
-            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
-        </td>
-        <td align="center">
-            <a href="https://www.cnblogs.com/masterchd">
-                <img src="https://portrait.gitee.com/uploads/avatars/user/566/1699063_Kindear_1578958026.png!avatar200" width="100px;" alt="Kindear_chen"/>
-                <br />
-                <sub>
-                    <b>Kindear_chen</b>
-                </sub>
-            </a>
-            <br />
-            <a href="" title="Ideas, Planning, & Feedback">🤔</a>
-        </td>
-    </tr>
-</table>
+<div>
+    <a href="https://www.cnblogs.com/guangzan/">
+        <img 
+            style="margin-right: 4px;
+                    margin-bottom: 8px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;" 
+            alt="GZ · Code · Documentation · Answering Questions"
+            src="https://portrait.gitee.com/uploads/avatars/user/780/2340025_guangzan_1598958714.png!avatar100">
+    </a>
+    <a href="https://gitee.com/aaabingbingbing">
+        <img 
+            style="margin-right: 4px;
+                    margin-bottom: 8px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;" 
+            alt="ABing · Code"
+            src="https://portrait.gitee.com/uploads/avatars/user/2449/7348543_aaabingbingbing_1584778574.png!avatar100">
+    </a>
+    <a href="https://www.cnblogs.com/guoxinyu">
+        <img 
+            style="margin-right: 4px;
+                    margin-bottom: 8px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;" 
+            alt="青墟 · Documentation"
+            src="https://files.cnblogs.com/files/guoxinyu/default_avatar.bmp">
+    </a>
+    <a href="https://www.cnblogs.com/gshang">
+        <img 
+            style="margin-right: 4px;
+                    margin-bottom: 8px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;" 
+            alt="GShang · Documentation · Feedback"
+            src="https://portrait.gitee.com/uploads/avatars/user/1626/4879515_gshang_1578976296.jpg!avatar100">
+    </a>
+    <a href="https://www.cnblogs.com/masterchd">
+        <img 
+            style="margin-right: 4px;
+                    margin-bottom: 8px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;" 
+            alt="Kindear_chen · Documentation · Feedback"
+            src="https://portrait.gitee.com/uploads/avatars/user/566/1699063_Kindear_1578958026.png!avatar100">
+    </a>
+    <a href="https://www.cnblogs.com/bingziweb">
+        <img 
+            style="margin-right: 4px;
+                    margin-bottom: 8px;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;" 
+            alt="BingNiTer · Feedback"
+            src="https://pic.cnblogs.com/avatar/2054869/20200928160547.png">
+    </a>
+</div>
 
 ## 许可
 

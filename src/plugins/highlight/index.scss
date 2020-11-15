@@ -36,6 +36,10 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
         border: none !important;
     }
     // 代码块
+    li code {
+        font-size: 12px !important;
+        font-weight: 700;
+    }
     .hljs {
         display: block !important;
         color: var(--hl-mono-1) !important;
@@ -44,17 +48,13 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
         padding: 10px 10px 0 !important;
         font-weight: normal;
     }
-    li code {
-        font-size: 12px !important;
-        font-weight: 700;
-    }
-    .hljs-tag {
-        color: var(--hl-tag);
-    }
     .hljs-comment,
     .hljs-quote {
         color: var(--hl-mono-3);
         font-style: italic;
+    }
+    .hljs-tag {
+        color: var(--hl-tag);
     }
     .hljs-doctag,
     .hljs-formula,
