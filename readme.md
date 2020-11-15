@@ -62,7 +62,7 @@
                     height: 32px;
                     border-radius: 50%;" 
             title="青墟 · Documentation"
-            src="https://pic.cnblogs.com/avatar/1735731/20191219203118.png">
+            src="https://portrait.gitee.com/uploads/avatars/user/746/2240671_njit-guoxinyu_1586413047.png!avatar100">
     </a>
     <a href="https://www.cnblogs.com/gshang">
         <img 
@@ -85,17 +85,6 @@
                     border-radius: 50%;" 
             title="Kindear_chen · Documentation · Feedback"
             src="https://portrait.gitee.com/uploads/avatars/user/566/1699063_Kindear_1578958026.png!avatar100">
-    </a>
-    <a href="https://www.cnblogs.com/bingziweb">
-        <img 
-            class="ui avatar image"
-            style="margin-right: 4px;
-                    margin-bottom: 8px;
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 50%;" 
-            title="BingNiTer · Feedback"
-            src="https://pic.cnblogs.com/avatar/2054869/20200928160547.png">
     </a>
 </div>
 
