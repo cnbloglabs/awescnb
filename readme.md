@@ -33,6 +33,7 @@
 <div>
     <a href="https://www.cnblogs.com/guangzan/">
         <img 
+            class="ui avatar image"
             style="margin-right: 4px;
                     margin-bottom: 8px;
                     width: 32px;
@@ -43,6 +44,7 @@
     </a>
     <a href="https://gitee.com/aaabingbingbing">
         <img 
+            class="ui avatar image"
             style="margin-right: 4px;
                     margin-bottom: 8px;
                     width: 32px;
@@ -53,6 +55,7 @@
     </a>
     <a href="https://www.cnblogs.com/guoxinyu">
         <img 
+            class="ui avatar image"
             style="margin-right: 4px;
                     margin-bottom: 8px;
                     width: 32px;
@@ -63,6 +66,7 @@
     </a>
     <a href="https://www.cnblogs.com/gshang">
         <img 
+            class="ui avatar image"
             style="margin-right: 4px;
                     margin-bottom: 8px;
                     width: 32px;
@@ -73,6 +77,7 @@
     </a>
     <a href="https://www.cnblogs.com/masterchd">
         <img 
+            class="ui avatar image"
             style="margin-right: 4px;
                     margin-bottom: 8px;
                     width: 32px;
@@ -83,6 +88,7 @@
     </a>
     <a href="https://www.cnblogs.com/bingziweb">
         <img 
+            class="ui avatar image"
             style="margin-right: 4px;
                     margin-bottom: 8px;
                     width: 32px;
