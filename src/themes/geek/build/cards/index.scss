@@ -60,7 +60,9 @@
     color: #5c5e6e;
     padding: 0 20px 20px;
     flex-grow: 1;
-    word-wrap: break-word;
+    .c_b_p_desc {
+        word-break: break-word;
+    }
     .MJXp-math {
         white-space: break-spaces;
     }
