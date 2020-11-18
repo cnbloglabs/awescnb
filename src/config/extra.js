@@ -3,7 +3,11 @@
  */
 import { mergeOptions } from '@tools'
 
-const getThemeOptions = devOptions => {
+/**
+ * 皮肤基本配置
+ * @param {*} devOptions
+ */
+function getThemeOptions(devOptions) {
     const defaultThemeOptions = {
         name: 'reacg',
         color: '#FFB3CC',
@@ -22,7 +26,11 @@ const getThemeOptions = devOptions => {
     return options
 }
 
-const getLinksOptions = devOptions => {
+/**
+ * 自定义链接
+ * @param {*} devOptions
+ */
+function getLinksOptions(devOptions) {
     const defaultLinks = devOptions || [
         {
             name: '自定义链接',
@@ -33,7 +41,11 @@ const getLinksOptions = devOptions => {
     return options
 }
 
-const getGithubOptions = devOptions => {
+/**
+ * GitHub 配置
+ * @param {*} devOptions
+ */
+function getGithubOptions(devOptions) {
     const defaultThemeOptions = {
         enable: true,
         color: '#ffb3cc',
@@ -47,7 +59,11 @@ const getGithubOptions = devOptions => {
     return options
 }
 
-const getGiteeOptions = devOptions => {
+/**
+ * Gitee 配置
+ * @param {*} devOptions
+ */
+function getGiteeOptions(devOptions) {
     const defaultThemeOptions = {
         enable: true,
         color: '#C71D23',
@@ -61,7 +77,11 @@ const getGiteeOptions = devOptions => {
     return options
 }
 
-const getIndexListImgOptions = devOptions => {
+/**
+ * 首页图片列表配置
+ * @param {*} devOptions
+ */
+function getIndexListImgOptions(devOptions) {
     const defaultThemeOptions = {
         enable: false,
         imgs: [],

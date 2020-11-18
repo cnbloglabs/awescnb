@@ -8,7 +8,7 @@ const containerId = 'post-signature'
 /**
  * 构建容器
  */
-const buildContainer = () => {
+function buildContainer() {
     const author = getBlogname()
     const href = getCurrentPostUrl()
     const el = `<div id='${containerId}'>

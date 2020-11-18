@@ -8,6 +8,11 @@ import {
 const pageName = currentPage()
 const annotateList = []
 
+/**
+ * 构建 annotate group
+ * @param {*} annotate
+ * @param {*} customList
+ */
 const buildGroup = (annotate, customList) => {
     const group = []
     for (let { selector, page, config } of customList) {
@@ -34,6 +39,12 @@ const buildGroup = (annotate, customList) => {
     return group
 }
 
+/**
+ * 构建 notation
+ * @param {*} annotate
+ * @param {*} annotationGroup
+ * @param {*} customList
+ */
 const buildNotation = (
     annotate,
     annotationGroup,

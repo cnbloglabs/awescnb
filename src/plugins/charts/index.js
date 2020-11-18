@@ -2,11 +2,18 @@ import { cacheScript } from '@tools'
 import { viz } from '@constants/urls'
 import { chartsConfig } from '@config/plugins.js'
 
+/**
+ * 构建容器
+ */
 function wrap() {
     const wrap = '<div id="charts"></div>'
     $('#sidebar_news').append(wrap)
 }
 
+/**
+ * 构建图表
+ * @param {*} pie
+ */
 function skill(pie) {
     const skill = '<div id="charts-skill"></div>'
     $('#charts').append(skill)

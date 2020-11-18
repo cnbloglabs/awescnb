@@ -2,6 +2,9 @@
 // 使用 dragmenu 代替
 import { pageName, poll } from '@tools'
 
+/**
+ * 构建按钮
+ */
 function build() {
     const $follow = $('#green_channel_follow').prop(
         'outerHTML',

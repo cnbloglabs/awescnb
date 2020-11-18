@@ -7,7 +7,9 @@ import { lockConfig } from '@config/plugins'
 const { avatar } = getThemeOptions()
 let typed
 
-// 创建元素
+/**
+ * 创建元素
+ */
 function build() {
     const ele = `
     <div class='lock-screen'>
@@ -23,7 +25,10 @@ function build() {
     $('body').append(ele)
 }
 
-// 设置背景
+/**
+ * 设置锁屏背景
+ * @param {*} background
+ */
 function setBackground(background) {
     const image =
         background === '' ? randomImage : background
@@ -33,7 +38,10 @@ function setBackground(background) {
     )
 }
 
-// 打开
+/**
+ * 打开锁屏
+ * @param {*} strings
+ */
 function open(strings) {
     const typedOpts = {
         strings: strings.length
@@ -51,7 +59,9 @@ function open(strings) {
     })
 }
 
-// 关闭
+/**
+ * 关闭锁屏
+ */
 function close() {
     $(document).on('click', '.lock-screen-close', () => {
         $('.lock-screen').css('top', '-100vh')

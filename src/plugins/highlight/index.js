@@ -3,7 +3,12 @@ import { highlightConfig } from '@config/plugins'
 import { pageName, isMd } from '@tools'
 import themes from './themes.js'
 
-function buildMarkdownLinenumber(light, dark) {
+/**
+ * 构建 Markdown 代码块高亮
+ * @param {*} light
+ * @param {*} dark
+ */
+function buildMarkdownHighlight(light, dark) {
     let style
     if (!isMd()) {
         style = `<style>
@@ -18,7 +23,10 @@ function buildMarkdownLinenumber(light, dark) {
     $('head').append(style)
 }
 
-function otherEditorLinenumberPadding() {
+/**
+ * 调整 TinyMCE 代码块 padding
+ */
+function AdjustTinyMCEPadding() {
     if (isMd()) return
     $('pre').each(function() {
         const hasLineNumber =
@@ -36,6 +44,6 @@ export default devOptions => {
     if (pageName() !== 'post') return
     if ($('pre').length === 0) return
     const { light, dark } = highlightConfig(devOptions)
-    buildMarkdownLinenumber(light, dark)
-    otherEditorLinenumberPadding()
+    buildMarkdownHighlight(light, dark)
+    AdjustTinyMCEPadding()
 }

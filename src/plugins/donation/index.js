@@ -1,6 +1,9 @@
 import { pageName } from '@tools'
 import { donationConfig } from '@config/plugins.js'
 
+/**
+ * 二维码展开收起操作
+ */
 function qrcodeToggle() {
     $('#custom-donation-btn').click(function() {
         $('#custom-donation-qrcode').toggle('swing')

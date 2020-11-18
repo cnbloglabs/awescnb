@@ -27,4 +27,5 @@ class AwesCnb {
 }
 
 new AwesCnb().devOpts()
+
 export default AwesCnb

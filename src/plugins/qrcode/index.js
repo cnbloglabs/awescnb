@@ -1,6 +1,10 @@
 // 二维码
 import { qrcodeConfig } from '@config/plugins'
 
+/**
+ * 构建二维码图片
+ * @param {*} img
+ */
 function buildImage(img) {
     if (img === '') return
     const ele = `<img class='custom-qrcode' src='${img}' />`
@@ -9,6 +13,10 @@ function buildImage(img) {
         : $('#blog-news').after(ele)
 }
 
+/**
+ * 构建文字描述信息
+ * @param {*} desc
+ */
 function buildDesc(desc) {
     if (desc === '') return
     const ele = `<div class='custom-qrcode-desc'>${desc}</div>`

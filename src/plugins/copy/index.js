@@ -1,9 +1,12 @@
-// 代码块复制按钮
-// 引入即可
+/**
+ * 代码块复制按钮
+ */
 import { pageName, isMd } from '@/assets/utils/tools'
 import toast from '@plugins/toast'
 
-// 添加按钮
+/**
+ * 构建复制按钮
+ */
 function addBtns() {
     let pres = $(
         '#cnblogs_post_body, #blog-comments-placeholder',
@@ -18,7 +21,9 @@ function addBtns() {
     })
 }
 
-// 点击事件
+/**
+ * 点击事件处理
+ */
 function click() {
     const position = isMd() ? 'pre' : '.cnblogs_code'
     $(position).on('click', '.copy-btns', function() {

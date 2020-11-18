@@ -9,7 +9,13 @@ import {
     addCss,
 } from '@/assets/utils/tools'
 
-// 音乐播放器
+/**
+ * 构建音乐播放器
+ * @param {*} autoplay
+ * @param {*} audio
+ * @param {*} volume
+ * @param {*} lrc
+ */
 function build(autoplay, audio, volume, lrc) {
     $('body').append(
         '<div id="player" class="aplayer music-APlayer"></div>',

@@ -1,8 +1,5 @@
-// 设置看板娘
-// 引入即可
-
 import env from '@/constants/env'
-import live2dModels from '@/constants/live2dModels'
+import live2dModels from './live2dModels'
 import { live2d, live2djs } from '@constants/urls'
 import { live2dConfig } from '@config/plugins.js'
 import {

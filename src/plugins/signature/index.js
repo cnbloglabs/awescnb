@@ -2,11 +2,19 @@
 import Typed from 'typed.js'
 import { signatureConfig } from '@config/plugins'
 
+/**
+ * 构建容器
+ * @param {*} selector
+ */
 function build(selector) {
     const el = `<div class='custom-signature'><span></span></div>`
     $(selector).append(el)
 }
 
+/**
+ * 构建打字机效果
+ * @param {*} contents
+ */
 function typed(contents) {
     new Typed('.custom-signature span', {
         strings: contents,

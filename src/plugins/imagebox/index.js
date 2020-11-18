@@ -1,5 +1,7 @@
-// 随笔详情页图片灯箱
-// 相册查看图像
+/**
+ * 随笔详情页图片灯箱
+ * 相册查看图像
+ */
 import { mediaZoomJs } from '@constants/urls'
 import { imageboxConfig } from '@config/plugins.js'
 import {
@@ -14,6 +16,9 @@ import {
 const mediumZoomConfig = {}
 const customGalleryClass = 'custom-gallery'
 
+/**
+ * 构建随笔详情页图片灯箱
+ */
 function build() {
     const imgList = $(
         `#cnblogs_post_body img, .blog_comment_body img, .${customGalleryClass} img`,
@@ -38,6 +43,9 @@ function build() {
     removeImageOuterHref()
 }
 
+/**
+ * 构建相册图片灯箱
+ */
 function buildGallery() {
     if (!isAlbumPage()) return
     const title = $('.thumbTitle, .galleryTitle')
@@ -60,6 +68,9 @@ function buildGallery() {
     $('.gallery').remove()
 }
 
+/**
+ * 去除 TinyMCE 插入的图片的容器链接
+ */
 function removeImageOuterHref() {
     if (isMd()) return
     $('.medium-zoom-image')

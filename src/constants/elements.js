@@ -1,7 +1,6 @@
 /**
  * 博客园主要元素选择器
  */
-
 const sidebarWraps = {
     news: '#sidebar_news', //公告
     search: '#sidebar_search', //搜索

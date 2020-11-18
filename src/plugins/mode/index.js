@@ -59,6 +59,8 @@ function changeMode(mode, hasTransition = true) {
 
 /**
  * 初始化
+ * @param {*} autoDark
+ * @param {*} autoLight
  */
 function init(autoDark, autoLight) {
     const hour = new Date().getHours()
@@ -82,6 +84,9 @@ function init(autoDark, autoLight) {
     }
 }
 
+/**
+ * 处理主题切换按钮点击事件
+ */
 function click() {
     $(document).on('click', '.mode-change', () => {
         const isDark = $('html').attr('theme')

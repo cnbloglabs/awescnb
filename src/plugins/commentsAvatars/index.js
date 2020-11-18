@@ -65,7 +65,7 @@ function build() {
  */
 function listener() {
     window.renderCommentsAvatars = build
-    // setTimeout(() => {   }, 0)
+
     $(document).ajaxComplete(function(event, xhr, option) {
         if (
             option.url.indexOf('PostComment/Add') > -1 ||

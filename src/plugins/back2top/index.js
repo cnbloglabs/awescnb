@@ -4,7 +4,9 @@ import { userAgent } from '@/assets/utils/tools'
 const options = window.opts.back2top
 const enableLive2d = window.opts.live2d.enable
 
-//  滚动计算
+/**
+ * 滚动计算
+ */
 function compute() {
     const percentScrolled = (
         ($(document).scrollTop() /
@@ -22,8 +24,7 @@ function compute() {
     })
 }
 
-// 返回顶部
-function setBack2Top() {
+export default () => {
     if (userAgent() !== 'pc') return
     if (!options.enable) return
 
@@ -63,8 +64,4 @@ function setBack2Top() {
     $(window).scroll(() => {
         requestAnimationFrame(compute)
     })
-}
-
-export default () => {
-    setBack2Top()
 }

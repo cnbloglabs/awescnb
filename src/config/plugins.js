@@ -1,6 +1,6 @@
 import { mergeOptions } from '@tools'
 
-export const backgroundConfig = devOptions => {
+export function backgroundConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         value: '',
@@ -14,7 +14,7 @@ export const backgroundConfig = devOptions => {
     )
 }
 
-export const barrageConfig = devOptions => {
+export function barrageConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         opacity: 0.6,
@@ -31,7 +31,7 @@ export const barrageConfig = devOptions => {
     )
 }
 
-export const catalogConfig = devOptions => {
+export function catalogConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         position: 'left',
@@ -43,7 +43,7 @@ export const catalogConfig = devOptions => {
     )
 }
 
-export const chartsConfig = devOptions => {
+export function chartsConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         pie: {
@@ -67,7 +67,7 @@ export const chartsConfig = devOptions => {
     )
 }
 
-export const clickConfig = devOptions => {
+export function clickConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         auto: false,
@@ -82,7 +82,7 @@ export const clickConfig = devOptions => {
     )
 }
 
-export const donationConfig = devOptions => {
+export function donationConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         qrcodes: [],
@@ -94,7 +94,7 @@ export const donationConfig = devOptions => {
     )
 }
 
-export const toolsConfig = devOptions => {
+export function toolsConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         initialOpen: true,
@@ -107,7 +107,7 @@ export const toolsConfig = devOptions => {
     )
 }
 
-export const emojiConfig = devOptions => {
+export function emojiConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         showRecents: true,
@@ -123,7 +123,7 @@ export const emojiConfig = devOptions => {
     )
 }
 
-export const highlightConfig = devOptions => {
+export function highlightConfig(devOptions) {
     const defaultOptions = {
         dark: 'atomOneDark',
         light: 'atomOneLight',
@@ -135,7 +135,7 @@ export const highlightConfig = devOptions => {
     )
 }
 
-export const imageboxConfig = devOptions => {
+export function imageboxConfig(devOptions) {
     const defaultOptions = {
         enable: true,
     }
@@ -146,7 +146,7 @@ export const imageboxConfig = devOptions => {
     )
 }
 
-export const linenumbersConfig = devOptions => {
+export function linenumbersConfig(devOptions) {
     const defaultOptions = {
         enable: true,
     }
@@ -157,7 +157,7 @@ export const linenumbersConfig = devOptions => {
     )
 }
 
-export const live2dConfig = devOptions => {
+export function live2dConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         page: 'all',
@@ -175,7 +175,7 @@ export const live2dConfig = devOptions => {
     )
 }
 
-export const lockConfig = devOptions => {
+export function lockConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         background: '',
@@ -188,7 +188,7 @@ export const lockConfig = devOptions => {
     )
 }
 
-export const darkModeConfig = devOptions => {
+export function darkModeConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         autoDark: false,
@@ -201,7 +201,7 @@ export const darkModeConfig = devOptions => {
     )
 }
 
-export const noticeConfig = devOptions => {
+export function noticeConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         text: [],
@@ -213,7 +213,7 @@ export const noticeConfig = devOptions => {
     )
 }
 
-export const musicPlayerConfig = devOptions => {
+export function musicPlayerConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         page: 'all',
@@ -244,7 +244,7 @@ export const musicPlayerConfig = devOptions => {
     )
 }
 
-export const postBottomimageConfig = devOptions => {
+export function postBottomimageConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         img: '',
@@ -257,7 +257,7 @@ export const postBottomimageConfig = devOptions => {
     )
 }
 
-export const postSignatureConfig = devOptions => {
+export function postSignatureConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         enableLicense: true,
@@ -272,7 +272,7 @@ export const postSignatureConfig = devOptions => {
     )
 }
 
-export const postTopimageConfig = devOptions => {
+export function postTopimageConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         fixed: false,
@@ -285,7 +285,7 @@ export const postTopimageConfig = devOptions => {
     )
 }
 
-export const topProgressConfig = devOptions => {
+export function topProgressConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         page: 'all',
@@ -300,7 +300,7 @@ export const topProgressConfig = devOptions => {
     )
 }
 
-export const qrcodeConfig = devOptions => {
+export function qrcodeConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         img: '',
@@ -313,7 +313,7 @@ export const qrcodeConfig = devOptions => {
     )
 }
 
-export const signatureConfig = devOptions => {
+export function signatureConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         contents: [],
@@ -325,7 +325,7 @@ export const signatureConfig = devOptions => {
     )
 }
 
-export const notationConfig = devOptions => {
+export function notationConfig(devOptions) {
     const defaultOptions = {
         enable: false,
     }

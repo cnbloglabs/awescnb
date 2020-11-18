@@ -72,7 +72,7 @@ function mousewheel(upCallback, downCallback) {
  * 获取季节
  */
 function getQuarter() {
-    var month = new Date().getMonth()
+    let month = new Date().getMonth()
     if (month < 3) {
         return 'Spring'
     } else if (month < 6) {
@@ -111,7 +111,7 @@ function getMonth() {
  * @param {el} Object
  */
 function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect()
+    let rect = el.getBoundingClientRect()
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -211,7 +211,7 @@ function getData(url, type, callback) {
  * @param {count} Number
  */
 function randomArrayElements(arr, count = 1) {
-    var shuffled = arr.slice(0),
+    let shuffled = arr.slice(0),
         i = arr.length,
         min = i - count,
         temp,
@@ -318,38 +318,42 @@ function cacheScript(url, callback = function() {}) {
  * @param {Boolean} immediate 立即
  * @returns Function 返回的函数
  */
-const debounce = (func, wait, immediate) => {
-    var timeout
+function debounce(func, wait, immediate) {
+    let timeout
     return function() {
-        var context = this,
+        let context = this,
             args = arguments
-        var later = function() {
+        let later = function() {
             timeout = null
             if (!immediate) func.apply(context, args)
         }
-        var callNow = immediate && !timeout
+        let callNow = immediate && !timeout
         clearTimeout(timeout)
         timeout = setTimeout(later, wait)
         if (callNow) func.apply(context, args)
     }
 }
 
-// 节流
-const throttle = (func, wait, mustRun) => {
-    var timeout,
+/**
+ * 节流
+ * @param {*} func
+ * @param {*} wait
+ * @param {*} mustRun
+ */
+function throttle(func, wait, mustRun) {
+    let timeout,
         startTime = new Date()
 
     return function() {
-        var context = this,
+        let context = this,
             args = arguments,
             curTime = new Date()
 
         clearTimeout(timeout)
-        // 如果达到了规定的触发时间间隔，触发 handler
+
         if (curTime - startTime >= mustRun) {
             func.apply(context, args)
             startTime = curTime
-            // 没达到触发间隔，重新设定定时器
         } else {
             timeout = setTimeout(func, wait)
         }
@@ -361,7 +365,7 @@ const throttle = (func, wait, mustRun) => {
  * @param {Object} obj javascript对象
  * @returns 对象的随机属性
  */
-const randomProperty = obj => {
+function randomProperty(obj) {
     let result
     let count = 0
     for (let prop in obj)
@@ -374,7 +378,7 @@ const randomProperty = obj => {
  * @param {String} type rgba 16
  * @returns 颜色值
  */
-const randomColor = type => {
+function randomColor(type) {
     let res = ''
     if (type === 'rgba') {
         const r = Math.floor(Math.random() * 256)

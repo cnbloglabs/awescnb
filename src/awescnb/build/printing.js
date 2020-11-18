@@ -2,33 +2,6 @@
 import { prettyLog } from '@tools'
 import env from '@/constants/env'
 
-// const themes = [
-//     {
-//         theme: 'element',
-//         author: 'gshang',
-//     },
-//     {
-//         theme: 'gshang',
-//         author: 'gshang',
-//     },
-//     {
-//         theme: 'acg',
-//         author: 'DIVMonster',
-//     },
-//     {
-//         theme: 'reacg',
-//         author: 'DIVMonster',
-//     },
-// ]
-
-// const name = window.opts.theme.name
-// let themeAuthor
-// for (const { theme, author } of themes) {
-//     if (theme === name) {
-//         themeAuthor = author
-//     }
-// }
-
 const log = [
     {
         str:
@@ -47,14 +20,6 @@ const log = [
         str: '# 👌 使用 awescnb 快速安装、构建、分享皮肤',
         color: '#a29bfe',
     },
-    // {
-    //     str: `# 🎨 The theme you are using is ${name}`,
-    //     color: '#f368e0',
-    // },
-    // {
-    //     str: `# 💗 The author of the ${name} is ${themeAuthor}`,
-    //     color: '#5352ed',
-    // },
     {
         str: '# 📧 QQ群:541802647(活跃)',
         color: '#55efc4',
@@ -80,11 +45,9 @@ const log = [
     },
 ]
 
-function printing() {
+export default () => {
     if (env === 'dev') return
     for (const { str, color } of log) {
         prettyLog(str, color)
     }
 }
-
-export default printing

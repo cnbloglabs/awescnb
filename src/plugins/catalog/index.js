@@ -8,7 +8,9 @@ import {
 } from '@tools'
 
 /**
- * 构建目录元素
+ * 构建目录
+ * @param {String} selector
+ * @param {Function} fn
  */
 function build(selector, fn) {
     let $container = $(
@@ -49,6 +51,7 @@ function build(selector, fn) {
 
 /**
  * 标题动态高亮
+ * @param {String} scrollContainer
  */
 function setActiveTitle(scrollContainer) {
     $(scrollContainer).scroll(

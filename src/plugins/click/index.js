@@ -2,6 +2,10 @@ import { animeJs } from '@constants/urls'
 import { clickConfig } from '@config/plugins.js'
 import { userAgent, cacheScript } from '@tools'
 
+/**
+ * 构建点击特效
+ * @param {*} options
+ */
 function build(options) {
     const anime = window.anime
     if (options.enable && userAgent() === 'pc') {

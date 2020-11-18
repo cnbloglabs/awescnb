@@ -1,17 +1,18 @@
 const { currentBlogApp } = window
 
 /**
- * 工具函数
  * 是否开启公告
- * @returns {Boolean}
  */
-const openNews = () => !!$('#profile_block').length
+function openNews() {
+    return !!$('#profile_block').length
+}
 
 /**
  * 获取博客园昵称
  */
-const getBlogname = () => {
-    if (openNews()) return $('#profile_block>a:nth-of-type(1)').html()
+function getBlogname() {
+    if (openNews())
+        return $('#profile_block>a:nth-of-type(1)').html()
     const headerTitle = $('#Header1_HeaderTitle').text()
     if (headerTitle.length) return headerTitle
     return currentBlogApp
@@ -20,7 +21,7 @@ const getBlogname = () => {
 /**
  * 获取粉丝数
  */
-const getFollowers = () => {
+function getFollowers() {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(3)')
               .text()
@@ -32,7 +33,7 @@ const getFollowers = () => {
 /**
  * 获取关注的人数
  */
-const getFollowing = () => {
+function getFollowing() {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(4)')
               .text()
@@ -44,7 +45,7 @@ const getFollowing = () => {
 /**
  * 是否已经关注
  */
-const getFollowState = () => {
+function getFollowState() {
     return (
         $('#p_b_follow')
             .text()
@@ -55,7 +56,7 @@ const getFollowState = () => {
 /**
  * 获取园龄
  */
-const getBlogAge = () => {
+function getBlogAge() {
     const age = openNews()
         ? $('#profile_block a:nth-of-type(2)')
               .text()
@@ -67,32 +68,35 @@ const getBlogAge = () => {
 /**
  * 获取当前随笔链接
  */
-const getCurrentPostUrl = () => {
+function getCurrentPostUrl() {
     return location.href.indexOf('#') === -1
         ? location.href
-        : location.href.substring(0, location.href.lastIndexOf('#'))
+        : location.href.substring(
+              0,
+              location.href.lastIndexOf('#'),
+          )
 }
 
 /**
- * get blog user guid
+ * 获取博客园 user guid
  */
-const getBlogUserGuid = () => {
+function getBlogUserGuid() {
     const strValue = $('body>script:last').text()
     const regex = /'([^"]*)'/g
     return regex.exec(strValue)[1]
 }
 
 /**
- * follow
+ * 关注
  */
-const follow = () => {
+function follow() {
     window.follow(getBlogUserGuid())
 }
 
 /**
  * unfollow
  */
-const unfollow = () => {
+function unfollow() {
     window.unfollow(getBlogUserGuid())
 }
 

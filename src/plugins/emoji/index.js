@@ -3,6 +3,14 @@ import { emojijs } from '@constants/urls'
 import { emojiConfig } from '@config/plugins.js'
 import { pageName, cacheScript, userAgent } from '@tools'
 
+/**
+ * 构建表情
+ * @param {Boolean} showRecents 显示最近使用
+ * @param {Number} recentsCount 显示最近使用的数量
+ * @param {Boolean} showSearch 显示搜索框
+ * @param {Boolean} showPreview 显示预览
+ * @param {String} theme 主题 dark | light
+ */
 function build(
     showRecents,
     recentsCount,

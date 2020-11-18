@@ -4,13 +4,23 @@
 import { userAgent } from '@tools'
 import { backgroundConfig } from '@config/plugins.js'
 
-const setOpacity = opacity => {
+/**
+ * 设置透明度
+ * @param {Number} opacity 透明度
+ */
+function setOpacity(opacity) {
     $('#main,#navigator').css('opacity', `${opacity}`)
-    if ($('#catalog').length)
+    if ($('#catalog').length) {
         $('#main').css('opacity', `${opacity}`)
+    }
 }
 
-const setBackground = (value, repeat) => {
+/**
+ * 设置背景
+ * @param {String} value
+ * @param {Boolean} repeat 是否重复图片
+ */
+function setBackground(value, repeat) {
     const type = new RegExp('http').test(value)
         ? 'img'
         : 'color'
