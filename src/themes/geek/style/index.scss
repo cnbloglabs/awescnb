@@ -105,6 +105,7 @@ body {
     grid-area: right;
     margin: 8px 8px 0 0;
     background-color: var(--sidebar-bg);
+    border-radius: 0 4px 0 0;
 }
 
 #sidebar_news,
@@ -247,6 +248,7 @@ body {
     flex-direction: column;
     background-color: var(--sidebar-bg);
     flex-shrink: 0;
+    border-radius: 4px 0 0 0;
 }
 
 // leftside end
