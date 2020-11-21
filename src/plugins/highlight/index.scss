@@ -17,6 +17,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
         padding: 10px 0;
         border-radius: 4px;
         background: $background;
+        font-family: $codeFontFamily !important;
         &::before {
             content: ' ';
             display: block;

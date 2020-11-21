@@ -1,0 +1,30 @@
+p.lake-info,
+p.lake-warning,
+p.lake-danger,
+p.lake-success {
+    padding: 10px;
+    border-radius: 3px;
+    color: #262626;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+}
+
+p.lake-info {
+    border: 1px solid #abd2da;
+    background-color: #e8f7ff;
+}
+
+p.lake-warning {
+    border: 1px solid #e0d1b1;
+    background-color: #fffbe6;
+}
+
+p.lake-danger {
+    border: 1px solid #deb8be;
+    background-color: #fff3f3;
+}
+
+p.lake-success {
+    border: 1px solid #c2d2b5;
+    background-color: #edf9e8;
+}
