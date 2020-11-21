@@ -114,9 +114,11 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
         display: block;
         overflow: auto;
         border: none;
+        font-size: 14px;
         th,
         td {
             min-width: auto;
+            padding: 4px 11px;
         }
         th {
             background: none;

@@ -64,7 +64,7 @@ const notationPluginConfig = [
 ]
 
 const notationDevConfig = {
-    enable: true,
+    enable: false,
 }
 
 const themeColorConfig = {
