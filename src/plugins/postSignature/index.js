@@ -57,8 +57,10 @@ export default devOptions => {
         licenseName,
         licenseLink,
     } = postSignatureConfig(devOptions)
+
     if (!enable) return
     if (pageName() !== 'post') return
+
     buildContainer()
     buildLicense(enableLicense, licenseName, licenseLink)
     buildContent(content)

@@ -26,7 +26,7 @@ const log = [
     },
     {
         str:
-            '# 📑 文档:https://guangzan.gitee.io/awescnb-docs',
+            '# 📑 文档:https://www.yuque.com/awescnb',
         color: '#fd79a8',
     },
     {

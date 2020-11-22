@@ -25,8 +25,10 @@ function buildDesc(desc) {
 
 export default devOptions => {
     const { enable, img, desc } = qrcodeConfig(devOptions)
+
     if ($('#blog-news').length === 0) return
     if (!enable) return
+
     buildImage(img)
     buildDesc(desc)
 }

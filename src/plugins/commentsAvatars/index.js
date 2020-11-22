@@ -65,7 +65,6 @@ function build() {
  */
 function listener() {
     window.renderCommentsAvatars = build
-
     $(document).ajaxComplete(function(event, xhr, option) {
         if (
             option.url.indexOf('PostComment/Add') > -1 ||
@@ -76,7 +75,6 @@ function listener() {
             )
         }
     })
-
     $(document).ajaxComplete(function(event, xhr, option) {
         if (option.url.indexOf('GetComments') > -1) {
             window.renderCommentsAvatars()
@@ -84,7 +82,6 @@ function listener() {
             window.imagebox()
         }
     })
-
     poll($('.feedbackItem').length, build)
 }
 

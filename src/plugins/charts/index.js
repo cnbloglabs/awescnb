@@ -14,9 +14,9 @@ function wrap() {
  * 构建图表
  * @param {*} pie
  */
-function skill(pie) {
-    const skill = '<div id="charts-skill"></div>'
-    $('#charts').append(skill)
+function buildPieChart(pie) {
+    const el = '<div id="charts-skill"></div>'
+    $('#charts').append(el)
 
     new roughViz.Pie({
         element: '#charts-skill',
@@ -47,6 +47,6 @@ export default devOptions => {
 
     cacheScript(viz, () => {
         wrap()
-        skill(pie)
+        buildPieChart(pie)
     })
 }

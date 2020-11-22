@@ -1,4 +1,3 @@
-import env from '@/constants/env'
 import live2dModels from './live2dModels'
 import { live2d, live2djs } from '@constants/urls'
 import { live2dConfig } from '@config/plugins.js'
@@ -9,39 +8,60 @@ import {
     randomProperty,
 } from '@tools'
 
-export default devOptions => {
-    const options = live2dConfig(devOptions)
-    if (!options.enable) return
-    if (
-        options.page !== pageName() &&
-        options.page !== 'all'
-    )
-        return
-    if (
-        options.agent !== userAgent() &&
-        options.agent !== 'all'
-    )
-        return
-
-    let model =
-        options.model === 'random'
-            ? live2dModels[randomProperty(live2dModels)]
-            : live2dModels[options.model]
-    if (env === 'dev') {
-        // console.log('live2d model：', model)
-    }
-
-    const ele = `<canvas id="model" style="position:fixed;${options.position}:0;bottom:0;z-index:30;pointer-events: none;" width="${options.width}"height="${options.height}" > </canvas>`
+/**
+ * 构建模型容器
+ * @param {String} position
+ * @param {String} width
+ * @param {String} height
+ */
+function buildContainer(position, width, height) {
+    const ele = `<canvas id="model" style="position:fixed;${position}:0;bottom:0;z-index:30;pointer-events: none;" width="${width}"height="${height}" ></canvas>`
     $('body').append(ele)
+}
 
-    // gap
-    if (options.gap !== 'default') {
-        $('#model').css(options.position, options.gap)
-    }
+/**
+ * 设置间距
+ * @param {String} position
+ * @param {String} gap
+ */
+function setGap(position, gap) {
+    if (gap === 'default') return
+    $('#model').css(position, gap)
+}
 
-    // load
-    const url = `${live2d.url}@${live2d.version}/${model}`
+/**
+ * 加载模型
+ * @param {String} model
+ */
+function loadModel(model) {
+    let live2dModel =
+        model === 'random'
+            ? live2dModels[randomProperty(live2dModels)]
+            : live2dModels[model]
+
+    const url = `${live2d.url}@${live2d.version}/${live2dModel}`
     cacheScript(live2djs, () => {
         loadlive2d('model', url)
     })
+}
+
+export default devOptions => {
+    const {
+        enable,
+        page,
+        agent,
+        model,
+        position,
+        gap,
+        width,
+        height,
+    } = live2dConfig(devOptions)
+
+    if (!enable) return
+    if (page !== pageName() && page !== 'all') return
+    if (agent !== userAgent() && agent !== 'all') return
+
+    buildContainer(position, width, height)
+    setGap(position, gap)
+    loadModel(model)
 }

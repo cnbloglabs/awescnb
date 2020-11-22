@@ -11,7 +11,7 @@ let typed
  * 创建元素
  */
 function build() {
-    const ele = `
+    $('body').append(`
     <div class='lock-screen'>
         <div class="lock-screen-weather"></div>
         <div class="lock-screen-user">
@@ -21,8 +21,7 @@ function build() {
             </div>
         </div>
         <div class="lock-screen-close">🔑</div>
-    </div>`
-    $('body').append(ele)
+    </div>`)
 }
 
 /**

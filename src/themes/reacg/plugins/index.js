@@ -41,11 +41,15 @@ const clickConfig = {
 }
 
 const live2dConfig = {
-    enable: false,
+    enable: true,
 }
 
 const postTopimageConfig = {
     enable: false,
+}
+
+const linenumbersConfig = {
+    enable : true
 }
 
 module.exports = () => {
@@ -58,9 +62,7 @@ module.exports = () => {
     live2d(live2dConfig)
     player()
     click(clickConfig)
-    linenumbers({
-        enable: true,
-    })
+    linenumbers(linenumbersConfig)
     titleFavicon()
     commentsAvatars()
     signature()

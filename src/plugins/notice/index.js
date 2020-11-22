@@ -2,6 +2,10 @@ import toast from '@plugins/toast'
 import { sleep } from '@tools'
 import { noticeConfig } from '@config/plugins'
 
+/**
+ * 发送通知
+ * @param {Array} textList
+ */
 async function shoot(textList) {
     const length = textList.length
     for (let i = 0; i < length; i++) {
