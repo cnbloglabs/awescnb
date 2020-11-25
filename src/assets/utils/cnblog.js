@@ -11,8 +11,9 @@ function openNews() {
  * 获取博客园昵称
  */
 function getBlogname() {
-    if (openNews())
+    if (openNews()) {
         return $('#profile_block>a:nth-of-type(1)').html()
+    }
     const headerTitle = $('#Header1_HeaderTitle').text()
     if (headerTitle.length) return headerTitle
     return currentBlogApp
@@ -24,8 +25,8 @@ function getBlogname() {
 function getFollowers() {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(3)')
-              .text()
-              .trim()
+            .text()
+            .trim()
         : '未知'
     return count
 }
@@ -36,8 +37,8 @@ function getFollowers() {
 function getFollowing() {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(4)')
-              .text()
-              .trim()
+            .text()
+            .trim()
         : '未知'
     return count
 }
@@ -59,8 +60,8 @@ function getFollowState() {
 function getBlogAge() {
     const age = openNews()
         ? $('#profile_block a:nth-of-type(2)')
-              .text()
-              .trim()
+            .text()
+            .trim()
         : '未知'
     return age
 }
@@ -72,9 +73,9 @@ function getCurrentPostUrl() {
     return location.href.indexOf('#') === -1
         ? location.href
         : location.href.substring(
-              0,
-              location.href.lastIndexOf('#'),
-          )
+            0,
+            location.href.lastIndexOf('#'),
+        )
 }
 
 /**
