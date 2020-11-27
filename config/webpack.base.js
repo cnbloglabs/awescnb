@@ -9,7 +9,7 @@ const entry = {
     // view: './src/themes/view/index.js',
     // acg: './src/themes/acg/index.js',
     // simple: './src/themes/simple/index.js',
-    // gshang: './src/themes/gshang/index.js',
+    // bilibili: './src/themes/bilibili/index.js',
     // element: './src/themes/element/index.js',
 }
 

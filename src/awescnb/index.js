@@ -3,16 +3,24 @@ import build from './build'
 
 class AwesCnb {
     init(building) {
+        // buile theme
         const buildTheme = () => {
             building()
             build()
         }
-
-        if (env === 'dev' || $.awesCnb) {
+        // development
+        if (env === 'dev') {
             buildTheme()
+            return
         }
-
-        if (!$.awesCnb && env !== 'dev') {
+        // use theme loader by index.js
+        if ($.awesCnb) {
+            buildTheme()
+            return
+        }
+        // use single theme file.
+        if (!$.awesCnb) {
+            console.log(123)
             $.extend({
                 awesCnb: (options = {}) => {
                     window.opts = options
@@ -20,6 +28,19 @@ class AwesCnb {
                 },
             })
         }
+
+        // if (env === 'dev' || $.awesCnb) {
+        //     buildTheme()
+        // }
+
+        // if (!$.awesCnb && env !== 'dev') {
+        //     $.extend({
+        //         awesCnb: (options = {}) => {
+        //             window.opts = options
+        //             buildTheme()
+        //         },
+        //     })
+        // }
     }
     devOpts() {
         if (env === 'dev') window.opts = {}

@@ -12,18 +12,6 @@
                 "regenerator": true,
                 "version": "7.0.0-beta.0"
             }
-        ],
-        [
-            "@babel/plugin-proposal-decorators",
-            {
-                "legacy": true
-            }
-        ],
-        [
-            "@babel/plugin-proposal-class-properties",
-            {
-                "legacy": true
-            }
         ]
     ]
 }

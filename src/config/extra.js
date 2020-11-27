@@ -8,7 +8,7 @@ import { mergeOptions } from '@tools'
  * @param {*} devOptions
  */
 function getThemeOptions(devOptions) {
-    const defaultThemeOptions = {
+    const defaultOptions = {
         name: 'reacg',
         color: '#FFB3CC',
         title: '',
@@ -19,7 +19,7 @@ function getThemeOptions(devOptions) {
             'https://api.uomg.com/api/rand.avatar',
     }
     const options = mergeOptions(
-        defaultThemeOptions,
+        defaultOptions,
         window.opts.theme,
         devOptions,
     )
@@ -31,13 +31,13 @@ function getThemeOptions(devOptions) {
  * @param {*} devOptions
  */
 function getLinksOptions(devOptions) {
-    const defaultLinks = devOptions || [
+    const defaultOptions = devOptions || [
         {
             name: '自定义链接',
             link: '',
         },
     ]
-    const options = window.opts.links || defaultLinks
+    const options = window.opts.links || defaultOptions
     return options
 }
 
@@ -46,13 +46,13 @@ function getLinksOptions(devOptions) {
  * @param {*} devOptions
  */
 function getGithubOptions(devOptions) {
-    const defaultThemeOptions = {
+    const defaultOptions = {
         enable: true,
         color: '#ffb3cc',
         url: '',
     }
     const options = mergeOptions(
-        defaultThemeOptions,
+        defaultOptions,
         window.opts.github,
         devOptions,
     )
@@ -64,13 +64,13 @@ function getGithubOptions(devOptions) {
  * @param {*} devOptions
  */
 function getGiteeOptions(devOptions) {
-    const defaultThemeOptions = {
+    const defaultOptions = {
         enable: true,
         color: '#C71D23',
         url: '',
     }
     const options = mergeOptions(
-        defaultThemeOptions,
+        defaultOptions,
         window.opts.gitee,
         devOptions,
     )
@@ -82,12 +82,12 @@ function getGiteeOptions(devOptions) {
  * @param {*} devOptions
  */
 function getIndexListImgOptions(devOptions) {
-    const defaultThemeOptions = {
+    const defaultOptions = {
         enable: false,
         imgs: [],
     }
     const options = mergeOptions(
-        defaultThemeOptions,
+        defaultOptions,
         window.opts.indexListImg,
         devOptions,
     )

@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'reacg',
+    themeName: 'geek',
     template: 'post',
     eslint: true,
     sourceMap: true,
@@ -29,10 +29,10 @@ module.exports = {
 ///////// themes /////////s
 
 // - geek
-// - reacggit
+// - reacg
 // - simple
 // - view
-// - gshang
+// - bilibili
 // - element
 // - acg
 

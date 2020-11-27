@@ -1,14 +1,35 @@
 // 是否为访客
-export const isVisitor = !window.isBlogOwner
+const isVisitor = !window.isBlogOwner
 // 访客id
-export const visitorId = window.visitorUserId
+const visitorId = window.visitorUserId
 // 是否为博主本人
-export const isOwner = window.isBlogOwner
+const isOwner = window.isBlogOwner
 // blog id
-export const blogId = window.currentBlogId
+const blogId = window.currentBlogId
 // blog app
-export const blogApp = window.currentBlogApp
+const blogApp = window.currentBlogApp
 // 是否登录
-export const isLogined = window.isLogined
+const isLogined = window.isLogined
 // 官方皮肤名称
-export const skinName = window.skinName
+const skinName = window.skinName
+// 用户头像
+// function avatar() {
+//     $(document).ajaxComplete(function (event, xhr, option) {
+//         console.log(xhr)
+//         if (option.url.indexOf('userinfo') > -1) {
+//         }
+//     })
+// }
+
+
+
+
+export {
+    isVisitor,
+    visitorId,
+    isOwner,
+    blogId,
+    blogApp,
+    isLogined,
+    skinName,
+}

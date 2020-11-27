@@ -13,6 +13,7 @@ let optimization = {
         new TerserPlugin({
             test: /\.js(\?.*)?$/i,
             parallel: true,
+            extractComments: false,
             terserOptions: {
                 ecma: undefined,
                 parse: {},
