@@ -15,7 +15,7 @@ function loadTheme(theme) {
  * @param {*} options 
  */
 function getThemeName(options) {
-    let theme = (options.name && options.theme.name) || 'reacg'
+    let theme = (options.theme && options.theme.name) || 'reacg'
     if (theme === 'gshang') theme = 'bilibili'
     return theme
 }
