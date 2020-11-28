@@ -29,10 +29,23 @@
             font-weight: 700;
         }
         .h1-list ~ .h2-list {
-            margin-left: 0.7em;
+            margin-left: 2em;
+            font-size: 14px;
+            &::before {
+                display: none;
+            }
         }
         .h2-list ~ .h3-list {
-            margin-left: 1.4em;
+            margin-left: 3em;
+        }
+        .h3-list ~ .h4-list {
+            margin-left: 4em;
+        }
+        .h4-list ~ .h5-list {
+            margin-left: 5em;
+        }
+        .h5-list ~ .h6-list {
+            margin-left: 6em;
         }
         li {
             margin-top: 3.618px;
@@ -49,7 +62,7 @@
                 }
             }
             &:hover {
-                color: var(--themeColor);
+                font-weight: bold;
             }
         }
     }
