@@ -29,23 +29,23 @@
             font-weight: 700;
         }
         .h1-list ~ .h2-list {
-            margin-left: 2em;
+            margin-left: 1em;
             font-size: 14px;
             &::before {
                 display: none;
             }
         }
         .h2-list ~ .h3-list {
-            margin-left: 3em;
+            margin-left: 2em;
         }
         .h3-list ~ .h4-list {
-            margin-left: 4em;
+            margin-left: 3em;
         }
         .h4-list ~ .h5-list {
-            margin-left: 5em;
+            margin-left: 4em;
         }
         .h5-list ~ .h6-list {
-            margin-left: 6em;
+            margin-left: 5em;
         }
         li {
             margin-top: 3.618px;
