@@ -35,11 +35,17 @@
                 display: none;
             }
         }
-        .h2-list ~ .h3-list,
-        .h3-list ~ .h4-list,
-        .h4-list ~ .h5-list,
+        .h2-list ~ .h3-list {
+            margin-left: 3em;
+        }
+        .h3-list ~ .h4-list {
+            margin-left: 4em;
+        }
+        .h4-list ~ .h5-list {
+            margin-left: 5em;
+        }
         .h5-list ~ .h6-list {
-            margin-left: 1em;
+            margin-left: 6em;
         }
         li {
             margin-top: 3.618px;
