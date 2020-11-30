@@ -14,10 +14,11 @@ const isLogined = window.isLogined
 const skinName = window.skinName
 // 用户头像
 function avatar() {
-    console.log(1)
+    console.log('fn run')
     $(document).ajaxComplete(function(event, xhr, option) {
+        console.log('any ajax complete', event, xhr, option)
         if (option.url.indexOf('userinfo') > -1) {
-            console.log(event, xhr, option)
+            console.log('userinfo', event, xhr, option)
         }
     })
 }
