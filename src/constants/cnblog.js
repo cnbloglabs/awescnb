@@ -13,16 +13,16 @@ const isLogined = window.isLogined
 // 官方皮肤名称
 const skinName = window.skinName
 // 用户头像
-// function avatar() {
-//     $(document).ajaxComplete(function (event, xhr, option) {
-//         console.log(xhr)
-//         if (option.url.indexOf('userinfo') > -1) {
-//         }
-//     })
-// }
+function avatar() {
+    console.log(1)
+    $(document).ajaxComplete(function(event, xhr, option) {
+        if (option.url.indexOf('userinfo') > -1) {
+            console.log(event, xhr, option)
+        }
+    })
+}
 
-
-
+avatar()
 
 export {
     isVisitor,
