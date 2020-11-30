@@ -12,18 +12,6 @@ const blogApp = window.currentBlogApp
 const isLogined = window.isLogined
 // 官方皮肤名称
 const skinName = window.skinName
-// 用户头像
-function avatar() {
-    console.log('fn run')
-    $(document).ajaxComplete(function(event, xhr, option) {
-        console.log('any ajax complete', event, xhr, option)
-        if (option.url.indexOf('userinfo') > -1) {
-            console.log('userinfo', event, xhr, option)
-        }
-    })
-}
-
-avatar()
 
 export {
     isVisitor,

@@ -8,19 +8,13 @@ class AwesCnb {
             building()
             build()
         }
-        // development
-        if (env === 'dev') {
-            buildTheme()
-            return
-        }
-        // use theme loader by index.js
-        if ($.awesCnb) {
+        // dev or using theme loader by index.js
+        if (env === 'dev' || $.awesCnb) {
             buildTheme()
             return
         }
         // use single theme file.
         if (!$.awesCnb) {
-            console.log(123)
             $.extend({
                 awesCnb: (options = {}) => {
                     window.opts = options
@@ -28,19 +22,6 @@ class AwesCnb {
                 },
             })
         }
-
-        // if (env === 'dev' || $.awesCnb) {
-        //     buildTheme()
-        // }
-
-        // if (!$.awesCnb && env !== 'dev') {
-        //     $.extend({
-        //         awesCnb: (options = {}) => {
-        //             window.opts = options
-        //             buildTheme()
-        //         },
-        //     })
-        // }
     }
     devOpts() {
         if (env === 'dev') window.opts = {}

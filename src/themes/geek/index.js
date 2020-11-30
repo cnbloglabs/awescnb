@@ -1,13 +1,19 @@
 import './style/index.scss'
 import AwesCnb from '@awescnb'
+// import { getUserinfo } from '@cnblog'
 
 class Geek extends AwesCnb {
     constructor() {
         super()
-        super.init(this.init)
+        this.init()
+        super.init(this.build)
     }
 
-    init() {
+    // init() {
+    //     getUserinfo()
+    // }
+
+    build() {
         require('./build')()
         require('./plugins')()
     }

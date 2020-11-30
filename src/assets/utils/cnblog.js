@@ -1,5 +1,15 @@
 const { currentBlogApp } = window
 
+function getUserinfo() {
+    console.log('fn run')
+    $(document).ajaxComplete(function(event, xhr, option) {
+        console.log('any ajax complete', event, xhr, option)
+        if (option.url.indexOf('userinfo') > -1) {
+            console.log('userinfo', event, xhr, option)
+        }
+    })
+}
+
 /**
  * 是否开启公告
  */
@@ -25,8 +35,8 @@ function getBlogname() {
 function getFollowers() {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(3)')
-            .text()
-            .trim()
+              .text()
+              .trim()
         : '未知'
     return count
 }
@@ -37,8 +47,8 @@ function getFollowers() {
 function getFollowing() {
     const count = openNews()
         ? $('#profile_block a:nth-of-type(4)')
-            .text()
-            .trim()
+              .text()
+              .trim()
         : '未知'
     return count
 }
@@ -60,8 +70,8 @@ function getFollowState() {
 function getBlogAge() {
     const age = openNews()
         ? $('#profile_block a:nth-of-type(2)')
-            .text()
-            .trim()
+              .text()
+              .trim()
         : '未知'
     return age
 }
@@ -73,9 +83,9 @@ function getCurrentPostUrl() {
     return location.href.indexOf('#') === -1
         ? location.href
         : location.href.substring(
-            0,
-            location.href.lastIndexOf('#'),
-        )
+              0,
+              location.href.lastIndexOf('#'),
+          )
 }
 
 /**
@@ -111,4 +121,5 @@ export {
     getBlogUserGuid,
     follow,
     unfollow,
+    getUserinfo,
 }
