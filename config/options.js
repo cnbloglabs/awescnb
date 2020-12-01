@@ -5,7 +5,7 @@ module.exports = {
     sourceMap: true,
     openBrowser: true,
     openAnalyzer: false,
-    cssExtract: false,
+    cssExtract: true,
 }
 
 //----- options -----

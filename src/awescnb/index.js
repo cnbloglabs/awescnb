@@ -1,10 +1,8 @@
 import env from '@/constants/env'
 import build from './build'
-import { getUserinfo } from './utils'
 
 class AwesCnb {
     init(building) {
-        getUserinfo()
         const buildTheme = () => {
             building()
             build()
