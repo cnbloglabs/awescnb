@@ -1,11 +1,11 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'bilibili',
     template: 'post',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
     openAnalyzer: false,
-    cssExtract: true,
+    cssExtract: false,
 }
 
 //----- options -----
