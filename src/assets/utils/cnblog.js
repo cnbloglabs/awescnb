@@ -1,15 +1,5 @@
 const { currentBlogApp } = window
 
-function getUserinfo() {
-    console.log('fn run')
-    $(document).ajaxComplete(function(event, xhr, option) {
-        console.log('any ajax complete', event, xhr, option)
-        if (option.url.indexOf('userinfo') > -1) {
-            console.log('userinfo', event, xhr, option)
-        }
-    })
-}
-
 /**
  * 是否开启公告
  */
@@ -121,5 +111,4 @@ export {
     getBlogUserGuid,
     follow,
     unfollow,
-    getUserinfo,
 }

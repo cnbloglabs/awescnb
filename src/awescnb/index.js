@@ -1,19 +1,23 @@
 import env from '@/constants/env'
 import build from './build'
+import { getUserinfo } from './utils'
 
 class AwesCnb {
     init(building) {
-        // buile theme
+        getUserinfo()
         const buildTheme = () => {
             building()
             build()
         }
-        // dev or using theme loader by index.js
-        if (env === 'dev' || $.awesCnb) {
+        if (env === 'dev') {
+            window.opts = {}
             buildTheme()
             return
         }
-        // use single theme file.
+        if ($.awesCnb) {
+            buildTheme()
+            return
+        }
         if (!$.awesCnb) {
             $.extend({
                 awesCnb: (options = {}) => {
@@ -23,11 +27,8 @@ class AwesCnb {
             })
         }
     }
-    devOpts() {
-        if (env === 'dev') window.opts = {}
-    }
 }
 
-new AwesCnb().devOpts()
+new AwesCnb()
 
 export default AwesCnb

@@ -3,12 +3,6 @@
  * @param {String} string
  */
 function HTMLDecode(str) {
-    // let temp = document.createElement('div')
-    // temp.innerHTML = text
-    // const output = temp.innerText || temp.textContent
-    // temp = null
-    // return output
-
     return $('<textarea/>')
         .html(str)
         .text()
