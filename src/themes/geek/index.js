@@ -5,7 +5,7 @@ import AwesCnb from '@awescnb'
 class Geek extends AwesCnb {
     constructor() {
         super()
-        this.init()
+        // this.init()
         super.init(this.build)
     }
 
