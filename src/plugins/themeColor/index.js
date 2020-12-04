@@ -24,18 +24,25 @@ function hexToRgba(hex, opacity) {
     return `rgba(${red},${green},${blue},${opacity})`
 }
 
+/**
+ * 获取主题色
+ * @param {*} color
+ */
 function buildMainColor(color) {
     const mainColor =
         color === 'random' ? randomColor('rgba') : color
     return mainColor
 }
 
+/**
+ * 插入 css 变量
+ * @param {*} color
+ */
 function insertStyle(color) {
     const primary = buildMainColor(color)
     const primary8 = hexToRgba(primary, 0.85)
     const primary4 = hexToRgba(primary, 0.4)
     const primary2 = hexToRgba(primary, 0.2)
-    console.log(primary8)
 
     $('head').append(
         `<style class="themeColor">:root{

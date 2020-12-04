@@ -4,7 +4,7 @@ export function backgroundConfig(devOptions) {
     const defaultOptions = {
         enable: false,
         value: '',
-        opacity: 0.9,
+        opacity: 0.85,
         repeat: false,
     }
     return mergeOptions(
