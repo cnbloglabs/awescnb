@@ -1,9 +1,9 @@
 module.exports = {
-    themeName: 'bilibili',
-    template: 'post',
+    themeName: 'reacg',
+    template: 'index',
     eslint: true,
     sourceMap: true,
-    openBrowser: true,
+    openBrowser: false,
     openAnalyzer: false,
     cssExtract: false,
 }

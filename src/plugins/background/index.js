@@ -8,8 +8,10 @@ import { backgroundConfig } from '@config/plugins.js'
  * 设置透明度
  * @param {Number} opacity 透明度
  */
-function setOpacity(opacity) {
-    $('#main,#navigator').css('opacity', `${opacity}`)
+function setOpacity(opacity, opacitySelector) {
+    console.log(opacitySelector)
+
+    $(opacitySelector).css('opacity', `${opacity}`)
     if ($('#catalog').length) {
         $('#main').css('opacity', `${opacity}`)
     }
@@ -41,7 +43,7 @@ function setBackground(value, repeat) {
     }
 }
 
-export default (devOptions = {}) => {
+export default (devOptions = {}, pluginOptions = {}) => {
     const {
         enable,
         opacity,
@@ -49,6 +51,24 @@ export default (devOptions = {}) => {
         repeat,
     } = backgroundConfig(devOptions)
     if (!enable) return
-    setOpacity(opacity)
     setBackground(value, repeat)
+    const pluginDefaultOptions = {
+        opacitySelector: '#main,#navigator',
+    }
+    console.log(pluginOptions)
+
+    const { opacitySelector } = Object.assign(
+        {},
+        pluginDefaultOptions,
+        pluginOptions,
+    )
+    console.log(
+        Object.assign(
+            {},
+            pluginDefaultOptions,
+            pluginOptions,
+        ),
+    )
+
+    setOpacity(opacity, opacitySelector)
 }

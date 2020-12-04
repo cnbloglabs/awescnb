@@ -1,3 +1,5 @@
+@import '../../style/mixins.scss';
+
 .day,
 .c_b_p_desc_readmore {
     display: none;
@@ -98,18 +100,8 @@
         margin-right: 10px;
     }
     button {
-        background-color: var(--themeColor);
-        border: none;
-        color: #fff;
-        border-radius: 4px;
-        padding: 5px 10px;
         margin-left: auto;
-        box-shadow: 0 0 3px var(--themeColor);
-        cursor: pointer;
-        &:hover {
-            box-shadow: 0 0 8px var(--themeColor);
-            transition: all 0.2s;
-        }
+        @include btn(primary);
     }
 }
 

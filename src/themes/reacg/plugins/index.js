@@ -49,7 +49,7 @@ const postTopimageConfig = {
 }
 
 const linenumbersConfig = {
-    enable : true
+    enable: true,
 }
 
 module.exports = () => {

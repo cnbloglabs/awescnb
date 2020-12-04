@@ -62,15 +62,12 @@ const notationPluginConfig = [
         },
     },
 ]
-
 const notationDevConfig = {
     enable: false,
 }
-
 const themeColorConfig = {
     color: '#1B86F9',
 }
-
 const signatureConfig = {
     enable: true,
     contents: [
@@ -78,17 +75,14 @@ const signatureConfig = {
         '快去自定义签名吧~',
     ],
 }
-
 const signaturePluginConfig = {
     selector: '.profile-signature',
 }
-
 const modeOptions = {
     enable: true,
     autoDark: false,
     autoLight: false,
 }
-
 const clickOptions = {
     enable: false,
     auto: false,
@@ -96,21 +90,23 @@ const clickOptions = {
     size: 30,
     maxCount: 15,
 }
-
 const playerOptions = {
     enable: false,
 }
-
 const catalogDevConfig = {
     enable: true,
 }
-
 const catalogPluginConfig = {
     selector: '#sidebar_news',
     fn: 'before',
     scrollContainer: '#mainContent',
 }
-
+const backgroundDevConfig = {
+    enable: false,
+}
+const backgroundPluginConfig = {
+    opacitySelector: '#left-side,#sideBar,#main',
+}
 const userNotationConfig = window.opts.notation
 const enableNotation = userNotationConfig
     ? userNotationConfig.enable
@@ -133,7 +129,7 @@ if (
 }
 
 module.exports = () => {
-    background()
+    background(backgroundDevConfig, backgroundPluginConfig)
     catalog(catalogDevConfig, catalogPluginConfig)
     themeColor(themeColorConfig)
     highlight()
