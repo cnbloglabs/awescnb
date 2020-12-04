@@ -102,7 +102,7 @@ const catalogPluginConfig = {
     scrollContainer: '#mainContent',
 }
 const backgroundDevConfig = {
-    enable: true,
+    enable: false,
 }
 const backgroundPluginConfig = {
     opacitySelector: '#left-side,#sideBar,#main',
