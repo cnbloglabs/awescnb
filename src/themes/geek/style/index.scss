@@ -6,6 +6,11 @@
 @import './icons.scss';
 @import './mixins.scss';
 
+*::selection {
+    background: var(--theme-primary-4);
+    color: inherit;
+}
+
 html {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
@@ -317,6 +322,10 @@ body {
     }
 }
 
+h1.PostListTitle + .pager {
+    display: none;
+}
+
 #nav_next_page {
     margin: 0 0 1rem;
     background-color: var(--pager-bg);
@@ -374,6 +383,10 @@ body {
         var(--listItemTitle-border-color);
     font-weight: 700;
     background-color: var(--listItemTitle-bg);
+}
+
+.PostListTitle {
+    margin-bottom: 16px;
 }
 
 .entrylistDescription,
@@ -648,7 +661,7 @@ body {
         font-weight: 700;
 
         &::before {
-            content: '\f4ad';
+            content: '\f086';
         }
     }
 
@@ -812,7 +825,7 @@ body {
     .blog_comment_body {
         position: relative;
         margin: 16px 0 0 10px;
-        max-width: 80%;
+        max-width: 72%;
         border-radius: 4px;
         color: var(--commonBody-color);
         font-size: 14px;
@@ -876,7 +889,7 @@ body {
             font-weight: 700;
 
             &::before {
-                content: '\f086';
+                content: '\f4ad';
             }
         }
 

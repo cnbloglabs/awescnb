@@ -152,8 +152,9 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     #home {
+        #sideBar,
         #left-side {
             display: none;
         }
@@ -173,14 +174,17 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
             padding-top: 60px;
             flex-direction: row;
             flex-wrap: wrap;
-            border-bottom: 1px solid var(--sidebarBlock-border-color);
+            border-bottom: 1px solid
+                var(--sidebarBlock-border-color);
             ul {
                 flex-direction: row;
                 a {
                     width: 20%;
                     li {
                         span:first-child {
-                            background-color: var(--tags-bg);
+                            background-color: var(
+                                --tags-bg
+                            );
                             border-radius: 50%;
                             display: flex;
                             justify-content: center;

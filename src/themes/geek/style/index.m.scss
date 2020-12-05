@@ -43,7 +43,6 @@
         grid-area: auto;
         height: 100vh;
     }
-
     #mainContent {
         grid-template-rows: 30vh 1fr;
         padding: 10px;
@@ -89,6 +88,12 @@
         }
     }
 
+    .pager {
+        a {
+            padding: 0 8px;
+        }
+    }
+
     #GalleryThumbNailViewer1_ThumbNails {
         & > tbody > tr {
             grid-template-columns: repeat(3, 1fr);
@@ -98,23 +103,6 @@
     #post_detail #topics .postDesc {
         display: none;
     }
-
-    // menu
-
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        overflow: auto;
-        z-index: 4;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-
     .custom-searchbar {
         z-index: 5;
     }
@@ -122,9 +110,9 @@
     .sidebar-block {
         padding: 30px;
     }
-
     #sideBar,
     #left-side {
+        // display: none;
         grid-area: none;
         margin: 0;
     }
