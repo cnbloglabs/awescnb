@@ -56,6 +56,8 @@
         --BackgroundColor: #f4f6fa;
     }
 
+    
+
     /* 去广告 */
     #ad_c1,
     #ad_c2,
@@ -2903,4 +2905,11 @@
     display: inline-block;
     border-bottom: 1px solid var(--border-color-base);
     margin-left: 6px;
+}
+
+
+/* add */
+#bannerbar,
+#top_nav{
+    display: none;
 }

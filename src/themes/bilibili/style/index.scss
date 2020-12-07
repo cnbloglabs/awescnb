@@ -2020,6 +2020,7 @@ input.btn_my_zzk:hover {
 }
 
 /********** 鍘诲箍鍛� **********/
+
 #ad_c1,
 #ad_c2,
 #ad_t2,
@@ -3206,4 +3207,9 @@ code .matlab-comment span {
 
 #cnblogs_post_body code {
     padding: 0.2em 0.3em !important;
+}
+/* add */
+#bannerbar,
+#top_nav {
+    display: none;
 }

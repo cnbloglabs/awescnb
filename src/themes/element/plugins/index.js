@@ -1,9 +1,10 @@
+import './index.scss'
 import setBodyBackground from '@plugins/background'
 import setLive2d from '@plugins/live2d'
 import setMusicPlayer from '@plugins/player'
 import setTopProgress from '@plugins/progress'
 import setClickEffects from '@plugins/click'
-import linenumbers from '@plugins/linenumbers'
+// import linenumbers from '@plugins/linenumbers'
 import titleFavicon from '@plugins/titleFavicon'
 import themeColor from '@plugins/themeColor'
 // ---------
@@ -21,7 +22,7 @@ module.exports = () => {
     setMusicPlayer()
     setTopProgress()
     setClickEffects()
-    linenumbers()
+    // linenumbers()
     titleFavicon()
     fancyImgbox()
     // ---------
