@@ -23,6 +23,33 @@
     }
 }
 
+.account-button:nth-child(2) {
+    margin-right: 0.5em;
+}
+
+.fa-bell:before {
+    margin-right: 0;
+}
+
+.account-button-notice {
+    position: relative;
+
+    .notice-count {
+        display: inline-block;
+        position: absolute;
+        bottom: -3px;
+        right: -6px;
+        width: 11px;
+        height: 11px;
+        line-height: 11px;
+        border-radius: 50%;
+        color: #fff;
+        background: var(--themeColor);
+        font-size: 8px;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
 .account-user {
     display: inline-flex;
     align-items: center;

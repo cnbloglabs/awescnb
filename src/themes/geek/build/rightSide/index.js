@@ -3,7 +3,6 @@ import { getMonth, getQuarter } from '@tools'
 import { index } from '@constants/links'
 import { getThemeOptions } from '@config/extra'
 import { getBlogname } from '@cnblog'
-
 const { avatar } = getThemeOptions()
 
 const flat = () => {
@@ -11,13 +10,18 @@ const flat = () => {
 }
 
 const buildTopBtns = () => {
+    const noticeCount = $('#msg_count').text()
     const el = `
     <div class="account">
         <button class="account-button">
             <li class="fas fa-envelope"></li>
         </button>
         <button class="account-button">
-            <a href="https://msg.cnblogs.com/"><li class="fas fa-bell"></li></a>
+            <a href="https://msg.cnblogs.com/" class='account-button-notice'>
+                <li class="fas fa-bell"></li>
+                <span class="notice-count" ${!noticeCount &&
+                    'style=display:none'}>${noticeCount}</span>
+            </a>
         </button>
         <span class="account-user">${getBlogname()}
             <a href="${index}"><img src="${avatar}" alt="" class="account-profile"></a>
