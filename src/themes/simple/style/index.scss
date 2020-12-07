@@ -5,7 +5,8 @@
 @import './scroll.scss';
 *::before,
 *::after {
-    font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
+    font-family: 'Font Awesome 5 free',
+        'Font Awesome 5 Brands';
     margin-right: 0.5em;
     font-weight: bold;
 }
@@ -31,8 +32,9 @@ body {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
-    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    font-family: BlinkMacSystemFont, -apple-system,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         Helvetica, Arial, sans-serif;
 }
 #main {
@@ -487,8 +489,8 @@ body {
         }
 
         .blog_comment_body {
-            background-color: #61aeee !important;
-            color: #fff;
+            background-color: #eee !important;
+            // color: #fff;
             a:nth-child(1) {
                 color: #ffd257;
                 font-weight: 700;
@@ -512,11 +514,11 @@ body {
             content: '';
             display: block;
             position: absolute;
-            right: -24.84px;
+            right: -31.84px;
             top: 5.4px;
             width: 12.258px;
             height: 0;
-            border-left: solid 12.96px #61aeee;
+            border-left: solid 12.96px #eee;
             border-top: solid 3.24px rgba(0, 0, 0, 0);
             border-bottom: solid 7.182px rgba(0, 0, 0, 0);
         }
@@ -598,13 +600,13 @@ body {
         margin-left: 10px;
         // margin-top: 10px;
         padding: 0 10.8px;
-        background-color: #00d1b2;
+        background-color: #eee;
         border-radius: 3px;
-        color: #fff;
         font-size: 14px;
         max-width: 540px;
         line-height: 1.6;
         padding: 5.4px 10.8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         &:before {
             content: '';
             display: block;
@@ -613,7 +615,7 @@ body {
             top: 5.4px;
             width: 12.258px;
             height: 0;
-            border-right: solid 12.96px #00d1b2;
+            border-right: solid 12.96px #eee;
             border-top: solid 3.24px rgba(0, 0, 0, 0);
             border-bottom: solid 7.182px rgba(0, 0, 0, 0);
         }
@@ -766,6 +768,8 @@ body {
     }
 }
 
+#bannerbar,
+#top_nav,
 #under_post_kb,
 #under_post_news,
 #cnblogs_c1,

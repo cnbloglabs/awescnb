@@ -5,11 +5,11 @@ import { getThemeOptions } from '@config/extra'
 import { getBlogname } from '@cnblog'
 const { avatar } = getThemeOptions()
 
-const flat = () => {
+function flat() {
     $('#sideBar').appendTo($('#home'))
 }
 
-const buildTopBtns = () => {
+function buildTopBtns() {
     const noticeCount = $('#msg_count').text()
     const el = `
     <div class="account">
@@ -31,7 +31,7 @@ const buildTopBtns = () => {
     $('#sideBarMain').prepend(el)
 }
 
-const buildCalendar = () => {
+function buildCalendar() {
     const quarterImgs = {
         Spring:
             'https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
@@ -64,7 +64,6 @@ const buildCalendar = () => {
         </div>
     </div>
     `
-
     $('#sidebar_news').after($(el))
 }
 
