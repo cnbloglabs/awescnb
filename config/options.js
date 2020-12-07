@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'element',
+    themeName: 'view',
     template: 'post',
     eslint: true,
     sourceMap: true,
