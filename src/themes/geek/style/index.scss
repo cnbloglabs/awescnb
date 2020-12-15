@@ -297,6 +297,14 @@ body {
 }
 
 // 分页器start
+.pager span.current {
+    background-color: inherit;
+    border: inherit;
+    color: inherit;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
 .topicListFooter {
     grid-column-start: 1;
     grid-column-end: 4;
