@@ -13,7 +13,9 @@ import {
     cacheScript,
 } from '@tools'
 
-const mediumZoomConfig = {}
+const mediumZoomConfig = {
+    opacity: 0.5,
+}
 const customGalleryClass = 'custom-gallery'
 
 /**

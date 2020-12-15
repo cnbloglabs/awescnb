@@ -89,10 +89,14 @@
     align-items: center;
     padding: 10px 20px;
     border-top: 1px solid var(--sidebarBlock-border-color);
-    span {
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         margin-right: 10px;
         li::before {
-            margin-right: 5px;
+            margin-right: 0.2em;
         }
     }
     a:first-of-type {

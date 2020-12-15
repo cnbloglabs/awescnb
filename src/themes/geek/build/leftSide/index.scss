@@ -64,6 +64,19 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
     margin-top: auto;
 }
 
+.side-wrapper.favourite {
+    padding-top: 0;
+}
+
+.favourite {
+    overflow-y: auto;
+    h3 {
+        position: sticky;
+        top: 0;
+        background-color: var(--sidebar-bg);
+    }
+}
+
 .follow-me {
     display: flex;
     align-items: center;

@@ -66,6 +66,7 @@
     cursor: pointer;
     user-select: none;
     box-sizing: border-box;
+    white-space: nowrap;
     &:hover {
         background-color: map-get($it-map, bgHover);
         border: 1px solid map-get($it-map, borderColorHover);

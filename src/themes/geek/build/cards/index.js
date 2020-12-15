@@ -33,9 +33,18 @@ function createCard(
             </a>
             <div class="custom-card-desc">${descText}</div>
             <div class="custom-card-actions">
-                <span><li class="fas fa-eye"></li>${viewCount}</span>
-                <span><li class="fas fa-comment-dots"></li>${commentCount}</span>
-                <span><li class="fas fa-thumbs-up"></li>${diggCount}</span>
+                <div>
+                    <li class="fas fa-eye"></li>
+                    <span>${viewCount}</span>
+                </div>
+                <div>
+                    <li class="fas fa-comment-dots"></li>
+                    <span>${commentCount}</span>
+                </div>
+                <div>
+                    <li class="fas fa-thumbs-up"></li>
+                    <span>${diggCount}</span>
+                </div>
                 <a href="${detailUrl}"><button>阅读</button></a>
                 <a href="${editUrl}"><button>编辑</button></a>
             </div>

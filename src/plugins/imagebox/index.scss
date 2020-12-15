@@ -13,9 +13,14 @@ body {
         background: $imageboxBackground !important;
         z-index: 6;
     }
+
     .medium-zoom-image--opened {
         z-index: 7;
     }
+}
+
+html .medium-zoom--opened .medium-zoom-overlay {
+    opacity: 0.9;
 }
 
 .lightbox-post {
