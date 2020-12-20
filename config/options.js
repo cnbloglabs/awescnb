@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'bilibili',
+    themeName: 'geek',
     template: 'post',
     eslint: true,
     sourceMap: true,

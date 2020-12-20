@@ -950,16 +950,8 @@ h1.PostListTitle + .pager {
                 bottom: 10.8px;
                 right: 10.8px;
                 width: 75.6px;
-                height: 32.4px;
-                border-radius: 4px;
-                border: none;
-                background-color: var(--themeColor);
-                user-select: none;
-                outline: none;
-                cursor: pointer;
-                font-size: 12px;
-                color: #fff;
-
+                height: 32px;
+                @include btn(primary);
                 &:hover {
                     transition: all 0.2s;
                     filter: brightness(0.8);

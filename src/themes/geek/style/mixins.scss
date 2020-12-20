@@ -59,6 +59,7 @@
     }
     padding: 4px 12px;
     background-color: map-get($it-map, bgDefault);
+    outline: none;
     border: 1px solid map-get($it-map, borderColorDefault);
     box-shadow: 0 2px 4px map-get($it-map, shadowDefault);
     color: map-get($it-map, color);
