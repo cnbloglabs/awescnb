@@ -1,3 +1,4 @@
+import { poll } from '@tools'
 const { currentBlogApp } = window
 
 /**
@@ -47,11 +48,13 @@ function getFollowing() {
  * 是否已经关注
  */
 function getFollowState() {
-    return (
-        $('#p_b_follow')
-            .text()
-            .trim() === '-取消关注'
-    )
+    poll($('#p_b_follow').length, () => {
+        return (
+            $('#p_b_follow')
+                .text()
+                .trim() === '-取消关注'
+        )
+    })
 }
 
 /**
