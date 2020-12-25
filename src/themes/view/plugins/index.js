@@ -71,6 +71,14 @@ const notationConfig = {
     enable: true,
 }
 
+const backgroundDevConfig = {
+    enable: false,
+}
+
+const backgroundPluginConfig = {
+    opacitySelector: '#header,#sideBar,#main,#footer',
+}
+
 module.exports = () => {
     commentsAvatars()
     footer()
@@ -86,6 +94,6 @@ module.exports = () => {
     menu()
     notation(annotateList, notationConfig)
     player()
-    background()
+    background(backgroundDevConfig, backgroundPluginConfig)
     mode()
 }

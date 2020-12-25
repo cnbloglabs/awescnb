@@ -19,7 +19,6 @@ const output = {
 }
 
 const alias = {
-    // mobx: __dirname + '/node_modules/mobx/lib/mobx.es6.js',
     '@': path.resolve('src'),
     '@awescnb': path.resolve('src/awescnb'),
     '@tools': path.resolve('src/assets/utils/tools'),
