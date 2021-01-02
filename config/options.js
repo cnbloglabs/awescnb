@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'cdn',
+    themeName: 'csdn',
     template: 'index',
     eslint: true,
     sourceMap: true,
