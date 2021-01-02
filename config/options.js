@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'view',
+    themeName: 'cdn',
     template: 'index',
     eslint: true,
     sourceMap: true,
