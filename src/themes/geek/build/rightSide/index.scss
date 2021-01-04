@@ -55,6 +55,7 @@
     align-items: center;
     color: #64677a;
     font-weight: 600;
+    white-space: nowrap;
     .account-profile {
         width: 28px;
         height: 28px;
@@ -94,11 +95,11 @@
     padding-bottom: 10px;
     border-radius: 0 0 2px 2px;
     img {
-        width: 100%;
+        width: 90%;
         height: 149px;
         display: block;
-        padding-bottom: 8px;
         border-radius: 2px 2px 0 0;
+        margin: 0 auto;
     }
     .event-date {
         position: absolute;
@@ -156,6 +157,12 @@
 
 // 日历 end
 @media screen and (max-width: 767px) {
+    .event-wrapper {
+        padding-top: 20px;
+        img {
+            padding-bottom: 12px;
+        }
+    }
     #home {
         #sideBar {
             display: none;
