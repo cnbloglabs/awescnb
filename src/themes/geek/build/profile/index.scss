@@ -48,16 +48,16 @@
     background: var(--profileMenu-bg);
     border-radius: 0 0 4px 4px;
     a {
-        padding: 20px 16px;
-        color: #5c5e6e;
-        transition: 0.3s;
+        padding: 12px 16px;
+        color: var(--color-profile-links);
         cursor: pointer;
-        visibility: hidden;
+        font-size: 14px;
     }
     a.active,
     a:hover {
-        color: #fff;
-        background-color: #1b1d2e;
+        color: var(--themeColor);
+        background-color: var(--color-profile-links-hover);
+        transition: 0.3s;
     }
 }
 

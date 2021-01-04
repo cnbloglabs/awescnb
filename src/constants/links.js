@@ -29,3 +29,12 @@ export const rss = 'about:blank#blocked'
 export const admin = 'https://i.cnblogs.com/'
 // 用户详情页
 export const userDetails = `https://home.cnblogs.com/u/${currentBlogApp}/`
+
+// 收藏
+export const appWz = 'https://wz.cnblogs.com/'
+// 博问
+export const appQ = 'https://q.cnblogs.com/'
+// 闪存
+export const appIng = 'https://ing.cnblogs.com/'
+// 小组
+export const appGroup = 'https://ing.cnblogs.com/'

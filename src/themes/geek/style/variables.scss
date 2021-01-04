@@ -79,6 +79,8 @@
     --scrollbarThumb-hover-bg: rgba(0, 0, 0, 0.2);
 
     --card-bg: #fff;
+    --color-profile-links: #333;
+    --color-profile-links-hover: #d7d8d9;
 }
 
 // variables in dark mode
@@ -162,4 +164,6 @@
     --scrollbarThumb-hover-bg: rgba(255, 255, 255, 0.2);
 
     --card-bg: #151728;
+    --color-profile-links: rgb(156, 156, 171);
+    --color-profile-links-hover: #1b1d2e;
 }

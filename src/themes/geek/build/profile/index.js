@@ -1,5 +1,6 @@
 import toast from '@plugins/toast'
 import { isOwner } from '@constants/cnblog'
+import { appWz, appQ, appGroup, appIng } from '@links'
 import {
     followersDetailsUrl,
     followingDetailsUrl,
@@ -31,11 +32,10 @@ const build = () => {
             <div class="profile-signature"></div>
         </div>
         <div class="profile-menu">
-            <a>more</a>
-            <a>more</a>
-            <a>more</a>
-            <a>more</a>
-            <a>more</a>
+            <a href="${appWz}">收藏</a>
+            <a href="${appIng}">闪存</a>
+            <a href="${appGroup}">小组</a>
+            <a href="${appQ}">博问</a>
         </div>
         <div class="profile-blur" style="background-image:url(${headerBackground})"></div>
         <div class="profile-avatar">
