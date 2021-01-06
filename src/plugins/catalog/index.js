@@ -26,8 +26,25 @@ function build(selector, fn) {
         .children()
         .each(function() {
             if (regExp.test(this.tagName.toLowerCase())) {
+                const className = `${this.nodeName.toLowerCase()}-list`
+                const mathNode = $(this).children('.math.inline')
+                let text
                 let id
-                let text = $(this).text()
+
+                if (mathNode.length) {
+                    text =
+                        mathNode.prop('outerHTML') +
+                        $(this)
+                            .contents()
+                            .filter(function() {
+                                console.log(this.nodeType)
+                                return this.nodeType === 3
+                            })
+                            .text()
+                } else {
+                    text = $(this).text()
+                }
+
                 if (text.length === 0) return // 如果标题为空 只有 #
 
                 if (this.id !== '') {
@@ -38,7 +55,7 @@ function build(selector, fn) {
                 }
 
                 const title = `
-                <li class='${this.nodeName.toLowerCase()}-list'>
+                <li class='${className}'>
                     <a href='#${id}'>${text}</a>
                 </li>`
 
@@ -57,32 +74,20 @@ function setActiveTitle(scrollContainer) {
     $(scrollContainer).scroll(
         throttle(
             function() {
-                for (
-                    let i = $('#catalog ul li').length - 1;
-                    i >= 0;
-                    i--
-                ) {
-                    const titleId = $(
-                        $('#catalog ul li')[i],
-                    )
+                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
+                    const titleId = $($('#catalog ul li')[i])
                         .find('a')
                         .attr('href')
                         .replace(/[#]/g, '')
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (
-                        getClientRect(postTitle).top <= 100
-                    ) {
+                    if (getClientRect(postTitle).top <= 100) {
                         if (
-                            $(
-                                $('#catalog ul li')[i],
-                            ).hasClass('catalog-active')
+                            $($('#catalog ul li')[i]).hasClass('catalog-active')
                         )
                             return
-                        $($('#catalog ul li')[i]).addClass(
-                            'catalog-active',
-                        )
+                        $($('#catalog ul li')[i]).addClass('catalog-active')
                         $($('#catalog ul li')[i])
                             .siblings()
                             .removeClass('catalog-active')
@@ -101,19 +106,11 @@ function setActiveTitle(scrollContainer) {
  */
 function toggle() {
     $('.catalog-title').click(function() {
-        $('#catalog ul').toggle(
-            'fast',
-            'linear',
-            function() {
-                $(this).css('display') === 'none'
-                    ? $('.catalog-title').removeClass(
-                          'is-active',
-                      )
-                    : $('.catalog-title').addClass(
-                          'is-active',
-                      )
-            },
-        )
+        $('#catalog ul').toggle('fast', 'linear', function() {
+            $(this).css('display') === 'none'
+                ? $('.catalog-title').removeClass('is-active')
+                : $('.catalog-title').addClass('is-active')
+        })
     })
 }
 

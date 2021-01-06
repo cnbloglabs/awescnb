@@ -1,4 +1,22 @@
 /**
+ * 监听 DOM 变化
+ * @param {*} selector Dom selector
+ * @param {*} callback retun Promise
+ */
+function createMutationObserve(selector, callback) {
+    const observer = new MutationObserver(() => {
+        callback().then(() => {
+            observer.disconnect()
+        })
+    })
+    observer.observe(selector, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+    })
+}
+
+/**
  * HTML反转义
  * @param {String} string
  */
@@ -552,4 +570,5 @@ export {
     mergeOptions,
     insertStyle,
     HTMLDecode,
+    createMutationObserve,
 }

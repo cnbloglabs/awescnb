@@ -16,6 +16,8 @@ const devServer = {
     contentBase: path.join(__dirname, 'dist'),
     open: openBrowser,
     hot: true,
+    quiet: true,
+    compress: true,
     disableHostCheck: true,
     proxy: {},
     before() {},
