@@ -7,20 +7,20 @@ const {
     template,
     themeName,
     sourceMap,
-    openBrowser,
+    // openBrowser
 } = require('./options')
 
 const devServer = {
-    host: 'localhost',
-    port: 8080,
     contentBase: path.join(__dirname, 'dist'),
-    open: openBrowser,
-    hot: true,
-    quiet: true,
     compress: true,
-    disableHostCheck: true,
-    proxy: {},
-    before() {},
+    port: 8080,
+    // host: 'localhost',
+    // open: openBrowser,
+    // hot: true,
+    // quiet: false,
+    // disableHostCheck: true,
+    // proxy: {},
+    // before() {},
 }
 
 const plugins = [

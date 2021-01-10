@@ -6,9 +6,8 @@
 
 html {
     font-size: 12px;
-    font-family: -apple-system, system-ui,
-        BlinkMacSystemFont, Helvetica Neue, PingFang SC,
-        Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
     word-break: break-word;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
@@ -27,6 +26,12 @@ body {
 
 #header {
     position: relative;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    padding-left: 15vw;
+    height: 54px;
+    z-index: 10;
     &::after {
         content: '';
         height: 54px;
@@ -38,12 +43,6 @@ body {
         left: 0;
         z-index: -1;
     }
-    position: fixed;
-    top: 0;
-    width: 80%;
-    padding-left: 21vw;
-    height: 54px;
-    z-index: 10;
     #custom-github {
         padding: 0 15.822px;
     }
@@ -70,6 +69,7 @@ body {
             height: 100%;
             font-size: 12px;
             color: var(--text-9);
+            pointer-events: none;
             span {
                 @include center();
                 padding: 0 15.822px;
@@ -119,8 +119,7 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid
-                    hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .postTitle {
@@ -132,7 +131,7 @@ body {
             font-weight: 700;
             font-size: 16px;
             text-shadow: 5px 0px 10px var(--themeColor);
-            color: var(--text-3);
+            color: var(--color-post-title);
             &:hover {
                 transform: translateX(5.4px);
                 transition: all 0.2s;
@@ -175,8 +174,7 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid
-                    hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .entrylistItem {
@@ -267,8 +265,7 @@ body {
                         }
                         &:hover {
                             transform: scale(1.05);
-                            box-shadow: 0 0 5px
-                                var(--themeColor);
+                            box-shadow: 0 0 5px var(--themeColor);
                             transition: all 0.2s;
                         }
                     }
@@ -347,11 +344,9 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-right: solid 12.96px
-                    var(--background-e);
+                border-right: solid 12.96px var(--background-e);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px
-                    rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
             }
         }
     }
@@ -378,11 +373,9 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-left: solid 12.96px
-                    var(--background-e);
+                border-left: solid 12.96px var(--background-e);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px
-                    rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
             }
         }
 
