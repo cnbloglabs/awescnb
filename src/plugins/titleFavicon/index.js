@@ -15,7 +15,6 @@ function setTitle(title) {
  * @param {*} favicon
  */
 function setFavicon(favicon) {
-    console.log(favicon)
     if (favicon === '') return
     const el = document.getElementById('favicon')
     if (el === null) {

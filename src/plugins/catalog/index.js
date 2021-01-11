@@ -37,7 +37,6 @@ function build(selector, fn) {
                         $(this)
                             .contents()
                             .filter(function() {
-                                console.log(this.nodeType)
                                 return this.nodeType === 3
                             })
                             .text()
