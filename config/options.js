@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'silence',
     template: 'post',
     eslint: true,
     sourceMap: true,
@@ -35,6 +35,7 @@ module.exports = {
 // - bilibili
 // - element
 // - acg
+// - silence
 
 //----- description -----
 // 你无需直接更改webpack配置文件s

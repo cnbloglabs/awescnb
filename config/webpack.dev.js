@@ -61,6 +61,20 @@ const rules = [
             'sass-loader',
         ],
     },
+    {
+        test: /\.less$/,
+        use: [
+            'style-loader',
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 2,
+                },
+            },
+            // 'postcss-loader',
+            'less-loader',
+        ],
+    },
 ]
 
 module.exports = merge(baseWebpackConfig, {

@@ -1,12 +1,14 @@
-import './index.scss'
+import './index.less'
 import AwesCnb from '@awescnb'
+
 class Silence extends AwesCnb {
     constructor() {
         super()
-        super.init(this.init)
+        super.init(this.build)
     }
-    init() {
-        // 这里的任何 js 都会被执行
+    build() {
+        require('./build')()
     }
 }
+
 new Silence()

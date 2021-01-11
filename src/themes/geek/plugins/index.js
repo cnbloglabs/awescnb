@@ -108,7 +108,9 @@ const backgroundPluginConfig = {
     opacitySelector: '#left-side,#sideBar,#main',
 }
 const userNotationConfig = window.opts.notation
-const enableNotation = userNotationConfig ? userNotationConfig.enable : false
+const enableNotation = userNotationConfig
+    ? userNotationConfig.enable
+    : false
 
 if (
     (env === 'dev' && notationDevConfig.enable) ||
