@@ -10,7 +10,6 @@ class Reacg extends AwesCnb {
     init() {
         require('./build')()
         require('./plugins')()
-        console.log(333333)
     }
 }
 
