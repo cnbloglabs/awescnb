@@ -15,8 +15,16 @@ function setTitle(title) {
  * @param {*} favicon
  */
 function setFavicon(favicon) {
+    console.log(favicon)
     if (favicon === '') return
-    document.getElementById('favicon').href = favicon
+    const el = document.getElementById('favicon')
+    if (el === null) {
+        $('title').after(
+            `<link id="favicon" rel="shortcut icon" href="${favicon}" type="image/svg+xml">`,
+        )
+    } else {
+        el.href = favicon
+    }
 }
 
 export default devOptions => {
