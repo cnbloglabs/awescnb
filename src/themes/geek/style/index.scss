@@ -320,8 +320,7 @@ body {
     }
 }
 
-.pager,
-#nav_next_page {
+.pager {
     padding: 0.5rem 0;
     border-radius: 4px;
     user-select: none;
@@ -336,13 +335,23 @@ h1.PostListTitle + .pager {
 
 #nav_next_page {
     margin: 0 0 1rem;
-    background-color: var(--pager-bg);
     font-weight: 700;
     text-align: center;
-    &:hover {
-        transition: all 0.3s;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-            0 10px 10px rgba(0, 0, 0, 0.22);
+
+    a {
+        color: var(--themeColor);
+        padding: 0.5rem 0;
+        border-radius: 4px;
+        user-select: none;
+        width: 100%;
+        background-color: var(--pager-bg);
+        display: block;
+
+        &:hover {
+            transition: all 0.3s;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
+        }
     }
 }
 
