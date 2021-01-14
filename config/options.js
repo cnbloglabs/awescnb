@@ -1,6 +1,6 @@
 module.exports = {
     themeName: 'geek',
-    template: 'index',
+    template: 'post',
     eslint: true,
     sourceMap: true,
     openBrowser: false,
@@ -9,7 +9,7 @@ module.exports = {
 }
 
 //----- options -----
-// themeName - 你创建的主题文件夹名称
+// themeName - 您创建的主题文件夹名称
 // template - 本地开发要启动的页面
 // eslint - 是否开启eslint
 // sourceMap - 是否开启sourcemap
@@ -36,8 +36,3 @@ module.exports = {
 // - element
 // - acg
 // - silence
-
-//----- description -----
-// 你无需直接更改webpack配置文件s
-// 为了方便，请直接更改这里的配置
-// 当然，有特殊需求可以自行更改
