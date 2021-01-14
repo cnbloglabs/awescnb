@@ -24,7 +24,6 @@ function images() {
 function indexPage() {
     if (pageName() !== 'index') return
     content()
-    // console.log(content)
 }
 
 export default indexPage

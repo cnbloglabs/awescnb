@@ -31,13 +31,14 @@ function getThemeOptions(devOptions) {
  * @param {*} devOptions
  */
 function getLinksOptions(devOptions) {
-    const defaultOptions = devOptions || [
+    const defaultOptions = [
         {
             name: '自定义链接',
             link: '',
         },
     ]
-    const options = window.opts.links || defaultOptions
+    const options =
+        window.opts.links || devOptions || defaultOptions
     return options
 }
 

@@ -1,4 +1,22 @@
 /**
+ * 监听 DOM 变化
+ * @param {*} selector Dom selector
+ * @param {*} callback retun Promise
+ */
+function createMutationObserve(selector, callback) {
+    const observer = new MutationObserver(() => {
+        callback().then(() => {
+            observer.disconnect()
+        })
+    })
+    observer.observe(selector, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+    })
+}
+
+/**
  * HTML反转义
  * @param {String} string
  */
@@ -68,13 +86,13 @@ function mousewheel(upCallback, downCallback) {
 function getQuarter() {
     let month = new Date().getMonth()
     if (month < 3) {
-        return 'Spring'
+        return 'spring'
     } else if (month < 6) {
-        return 'Summer'
+        return 'summer'
     } else if (month < 9) {
-        return 'Autumn'
+        return 'autumn'
     } else if (month < 12) {
-        return 'Winter'
+        return 'winter'
     }
 }
 
@@ -552,4 +570,5 @@ export {
     mergeOptions,
     insertStyle,
     HTMLDecode,
+    createMutationObserve,
 }

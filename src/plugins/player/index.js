@@ -2,12 +2,7 @@
 import { aplayerjs, aplayercss } from '@constants/urls'
 import { musicPlayerConfig } from '@config/plugins'
 
-import {
-    pageName,
-    userAgent,
-    cacheScript,
-    addCss,
-} from '@/assets/utils/tools'
+import { pageName, userAgent, cacheScript, addCss } from '@/assets/utils/tools'
 
 /**
  * 构建音乐播放器
@@ -17,9 +12,7 @@ import {
  * @param {*} lrc
  */
 function build(autoplay, audio, volume, lrc) {
-    $('body').append(
-        '<div id="player" class="aplayer music-APlayer"></div>',
-    )
+    $('body').append('<div id="player" class="aplayer music-APlayer"></div>')
 
     const ap = new APlayer({
         container: document.getElementById('player'),
@@ -36,11 +29,7 @@ function build(autoplay, audio, volume, lrc) {
         localStorage.audioTime = audioTime
     }
     window.onload = () => {
-        ap.seek(
-            localStorage.audioTime
-                ? Number(localStorage.audioTime)
-                : 0,
-        )
+        ap.seek(localStorage.audioTime ? Number(localStorage.audioTime) : 0)
     }
 
     if (autoplay) {
@@ -52,7 +41,6 @@ function build(autoplay, audio, volume, lrc) {
             $('.aplayer-lrc').show()
         })
         ap.on('pause', () => {
-            // console.log('pause')
             $('.aplayer-lrc').hide()
         })
     }

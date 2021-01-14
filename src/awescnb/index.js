@@ -27,6 +27,4 @@ class AwesCnb {
     }
 }
 
-new AwesCnb()
-
 export default AwesCnb

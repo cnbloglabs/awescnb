@@ -74,18 +74,12 @@ class Menu {
         var iterator = 1
         var head = this.first
         var sens =
-            head.$element.css('bottom') <
-            head.$element.css('right')
-                ? 1
-                : -1
+            head.$element.css('bottom') < head.$element.css('right') ? 1 : -1
         while (current != null) {
             anime({
                 targets: current.$element[0],
                 bottom: -(
-                    parseInt(
-                        head.$element.css('bottom'),
-                        10,
-                    ) +
+                    parseInt(head.$element.css('bottom'), 10) +
                     sens * (iterator * 50)
                 ),
                 left: head.$element.css('left'),
@@ -101,7 +95,6 @@ class Menu {
         var current = this.first.next
         var head = this.first
         // var iterator = 1
-        // console.log(iterator)
         while (current != null) {
             anime({
                 targets: current.$element[0],
@@ -144,9 +137,7 @@ class Item {
         $(tooltip).addClass('dragmenu-item-tooltip')
         this.$element.on(event, callback)
         // 使用字体图标（length>2）或者使用文本图标
-        icon.length > 2
-            ? $(i).addClass(icon)
-            : $(i).html(icon)
+        icon.length > 2 ? $(i).addClass(icon) : $(i).html(icon)
         $(tooltip).html(tip)
         this.$element.append(i)
         this.$element.append(tooltip)
@@ -207,15 +198,7 @@ function create(options, initialOpen) {
         className,
     } of options.items) {
         if (pageName() === page || page === 'all') {
-            menu.add(
-                new Item(
-                    icon,
-                    tooltip,
-                    evenType,
-                    callback,
-                    className,
-                ),
-            )
+            menu.add(new Item(icon, tooltip, evenType, callback, className))
         }
     }
     $(document)
@@ -225,10 +208,7 @@ function create(options, initialOpen) {
             next()
 
             // 移动端自动收起
-            if (
-                userAgent() === 'phone' &&
-                options.mobileAutoClose
-            ) {
+            if (userAgent() === 'phone' && options.mobileAutoClose) {
                 $(document)
                     .delay(1000)
                     .queue(function(next) {
@@ -275,9 +255,7 @@ function dragMenu(devOptions, pluginOptions = {}) {
     // 推荐
     const diggit = () => {
         toast('推荐成功')
-        const id = window.location.href.match(
-            /p\/(\S*).html/,
-        )[1]
+        const id = window.location.href.match(/p\/(\S*).html/)[1]
         window.votePost(parseInt(id), 'Digg')
     }
 
@@ -285,8 +263,7 @@ function dragMenu(devOptions, pluginOptions = {}) {
     const comment = () => {
         $('html, body, #mainContent').animate(
             {
-                scrollTop: $('.commentbox_main').offset()
-                    .top,
+                scrollTop: $('.commentbox_main').offset().top,
                 // scrollTop:
                 //     $('.commentbox_main').offset().top -
                 //     $('.commentbox_main').height(),

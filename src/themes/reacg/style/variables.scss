@@ -10,6 +10,8 @@
     --text-10: #d1d5da;
     --text-a: #fff;
     --md-hr-color: #ddd;
+
+    --color-post-title: #333;
 }
 
 :root[theme='dark'] {
@@ -24,4 +26,6 @@
     --text-10: #7c7c7c;
     --text-a: #000;
     --md-hr-color: #7c7c7c;
+
+    --color-post-title: rgb(240, 240, 240);
 }
