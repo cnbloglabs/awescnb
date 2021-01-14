@@ -24,8 +24,9 @@ function setBackground(value, repeat) {
     const type = new RegExp('http').test(value)
         ? 'img'
         : 'color'
-    if (type === 'color')
+    if (type === 'color') {
         $('body').css('background-color', `${value}`)
+    }
     if (type === 'img') {
         $('body').css('background-image', `url(${value})`)
         if (!repeat) {

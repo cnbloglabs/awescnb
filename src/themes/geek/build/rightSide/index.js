@@ -32,18 +32,8 @@ function buildTopBtns() {
 }
 
 function buildCalendar() {
-    const quarterImgs = {
-        Spring:
-            'https://guangzan.gitee.io/imagehost/Illustrations/spring.svg',
-        Summer:
-            'https://guangzan.gitee.io/imagehost/Illustrations/summer.svg',
-        Autumn:
-            'https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg',
-        Winter:
-            'https://guangzan.gitee.io/imagehost/Illustrations/winter.svg',
-    }
     const quarter = getQuarter()
-    const quarterImg = quarterImgs[quarter]
+    const quarterImg = `https://guangzan.gitee.io/imagehost/Illustrations/${quarter}.svg`
     const month = getMonth()
     const instance = new Date()
     const year = instance.getFullYear()

@@ -101,11 +101,10 @@ const catalogPluginConfig = {
     fn: 'before',
     scrollContainer: '#mainContent',
 }
-const backgroundDevConfig = {
-    enable: false,
-}
+const backgroundDevConfig = {}
 const backgroundPluginConfig = {
-    opacitySelector: '#left-side,#sideBar,#main',
+    opacitySelector:
+        '#left-side,#sideBar,#mainContent, #footer,#custom-searchbar',
 }
 const userNotationConfig = window.opts.notation
 const enableNotation = userNotationConfig

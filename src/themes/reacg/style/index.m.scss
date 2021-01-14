@@ -1,6 +1,9 @@
 @media screen and (max-width: 1024px) {
     #header {
         padding-left: 2vw;
+        #navigator .blogStats {
+            display: none;
+        }
     }
     #catalog {
         display: none;
@@ -88,9 +91,7 @@
     .feedbackCon .blog_comment_body {
         max-width: 324px;
     }
-    .forFlow
-        #blog-comments-placeholder
-        .feedbackListSubtitle {
+    .forFlow #blog-comments-placeholder .feedbackListSubtitle {
         font-size: 12px;
         line-height: 2em;
     }
@@ -98,10 +99,7 @@
         overflow: hidden;
         white-space: nowrap;
     }
-    .forFlow
-        #blog-comments-placeholder
-        .feedbackListSubtitle
-        > a:last-of-type {
+    .forFlow #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

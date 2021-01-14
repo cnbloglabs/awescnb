@@ -32,10 +32,10 @@ const build = () => {
             <div class="profile-signature"></div>
         </div>
         <div class="profile-menu">
-            <a href="${appWz}">收藏</a>
-            <a href="${appIng}">闪存</a>
-            <a href="${appGroup}">小组</a>
-            <a href="${appQ}">博问</a>
+            <a target="_blank" href="${appWz}">收藏</a>
+            <a target="_blank" href="${appIng}">闪存</a>
+            <a target="_blank" href="${appGroup}">小组</a>
+            <a target="_blank" href="${appQ}">博问</a>
         </div>
         <div class="profile-blur" style="background-image:url(${headerBackground})"></div>
         <div class="profile-avatar">

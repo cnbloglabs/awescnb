@@ -60,6 +60,18 @@ let scssLoader = [
     'sass-loader',
 ]
 
+let lessLoader = [
+    'style-loader',
+    {
+        loader: 'css-loader',
+        options: {
+            importLoaders: 2,
+        },
+    },
+    'postcss-loader',
+    'less-loader',
+]
+
 if (openAnalyzer) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
         .BundleAnalyzerPlugin
@@ -98,6 +110,7 @@ if (cssExtract) {
     }
     cssLoader[0] = MiniCssExtractPluginLoader
     scssLoader[0] = MiniCssExtractPluginLoader
+    lessLoader[0] = MiniCssExtractPluginLoader
 }
 
 const rules = [
@@ -108,6 +121,10 @@ const rules = [
     {
         test: /\.scss$/,
         use: scssLoader,
+    },
+    {
+        test: /\.less$/,
+        use: lessLoader,
     },
 ]
 

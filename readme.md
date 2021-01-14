@@ -1,6 +1,6 @@
 ## Awescnb
 
-👻 **Awescnb**， awesome cnblog.
+😎 **Awescnb**， awesome cnblog.
 
 1. 安装：通过简单的步骤将 awescnb 集成到您的博客园中，体验多套皮肤任意切换；
 2. 创建：使用 awescnb 从零开始构建一个的博客园皮肤；

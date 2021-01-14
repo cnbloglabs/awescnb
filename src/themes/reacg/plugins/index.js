@@ -52,11 +52,19 @@ const linenumbersConfig = {
     enable: true,
 }
 
+const backgroundDevConfig = {
+    enable: false,
+}
+
+const backgroundPluginConfig = {
+    opacitySelector: '#navigator,#footer,#main',
+}
+
 module.exports = () => {
     dragMenu()
     footer()
     themeColor()
-    background()
+    background(backgroundDevConfig, backgroundPluginConfig)
     imagebox()
     barrage()
     live2d(live2dConfig)

@@ -2,15 +2,88 @@ import './index.scss'
 import { sidebarWraps } from '@/constants/elements'
 import { iconInSvg } from '../../utils/tools'
 import { fontUrl, icons, foodIcons } from './icons'
-import {
-    pageName,
-    randomProperty,
-    cacheScript,
-} from '@tools'
-import {
-    getGiteeOptions,
-    getGithubOptions,
-} from '@config/extra'
+import { pageName, randomProperty, cacheScript } from '@tools'
+import { getGiteeOptions, getGithubOptions } from '@config/extra'
+
+/**
+ * 设置切换暗色模式 icon
+ */
+function setModeIcon() {
+    const isDark = $('html').attr('theme') === 'dark'
+    const darkIcon = iconInSvg(icons.dark)
+    const lightIcon = iconInSvg(icons.light)
+    const icon = isDark ? darkIcon : lightIcon
+    $('#navList').prepend(
+        `<li class='mode-change ${isDark ? 'dark' : ''}'>${icon}</li>`,
+    )
+    $(document).on('click', '.mode-change', function() {
+        $(this).toggleClass('dark')
+        $(this).hasClass('dark')
+            ? $(darkIcon).replaceAll('.mode-change .icon')
+            : $(lightIcon).replaceAll('.mode-change .icon')
+    })
+}
+
+/**
+ * 设置github icon
+ */
+function setGithub() {
+    const { enable, color, url } = getGithubOptions()
+    if (!enable) return
+    const $githubIcon = `
+    <li class="custom-github" style="color:${color}" href=${url}>${iconInSvg(
+        icons.github,
+    )}</li>
+                        `
+    $('.mode-change').length
+        ? $('.mode-change').after($githubIcon)
+        : $('.custom-gitee').length
+        ? $('.custom-gitee').before($githubIcon)
+        : $('#navigator').prepend($githubIcon)
+}
+
+/**
+ * gitee icon
+ */
+function setGitee() {
+    const { enable, color, url } = getGiteeOptions()
+    if (!enable) return
+    const icon = `
+    <li>
+        <a class="custom-gitee" style="color:${color};" href=${url}>
+            ${iconInSvg(icons.gitee)}
+            <span>码云</span>
+        </a>
+    </li>`
+
+    $('.github-icon').length
+        ? $('.github-icon').after(icon)
+        : $('.mode-change').length
+        ? $('.mode-change').after(icon)
+        : $('#navList').prepend(icon)
+}
+
+/**
+ * navlist 图标（博客园  首页 ...）
+ */
+function nav() {
+    const { cnblog, home, pens, contact, rss, admin } = icons
+
+    const items = [
+        { selector: '#blog_nav_sitehome', icon: cnblog },
+        { selector: '#blog_nav_myhome', icon: home },
+        { selector: '#blog_nav_newpost', icon: pens },
+        { selector: '#blog_nav_contact', icon: contact },
+        { selector: '#blog_nav_rss', icon: rss },
+        { selector: '#blog_nav_admin', icon: admin },
+    ]
+
+    for (let { selector, icon } of items) {
+        if ($(selector).length) {
+            $(selector).prepend(iconInSvg(icon))
+        }
+    }
+}
 
 /**
  * 设置sidebar icon
@@ -91,17 +164,11 @@ function setSidebarIcon() {
     ]
 
     const insert = () => {
-        for (const {
-            title,
-            icon,
-            sonIcon,
-        } of iconActions) {
+        for (const { title, icon, sonIcon } of iconActions) {
             if ($(title).length) {
                 $(`${title} h3`).prepend(iconInSvg(icon))
                 if (sonIcon) {
-                    $(`${title} ul li a`).prepend(
-                        iconInSvg(sonIcon),
-                    )
+                    $(`${title} ul li a`).prepend(iconInSvg(sonIcon))
                 }
             }
         }
@@ -111,70 +178,6 @@ function setSidebarIcon() {
         insert()
     }, 300)
     // poll($('#blog-sidecolumn').length, insert)
-}
-
-/**
- * 设置github icon
- */
-function setGithub() {
-    const { enable, color, url } = getGithubOptions()
-    if (!enable) return
-    const $githubIcon = `
-                        <a id="custom-github" style="color:${color}" href=${url}>${iconInSvg(
-        icons.github,
-    )}</a>
-                        `
-    $('.mode-change').length
-        ? $('.mode-change').after($githubIcon)
-        : $('#custom-gitee').length
-        ? $('#custom-gitee').before($githubIcon)
-        : $('#navigator').prepend($githubIcon)
-}
-
-/**
- * gitee icon
- */
-function setGitee() {
-    const { enable, color, url } = getGiteeOptions()
-    if (!enable) return
-    const icon = `
-    <li>
-        <a id="custom-gitee" style="color:${color};" href=${url}>
-            ${iconInSvg(icons.gitee)}
-            <span>码云</span>
-        </a>
-    </li>
-                        `
-    $('#navList').prepend(icon)
-}
-
-/**
- * navlist 图标（博客园  首页 ...）
- */
-function nav() {
-    const {
-        cnblog,
-        home,
-        pens,
-        contact,
-        rss,
-        admin,
-    } = icons
-
-    const items = [
-        { selector: '#blog_nav_sitehome', icon: cnblog },
-        { selector: '#blog_nav_myhome', icon: home },
-        { selector: '#blog_nav_newpost', icon: pens },
-        { selector: '#blog_nav_contact', icon: contact },
-        { selector: '#blog_nav_rss', icon: rss },
-        { selector: '#blog_nav_admin', icon: admin },
-    ]
-
-    for (let { selector, icon } of items) {
-        if ($(selector).length) {
-            $(selector).prepend(iconInSvg(icon))
-        }
-    }
 }
 
 /**
@@ -220,27 +223,6 @@ function setPostTitleIcon() {
         const randomIconName = randomProperty(foodIcons)
         const icon = foodIcons[randomIconName]
         $(this).prepend(iconInSvg(icon))
-    })
-}
-
-/**
- * 设置切换暗色模式 icon
- */
-function setModeIcon() {
-    const isDark = $('html').attr('theme') === 'dark'
-    const darkIcon = iconInSvg(icons.dark)
-    const lightIcon = iconInSvg(icons.light)
-    const icon = isDark ? darkIcon : lightIcon
-    $('#navigator').prepend(
-        `<div class='mode-change ${
-            isDark ? 'dark' : ''
-        }'>${icon}</div>`,
-    )
-    $(document).on('click', '.mode-change', function() {
-        $(this).toggleClass('dark')
-        $(this).hasClass('dark')
-            ? $(darkIcon).replaceAll('.mode-change .icon')
-            : $(lightIcon).replaceAll('.mode-change .icon')
     })
 }
 

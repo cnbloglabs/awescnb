@@ -7,18 +7,20 @@ const {
     template,
     themeName,
     sourceMap,
-    openBrowser,
+    // openBrowser
 } = require('./options')
 
 const devServer = {
-    host: 'localhost',
-    port: 8080,
     contentBase: path.join(__dirname, 'dist'),
-    open: openBrowser,
-    hot: true,
-    disableHostCheck: true,
-    proxy: {},
-    before() {},
+    compress: true,
+    port: 8080,
+    // host: 'localhost',
+    // open: openBrowser,
+    // hot: true,
+    // quiet: false,
+    // disableHostCheck: true,
+    // proxy: {},
+    // before() {},
 }
 
 const plugins = [
@@ -57,6 +59,20 @@ const rules = [
             },
             // 'postcss-loader',
             'sass-loader',
+        ],
+    },
+    {
+        test: /\.less$/,
+        use: [
+            'style-loader',
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 2,
+                },
+            },
+            // 'postcss-loader',
+            'less-loader',
         ],
     },
 ]
