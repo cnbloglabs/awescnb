@@ -42,6 +42,7 @@
         margin-top: 0;
         grid-area: auto;
         height: 100vh;
+        padding: 0;
     }
     #mainContent {
         grid-template-rows: 30vh 1fr;
@@ -91,6 +92,7 @@
     .pager {
         a {
             padding: 0 8px;
+            margin: 0 8px;
         }
     }
 

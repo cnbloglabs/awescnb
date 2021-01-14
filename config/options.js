@@ -1,6 +1,6 @@
 module.exports = {
-    themeName: 'silence',
-    template: 'post',
+    themeName: 'geek',
+    template: 'index',
     eslint: true,
     sourceMap: true,
     openBrowser: false,
