@@ -15,7 +15,9 @@ function getBlogname() {
     if (openNews()) {
         return $('#profile_block>a:nth-of-type(1)').html()
     }
-    const headerTitle = $('#Header1_HeaderTitle').text()
+    const headerTitle = $('#Header1_HeaderTitle')
+        .text()
+        .trim()
     if (headerTitle.length) return headerTitle
     return currentBlogApp
 }
