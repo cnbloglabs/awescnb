@@ -23,6 +23,9 @@
     }
 }
 
+.account-button:nth-child(1) {
+    margin-left: 0.5em;
+}
 .account-button:nth-child(2) {
     margin-right: 0.5em;
 }
@@ -52,11 +55,12 @@
 .account-nickname {
     display: inline-flex;
     align-items: center;
-    margin-right: auto;
+    margin: 0 auto;
     color: #64677a;
     font-weight: 600;
     // white-space: nowrap;
     width: auto;
+    max-width: 133px;
 }
 
 .account-avatar {
