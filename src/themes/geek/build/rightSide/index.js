@@ -3,7 +3,9 @@ import { getMonth, getQuarter } from '@tools'
 import { index } from '@constants/links'
 import { getThemeOptions } from '@config/extra'
 import { getBlogname } from '@cnblog'
+import { contact } from '@links'
 const { avatar } = getThemeOptions()
+const nickname = getBlogname()
 
 function flat() {
     $('#sideBar').appendTo($('#home'))
@@ -14,7 +16,9 @@ function buildTopBtns() {
     const el = `
     <div class="account">
         <button class="account-button">
-            <li class="fas fa-envelope"></li>
+            <a href="${contact}" target="_bank">
+                <li class="fas fa-envelope"></li>
+            </a>
         </button>
         <button class="account-button">
             <a href="https://msg.cnblogs.com/" class='account-button-notice'>
@@ -23,10 +27,10 @@ function buildTopBtns() {
                     'style=display:none'}>${noticeCount}</span>
             </a>
         </button>
-        <span class="account-user">${getBlogname()}
-            <a href="${index}"><img src="${avatar}" alt="" class="account-profile"></a>
-            <span style="display:none">▼</span>
-        </span>
+        <div class="account-nickname">${nickname}</div>
+        <div class="account-avatar">
+            <a href="${index}"><img src="${avatar}"></a>
+        </div>
     </div>`
     $('#sideBarMain').prepend(el)
 }

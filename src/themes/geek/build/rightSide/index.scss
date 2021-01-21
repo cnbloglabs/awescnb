@@ -2,7 +2,7 @@
 .account {
     height: 60px;
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     align-items: center;
     position: sticky;
     top: 0;
@@ -33,7 +33,6 @@
 
 .account-button-notice {
     position: relative;
-
     .notice-count {
         display: inline-block;
         position: absolute;
@@ -50,28 +49,28 @@
         white-space: nowrap;
     }
 }
-.account-user {
+.account-nickname {
     display: inline-flex;
     align-items: center;
+    margin-right: auto;
     color: #64677a;
     font-weight: 600;
-    white-space: nowrap;
-    .account-profile {
+    // white-space: nowrap;
+    width: auto;
+}
+
+.account-avatar {
+    img {
         width: 28px;
         height: 28px;
         border-radius: 50%;
         margin: 0 10px;
-    }
-    span {
-        font-size: 10px;
-        font-weight: normal;
     }
 }
 
 // 顶部按钮 end
 
 // 日历 start
-
 #custom-calendar {
     padding: 18px;
 }
