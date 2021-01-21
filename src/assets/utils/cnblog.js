@@ -13,7 +13,9 @@ function openNews() {
  */
 function getBlogname() {
     if (openNews()) {
-        return $('#profile_block>a:nth-of-type(1)').html()
+        return $('#profile_block>a:nth-of-type(1)')
+            .html()
+            .trim()
     }
     const headerTitle = $('#Header1_HeaderTitle')
         .text()
