@@ -7,6 +7,8 @@ import { contact } from '@links'
 const { avatar } = getThemeOptions()
 const nickname = getBlogname()
 
+console.log(nickname)
+
 function flat() {
     $('#sideBar').appendTo($('#home'))
 }
