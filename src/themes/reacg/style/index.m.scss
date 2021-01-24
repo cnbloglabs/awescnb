@@ -1,9 +1,13 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1350px) {
     #header {
-        padding-left: 2vw;
         #navigator .blogStats {
             display: none;
         }
+    }
+}
+@media screen and (max-width: 1024px) {
+    #header {
+        padding-left: 2vw;
     }
     #catalog {
         display: none;
@@ -30,11 +34,14 @@
     }
     #header {
         overflow: auto;
+        // padding-left: 2vw !important;
         word-break: keep-all;
-        padding-left: 2vw !important;
         width: 100%;
         &::after {
             position: fixed;
+        }
+        #navlist {
+            margin-right: 20px;
         }
     }
     #main {
@@ -91,7 +98,9 @@
     .feedbackCon .blog_comment_body {
         max-width: 324px;
     }
-    .forFlow #blog-comments-placeholder .feedbackListSubtitle {
+    .forFlow
+        #blog-comments-placeholder
+        .feedbackListSubtitle {
         font-size: 12px;
         line-height: 2em;
     }
@@ -99,7 +108,10 @@
         overflow: hidden;
         white-space: nowrap;
     }
-    .forFlow #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
+    .forFlow
+        #blog-comments-placeholder
+        .feedbackListSubtitle
+        > a:last-of-type {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

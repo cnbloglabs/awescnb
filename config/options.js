@@ -1,9 +1,9 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'reacg',
     template: 'post',
     eslint: true,
     sourceMap: true,
-    openBrowser: false,
+    openBrowser: true,
     openAnalyzer: false,
     cssExtract: false,
 }

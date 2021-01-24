@@ -191,6 +191,7 @@ export function lockConfig(devOptions) {
 export function darkModeConfig(devOptions) {
     const defaultOptions = {
         enable: true,
+        darkDefault: false,
         autoDark: false,
         autoLight: false,
     }

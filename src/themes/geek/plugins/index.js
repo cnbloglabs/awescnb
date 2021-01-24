@@ -80,6 +80,7 @@ const signaturePluginConfig = {
 }
 const modeOptions = {
     enable: true,
+    darkDefault: true,
     autoDark: false,
     autoLight: false,
 }
