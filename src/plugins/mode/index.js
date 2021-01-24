@@ -59,10 +59,11 @@ function changeMode(mode, hasTransition = true) {
 
 /**
  * 初始化
+ * @param {*} defaultMode
  * @param {*} autoDark
  * @param {*} autoLight
  */
-function init(autoDark, autoLight) {
+function init(darkDefault, autoDark, autoLight) {
     const hour = new Date().getHours()
     const isNight = hour > 19 || hour <= 5
     const storage = localStorage.modeType
@@ -71,6 +72,11 @@ function init(autoDark, autoLight) {
         storage === 'dark'
             ? changeMode('dark', false)
             : changeMode('light', false)
+    }
+
+    if (!localStorage.getItem('modeType') && darkDefault) {
+        changeMode('dark', false)
+        return
     }
 
     if (isNight) {
@@ -95,10 +101,13 @@ function click() {
 }
 
 export default devOptions => {
-    const { enable, autoDark, autoLight } = darkModeConfig(
-        devOptions,
-    )
+    const {
+        enable,
+        darkDefault,
+        autoDark,
+        autoLight,
+    } = darkModeConfig(devOptions)
     if (!enable) return
-    init(autoDark, autoLight)
+    init(darkDefault, autoDark, autoLight)
     click()
 }

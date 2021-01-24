@@ -6,8 +6,9 @@
 
 html {
     font-size: 12px;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
-        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    font-family: -apple-system, system-ui,
+        BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+        Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
     word-break: break-word;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
@@ -28,21 +29,23 @@ body {
     position: relative;
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 100%;
     padding-left: 15vw;
     height: 54px;
     z-index: 10;
-    &::after {
-        content: '';
-        height: 54px;
-        background: var(--background-w);
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        position: absolute;
-        width: 100vw;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
+    background: var(--background-w);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    // &::after {
+    //     content: '';
+    //     height: 54px;
+    //     background: var(--background-w);
+    //     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    //     position: absolute;
+    //     width: 100vw;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    // }
     #custom-github {
         padding: 0 15.822px;
     }
@@ -62,10 +65,11 @@ body {
             position: relative;
         }
         .blogStats {
-            position: absolute;
-            top: 0;
-            right: 7.2vw;
+            // position: absolute;
+            // top: 0;
+            // right: 7.2vw;
             display: flex;
+            margin-left: 14vw;
             height: 100%;
             font-size: 12px;
             color: var(--text-9);
@@ -119,7 +123,8 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid
+                    hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .postTitle {
@@ -174,7 +179,8 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid
+                    hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .entrylistItem {
@@ -265,7 +271,8 @@ body {
                         }
                         &:hover {
                             transform: scale(1.05);
-                            box-shadow: 0 0 5px var(--themeColor);
+                            box-shadow: 0 0 5px
+                                var(--themeColor);
                             transition: all 0.2s;
                         }
                     }
@@ -323,6 +330,7 @@ body {
     .feedbackCon {
         @include center();
         margin-top: 5px;
+        overflow: hidden;
         .blog_comment_body {
             position: relative;
             margin-left: 10px;
@@ -344,9 +352,14 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-right: solid 12.96px var(--background-e);
+                border-right: solid 12.96px
+                    var(--background-e);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px
+                    rgba(0, 0, 0, 0);
+            }
+            pre code {
+                width: 100%;
             }
         }
     }
@@ -373,9 +386,11 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-left: solid 12.96px var(--background-e);
+                border-left: solid 12.96px
+                    var(--background-e);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px
+                    rgba(0, 0, 0, 0);
             }
         }
 

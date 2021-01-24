@@ -2,8 +2,15 @@ import './index.scss'
 import { sidebarWraps } from '@/constants/elements'
 import { iconInSvg } from '../../utils/tools'
 import { fontUrl, icons, foodIcons } from './icons'
-import { pageName, randomProperty, cacheScript } from '@tools'
-import { getGiteeOptions, getGithubOptions } from '@config/extra'
+import {
+    pageName,
+    randomProperty,
+    cacheScript,
+} from '@tools'
+import {
+    getGiteeOptions,
+    getGithubOptions,
+} from '@config/extra'
 
 /**
  * 设置切换暗色模式 icon
@@ -14,7 +21,9 @@ function setModeIcon() {
     const lightIcon = iconInSvg(icons.light)
     const icon = isDark ? darkIcon : lightIcon
     $('#navList').prepend(
-        `<li class='mode-change ${isDark ? 'dark' : ''}'>${icon}</li>`,
+        `<li class='mode-change ${
+            isDark ? 'dark' : ''
+        }'>${icon}</li>`,
     )
     $(document).on('click', '.mode-change', function() {
         $(this).toggleClass('dark')
@@ -31,10 +40,11 @@ function setGithub() {
     const { enable, color, url } = getGithubOptions()
     if (!enable) return
     const $githubIcon = `
-    <li class="custom-github" style="color:${color}" href=${url}>${iconInSvg(
-        icons.github,
-    )}</li>
-                        `
+    <li class="custom-github" style="color:${color}">
+        <a href="${url}" target="_blank">
+            ${iconInSvg(icons.github)}
+        </a>
+    </li>`
     $('.mode-change').length
         ? $('.mode-change').after($githubIcon)
         : $('.custom-gitee').length
@@ -67,7 +77,14 @@ function setGitee() {
  * navlist 图标（博客园  首页 ...）
  */
 function nav() {
-    const { cnblog, home, pens, contact, rss, admin } = icons
+    const {
+        cnblog,
+        home,
+        pens,
+        contact,
+        rss,
+        admin,
+    } = icons
 
     const items = [
         { selector: '#blog_nav_sitehome', icon: cnblog },
@@ -164,11 +181,17 @@ function setSidebarIcon() {
     ]
 
     const insert = () => {
-        for (const { title, icon, sonIcon } of iconActions) {
+        for (const {
+            title,
+            icon,
+            sonIcon,
+        } of iconActions) {
             if ($(title).length) {
                 $(`${title} h3`).prepend(iconInSvg(icon))
                 if (sonIcon) {
-                    $(`${title} ul li a`).prepend(iconInSvg(sonIcon))
+                    $(`${title} ul li a`).prepend(
+                        iconInSvg(sonIcon),
+                    )
                 }
             }
         }

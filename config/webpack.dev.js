@@ -7,7 +7,7 @@ const {
     template,
     themeName,
     sourceMap,
-    // openBrowser
+    openBrowser,
 } = require('./options')
 
 const devServer = {
@@ -15,8 +15,8 @@ const devServer = {
     compress: true,
     port: 8080,
     // host: 'localhost',
-    // open: openBrowser,
-    // hot: true,
+    open: openBrowser,
+    hot: true,
     // quiet: false,
     // disableHostCheck: true,
     // proxy: {},
