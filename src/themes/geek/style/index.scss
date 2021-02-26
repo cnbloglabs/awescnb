@@ -1,4 +1,5 @@
 @import '@/assets/style/reset.scss';
+@import '@/assets/style/hideAds.scss';
 @import './variables.scss';
 @import './tools.scss';
 @import './scroll.scss';
@@ -872,7 +873,8 @@ h1.PostListTitle + .pager {
 #comment_form {
     #divCommentShow,
     #ad_text_under_commentbox,
-    #comment_nav {
+    #comment_nav,
+    .commentbox_footer {
         display: none;
     }
 
