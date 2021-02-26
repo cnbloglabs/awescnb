@@ -1,3 +1,4 @@
+@import '@/assets/style/hideAds.scss';
 @import './common.scss';
 @import './variables.scss';
 @import './tools.scss';
@@ -492,6 +493,10 @@ body {
                 border-bottom-color: var(--themeColor);
             }
             .commentbox_title_left {
+                display: none;
+            }
+
+            .commentbox_footer {
                 display: none;
             }
             // .commentbox_title_right {

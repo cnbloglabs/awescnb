@@ -1,4 +1,5 @@
 @import '@/assets/style/reset.scss';
+@import '@/assets/style/hideAds.scss';
 @import './variables.scss';
 @import './tools.scss';
 @import './scroll.scss';
@@ -751,7 +752,8 @@ body {
 #comment_form {
     #divCommentShow,
     #ad_text_under_commentbox,
-    #comment_nav {
+    #comment_nav,
+    .commentbox_footer {
         display: none;
     }
     #comment_form_container {
