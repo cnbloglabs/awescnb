@@ -1,13 +1,18 @@
 /* gshang */
 @charset "utf-8";
-@import url("//unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css");
-@import url(https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css) screen and (min-width:0px);
-@import url(https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.css) screen and (min-width:0px);
-@import url(https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css) screen and (min-width:0px);
-@import url(https://blog-static.cnblogs.com/files/gshang/notiflix-2.0.0.min.css) screen and (min-width:0px);
+@import '@/assets/style/hideAds.scss';
+@import url('//unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css');
+@import url(https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css)
+    screen and (min-width: 0px);
+@import url(https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.css)
+    screen and (min-width: 0px);
+@import url(https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css)
+    screen and (min-width: 0px);
+@import url(https://blog-static.cnblogs.com/files/gshang/notiflix-2.0.0.min.css)
+    screen and (min-width: 0px);
 
 /************** 基本样式 开始 ***************/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     :root {
         --color-primary: #409eff;
         --color-success: #67c23a;
@@ -43,7 +48,8 @@
         --text-h4: 18px;
         --text-h5: 16px;
         --text-h6: 14px;
-        --basic-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+        --basic-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+            0 0 6px rgba(0, 0, 0, 0.04);
         --light-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
         /** old ***/
@@ -56,15 +62,13 @@
         --BackgroundColor: #f4f6fa;
     }
 
-    
-
     /* 去广告 */
     #ad_c1,
     #ad_c2,
     #ad_t2,
     #under_post_news,
     .c_ad_block {
-        display: none
+        display: none;
     }
 
     * {
@@ -93,7 +97,7 @@
         max-width: 100% !important;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         .blog_comment_body img {
             max-width: 100% !important;
         }
@@ -132,10 +136,8 @@
 
 /************** 基本样式 结束 ***************/
 
-
-
 /************** 头部导航栏 开始 ***************/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     #header {
         max-width: 1200px;
         display: flex;
@@ -149,7 +151,7 @@
     }
 
     #header:before {
-        content: "";
+        content: '';
         width: 100%;
         height: 60px;
         background: var(--color-white);
@@ -193,7 +195,7 @@
         padding: 10px 16px;
         margin: 5px 0;
         background-color: #fff;
-        border: 1px solid #EBEEF5;
+        border: 1px solid #ebeef5;
         border-radius: 4px;
         box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
         font-size: 16px;
@@ -216,13 +218,13 @@
 */
 
     #blogTitle h2:before {
-        content: "";
+        content: '';
         width: 10px;
         height: 10px;
         transform: rotate(45deg);
         background: #fff;
-        border-left: 1px solid #EBEEF5;
-        border-top: 1px solid #EBEEF5;
+        border-left: 1px solid #ebeef5;
+        border-top: 1px solid #ebeef5;
         position: absolute;
         top: -6px;
         right: 20px;
@@ -261,7 +263,7 @@
     }
 
     #navList li a:after {
-        content: "";
+        content: '';
         display: block;
         margin: auto;
         background: var(--color-primary);
@@ -297,7 +299,7 @@
     }
 
     #navList li:nth-child(3) a:hover:after {
-        display: none
+        display: none;
     }
 
     #navList li:nth-child(3) a {
@@ -313,7 +315,7 @@
     }
 
     #navList li:nth-child(3) a:before {
-        content: "\e78c";
+        content: '\e78c';
         font-family: element-icons;
     }
 
@@ -332,9 +334,7 @@
         border-left: 1px solid var(--border-color-base);
     }
 
-
-    @media screen and (max-width:1200px) {
-
+    @media screen and (max-width: 1200px) {
         #blogTitle h1,
         #blogTitle h2,
         .blogStats {
@@ -353,10 +353,8 @@
 
 /************** 头部导航栏 结束 ***************/
 
-
-
 /************** 主要布局 开始 ***************/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     @media screen and (max-width: 1200px) {
         #main {
             margin: 10px auto !important;
@@ -368,7 +366,7 @@
 
         .forFlow {
             padding: 0;
-            margin: 0
+            margin: 0;
         }
 
         .sidebar-hide {
@@ -393,7 +391,7 @@
         }
     }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
         #main {
             max-width: 1200px;
             display: grid;
@@ -421,10 +419,8 @@
 
 /************** 主要布局 结束 ***************/
 
-
-
 /************** 侧边栏 开始 ***************/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     #blog-calendar {
         /*border: 1px solid var(--border-color-base);*/
         padding: 14px;
@@ -440,13 +436,13 @@
     }
 
     .CalNextPrev:nth-child(1) a:before {
-        content: "\e6de";
+        content: '\e6de';
         font-family: element-icons;
         font-size: 14px;
     }
 
     .CalNextPrev:nth-child(3) a:before {
-        content: "\e6e0";
+        content: '\e6e0';
         font-family: element-icons;
         font-size: 14px;
     }
@@ -467,8 +463,7 @@
         font-weight: bold;
     }
 
-    @media screen and (max-width:1200px) {
-
+    @media screen and (max-width: 1200px) {
         #sideBarMain,
         #leftcontentcontainer,
         #blog-sidecolumn,
@@ -479,11 +474,9 @@
             grid-gap: 10px;
             width: 100%;
         }
-
     }
 
-    @media screen and (min-width:1200px) {
-
+    @media screen and (min-width: 1200px) {
         #sideBarMain,
         #leftcontentcontainer,
         #blog-sidecolumn,
@@ -494,7 +487,6 @@
             grid-gap: 10px;
             /* width: 100%; */
         }
-
     }
 
     #sidebar_shortcut ul {
@@ -534,9 +526,10 @@
     }
 
     .recent_comment_author {
-        border-bottom: 1px dashed var(--border-color-extra-linght);
+        border-bottom: 1px dashed
+            var(--border-color-extra-linght);
         padding-bottom: 10px;
-        margin-bottom: 10px
+        margin-bottom: 10px;
     }
 
     .sidebar-block:hover,
@@ -552,12 +545,13 @@
         font-weight: 500;
         /* text-indent:10px; */
         padding: 14px 20px;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
         position: relative;
     }
 
     .catListTitle:after {
-        content: "";
+        content: '';
         width: 40px;
         height: 2px;
         border-radius: 4px;
@@ -574,8 +568,6 @@
     #sidebar_news:hover .catListTitle:after {
         width: 80px;
     }
-
-
 
     .sidebar-block ul,
     #profile_block,
@@ -651,17 +643,14 @@
     }
 
     .btn_my_zzk:hover {
-        background: var(--color-danger-0)
+        background: var(--color-danger-0);
     }
 }
 
 /************** 侧边栏 结束 ***************/
 
-
-
 /************** 随笔/档案 开始 ***************/
-@media screen and (min-width:0) {
-
+@media screen and (min-width: 0) {
     .day,
     .entrylist {
         margin-bottom: 10px;
@@ -681,19 +670,21 @@
         padding: 20px;
         margin: 0;
         font-size: var(--text-h5);
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
         position: relative;
         /* margin-bottom: 10px; */
     }
 
     .entrylistDescription {
         padding: 20px;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
     }
 
     .dayTitle:after,
     .entrylistTitle:after {
-        content: "";
+        content: '';
         width: 40px;
         height: 2px;
         border-radius: 4px;
@@ -741,7 +732,8 @@
         /* margin:10px 0; */
         height: 1px;
         overflow: hidden;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
     }
 
     .c_b_p_desc {
@@ -762,7 +754,7 @@
         object-fit: cover;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         .c_b_p_desc {
             -webkit-line-clamp: 3;
         }
@@ -773,7 +765,7 @@
         }
     }
 
-    @media screen and (min-width:767px) {
+    @media screen and (min-width: 767px) {
         .c_b_p_desc {
             -webkit-line-clamp: 5;
         }
@@ -783,30 +775,27 @@
             width: 200px;
         }
     }
-
 }
 
 /************** 随笔/档案 结束 ***************/
 
-
-
 /************** 常用链接子界面/相册 开始 ***************/
 @media screen and (min-width: 0px) {
-
     .PostListTitle {
         margin: 0;
         font-size: var(--text-h4);
         font-weight: 500;
         /* text-indent:10px; */
         padding: 20px 20px;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
         position: relative;
         background: var(--color-white);
         border-radius: 4px 4px 0 0;
     }
 
     .PostListTitle:after {
-        content: "";
+        content: '';
         width: 40px;
         height: 2px;
         border-radius: 4px;
@@ -831,7 +820,8 @@
     }
 
     #myposts {
-        border-top: 1px solid var(--border-color-extra-linght);
+        border-top: 1px solid
+            var(--border-color-extra-linght);
         border-radius: 0 0 4px 4px;
         overflow: hidden;
     }
@@ -839,7 +829,8 @@
     .PostList {
         display: grid;
         grid-template-columns: 100%;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
     }
 
     .postTitl2 {
@@ -864,8 +855,6 @@
         color: var(--color-text-regular);
     }
 
-
-
     #taglist_main,
     .gallery {
         margin: 0;
@@ -877,7 +866,6 @@
         text-align: center;
     }
 
-
     #taglist_title,
     .thumbTitle,
     .galleryTitle {
@@ -887,13 +875,14 @@
         /* text-indent:10px; */
         padding: 20px 20px;
         text-align: left;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
         position: relative;
     }
 
     #taglist_title:after,
     .galleryTitle:after {
-        content: "";
+        content: '';
         width: 40px;
         height: 2px;
         border-radius: 4px;
@@ -948,7 +937,7 @@
         flex: 1;
     }
 
-    @media screen and (max-width:540px) {
+    @media screen and (max-width: 540px) {
         #MyTag1_dtTagList td {
             width: 50% !important;
         }
@@ -971,7 +960,7 @@
     }
 
     .gallery:after {
-        content: "";
+        content: '';
         height: 30px;
         display: block;
     }
@@ -979,10 +968,8 @@
 
 /**************  常用链接子界面/相册 结束 ***************/
 
-
-
 /************** 分页模块 开始 ***************/
-@media screen and (min-width:0) {
+@media screen and (min-width: 0) {
     .topicListFooter {
         margin: 0;
     }
@@ -1029,7 +1016,7 @@
     .Pager {
         padding: 20px;
         text-align: center;
-        background: var(--color-white)
+        background: var(--color-white);
     }
 
     span.current {
@@ -1061,26 +1048,20 @@
 
 /************** 分页模块 开始 ***************/
 
-
-
-
 /************** 页脚 开始 ***************/
-@media screen and (min-width:0) {
+@media screen and (min-width: 0) {
     #footer {
         text-align: center;
         padding: 30px 14px;
         background: #1d1e1f;
         color: var(--color-text-secondary);
-
     }
 }
 
 /************** 页脚 结束 ***************/
 
-
-
 /************** 博客正文基本样式 开始 ***************/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     .post {
         display: grid;
         grid-template-columns: 100%;
@@ -1104,11 +1085,12 @@
         border-radius: 4px 4px 0 0;
         position: relative;
         font-weight: 500;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
     }
 
     .post .postTitle:after {
-        content: "";
+        content: '';
         width: 40px;
         height: 2px;
         border-radius: 4px;
@@ -1148,17 +1130,17 @@
     }
 
     #post-date:before {
-        content: "\e71f";
+        content: '\e71f';
         font-family: element-icons;
     }
 
     #post_view_count:before {
-        content: "\e769";
+        content: '\e769';
         font-family: element-icons;
     }
 
     #post_comment_count:before {
-        content: "\e72e";
+        content: '\e72e';
         font-family: element-icons;
     }
 
@@ -1167,35 +1149,34 @@
     }
 
     .post .postDesc a[href^="https://www.cnblogs.com/"]:before {
-        content: "\e6e3";
+        content: '\e6e3';
         font-family: element-icons;
     }
 
-    .post .postDesc a[target="_blank"]:before {
-        content: "\e786";
+    .post .postDesc a[target='_blank']:before {
+        content: '\e786';
         font-family: element-icons;
     }
 
-    .post .postDesc a[rel="nofollow"]:before {
-        content: "\e764";
+    .post .postDesc a[rel='nofollow']:before {
+        content: '\e764';
         font-family: element-icons;
     }
 
-    .post .postDesc a[href="javascript:void(0)"] {
+    .post .postDesc a[href='javascript:void(0)'] {
         margin-right: 0;
     }
 
-    .post .postDesc a[href="javascript:void(0)"]:before {
-        content: "\e765";
+    .post .postDesc a[href='javascript:void(0)']:before {
+        content: '\e765';
         font-family: element-icons;
     }
 }
 
 /************** 博客正文基本样式 结束 ***************/
 
-
 /************** markdown 开始 ***************/
-@media screen and (min-width:0) {
+@media screen and (min-width: 0) {
     .cnblogs-markdown {
         line-height: 1.8;
     }
@@ -1224,7 +1205,7 @@
         padding: 0px !important;
         background: #282c34 !important;
         font-family: SFMono-Regular, Menlo, Monaco, Consolas,
-            "Liberation Mono", "Courier New", monospace !important;
+            'Liberation Mono', 'Courier New', monospace !important;
     }
 
     #cnblogs_post_body ul {
@@ -1259,9 +1240,11 @@
 /************** markdown 结束 ***************/
 
 /************** github markdown 开始 ***************/
-@media screen and (min-width:0) {
+@media screen and (min-width: 0) {
     .cnblogs-markdown {
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji !important;
+        font-family: -apple-system, BlinkMacSystemFont,
+            Segoe UI, Helvetica, Arial, sans-serif,
+            Apple Color Emoji, Segoe UI Emoji !important;
         font-size: 16px !important;
         line-height: 1.8 !important;
         /* word-wrap: break-word !important; */
@@ -1270,7 +1253,8 @@
     .cnblogs-markdown kbd {
         display: inline-block !important;
         padding: 3px 5px !important;
-        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace !important;
+        font: 11px SFMono-Regular, Consolas, Liberation Mono,
+            Menlo, monospace !important;
         line-height: 10px !important;
         color: #444d56 !important;
         vertical-align: middle !important;
@@ -1283,19 +1267,19 @@
     .cnblogs-markdown:after,
     .cnblogs-markdown:before {
         display: table !important;
-        content: "" !important;
+        content: '' !important;
     }
 
     .cnblogs-markdown:after {
         clear: both !important;
     }
 
-    .cnblogs-markdown>:first-child {
-        margin-top: 0 !important
+    .cnblogs-markdown > :first-child {
+        margin-top: 0 !important;
     }
 
-    .cnblogs-markdown>:last-child {
-        margin-bottom: 0 !important
+    .cnblogs-markdown > :last-child {
+        margin-bottom: 0 !important;
     }
 
     .cnblogs-markdown a:not([href]) {
@@ -1331,7 +1315,7 @@
     }
 
     .cnblogs-markdown hr {
-        height: .25em !important;
+        height: 0.25em !important;
         padding: 0 !important;
         margin: 24px 0 !important;
         background-color: #e1e4e8 !important;
@@ -1341,14 +1325,14 @@
     .cnblogs-markdown blockquote {
         padding: 0 1em !important;
         color: #6a737d !important;
-        border-left: .25em solid #dfe2e5 !important;
+        border-left: 0.25em solid #dfe2e5 !important;
     }
 
-    .cnblogs-markdown blockquote>:first-child {
+    .cnblogs-markdown blockquote > :first-child {
         margin-top: 0 !important;
     }
 
-    .cnblogs-markdown blockquote>:last-child {
+    .cnblogs-markdown blockquote > :last-child {
         margin-bottom: 0 !important;
     }
 
@@ -1361,7 +1345,7 @@
         margin-top: 24px !important;
         margin-bottom: 16px !important;
         font-weight: 600 !important;
-        line-height: 1. !important;
+        line-height: 1 !important;
     }
 
     .cnblogs-markdown h1 .octicon-link,
@@ -1414,7 +1398,7 @@
 
     .cnblogs-markdown h1,
     .cnblogs-markdown h2 {
-        padding-bottom: .3em !important;
+        padding-bottom: 0.3em !important;
         border-bottom: 1px solid #eaecef !important;
     }
 
@@ -1431,11 +1415,11 @@
     }
 
     .cnblogs-markdown h5 {
-        font-size: .875em !important;
+        font-size: 0.875em !important;
     }
 
     .cnblogs-markdown h6 {
-        font-size: .85em !important;
+        font-size: 0.85em !important;
         color: #6a737d !important;
     }
 
@@ -1462,12 +1446,12 @@
         word-wrap: break-all !important;
     }
 
-    .cnblogs-markdown li>p {
+    .cnblogs-markdown li > p {
         margin-top: 16px !important;
     }
 
-    .cnblogs-markdown li+li {
-        margin-top: .25em !important;
+    .cnblogs-markdown li + li {
+        margin-top: 0.25em !important;
     }
 
     .cnblogs-markdown dl {
@@ -1522,11 +1506,11 @@
         background-color: #fff !important;
     }
 
-    .cnblogs-markdown img[align=right] {
+    .cnblogs-markdown img[align='right'] {
         padding-left: 20px !important;
     }
 
-    .cnblogs-markdown img[align=left] {
+    .cnblogs-markdown img[align='left'] {
         padding-right: 20px !important;
     }
 
@@ -1541,7 +1525,7 @@
         overflow: hidden !important;
     }
 
-    .cnblogs-markdown span.frame>span {
+    .cnblogs-markdown span.frame > span {
         display: block !important;
         float: left !important;
         width: auto !important;
@@ -1569,7 +1553,7 @@
         clear: both !important;
     }
 
-    .cnblogs-markdown span.align-center>span {
+    .cnblogs-markdown span.align-center > span {
         display: block !important;
         margin: 13px auto 0 !important;
         overflow: hidden !important;
@@ -1587,7 +1571,7 @@
         clear: both !important;
     }
 
-    .cnblogs-markdown span.align-right>span {
+    .cnblogs-markdown span.align-right > span {
         display: block !important;
         margin: 13px 0 0 !important;
         overflow: hidden !important;
@@ -1617,7 +1601,7 @@
         overflow: hidden !important;
     }
 
-    .cnblogs-markdown span.float-right>span {
+    .cnblogs-markdown span.float-right > span {
         display: block !important;
         margin: 13px auto 0 !important;
         overflow: hidden !important;
@@ -1626,13 +1610,14 @@
 
     .cnblogs-markdown code,
     .cnblogs-markdown tt {
-        padding: 0.2em .4em !important;
+        padding: 0.2em 0.4em !important;
         margin: 0 4px !important;
         /* font-size: 85% !important; */
         display: inline;
         border: none !important;
-        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-        background-color: rgba(27, 31, 35, .05) !important;
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+            'Liberation Mono', 'Courier New', monospace !important;
+        background-color: rgba(27, 31, 35, 0.05) !important;
         border-radius: 3px !important;
     }
 
@@ -1649,7 +1634,7 @@
 		word-wrap: normal !important;
 	} */
 
-    .cnblogs-markdown pre>code {
+    .cnblogs-markdown pre > code {
         padding: 0 !important;
         margin: 0 !important;
         font-size: 100% !important;
@@ -1667,7 +1652,7 @@
         margin-bottom: 0 !important;
         /*word-break: normal !important;*/
     }
-    
+
     .cnblogs-markdown .highlight pre,
     .cnblogs-markdown pre {
         padding: 16px 16px 8px 5px !important;
@@ -1720,15 +1705,12 @@
         background: #f6f8fa !important;
         border-top: 0 !important;
     }
-
 }
 
 /************** github markdown 结束 ***************/
 
-
 /************** 博文互动开始 ***************/
-@media screen and (min-width:0px) {
-
+@media screen and (min-width: 0px) {
     #BlogPostCategory,
     #EntryTag {
         font-family: element-icons;
@@ -1763,11 +1745,11 @@
     }
 
     #BlogPostCategory a:before {
-        content: "\e784";
+        content: '\e784';
     }
 
     #EntryTag a:before {
-        content: "#";
+        content: '#';
     }
 
     #blog_post_info {
@@ -1779,7 +1761,6 @@
         margin-top: 20px;
         justify-content: space-between;
     }
-
 
     #green_channel {
         width: auto;
@@ -1836,20 +1817,20 @@
     }
 
     #green_channel_digg:before {
-        content: "\f087";
+        content: '\f087';
     }
 
     #green_channel_follow:before {
-        content: "\f08a";
+        content: '\f08a';
     }
 
     #green_channel_favorite:before {
-        content: "\f005";
+        content: '\f005';
         color: var(--color-warning);
     }
 
     #green_channel_weibo:before {
-        content: "\f18a";
+        content: '\f18a';
         color: var(--color-danger);
     }
 
@@ -1858,11 +1839,11 @@
     }
 
     #green_channel_weibo:after {
-        content: "微博分享"
+        content: '微博分享';
     }
 
     #green_channel_wechat:before {
-        content: "\f1d7";
+        content: '\f1d7';
         color: var(--color-success);
     }
 
@@ -1871,7 +1852,7 @@
     }
 
     #green_channel_wechat:after {
-        content: "微信分享"
+        content: '微信分享';
     }
 
     #div_digg {
@@ -1909,13 +1890,12 @@
     }
 
     .diggit:before {
-        content: "\e8dc";
+        content: '\e8dc';
         font-size: var(--text-h4);
         font-family: 'Material Icons';
     }
 
-
-    @media screen and (max-width:540px) {
+    @media screen and (max-width: 540px) {
         /* #green_channel a {
 			font-size:0!important;
 		} */
@@ -1960,7 +1940,7 @@
 
     #author_profile_honor {
         margin: 0 10px;
-        font-size: var(--text-h5)
+        font-size: var(--text-h5);
     }
 
     /*#author_profile_honor:before{
@@ -2012,41 +1992,40 @@
     .p_n_p_prefix {
         font-size: 0;
     }
-
 }
 
 /************** 博文互动结束 ***************/
 
-
 /************** 评论开始 ***************/
-@media screen and (min-width:0px) {
-
+@media screen and (min-width: 0px) {
     .login_tips {
         padding: 20px;
         background: none;
         text-align: center;
     }
 
-    #blog-comments-placeholder div[style="color:green;margin:50px 0;font-weight:normal;"] {
+    #blog-comments-placeholder
+        div[style='color:green;margin:50px 0;font-weight:normal;'] {
         margin: 0 !important;
         padding: 20px;
         text-align: center;
     }
 
-    #blog-comments-placeholder div[style="color:green;margin:50px 0;font-weight:normal;"]:before {
-        content: "\e6cf";
+    #blog-comments-placeholder
+        div[style='color:green;margin:50px 0;font-weight:normal;']:before {
+        content: '\e6cf';
         font-family: element-icons;
         margin-right: 6px;
     }
 
-    #comment_form_container span[style="color:red"] {
+    #comment_form_container span[style='color:red'] {
         text-align: center !important;
         padding: 20px !important;
         display: block;
     }
 
-    #comment_form_container span[style="color:red"]:before {
-        content: "\f071";
+    #comment_form_container span[style='color:red']:before {
+        content: '\f071';
         font-family: FontAwesome;
         margin-right: 6px;
     }
@@ -2065,7 +2044,8 @@
     #comment_nav {
         padding: 20px;
         text-align: center;
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
     }
 
     #commentform_title {
@@ -2081,14 +2061,16 @@
         font-weight: 500;
         /* text-indent:10px; */
         padding: 14px 20px;
-        border-top: 1px solid var(--border-color-extra-linght);
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-top: 1px solid
+            var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
         position: relative;
     }
 
     #commentform_title:after,
     .feedback_area_title:after {
-        content: "";
+        content: '';
         width: 40px;
         height: 2px;
         border-radius: 4px;
@@ -2107,7 +2089,8 @@
     }
 
     .feedbackItem {
-        border-bottom: 1px solid var(--border-color-extra-linght);
+        border-bottom: 1px solid
+            var(--border-color-extra-linght);
         padding: 20px;
         box-sizing: border-box;
         position: relative;
@@ -2130,11 +2113,9 @@
         font-size: var(--text-h5) !important;
     }
 
-
     .feedbackListSubtitle a {
         font-size: var(--text-h5);
     }
-
 
     .layer {
         /* width:100%; */
@@ -2155,8 +2136,7 @@
         font-size: var(--text-h5);
     }
 
-
-    .feedbackListSubtitle a[id^="a_comment_author"] {
+    .feedbackListSubtitle a[id^='a_comment_author'] {
         order: 2;
         overflow: hidden;
         /* width: 100%; */
@@ -2172,7 +2152,7 @@
     }
 
     .louzhu:before {
-        content: "\e7a5";
+        content: '\e7a5';
         margin-left: 4px;
         color: var(--color-danger);
         font-family: element-icons;
@@ -2186,6 +2166,10 @@
 
     #commentbox_opt {
         padding: 0 20px;
+    }
+
+    .commentbox_footer {
+        display: none;
     }
 
     #comment_form_container p:nth-child(7) {
@@ -2236,7 +2220,7 @@
 /************** 评论结束 ***************/
 
 /************** 弹窗开始 ***************/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     .ui-popup {
         max-width: calc(100vw - 28px) !important;
     }
@@ -2249,7 +2233,6 @@
         max-width: calc(100vw - 70px) !important;
     }
 
-
     .art-dialog-title {
         max-width: 100px !important;
     }
@@ -2257,24 +2240,22 @@
     .art-dialog-content iframe {
         overflow-y: auto !important;
     }
-
 }
 
 /************** 弹窗结束 ***************/
 
 /*** Atom OneDark 开始**/
-@media screen and (min-width:0px) {
-
+@media screen and (min-width: 0px) {
     #home .hljs-comment,
     #home .hljs-quote {
         color: #5c6370;
-        font-style: italic
+        font-style: italic;
     }
 
     #home .hljs-doctag,
     #home .hljs-formula,
     #home .hljs-keyword {
-        color: #c678dd
+        color: #c678dd;
     }
 
     #home .hljs-deletion,
@@ -2282,11 +2263,11 @@
     #home .hljs-section,
     #home .hljs-selector-tag,
     #home .hljs-subst {
-        color: #e06c75
+        color: #e06c75;
     }
 
     #home .hljs-literal {
-        color: #56b6c2
+        color: #56b6c2;
     }
 
     #home .hljs-addition,
@@ -2294,12 +2275,12 @@
     #home .hljs-meta-string,
     #home .hljs-regexp,
     #home .hljs-string {
-        color: #98c379
+        color: #98c379;
     }
 
     #home .hljs-built_in,
     #home .hljs-class .hljs-title {
-        color: #e6c07b
+        color: #e6c07b;
     }
 
     #home .hljs-attr,
@@ -2319,30 +2300,30 @@
     #home .hljs-selector-id,
     #home .hljs-symbol,
     #home .hljs-title {
-        color: #61aeee
+        color: #61aeee;
     }
 
     #home .hljs-emphasis {
-        font-style: italic
+        font-style: italic;
     }
 
     #home .hljs-strong {
-        font-weight: 700
+        font-weight: 700;
     }
 
     #home .hljs-link {
-        text-decoration: underline
+        text-decoration: underline;
     }
 
     #home .hljs-tag {
-        color: #abb2bf
+        color: #abb2bf;
     }
 }
 
 /*******  Atom OneDark 结束 ********/
 
 /*** 代码复制 开始**/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     .clipboard-button {
         position: absolute;
         display: none;
@@ -2360,7 +2341,7 @@
     }
 
     .clipboard-button:before {
-        content: "复制"
+        content: '复制';
     }
 
     .copyItem:hover .clipboard-button {
@@ -2371,10 +2352,8 @@
 
 /*** 代码复制 结束**/
 
-
 /*** 评论头像开始**/
-@media screen and (min-width:0px) {
-
+@media screen and (min-width: 0px) {
     .feedbackListSubtitle_right,
     .feedbackCon_right {
         margin-left: 60px;
@@ -2388,51 +2367,54 @@
     }
 
     .comment_avatar img {
-        box-shadow: 0 0 1px 0px rgba(51, 51, 51, .1) !important;
+        box-shadow: 0 0 1px 0px rgba(51, 51, 51, 0.1) !important;
     }
 }
 
 /*** 评论头像 结束**/
 
-
 /**** owo开始 ****/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     .OwO {
         position: relative;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        user-select: none
+        user-select: none;
     }
 
     .OwO:hover .OwO-logo {
-        color: #444
+        color: #444;
     }
 
     .OwO.OwO-open .OwO-logo {
         border-radius: 4px 4px 0 0;
         border-bottom: none;
-        color: #444
+        color: #444;
     }
 
     .OwO.OwO-open .OwO-body {
-        display: block
+        display: block;
     }
 
     .OwO.OwO-up .OwO-body {
         top: inherit;
         bottom: 21px;
-        border-radius: 4px 4px 4px 0
+        border-radius: 4px 4px 4px 0;
     }
 
-    .OwO.OwO-up .OwO-body .OwO-bar .OwO-packages li:nth-child(1) {
-        border-radius: 0
+    .OwO.OwO-up
+        .OwO-body
+        .OwO-bar
+        .OwO-packages
+        li:nth-child(1) {
+        border-radius: 0;
     }
 
     .OwO.OwO-up.OwO-open .OwO-logo {
         border: 1px solid #ddd;
         border-radius: 0 0 4px 4px;
-        border-top: none
+        border-top: none;
     }
 
     .OwO .OwO-logo {
@@ -2448,13 +2430,13 @@
         height: 22px;
         box-sizing: border-box;
         z-index: 2;
-        line-height: 16px
+        line-height: 16px;
     }
 
     .OwO .OwO-logo:hover span {
         display: inline-block;
         -webkit-animation: a 5s infinite ease-in-out;
-        animation: a 5s infinite ease-in-out
+        animation: a 5s infinite ease-in-out;
     }
 
     .OwO .OwO-body {
@@ -2465,7 +2447,7 @@
         border: 1px solid #ddd;
         z-index: 1;
         top: 21px;
-        border-radius: 0 4px 4px 4px
+        border-radius: 0 4px 4px 4px;
     }
 
     .OwO .OwO-body .OwO-items {
@@ -2477,7 +2459,7 @@
         padding: 10px;
         margin: 0;
         overflow: scroll;
-        font-size: 0
+        font-size: 0;
     }
 
     .OwO .OwO-body .OwO-items .OwO-item {
@@ -2490,33 +2472,35 @@
         line-height: 14px;
         margin: 0 10px 12px 0;
         cursor: pointer;
-        -webkit-transition: .3s;
-        transition: .3s
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
     }
 
     .OwO .OwO-body .OwO-items .OwO-item:hover {
         background: #eee;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12);
         -webkit-animation: a 5s infinite ease-in-out;
-        animation: a 5s infinite ease-in-out
+        animation: a 5s infinite ease-in-out;
     }
 
     .OwO .OwO-body .OwO-items-emoji .OwO-item {
         font-size: 20px;
-        line-height: 19px
+        line-height: 19px;
     }
 
     .OwO .OwO-body .OwO-items-image .OwO-item {
         max-width: calc(25% - 10px);
-        box-sizing: border-box
+        box-sizing: border-box;
     }
 
     .OwO .OwO-body .OwO-items-image .OwO-item img {
-        max-width: 100%
+        max-width: 100%;
     }
 
     .OwO .OwO-body .OwO-items-show {
-        display: block
+        display: block;
     }
 
     .OwO .OwO-body .OwO-bar {
@@ -2525,13 +2509,13 @@
         border-top: 1px solid #ddd;
         background: #fff;
         border-radius: 0 0 4px 4px;
-        color: #444
+        color: #444;
     }
 
     .OwO .OwO-body .OwO-bar .OwO-packages {
         margin: 0;
         padding: 0;
-        font-size: 0
+        font-size: 0;
     }
 
     .OwO .OwO-body .OwO-bar .OwO-packages li {
@@ -2541,21 +2525,25 @@
         font-size: 14px;
         padding: 0 10px;
         cursor: pointer;
-        margin-right: 3px
+        margin-right: 3px;
     }
 
     .OwO .OwO-body .OwO-bar .OwO-packages li:nth-child(1) {
-        border-radius: 0 0 0 3px
+        border-radius: 0 0 0 3px;
     }
 
     .OwO .OwO-body .OwO-bar .OwO-packages li:hover {
-        background: #eee
+        background: #eee;
     }
 
-    .OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active {
+    .OwO
+        .OwO-body
+        .OwO-bar
+        .OwO-packages
+        .OwO-package-active {
         background: #eee;
-        -webkit-transition: .3s;
-        transition: .3s
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
     }
 
     /* 表情 */
@@ -2569,9 +2557,8 @@
 
 /**** owo结束****/
 
-
 /********* 悬浮按钮 ********/
-@media screen and (min-width:0px) {
+@media screen and (min-width: 0px) {
     .float-btn {
         position: fixed;
         bottom: 20px;
@@ -2616,31 +2603,30 @@
     }
 
     .btn-top a:before {
-        content: "\f0d8"
+        content: '\f0d8';
     }
 
-
     .btn-content a:before {
-        content: "\f0ca";
+        content: '\f0ca';
     }
 
     .btn-sidebar a:before {
-        content: "\f0db";
+        content: '\f0db';
     }
 
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width: 1200px) {
         .btn-main {
             display: none !important;
         }
     }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
         .btn-sidebar {
             display: none !important;
         }
 
         .btn-main a:before {
-            content: "\f0db"
+            content: '\f0db';
         }
 
         .main-hide {
@@ -2652,7 +2638,6 @@
             display: none;
         }
     }
-
 }
 
 /******** 导航目录 *********/
@@ -2674,24 +2659,24 @@
         color: var(--color-primary);
     }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
         .nav {
             height: calc(100vh - 80px);
         }
-
     }
 
     .nav li {
         padding: 0px;
         display: flex;
-        border-left: 1px solid var(--border-color-extra-linght);
+        border-left: 1px solid
+            var(--border-color-extra-linght);
         justify-content: center;
         align-items: center;
         line-height: 2.4;
     }
 
     .nav li:before {
-        content: "";
+        content: '';
         width: 8px;
         height: 8px;
         display: block;
@@ -2709,7 +2694,7 @@
 
     .nav:before,
     .nav:after {
-        content: "";
+        content: '';
         left: 36px;
         width: 6px;
         height: 6px;
@@ -2735,7 +2720,6 @@
 
 /****** 信息提示 *******/
 @media screen and (min-width: 0px) {
-
     .newscard {
         border-radius: 4px;
         margin: 0px 0px 10px;
@@ -2745,7 +2729,7 @@
         overflow: hidden;
         background-color: #dfedf8;
         color: #3162ae;
-        box-shadow: 0 0.05rem 1rem rgba(50, 50, 50, .04);
+        box-shadow: 0 0.05rem 1rem rgba(50, 50, 50, 0.04);
         border: 1px solid #3162ae;
     }
 
@@ -2805,7 +2789,6 @@
         background-color: #d5f1e5;
 
         color: #20704d;
-
     }
 
     .warning {
@@ -2822,7 +2805,6 @@
 
 /* 插入媒体 */
 @media screen and (min-width: 0px) {
-
     #cnblogs_post_body .video {
         height: 0;
         margin: 10px auto;
@@ -2888,7 +2870,7 @@
 }
 
 #the-end:before {
-    content: "";
+    content: '';
     width: 60px;
     height: 1px;
     display: inline-block;
@@ -2898,7 +2880,7 @@
 }
 
 #the-end:after {
-    content: "";
+    content: '';
     width: 60px;
     opacity: 0.8;
     height: 1px;
@@ -2907,9 +2889,8 @@
     margin-left: 6px;
 }
 
-
 /* add */
 #bannerbar,
-#top_nav{
+#top_nav {
     display: none;
 }

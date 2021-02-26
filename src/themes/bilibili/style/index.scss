@@ -1,3 +1,4 @@
+@import '@/assets/style/hideAds.scss';
 @import url(https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css)
     screen and (min-width: 0px);
 @import url(https://at.alicdn.com/t/font_438759_kmvtb0te1nd.css)
@@ -159,6 +160,7 @@ html {
     background-size: 30px 30px;
 }
 
+.commentbox_footer,
 .commentbox_title_left {
     display: none;
 }

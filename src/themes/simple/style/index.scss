@@ -1,4 +1,5 @@
 @import '@/assets/style/reset.scss';
+@import '@/assets/style/hideAds.scss';
 @import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
 @import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/brands.min.css);
 @import './tools.scss';
@@ -635,7 +636,8 @@ body {
 #comment_form {
     #divCommentShow,
     #ad_text_under_commentbox,
-    #comment_nav {
+    #comment_nav,
+    .commentbox_footer {
         display: none;
     }
     #comment_form_container {
