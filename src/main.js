@@ -12,10 +12,11 @@ function loadTheme(theme) {
 
 /**
  * 获取主题名称
- * @param {*} options 
+ * @param {*} options
  */
 function getThemeName(options) {
-    let theme = (options.theme && options.theme.name) || 'reacg'
+    let theme =
+        (options.theme && options.theme.name) || 'reacg'
     if (theme === 'gshang') theme = 'bilibili'
     return theme
 }
