@@ -3,9 +3,9 @@
  */
 import { getBlogname } from '@cnblog'
 const { currentBlogApp } = window
+const nickname = getBlogname()
 const home = 'https://home.cnblogs.com'
 const cnblog = 'https://www.cnblogs.com'
-const nickname = getBlogname()
 
 // 粉丝
 export const followersDetailsUrl = `${home}/u/${currentBlogApp}/followers/`
@@ -26,7 +26,7 @@ export const newPost = 'https://i.cnblogs.com/posts/edit'
 // 联系
 export const send = $('#blog_nav_contact').attr('href')
 // 订阅
-export const rss = 'about:blank#blocked'
+export const rss = `https://www.cnblogs.com/${currentBlogApp}/rss/`
 // 管理
 export const admin = 'https://i.cnblogs.com/'
 // 用户详情页

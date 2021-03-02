@@ -100,15 +100,21 @@ const removeHeaderToLeftside = () => {
         allowVisit,
     } of navList) {
         const target = title === '首页' ? '_self' : '_blank'
-        const item = `<a href="${url}" target="${target}">
+        const item = $(`<a href="${url}" target="${target}">
             <li>
                 <span class="fas ${icon}"></span>
                 <span>${title}</span>
             </li>
-        </a>`
+        </a>`)
 
-        if (isVisitor && !allowVisit) {
-            continue
+        if (isVisitor && !allowVisit) continue
+        if (title === '订阅') {
+            item.removeAttr('target').attr({
+                'data-rss': url,
+                href: 'javascript:void(0)',
+                onclick:
+                    '$("#blog_nav_rss").trigger("click");',
+            })
         }
 
         el.find('ul').append(item)
@@ -118,6 +124,7 @@ const removeHeaderToLeftside = () => {
 }
 
 const buildLeftsideBottomBtns = () => {
+    if (!githubOptions.enable) return
     const userName = getBlogname()
     const el = `
     <div class="leftside-bottom">
