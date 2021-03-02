@@ -10,16 +10,16 @@ const entry =
         : {
               index: './src/main.js',
               [themeName]: `./src/themes/${themeName}/index.js`,
-              //   acg: './src/themes/acg/index.js',
-              //   bilibili: './src/themes/bilibili/index.js',
-              //   csdn: './src/themes/csdn/index.js',
-              //   demo: './src/themes/demo/index.js',
-              //   element: './src/themes/element/index.js',
-              //   geek: './src/themes/geek/index.js',
-              //   reacg: './src/themes/reacg/index.js',
-              //   silence: './src/themes/silence/index.js',
-              //   simple: './src/themes/simple/index.js',
-              //   view: './src/themes/view/index.js',
+              acg: './src/themes/acg/index.js',
+              bilibili: './src/themes/bilibili/index.js',
+              csdn: './src/themes/csdn/index.js',
+              demo: './src/themes/demo/index.js',
+              element: './src/themes/element/index.js',
+              geek: './src/themes/geek/index.js',
+              reacg: './src/themes/reacg/index.js',
+              silence: './src/themes/silence/index.js',
+              simple: './src/themes/simple/index.js',
+              view: './src/themes/view/index.js',
           }
 
 const output = {
