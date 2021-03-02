@@ -16,6 +16,7 @@ import {
 const mediumZoomConfig = {
     opacity: 0.5,
 }
+
 const customGalleryClass = 'custom-gallery'
 
 /**
