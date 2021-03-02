@@ -25,8 +25,8 @@ const customGalleryClass = 'custom-gallery'
 function removeImageOuterHref() {
     if (isMd()) return
     $('.medium-zoom-image')
-        .parent('a')
-        .removeAttr('href')
+        .css('display', 'block')
+        .unwrap()
 }
 
 /**
@@ -58,9 +58,8 @@ function buildGallery() {
  * 构建图片灯箱
  */
 function build() {
-    // const imgList = $(
-    //     `#cnblogs_post_body img, .blog_comment_body img, .${customGalleryClass} img`,
-    // )
+    // 博客园给随笔内容中的图片添加了这个功能，现将它移除
+    // #cnblogs_post_body img,
     const imgList = $(
         ` .blog_comment_body img, .${customGalleryClass} img`,
     )
