@@ -20,34 +20,17 @@ const mediumZoomConfig = {
 const customGalleryClass = 'custom-gallery'
 
 /**
- * 构建随笔详情页图片灯箱
+ * 去除 TinyMCE 插入的图片的容器链接
  */
-function build() {
-    const imgList = $(
-        `#cnblogs_post_body img, .blog_comment_body img, .${customGalleryClass} img`,
-    )
-    if (imgList === 0) return
-    $.each(imgList, i => {
-        const item = $(imgList[i])
-        item.addClass('custom-zoom')
-    })
-
-    const zoom = window.mediumZoom(
-        '.custom-zoom',
-        mediumZoomConfig,
-    )
-
-    zoom.on('open', () => {
-        mousewheel(() => {
-            zoom.close()
-        })
-    })
-
-    removeImageOuterHref()
+function removeImageOuterHref() {
+    if (isMd()) return
+    $('.medium-zoom-image')
+        .parent('a')
+        .removeAttr('href')
 }
 
 /**
- * 构建相册图片灯箱
+ * 构建相册
  */
 function buildGallery() {
     if (!isAlbumPage()) return
@@ -72,13 +55,33 @@ function buildGallery() {
 }
 
 /**
- * 去除 TinyMCE 插入的图片的容器链接
+ * 构建图片灯箱
  */
-function removeImageOuterHref() {
-    if (isMd()) return
-    $('.medium-zoom-image')
-        .parent('a')
-        .removeAttr('href')
+function build() {
+    // const imgList = $(
+    //     `#cnblogs_post_body img, .blog_comment_body img, .${customGalleryClass} img`,
+    // )
+    const imgList = $(
+        ` .blog_comment_body img, .${customGalleryClass} img`,
+    )
+    if (imgList === 0) return
+    $.each(imgList, i => {
+        const item = $(imgList[i])
+        item.addClass('custom-zoom')
+    })
+
+    const zoom = window.mediumZoom(
+        '.custom-zoom',
+        mediumZoomConfig,
+    )
+
+    zoom.on('open', () => {
+        mousewheel(() => {
+            zoom.close()
+        })
+    })
+
+    removeImageOuterHref()
 }
 
 export default devOptions => {
