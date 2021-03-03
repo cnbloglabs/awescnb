@@ -13,20 +13,21 @@ import {
     cacheScript,
 } from '@tools'
 
+const customGalleryClass = 'custom-gallery'
 const mediumZoomConfig = {
     opacity: 0.5,
 }
-
-const customGalleryClass = 'custom-gallery'
 
 /**
  * 去除 TinyMCE 插入的图片的容器链接
  */
 function removeImageOuterHref() {
-    if (isMd()) return
-    $('.medium-zoom-image')
-        .css('display', 'block')
-        .unwrap()
+    setTimeout(() => {
+        isMd() ||
+            $('.medium-zoom-image')
+                .css('display', 'block')
+                .unwrap()
+    }, 0)
 }
 
 /**
