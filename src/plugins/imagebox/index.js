@@ -23,10 +23,9 @@ const mediumZoomConfig = {
  */
 function removeImageOuterHref() {
     if (isMd()) return
-    $('.medium-zoom-image')
+    $('p img')
         .css('display', 'block')
         .unwrap()
-    console.log(1213132)
 }
 
 /**
