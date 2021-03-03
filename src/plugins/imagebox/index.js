@@ -22,12 +22,11 @@ const mediumZoomConfig = {
  * 去除 TinyMCE 插入的图片的容器链接
  */
 function removeImageOuterHref() {
-    setTimeout(() => {
-        isMd() ||
-            $('.medium-zoom-image')
-                .css('display', 'block')
-                .unwrap()
-    }, 0)
+    if (isMd()) return
+    $('.medium-zoom-image')
+        .css('display', 'block')
+        .unwrap()
+    console.log(1213132)
 }
 
 /**
