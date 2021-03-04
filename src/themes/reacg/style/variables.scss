@@ -12,6 +12,7 @@
     --md-hr-color: #ddd;
 
     --color-post-title: #333;
+    --color-singlelinecode: #f9f2f4;
 }
 
 :root[theme='dark'] {
@@ -28,4 +29,5 @@
     --md-hr-color: #7c7c7c;
 
     --color-post-title: rgb(240, 240, 240);
+    --color-singlelinecode: rgb(40, 44, 52);
 }

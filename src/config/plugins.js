@@ -70,10 +70,9 @@ export function chartsConfig(devOptions) {
 export function clickConfig(devOptions) {
     const defaultOptions = {
         enable: false,
-        auto: false,
         colors: [],
         size: 30,
-        maxCount: 15,
+        maxCount: 10,
     }
     return mergeOptions(
         defaultOptions,
