@@ -930,22 +930,29 @@ body {
     margin-top: 10px;
 }
 
-.topicListFooter {
+// #comment_pager_bottom
+
+.topicListFooter,
+#comment_pager_bottom {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0 27px;
     #nav_next_page,
     .pager {
-        a {
-            color: #fff;
-            background-color: #45aaf2;
+        a,
+        .current {
+            color: var(--text-3);
             border-radius: 2px;
-            border: none;
+            border: 1px solid var(--themeColor);
             &:hover {
-                background-color: var(--themeColor);
+                filter: brightness(0.8);
                 transition: all 0.2s;
             }
+        }
+        .current {
+            color: #fff;
+            background-color: var(--themeColor);
         }
     }
     #nav_next_page {
