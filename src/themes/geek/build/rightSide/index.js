@@ -37,7 +37,7 @@ function buildTopBtns() {
 
 function buildCalendar() {
     const quarter = getQuarter()
-    const quarterImg = `https://guangzan.gitee.io/imagehost/Illustrations/${quarter}.svg`
+    const quarterImg = `https://guangzan.gitee.io/imagehost/Illustrations/${quarter.toLowerCase()}.svg`
     const month = getMonth()
     const instance = new Date()
     const year = instance.getFullYear()
