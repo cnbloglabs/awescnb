@@ -3,6 +3,7 @@ import toast from '@plugins/toast'
 
 const dragMenuDevConfig = {
     enable: true,
+    initialOpen: true,
 }
 
 const dragMenuPluginConfig = {
@@ -50,7 +51,7 @@ const dragMenuPluginConfig = {
         {
             page: 'all',
             icon: 'fa-adjust',
-            tooltip: '模式',
+            tooltip: '深色',
             evenType: 'click',
             callback: () => {},
             className: 'mode-change',
