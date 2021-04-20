@@ -1,5 +1,6 @@
 import toast from '@plugins/toast'
 import { toolsConfig } from '@config/plugins.js'
+import { pageName } from '@tools'
 
 const extraOptions = {
     mobileAutoClose: true,
@@ -112,14 +113,25 @@ const createToolbarItem = (item, translateY) => {
 const createToolbar = pluginOptions => {
     const toolItem = pluginOptions.items
     const $toolbar = createToolbarContainer()
-    const $toggleItem = createToggleItem(toolItem.length)
+    const pageCondition = page => {
+        return page === pageName() || page === 'all'
+    }
+    const effectiveLength = toolItem.filter(item =>
+        pageCondition(item.page),
+    ).length
+    const $toggleItem = createToggleItem(effectiveLength)
 
     let translateY = 0
 
     toolItem.forEach(item => {
-        const $item = createToolbarItem(item, translateY)
-        translateY += 40
-        $toolbar.append($item)
+        if (pageCondition(item.page)) {
+            const $item = createToolbarItem(
+                item,
+                translateY,
+            )
+            translateY += 40
+            $toolbar.append($item)
+        }
     })
     $toolbar.append($toggleItem)
     $('body').append($toolbar)
