@@ -1,0 +1,112 @@
+$dragMenu: () !default;
+$dragMenu: map-merge(
+    (
+        background: #ccc,
+        color: #fff,
+    ),
+    $dragMenu
+);
+
+$dragmenuBackground: map-get($dragMenu, background);
+$dragmenuColor: map-get($dragMenu, color);
+
+.custom-drag-menu {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.title {
+    width: 300px;
+    height: 10px;
+    top: 60px;
+}
+
+.dragmenu-item {
+    position: absolute;
+    left: 0px;
+    // top: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: $dragmenuBackground;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    i {
+        display: flex;
+        justify-content: center;
+        &::before {
+            margin-right: 0;
+        }
+    }
+}
+
+.dragmenu-item:hover .dragmenu-item-tooltip {
+    visibility: visible;
+    top: -80px;
+    transition: 0.25s all;
+    white-space: nowrap;
+}
+
+.dragmenu-item-tooltip {
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $dragmenuColor;
+    text-align: center;
+    border-radius: 2px;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.dragmenu-item-tooltip::selection {
+    background: none;
+    color: inherit;
+}
+
+.custom-drag-menu .dragmenu-item {
+    &:hover {
+        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+        transition: 0.25s all;
+    }
+    &:active {
+        filter: brightness(0.8);
+        transition: 0.25s all;
+    }
+}
+
+// .custom-drag-menu .dragmenu-item:not(:last-child):hover {
+//     // transform: translateY(-5px);
+// }
+
+.dragmenu-item i {
+    font-style: normal;
+    outline: none;
+}
+
+.dragmenu-item i::selection {
+    background: none;
+}
+
+@media screen and (max-width: 1366px) {
+    .dragmenu-item-tooltip {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custom-drag-menu
+        .dragmenu-item:not(:last-child):hover {
+        transform: none;
+    }
+    .custom-drag-menu {
+        right: 20px;
+        bottom: 20px;
+    }
+}

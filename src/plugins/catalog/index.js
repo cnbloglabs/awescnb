@@ -13,12 +13,11 @@ import {
  * @param {Function} fn
  */
 function build(selector, fn) {
-    let $container = $(
+    const $container = $(
         `<nav id="catalog">
             <h3 class='catalog-title'>目录</h3>
         </nav>`,
     )
-
     const $list = $('<ul>')
     const regExp = /^h[1-6]$/
 
@@ -27,7 +26,9 @@ function build(selector, fn) {
         .each(function() {
             if (regExp.test(this.tagName.toLowerCase())) {
                 const className = `${this.nodeName.toLowerCase()}-list`
-                const mathNode = $(this).children('.math.inline')
+                const mathNode = $(this).children(
+                    '.math.inline',
+                )
                 let text
                 let id
 
@@ -73,20 +74,32 @@ function setActiveTitle(scrollContainer) {
     $(scrollContainer).scroll(
         throttle(
             function() {
-                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
-                    const titleId = $($('#catalog ul li')[i])
+                for (
+                    let i = $('#catalog ul li').length - 1;
+                    i >= 0;
+                    i--
+                ) {
+                    const titleId = $(
+                        $('#catalog ul li')[i],
+                    )
                         .find('a')
                         .attr('href')
                         .replace(/[#]/g, '')
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (getClientRect(postTitle).top <= 100) {
+                    if (
+                        getClientRect(postTitle).top <= 100
+                    ) {
                         if (
-                            $($('#catalog ul li')[i]).hasClass('catalog-active')
+                            $(
+                                $('#catalog ul li')[i],
+                            ).hasClass('catalog-active')
                         )
                             return
-                        $($('#catalog ul li')[i]).addClass('catalog-active')
+                        $($('#catalog ul li')[i]).addClass(
+                            'catalog-active',
+                        )
                         $($('#catalog ul li')[i])
                             .siblings()
                             .removeClass('catalog-active')
@@ -105,11 +118,19 @@ function setActiveTitle(scrollContainer) {
  */
 function toggle() {
     $('.catalog-title').click(function() {
-        $('#catalog ul').toggle('fast', 'linear', function() {
-            $(this).css('display') === 'none'
-                ? $('.catalog-title').removeClass('is-active')
-                : $('.catalog-title').addClass('is-active')
-        })
+        $('#catalog ul').toggle(
+            'fast',
+            'linear',
+            function() {
+                $(this).css('display') === 'none'
+                    ? $('.catalog-title').removeClass(
+                          'is-active',
+                      )
+                    : $('.catalog-title').addClass(
+                          'is-active',
+                      )
+            },
+        )
     })
 }
 

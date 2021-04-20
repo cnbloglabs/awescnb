@@ -1,6 +1,7 @@
 {
     "rules": {
-        "semi": [2, "never"]
+        "semi": [2, "never"],
+        "no-unused-vars": "warn"
     },
     "env": {
         "browser": true,

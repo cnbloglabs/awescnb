@@ -86,13 +86,13 @@ function mousewheel(upCallback, downCallback) {
 function getQuarter() {
     let month = new Date().getMonth()
     if (month < 3) {
-        return 'spring'
+        return 'Spring'
     } else if (month < 6) {
-        return 'summer'
+        return 'Summer'
     } else if (month < 9) {
         return 'autumn'
     } else if (month < 12) {
-        return 'winter'
+        return 'Winter'
     }
 }
 

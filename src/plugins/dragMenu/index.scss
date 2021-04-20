@@ -10,7 +10,7 @@ $dragMenu: map-merge(
 $dragmenuBackground: map-get($dragMenu, background);
 $dragmenuColor: map-get($dragMenu, color);
 
-.custom-drag-menu {
+.custom-toolbar {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -18,94 +18,81 @@ $dragmenuColor: map-get($dragMenu, color);
     height: 40px;
 }
 
-.title {
-    width: 300px;
-    height: 10px;
-    top: 60px;
-}
-
-.dragmenu-item {
-    position: absolute;
-    left: 0px;
-    // top: 0px;
+.toolbar-item {
+    position: relative;
     width: 40px;
     height: 40px;
     background-color: $dragmenuBackground;
     border-radius: 50%;
-    cursor: pointer;
     text-align: center;
     font-size: 20px;
     line-height: 40px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     i {
         display: flex;
         justify-content: center;
+        font-style: normal;
+        outline: none;
+        user-select: none;
         &::before {
             margin-right: 0;
         }
+        &::selection {
+            background: none;
+        }
     }
-}
-
-.dragmenu-item:hover .dragmenu-item-tooltip {
-    visibility: visible;
-    top: -80px;
-    transition: 0.25s all;
-    white-space: nowrap;
-}
-
-.dragmenu-item-tooltip {
-    position: relative;
-    top: -50px;
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: $dragmenuColor;
-    text-align: center;
-    border-radius: 2px;
-    padding: 2px 5px;
-    font-size: 12px;
-}
-
-.dragmenu-item-tooltip::selection {
-    background: none;
-    color: inherit;
-}
-
-.custom-drag-menu .dragmenu-item {
+    .tooltip {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        font-size: 12px;
+        user-select: none;
+        pointer-events: none;
+        visibility: hidden;
+        transform: translateY(-31px);
+        z-index: 9;
+        &:after {
+            position: absolute;
+            right: -11px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 6px solid transparent;
+            border-top: 6px solid transparent;
+            border-left: 6px solid #333;
+        }
+    }
     &:hover {
-        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
-        transition: 0.25s all;
+        .tooltip {
+            visibility: visible;
+            transform: translate(-50px, -31px);
+            transition: transform 0.2s;
+        }
     }
     &:active {
         filter: brightness(0.8);
-        transition: 0.25s all;
+        transition: filter 0.2s;
     }
 }
 
-// .custom-drag-menu .dragmenu-item:not(:last-child):hover {
-//     // transform: translateY(-5px);
-// }
-
-.dragmenu-item i {
-    font-style: normal;
-    outline: none;
-}
-
-.dragmenu-item i::selection {
-    background: none;
-}
-
 @media screen and (max-width: 1366px) {
-    .dragmenu-item-tooltip {
+    .menu-item-tooltip {
         display: none;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .custom-drag-menu
-        .dragmenu-item:not(:last-child):hover {
+    .custom-tools-menu .menu-item:not(:last-child):hover {
         transform: none;
     }
-    .custom-drag-menu {
+    .custom-tools-menu {
         right: 20px;
         bottom: 20px;
     }
