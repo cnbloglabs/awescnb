@@ -2,7 +2,7 @@ const path = require('path')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const TerserPlugin = require('terser-webpack-plugin')
-const { openAnalyzer, cssExtract } = require('./options')
+const { openAnalyzer, cssExtract } = require('../awes.config')
 
 let plugins = []
 

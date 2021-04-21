@@ -1,4 +1,3 @@
-const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
@@ -8,28 +7,25 @@ const {
     themeName,
     sourceMap,
     openBrowser,
-} = require('./options')
+} = require('../awes.config')
 
 const devServer = {
-    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 8080,
-    // host: 'localhost',
+    host: 'localhost',
     open: openBrowser,
     hot: true,
-    // quiet: false,
-    // disableHostCheck: true,
-    // proxy: {},
-    // before() {},
+    quiet: true,
+    clientLogLevel: 'silent',
 }
 
 const plugins = [
     new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: `src/templates/${template}.html`,
-        inject: 'body',
+        template: `public/templates/${template}.html`,
         chunks: [`${themeName}`],
     }),
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin({}),
 ]
 
