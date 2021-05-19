@@ -15,6 +15,7 @@ import {
     notice,
     background,
     mode,
+    highlight,
 } from 'plugins/index'
 
 export default () => {
@@ -29,6 +30,7 @@ export default () => {
         .use(signature)
         .use(postSignature)
         .use(commentsAvatars)
+        .use(highlight)
         // .use(notation)
         .use(
             toolMenu,
