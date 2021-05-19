@@ -1,27 +1,29 @@
-import setBodyBackground from '@plugins/background'
-import imagebox from '@plugins/imagebox'
-import setLive2d from '@plugins/live2d'
-import setMusicPlayer from '@plugins/player'
-import setClickEffects from '@plugins/click'
-import linenumbers from '@plugins/linenumbers'
-import titleFavicon from '@plugins/titleFavicon'
-import highlight from '@plugins/highlight'
-import postBottomimage from '@plugins/postBottomimage'
-import copy from '@plugins/copy'
+import { bilibili } from './index'
+import {
+    // background,
+    // imagebox,
+    // live2d,
+    // player,
+    // clickEffect,
+    // linenumbers,
+    // titleFavicon,
+    // highlight,
+    // postBottomimage,
+    toolMenu,
+    copyCode,
+} from 'plugins/index'
 
-const linenumbersConfig = {
-    enable: false,
-}
-
-module.exports = () => {
-    setBodyBackground()
-    imagebox()
-    setLive2d()
-    setMusicPlayer()
-    setClickEffects()
-    linenumbers(linenumbersConfig)
-    titleFavicon()
-    highlight()
-    postBottomimage()
-    copy()
+export default () => {
+    bilibili
+        // .use(background)
+        // .use(imagebox)
+        // .use(live2d)
+        // .use(player)
+        // .use(clickEffect)
+        // .use(linenumbers, { enable: false })
+        // .use(titleFavicon)
+        // .use(highlight)
+        // .use(postBottomimage)
+        .use(toolMenu)
+        .use(copyCode)
 }

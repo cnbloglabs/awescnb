@@ -1,17 +1,12 @@
 /**
- * 随笔详情页图片灯箱
- * 相册查看图像
+ * 博客园现在使用了与之相同的库
+ * 1. 随笔详情页图片灯箱
+ * 2. 相册查看图像
  */
-import { mediaZoomJs } from '@constants/urls'
-import { imageboxConfig } from '@config/plugins.js'
-import {
-    isPostDetailsPage,
-    isAlbumPage,
-    poll,
-    isMd,
-    mousewheel,
-    cacheScript,
-} from '@tools'
+import { mediaZoomJs } from 'constants/libs'
+import { imageboxConfig } from 'options/plugins'
+import { poll, mousewheel, cacheScript } from 'utils/helpers'
+import { isPostDetailsPage, isMd, isAlbumPage } from 'utils/cnblog'
 
 const customGalleryClass = 'custom-gallery'
 const mediumZoomConfig = {
@@ -45,9 +40,7 @@ function buildGallery() {
     $('.gallery img').each(function() {
         const src = $(this).attr('src')
         const openSrc = src.replace(/t_/, 'o_')
-        gallery
-            .find('div')
-            .append(`<img src="${openSrc}"/>`)
+        gallery.find('div').append(`<img src="${openSrc}"/>`)
     })
     $('.forFlow').append(gallery)
     $('.gallery').remove()
@@ -59,19 +52,14 @@ function buildGallery() {
 function build() {
     // 博客园给随笔内容中的图片添加了这个功能，现将它移除
     // #cnblogs_post_body img,
-    const imgList = $(
-        ` .blog_comment_body img, .${customGalleryClass} img`,
-    )
+    const imgList = $(` .blog_comment_body img, .${customGalleryClass} img`)
     if (imgList === 0) return
     $.each(imgList, i => {
         const item = $(imgList[i])
         item.addClass('custom-zoom')
     })
 
-    const zoom = window.mediumZoom(
-        '.custom-zoom',
-        mediumZoomConfig,
-    )
+    const zoom = window.mediumZoom('.custom-zoom', mediumZoomConfig)
 
     zoom.on('open', () => {
         mousewheel(() => {
@@ -82,17 +70,15 @@ function build() {
     removeImageOuterHref()
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const { enable } = imageboxConfig(devOptions)
     if (!enable) return
-    if (!isMd() && !isAlbumPage() && !isPostDetailsPage())
-        return
+    if (!isMd() && !isAlbumPage() && !isPostDetailsPage()) return
     if ($('.custom-zoom').length) return
     buildGallery()
     cacheScript(mediaZoomJs, () => {
         const condition =
-            $('.blog_comment_body').length ||
-            $('.' + customGalleryClass).length
+            $('.blog_comment_body').length || $('.' + customGalleryClass).length
         poll(condition, build)
     })
     window.imagebox = build

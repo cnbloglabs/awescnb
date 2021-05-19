@@ -1,7 +1,9 @@
 {
+    "plugins": ["prettier"],
+    "extends": ["eslint:recommended", "prettier"],
     "rules": {
-        "semi": [2, "never"],
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "prettier/prettier": "error"
     },
     "env": {
         "browser": true,
@@ -18,7 +20,6 @@
         "APlayer": true,
         "roughViz": true
     },
-    "extends": "eslint:recommended",
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 2018,

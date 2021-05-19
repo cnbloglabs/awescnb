@@ -18,8 +18,7 @@
             transparent
         );
         border-radius: 30px;
-        box-shadow: inset 2px 2px 2px
-                hsla(0, 0%, 100%, 0.25),
+        box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
             inset -2px -2px 2px rgba(0, 0, 0, 0.25);
     }
 
@@ -52,14 +51,12 @@ body,
 
 .cnblogs_code,
 pre,
-code {
-    @include scrollbar-simple(var(--themeColor));
-}
-
-#catalog ul {
-    @include scrollbar-simple(var(--background-e));
-}
-
+code,
+#catalog ul,
 #cnblogs_post_body table {
     @include scrollbar-simple(var(--themeColor));
 }
+
+//  {
+//     @include scrollbar-simple(var(--background-e));
+// }

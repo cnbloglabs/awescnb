@@ -1,19 +1,14 @@
 import './index.scss'
-import {
-    getThemeOptions,
-    getGithubOptions,
-} from '@config/extra'
+import { getGithubOptions } from 'options/extra'
+import { avatar } from 'constants/cnblog'
 
 // 构建header昵称
 const headerNickname = () => {
-    $('#Header1_HeaderTitle').text(
-        $('#profile_block a:first').text(),
-    )
+    $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
 }
 
 // header头像
 const buildAva = () => {
-    const { avatar } = getThemeOptions()
     $('#blogLogo').attr('src', `${avatar}`)
 }
 

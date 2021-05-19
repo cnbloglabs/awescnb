@@ -5,7 +5,7 @@ import './index.scss'
 const notyf = new Notyf({
     position: { x: 'right', y: 'top' },
     icon: false,
-    duration: 2000,
+    duration: 2500,
     types: [
         {
             type: 'info',
@@ -15,11 +15,7 @@ const notyf = new Notyf({
     ],
 })
 
-export default (
-    message = 'no message',
-    type = 'success',
-    duration = 2000,
-) => {
+export default (message = 'no message', type = 'success', duration = 2000) => {
     type !== 'success' && type !== 'error'
         ? notyf.open({
               type,

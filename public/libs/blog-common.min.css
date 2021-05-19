@@ -813,7 +813,7 @@ pre {
     margin-top: 5px;
 }
 .codeLineNumber {
-    -moz-user-select: none;
+    user-select: none;
     color: #008080;
     padding-right: 10px;
 }
@@ -1098,7 +1098,7 @@ pre {
     float: left;
     width: 46px;
     height: 52px;
-    background: url('//static.cnblogs.com/images/upup.gif')
+    background: url('../images/upup.gif')
         no-repeat;
     text-align: center;
     cursor: pointer;
@@ -1115,7 +1115,7 @@ pre {
     margin-left: 20px;
     width: 46px;
     height: 52px;
-    background: url('//static.cnblogs.com/images/downdown.gif')
+    background: url('../images/downdown.gif')
         no-repeat;
     text-align: center;
     cursor: pointer;
@@ -1226,7 +1226,7 @@ a.site_hot:hover {
     overflow: hidden;
 }
 #side_ing_block ul li {
-    background-image: url(//static.cnblogs.com/images/icon_voice.gif);
+    background-image: url(../images/icon_voice.gif);
     background-repeat: no-repeat;
     padding: 0 0 0 20px;
 }
@@ -1733,7 +1733,7 @@ pre.prettyprint code {
     width: 100%;
 }
 .bannerbar.aws {
-    background-image: url(https://common.cnblogs.com/images/banner/bannerbar-aws-bg.png);
+    background-image: url(../images/banner/bannerbar-aws-bg.png);
     height: 32px;
     background-size: contain;
     display: flex;
@@ -1758,7 +1758,7 @@ pre.prettyprint code {
     padding: 10px;
 }
 .bannerbar.aliyun.forpc {
-    background-image: url(https://img2020.cnblogs.com/blog/1/202103/1-20210309211744338-647771178.jpg);
+    background-image: url(../images/1-20210309211744338-647771178.jpg);
     background-repeat: repeat-x;
     height: 32px;
 }
@@ -1773,7 +1773,7 @@ pre.prettyprint code {
     visibility: hidden;
 }
 #commentform_title {
-    background-image: url(//static.cnblogs.com/images/icon_addcomment.gif);
+    background-image: url(../images/icon_addcomment.gif);
     background-repeat: no-repeat;
     padding: 0 0 0 25px;
     margin-bottom: 10px;
@@ -1781,7 +1781,7 @@ pre.prettyprint code {
 div.commentform input.author,
 div.commentform input.email,
 div.commentform input.url {
-    background-image: url(//static.cnblogs.com/images/icon_form.gif);
+    background-image: url(../images/icon_form.gif);
     background-repeat: no-repeat;
     border: 1px solid #ccc;
     padding: 4px 4px 4px 30px;
@@ -1925,7 +1925,7 @@ textarea#tbCommentBody::placeholder {
     color: #a9a9a9;
 }
 .login_tips {
-    background-image: url(//static.cnblogs.com/images/icon_addcomment.gif);
+    background-image: url(../images/icon_addcomment.gif);
     background-repeat: no-repeat;
     margin-top: 10px;
     padding: 0 0 10px 25px;
@@ -2316,10 +2316,6 @@ textarea#tbCommentBody::placeholder {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
     user-select: none;
 }
 .ui-dialog-footer button:focus {

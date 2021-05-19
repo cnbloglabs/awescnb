@@ -1,23 +1,21 @@
-import { catalogConfig } from '@config/plugins.js'
-import {
-    pageName,
-    userAgent,
-    hasPostTitle,
-    getClientRect,
-    throttle,
-} from '@tools'
+import { catalogConfig } from 'options/plugins'
+import { userAgent, getClientRect, throttle } from 'utils/helpers'
+import { getCurrentPage, hasPostTitle } from 'utils/cnblog'
 
 /**
- * 构建目录
- * @param {String} selector
- * @param {Function} fn
+ * 构建目录容器
  */
-function build(selector, fn) {
+function buildCatalogContainer() {
     const $container = $(
-        `<nav id="catalog">
-            <h3 class='catalog-title'>目录</h3>
-        </nav>`,
+        `<nav id="catalog"><h3 class='catalog-title'>目录</h3></nav>`,
     )
+    return $container
+}
+
+/**
+ * 构建目录列表
+ */
+function buildCatalogList() {
     const $list = $('<ul>')
     const regExp = /^h[1-6]$/
 
@@ -26,9 +24,7 @@ function build(selector, fn) {
         .each(function() {
             if (regExp.test(this.tagName.toLowerCase())) {
                 const className = `${this.nodeName.toLowerCase()}-list`
-                const mathNode = $(this).children(
-                    '.math.inline',
-                )
+                const mathNode = $(this).children('.math.inline')
                 let text
                 let id
 
@@ -54,16 +50,23 @@ function build(selector, fn) {
                     $(this).attr('id', id)
                 }
 
-                const title = `
-                <li class='${className}'>
-                    <a href='#${id}'>${text}</a>
-                </li>`
-
+                const title = `<li class='${className}'><a href='#${id}'>${text}</a></li>`
                 $list.append(title)
             }
         })
+    return $list
+}
 
-    $(selector)[fn]($($container.append($list)))
+/**
+ * 构建目录
+ * @param {String} selector
+ * @param {Function} fn
+ */
+function buildCatalog(selector, fn) {
+    const container = buildCatalogContainer()
+    const catalogList = buildCatalogList()
+    const catalog = container.append(catalogList)
+    $(selector)[fn]($(catalog))
 }
 
 /**
@@ -74,32 +77,20 @@ function setActiveTitle(scrollContainer) {
     $(scrollContainer).scroll(
         throttle(
             function() {
-                for (
-                    let i = $('#catalog ul li').length - 1;
-                    i >= 0;
-                    i--
-                ) {
-                    const titleId = $(
-                        $('#catalog ul li')[i],
-                    )
+                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
+                    const titleId = $($('#catalog ul li')[i])
                         .find('a')
                         .attr('href')
                         .replace(/[#]/g, '')
                     const postTitle = document.querySelector(
                         `#cnblogs_post_body [id='${titleId}']`,
                     )
-                    if (
-                        getClientRect(postTitle).top <= 100
-                    ) {
+                    if (getClientRect(postTitle).top <= 100) {
                         if (
-                            $(
-                                $('#catalog ul li')[i],
-                            ).hasClass('catalog-active')
+                            $($('#catalog ul li')[i]).hasClass('catalog-active')
                         )
                             return
-                        $($('#catalog ul li')[i]).addClass(
-                            'catalog-active',
-                        )
+                        $($('#catalog ul li')[i]).addClass('catalog-active')
                         $($('#catalog ul li')[i])
                             .siblings()
                             .removeClass('catalog-active')
@@ -118,23 +109,15 @@ function setActiveTitle(scrollContainer) {
  */
 function toggle() {
     $('.catalog-title').click(function() {
-        $('#catalog ul').toggle(
-            'fast',
-            'linear',
-            function() {
-                $(this).css('display') === 'none'
-                    ? $('.catalog-title').removeClass(
-                          'is-active',
-                      )
-                    : $('.catalog-title').addClass(
-                          'is-active',
-                      )
-            },
-        )
+        $('#catalog ul').toggle('fast', 'linear', function() {
+            $(this).css('display') === 'none'
+                ? $('.catalog-title').removeClass('is-active')
+                : $('.catalog-title').addClass('is-active')
+        })
     })
 }
 
-export default (devOptions, pluginOptions = {}) => {
+export default (theme, devOptions, pluginOptions = {}) => {
     const extraOptions = {
         selector: '',
         fn: 'before',
@@ -148,10 +131,10 @@ export default (devOptions, pluginOptions = {}) => {
     if (
         enable &&
         hasPostTitle() &&
-        pageName() === 'post' &&
+        getCurrentPage() === 'post' &&
         userAgent() === 'pc'
     ) {
-        build(selector, fn)
+        buildCatalog(selector, fn)
         setActiveTitle(scrollContainer)
         toggle()
     }

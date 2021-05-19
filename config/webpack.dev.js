@@ -1,17 +1,25 @@
+const path = require('path')
 const webpack = require('webpack')
-const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { merge } = require('webpack-merge')
 const {
     template,
     themeName,
     sourceMap,
     openBrowser,
-} = require('../awes.config')
+} = require('../awescnb.config')
+
+const entry = `./src/themes/${themeName}/index.js`
+
+const output = {
+    filename: '[name].js',
+    path: path.join(__dirname, '..', 'dist'),
+}
 
 const devServer = {
     compress: true,
-    port: 8080,
+    port: 3000,
     host: 'localhost',
     open: openBrowser,
     hot: true,
@@ -23,60 +31,40 @@ const plugins = [
     new HtmlWebpackPlugin({
         filename: 'index.html',
         template: `public/templates/${template}.html`,
-        chunks: [`${themeName}`],
+        inject: true,
     }),
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin({}),
+    new webpack.HotModuleReplacementPlugin(),
 ]
 
 const rules = [
     {
-        test: /\.css$/,
-        use: [
-            'style-loader',
-            {
-                loader: 'css-loader',
-                options: {
-                    importLoaders: 1,
-                },
-            },
-            // 'postcss-loader',
-        ],
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+    },
+
+    {
+        test: /\.scss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
     },
     {
-        test: /\.scss$/,
-        use: [
-            'style-loader',
-            {
-                loader: 'css-loader',
-                options: {
-                    importLoaders: 2,
-                },
-            },
-            // 'postcss-loader',
-            'sass-loader',
-        ],
-    },
-    {
-        test: /\.less$/,
-        use: [
-            'style-loader',
-            {
-                loader: 'css-loader',
-                options: {
-                    importLoaders: 2,
-                },
-            },
-            // 'postcss-loader',
-            'less-loader',
-        ],
+        test: /\.less$/i,
+        use: ['style-loader', 'css-loader', 'less-loader'],
     },
 ]
 
 module.exports = merge(baseWebpackConfig, {
+    output,
     mode: 'development',
-    devtool: sourceMap ? 'inline-source-map' : '',
+    target: 'web',
+    entry,
+    devtool: sourceMap ? 'eval-source-map' : '',
     devServer,
     plugins,
     module: { rules },
+    optimization: {
+        moduleIds: 'named',
+    },
+    stats: {
+        entrypoints: false,
+    },
 })

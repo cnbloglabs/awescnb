@@ -1,9 +1,9 @@
 /**
- * 设置主题色
+ * 设置皮肤色
  * 需要皮肤使用相关 css 自定义属性
  */
-import { randomColor } from '@tools'
-import { getThemeOptions } from '@config/extra'
+import { randomColor } from 'utils/helpers'
+import { getThemeOptions } from 'options/extra'
 
 /**
  * 将 16 进制颜色转成 rgb 或 rgba
@@ -25,12 +25,11 @@ function hexToRgba(hex, opacity) {
 }
 
 /**
- * 获取主题色
+ * 获取皮肤色
  * @param {*} color
  */
 function buildMainColor(color) {
-    const mainColor =
-        color === 'random' ? randomColor('rgba') : color
+    const mainColor = color === 'random' ? randomColor('rgba') : color
     return mainColor
 }
 
@@ -54,7 +53,7 @@ function insertStyle(color) {
     )
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const { color } = getThemeOptions(devOptions)
     insertStyle(color)
 }

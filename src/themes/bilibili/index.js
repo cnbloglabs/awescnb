@@ -1,19 +1,9 @@
 import './style/index.scss'
-import AwesCnb from '@awescnb'
+import { createTheme } from 'awescnb'
+import plugins from './plugins'
+import build from './build'
 
-class Gshang extends AwesCnb {
-    constructor() {
-        super()
-        super.init(this.init)
-    }
+export const bilibili = createTheme()
 
-    init() {
-        $.getScript(
-            '//at.alicdn.com/t/font_1416496_14nsmkubys8.js',
-        )
-        require('./build')()
-        require('./plugins')()
-    }
-}
-
-new Gshang()
+build()
+plugins()

@@ -1,23 +1,15 @@
 import './index.less'
 
 function buildPostCommentAvatars() {
-    const postCommentBody =
-        '.feedbackItem > .feedbackCon > .blog_comment_body'
+    const postCommentBody = '.feedbackItem > .feedbackCon > .blog_comment_body'
     const builder = () => {
         $(postCommentBody).before(
             `<div class='esa-comment-avatar'><a target='_blank'><img /></a></div>`,
         )
-        let $feedbackContents = $(
-            '.feedbackItem > .feedbackCon',
-        )
-        $.each($feedbackContents, function(
-            index,
-            feedbackContent,
-        ) {
+        let $feedbackContents = $('.feedbackItem > .feedbackCon')
+        $.each($feedbackContents, function(index, feedbackContent) {
             let avatarUrl = null
-            let container = $(feedbackContent).find(
-                'span[id$="avatar"]',
-            )
+            let container = $(feedbackContent).find('span[id$="avatar"]')
             if (container.length) {
                 avatarUrl = $.trim($(container).text())
             }
@@ -25,8 +17,7 @@ function buildPostCommentAvatars() {
                 .find('.esa-comment-avatar img')
                 .attr(
                     'src',
-                    avatarUrl ||
-                        'https://pic.cnblogs.com/face/sample_face.gif',
+                    avatarUrl || 'https://pic.cnblogs.com/face/sample_face.gif',
                 )
             const blogUrl = $(feedbackContent)
                 .parent()

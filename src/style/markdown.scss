@@ -1,0 +1,235 @@
+$md: () !default;
+$md: map-merge(
+    (
+        linkColor: #ccc,
+        hrColor: #ddd,
+        blockquoteBg: #f6f8fa,
+        blockquoteBorderColor: #ccc,
+        summary: #f6f8fa,
+        summaryOpen: #0984e3,
+        markBg: yellow,
+        kbdBg: #fafbfc,
+        singleLineCoodeBg: #eeeeee,
+        singleLineCoodeColor: #15a7a7,
+    ),
+    $md
+);
+
+$linkColor: map-get($md, linkColor);
+$hrColor: map-get($md, hrColor);
+$blockquoteBg: map-get($md, blockquoteBg);
+$blockquoteBorderColor: map-get($md, blockquoteBorderColor);
+$summary: map-get($md, summary);
+$summaryOpen: map-get($md, summaryOpen);
+$markBg: map-get($md, markBg);
+$kbdBg: map-get($md, kbdBg);
+$singleLineCoodeBg: map-get($md, singleLineCoodeBg);
+$singleLineCoodeColor: map-get($md, singleLineCoodeColor);
+
+#cnblogs_post_body {
+    &:after {
+        content: '——— EOF ———';
+        display: block;
+        margin: 21.6px auto;
+        text-align: center;
+        color: var(--postDesc-color);
+        font-weight: normal;
+    }
+}
+
+#cnblogs_post_body,
+.cnblogs-post-body,
+.cnblogs-markdown {
+    line-height: 1.75;
+    word-wrap: break-word;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 35px;
+        margin-bottom: 10px;
+        cursor: default;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    code {
+        font-weight: 700;
+        color: $singleLineCoodeColor !important;
+        background-color: $singleLineCoodeBg !important;
+    }
+    a {
+        border-bottom: 2px solid $linkColor;
+        background-color: transparent;
+        &:hover {
+            transition: box-shadow 0.2s linear;
+            box-shadow: inset 0 -10px $linkColor;
+        }
+    }
+    p {
+        font-size: 15px;
+        line-height: inherit;
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+    hr {
+        margin: 24px 0;
+        border: none;
+        border-bottom: 1px solid $hrColor;
+    }
+    ol {
+        margin: 10px 0;
+        padding-left: 18px;
+        li {
+            line-height: inherit;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+    ul {
+        margin: 10px 0px 10px 21.6px;
+        li {
+            line-height: inherit;
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+    img {
+        margin: 10px auto;
+        display: flex;
+        max-width: 100%;
+        border-radius: 2px;
+    }
+    table {
+        display: block;
+        overflow: auto;
+        border: none;
+        font-size: 14px;
+        th,
+        td {
+            min-width: auto;
+            padding: 4px 11px;
+        }
+        th {
+            background: none;
+        }
+    }
+    blockquote {
+        margin: 5px 0;
+        padding: 1px 15px;
+        background: $blockquoteBg;
+        border: none;
+        border-left: 6px solid $blockquoteBorderColor;
+        color: inherit;
+        & > p {
+            margin: 10px 0;
+        }
+    }
+    kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        line-height: 10px;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: $kbdBg;
+        border: 1px solid #d1d5da;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #d1d5da;
+    }
+    iframe {
+        width: 100%;
+        height: 45vw;
+    }
+    details {
+        font-family: 'Roboto', 'sans-serif';
+        margin: 0 0 0.6em 0;
+        summary {
+            display: inine-block;
+            padding: 0.3em 0.6em;
+            width: auto;
+            font-weight: bold;
+            background: $summary;
+            border-radius: 3px;
+            cursor: pointer;
+            &::marker {
+                display: none;
+            }
+            &:before {
+                content: '​​\25B6';
+                float: left;
+                margin-right: 0.5em;
+                transform: rotate(0deg);
+                transition: transform 0.3s ease-out;
+            }
+            &:after {
+                content: '展开';
+                float: right;
+                opacity: 0;
+                transition: opacity 0.8s;
+            }
+            &:hover:after {
+                opacity: 0.7;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &[open] {
+            summary {
+                color: darken($summaryOpen, 10%);
+                background: lighten($summaryOpen, 45%);
+                text-shadow: none;
+                border-radius: 0.3em 0.3em 0 0;
+                &:before {
+                    transform: rotate(90deg);
+                }
+                &:after {
+                    content: '收起';
+                }
+            }
+        }
+    }
+    .hljs-ln-n:before {
+        font-weight: normal;
+    }
+    mark {
+        background-color: $markBg;
+    }
+}
+
+#blog-comments-placeholder {
+    p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #cnblogs_post_body,
+    .cnblogs-post-body,
+    .cnblogs-markdown {
+        iframe {
+            height: 60vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cnblogs_post_body,
+    .cnblogs-post-body,
+    .cnblogs-markdown {
+        iframe {
+            height: 50vw;
+        }
+    }
+}

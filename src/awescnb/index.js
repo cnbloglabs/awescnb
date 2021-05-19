@@ -1,30 +1,86 @@
-import env from '@/constants/env'
-import build from './build'
+import { isFunction } from 'utils/shared'
+import { __DEV__ } from 'constants/env'
+import init from './init'
 
-class AwesCnb {
-    init(building) {
-        const buildTheme = () => {
-            building()
-            build()
-        }
-        if (env === 'dev') {
-            window.opts = {}
-            buildTheme()
-            return
-        }
-        if ($.awesCnb) {
-            buildTheme()
-            return
-        }
-        if (!$.awesCnb) {
-            $.extend({
-                awesCnb: (options = {}) => {
-                    window.opts = options
-                    buildTheme()
-                },
-            })
-        }
+/**
+ * 创建上下文
+ * @returns {Object} theme context
+ */
+function createThemeContext() {
+    return {
+        theme: null,
+        config: {
+            globalProperties: {},
+        },
+        plugins: [],
+        modules: {},
     }
 }
 
-export default AwesCnb
+/**
+ * 创建 createTheme func
+ * @returns {Function} createTheme API
+ */
+function createThemeAPI() {
+    return function createTheme() {
+        const context = createThemeContext()
+        const installedPlugins = new Set()
+
+        const theme = (context.theme = {
+            _context: context,
+            version: '3.0',
+
+            get config() {
+                return context.config
+            },
+
+            set config(v) {
+                if (__DEV__) {
+                    console.warn(
+                        `app.config cannot be replaced. Modify individual options instead.`,
+                    )
+                }
+            },
+
+            use(plugin, ...options) {
+                if (installedPlugins.has(plugin)) {
+                    __DEV__ &&
+                        console.warn(
+                            `Plugin has already been applied to target theme.`,
+                        )
+                } else if (plugin && isFunction(plugin.install)) {
+                    installedPlugins.add(plugin)
+                    plugin.install(theme, ...options)
+                } else if (isFunction(plugin)) {
+                    installedPlugins.add(plugin)
+                    plugin(theme, ...options)
+                } else if (__DEV__) {
+                    console.warn(
+                        `A plugin must either be a function or an object with an "install" ` +
+                            `function.`,
+                    )
+                }
+                return theme
+            },
+            module() {},
+        })
+
+        return theme
+    }
+}
+
+/**
+ * 在创建皮肤之前初始化内容
+ * @returns {Object} { createTheme }
+ */
+function baseCreateAwescnb() {
+    init()
+    return {
+        createTheme: createThemeAPI(),
+    }
+}
+
+export function createTheme() {
+    const theme = baseCreateAwescnb().createTheme()
+    return theme
+}

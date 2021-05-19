@@ -1,25 +1,12 @@
 import './index.scss'
-import { getBlogname } from '@cnblog'
-import { isVisitor } from '@constants/cnblog'
-import {
-    cnblogHome,
-    index,
-    newPost,
-    send,
-    rss,
-    admin,
-} from '@constants/links'
-import {
-    getLinksOptions,
-    getThemeOptions,
-    getGithubOptions,
-} from '@config/extra'
-
-const links = getLinksOptions()
-const githubOptions = getGithubOptions()
-const { avatar } = getThemeOptions()
+import { getBlogname } from 'utils/cnblog'
+import { isOwner } from 'utils/cnblog'
+import { avatar } from 'constants/cnblog'
+import { cnblogHome, index, newPost, send, rss, admin } from 'constants/links'
+import { getLinksOptions, getGithubOptions } from 'options/extra'
 
 const buildLeftside = () => {
+    const links = getLinksOptions()
     const el = $(`
     <div id='left-side'>
         <div class='logo'>
@@ -39,6 +26,7 @@ const buildLeftside = () => {
 }
 
 const buildCustomLinksToLeftSide = () => {
+    const links = getLinksOptions()
     for (const { name, link } of links) {
         $('#left-side').find('ul').append(`
             <li><a href="${link}" target="_blank">${name}</a></li>
@@ -93,12 +81,7 @@ const removeHeaderToLeftside = () => {
     </div>
     `)
 
-    for (const {
-        icon,
-        title,
-        url,
-        allowVisit,
-    } of navList) {
+    for (const { icon, title, url, allowVisit } of navList) {
         const target = title === '首页' ? '_self' : '_blank'
         const item = $(`<a href="${url}" target="${target}">
             <li>
@@ -107,13 +90,12 @@ const removeHeaderToLeftside = () => {
             </li>
         </a>`)
 
-        if (isVisitor && !allowVisit) continue
+        if (!isOwner && !allowVisit) continue
         if (title === '订阅') {
             item.removeAttr('target').attr({
                 'data-rss': url,
                 href: 'javascript:void(0)',
-                onclick:
-                    '$("#blog_nav_rss").trigger("click");',
+                onclick: '$("#blog_nav_rss").trigger("click");',
             })
         }
 
@@ -124,11 +106,12 @@ const removeHeaderToLeftside = () => {
 }
 
 const buildLeftsideBottomBtns = () => {
-    if (!githubOptions.enable) return
+    const { enable, url } = getGithubOptions()
+    if (!enable) return
     const userName = getBlogname()
     const el = `
     <div class="leftside-bottom">
-    <a href="${githubOptions.url}" class="follow-me" target="_blank">
+    <a href="${url}" class="follow-me" target="_blank">
         <span class="follow-text"><i class="fas fa-github"></i><span>Fork me on GitHub</span></span>
         <span class="developer">
             <img src="${avatar}">

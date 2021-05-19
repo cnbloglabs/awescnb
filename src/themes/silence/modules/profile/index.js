@@ -1,9 +1,9 @@
 import './index.less'
-import { getThemeOptions } from '@config/extra'
-
-const { avatar, favicon } = getThemeOptions()
+import { getThemeOptions } from 'options/extra'
+import { avatar } from 'constants/cnblog'
 
 function buildProfile() {
+    const { favicon } = getThemeOptions()
     if (avatar.length) {
         $('#sideBarMain').prepend(
             `<img class="esa-profile-avatar" src="${avatar}" />`,

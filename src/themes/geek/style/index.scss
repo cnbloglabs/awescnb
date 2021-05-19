@@ -1,11 +1,12 @@
-@import '@/assets/style/reset.scss';
-@import '@/assets/style/hideAds.scss';
+@import 'style/reset.scss';
+@import 'style/hideAds.scss';
 @import './variables.scss';
 @import './tools.scss';
 @import './scroll.scss';
 @import './animate.scss';
 @import './icons.scss';
 @import './mixins.scss';
+@import './catalog.scss';
 
 *::selection {
     background: var(--theme-primary-4);
@@ -24,9 +25,8 @@ body {
     color: var(--body-color);
     font-size: 1em;
     line-height: 1.5;
-    font-family: UbuntuMono, 'Varela Round', 'PingFang SC',
-        'Microsoft YaHei', Helvetica, Arial, Menlo, Monaco,
-        monospace, sans-serif;
+    font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
+        Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 
 #home {
@@ -116,13 +116,12 @@ body {
 
 #sidebar_news,
 #sidebar_search {
-    display: none;
+    display: none !important;
 }
 
 .sidebar-block {
     padding: 25px;
-    border-bottom: 1px solid
-        var(--sidebarBlock-border-color);
+    border-bottom: 1px solid var(--sidebarBlock-border-color);
     h3 {
         font-family: 'DM Sans', sans-serif;
         color: var(--sidebarTitle-color);
@@ -174,71 +173,6 @@ body {
         padding: 1rem;
         &:hover {
             color: inherit;
-        }
-    }
-}
-
-#blog-calendar {
-    #blogCalendar {
-        table,
-        tbody,
-        tr,
-        td {
-            display: block;
-        }
-        tr {
-            &:nth-child(1) {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                & > td:first-of-type {
-                    width: 100%;
-
-                    td {
-                        width: auto;
-                    }
-                }
-
-                // .CalNextPrev {
-                //     a:hover {
-                //         color: #fff;
-                //    }
-                // }
-            }
-
-            &:nth-child(2) {
-                padding: 0 3.24px;
-                margin-bottom: 5px;
-                border-bottom: 1px solid #24273b;
-            }
-
-            &:not(:nth-child(1)) {
-                display: flex;
-                justify-content: space-between;
-
-                td {
-                    @include center(all);
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-
-            th,
-            td {
-                padding: 0.2rem;
-            }
-        }
-
-        u {
-            color: #00a1d6;
-        }
-
-        .CalTodayDay {
-            background-color: #24273b;
-            color: var(--themeColor);
-            border-radius: 2px;
-            font-size: 0.7em;
         }
     }
 }
@@ -324,7 +258,6 @@ body {
 .pager {
     padding: 0.5rem 0;
     border-radius: 4px;
-    user-select: none;
     a {
         color: var(--themeColor);
     }
@@ -342,7 +275,6 @@ h1.PostListTitle + .pager {
         color: var(--themeColor);
         padding: 0.5rem 0;
         border-radius: 4px;
-        user-select: none;
         width: 100%;
         background-color: var(--pager-bg);
         display: block;
@@ -395,8 +327,7 @@ h1.PostListTitle + .pager {
 .entrylistTitle,
 .PostListTitle {
     padding: 1rem 1rem;
-    border-bottom: 1px solid
-        var(--listItemTitle-border-color);
+    border-bottom: 1px solid var(--listItemTitle-border-color);
     font-weight: 700;
     background-color: var(--listItemTitle-bg);
 }
@@ -442,8 +373,7 @@ h1.PostListTitle + .pager {
             display: none;
         }
         &:hover {
-            transition: all 0.3s
-                cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
                 0 10px 10px rgba(0, 0, 0, 0.22);
         }
@@ -686,8 +616,7 @@ h1.PostListTitle + .pager {
         border-right: 1px solid var(--form-border-color);
         padding: 17.982px 10.8px;
         &:nth-last-child(2) {
-            border-bottom: 1px solid
-                var(--form-border-color);
+            border-bottom: 1px solid var(--form-border-color);
         }
     }
 
@@ -701,9 +630,7 @@ h1.PostListTitle + .pager {
         }
 
         .blog_comment_body {
-            background-color: var(
-                --commonBody-bg
-            ) !important;
+            background-color: var(--commonBody-bg) !important;
             color: var(--commonBody-color);
             margin-right: 10px;
             margin-left: 0;
@@ -898,8 +825,7 @@ h1.PostListTitle + .pager {
             background: none;
             margin-bottom: 0;
             padding: 7.56px 10.8px;
-            border-bottom: 1px solid
-                var(--form-border-color);
+            border-bottom: 1px solid var(--form-border-color);
             background-color: var(--formTitle-bg);
             border-radius: 2px 2px 0 0;
             font-size: 12px;
@@ -921,9 +847,7 @@ h1.PostListTitle + .pager {
             border: none;
 
             .commentbox_title {
-                border-bottom-color: var(
-                    --form-border-color
-                );
+                border-bottom-color: var(--form-border-color);
             }
 
             .commentbox_title_left {
@@ -938,8 +862,7 @@ h1.PostListTitle + .pager {
                 min-height: 170px;
                 background: none;
                 font-size: 16px;
-                border-bottom: 1px dashed
-                    var(--form-border-color);
+                border-bottom: 1px dashed var(--form-border-color);
                 color: #999;
             }
 
@@ -990,7 +913,6 @@ h1.PostListTitle + .pager {
     a {
         border-radius: 4px;
         margin-right: 0;
-        user-select: none;
         @include text-over();
         background-color: var(--ad-bg);
 
@@ -1023,3 +945,5 @@ h1.PostListTitle + .pager {
 
 @import './markdown.scss';
 @import './index.m.scss';
+@import './plugins.scss';
+@import './coverPlugins.scss';

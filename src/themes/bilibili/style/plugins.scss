@@ -1,10 +1,6 @@
-@import '@plugins/background/index.scss';
-@import '@plugins/imagebox/index.scss';
-@import '@plugins/live2d/index.scss';
-@import '@plugins/player/index.scss';
-@import '@plugins/click/index.scss';
-@import '@plugins/linenumbers/index.scss';
-@import '@plugins/titleFavicon/index.scss';
-@import '@plugins/highlight/index.scss';
-@import '@plugins/postBottomimage/index.scss';
-@import '@plugins/copy/index.scss';
+@import 'plugins/copyCode/index.scss';
+@import 'plugins/toolMenu/index.scss';
+
+.toolbar-item .tooltip:after {
+    right: -5px;
+}

@@ -1,0 +1,101 @@
+$dragMenu: () !default;
+$dragMenu: map-merge(
+    (
+        background: #ccc,
+        color: #fff,
+    ),
+    $dragMenu
+);
+
+$dragmenuBackground: map-get($dragMenu, background);
+$dragmenuColor: map-get($dragMenu, color);
+
+.custom-toolbar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.toolbar-item {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: $dragmenuBackground;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    &.toolbar-item-toggle {
+        position: absolute;
+        bottom: 0;
+    }
+    i {
+        display: flex;
+        justify-content: center;
+        font-style: normal;
+        outline: none;
+        &::before {
+            margin-right: 0;
+        }
+        &::selection {
+            background: none;
+        }
+    }
+    .tooltip {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        font-size: 12px;
+        pointer-events: none;
+        visibility: hidden;
+        transform: translateY(-31px);
+        z-index: 9;
+        &:after {
+            position: absolute;
+            right: -11px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 6px solid transparent;
+            border-top: 6px solid transparent;
+            border-left: 6px solid #333;
+        }
+    }
+    &:hover {
+        .tooltip {
+            visibility: visible;
+            transform: translate(-50px, -31px);
+            transition: transform 0.2s;
+        }
+    }
+    &:active {
+        filter: brightness(0.8);
+        transition: filter 0.2s;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .menu-item-tooltip {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custom-tools-menu .menu-item:not(:last-child):hover {
+        transform: none;
+    }
+    .custom-tools-menu {
+        right: 20px;
+        bottom: 20px;
+    }
+}

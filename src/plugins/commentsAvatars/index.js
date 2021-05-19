@@ -1,5 +1,6 @@
-import { pageName, poll } from '@tools'
-import env from '@constants/env'
+import { getCurrentPage } from 'utils/cnblog'
+import { poll } from 'utils/helpers'
+import { __DEV__ } from 'constants/env'
 
 /**
  * 构建头像
@@ -13,8 +14,7 @@ function buildAvatars() {
         avatar = avatar
             ? avatar.replace('http://', 'https://')
             : 'https://pic.cnblogs.com/face/sample_face.gif'
-        if (env === 'dev')
-            avatar = 'https://www.dummyimage.com/50'
+        if (__DEV__) avatar = 'https://www.dummyimage.com/50'
         const ele = `<div class='custom-comment-avatar'><img src="${avatar}" class='avatar' /></div>`
         $(this)
             .children('.feedbackCon')
@@ -46,8 +46,7 @@ function authorRight() {
                 .text() === '楼主'
                 ? true
                 : false
-        if (isAuthor)
-            $(this).addClass('custom-comments-author')
+        if (isAuthor) $(this).addClass('custom-comments-author')
     })
 }
 
@@ -70,9 +69,7 @@ function listener() {
             option.url.indexOf('PostComment/Add') > -1 ||
             option.url.indexOf('DeleteComment') > -1
         ) {
-            new window.blogCommentManager().renderComments(
-                0,
-            )
+            new window.blogCommentManager().renderComments(0)
         }
     })
     $(document).ajaxComplete(function(event, xhr, option) {
@@ -86,7 +83,7 @@ function listener() {
 }
 
 export default () => {
-    if (pageName() !== 'post') return
+    if (getCurrentPage() !== 'post') return
     if ($('.custom-comment-avatar').lenght) return
-    env === 'dev' ? build() : listener()
+    __DEV__ ? build() : listener()
 }

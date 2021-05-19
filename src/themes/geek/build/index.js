@@ -13,7 +13,7 @@ const moveFooterToMain = () => {
     $('#footer').appendTo('#main')
 }
 
-module.exports = () => {
+export default () => {
     removeClearel()
     moveFooterToMain()
     cards()

@@ -1,15 +1,14 @@
 // 头部进度条
 import 'nprogress/nprogress.css'
 import NProgress from 'NProgress'
-import { pageName, userAgent } from '@/assets/utils/tools'
-import { topProgressConfig } from '@config/plugins'
+import { userAgent } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
+import { topProgressConfig } from 'options/plugins'
 
-export default devOptions => {
-    const { enable, page, agent } = topProgressConfig(
-        devOptions,
-    )
+export default (theme, devOptions) => {
+    const { enable, page, agent } = topProgressConfig(devOptions)
     if (!enable) return
-    if (page !== pageName() && page !== 'all') return
+    if (page !== getCurrentPage() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
 
     NProgress.configure({

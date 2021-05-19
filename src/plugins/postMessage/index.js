@@ -1,5 +1,6 @@
 // 随笔顶部信息
-import { pageName, poll } from '@tools'
+import { poll } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
 /**
  * 构建主要元素
@@ -28,9 +29,7 @@ function buildMainElements() {
  * 构建分类
  */
 function buildCategories() {
-    const categories = $(
-        `<div class='custom-categories'>📂</div>`,
-    )
+    const categories = $(`<div class='custom-categories'>📂</div>`)
     const hadBuildCategories = poll(
         $('#BlogPostCategory a').length,
         function() {
@@ -50,14 +49,11 @@ function buildCategories() {
  */
 function buildTags() {
     const tags = $(`<div class='custom-tags'>🔖</div>`)
-    const hadBuildTags = poll(
-        $('#EntryTag a').length,
-        function() {
-            $('#EntryTag a').each(function() {
-                tags.append($(this).get(0))
-            })
-        },
-    )
+    const hadBuildTags = poll($('#EntryTag a').length, function() {
+        $('#EntryTag a').each(function() {
+            tags.append($(this).get(0))
+        })
+    })
     if (!hadBuildTags) {
         tags.append(`<a>无标签</a>`)
     }
@@ -65,7 +61,7 @@ function buildTags() {
 }
 
 export default () => {
-    if (pageName() !== 'post') return
+    if (getCurrentPage() !== 'post') return
     buildMainElements()
     buildCategories()
     buildTags()

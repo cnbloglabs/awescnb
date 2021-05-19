@@ -1,12 +1,14 @@
-import toast from '@plugins/toast'
-import { isOwner } from '@constants/cnblog'
-import { appWz, appQ, appGroup, appIng } from '@links'
+import './index.scss'
+// import toast from 'plugins/toast'
+import { isOwner } from 'utils/cnblog'
+import { appWz, appQ, appGroup, appIng } from 'constants/links'
+import { getThemeOptions } from 'options/extra'
+import { avatar } from 'constants/cnblog'
 import {
     followersDetailsUrl,
     followingDetailsUrl,
     index,
-} from '@links'
-import { getThemeOptions } from '@config/extra'
+} from 'constants/links'
 import {
     getFollowState,
     getBlogname,
@@ -15,10 +17,8 @@ import {
     getFollowing,
     follow,
     unfollow,
-} from '@cnblog'
-import './index.scss'
+} from 'utils/cnblog'
 
-const { avatar, headerBackground } = getThemeOptions()
 const followState = getFollowState()
 const userName = getBlogname()
 const age = getBlogAge()
@@ -26,6 +26,7 @@ const fans = getFollowers()
 const focus = getFollowing()
 
 const build = () => {
+    const { headerBackground } = getThemeOptions()
     const el = `
     <section class="profile">
         <div class="profile-banner" style="background-image:url(${headerBackground})">
@@ -44,9 +45,7 @@ const build = () => {
         <div class="profile-msg">
             <p>
                 <a href="${index}"><span>${userName}</span></a>
-                <button class="followState${
-                    isOwner ? ' disabled' : ''
-                }">${
+                <button class="followState${isOwner ? ' disabled' : ''}">${
         followState ? '取消关注' : '关注'
     }</button>
             </p>
@@ -63,55 +62,22 @@ const build = () => {
 const followAndUnfollow = () => {
     $('.profile-msg button').click(function() {
         if (isOwner) {
-            toast('无法关注自己', 'error')
-            return
+            return false
         }
-        const isUnfollowed =
-            $('.followState').text() === '关注'
+        const isUnfollowed = $('.followState').text() === '关注'
         if (isUnfollowed) {
-            toast('感谢关注')
+            // toast('感谢关注')
             $('.followState').text('取消关注')
             follow()
         } else {
-            toast('取消关注成功')
+            // toast('取消关注成功')
             $('.followState').text('关注')
             unfollow()
         }
     })
 }
 
-// const buildMeteor = () => {
-//     const el = `
-//     <div class="night">
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//         <div class="shooting_star"></div>
-//     </div>
-//     `
-//     $('.profile-banner').append(el)
-// }
-
-const profile = () => {
+export default () => {
     build()
     followAndUnfollow()
-    // buildMeteor()
 }
-
-export default profile

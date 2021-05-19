@@ -1,6 +1,6 @@
 import './index.less'
-import { postSignatureConfig } from '@config/plugins'
-import { getBlogname } from '@cnblog'
+import { postSignatureConfig } from 'options/plugins'
+import { getBlogname } from 'utils/cnblog'
 
 const config = postSignatureConfig({
     licenseName: '署名-非商业性使用-相同方式共享 4.0 国际',
@@ -23,8 +23,7 @@ function buildPostSignature() {
                 .eq(0)
                 .html()
         const content = `<div class="esa-post-signature"> 
-                <p>作者：${$.trim(authorName) ||
-                    '匿名'}</p> 
+                <p>作者：${$.trim(authorName) || '匿名'}</p> 
                 <p>出处：<a href="${postUrl}">${postUrl}</a></p> 
                 <p>版权：本作品采用「<a href="${
                     config.license[1]

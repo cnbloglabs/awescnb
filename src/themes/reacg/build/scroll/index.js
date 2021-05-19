@@ -30,9 +30,7 @@ export default () => {
                 $('#catalog').addClass('catalog-scroll-up') // 当头部导航隐藏目录随之向上移动
             } else {
                 $('#header').removeClass('header-hide')
-                $('#catalog').removeClass(
-                    'catalog-scroll-up',
-                )
+                $('#catalog').removeClass('catalog-scroll-up')
             }
             originalDir = direction
         }

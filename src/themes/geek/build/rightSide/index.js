@@ -1,17 +1,16 @@
 import './index.scss'
-import { getMonth, getQuarter } from '@tools'
-import { index } from '@constants/links'
-import { getThemeOptions } from '@config/extra'
-import { getBlogname } from '@cnblog'
-import { contact } from '@links'
-const { avatar } = getThemeOptions()
-const nickname = getBlogname()
+import { getMonth, getQuarter } from 'utils/helpers'
+import { index } from 'constants/links'
+import { getBlogname } from 'utils/cnblog'
+import { contact } from 'constants/links'
+import { avatar } from 'constants/cnblog'
 
 function flat() {
     $('#sideBar').appendTo($('#home'))
 }
 
 function buildTopBtns() {
+    const nickname = getBlogname()
     const noticeCount = $('#msg_count').text()
     const el = `
     <div class="account">
@@ -42,9 +41,7 @@ function buildCalendar() {
     const instance = new Date()
     const year = instance.getFullYear()
     const date =
-        instance.getDate() < 10
-            ? '0' + instance.getDate()
-            : instance.getDate()
+        instance.getDate() < 10 ? '0' + instance.getDate() : instance.getDate()
     const el = `
     <div id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">
@@ -58,7 +55,7 @@ function buildCalendar() {
         </div>
     </div>
     `
-    $('#sidebar_news').after($(el))
+    $('#leftcontentcontainer').before($(el))
 }
 
 export default () => {

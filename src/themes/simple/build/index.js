@@ -3,7 +3,7 @@ import side from './side'
 import catalog from './catalog'
 import scroll from './scroll'
 
-module.exports = () => {
+export default () => {
     header()
     side()
     catalog()

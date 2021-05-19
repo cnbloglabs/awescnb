@@ -1,7 +1,7 @@
 import './index.scss'
 import { icons } from '../icons/icons'
 import { iconInSvg } from '../../utils/tools'
-import toast from '@plugins/toast'
+import toast from 'plugins/toast'
 
 const { enable, autoDark, autoLight } = window.opts.darkMode
 const $dark = `<style id='mode-dark'>:root {--dark-background-g: #333;--dark-background-w: #555;--dark-background-e: #7c7c7c;--dark-text-0: #ccc;--dark-text-3: #ccc;--dark-text-4: #c0c0c0;--dark-text-5: #999;--dark-text-9: #7c7c7c;--dark-text-10: #7c7c7c;--dark-text-a: #000;}</style>`

@@ -1,16 +1,9 @@
 import './style/index.scss'
-import AwesCnb from '@awescnb'
+import { createTheme } from 'awescnb'
+import plugins from './plugins'
+import build from './build'
 
-class Simple extends AwesCnb {
-    constructor() {
-        super()
-        super.init(this.init)
-    }
+export const theme = createTheme()
 
-    init() {
-        require('./build')()
-        require('./plugins')()
-    }
-}
-
-new Simple()
+build()
+plugins()

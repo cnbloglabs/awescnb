@@ -19,7 +19,7 @@
         bgHover: var(--theme-primary-8),
         borderColorHover: var(--theme-primary-8),
         shadowFocus: var(--theme-primary-4),
-        shadowFocusLighter: var(--theme-primary-2),
+        shadowFocusLighter: var(--theme-primary-4),
         bgActive: var(--themeColor),
         borderColorActive: var(--themeColor),
     );
@@ -65,7 +65,6 @@
     color: map-get($it-map, color);
     border-radius: 4px;
     cursor: pointer;
-    user-select: none;
     box-sizing: border-box;
     white-space: nowrap;
     &:hover {
@@ -74,8 +73,7 @@
     }
     &:active {
         background-color: map-get($it-map, bgActive);
-        border: 1px solid
-            map-get($it-map, borderColorActive);
+        border: 1px solid map-get($it-map, borderColorActive);
         box-shadow: none;
     }
     &:focus {

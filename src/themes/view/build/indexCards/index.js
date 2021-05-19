@@ -1,8 +1,10 @@
-import { pageName } from '@tools'
+import { isHomePage } from 'utils/cnblog'
 import './index.scss'
 
 const build = () => {
-    if (pageName() === 'index') $('.forFlow').addClass('index')
+    if (isHomePage()) {
+        $('.forFlow').addClass('index')
+    }
     const ele = $('.day').find('.postTitle,.postCon,.postDesc')
 
     for (var i = 0; i < ele.length; i += 3) {

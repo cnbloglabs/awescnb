@@ -1,4 +1,5 @@
 @import '../../style/mixins.scss';
+@import '../../style/animate.scss';
 
 .day,
 .c_b_p_desc_readmore {
@@ -11,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
+    overflow: auto;
 }
 
 .entrylistTitle {
@@ -23,12 +25,10 @@
     border-radius: 3px;
     box-sizing: border-box;
     flex-grow: 1;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     animation: content-in 0.5s ease-in 0s;
     &:hover {
-        transition: all 0.3s
-            cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
             0 10px 10px rgba(0, 0, 0, 0.22);
     }

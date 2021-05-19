@@ -1,16 +1,23 @@
-import './index.scss'
-import AwesCnb from '@awescnb'
+import './style/index.scss'
+import { createTheme } from 'awescnb'
+import build from './build'
+import {
+    background,
+    live2d,
+    player,
+    clickEffect,
+    titleFavicon,
+    themeColor,
+} from 'plugins/index'
 
-class Reacg extends AwesCnb {
-    constructor() {
-        super()
-        super.init(this.init)
-    }
+const element = createTheme()
 
-    init() {
-        require('./build')()
-        require('./plugins')()
-    }
-}
+build()
 
-new Reacg()
+element
+    .use(background)
+    .use(live2d)
+    .use(player)
+    .use(clickEffect)
+    .use(titleFavicon)
+    .use(themeColor)

@@ -1,0 +1,14 @@
+$chart: () !default;
+
+$chart: map-merge(
+    (
+        padding: 8px,
+    ),
+    $chart
+);
+
+$chartsPadding: map-get($chart, padding);
+
+#chart {
+    padding: $chartsPadding;
+}

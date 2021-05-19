@@ -1,8 +1,8 @@
 // 音乐播放器
-import { aplayerjs, aplayercss } from '@constants/urls'
-import { musicPlayerConfig } from '@config/plugins'
-
-import { pageName, userAgent, cacheScript, addCss } from '@/assets/utils/tools'
+import { aplayerjs, aplayercss } from 'constants/libs'
+import { musicPlayerConfig } from 'options/plugins'
+import { userAgent, cacheScript, addCss } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
 /**
  * 构建音乐播放器
@@ -50,7 +50,7 @@ function build(autoplay, audio, volume, lrc) {
     }
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const {
         enable,
         page,
@@ -62,7 +62,7 @@ export default devOptions => {
     } = musicPlayerConfig(devOptions)
 
     if (!enable) return
-    if (page !== pageName() && page !== 'all') return
+    if (page !== getCurrentPage() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
     addCss(aplayercss)
     cacheScript(aplayerjs, () => {

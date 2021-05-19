@@ -1,7 +1,7 @@
 // 构建随笔签名
-import { pageName } from '@tools'
-import { getBlogname, getCurrentPostUrl } from '@cnblog'
-import { postSignatureConfig } from '@config/plugins'
+import { getCurrentPage } from 'utils/cnblog'
+import { getBlogname, getCurrentPostUrl } from 'utils/cnblog'
+import { postSignatureConfig } from 'options/plugins'
 
 const containerId = 'post-signature'
 
@@ -24,11 +24,7 @@ function buildContainer() {
  * @param {String} licenseName
  * @param {String} licenseLink
  */
-const buildLicense = (
-    enableLicense,
-    licenseName,
-    licenseLink,
-) => {
+const buildLicense = (enableLicense, licenseName, licenseLink) => {
     if (!enableLicense) return
     const agreement = licenseName.length
         ? licenseName
@@ -49,7 +45,7 @@ function buildContent(content) {
     $(`#${containerId}`).append(el)
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const {
         enable,
         enableLicense,
@@ -59,7 +55,7 @@ export default devOptions => {
     } = postSignatureConfig(devOptions)
 
     if (!enable) return
-    if (pageName() !== 'post') return
+    if (getCurrentPage() !== 'post') return
 
     buildContainer()
     buildLicense(enableLicense, licenseName, licenseLink)
