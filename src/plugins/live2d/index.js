@@ -1,12 +1,8 @@
 import live2dModels from './live2dModels'
-import { live2d, live2djs } from '@constants/urls'
-import { live2dConfig } from '@config/plugins.js'
-import {
-    pageName,
-    userAgent,
-    cacheScript,
-    randomProperty,
-} from '@tools'
+import { live2d, live2djs } from 'constants/libs'
+import { live2dConfig } from 'options/plugins'
+import { userAgent, cacheScript, randomProperty } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
 /**
  * 构建模型容器
@@ -45,7 +41,7 @@ function loadModel(model) {
     })
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const {
         enable,
         page,
@@ -58,7 +54,7 @@ export default devOptions => {
     } = live2dConfig(devOptions)
 
     if (!enable) return
-    if (page !== pageName() && page !== 'all') return
+    if (page !== getCurrentPage() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
 
     buildContainer(position, width, height)

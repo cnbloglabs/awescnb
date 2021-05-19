@@ -1,5 +1,5 @@
 import './index.scss'
-import { poll } from '@tools'
+import { poll } from 'utils/helpers'
 
 const actions = [
     {

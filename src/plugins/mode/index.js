@@ -1,15 +1,15 @@
-import toast from '@plugins/toast'
-import { darkModeConfig } from '@config/plugins'
+// import toast from 'plugins/toast'
+import { darkModeConfig } from 'options/plugins'
 
 /**
- * 在暗色主题和亮色主题之间切换
+ * 在暗色皮肤和亮色皮肤之间切换
  * @param { String }
  * @param { Boolean }
  */
 function changeMode(mode, hasTransition = true) {
     if (mode === 'dark') {
         $('html').attr('theme', 'dark')
-        toast('进入暗色模式', 'info', 1000)
+        // toast('进入暗色模式', 'info', 1000)
         // setBackground('dark')
         localStorage.modeType = 'dark'
         if (hasTransition) {
@@ -20,7 +20,7 @@ function changeMode(mode, hasTransition = true) {
         }, 1200)
     } else {
         $('html').removeAttr('theme')
-        toast('进入亮色模式', 'success', 1000)
+        // toast('进入亮色模式', 'success', 1000)
         // setBackground('light')
         localStorage.modeType = 'light'
         if (hasTransition) {
@@ -59,9 +59,9 @@ function changeMode(mode, hasTransition = true) {
 
 /**
  * 初始化
- * @param {*} defaultMode
- * @param {*} autoDark
- * @param {*} autoLight
+ * @param {*} String defaultMode
+ * @param {*} Boolean autoDark
+ * @param {*} Boolean autoLight
  */
 function init(darkDefault, autoDark, autoLight) {
     const hour = new Date().getHours()
@@ -80,18 +80,14 @@ function init(darkDefault, autoDark, autoLight) {
     }
 
     if (isNight) {
-        autoDark
-            ? changeMode('dark', false)
-            : followStorage()
+        autoDark ? changeMode('dark', false) : followStorage()
     } else {
-        autoLight
-            ? changeMode('light', false)
-            : followStorage()
+        autoLight ? changeMode('light', false) : followStorage()
     }
 }
 
 /**
- * 处理主题切换按钮点击事件
+ * 处理皮肤切换按钮点击事件
  */
 function click() {
     $(document).on('click', '.mode-change', () => {
@@ -100,13 +96,10 @@ function click() {
     })
 }
 
-export default devOptions => {
-    const {
-        enable,
-        darkDefault,
-        autoDark,
-        autoLight,
-    } = darkModeConfig(devOptions)
+export default (theme, devOptions) => {
+    const { enable, darkDefault, autoDark, autoLight } = darkModeConfig(
+        devOptions,
+    )
     if (!enable) return
     init(darkDefault, autoDark, autoLight)
     click()

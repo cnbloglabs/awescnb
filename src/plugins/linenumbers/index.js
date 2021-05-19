@@ -1,23 +1,44 @@
 // 构建代码行号
-import { pageName, cacheScript } from '@tools'
-import { linenumbersjs } from '@constants/urls'
-import { linenumbersConfig } from '@config/plugins.js'
+import { isPostDetailsPage, isMd } from 'utils/cnblog'
+// import { linenumbersjs } from 'constants/libs'
+import { linenumbersConfig } from 'options/plugins'
+
+/**
+ * 通过 linenumbersjs 构建代码行号
+ * @param {*} params
+ */
+// function buildLineNumbersByUsingLib(params) {
+//     cacheScript(linenumbersjs, () => {
+//         hljs.initLineNumbersOnLoad({
+//             singleLine: true,
+//         })
+//     })
+// }
 
 /**
  * 构建代码行号
  */
 function buildLinenumbers() {
-    cacheScript(linenumbersjs, () => {
-        hljs.initLineNumbersOnLoad({
-            singleLine: true,
-        })
+    $('pre code').each(function() {
+        const linenumberContainer = $('<ul/>').addClass('awes-linenumber')
+
+        const lines =
+            $(this)
+                .text()
+                .split('\n').length - 1
+
+        for (let i = 1; i <= lines; i++) {
+            linenumberContainer.append($('<li/>').text(i))
+        }
+
+        $(this).before(linenumberContainer)
     })
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const { enable } = linenumbersConfig(devOptions)
-    if (pageName() !== 'post') return
+    if (!isPostDetailsPage) return
     if (!enable) return
-    if ($('.cnblogs_code').length > 0) return
+    if (!isMd()) return
     buildLinenumbers()
 }

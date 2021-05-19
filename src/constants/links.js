@@ -1,7 +1,7 @@
 /**
- * 博客园相关链接 url
+ * 博客园相关链接
  */
-import { getBlogname } from '@cnblog'
+import { getBlogname } from 'utils/cnblog'
 const { currentBlogApp } = window
 const nickname = getBlogname()
 const home = 'https://home.cnblogs.com'
@@ -33,7 +33,6 @@ export const admin = 'https://i.cnblogs.com/'
 export const userDetails = `https://home.cnblogs.com/u/${currentBlogApp}/`
 // 联系博主
 export const contact = `https://msg.cnblogs.com/send/${nickname}`
-
 // 收藏
 export const appWz = 'https://wz.cnblogs.com/'
 // 博问

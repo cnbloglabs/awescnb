@@ -1,13 +1,9 @@
-import './index.scss'
-import AwesCnb from '@awescnb'
+import './style/index.scss'
+import { createTheme } from 'awescnb'
+import plugins from './plugins'
+import build from './build'
 
-class Cdn extends AwesCnb {
-    constructor() {
-        super()
-        super.init(this.init)
-    }
+export const bilibili = createTheme()
 
-    init() {}
-}
-
-new Cdn()
+build()
+plugins()

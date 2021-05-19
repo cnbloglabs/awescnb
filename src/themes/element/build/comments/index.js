@@ -1,6 +1,6 @@
 /////// 评论区相关 ////////
 
-import { pageName } from '@tools'
+import { isPostDetailsPage } from 'utils/cnblog'
 
 // 评论模块的滚动隐藏效果
 function scroll2hide() {
@@ -54,7 +54,7 @@ function commentsAvator() {
 }
 
 function comments() {
-    if (pageName() !== 'post') return
+    if (!isPostDetailsPage()) return
     commentsAvator()
     scroll2hide()
 }

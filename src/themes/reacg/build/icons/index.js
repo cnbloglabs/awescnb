@@ -1,16 +1,9 @@
 import './index.scss'
-import { sidebarWraps } from '@/constants/elements'
 import { iconInSvg } from '../../utils/tools'
 import { fontUrl, icons, foodIcons } from './icons'
-import {
-    pageName,
-    randomProperty,
-    cacheScript,
-} from '@tools'
-import {
-    getGiteeOptions,
-    getGithubOptions,
-} from '@config/extra'
+import { randomProperty, cacheScript } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
+import { getGiteeOptions, getGithubOptions } from 'options/extra'
 
 /**
  * 设置切换暗色模式 icon
@@ -21,9 +14,7 @@ function setModeIcon() {
     const lightIcon = iconInSvg(icons.light)
     const icon = isDark ? darkIcon : lightIcon
     $('#navList').prepend(
-        `<li class='mode-change ${
-            isDark ? 'dark' : ''
-        }'>${icon}</li>`,
+        `<li class='mode-change ${isDark ? 'dark' : ''}'>${icon}</li>`,
     )
     $(document).on('click', '.mode-change', function() {
         $(this).toggleClass('dark')
@@ -77,14 +68,7 @@ function setGitee() {
  * navlist 图标（博客园  首页 ...）
  */
 function nav() {
-    const {
-        cnblog,
-        home,
-        pens,
-        contact,
-        rss,
-        admin,
-    } = icons
+    const { cnblog, home, pens, contact, rss, admin } = icons
 
     const items = [
         { selector: '#blog_nav_sitehome', icon: cnblog },
@@ -106,6 +90,24 @@ function nav() {
  * 设置sidebar icon
  */
 function setSidebarIcon() {
+    const sidebarWraps = {
+        news: '#sidebar_news', //公告
+        search: '#sidebar_search', //搜索
+        links: '#sidebar_shortcut', // 常用链接
+        recent: '#sidebar_recentposts', //最新随笔
+        tags: '#sidebar_toptags', //我的标签
+        score: '#sidebar_scorerank', //积分与排名
+        category: '#sidebar_postcategory', //随笔分类
+        record: '#sidebar_postarchive', //随笔档案
+        recentComments: '#sidebar_recentcomments', //最近评论
+        topview: '#sidebar_topviewedposts', //阅读排行
+        topComents: '#sidebar_topcommentedposts', //评论排行
+        topDig: '#topdigg_posts_wrap', //推荐排行
+        album: '#sidebar_imagecategory',
+        catalog: '#catalog', //文章目录
+        friends: '#sidebar_links1065840', //文章目录
+    }
+
     const iconActions = [
         {
             title: sidebarWraps.news,
@@ -181,17 +183,11 @@ function setSidebarIcon() {
     ]
 
     const insert = () => {
-        for (const {
-            title,
-            icon,
-            sonIcon,
-        } of iconActions) {
+        for (const { title, icon, sonIcon } of iconActions) {
             if ($(title).length) {
                 $(`${title} h3`).prepend(iconInSvg(icon))
                 if (sonIcon) {
-                    $(`${title} ul li a`).prepend(
-                        iconInSvg(sonIcon),
-                    )
+                    $(`${title} ul li a`).prepend(iconInSvg(sonIcon))
                 }
             }
         }
@@ -207,7 +203,7 @@ function setSidebarIcon() {
  * 首页文章题目 icon
  */
 function setIndexPosttitleIcon() {
-    if (pageName() !== 'index') return
+    if (getCurrentPage() !== 'index') return
     $('.postTitle').each(function() {
         $(this).prepend(iconInSvg(icons.pen))
     })
@@ -217,7 +213,7 @@ function setIndexPosttitleIcon() {
  * 设置首页列表查看更多按钮
  */
 function setIndexPostLookIcon() {
-    if (pageName() !== 'index') return
+    if (getCurrentPage() !== 'index') return
     if ($('.day').length < 1) return
     $('.c_b_p_desc_readmore').each(function() {
         $(this).append(iconInSvg(icons.look))
@@ -228,7 +224,7 @@ function setIndexPostLookIcon() {
  * 随笔分类页、随笔档案页题目icon
  */
 function setEntrylistPosttitleIcon() {
-    if (pageName() !== 'list') return
+    if (getCurrentPage() !== 'list') return
     $('.entrylistPosttitle').each(function() {
         $(this).prepend(iconInSvg(icons.pen))
     })
@@ -238,7 +234,7 @@ function setEntrylistPosttitleIcon() {
  * 文章小标题icon
  */
 function setPostTitleIcon() {
-    if (pageName() !== 'post') return
+    if (getCurrentPage() !== 'post') return
     const $h1 = $('#cnblogs_post_body:first>h1')
     const $h2 = $('#cnblogs_post_body:first>h2')
     const $title = $h1.length === 0 ? $h2 : $h1

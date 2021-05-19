@@ -1,6 +1,6 @@
 // 代码高亮
-import { highlightConfig } from '@config/plugins'
-import { pageName, isMd } from '@tools'
+import { highlightConfig } from 'options/plugins'
+import { getCurrentPage, isMd } from 'utils/cnblog'
 import themes from './themes.js'
 
 /**
@@ -30,8 +30,7 @@ function AdjustTinyMCEPadding() {
     if (isMd()) return
     $('pre').each(function() {
         const hasLineNumber =
-            $(this).find('span[style="color: #008080;"]')
-                .length !== 0
+            $(this).find('span[style="color: #008080;"]').length !== 0
         if (!hasLineNumber) {
             $(this).css({
                 padding: '10px 14px',
@@ -40,8 +39,8 @@ function AdjustTinyMCEPadding() {
     })
 }
 
-export default devOptions => {
-    if (pageName() !== 'post') return
+export default (theme, devOptions) => {
+    if (getCurrentPage() !== 'post') return
     if ($('pre').length === 0) return
     const { light, dark } = highlightConfig(devOptions)
     buildMarkdownHighlight(light, dark)

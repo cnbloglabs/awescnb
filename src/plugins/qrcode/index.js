@@ -1,5 +1,5 @@
 // 二维码
-import { qrcodeConfig } from '@config/plugins'
+import { qrcodeConfig } from 'options/plugins'
 
 /**
  * 构建二维码图片
@@ -23,7 +23,7 @@ function buildDesc(desc) {
     $('.custom-qrcode').after(ele)
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const { enable, img, desc } = qrcodeConfig(devOptions)
 
     if ($('#blog-news').length === 0) return

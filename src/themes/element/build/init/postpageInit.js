@@ -1,4 +1,4 @@
-import { pageName } from '@tools'
+import { isPostDetailsPage } from 'utils/cnblog'
 
 // function toggleMain() {
 //     $('#sideBarMain>*:not(#sidebar_scroller)').show()
@@ -23,7 +23,7 @@ function tableScroll() {
 }
 
 function postpageInit() {
-    if (pageName() !== 'post') return
+    if (!isPostDetailsPage()) return
     // toggleMain()
     openInNewWindow()
     tableScroll()

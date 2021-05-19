@@ -1,24 +1,13 @@
 // 发送弹幕
-import { barrageConfig } from '@config/plugins'
-import {
-    pageName,
-    getClientRect,
-    randomNum,
-    randomColor,
-    sleep,
-} from '@tools'
+import { barrageConfig } from 'options/plugins'
+import { getClientRect, randomNum, randomColor, sleep } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
 /**
  * @description 发送弹幕
  * @param {Array} textList 弹幕列表
  */
-async function shootBarrage(
-    textList,
-    enable,
-    opacity,
-    colors,
-    fontSize,
-) {
+async function shootBarrage(textList, enable, opacity, colors, fontSize) {
     if (!enable) return
     const fontSz = fontSize.length ? fontSize : '20px'
     const barragesColors = colors.length
@@ -85,7 +74,7 @@ async function shootBarrage(
     }
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const {
         enable,
         opacity,
@@ -95,38 +84,20 @@ export default devOptions => {
         indexBarrages,
         postPageBarrages,
     } = barrageConfig(devOptions)
-    const page = pageName()
+    const page = getCurrentPage()
     if (barrages.length) {
         setTimeout(() => {
-            shootBarrage(
-                barrages,
-                enable,
-                opacity,
-                colors,
-                fontSize,
-            )
+            shootBarrage(barrages, enable, opacity, colors, fontSize)
         }, 3000)
     }
     if (page === 'post' && postPageBarrages.length) {
         setTimeout(() => {
-            shootBarrage(
-                postPageBarrages,
-                enable,
-                opacity,
-                colors,
-                fontSize,
-            )
+            shootBarrage(postPageBarrages, enable, opacity, colors, fontSize)
         }, 3000)
     }
     if (page === 'index' && indexBarrages.length) {
         setTimeout(() => {
-            shootBarrage(
-                indexBarrages,
-                enable,
-                opacity,
-                colors,
-                fontSize,
-            )
+            shootBarrage(indexBarrages, enable, opacity, colors, fontSize)
         }, 3000)
     }
 }

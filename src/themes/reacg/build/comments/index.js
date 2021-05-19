@@ -1,5 +1,5 @@
 // 评论事件
-import toast from '@plugins/toast'
+import toast from 'plugins/toast'
 import './index.scss'
 
 // const commentManager = window.commentManager

@@ -1,16 +1,9 @@
+import { createTheme } from 'awescnb'
 import './style/index.scss'
-import AwesCnb from '@awescnb'
+import build from './build'
+import plugins from './plugins'
 
-class Reacg extends AwesCnb {
-    constructor() {
-        super()
-        super.init(this.init)
-    }
+export const reacg = createTheme()
 
-    init() {
-        require('./build')()
-        require('./plugins')()
-    }
-}
-
-new Reacg()
+build()
+plugins()

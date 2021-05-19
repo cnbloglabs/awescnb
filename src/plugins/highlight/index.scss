@@ -6,27 +6,30 @@ $comments: var(--hl-mono-3);
 $variable: var(--hl-mono-1);
 $functions: var(--hl-hue-2);
 
-$codeFontFamily: Consolas, Lucida Console, Monaco,
-    Andale Mono, Ubuntu Mono, monospace;
+$codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
+    monospace;
 
 // !markdown
 #blog-comments-placeholder,
 #cnblogs_post_body {
     pre {
         position: relative;
-        padding: 10px 0;
+        padding: 24px 0 10px;
         border-radius: 4px;
         background: $background;
         font-family: $codeFontFamily !important;
-        overflow: auto;
+        overflow: inherit;
         &::before {
-            content: ' ';
+            content: '';
             display: block;
-            height: 24px;
+            height: 23px;
+            width: 64px;
             background: url(https://guangzan.gitee.io/imagehost/awescnb/images/bg/mac.png)
                 no-repeat;
             background-size: 65px 23px;
-            background-position-x: 15px;
+            position: absolute;
+            top: 8px;
+            left: 10px;
         }
     }
     // 单行代码及代码块
@@ -47,7 +50,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco,
         color: var(--hl-mono-1) !important;
         background: $background !important;
         border: none !important;
-        padding: 10px 10px 0 !important;
+        padding: 16px 10px 8px !important;
         font-weight: normal;
     }
     .hljs-comment,

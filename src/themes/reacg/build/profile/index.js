@@ -1,30 +1,26 @@
 import './index.scss'
-import { getThemeOptions } from '@config/extra'
-import { isVisitor } from '@constants/cnblog'
+import { avatar } from 'constants/cnblog'
+import { isOwner } from 'utils/cnblog'
 import {
     followersDetailsUrl,
     followingDetailsUrl,
     index,
     userDetails,
-} from '@links'
+} from 'constants/links'
 import {
     getBlogname,
     getBlogAge,
     getFollowers,
     getFollowing,
-} from '@cnblog'
+} from 'utils/cnblog'
 
 function buildAvatar() {
-    const { avatar } = getThemeOptions()
-    if (avatar === '' || $('#blog-news').length === 0)
-        return
-    $('#blog-news').prepend(
-        `<img class='custom-avatar' src='${avatar}' />`,
-    )
+    if (avatar === '' || $('#blog-news').length === 0) return
+    $('#blog-news').prepend(`<img class='custom-avatar' src='${avatar}' />`)
 }
 
 function hideFollowButton() {
-    if (isVisitor) return
+    if (!isOwner()) return
     $('#p_b_follow').hide()
 }
 

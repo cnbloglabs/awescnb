@@ -1,0 +1,20 @@
+// postSignature
+$psignaturePrimary: var(--themeColor);
+$psignatureBackground: var(--background-e);
+$psignatureBorderRadius: 2px;
+
+@import 'plugins/footer/index.scss';
+@import 'plugins/postSignature/index.scss';
+@import 'plugins/highlight/index.scss';
+@import 'plugins/copyCode/index.scss';
+@import 'plugins/linenumbers/index.scss';
+@import 'plugins/imagebox/index.scss';
+@import 'plugins/donation/index.scss';
+@import 'plugins/emoji/index.scss';
+@import 'plugins/player/index.scss';
+@import 'plugins/postMessage/index.scss';
+@import 'plugins/postSignature/index.scss';
+@import 'plugins/notice/index.scss';
+@import 'plugins/signature/index.scss';
+@import 'plugins/commentsAvatars/index.scss';
+@import 'plugins/toolMenu/index.scss';

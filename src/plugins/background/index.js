@@ -1,8 +1,8 @@
 /**
  * 设置页面背景、内容透明度
  */
-import { userAgent } from '@tools'
-import { backgroundConfig } from '@config/plugins.js'
+import { userAgent } from 'utils/helpers'
+import { backgroundConfig } from 'options/plugins'
 
 /**
  * 设置透明度
@@ -10,9 +10,6 @@ import { backgroundConfig } from '@config/plugins.js'
  */
 function setOpacity(opacity, opacitySelector) {
     $(opacitySelector).css('opacity', `${opacity}`)
-    if ($('#catalog').length) {
-        $('#main').css('opacity', `${opacity}`)
-    }
 }
 
 /**
@@ -21,9 +18,7 @@ function setOpacity(opacity, opacitySelector) {
  * @param {Boolean} repeat 是否重复图片
  */
 function setBackground(value, repeat) {
-    const type = new RegExp('http').test(value)
-        ? 'img'
-        : 'color'
+    const type = new RegExp('http').test(value) ? 'img' : 'color'
     if (type === 'color') {
         $('body').css('background-color', `${value}`)
     }
@@ -42,13 +37,8 @@ function setBackground(value, repeat) {
     }
 }
 
-export default (devOptions = {}, pluginOptions = {}) => {
-    const {
-        enable,
-        opacity,
-        value,
-        repeat,
-    } = backgroundConfig(devOptions)
+export default (theme, devOptions, pluginOptions) => {
+    const { enable, opacity, value, repeat } = backgroundConfig(devOptions)
     if (!enable) return
     setBackground(value, repeat)
     const pluginDefaultOptions = {

@@ -1,5 +1,5 @@
 // 返回顶部按钮
-import { userAgent } from '@/assets/utils/tools'
+import { userAgent } from 'utils/helpers'
 
 const options = window.opts.back2top
 const enableLive2d = window.opts.live2d.enable
@@ -10,8 +10,7 @@ const enableLive2d = window.opts.live2d.enable
 function compute() {
     const percentScrolled = (
         ($(document).scrollTop() /
-            ($(document).height() -
-                $(window).outerHeight())) *
+            ($(document).height() - $(window).outerHeight())) *
         100
     ).toFixed(2)
     const percentageHeight = percentScrolled + '%'

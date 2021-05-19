@@ -1,6 +1,6 @@
 // 个性签名在侧边栏构建
 import Typed from 'typed.js'
-import { signatureConfig } from '@config/plugins'
+import { signatureConfig } from 'options/plugins'
 
 /**
  * 构建容器
@@ -22,7 +22,7 @@ function typed(contents) {
     })
 }
 
-export default (devOptions, pluginOptions) => {
+export default (theme, devOptions, pluginOptions) => {
     const { enable, contents } = signatureConfig(devOptions)
     if (!enable) return
 
@@ -31,11 +31,7 @@ export default (devOptions, pluginOptions) => {
     }
 
     if (pluginOptions) {
-        pluginConfig = Object.assign(
-            {},
-            pluginConfig,
-            pluginOptions,
-        )
+        pluginConfig = Object.assign({}, pluginConfig, pluginOptions)
     }
 
     const { selector } = pluginConfig

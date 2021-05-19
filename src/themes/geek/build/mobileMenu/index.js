@@ -2,7 +2,7 @@ import './index.scss'
 // import {
 //     // userAgent,
 //     // unpass
-// } from '@tools'
+// } from 'utils/helpers'
 
 /**
  * 构建移动端菜单

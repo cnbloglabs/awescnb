@@ -1,9 +1,7 @@
-// import './index.scss'
-import { userAgent, pageName } from '@tools'
+import { userAgent } from 'utils/helpers'
+import { isPostDetailsPage } from 'utils/cnblog'
 // 只触发一次向上或向下
 // 如果又重新反向滚动则再触发一次
-
-const isPostPage = pageName() === 'post'
 
 function scrollOnce() {
     function scrollFunc() {
@@ -30,13 +28,13 @@ function scrollOnce() {
         if (direction && originalDir != direction) {
             if (direction == 'down') {
                 $('#header').addClass('is-active')
-                if (isPostPage) {
+                if (isPostDetailsPage()) {
                     $('#catalog').addClass('catalog-scroll-up')
                     $('#catalog').removeClass('catalog-scroll-down')
                 }
             } else {
                 $('#header').removeClass('is-active')
-                if (isPostPage) {
+                if (isPostDetailsPage()) {
                     $('#catalog').removeClass('catalog-scroll-up')
                     $('#catalog').addClass('catalog-scroll-down')
                 }

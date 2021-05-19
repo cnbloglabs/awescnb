@@ -1,16 +1,16 @@
-@import '@/assets/style/hideAds.scss';
+@import 'style/hideAds.scss';
 @import './common.scss';
 @import './variables.scss';
 @import './tools.scss';
 @import './scroll.scss';
 @import './markdown.scss';
 @import './icons.scss';
+@import './plugins.scss';
 
 html {
     font-size: 12px;
-    font-family: -apple-system, system-ui,
-        BlinkMacSystemFont, Helvetica Neue, PingFang SC,
-        Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue,
+        PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
     word-break: break-word;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
@@ -125,8 +125,7 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid
-                    hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .postTitle {
@@ -181,8 +180,7 @@ body {
             color: var(--text-4);
             font-size: 16px;
             &:not(:first-of-type) {
-                border-top: 1px solid
-                    hsla(0, 0%, 59.2%, 0.1);
+                border-top: 1px solid hsla(0, 0%, 59.2%, 0.1);
             }
         }
         .entrylistItem {
@@ -273,8 +271,7 @@ body {
                         }
                         &:hover {
                             transform: scale(1.05);
-                            box-shadow: 0 0 5px
-                                var(--themeColor);
+                            box-shadow: 0 0 5px var(--themeColor);
                             transition: all 0.2s;
                         }
                     }
@@ -354,11 +351,9 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-right: solid 12.96px
-                    var(--background-e);
+                border-right: solid 12.96px var(--background-e);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px
-                    rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
             }
             pre code {
                 width: 100%;
@@ -388,11 +383,9 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-left: solid 12.96px
-                    var(--background-e);
+                border-left: solid 12.96px var(--background-e);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px
-                    rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
             }
         }
 
@@ -556,7 +549,7 @@ body {
 
 // 侧边栏 start
 #sideBar {
-    width: 15.5vw;
+    width: 17.5vw;
     font-size: 14px;
     overflow: hidden;
 }

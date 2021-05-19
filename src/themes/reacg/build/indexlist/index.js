@@ -1,20 +1,14 @@
 // disabled
 // 首页列表图片
 import './index.css'
-import {
-    randomImgurl,
-    pageName,
-    userAgent,
-    randomArrayElements,
-} from '@tools'
+import { randomImgurl, userAgent, randomArrayElements } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
 const { enable, imgs } = window.opts.indexListImg
 
 function image() {
     let image =
-        imgs.length === 0
-            ? randomImgurl()
-            : randomArrayElements(imgs, 1)[0]
+        imgs.length === 0 ? randomImgurl() : randomArrayElements(imgs, 1)[0]
     return image
 }
 
@@ -28,7 +22,7 @@ function listImages() {
 
 function indexList() {
     if (!enable) return
-    if (pageName() !== 'index') return
+    if (getCurrentPage() !== 'index') return
     if (userAgent() !== 'pc') return
     listImages()
 }

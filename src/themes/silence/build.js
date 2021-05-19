@@ -12,7 +12,7 @@ import buildPostCommentAvatars from './modules/postCommentAvatars'
 import loader from './modules/loader'
 import { isPostPage, showSidebar } from './consts/tools'
 
-module.exports = () => {
+export default () => {
     buildCustomHeader()
     buildCustomFooter()
     buildGithubCorner()

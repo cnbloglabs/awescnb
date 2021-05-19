@@ -1,13 +1,12 @@
-@import '@/assets/style/reset.scss';
-@import '@/assets/style/hideAds.scss';
+@import 'style/reset.scss';
+@import 'style/hideAds.scss';
 @import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
 @import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/brands.min.css);
 @import './tools.scss';
 @import './scroll.scss';
 *::before,
 *::after {
-    font-family: 'Font Awesome 5 free',
-        'Font Awesome 5 Brands';
+    font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
     margin-right: 0.5em;
     font-weight: bold;
 }
@@ -33,9 +32,8 @@ body {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
-    font-family: BlinkMacSystemFont, -apple-system,
-        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         Helvetica, Arial, sans-serif;
 }
 #main {
@@ -786,3 +784,4 @@ body {
 
 @import './markdown.scss';
 @import './index.m.scss';
+@import './plugins.scss';

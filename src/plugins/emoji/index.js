@@ -1,7 +1,8 @@
 // 评论输入表情
-import { emojijs } from '@constants/urls'
-import { emojiConfig } from '@config/plugins.js'
-import { pageName, cacheScript, userAgent } from '@tools'
+import { emojijs } from 'constants/libs'
+import { emojiConfig } from 'options/plugins'
+import { cacheScript, userAgent } from 'utils/helpers'
+import { isPostDetailsPage } from 'utils/cnblog'
 
 /**
  * 构建表情
@@ -9,15 +10,9 @@ import { pageName, cacheScript, userAgent } from '@tools'
  * @param {Number} recentsCount 显示最近使用的数量
  * @param {Boolean} showSearch 显示搜索框
  * @param {Boolean} showPreview 显示预览
- * @param {String} theme 主题 dark | light
+ * @param {String} theme 皮肤 dark | light
  */
-function build(
-    showRecents,
-    recentsCount,
-    showSearch,
-    showPreview,
-    theme,
-) {
+function build(showRecents, recentsCount, showSearch, showPreview, theme) {
     if ($('.emoji-picker').length) return
     const emojiConfig = {
         position: 'top-start',
@@ -40,8 +35,7 @@ function build(
         theme,
         showRecents,
         recentsCount,
-        showSearch:
-            userAgent() === 'pc' ? showSearch : false,
+        showSearch: userAgent() === 'pc' ? showSearch : false,
         showPreview,
         zIndex: 3,
         i18n: {
@@ -68,9 +62,7 @@ function build(
     const picker = new EmojiButton(emojiConfig)
 
     picker.on('emoji', emoji => {
-        document.querySelector(
-            '#tbCommentBody',
-        ).value += emoji
+        document.querySelector('#tbCommentBody').value += emoji
     })
 
     const button = document.querySelector('.emoji-button')
@@ -79,7 +71,7 @@ function build(
     })
 }
 
-export default devOptions => {
+export default (_theme, devOptions) => {
     const {
         enable,
         showRecents,
@@ -90,16 +82,12 @@ export default devOptions => {
     } = emojiConfig(devOptions)
 
     if (!enable) return
-    if (pageName() !== 'post') return
+    if (!isPostDetailsPage()) return
+
+    //TODO: 博文禁用评论的情况
 
     const builder = () => {
-        build(
-            showRecents,
-            recentsCount,
-            showSearch,
-            showPreview,
-            theme,
-        )
+        build(showRecents, recentsCount, showSearch, showPreview, theme)
     }
 
     cacheScript(emojijs, builder)

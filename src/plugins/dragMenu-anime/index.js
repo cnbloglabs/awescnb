@@ -1,11 +1,12 @@
-import toast from '@plugins/toast'
-import { toolsConfig } from '@config/plugins.js'
+import toast from 'plugins/toast'
+import { toolsConfig } from 'options/plugins'
 
 import {
     // jqueryui,
     animeJs,
-} from '@constants/urls'
-import { pageName, cacheScript, userAgent } from '@tools'
+} from 'constants/libs'
+import { cacheScript, userAgent } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
 let anime
 let timeOut
@@ -197,11 +198,11 @@ function create(options, initialOpen) {
         callback,
         className,
     } of options.items) {
-        if (pageName() === page || page === 'all') {
+        if (getCurrentPage() === page || page === 'all') {
             menu.add(new Item(icon, tooltip, evenType, callback, className))
         }
     }
-    
+
     $(document)
         .delay(50)
         .queue(function(next) {
@@ -228,7 +229,7 @@ function create(options, initialOpen) {
         })
 }
 
-function dragMenu(devOptions, pluginOptions = {}) {
+function dragMenu(theme, devOptions, pluginOptions = {}) {
     const {
         enable,
         initialOpen,

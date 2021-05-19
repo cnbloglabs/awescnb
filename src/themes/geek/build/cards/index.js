@@ -1,5 +1,5 @@
 import './index.scss'
-import { isCategoryPage, isHomePage } from '@tools'
+import { isCategoryPage, isHomePage } from 'utils/cnblog'
 
 /**
  * 创建 card 元素
@@ -22,9 +22,7 @@ function createCard(
     detailUrl,
     editUrl,
 ) {
-    const cardClass = top
-        ? 'custom-card top'
-        : 'custom-card'
+    const cardClass = top ? 'custom-card top' : 'custom-card'
 
     let el = `
         <div class="${cardClass}">
@@ -117,9 +115,7 @@ function build({ page, wrap, find, callback }) {
 
         const viewCount = getCounts('.post-view-count')
         const diggCount = getCounts('.post-digg-count')
-        const commentCount = getCounts(
-            '.post-comment-count',
-        )
+        const commentCount = getCounts('.post-comment-count')
 
         $('.cards-list').append(
             createCard(

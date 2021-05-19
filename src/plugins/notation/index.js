@@ -1,11 +1,8 @@
-import { notationJs } from '@constants/urls'
-import { notationConfig } from '@config/plugins'
-import {
-    pageName as currentPage,
-    cacheScript,
-} from '@tools'
+import { notationJs } from 'constants/libs'
+import { notationConfig } from 'options/plugins'
+import { cacheScript } from 'utils/helpers'
+import { getCurrentPage } from 'utils/cnblog'
 
-const pageName = currentPage()
 const annotateList = []
 
 /**
@@ -16,18 +13,11 @@ const annotateList = []
 const buildGroup = (annotate, customList) => {
     const group = []
     for (let { selector, page, config } of customList) {
-        if (page === 'all' || pageName === page) {
-            const element = document.querySelectorAll(
-                selector,
-            )
+        if (page === 'all' || getCurrentPage() === page) {
+            const element = document.querySelectorAll(selector)
             if (!element.length) continue
             if (element.length === 1) {
-                group.push(
-                    annotate(
-                        document.querySelector(selector),
-                        config,
-                    ),
-                )
+                group.push(annotate(document.querySelector(selector), config))
             }
             if (element.length > 1) {
                 element.forEach(function(item) {
@@ -45,11 +35,7 @@ const buildGroup = (annotate, customList) => {
  * @param {*} annotationGroup
  * @param {*} customList
  */
-const buildNotation = (
-    annotate,
-    annotationGroup,
-    customList,
-) => {
+const buildNotation = (annotate, annotationGroup, customList) => {
     setTimeout(() => {
         const group = buildGroup(annotate, customList)
         const ag = annotationGroup(group)
@@ -57,17 +43,14 @@ const buildNotation = (
     }, 2000)
 }
 
-export default (devOptions, customList = annotateList) => {
-    if (pageName !== 'post') return
+export default (theme, devOptions, customList = annotateList) => {
+    if (getCurrentPage() !== 'post') return
     const { enable } = notationConfig(devOptions)
     if (!enable) return
     if (!customList.length) return
 
     cacheScript(notationJs, () => {
-        const {
-            annotate,
-            annotationGroup,
-        } = window.RoughNotation
+        const { annotate, annotationGroup } = window.RoughNotation
         buildNotation(annotate, annotationGroup, customList)
     })
 }

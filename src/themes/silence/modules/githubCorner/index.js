@@ -1,5 +1,5 @@
 import './index.less'
-import { getGithubOptions } from '@config/extra'
+import { getGithubOptions } from 'options/extra'
 
 const github = getGithubOptions()
 

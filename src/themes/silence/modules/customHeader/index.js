@@ -1,5 +1,5 @@
 import './index.less'
-import { getLinksOptions } from '@config/extra'
+import { getLinksOptions } from 'options/extra'
 
 const links = getLinksOptions()
 
@@ -39,9 +39,7 @@ function buildCustomHeader() {
                 })
                 $navList.find('li').eq(1).after(`
                     <li class="esa-has-subnavs">
-                        <a class="menu" href="javascript:void(0);">${
-                            nav.name
-                        }
+                        <a class="menu" href="javascript:void(0);">${nav.name}
                             <svg class="arrow" width="9px" height="9px" viewBox="0 0 13 7" xml:space="preserve" fill="none" stroke="var(--text-color)"><path d="M1,1l6.2,6L13,1"></path></svg>
                         </a>
                         <div class="esa-sub-navs"><div class="caret"></div><ul>${subnavs.join(

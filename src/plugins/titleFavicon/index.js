@@ -1,5 +1,5 @@
 // 设置网站图标和标题
-import { getThemeOptions } from '@config/extra'
+import { getThemeOptions } from 'options/extra'
 
 /**
  * 构建网页标题
@@ -26,7 +26,7 @@ function setFavicon(favicon) {
     }
 }
 
-export default devOptions => {
+export default (theme, devOptions) => {
     const { title, favicon } = getThemeOptions(devOptions)
     setTitle(title)
     setFavicon(favicon)

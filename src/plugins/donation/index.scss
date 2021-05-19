@@ -14,7 +14,6 @@ $donationQrcodeBackground: map-get($donation, qrcodeBackground);
 #custom-donation-btn {
     background-color: $donationBtnColors !important;
     padding: 4px 10px !important;
-    user-select: none;
     &:hover {
         box-shadow: 0 0 5px #999;
         transform: scale(1.1);

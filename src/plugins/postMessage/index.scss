@@ -3,21 +3,14 @@ $postMessage: () !default;
 $postMessage: map-merge(
     (
         categoriesBackground: #ff6b6b,
-        tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84
-            #0097e6,
+        tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
         color: #fff,
     ),
     $postMessage
 );
 
-$postMessageTagBackground: map-get(
-    $postMessage,
-    tagsBackground
-);
-$categoriesBackground: map-get(
-    $postMessage,
-    categoriesBackground
-);
+$postMessageTagBackground: map-get($postMessage, tagsBackground);
+$categoriesBackground: map-get($postMessage, categoriesBackground);
 $color: map-get($postMessage, color);
 
 #EntryTag,
@@ -29,7 +22,7 @@ $color: map-get($postMessage, color);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -68,10 +61,7 @@ $color: map-get($postMessage, color);
 
 @for $i from 1 through length($postMessageTagBackground) {
     .custom-tags a:nth-child(#{$i}) {
-        background-color: nth(
-            $postMessageTagBackground,
-            $i
-        );
+        background-color: nth($postMessageTagBackground, $i);
     }
 }
 

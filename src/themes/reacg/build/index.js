@@ -4,7 +4,7 @@ import scroll from './scroll'
 import setIcons from './icons'
 import comments from './comments'
 
-module.exports = () => {
+export default () => {
     mobileMenu()
     profile()
     scroll()

@@ -1,24 +1,17 @@
 // 在随笔详情页顶部随笔生成一个文章头图
 // 引入即可
-import {
-    randomImgurl,
-    pageName,
-    randomArrayElements,
-} from '@tools'
-import { postTopimageConfig } from '@config/plugins'
+import { randomImgurl, randomArrayElements } from 'utils/helpers'
+import { isPostDetailsPage } from 'utils/cnblog'
+import { postTopimageConfig } from 'options/plugins'
 
-export default devOptions => {
-    const { enable, imgs, fixed } = postTopimageConfig(
-        devOptions,
-    )
+export default (theme, devOptions) => {
+    const { enable, imgs, fixed } = postTopimageConfig(devOptions)
 
     if (!enable) return
-    if (pageName() !== 'post') return
+    if (!isPostDetailsPage()) return
 
     const url =
-        imgs.length === 0
-            ? randomImgurl()
-            : randomArrayElements(imgs, 1)[0]
+        imgs.length === 0 ? randomImgurl() : randomArrayElements(imgs, 1)[0]
     const ele = `<a  href="${url}" target="blank"><div id="custom-post-topimage"></div></a>`
     const style = {
         'background-image': `url(${url})`,

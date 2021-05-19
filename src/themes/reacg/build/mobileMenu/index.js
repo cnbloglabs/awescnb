@@ -1,6 +1,6 @@
 // 设置移动端菜单按钮
 import './index.scss'
-import { unpass } from '@tools'
+import { unpass } from 'utils/helpers'
 
 function build() {
     $('body').append(

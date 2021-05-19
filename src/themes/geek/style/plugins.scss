@@ -1,0 +1,53 @@
+$postSignature: (
+    primary: var(--postSignature-border-color),
+    background: var(--postSignature-bg),
+    borderRadius: 2px,
+);
+
+$dragMenu: (
+    background: var(--dragmenuItem-bg),
+    color: #fff,
+);
+
+$footer: (
+    background: #232323,
+);
+
+// $linemubers: (
+//     color: #24273b,
+// );
+
+$postMessage: (
+    categoriesBackground: var(--tags-bg),
+    tagsBackground: var(--tags-bg),
+    color: var(--tags-color),
+);
+
+$signature: (
+    padding: 1rem 14px,
+    fontSize: 1em,
+);
+
+$imagebox: (
+    background: var(--dragmenuItem-bg),
+);
+
+$player: (
+    bodyBackground: var(--tags-bg),
+);
+
+@import 'plugins/highlight/index.scss';
+@import 'plugins/copyCode/index.scss';
+@import 'plugins/linenumbers/index.scss';
+@import 'plugins/postMessage/index.scss';
+@import 'plugins/commentsAvatars/index.scss';
+@import 'plugins/signature/index.scss';
+@import 'plugins/emoji/index.scss';
+@import 'plugins/imagebox/index.scss';
+@import 'plugins/notice/index.scss';
+@import 'plugins/postSignature/index.scss';
+@import 'plugins/toolMenu/index.scss';
+@import 'plugins/mode/index.scss';
+@import 'plugins/clickEffect/index.scss';
+@import 'plugins/player/index.scss';
+@import 'plugins/codeLanguage/index.scss';

@@ -1,16 +1,105 @@
 import './style/index.scss'
-import AwesCnb from '@awescnb'
+import { createTheme } from 'awescnb'
+import build from './build'
+import {
+    highlight,
+    linenumbers,
+    postMessage,
+    commentsAvatars,
+    emoji,
+    themeColor,
+    imagebox,
+    postSignature,
+    titleFavicon,
+    catalog,
+    background,
+    signature,
+    clickEffect,
+    player,
+    mode,
+    copyCode,
+    codeLanguage,
+    toolMenu,
+} from 'plugins/index'
 
-class Geek extends AwesCnb {
-    constructor() {
-        super()
-        super.init(this.build)
-    }
+const theme = createTheme()
 
-    build() {
-        require('./build')()
-        require('./plugins')()
-    }
-}
+build()
 
-new Geek()
+theme
+    .use(highlight)
+    .use(linenumbers)
+    .use(postMessage)
+    .use(commentsAvatars)
+    .use(emoji)
+    .use(imagebox)
+    .use(postSignature)
+    .use(titleFavicon)
+    .use(codeLanguage)
+    .use(clickEffect, { enable: false })
+    .use(themeColor, { color: '#1B86F9' })
+    .use(player, { enable: false })
+    .use(mode, {
+        enable: true,
+        darkDefault: true,
+        autoDark: false,
+        autoLight: false,
+    })
+    .use(
+        signature,
+        {
+            enable: true,
+            contents: [
+                '欢迎使用皮肤<b style="color:#3742fa">Geek</b>',
+                '快去自定义签名吧~',
+            ],
+        },
+        { selector: '.profile-signature' },
+    )
+    .use(
+        background,
+        {},
+        {
+            opacitySelector:
+                '#left-side,#sideBar,#mainContent, #footer,#custom-searchbar',
+        },
+    )
+    .use(
+        catalog,
+        {
+            enable: true,
+        },
+        {
+            selector: '.account',
+            fn: 'after',
+            scrollContainer: '#mainContent',
+        },
+    )
+    .use(copyCode)
+    .use(
+        toolMenu,
+        {},
+        {
+            toolbarItems: [
+                {
+                    icon: 'fa-comment-dots',
+                },
+                {
+                    icon: 'fa-star',
+                },
+                {
+                    icon: 'fa-heart',
+                },
+                {
+                    icon: 'fa-thumbs-up',
+                },
+                {
+                    enable: true,
+                    icon: 'fa-adjust',
+                },
+                {
+                    icon: 'fa-rocket',
+                },
+            ],
+        },
+    )

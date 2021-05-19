@@ -1,5 +1,5 @@
 import './index.less'
-import { donationConfig } from '@config/plugins'
+import { donationConfig } from 'options/plugins'
 
 const config = donationConfig()
 
