@@ -9,7 +9,7 @@ const { themeName, openAnalyzer, cssExtract } = require('../awescnb.config')
 
 const entry = {
     index: './src/awescnb/load.js',
-    [themeName]: `./src/themes/${themeName}/index.js`,
+    // [themeName]: `./src/themes/${themeName}/index.js`,
     // bilibili: './src/themes/bilibili/index.js',
     // csdn: './src/themes/csdn/index.js',
     // demo: './src/themes/demo/index.js',
