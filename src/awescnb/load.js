@@ -28,7 +28,7 @@ function ensureThemeName(themeName) {
 $.extend({
     awesCnb: (options = {}) => {
         window.opts = options
-        const { themeName } = options?.theme?.name
+        const themeName = options?.theme?.name
         loadTheme(ensureThemeName(themeName))
     },
 })
