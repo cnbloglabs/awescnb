@@ -1,3 +1,5 @@
+import { getThemeOptions } from 'options/extra'
+
 /**
  * 博客园相关常量
  */
@@ -11,4 +13,5 @@ export const blogId = window.currentBlogId
 // blog app
 export const blogApp = window.currentBlogApp
 // 用户头像
-export const avatar = $('#user_icon').attr('src')
+// export const avatar = $('#user_icon').attr('src')
+export const avatar = getThemeOptions().avatar
