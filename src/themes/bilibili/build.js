@@ -9,8 +9,14 @@ function setHeaderBackground() {
     })
 }
 
+function setAvatart() {
+    const { avatar } = getThemeOptions()
+    $('#blogLogo').attr('src', avatar)
+}
+
 // TODO: avatar
 
 export default () => {
+    setAvatart()
     setHeaderBackground()
 }
