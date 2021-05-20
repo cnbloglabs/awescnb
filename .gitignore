@@ -1,2 +1,3 @@
 node_modules
-./awescnb.config.js
+/config
+/awescnb.config.js
