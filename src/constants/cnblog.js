@@ -13,5 +13,5 @@ export const blogId = window.currentBlogId
 // blog app
 export const blogApp = window.currentBlogApp
 // 用户头像
-// export const avatar = $('#user_icon').attr('src')
+// TODO: 直接获取用户头像，不再通过配置
 export const avatar = getThemeOptions().avatar
