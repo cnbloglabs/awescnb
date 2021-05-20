@@ -206,11 +206,26 @@ export function hasPostTitle() {
 
 /**
  * 推荐博文
- * 博客园过滤机制 `windown.votePost` https://group.cnblogs.com/topic/115024.html
+ * 博客园过滤机制 `windown.votePost`
+ * https://group.cnblogs.com/topic/115024.html
  * @returns {Boolean}
  */
 export function likePost() {
     // const id = window.location.href.match(/p\/(\S*).html/)[1]
     // window.votePost(parseInt(id), 'Digg')
     $('.diggit').trigger('click')
+}
+
+/**
+ * 获取用户信息
+ * @returns {Promise}
+ */
+export function getUserInfo() {
+    return new Promise(resolve => {
+        $(document).ajaxComplete((event, xhr, settings) => {
+            if (settings.url === 'https://account.cnblogs.com/user/userinfo') {
+                resolve($.parseJSON(xhr.responseText))
+            }
+        })
+    })
 }
