@@ -1,0 +1,60 @@
+.scrollbar-gradient {
+    &::-webkit-scrollbar {
+        display: block;
+        width: 10px;
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--ThemeColor);
+        background-image: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent
+        );
+        border-radius: 30px;
+        box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+            inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(211, 210, 210, 0.2);
+    }
+}
+
+@mixin scrollbar-simple($thumb-color) {
+    &::-webkit-scrollbar {
+        display: block;
+        margin-top: 105px;
+        width: 10px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $thumb-color;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(211, 210, 210, 0);
+    }
+}
+
+// body,
+// .emoji-picker__emojis {
+//     @extend .scrollbar-gradient;
+// }
+
+#catalog,
+pre,
+code {
+    @include scrollbar-simple(var(--ThemeColor));
+}
+
+#cnblogs_post_body table {
+    @include scrollbar-simple(var(--ThemeColor));
+}

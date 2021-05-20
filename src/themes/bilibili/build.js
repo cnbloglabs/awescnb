@@ -9,6 +9,8 @@ function setHeaderBackground() {
     })
 }
 
+// TODO: avatar
+
 export default () => {
     setHeaderBackground()
 }
