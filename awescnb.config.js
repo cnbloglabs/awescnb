@@ -1,11 +1,11 @@
 module.exports = {
-    themeName: 'bilibiliv1',
+    themeName: 'demo',
     template: 'post',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
     openAnalyzer: false,
-    cssExtract: true,
+    cssExtract: false,
 }
 
 // OPTIONS
