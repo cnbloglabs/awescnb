@@ -2,14 +2,17 @@ import { catalogConfig } from 'options/plugins'
 import { userAgent, getClientRect, throttle } from 'utils/helpers'
 import { getCurrentPage, hasPostTitle } from 'utils/cnblog'
 
+// TODO: Convert to  Class Style plugin.
+
 /**
  * 构建目录容器
  */
-function buildCatalogContainer() {
-    const $container = $(
-        `<nav id="catalog"><h3 class='catalog-title'>目录</h3></nav>`,
-    )
-    return $container
+function buildCatalogContainer(showTitle) {
+    const container = $(`<nav id="catalog"></nav>`)
+    if (showTitle) {
+        container.append(`<h3 class='catalog-title'>目录</h3>`)
+    }
+    return container
 }
 
 /**
@@ -19,41 +22,47 @@ function buildCatalogList() {
     const $list = $('<ul>')
     const regExp = /^h[1-6]$/
 
-    $('#cnblogs_post_body')
-        .children()
-        .each(function() {
-            if (regExp.test(this.tagName.toLowerCase())) {
-                const className = `${this.nodeName.toLowerCase()}-list`
-                const mathNode = $(this).children('.math.inline')
-                let text
-                let id
+    // $('#cnblogs_post_body')
+    //     .children()
+    $('#cnblogs_post_body :header').each(function(index) {
+        if (regExp.test(this.tagName.toLowerCase())) {
+            const className = `${this.nodeName.toLowerCase()}-list`
+            const mathNode = $(this).children('.math.inline')
 
-                if (mathNode.length) {
-                    text =
-                        mathNode.prop('outerHTML') +
-                        $(this)
-                            .contents()
-                            .filter(function() {
-                                return this.nodeType === 3
-                            })
-                            .text()
-                } else {
-                    text = $(this).text()
-                }
+            let text
+            let id
 
-                if (text.length === 0) return // 如果标题为空 只有 #
-
-                if (this.id !== '') {
-                    id = this.id
-                } else {
-                    id = text.trim()
-                    $(this).attr('id', id)
-                }
-
-                const title = `<li class='${className}'><a href='#${id}'>${text}</a></li>`
-                $list.append(title)
+            if (mathNode.length) {
+                text =
+                    mathNode.prop('outerHTML') +
+                    $(this)
+                        .contents()
+                        .filter(function() {
+                            return this.nodeType === 3
+                        })
+                        .text()
+            } else {
+                text = $(this).text()
             }
-        })
+
+            if (text.length === 0) return // 如果标题为空 只有 #
+
+            if (this.id !== '') {
+                id = this.id
+            } else {
+                id = text.trim()
+                $(this).attr('id', id)
+            }
+
+            const title = $(
+                `<li class='${className}'><a href='#${id}'>${text}</a></li>`,
+            )
+            if (index === 0) {
+                title.addClass('catalog-active')
+            }
+            $list.append(title)
+        }
+    })
     return $list
 }
 
@@ -62,46 +71,92 @@ function buildCatalogList() {
  * @param {String} selector
  * @param {Function} fn
  */
-function buildCatalog(selector, fn) {
-    const container = buildCatalogContainer()
+function buildCatalog(selector, fn, showTitle) {
+    const container = buildCatalogContainer(showTitle)
     const catalogList = buildCatalogList()
     const catalog = container.append(catalogList)
     $(selector)[fn]($(catalog))
 }
 
 /**
- * 标题动态高亮
- * @param {String} scrollContainer
+ * 处理滚动事件
  */
-function setActiveTitle(scrollContainer) {
+function handleScroll(scrollContainer, updateNavigation) {
     $(scrollContainer).scroll(
         throttle(
-            function() {
-                for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
-                    const titleId = $($('#catalog ul li')[i])
-                        .find('a')
-                        .attr('href')
-                        .replace(/[#]/g, '')
-                    const postTitle = document.querySelector(
-                        `#cnblogs_post_body [id='${titleId}']`,
-                    )
-                    if (getClientRect(postTitle).top <= 100) {
-                        if (
-                            $($('#catalog ul li')[i]).hasClass('catalog-active')
-                        )
-                            return
-                        $($('#catalog ul li')[i]).addClass('catalog-active')
-                        $($('#catalog ul li')[i])
-                            .siblings()
-                            .removeClass('catalog-active')
-                        return
-                    }
-                }
+            () => {
+                setActiveTitle()
+                autoScroll(scrollContainer, updateNavigation)
             },
             50,
             1000 / 60,
         ),
     )
+}
+
+// TODO: 目录自动滚动
+// https://stackoverflow.com/questions/61282426/fixed-sidebar-scroll-to-anchor-links-when-main-body-is-scrolled?r=SearchResults
+function autoScroll(scrollContainer, updateNavigation) {
+    if (!updateNavigation) {
+        return
+    }
+    const navigation = $('#catalog')
+
+    if (scrollContainer.scrollY < 100) {
+        return navigation.stop().animate(
+            {
+                scrollTop: 0,
+            },
+            800,
+        )
+    }
+
+    $('#cnblogs_post_body :header').each(function() {
+        const sectionName = $(this).attr('id')
+        const navigationMatch = $('a[href="#' + sectionName + '"]', navigation)
+
+        if (
+            $(this).offset().top - $(window).height() / 2 <
+                $(window).scrollTop() &&
+            $(this).offset().top + $(this).height() - $(window).height() / 2 >
+                $(window).scrollTop()
+        ) {
+            const position =
+                navigationMatch.position().top + navigation.scrollTop()
+
+            //TODO: Use cached selector, exit .each() when first occurrence found
+            return navigation.stop().animate(
+                {
+                    scrollTop: position,
+                },
+                800,
+            )
+        }
+    })
+}
+
+/**
+ * 标题动态高亮
+ * @param {String} scrollContainer
+ */
+function setActiveTitle() {
+    for (let i = $('#catalog ul li').length - 1; i >= 0; i--) {
+        const titleId = $($('#catalog ul li')[i])
+            .find('a')
+            .attr('href')
+            .replace(/[#]/g, '')
+        const postTitle = document.querySelector(
+            `#cnblogs_post_body [id='${titleId}']`,
+        )
+        if (getClientRect(postTitle).top <= 100) {
+            if ($($('#catalog ul li')[i]).hasClass('catalog-active')) return
+            $($('#catalog ul li')[i]).addClass('catalog-active')
+            $($('#catalog ul li')[i])
+                .siblings()
+                .removeClass('catalog-active')
+            return
+        }
+    }
 }
 
 /**
@@ -117,16 +172,38 @@ function toggle() {
     })
 }
 
+/**
+ * 设置滚动条
+ * @param {*} showScrollbar
+ */
+function setScrollbar(showScrollbar) {
+    if (!showScrollbar) {
+        $('#catalog').css({
+            overflow: 'hidden',
+        })
+    }
+}
+
 export default (theme, devOptions, pluginOptions = {}) => {
     const extraOptions = {
         selector: '',
         fn: 'before',
         scrollContainer: window,
+        updateNavigation: false,
+        showTitle: true,
+        showScrollbar: true,
     }
 
     $.extend(true, extraOptions, pluginOptions)
     const { enable } = catalogConfig(devOptions)
-    const { selector, fn, scrollContainer } = extraOptions
+    const {
+        selector,
+        fn,
+        scrollContainer,
+        updateNavigation,
+        showTitle,
+        showScrollbar,
+    } = extraOptions
 
     if (
         enable &&
@@ -134,8 +211,9 @@ export default (theme, devOptions, pluginOptions = {}) => {
         getCurrentPage() === 'post' &&
         userAgent() === 'pc'
     ) {
-        buildCatalog(selector, fn)
-        setActiveTitle(scrollContainer)
+        buildCatalog(selector, fn, showTitle)
+        handleScroll(scrollContainer, updateNavigation)
         toggle()
+        setScrollbar(showScrollbar)
     }
 }
