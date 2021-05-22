@@ -158,7 +158,6 @@ export default (theme, devOptions, pluginOptions) => {
     if (!enable) return
 
     const pluginDefaultOptions = {
-        mobileAutoClose: true,
         menuIcon: 'fa-angle-up',
         toolbarItems: [
             {
