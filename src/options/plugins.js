@@ -93,6 +93,7 @@ export function toolsConfig(devOptions) {
     const defaultOptions = {
         enable: true,
         initialOpen: true,
+        mobileAutoClose: true,
     }
     return mergeOptions(defaultOptions, userConfig.tools, devOptions)
 }
