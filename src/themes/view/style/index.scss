@@ -249,8 +249,8 @@ body {
         .CalTodayDay {
             color: var(--themeColor);
         }
-        .CalNextPrev {
-        }
+        // .CalNextPrev {
+        // }
         .CalOtherMonthDay {
             color: #cacaca;
             background-color: var(--tags-bg);
@@ -266,7 +266,7 @@ body {
                 content: '';
                 position: absolute;
                 bottom: -4px;
-                left: -4px;
+                left: -7px;
                 width: 8px;
                 height: 4px;
                 background-color: var(--themeColor);
@@ -301,20 +301,20 @@ body {
     }
 }
 // 侧边栏 - 最新随笔
-#sidebar_recentposts {
-}
+// #sidebar_recentposts {
+// }
 // 侧边栏 - 积分与排名
-#sidebar_scorerank {
-}
+// #sidebar_scorerank {
+// }
 // 侧边栏 - 相册
-#sidebar_imagecategory {
-}
+// #sidebar_imagecategory {
+// }
 // 侧边栏 - 随笔分类
-#sidebar_postcategory {
-}
+// #sidebar_postcategory {
+// }
 // 侧边栏 - 随笔档案
-#sidebar_postarchive {
-}
+// #sidebar_postarchive {
+// }
 // 侧边栏 - 我的标签
 #sidebar_toptags {
     ul {
@@ -589,7 +589,7 @@ body {
                 font-size: 14px;
                 border-radius: 3px;
                 box-shadow: none;
-                font-weight: 700;
+                font-weight: normal;
                 text-shadow: none;
             }
             a {
@@ -598,10 +598,7 @@ body {
                 &:nth-child(3) {
                     padding: 4px 10px;
                     &:hover {
-                        box-shadow: 0 0 5px #999;
-                        transform: scale(1.1);
-                        transform: translateY(-2px);
-                        transition: all 0.2s;
+                        filter: brightness(0.8);
                     }
                 }
                 &:nth-child(1) {
@@ -669,10 +666,7 @@ body {
             .diggit {
                 background-color: #ff6b81;
                 &:hover {
-                    box-shadow: 0 0 5px #ff6b81;
-                    transform: scale(1.1);
-                    transform: translateY(-2px);
-                    transition: all 0.2s;
+                    filter: brightness(0.8);
                 }
                 &::before {
                     content: '\f004';
@@ -683,10 +677,7 @@ body {
                 margin-left: 10.8px;
                 background-color: #ced6e0;
                 &:hover {
-                    box-shadow: 0 0 5px #ced6e0;
-                    transform: scale(1.1);
-                    transform: translateY(-2px);
-                    transition: all 0.2s;
+                    filter: brightness(0.8);
                 }
                 &::before {
                     content: '\f7a9';
@@ -709,182 +700,187 @@ body {
     }
 }
 
-#blog-comments-placeholder br,
-#comment_pager_top {
-    display: none;
-}
-
 // 评论列表
 #blog-comments-placeholder {
+    margin: 20px 0;
     border-radius: 3px;
-    .feedback_area_title {
-        padding: 7.56px 10.8px;
-        border: 1px solid var(--area-border-color);
-        background-color: var(--areaTitle-bg);
-        border-radius: 2px 2px 0 0;
-        font-size: 12px;
-        font-weight: 700;
-        &::before {
-            content: '\f4ad';
-        }
-    }
-    .feedbackItem {
-        border-left: 1px solid var(--area-border-color);
-        border-right: 1px solid var(--area-border-color);
-        padding: 17.982px 10.8px;
-        &:nth-last-child(2) {
-            border-bottom: 1px solid var(--area-border-color);
-        }
-    }
-    .custom-comments-author {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        .louzhu {
-            color: #f14668;
-        }
 
-        .blog_comment_body {
-            background-color: #61aeee !important;
-            color: #fff;
-            a:nth-child(1) {
-                color: #ffd257;
-                font-weight: 700;
-                font-size: 1.2rem;
-            }
-            a:not(:nth-child(1)):hover {
-                color: #3273dc;
-                transition: all 0.25s;
-            }
-        }
-
-        img {
-            margin-left: 10.8px;
-        }
-
-        .blog_comment_body::before {
-            display: none;
-        }
-
-        .blog_comment_body::after {
-            content: '';
-            display: block;
-            position: absolute;
-            right: -24.84px;
-            top: 5.4px;
-            width: 12.258px;
-            height: 0;
-            border-left: solid 12.96px #61aeee;
-            border-top: solid 3.24px rgba(0, 0, 0, 0);
-            border-bottom: solid 7.182px rgba(0, 0, 0, 0);
-        }
-        .feedbackManage {
-            order: 0;
-        }
-        .layer {
-            margin-left: 5.4px;
-            order: 3 !important;
-        }
-        .comment_vote {
-            order: -3;
-        }
-        .comment_date {
-            order: -1 !important;
-        }
-        .feedbackManage {
-            order: -2 !important;
-        }
-        .feedbackCon {
-            flex-direction: row-reverse;
-            .blog_comment_body {
-                max-width: 60%;
-                img {
-                    width: 27px;
-                    height: 27px;
-                    vertical-align: middle;
-                }
-            }
-            br {
-                display: none;
-            }
-        }
-    }
-    br {
+    br,
+    #comment_pager_top {
         display: none;
     }
-    .layer {
-        padding: 0 5.4px;
-        background-color: #fa745e;
-        color: #fff;
-        font-weight: 700;
-        border-radius: 3px;
-        margin-right: 5.4px;
-        order: 0;
-        font-size: 14px;
-    }
-    .comment_date {
-        margin: 0 5.4px;
-        order: 2;
+
+    #comment_pager_bottom {
+        display: flex;
+        justify-content: center;
+        margin: 24px 0;
+        .pager {
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
     }
 }
 
-.feedbackListSubtitle {
-    @include center();
-    flex-wrap: wrap;
-    margin-bottom: 5px;
-    font-size: 14px;
-    & > a:last-of-type {
-        color: #00a1d6;
-        order: 1;
+.feedback_area_title {
+    padding: 7.56px 10.8px;
+    border: 1px solid var(--area-border-color);
+    background-color: var(--areaTitle-bg);
+    border-radius: 2px 2px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    &::before {
+        content: '\f086';
+        font-weight: normal;
+    }
+}
+
+.feedbackItem {
+    border-left: 1px solid var(--area-border-color);
+    border-right: 1px solid var(--area-border-color);
+    padding: 17.982px 10.8px;
+
+    &:nth-last-child(2) {
+        border-bottom: 1px solid var(--area-border-color);
+    }
+
+    .feedbackListSubtitle {
+        @include center();
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #999;
+        & > a:last-of-type {
+            color: #00a1d6;
+            order: 1;
+        }
+        .layer {
+            padding: 0 5.4px;
+            background-color: #fa745e;
+            color: #fff;
+            border-radius: 3px;
+            margin-right: 5.4px;
+            order: 0;
+            font-size: 13px;
+        }
+        .feedbackManage {
+            order: 3;
+            .comment_actions {
+                border-bottom: 1px solid #3273dc;
+            }
+        }
+        .comment_vote {
+            order: 4;
+        }
+        .comment_date {
+            margin: 0 5.4px;
+            order: 2;
+        }
+    }
+    .feedbackCon {
+        display: flex;
+        align-items: baseline;
+        margin-top: 5px;
+        .blog_comment_body {
+            position: relative;
+            bottom: 12px;
+            margin-left: 10px;
+            padding: 0 10.8px;
+            background-color: var(--tags-bg);
+            border-radius: 3px;
+            font-size: 14px;
+            max-width: 540px;
+            line-height: 1.6;
+            padding: 5.4px 10.8px;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -24.84px;
+                top: 5.4px;
+                width: 12.258px;
+                height: 0;
+                border-right: solid 12.96px var(--tags-bg);
+                border-top: solid 3.24px rgba(0, 0, 0, 0);
+                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
+            }
+        }
+        .avatar {
+            border: 1px solid #eee;
+            border-radius: 50%;
+            transform: scale(0.7);
+        }
+    }
+}
+
+.feedbackItem.custom-comments-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .louzhu {
+        color: #f14668;
+    }
+
+    .blog_comment_body {
+        // a:nth-child(1) {
+        //     // color: #3273dc;
+        // }
+        a:not(:nth-child(1)):hover {
+            color: #3273dc;
+            transition: all 0.25s;
+        }
+    }
+
+    img {
+        margin-left: 10.8px;
+    }
+
+    .blog_comment_body::before {
+        display: none;
+    }
+
+    .blog_comment_body::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -30px;
+        top: 5.4px;
+        width: 12.258px;
+        height: 0;
+        border-left: solid 12.96px var(--tags-bg);
+        border-top: solid 3.24px rgba(0, 0, 0, 0);
+        border-bottom: solid 7.182px rgba(0, 0, 0, 0);
     }
     .feedbackManage {
-        order: 3;
-        .comment_actions {
-            border-bottom: 1px solid #3273dc;
-        }
+        order: 0;
+    }
+    .layer {
+        margin-left: 5.4px;
+        order: 3 !important;
     }
     .comment_vote {
-        order: 4;
+        order: -3;
     }
-}
-
-.feedbackCon {
-    display: flex;
-    align-items: baseline;
-    margin-top: 5px;
-    .blog_comment_body {
-        position: relative;
-        margin-left: 10px;
-        // margin-top: 10px;
-        padding: 0 10.8px;
-        background-color: #00d1b2;
-        border-radius: 3px;
-        color: #fff;
-        font-size: 14px;
-        max-width: 540px;
-        line-height: 1.6;
-        padding: 5.4px 10.8px;
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: -24.84px;
-            top: 5.4px;
-            width: 12.258px;
-            height: 0;
-            border-right: solid 12.96px #00d1b2;
-            border-top: solid 3.24px rgba(0, 0, 0, 0);
-            border-bottom: solid 7.182px rgba(0, 0, 0, 0);
-        }
-        a {
-            color: #fa745e;
-            border-color: #fa745e;
-        }
+    .comment_date {
+        order: -1 !important;
     }
-    .avatar {
-        border: 1px solid #eee;
-        border-radius: 50%;
-        transform: scale(0.7);
+    .feedbackManage {
+        order: -2 !important;
+    }
+    .feedbackCon {
+        flex-direction: row-reverse;
+        .blog_comment_body {
+            max-width: 60%;
+            img {
+                width: 27px;
+                height: 27px;
+                vertical-align: middle;
+            }
+        }
+        br {
+            display: none;
+        }
     }
 }
 
@@ -940,6 +936,8 @@ body {
             // .commentbox_title_right {
             // }
             #tbCommentBody {
+                padding-left: 8px;
+                padding-right: 8px;
                 margin-bottom: 10.8px !important;
                 height: 81px;
                 min-height: 135px;

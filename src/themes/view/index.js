@@ -27,7 +27,7 @@ theme
     .use(footer)
     .use(copyCode)
     .use(linenumbers)
-    .use(postSignature)
+    .use(postSignature, { enable: false })
     .use(commentsAvatars)
     .use(highlight)
     .use(
