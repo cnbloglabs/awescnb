@@ -1,4 +1,5 @@
 @mixin scrollbar-simple($thumb-color) {
+    cursor: pointer;
     &::-webkit-scrollbar {
         display: block;
         margin-top: 105px;

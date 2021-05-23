@@ -1,56 +1,81 @@
 // default-variables
 :root {
-    --header-bg: #fff;
-    --header-text-color: #4a4a4a;
-    --header-border-color: #cfdee9;
-    --header-item-hover-bg: #f8f8f8;
-    --header-nickname-color: #4a4a4a;
+    --color-basic-50: #ffffff;
+    --color-basic-75: #fafafa;
+    --color-basic-100: #f8f8f8;
+    --color-basic-200: #eaeaea;
+    --color-basic-300: #e1e1e1;
+    --color-basic-400: #cacaca;
+    --color-basic-500: #b3b3b3;
+    --color-basic-600: #8e8e8e;
+    --color-basic-700: #6e6e6e;
+    --color-basic-800: #4b4b4b;
+    --color-basic-900: #2c2c2c;
 
-    --searchbar-border-color: #ccc;
-    --searchbar-bg: #fff;
-    --searchbar-text-color: #000;
+    --header-bg: var(--color-basic-50);
+    --header-text-color: var(--color-basic-800);
+    --header-border-color: var(--color-basic-200);
+    --header-item-hover-bg: var(--color-basic-100);
+    --header-nickname-color: var(--color-basic-800);
 
-    --body-text-color: #4a4a4a;
+    --searchbar-border-color: var(--color-basic-300);
+    --searchbar-bg: var(--color-basic-50);
+    --searchbar-text-color: var(--color-basic-800);
+
+    --body-text-color: var(--color-basic-800);
+
     --main-bg: #d1dee8;
-    --mainContent-border-color: #ccc;
-    --mainContent-bg: #fff;
+    --mainContent-border-color: var(--color-basic-300);
+    --mainContent-bg: var(--color-basic-50);
 
-    --title-bg: #fff;
-    --postDesc-color: #999;
-    --postCon-color: #888;
+    --title-bg: var(--color-basic-50);
+    --postDesc-color: var(--color-basic-700);
+    --postCon-color: var(--color-basic-600);
 
-    --title-border-color: hsla(0, 0%, 59.2%, 0.1);
-    --pager-btn-bg: #f2f1f6;
-    --tags-bg: #f1f5f9;
+    --title-border-color: var(--color-basic-300);
+    --pager-btn-bg: var(--color-basic-75);
+    --tags-bg: var(--color-basic-100);
 
-    --sidebarWrap-bg: #fff;
-    --sidebar-item-hover: #f5f7fa;
-    --sidebar-title-border-color: #eee;
+    --sidebarWrap-bg: var(--color-basic-50);
+    --sidebar-title-border-color: var(--color-basic-200);
 
-    --calendar-text-color: #000;
-    --postList-bg: #fff;
-    --areaTitle-bg: #f6f8fa;
-    --area-border-color: #d1d5da;
-    --menu-bg: #fff;
+    --calendar-text-color: var(--color-basic-800);
+    --postList-bg: var(--color-basic-50);
+    --areaTitle-bg: var(--color-basic-100);
+    --area-border-color: var(--color-basic-400);
+    --menu-bg: var(--color-basic-50);
 
-    --scrollbar-bg: #d8d8d8;
-    --ads-bg: #f5f7fa;
+    --scrollbar-bg: var(--color-basic-300);
+    --ads-bg: var(--color-basic-100);
 
-    --blockquote-bg: #f2f7fb;
-    --blockquote-border-color: #cbcbcb;
-    --table-border-color: rgb(192, 192, 192);
+    --blockquote-bg: var(--color-basic-100);
+    --blockquote-border-color: var(--color-basic-400);
 
-    --card-bg: #fafafa;
+    --table-border-color: var(--color-basic-400);
+
+    --card-bg: var(--color-basic-75);
     --card-border: 2px solid #cbcbcb;
-
-    --footer-bg: #333;
 
     --postSignature-primary: #06aae0;
     --postSignature-bg: #f6f8fa;
+
+    --footer-bg: var(--color-basic-900);
 }
 
 // variables in dark mode
 :root[theme='dark'] {
+    --color-basic-50: #252525;
+    --color-basic-75: #2f2f2f;
+    --color-basic-100: #323232;
+    --color-basic-200: #3e3e3e;
+    --color-basic-300: #4a4a4a;
+    --color-basic-400: #5a5a5a;
+    --color-basic-500: #6e6e6e;
+    --color-basic-600: #909090;
+    --color-basic-700: #b9b9b9;
+    --color-basic-800: #bdbdbd;
+    --color-basic-900: #c2c2c2;
+
     --header-bg: #202023;
     --header-text-color: #bababa;
     --header-border-color: #444;
@@ -75,7 +100,6 @@
     --tags-bg: #2c2c2f;
 
     --sidebarWrap-bg: #2e2e30;
-    --sidebar-item-hover: #444;
     --sidebar-title-border-color: #444;
 
     --calendar-text-color: #000;
@@ -101,32 +125,3 @@
     --postSignature-primary: #06aae0;
     --postSignature-bg: #444444;
 }
-
-// :root {
-//     --blue: #007bff;
-//     --indigo: #6610f2;
-//     --purple: #6f42c1;
-//     --pink: #e83e8c;
-//     --red: #dc3545;
-//     --orange: #fd7e14;
-//     --yellow: #ffc107;
-//     --green: #28a745;
-//     --teal: #20c997;
-//     --cyan: #17a2b8;
-//     --white: #fff;
-//     --gray: #6c757d;
-//     --gray-dark: #343a40;
-//     --primary: #007bff;
-//     --secondary: #6c757d;
-//     --success: #28a745;
-//     --info: #17a2b8;
-//     --warning: #ffc107;
-//     --danger: #dc3545;
-//     --light: #f8f9fa;
-//     --dark: #343a40;
-//     --breakpoint-xs: 0;
-//     --breakpoint-sm: 576px;
-//     --breakpoint-md: 768px;
-//     --breakpoint-lg: 992px;
-//     --breakpoint-xl: 1200px;
-// }
