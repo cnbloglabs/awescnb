@@ -66,795 +66,159 @@
         <!--end: header 头部 -->
 
         <div id="main">
-            <div id="mainContent">
+
+            <div id="mainContent" style="display: block;">
                 <div class="forFlow">
-
-
-
-                    <h1 class="entrylistTitle">随笔分类 - java</h1>
-
-
-
-                    <div class="pager">
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=1">上一页</a>
-
-
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=1">1</a>
-                        2
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=3">3</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=4">4</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=5">5</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=6">6</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=7">7</a>
-
-
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=3">下一页</a>
-                    </div>
-
-
-                    <div class="entrylist">
-                        <h1 class="entrylistTitle">
-
-
-
-                        </h1>
-                        <div class="entrylistDescription">
-
-                            JAVA 转型
-                        </div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/12814068.html">
-                                    <span>Dubbo（四）：服务路由的实现</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：上一篇中，我们介绍了dubbo的负载均衡实现，见识了几种常用的负载均衡算法。就单个功能而言，似乎dubbo并没有太多的突出之处。事实上，一个成功的产品不必每个地方都要打破常规。更重要的是其全局优化的架构设计，以及如何使用现有的优秀解决方案为己服务。
-                                    本篇将介绍另一种集群环境中的高可用实现：路由服务的
-                                    <a href="https://www.cnblogs.com/yougewe/p/12814068.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/12814068.html"
-                                    title="permalink">2020-05-01 17:20</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(541)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=12814068" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/12734558.html">
-                                    <span>Dubbo（三）：负载均衡实现解析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：dubbo作为分布式远程调用框架，要保证的点很多，比如：服务注册与发现、故障转移、高性能通信、负载均衡等等！
-                                    负载均衡的目的是为了特定场景下，能够将请求合理地平分到各服务实例上，以便发挥所有机器的叠加作用。主要考虑的点如：不要分配请求到挂掉的机器，性能越好的机器可以分配更多的请求。。。
-                                    一般负载均衡
-                                    <a href="https://www.cnblogs.com/yougewe/p/12734558.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/12734558.html"
-                                    title="permalink">2020-04-19 22:10</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(665)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(1)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=12734558" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/12546817.html">
-                                    <span>Redis（十二）：请求转发的实现</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：请求转发一般的原因为： 1. 该请求自身无法处理，需要转发给对应的服务器处理； 2. 为实现负载均衡，使用路由服务，选择目标实例进行转发；
-                                    在集群模式下，请求可以打到任何一台redis服务器上。然而并不是所有的服务器都会处理真正的请求，而是只有符合redis slot规则的实例才会处理真正的请求；
-                                    <a href="https://www.cnblogs.com/yougewe/p/12546817.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/12546817.html"
-                                    title="permalink">2020-03-22 16:38</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(844)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=12546817" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/12460685.html">
-                                    <span>深入理解JDBC设计模式: DriverManager 解析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：JDBC 是java中的一个数据连接技术，它提供了统一的 API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。
-                                    虽然目前JDBC已经基本被隐藏在了许多数据库框架之后，但是其底层原理从未变过。所以，多一点了解JDBC还是有意义的。 JDBC 之所以能提供统一的API，是基于对所有数
-                                    <a href="https://www.cnblogs.com/yougewe/p/12460685.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/12460685.html"
-                                    title="permalink">2020-03-11 11:08</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(771)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(1)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=12460685" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/12444375.html">
-                                    <span>Redis（十一）：哨兵模式架构设计分析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：业务最初的应用场景中，我们也许使用单机redis就可以应付业务要求，但并非一直可行。
-                                    比如单机的读写能力问题，单机的可用性问题，单机的数据安全性问题。这些都是许多互联网应用经常会遇到的问题，也基本上都有一套理论去解决它，只是百花齐放。
-                                    哨兵是Redis中解决高可用问题的解决方案之一，我们就一起来看看
-                                    <a href="https://www.cnblogs.com/yougewe/p/12444375.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/12444375.html"
-                                    title="permalink">2020-03-08 19:35</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(705)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=12444375" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/12267274.html">
-                                    <span>线程池技术之：ThreadPoolExecutor 源码解析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：java中的所说的线程池，一般都是围绕着 ThreadPoolExecutor 来展开的。其他的实现基本都是基于它，或者模仿它的。所以只要理解
-                                    ThreadPoolExecutor, 就相当于完全理解了线程池的精髓。 其实要理解一个东西，一般地，我们最好是要抱着自己的疑问或者理解去的。否则，往往收获
-                                    <a href="https://www.cnblogs.com/yougewe/p/12267274.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/12267274.html"
-                                    title="permalink">2020-02-05 23:25</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(477)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(1)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=12267274" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11973117.html">
-                                    <span>分布式应用监控: SkyWalking 快速接入实践</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：分布式应用，会存在各种问题。而要解决这些难题，除了要应用自己做一些监控埋点外，还应该有一些外围的系统进行主动探测，主动发现。
-                                    APM工具就是干这活的，SkyWalking 是国人开源的一款优秀的APM应用，已成为apache的顶级项目。 今天我们就来实践下 SkyWalking 下吧。
-                                    实践目标：
-                                    <a href="https://www.cnblogs.com/yougewe/p/11973117.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11973117.html"
-                                    title="permalink">2019-12-02 20:35</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(2607)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(1)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11973117" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11966515.html">
-                                    <span>RocketMQ（二）：producer客户端实践</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：MQ解耦了生产者和消费者，前提是有一个稳定强大的消息服务，我们只管与之通信即可。 所以，和MqServer通信是什么样的？难否？ 0. 发送端demo
-                                    只需要设置下 nameServer, 就可以实现发送mq消息了。简单易用，是好产品的必备特征。 具体实现过程，且让我们深入一点了解。 1. 消息发送
-                                    <a href="https://www.cnblogs.com/yougewe/p/11966515.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11966515.html"
-                                    title="permalink">2019-12-01 16:46</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(560)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11966515" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11959394.html">
-                                    <span>基于loghub的消息消费延迟监控</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：我们可以把loghub当作一个消息中间件来使用。如果能知道当前的消费进度，自然好了，否则消费情况一无所知，总是有点慌！
-                                    loghub消费分两种情况，一是普通消费，二是消费组消费； 消费组消费，loghub服务端会记录消费情况，这时可以通过调用服务端API进行偏移信息查询。
-                                    普通消费则不同，需要自行维
-                                    <a href="https://www.cnblogs.com/yougewe/p/11959394.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11959394.html"
-                                    title="permalink">2019-11-29 18:06</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(376)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11959394" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11955825.html">
-                                    <span>RocketMQ（一）：推拉消费模型客户端实践</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：消息中间件是为解耦生产者和消费者的目的，三大服务点：解耦、异步、削峰。
-                                    现在的的互联网系统中，mq已经必备基础设施了，我们已明显感觉它的必要性与强大。然而，它的本质是啥？存储转发系统罢了！
-                                    MQ有很多成熟产品，以RocketMQ作为切入点，成本较低。MQ主要角色为：生产者、消费者、消息服务端。 本文
-                                    <a href="https://www.cnblogs.com/yougewe/p/11955825.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11955825.html"
-                                    title="permalink">2019-11-29 09:39</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(575)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11955825" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11922194.html">
-                                    <span>同步锁基本原理与实现</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：为充分利用机器性能，人们发明了多线程。但同时带来了线程安全问题，于是人们又发明了同步锁。
-                                    这个问题自然人人知道，但你真的了解同步锁吗？还是说你会用其中的上锁与解锁功能？ 今天我们就一起来深入看同步锁的原理和实现吧！ 一、同步锁的职责
-                                    同步锁的职责可以说就一个，限制资源的使用（线程安全从属）。 它一般
-                                    <a href="https://www.cnblogs.com/yougewe/p/11922194.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11922194.html"
-                                    title="permalink">2019-11-24 13:55</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(2450)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11922194" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11909734.html">
-                                    <span>ZooKeeper（六）：watch机制的原理与实现</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：因为ZK有watch机制，可以随时发现一些数据的变化，从而达到数据的及时性。 ZK的所有读操作都可以设置watch监视点: getData,
-                                    getChildren, exists. 写操作则是不能设置监视点的。 监视有两种类型：数据监视点和子节点监视点。创建、删除或者设置znode都会触发这些监视
-                                    <a href="https://www.cnblogs.com/yougewe/p/11909734.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11909734.html"
-                                    title="permalink">2019-11-22 09:35</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(2605)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11909734" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11891405.html">
-                                    <span>Prometheus监控有所思：多标签埋点及Mbean</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：使用 grafana+prometheus+jmx
-                                    作为普通的监控手段，是比较有用的。我之前的文章介绍了相应的实现办法。https://www.cnblogs.com/yougewe/p/11140129.html
-                                    但是，按照之前的实现，我们更多的只能是监控 单值型的数据，如请求量，tps 等等，对
-                                    <a href="https://www.cnblogs.com/yougewe/p/11891405.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11891405.html"
-                                    title="permalink">2019-11-19 18:34</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(1750)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11891405" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11807390.html">
-                                    <span>ZooKeeper（五）：事务处理之更新数据逻辑解析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：通过前些文章，我们已经完全从整体架构和数据接入方面理解了ZK的前情工作。接下来，我们就来看ZK的正式工作吧。 本文以 setData /a data
-                                    这个命令作为出发点，来观察zk是如何处理来自客户端的数据更新操作的吧！ 首先，我们需要明确各个角色所担任的工作，然后才能更好的理解其工作流程。我们以
-                                    <a href="https://www.cnblogs.com/yougewe/p/11807390.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11807390.html"
-                                    title="permalink">2019-11-06 19:01</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(606)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11807390" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11758005.html">
-                                    <span>ZooKeeper（四）：从TCP数据流到zk内部处理包的转换</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：通过前面几篇文章，我们可以从整体上看到zk是如何处理网络数据的宏观架构。 本文我们从细节着手，看一下一个tcp的包是如何转换到内部的数据流处理的。
-                                    一、监听用户请求socket 基于NIO的端口监听，获取tcp数据流。 二、从连接中解析数据 接上一个nio提交过来的连接后，由 SelectorThr
-                                    <a href="https://www.cnblogs.com/yougewe/p/11758005.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11758005.html"
-                                    title="permalink">2019-10-29 12:07</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(448)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11758005" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11739729.html">
-                                    <span>ZooKeeper（三）：请求处理链路的创建过程解析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：我们知道，zk就是一个个处理链组成的。 但是，这些处理链是在什么创建的呢？ ZooKeeper 中有三种角色的服务节点存在: Leader, Follower,
-                                    Observer . 而每个服务节点的承担的任务是不一样的，所以处理任务的逻辑是不一样的。而在ZK中，则是巧妙的通过责任链模式将各自节点的
-                                    <a href="https://www.cnblogs.com/yougewe/p/11739729.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11739729.html"
-                                    title="permalink">2019-10-25 18:54</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(675)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11739729" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11728073.html">
-                                    <span>ZooKeeper（二）：多个端口监听的建立逻辑解析</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：ZooKeeper 作为优秀的分布系统协调组件，值得一探究竟。它的启动类主要为： 1. 单机版的zk 使用 ZooKeeperServerMain 2.
-                                    集群版的zk 使用 QuorumPeerMain 与用户端各服务端之间存在着各种通信！当然主要分为三个: 1. 客户端与zk的通信; 2. 各zk
-                                    <a href="https://www.cnblogs.com/yougewe/p/11728073.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11728073.html"
-                                    title="permalink">2019-10-23 18:50</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(1198)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11728073" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11690524.html">
-                                    <span>CyclicBarrier 是如何做到等待多线程到达一起执行的？</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：我们有些场景，是需要使用 多线各一起执行某些操作的，比如进行并发测试，比如进行多线程数据汇总。 自然，我们可以使用 CountDownLatch,
-                                    CyclicBarrier, 以及多个 Thread.join()。 虽然最终的效果都差不多，但实际却各有千秋。我们此处主要看 CyclicBarrie
-                                    <a href="https://www.cnblogs.com/yougewe/p/11690524.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11690524.html"
-                                    title="permalink">2019-10-17 10:37</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(543)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11690524" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11666284.html">
-                                    <span>FutureTask是怎样获取到异步执行结果的？</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：所谓异步任务，就是不在当前线程中进行执行，而是另外起一个线程让其执行。那么当前线程如果想拿到其执行结果，该怎么办呢？
-                                    如果我们使用一个公共变量作为结果容器，两个线程共用这个值，那么应该是可以拿到结果的，但是这样一来，对业务就会造成侵入干扰了，因为你始终得考虑将这个共享变量传入到这个异步线程中去且要维
-                                    <a href="https://www.cnblogs.com/yougewe/p/11666284.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11666284.html"
-                                    title="permalink">2019-10-13 13:59</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(1852)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(1)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11666284" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <div class="postSeparator"></div>
-                        <div class="entrylistItem">
-                            <div class="entrylistPosttitle">
-
-                                <a class="entrylistItemTitle" href="https://www.cnblogs.com/yougewe/p/11573911.html">
-                                    <span>如何基于String实现同步锁？</span>
-
-
-
-                                </a>
-
-                            </div>
-                            <div class="entrylistPostSummary">
-
-                                <div class="c_b_p_desc">
-                                    摘要：在某些时候，我们可能想基于字符串做一些事情，比如:针对同一用户的并发同步操作，使用锁字符串的方式实现比较合理。因为只有在相同字符串的情况下，并发操作才是不被允许的。而如果我们不分青红皂白直接全部加锁，那么整体性能就下降得厉害了。
-                                    因为string的多样性，看起来string锁是天然比分段锁之类的高级
-                                    <a href="https://www.cnblogs.com/yougewe/p/11573911.html"
-                                        class="c_b_p_desc_readmore">阅读全文</a>
-                                </div>
-
-
-                            </div>
-                            <div class="entrylistItemPostDesc">
-
-                                <!--Post Desc-->
-                                posted @ <a href="https://www.cnblogs.com/yougewe/p/11573911.html"
-                                    title="permalink">2019-09-23 18:24</a><text> </text>
-                                等你归去来
-                                <span class="post-view-count">阅读(698)</span>
-                                <span class="post-comment-count">评论(0)</span>
-                                <span class="post-digg-count">推荐(0)</span> <a
-                                    href="https://i.cnblogs.com/EditPosts.aspx?postid=11573911" rel="nofollow">编辑</a>
-
-                            </div>
-                        </div>
-                        <p>
-
-
-
-
-                        </p>
-                    </div>
-
-
-                    <div class="pager">
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=1">上一页</a>
-
-
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=1">1</a>
-                        2
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=3">3</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=4">4</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=5">5</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=6">6</a>
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=7">7</a>
-
-
-                        <a href="https://www.cnblogs.com/yougewe/category/923459.html?page=3">下一页</a>
-                    </div>
-                </div>
-                <!--end: forFlow -->
+                    
+            
+            
+            <h1 class="entrylistTitle">随笔分类 - Vue</h1>
+            
+            
+            
+            <div class="pager">
+                <a href="https://www.cnblogs.com/guangzan/category/1386380.html?page=1">上一页</a>
+                
+                
+                    <a href="https://www.cnblogs.com/guangzan/category/1386380.html?page=1">1</a>
+                2
+                
+                
+                
             </div>
+            
+            
+            <div class="entrylist">
+                <h1 class="entrylistTitle">
+                    
+            
+            
+                </h1>
+                <div class="entrylistDescription">
+                    
+            
+                </div>
+                        <div class="entrylistItem">
+                            <div class="entrylistPosttitle">
+                                
+            <a class="entrylistItemTitle" href="https://www.cnblogs.com/guangzan/p/11268930.html">
+                <span>Vue Prop属性（父to子）</span>
+                
+            
+            
+            
+            </a>
+            
+                            </div>
+                            <div class="entrylistPostSummary">
+                                
+            <div class="c_b_p_desc">
+            摘要：通过Prop向子组件传递数据 第一步父组件中 解释：把父组件中的data中的 通过 传递给子组件 子组件中 解释：父组件中传过来的值可以直接使用了 Prop类型 以字符串数组形式列出的 prop： 以对象形式列出 prop，这些属性的名称和值分别是 prop 各自的名称和类型： 推荐使用第二种 传递
+                    <a href="https://www.cnblogs.com/guangzan/p/11268930.html" class="c_b_p_desc_readmore">阅读全文</a>
+            </div>
+            
+            
+                            </div>
+                            <div class="entrylistItemPostDesc">
+                                
+            <!--Post Desc-->
+            posted @ <a href="https://www.cnblogs.com/guangzan/p/11268930.html" title="permalink">2019-07-30 11:21</a><text> </text>
+            guangzan
+                    <span data-post-id="11268930" class="post-view-count">阅读(3774)</span> 
+                    <span data-post-id="11268930" class="post-comment-count">评论(0)</span> 
+                    <span data-post-id="11268930" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=11268930" rel="nofollow">编辑</a>
+            
+                            </div>
+                        </div>
+                            <div class="postSeparator"></div>
+                        <div class="entrylistItem">
+                            <div class="entrylistPosttitle">
+                                
+            <a class="entrylistItemTitle" href="https://www.cnblogs.com/guangzan/p/11268909.html">
+                <span>Vue组件全局/局部注册</span>
+                
+            
+            
+            
+            </a>
+            
+                            </div>
+                            <div class="entrylistPostSummary">
+                                
+            <div class="c_b_p_desc">
+            摘要：全局注册 main.js中创建 使用 局部注册 直接在 .vue 文件中使用 第一种方式 通过一个普通的 JavaScript 对象来定义组件： 然后在 components 选项中定义你想要使用的组件： 如果你希望 ComponentA 在 ComponentB 中可用，则你需要这样写： 第二种方
+                    <a href="https://www.cnblogs.com/guangzan/p/11268909.html" class="c_b_p_desc_readmore">阅读全文</a>
+            </div>
+            
+            
+                            </div>
+                            <div class="entrylistItemPostDesc">
+                                
+            <!--Post Desc-->
+            posted @ <a href="https://www.cnblogs.com/guangzan/p/11268909.html" title="permalink">2019-07-30 11:19</a><text> </text>
+            guangzan
+                    <span data-post-id="11268909" class="post-view-count">阅读(1345)</span> 
+                    <span data-post-id="11268909" class="post-comment-count">评论(0)</span> 
+                    <span data-post-id="11268909" class="post-digg-count">推荐(1)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=11268909" rel="nofollow">编辑</a>
+            
+                            </div>
+                        </div>
+                            <div class="postSeparator"></div>
+                        <div class="entrylistItem">
+                            <div class="entrylistPosttitle">
+                                
+            <a class="entrylistItemTitle" href="https://www.cnblogs.com/guangzan/p/11268900.html">
+                <span>vue实现简单的点击切换颜色</span>
+                
+            
+            
+            
+            </a>
+            
+                            </div>
+                            <div class="entrylistPostSummary">
+                                
+            <div class="c_b_p_desc">
+            摘要：&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;changeColor&lt;/title&gt; &lt;script src="https://unpkg.com/vue/dist/vue.js"&gt;&lt;/script&gt; &lt;/head&gt; &lt;sty
+                    <a href="https://www.cnblogs.com/guangzan/p/11268900.html" class="c_b_p_desc_readmore">阅读全文</a>
+            </div>
+            
+            
+                            </div>
+                            <div class="entrylistItemPostDesc">
+                                
+            <!--Post Desc-->
+            posted @ <a href="https://www.cnblogs.com/guangzan/p/11268900.html" title="permalink">2019-07-30 11:18</a><text> </text>
+            guangzan
+                    <span data-post-id="11268900" class="post-view-count">阅读(7318)</span> 
+                    <span data-post-id="11268900" class="post-comment-count">评论(0)</span> 
+                    <span data-post-id="11268900" class="post-digg-count">推荐(3)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=11268900" rel="nofollow">编辑</a>
+            
+                            </div>
+                        </div>
+                <p>
+                    
+            
+            
+            
+                </p>
+            </div>
+            
+            
+            <div class="pager">
+                <a href="https://www.cnblogs.com/guangzan/category/1386380.html?page=1">上一页</a>
+                
+                
+                    <a href="https://www.cnblogs.com/guangzan/category/1386380.html?page=1">1</a>
+                2
+                
+                
+                
+            </div>
+            
+                </div><!--end: forFlow -->
+                </div>
+
             <!--end: mainContent 主体内容容器-->
 
             <div id="sideBar">
