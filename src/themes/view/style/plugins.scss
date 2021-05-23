@@ -46,3 +46,9 @@ $signature: (
 @import 'plugins/toolMenu/index.scss';
 @import 'plugins/background/index.scss';
 @import 'plugins/mode/index.scss';
+
+.custom-toolbar {
+    .toolbar-item i::before {
+        font-weight: 700;
+    }
+}

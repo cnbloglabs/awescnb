@@ -1,11 +1,11 @@
 module.exports = {
-    themeName: 'demo',
-    template: 'post',
+    themeName: 'view',
+    template: 'index',
     eslint: true,
     sourceMap: true,
     openBrowser: true,
     openAnalyzer: false,
-    cssExtract: false,
+    cssExtract: true,
 }
 
 // OPTIONS
