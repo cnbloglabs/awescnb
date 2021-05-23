@@ -129,6 +129,14 @@ body {
     font-size: 13px;
 }
 
+#myposts {
+    .PostList {
+        .postDesc2 {
+            font-size: 0;
+        }
+    }
+}
+
 .entrylistItemPostDesc,
 .postDesc2 {
     display: flex;
