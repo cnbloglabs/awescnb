@@ -31,7 +31,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    color: var(--body-text-color);
+    color: var(--color-basic-800);
     font-size: 1em;
     line-height: 1.5;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
@@ -60,7 +60,7 @@ body {
     #topics .postDesc {
         text-align: center;
         padding: 0;
-        color: var(--postDesc-color);
+        color: var(--color-basic-700);
     }
 }
 
@@ -76,8 +76,8 @@ body {
 
 #mainContent {
     padding: 2em;
-    border-left: 1px solid var(--mainContent-border-color);
-    background-color: var(--mainContent-bg);
+    border-left: 1px solid var(--color-basic-300);
+    background-color: var(--color-basic-50);
     flex: 1;
 }
 
@@ -110,8 +110,8 @@ body {
 .custom-gallery {
     h3 {
         padding: 1rem;
-        border-bottom: 1px solid var(--title-border-color);
-        background-color: var(--title-bg);
+        border-bottom: 1px solid var(--color-basic-300);
+        background-color: var(--color-basic-50);
         font-size: 16px;
     }
 }
@@ -144,7 +144,7 @@ body {
         margin: 0 10px;
         padding: 4px 16px;
         border: none;
-        background-color: var(--pager-btn-bg);
+        background-color: var(--color-basic-75);
         color: inherit;
         border-radius: 2px;
     }
@@ -152,7 +152,7 @@ body {
 #nav_next_page {
     a {
         padding: 5px 10px;
-        background-color: var(--pager-btn-bg);
+        background-color: var(--color-basic-75);
         font-size: 14px;
     }
 }
@@ -169,7 +169,7 @@ body {
 .sidebar-block {
     margin-bottom: 4px;
     padding: 12px;
-    background-color: var(--sidebarWrap-bg);
+    background-color: var(--color-basic-50);
 }
 
 .sidebar-block {
@@ -177,7 +177,7 @@ body {
         padding-bottom: 8px;
         font-weight: normal;
         font-size: 14px;
-        border-bottom: 1px solid var(--sidebar-title-border-color);
+        border-bottom: 1px solid var(--color-basic-200);
     }
 
     ul {
@@ -210,7 +210,7 @@ body {
     h3 {
         padding-bottom: 8px;
         font-weight: normal;
-        border-bottom: 1px solid var(--sidebar-title-border-color);
+        border-bottom: 1px solid var(--color-basic-200);
     }
     #p_b_follow {
         margin-top: 8px;
@@ -253,7 +253,7 @@ body {
         // }
         .CalOtherMonthDay {
             color: #cacaca;
-            background-color: var(--tags-bg);
+            background-color: var(--color-basic-100);
         }
         td {
             padding: 0.3em 0.6em;
@@ -293,7 +293,7 @@ body {
         padding: 8px 0;
         text-align: center;
         font-size: 13px;
-        background-color: var(--tags-bg);
+        background-color: var(--color-basic-100);
         border-radius: 2px;
         &:hover {
             color: var(--themeColor);
@@ -324,7 +324,7 @@ body {
     li {
         margin: 0 4px 4px 0;
         padding: 4px 12px;
-        background-color: var(--tags-bg);
+        background-color: var(--color-basic-100);
         font-size: 13px;
         border-radius: 2px;
     }
@@ -342,42 +342,13 @@ body {
     }
     .recent_comment_body {
         padding: 8px;
-        background-color: var(--tags-bg);
+        background-color: var(--color-basic-100);
         border-radius: 3px;
         font-size: 13px;
     }
 }
 
 // sidebar end
-
-// #myposts {
-//     padding: 1rem 2rem;
-//     margin-left: 0;
-//     display: flex;
-//     flex-wrap: wrap;
-//     .PostList {
-//         padding: 0.5rem;
-//         margin-bottom: 1rem;
-//         background-color: var(--postList-bg);
-//         border-radius: 3px;
-//         width: 30%;
-
-//         .postTitl2 {
-//             font-size: 1rem;
-//             font-weight: normal;
-//         }
-
-//         .postDesc2 {
-//             margin-bottom: 0;
-//             padding-top: 0;
-//             color: var(--postDesc-color);
-//         }
-
-//         .postText2 {
-//             display: none;
-//         }
-//     }
-// }
 
 // 首页文章列表
 
@@ -392,9 +363,9 @@ body {
     .postTitle {
         position: relative;
         padding: 16px 16px 0 16px;
-        border-top: var(--card-border);
-        border-left: var(--card-border);
-        border-right: var(--card-border);
+        border-top: var(--color-basic-300);
+        border-left: var(--color-basic-300);
+        border-right: var(--color-basic-300);
         font-size: 20px;
         font-weight: 700;
         border-radius: 4px 4px 0 0;
@@ -406,15 +377,15 @@ body {
             right: 0;
             width: 100%;
             height: 4px;
-            background-color: var(--mainContent-bg);
+            background-color: var(--color-basic-50);
         }
         &:hover {
             color: var(--themeColor);
         }
     }
     .postCon {
-        border-left: var(--card-border);
-        border-right: var(--card-border);
+        border-left: var(--color-basic-300);
+        border-right: var(--color-basic-300);
         padding: 8px 16px;
         .c_b_p_desc {
             line-height: 1.8em;
@@ -439,9 +410,9 @@ body {
     }
     .postDesc {
         display: flex;
-        border-left: var(--card-border);
-        border-right: var(--card-border);
-        border-bottom: var(--card-border);
+        border-left: var(--color-basic-300);
+        border-right: var(--color-basic-300);
+        border-bottom: var(--color-basic-300);
         padding: 0 16px 16px 16px;
         border-radius: 0 0 4px 4px;
         margin: 0 0 20px 0;
@@ -516,9 +487,9 @@ body {
     .entrylistTitle,
     .PostListTitle {
         padding: 1rem 1rem;
-        border-bottom: 1px solid var(--title-border-color);
+        border-bottom: 1px solid var(--color-basic-300);
         font-weight: 700;
-        background-color: var(--title-bg);
+        background-color: var(--color-basic-50);
         &::before {
             content: '\f02b';
         }
@@ -549,7 +520,7 @@ body {
         td {
             margin: 0.5rem;
             border-radius: 3px;
-            background-color: var(--tags-bg);
+            background-color: var(--color-basic-100);
         }
     }
 }
@@ -724,8 +695,8 @@ body {
 
 .feedback_area_title {
     padding: 7.56px 10.8px;
-    border: 1px solid var(--area-border-color);
-    background-color: var(--areaTitle-bg);
+    border: 1px solid var(--color-basic-400);
+    background-color: var(--color-basic-100);
     border-radius: 2px 2px 0 0;
     font-size: 12px;
     font-weight: 700;
@@ -736,12 +707,12 @@ body {
 }
 
 .feedbackItem {
-    border-left: 1px solid var(--area-border-color);
-    border-right: 1px solid var(--area-border-color);
+    border-left: 1px solid var(--color-basic-400);
+    border-right: 1px solid var(--color-basic-400);
     padding: 17.982px 10.8px;
 
     &:nth-last-child(2) {
-        border-bottom: 1px solid var(--area-border-color);
+        border-bottom: 1px solid var(--color-basic-400);
     }
 
     .feedbackListSubtitle {
@@ -786,7 +757,7 @@ body {
             bottom: 12px;
             margin-left: 10px;
             padding: 0 10.8px;
-            background-color: var(--tags-bg);
+            background-color: var(--color-basic-100);
             border-radius: 3px;
             font-size: 14px;
             max-width: 540px;
@@ -800,7 +771,7 @@ body {
                 top: 5.4px;
                 width: 12.258px;
                 height: 0;
-                border-right: solid 12.96px var(--tags-bg);
+                border-right: solid 12.96px var(--color-basic-100);
                 border-top: solid 3.24px rgba(0, 0, 0, 0);
                 border-bottom: solid 7.182px rgba(0, 0, 0, 0);
             }
@@ -848,7 +819,7 @@ body {
         top: 5.4px;
         width: 12.258px;
         height: 0;
-        border-left: solid 12.96px var(--tags-bg);
+        border-left: solid 12.96px var(--color-basic-100);
         border-top: solid 3.24px rgba(0, 0, 0, 0);
         border-bottom: solid 7.182px rgba(0, 0, 0, 0);
     }
@@ -894,7 +865,7 @@ body {
     }
     #comment_form_container {
         position: relative;
-        border: 1px solid var(--area-border-color);
+        border: 1px solid var(--color-basic-400);
         border-radius: 3px;
         & > p:nth-of-type(3),
         & > a:first-of-type {
@@ -909,8 +880,8 @@ body {
             background: none;
             margin-bottom: 0;
             padding: 7.56px 10.8px;
-            border-bottom: 1px solid var(--area-border-color);
-            background-color: var(--areaTitle-bg);
+            border-bottom: 1px solid var(--color-basic-400);
+            background-color: var(--color-basic-100);
             border-radius: 2px 2px 0 0;
             font-size: 12px;
             font-weight: 700;
@@ -928,7 +899,7 @@ body {
             background: none;
             border: none;
             .commentbox_title {
-                border-bottom-color: var(--area-border-color);
+                border-bottom-color: var(--color-basic-400);
             }
             .commentbox_title_left {
                 display: none;
@@ -944,7 +915,7 @@ body {
                 color: var(--text-5);
                 background: none;
                 font-size: 16px;
-                border-bottom: 1px dashed var(--area-border-color);
+                border-bottom: 1px dashed var(--color-basic-400);
                 &:hover {
                     border-bottom-color: var(--themeColor);
                 }
@@ -997,7 +968,7 @@ body {
     a {
         border-radius: 3px;
         margin-right: 0;
-        background-color: var(--ads-bg);
+        background-color: var(--color-basic-100);
         user-select: none;
         @include text-over();
         &:not(:nth-child(1)) {
@@ -1039,7 +1010,7 @@ body {
     li {
         font-size: 0.85em;
         cursor: pointer;
-        color: rgb(85, 85, 85);
+        color: var(--color-basic-600);
         display: block;
         margin-left: 0.75em;
         margin-top: 0.8em;
@@ -1053,7 +1024,7 @@ body {
             width: 5px;
             height: 5px;
             display: inline-block;
-            border: 1px solid rgb(170, 170, 170);
+            border: 1px solid var(--color-basic-600);
             margin-right: 6px;
         }
         &.catalog-active {

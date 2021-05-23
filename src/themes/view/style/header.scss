@@ -7,8 +7,8 @@
     align-items: center;
     user-select: none;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    background-color: var(--header-bg);
-    border-bottom: 1px solid var(--header-border-color);
+    background-color: var(--color-basic-50);
+    border-bottom: 1px solid var(--color-basic-200);
 }
 
 #blogTitle {
@@ -31,7 +31,7 @@
         align-items: center;
         font-size: 22px;
         font-weight: bolder;
-        color: var(--header-nickname-color);
+        color: var(--color-basic-800);
         a {
             font-family: 'Segoe Print';
         }
@@ -72,7 +72,7 @@
             border-radius: 4px;
             flex-grow: 0;
             flex-shrink: 0;
-            color: var(--header-text-color);
+            color: var(--color-basic-800);
             line-height: 1.5;
             padding: 0.5rem 0.75rem;
             position: relative;
@@ -80,7 +80,7 @@
             white-space: nowrap;
             &:hover {
                 color: var(--themeColor);
-                background-color: var(--header-item-hover-bg);
+                background-color: var(--color-basic-100);
             }
         }
         #blog_nav_sitehome::before {
@@ -154,9 +154,9 @@
 .custom-searchbar {
     margin: 0 1rem;
     height: 3em;
-    background-color: var(--searchbar-bg);
-    border: solid 1px var(--searchbar-border-color);
-    color: var(--searchbar-text-color);
+    background-color: var(--color-basic-50);
+    border: solid 1px var(--color-basic-300);
+    color: var(--color-basic-800);
     outline: none;
     font-size: 100%;
     padding: 0 0.5rem;

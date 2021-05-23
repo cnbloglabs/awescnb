@@ -22,9 +22,9 @@
 
 pre,
 code {
-    @include scrollbar-simple(var(--scrollbar-bg));
+    @include scrollbar-simple(var(--color-basic-300));
 }
 
 #catalog {
-    @include scrollbar-simple(var(--scrollbar-bg));
+    @include scrollbar-simple(var(--color-basic-300));
 }
