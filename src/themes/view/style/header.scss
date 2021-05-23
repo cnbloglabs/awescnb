@@ -1,7 +1,3 @@
-#sidebar_search {
-    display: none;
-}
-
 #header {
     position: sticky;
     top: 0;
@@ -83,6 +79,7 @@
             cursor: pointer;
             white-space: nowrap;
             &:hover {
+                color: var(--themeColor);
                 background-color: var(--header-item-hover-bg);
             }
         }
@@ -169,10 +166,8 @@
     font-size: 14px;
     &:focus {
         width: 220px;
-        // border-width: 2px;
         border-color: var(--themeColor);
-        box-shadow: 0 2px 4px var(--theme-primary-2),
-            0 0 0 3px var(--theme-primary-2);
+        box-shadow: 2px 2px 0 var(--themeColor);
         transition: all ease-out 0.5s;
     }
     // &::-webkit-search-decoration,

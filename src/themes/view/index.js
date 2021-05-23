@@ -1,6 +1,7 @@
 import './style/index.scss'
 import { createTheme } from 'awescnb'
 import build from './build'
+import { isPostDetailsPage } from 'utils/cnblog'
 import {
     footer,
     copyCode,
@@ -15,6 +16,10 @@ import {
 } from 'plugins/index'
 
 export const theme = createTheme()
+
+if (!isPostDetailsPage()) {
+    $('#mainContent')[0].style.display = 'block'
+}
 
 build()
 
@@ -53,7 +58,7 @@ theme
         },
     )
     .use(mode)
-    .use(themeColor, { color: '#3273DC' })
+    .use(themeColor, { color: '#323EBE' })
     .use(
         catalog,
         {},

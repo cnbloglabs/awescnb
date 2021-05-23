@@ -3,7 +3,7 @@
     --header-bg: #fff;
     --header-text-color: #4a4a4a;
     --header-border-color: #cfdee9;
-    --header-item-hover-bg: #f3f3f3;
+    --header-item-hover-bg: #f8f8f8;
     --header-nickname-color: #4a4a4a;
 
     --searchbar-border-color: #ccc;
@@ -34,12 +34,15 @@
     --menu-bg: #fff;
 
     --scrollbar-bg: #d8d8d8;
-    --ads-bg: #eee;
+    --ads-bg: #f5f7fa;
 
     --blockquote-bg: #f2f7fb;
     --blockquote-border-color: #cbcbcb;
     --table-border-color: rgb(192, 192, 192);
+
     --card-bg: #fafafa;
+    --card-border: 2px solid #cbcbcb;
+
     --footer-bg: #333;
 
     --postSignature-primary: #06aae0;
@@ -60,7 +63,7 @@
 
     --body-text-color: #bababa;
 
-    --main-bg: rgb(53, 52, 52);
+    --main-bg: #202023;
     --mainContent-border-color: #444;
 
     --title-bg: #2c2c2f;
@@ -71,7 +74,7 @@
     --pager-btn-bg: #444;
     --tags-bg: #2c2c2f;
 
-    --sidebarWrap-bg: #202023;
+    --sidebarWrap-bg: #2e2e30;
     --sidebar-item-hover: #444;
     --sidebar-title-border-color: #444;
 
@@ -89,7 +92,10 @@
     --blockquote-bg: #444;
     --blockquote-border-color: #5e5e60;
     --table-border-color: #444;
+
+    --card-border: 2px solid #5e5e60;
     --card-bg: #353538;
+
     --footer-bg: #232323;
 
     --postSignature-primary: #06aae0;

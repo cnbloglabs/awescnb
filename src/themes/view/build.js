@@ -1,4 +1,3 @@
-import './index.scss'
 import { getGithubOptions } from 'options/extra'
 import { avatar } from 'constants/cnblog'
 

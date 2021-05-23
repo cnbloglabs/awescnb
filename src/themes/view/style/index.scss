@@ -1,16 +1,16 @@
+@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
 @import 'style/reset.scss';
 @import 'style/hideAds.scss';
 @import './variables.scss';
 @import './tools.scss';
 @import './scroll.scss';
 @import './animate.scss';
-@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css);
+@import './header.scss';
 
 *::before,
 *::after {
     font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
     margin-right: 0.5em;
-    font-weight: bold;
 }
 
 *::before {
@@ -81,32 +81,19 @@ body {
     flex: 1;
 }
 
-.dayTitle {
-    display: none;
-}
-.postTitl2,
-.entrylistPosttitle {
-    font-weight: 600;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding-bottom: 0.5rem;
-    &::before {
-        content: '\f15c';
-        font-weight: normal;
-    }
-}
-.entrylistPostSummary,
-.postCon {
-    color: var(--postCon-color);
-    font-size: 14px;
-}
-.postDesc2,
-.entrylistItemPostDesc,
-.postDesc {
-    padding-top: 0.5rem;
-}
+// .postTitl2,
+// .entrylistPosttitle {
+//     font-weight: 600;
+//     width: 100%;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+//     padding-bottom: 0.5rem;
+//     &::before {
+//         content: '\f15c';
+//         font-weight: normal;
+//     }
+// }
 
 // 相册 start
 
@@ -148,9 +135,8 @@ body {
 
 .pager {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 140px;
     width: 100%;
     border-radius: 3px;
     color: inherit;
@@ -174,8 +160,8 @@ body {
 // sidebar start
 
 #sideBar {
-    margin: 4px;
-    width: 260px;
+    margin: 8px 8px 0 16px;
+    width: 300px;
 }
 
 #blog-calendar,
@@ -219,64 +205,13 @@ body {
     }
 }
 
-// 侧边栏 - 日历
-#blog-calendar {
-    #blogCalendar {
-        table,
-        tbody,
-        tr,
-        td {
-            display: block;
-        }
-        tr {
-            &:nth-child(1) {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                & > td:first-of-type {
-                    width: 100%;
-                    td {
-                        width: auto;
-                    }
-                }
-                .CalNextPrev {
-                    a {
-                        color: var(--calendar-text-color);
-                        font-weight: 700;
-                    }
-                }
-            }
-            &:nth-child(2) {
-                padding: 0 3.24px;
-            }
-            &:not(:nth-child(1)) {
-                display: flex;
-                justify-content: space-between;
-                td {
-                    @include center(all);
-                    width: 21.6px;
-                    height: 21.6px;
-                }
-            }
-
-            th,
-            td {
-                padding: 0.2rem;
-            }
-        }
-        u {
-            color: #00a1d6;
-        }
-        .CalTodayDay {
-            background-color: var(--tags-bg);
-            border-radius: 2px;
-            font-size: 0.7em;
-        }
-    }
-}
-
 // 侧边栏 - 公告
 #sidebar_news {
+    h3 {
+        padding-bottom: 8px;
+        font-weight: normal;
+        border-bottom: 1px solid var(--sidebar-title-border-color);
+    }
     #p_b_follow {
         margin-top: 8px;
         a {
@@ -291,6 +226,58 @@ body {
             }
         }
     }
+}
+
+// 侧边栏 - 日历
+#blog-calendar {
+    #blogCalendar {
+        .CalTitle {
+            .CalNextPrev {
+                padding: 0;
+                text-align: left;
+            }
+            .CalNextPrev[align='right'] {
+                padding: 0;
+                text-align: right;
+            }
+        }
+
+        .CalDayHeader {
+            color: var(--themeColor);
+            // font-weight: normal;
+        }
+        .CalTodayDay {
+            color: var(--themeColor);
+        }
+        .CalNextPrev {
+        }
+        .CalOtherMonthDay {
+            color: #cacaca;
+            background-color: var(--tags-bg);
+        }
+        td {
+            padding: 0.3em 0.6em;
+            text-align: center;
+            font-family: Lato, sans-serif;
+        }
+        u {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: -4px;
+                width: 8px;
+                height: 4px;
+                background-color: var(--themeColor);
+            }
+        }
+    }
+}
+
+// 侧边栏 - 搜索
+#sidebar_search {
+    display: none;
 }
 
 // 侧边栏 - 常用链接
@@ -392,6 +379,126 @@ body {
 //     }
 // }
 
+// 首页文章列表
+
+.day {
+    width: 70%;
+    .dayTitle {
+        font-size: 13px;
+        color: #666;
+        font-style: italic;
+        margin: 16px;
+    }
+    .postTitle {
+        position: relative;
+        padding: 16px 16px 0 16px;
+        border-top: var(--card-border);
+        border-left: var(--card-border);
+        border-right: var(--card-border);
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 4px 4px 0 0;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: -10px;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--mainContent-bg);
+        }
+        &:hover {
+            color: var(--themeColor);
+        }
+    }
+    .postCon {
+        border-left: var(--card-border);
+        border-right: var(--card-border);
+        padding: 8px 16px;
+        .c_b_p_desc {
+            line-height: 1.8em;
+            font-size: 14px;
+        }
+        .c_b_p_desc_readmore {
+            font-weight: bold;
+            &::before,
+            &::after {
+                margin: 0;
+            }
+            &::before {
+                content: '【';
+            }
+            &::after {
+                content: '】';
+            }
+            &:hover {
+                color: var(--themeColor);
+            }
+        }
+    }
+    .postDesc {
+        display: flex;
+        border-left: var(--card-border);
+        border-right: var(--card-border);
+        border-bottom: var(--card-border);
+        padding: 0 16px 16px 16px;
+        border-radius: 0 0 4px 4px;
+        margin: 0 0 20px 0;
+        color: #999;
+        .post-digg-count::before {
+            content: '\f004';
+        }
+        .post-comment-count::before {
+            content: '\f27a';
+        }
+        .post-view-count::before {
+            content: '\f06e';
+        }
+        span {
+            margin: 0 8px;
+        }
+        a[rel='nofollow'] {
+            display: grid;
+            place-items: center;
+            margin-left: auto;
+            padding: 2px 8px;
+            font-size: 12px;
+            border-radius: 2px;
+            // background-color: var(--themeColor);
+            // color: #fff;
+            border: 2px solid rgb(219, 219, 219);
+            color: #666;
+            &:hover {
+                border-color: var(--themeColor);
+                color: var(--themeColor);
+            }
+        }
+    }
+    &:hover {
+        .postTitle {
+            border-color: var(--themeColor);
+            box-shadow: 4px 4px 0 var(--themeColor);
+        }
+        .postCon {
+            border-color: var(--themeColor);
+            box-shadow: 4px 0 0 var(--themeColor);
+        }
+        .postDesc {
+            border-color: var(--themeColor);
+            box-shadow: 4px 4px 0 var(--themeColor), 4px 0 0 var(--themeColor);
+        }
+    }
+}
+
+// .postTitle,
+// .postCon,
+// .postDesc {
+//     &:hover {
+
+//     }
+// }
+
 // 博文详情
 #post_detail {
     .postTitle {
@@ -402,7 +509,7 @@ body {
     }
 }
 
-// 当前标签页,随笔分类
+// 当前标签页，随笔分类
 .forFlow {
     overflow: hidden;
     #taglist_title,
@@ -920,10 +1027,6 @@ body {
     display: none;
 }
 
-@import './markdown.scss';
-@import './index.m.scss';
-@import './plugins.scss';
-
 #catalog {
     position: sticky;
     top: 6em;
@@ -983,3 +1086,7 @@ body {
         margin-left: 6em;
     }
 }
+
+@import './markdown.scss';
+@import './plugins.scss';
+@import './index.m.scss';
