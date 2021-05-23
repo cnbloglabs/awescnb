@@ -22,8 +22,22 @@
         padding: 1em;
         overflow: hidden;
     }
+
     #catalog {
         display: none;
+    }
+
+    #myposts {
+        margin-left: 0;
+        .PostList {
+            /* item */
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    .entrylistItem {
+        width: 100%;
     }
 }
 

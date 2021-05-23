@@ -13,6 +13,7 @@ import {
     highlight,
     catalog,
     themeColor,
+    imagebox,
 } from 'plugins/index'
 
 export const theme = createTheme()
@@ -25,6 +26,7 @@ build()
 
 theme
     .use(footer)
+    .use(imagebox)
     .use(copyCode)
     .use(linenumbers)
     .use(postSignature, { enable: false })

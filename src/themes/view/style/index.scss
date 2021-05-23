@@ -30,6 +30,7 @@ html {
     text-size-adjust: 100%;
     box-sizing: border-box;
 }
+
 body {
     color: var(--color-basic-800);
     font-size: 1em;
@@ -55,6 +56,16 @@ body {
     background-color: var(--main-bg);
 }
 
+#mainContent {
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: 0 2vw;
+    padding: 2em;
+    border-left: 1px solid var(--color-basic-300);
+    background-color: var(--color-basic-50);
+    flex: 1;
+}
+
 #post_detail {
     animation: content-in 0.5s ease-in 0s;
     #topics .postDesc {
@@ -64,22 +75,92 @@ body {
     }
 }
 
-#mainContent {
-    display: grid;
-    grid-template-columns: auto 300px;
-    gap: 0 2vw;
-}
-
 #comment_form {
     padding-bottom: 1.5rem;
 }
 
-#mainContent {
-    padding: 2em;
-    border-left: 1px solid var(--color-basic-300);
-    background-color: var(--color-basic-50);
-    flex: 1;
+// START 博文列表
+
+.forFlow > .pager:nth-child(2) {
+    display: none;
 }
+
+.entrylist,
+#myposts {
+    /* list */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.entrylistItem,
+.PostList {
+    /* item */
+    padding: 8px 16px;
+    border: 2px solid var(--color-basic-300);
+    border-radius: 2px;
+    width: 43%;
+    &:hover {
+        border-color: var(--themeColor);
+        box-shadow: 2px 2px 0 var(--themeColor);
+    }
+}
+
+.entrylist > .entrylistTitle {
+    margin: 0 0 8px 0;
+    width: 100%;
+}
+.entrylistDescription,
+.postSeparator {
+    display: none;
+}
+
+.entrylistPosttitle,
+.postTitl2 {
+    font-size: 18px;
+    color: var(--color-basic-800);
+    font-weight: 700;
+}
+
+.entrylistPostSummary {
+    margin: 4px 0 8px;
+    line-height: 1.8em;
+    font-size: 13px;
+}
+
+.entrylistItemPostDesc,
+.postDesc2 {
+    display: flex;
+    align-items: center;
+
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--color-basic-600);
+    font-size: 0;
+
+    span {
+        margin-right: 12px;
+        font-size: 14px;
+    }
+
+    a:last-child {
+        display: grid;
+        place-items: center;
+        margin-left: auto;
+        padding: 2px 8px;
+        font-size: 12px;
+        border-radius: 2px;
+        border: 2px solid var(--color-basic-300);
+        color: #666;
+
+        &:hover {
+            border-color: var(--themeColor);
+            color: var(--themeColor);
+        }
+    }
+}
+// END myposts 点击标签 > 文章列表
 
 // .postTitl2,
 // .entrylistPosttitle {
@@ -149,6 +230,7 @@ body {
         border-radius: 2px;
     }
 }
+
 #nav_next_page {
     a {
         padding: 5px 10px;
@@ -185,23 +267,12 @@ body {
     }
 
     li a {
-        &:hover {
-            color: var(--themeColor);
-        }
-    }
-}
-
-#sidebar_recentposts,
-#sidebar_imagecategory,
-#sidebar_postcategory,
-#sidebar_postarchive {
-    li {
-        @include text-over();
-    }
-    li a {
         display: block;
         width: 100%;
         padding: 4px 0;
+        &:hover {
+            color: var(--themeColor);
+        }
     }
 }
 
@@ -327,6 +398,10 @@ body {
         background-color: var(--color-basic-100);
         font-size: 13px;
         border-radius: 2px;
+        a {
+            display: inline;
+            width: auto;
+        }
     }
 }
 
@@ -341,6 +416,7 @@ body {
         }
     }
     .recent_comment_body {
+        margin: 8px 0;
         padding: 8px;
         background-color: var(--color-basic-100);
         border-radius: 3px;
@@ -417,15 +493,6 @@ body {
         border-radius: 0 0 4px 4px;
         margin: 0 0 20px 0;
         color: #999;
-        .post-digg-count::before {
-            content: '\f004';
-        }
-        .post-comment-count::before {
-            content: '\f27a';
-        }
-        .post-view-count::before {
-            content: '\f06e';
-        }
         span {
             margin: 0 8px;
         }
@@ -460,6 +527,16 @@ body {
     }
 }
 
+.post-digg-count::before {
+    content: '\f004';
+}
+.post-comment-count::before {
+    content: '\f27a';
+}
+.post-view-count::before {
+    content: '\f06e';
+}
+
 // .postTitle,
 // .postCon,
 // .postDesc {
@@ -482,12 +559,13 @@ body {
 .forFlow {
     overflow: hidden;
     #taglist_title,
-    .entrylistTitle,
-    .PostListTitle {
+    & > .entrylistTitle,
+    & > .PostListTitle {
         padding: 1rem 1rem;
         border-bottom: 1px solid var(--color-basic-300);
         font-weight: 700;
         background-color: var(--color-basic-50);
+
         &::before {
             content: '\f02b';
         }
@@ -516,9 +594,17 @@ body {
             flex-wrap: nowrap;
         }
         td {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0.5rem;
             border-radius: 3px;
             background-color: var(--color-basic-100);
+            border: 2px solid var(--color-basic-400);
+            cursor: pointer;
+            &:hover {
+                border-color: var(--themeColor);
+            }
         }
     }
 }
