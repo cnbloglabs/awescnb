@@ -1,15 +1,15 @@
 $postSignature: (
-    primary: var(--postSignature-primary),
-    background: var(--postSignature-bg),
+    primary: var(--themeColor),
+    background: var(--color-basic-100),
     borderRadius: 2px,
 );
 
 $dragMenu: (
-    background: var(--menu-bg),
+    background: var(--color-basic-50),
 );
 
 $footer: (
-    background: var(--footer-bg),
+    background: var(--color-basic-900),
 );
 
 // $linemubers: (
