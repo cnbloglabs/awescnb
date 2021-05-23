@@ -144,7 +144,7 @@ body {
         margin: 0 10px;
         padding: 4px 16px;
         border: none;
-        background-color: var(--color-basic-75);
+        background-color: var(--color-basic-200);
         color: inherit;
         border-radius: 2px;
     }
@@ -152,7 +152,7 @@ body {
 #nav_next_page {
     a {
         padding: 5px 10px;
-        background-color: var(--color-basic-75);
+        background-color: var(--color-basic-200);
         font-size: 14px;
     }
 }
@@ -363,9 +363,9 @@ body {
     .postTitle {
         position: relative;
         padding: 16px 16px 0 16px;
-        border-top: var(--color-basic-300);
-        border-left: var(--color-basic-300);
-        border-right: var(--color-basic-300);
+        border-top: 2px solid var(--color-basic-300);
+        border-left: 2px solid var(--color-basic-300);
+        border-right: 2px solid var(--color-basic-300);
         font-size: 20px;
         font-weight: 700;
         border-radius: 4px 4px 0 0;
@@ -384,8 +384,8 @@ body {
         }
     }
     .postCon {
-        border-left: var(--color-basic-300);
-        border-right: var(--color-basic-300);
+        border-left: 2px solid var(--color-basic-300);
+        border-right: 2px solid var(--color-basic-300);
         padding: 8px 16px;
         .c_b_p_desc {
             line-height: 1.8em;
@@ -410,9 +410,9 @@ body {
     }
     .postDesc {
         display: flex;
-        border-left: var(--color-basic-300);
-        border-right: var(--color-basic-300);
-        border-bottom: var(--color-basic-300);
+        border-left: 2px solid var(--color-basic-300);
+        border-right: 2px solid var(--color-basic-300);
+        border-bottom: 2px solid var(--color-basic-300);
         padding: 0 16px 16px 16px;
         border-radius: 0 0 4px 4px;
         margin: 0 0 20px 0;
@@ -436,9 +436,7 @@ body {
             padding: 2px 8px;
             font-size: 12px;
             border-radius: 2px;
-            // background-color: var(--themeColor);
-            // color: #fff;
-            border: 2px solid rgb(219, 219, 219);
+            border: 2px solid var(--color-basic-300);
             color: #666;
             &:hover {
                 border-color: var(--themeColor);
