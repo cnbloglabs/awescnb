@@ -1,15 +1,19 @@
 <!DOCTYPE html>
+<html lang="zh-cn">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinyMCE</title>
-    <link rel="stylesheet" href="public/libs/blog-common.min.css">
-    <script src="public/libs/jquery.min.js"></script>
-    <script src="public/libs/highlight.min.js"></script>
+     <link rel="icon" type="image/svg+xml" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../libs/blog-common.min.css">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/highlight.min.js"></script>
+    <%- injectScript %>
 </head>
+
 <body>
     <div id="home">
-
         <div id="header">
             <div id="blogTitle">
                 <a id="lnkBlogLogo" href="https://www.cnblogs.com/guangzanassistant/"><img id="blogLogo"
@@ -21,49 +25,39 @@
             </div>
             <div id="navigator">
                 <ul id="navList">
-                    <li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-                            博客园</a>
+                    <li>
+                        <a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a>
                     </li>
                     <li>
-                        <a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/guangzanassistant/">
-                            首页</a>
+                        <a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/guangzanassistant/">首页</a>
                     </li>
                     <li>
-
-                        <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-                            新随笔</a>
+                        <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a>
                     </li>
                     <li>
                         <a id="blog_nav_contact" class="menu"
-                            href="https://msg.cnblogs.com/send/%E5%B7%B2%E6%B3%A8%E9%94%80%E7%94%A8%E6%88%B7456123">
-                            联系</a>
+                            href="https://msg.cnblogs.com/send/%E5%B7%B2%E6%B3%A8%E9%94%80%E7%94%A8%E6%88%B7456123">联系</a>
                     </li>
                     <li>
-                        <a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/guangzanassistant/rss/">
-                            订阅</a>
+                        <a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/guangzanassistant/rss/">订阅</a>
                         <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>-->
                     </li>
                     <li>
-                        <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-                            管理</a>
+                        <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">管理</a>
                     </li>
                 </ul>
 
 
                 <div class="blogStats">
-
                     <span id="stats_post_count">随笔 -
                         4&nbsp; </span>
                     <span id="stats_article_count">文章 -
                         0&nbsp; </span>
                     <span id="stats-comment_count">评论 -
                         1</span>
-
-
                 </div>
                 <!--end: blogStats -->
             </div>
-            <!--end: navigator 博客导航栏 -->
         </div>
 
         <div id="main">
@@ -110,7 +104,7 @@
                                             amet <span
                                                 style="font-family: arial, helvetica, sans-serif">consectetur</span>
                                             adipisicing elit. Pariatur <span
-                                                style="font-family: &quot;comic sans ms&quot;, sans-serif">voluptatum</span>
+                                                style="font-family:comic sans ms, sans-serif">voluptatum</span>
                                             aliquid voluptatibus debitis <span style="font-size: 14pt">doloremque</span>
                                             sunt? Officiis, iste et natus voluptate <span
                                                 style="font-size: 18pt">assumenda</span> ex aliquid esse ipsum
@@ -480,79 +474,7 @@
 
 
 
-                                        <div class="cnblogs_code">
-                                            <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
-                                                        href="javascript:void(0);" onclick="copyCnblogsCode(this)"
-                                                        title="复制代码"><img src="" alt="复制代码"></a></span></div>
-                                            <pre>
-<span style="color: rgba(0, 128, 128, 1)"> 1</span> const buildGroup = (annotate, customList) =&gt;<span style="color: rgba(0, 0, 0, 1)"> {
-</span><span style="color: rgba(0, 128, 128, 1)"> 2</span>     const group =<span style="color: rgba(0, 0, 0, 1)"> []
-</span><span style="color: rgba(0, 128, 128, 1)"> 3</span>     <span style="color: rgba(0, 0">for</span><span style="color: rgba(0, 0, 0, 1)"> (let { selector, page, config } of customList) {
-</span><span style="color: rgba(0, 128, 128, 1)"> 4</span>         <span style="color: rg255, 1)">if</span> (page === 'all' || pageName ===<span style="color: rgba(0, 0, 0, 1)"> page) {
-</span><span style="color: rgba(0, 128, 128, 1)"> 5</span>             const elemenstyle="color: rgba(0, 0, 0, 1)"> document.querySelectorAll(
-</span><span style="color: rgba(0, 128, 128, 1)"> 6</span> <span style="color: rgba(0,">                selector,
-</span><span style="color: rgba(0, 128, 128, 1)"> 7</span> <span style="color: rgba(0,">            )
-</span><span style="color: rgba(0, 128, 128, 1)"> 8</span>             <span style="color: rg255, 1)">if</span> (!element.length) <span style="color: rgba(0, 0, 255, 1)">continue</span>
-<span style="color: rgba(0, 128, 128, 1)"> 9</span>             <span style="color: rgba(0, 0">if</span> (element.length === 1<span style="color: rgba(0, 0, 0, 1)">) {
-</span><span style="color: rgba(0, 128, 128, 1)">10</span> <span style="color: rgba(0,">                group.push(
-</span><span style="color: rgba(0, 128, 128, 1)">11</span> <span style="color: rgba(0,">                    annotate(
-</span><span style="color: rgba(0, 128, 128, 1)">12</span> <span style="color: rgba(0,">                        document.querySelector(selector),
-</span><span style="color: rgba(0, 128, 128, 1)">13</span> <span style="color: rgba(0,">                        config,
-</span><span style="color: rgba(0, 128, 128, 1)">14</span> <span style="color: rgba(0,">                    ),
-</span><span style="color: rgba(0, 128, 128, 1)">15</span> <span style="color: rgba(0,">                )
-</span><span style="color: rgba(0, 128, 128, 1)">16</span> <span style="color: rgba(0,">            }
-</span><span style="color: rgba(0, 128, 128, 1)">17</span>             <span style="color: rg255, 1)">if</span> (element.length &gt; 1<span style="color: rgba(0, 0, 0, 1)">) {
-</span><span style="color: rgba(0, 128, 128, 1)">18</span>                 element.forEastyle="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)">(item) {
-</span><span style="color: rgba(0, 128, 128, 1)">19</span> <span style="color: rgba(0,">                    group.push(annotate(item, config))
-</span><span style="color: rgba(0, 128, 128, 1)">20</span> <span style="color: rgba(0,">                })
-</span><span style="color: rgba(0, 128, 128, 1)">21</span> <span style="color: rgba(0,">            }
-</span><span style="color: rgba(0, 128, 128, 1)">22</span> <span style="color: rgba(0,">        }
-</span><span style="color: rgba(0, 128, 128, 1)">23</span> <span style="color: rgba(0, 0, 0, 1)">    }
-</span><span style="color: rgba(0, 128, 128, 1)">24</span>     <span style="color: rgba(0, 0">return</span><span style="color: rgba(0, 0, 0, 1)"> group  // 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-</span><span style="color: rgba(0, 128, 128, 1)">25</span> }</pre>
-                                            <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
-                                                        href="javascript:void(0);" onclick="copyCnblogsCode(this)"
-                                                        title="复制代码"><img src="" alt="复制代码"></a></span></div>
-                                        </div>
-
-                                        <p>&nbsp;</p>
-
-                                        <div class="cnblogs_code">
-                                            <img src="" id="code_img_closed_376bc200-4fc3-41ba-905b-c35fd834092e"
-                                                class="code_img_closed">
-                                            <img src="" id="code_img_opened_376bc200-4fc3-41ba-905b-c35fd834092e"
-                                                class="code_img_opened" style="display: none">
-                                            <div id="cnblogs_code_open_376bc200-4fc3-41ba-905b-c35fd834092e"
-                                                class="cnblogs_code_hide">
-                                                <pre>
-<span style="color: rgba(0, 128, 128, 1)"> 1</span> const buildGroup = (annotate, customLi<span style="color: rgba(0, 0, 0, 1)"> {
-</span><span style="color: rgba(0, 128, 128, 1)"> 2</span>     const group =<span style="co(0, 0, 0, 1)"> []
-</span><span style="color: rgba(0, 128, 128, 1)"> 3</span>     <span style="color: rgba(0, 0">for</span><span style="color: rgba(0, 0, 0, 1)"> (let { selector, page, config } of customList) {
-</span><span style="color: rgba(0, 128, 128, 1)"> 4</span>         <span style="color: rg255, 1)">if</span> (page === 'all' || pageName ===<span style="color: rgba(0, 0, 0, 1)"> page) {
-</span><span style="color: rgba(0, 128, 128, 1)"> 5</span>             const elemenstyle="color: rgba(0, 0, 0, 1)"> document.querySelectorAll(
-</span><span style="color: rgba(0, 128, 128, 1)"> 6</span> <span style="color: rgba(0,">                selector,
-</span><span style="color: rgba(0, 128, 128, 1)"> 7</span> <span style="color: rgba(0,">            )
-</span><span style="color: rgba(0, 128, 128, 1)"> 8</span>             <span style="color: rg255, 1)">if</span> (!element.length) <span style="color: rgba(0, 0, 255, 1)">continue</span>
-<span style="color: rgba(0, 128, 128, 1)"> 9</span>             <span style="color: rgba(0, 0">if</span> (element.length === 1<span style="color: rgba(0, 0, 0, 1)">) {
-</span><span style="color: rgba(0, 128, 128, 1)">10</span> <span style="color: rgba(0,">                group.push(
-</span><span style="color: rgba(0, 128, 128, 1)">11</span> <span style="color: rgba(0,">                    annotate(
-</span><span style="color: rgba(0, 128, 128, 1)">12</span> <span style="color: rgba(0,">                        document.querySelector(selector),
-</span><span style="color: rgba(0, 128, 128, 1)">13</span> <span style="color: rgba(0,">                        config,
-</span><span style="color: rgba(0, 128, 128, 1)">14</span> <span style="color: rgba(0,">                    ),
-</span><span style="color: rgba(0, 128, 128, 1)">15</span> <span style="color: rgba(0,">                )
-</span><span style="color: rgba(0, 128, 128, 1)">16</span> <span style="color: rgba(0,">            }
-</span><span style="color: rgba(0, 128, 128, 1)">17</span>             <span style="color: rg255, 1)">if</span> (element.length &gt; 1<span style="color: rgba(0, 0, 0, 1)">) {
-</span><span style="color: rgba(0, 128, 128, 1)">18</span>                 element.forEastyle="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)">(item) {
-</span><span style="color: rgba(0, 128, 128, 1)">19</span> <span style="color: rgba(0,">                    group.push(annotate(item, config))
-</span><span style="color: rgba(0, 128, 128, 1)">20</span> <span style="color: rgba(0,">                })
-</span><span style="color: rgba(0, 128, 128, 1)">21</span> <span style="color: rgba(0,">            }
-</span><span style="color: rgba(0, 128, 128, 1)">22</span> <span style="color: rgba(0,">        }
-</span><span style="color: rgba(0, 128, 128, 1)">23</span> <span style="color: rgba(0, 0, 0, 1)">    }
-</span><span style="color: rgba(0, 128, 128, 1)">24</span>     <span style="color: rgba(0, 0">return</span><span style="color: rgba(0, 0, 0, 1)"> group
-</span><span style="color: rgba(0, 128, 128, 1)">25</span> }</pre>
-                                            </div>
-                                            <span class="cnblogs_code_collapse">View Code</span>
-                                        </div>
+        
 
                                         <p>&nbsp;</p>
                                         <p>&nbsp;<span class="cnblogs_code">prototype</span>&nbsp;</p>
@@ -1236,8 +1158,7 @@
                     </div>
 
                     <div id="calendar">
-                        <div id="blog-calendar" style="">
-
+                        <div id="blog-calendar">
                             <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar"
                                 border="0">
                                 <tbody>
@@ -1712,6 +1633,7 @@
                 <!--end: sideBarMain -->
             </div>
         </div>
+
         <div id="footer">
             Copyright © 2020 已注销用户456123
             <br>
@@ -1719,4 +1641,5 @@
         </div>
     </div>
 </body>
+
 </html>
