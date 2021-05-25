@@ -41,6 +41,12 @@
     }
 }
 
+@media only screen and (max-width: 767px) {
+    #home #main {
+        padding: 0;
+    }
+}
+
 @media screen and (max-width: 376px) {
     .postDesc {
         font-size: 0;

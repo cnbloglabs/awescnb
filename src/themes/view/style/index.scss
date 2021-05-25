@@ -339,18 +339,9 @@ body {
             text-align: center;
             font-family: Lato, sans-serif;
         }
-        u {
-            position: relative;
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -4px;
-                left: -7px;
-                width: 8px;
-                height: 4px;
-                background-color: var(--themeColor);
-            }
-        }
+        // u {
+        //     color: var(--themeColor);
+        // }
     }
 }
 
@@ -753,6 +744,7 @@ body {
         }
     }
     #post_next_prev {
+        display: none;
         order: 3;
         margin-top: 21.6px;
         font-size: 16px;
