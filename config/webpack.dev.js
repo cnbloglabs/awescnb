@@ -1,3 +1,5 @@
+// disabled
+// "dev:webpack": "webpack serve --open --config config/webpack.dev.js",
 const path = require('path')
 const webpack = require('webpack')
 const baseWebpackConfig = require('./webpack.base')

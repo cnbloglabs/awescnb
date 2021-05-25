@@ -4,9 +4,9 @@
     "description": "awesome cnblog",
     "repository": "https://github.com/awescnb/awescnb",
     "scripts": {
-        "start": "webpack serve --open --config config/webpack.dev.js",
-        "dev": "npm start",
-        "serve": "npm start",
+        "start": "npm run dev",
+        "serve": "npm run dev",
+        "dev": "vite --config config/vite.config.dev.js",
         "build": "webpack --config config/webpack.prod.js"
     },
     "keywords": [],
@@ -20,6 +20,8 @@
     "devDependencies": {
         "@babel/core": "^7.14.0",
         "@babel/preset-env": "^7.14.1",
+        "@vitejs/plugin-vue": "^1.2.2",
+        "@vue/compiler-sfc": "^3.0.11",
         "autoprefixer": "^9.7.4",
         "babel-eslint": "^10.1.0",
         "babel-loader": "^8.2.2",
@@ -42,6 +44,8 @@
         "style-loader": "^2.0.0",
         "terser-webpack-plugin": "^4.2.3",
         "url-loader": "^4.1.0",
+        "vite": "^2.3.3",
+        "vite-plugin-html": "^2.0.7",
         "webpack": "^5.36.2",
         "webpack-bundle-analyzer": "^3.6.1",
         "webpack-cli": "^4.7.0",
@@ -51,6 +55,7 @@
     "dependencies": {
         "notyf": "^3.9.0",
         "nprogress": "^0.2.0",
-        "typed.js": "^2.0.11"
+        "typed.js": "^2.0.11",
+        "vue": "^3.0.11"
     }
 }

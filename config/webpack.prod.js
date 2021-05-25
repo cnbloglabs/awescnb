@@ -19,7 +19,7 @@ const entry = {
     // silence: './src/themes/silence/index.js',
     // simple: './src/themes/simple/index.js',
     // view: './src/themes/view/index.js',
-    // bilibili: './src/themes/bilibili/index.js',
+    // bilibiliv1: './src/themes/bilibiliv1/index.js',
 }
 
 let output = {
