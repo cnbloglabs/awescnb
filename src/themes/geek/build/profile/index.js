@@ -19,13 +19,12 @@ import {
     unfollow,
 } from 'utils/cnblog'
 
-const followState = getFollowState()
-const userName = getBlogname()
-const age = getBlogAge()
-const fans = getFollowers()
-const focus = getFollowing()
-
-const build = () => {
+function createElements() {
+    const followState = getFollowState()
+    const userName = getBlogname()
+    const age = getBlogAge()
+    const fans = getFollowers()
+    const focus = getFollowing()
     const { headerBackground } = getThemeOptions()
     const el = `
     <section class="profile">
@@ -59,7 +58,7 @@ const build = () => {
     $('#mainContent').prepend(el)
 }
 
-const followAndUnfollow = () => {
+function followAndUnfollow() {
     $('.profile-msg button').click(function() {
         if (isOwner) {
             return false
@@ -78,6 +77,6 @@ const followAndUnfollow = () => {
 }
 
 export default () => {
-    build()
+    createElements()
     followAndUnfollow()
 }

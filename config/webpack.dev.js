@@ -1,4 +1,4 @@
-// disabled
+// 使用 vite 代替
 // "dev:webpack": "webpack serve --open --config config/webpack.dev.js",
 const path = require('path')
 const webpack = require('webpack')
