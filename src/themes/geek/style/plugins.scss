@@ -4,23 +4,9 @@ $postSignature: (
     borderRadius: 2px,
 );
 
-$dragMenu: (
+$toolMenu: (
     background: var(--dragmenuItem-bg),
     color: #fff,
-);
-
-$footer: (
-    background: #232323,
-);
-
-// $linemubers: (
-//     color: #24273b,
-// );
-
-$postMessage: (
-    categoriesBackground: var(--tags-bg),
-    tagsBackground: var(--tags-bg),
-    color: var(--tags-color),
 );
 
 $signature: (
@@ -34,6 +20,10 @@ $imagebox: (
 
 $player: (
     bodyBackground: var(--tags-bg),
+);
+
+$postMessage: (
+    tagsColor: var(--body-color),
 );
 
 @import 'plugins/highlight/index.scss';

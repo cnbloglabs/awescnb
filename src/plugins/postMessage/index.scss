@@ -3,98 +3,63 @@ $postMessage: () !default;
 $postMessage: map-merge(
     (
         categoriesBackground: #ff6b6b,
-        tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
-        color: #fff,
+        tagsBackground: #22a6b3 #fbc531 #10ac84 #0097e6,
+        tagsColor: #333,
     ),
     $postMessage
 );
 
 $postMessageTagBackground: map-get($postMessage, tagsBackground);
 $categoriesBackground: map-get($postMessage, categoriesBackground);
-$color: map-get($postMessage, color);
+$tagsColor: map-get($postMessage, tagsColor);
 
-#EntryTag,
-#BlogPostCategory {
-    display: none;
-}
-
-#custom-post-message {
+.post-message {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 4px;
     margin-bottom: 20px;
     width: 100%;
 }
 
-.custom-post-message-top {
+.message-top {
     display: flex;
-}
-
-.custom-tags,
-.custom-categories {
-    display: flex;
-    align-items: center;
-}
-
-.custom-tags {
-    margin-left: 12px;
-}
-
-.custom-tags a,
-.custom-categories a:not(:first-child) {
-    margin-left: 5px;
-}
-
-.custom-tags a,
-.custom-categories a {
-    padding: 4px 8px;
-    font-size: 14px;
-    line-height: 14px;
-    border-radius: 4px;
-    color: $color;
-    box-shadow: 1px 1px 5px rgb(241, 236, 236);
-}
-
-.custom-tags a {
-    background-color: nth($postMessageTagBackground, 1);
+    gap: 16px;
+    .message-tags,
+    .message-categories {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        a {
+            padding: 4px 8px;
+            font-size: 13px;
+            line-height: 14px;
+            border-radius: 2px;
+        }
+    }
+    .message-tags a {
+        border: 1px solid;
+        color: $tagsColor;
+    }
+    .message-categories a {
+        color: #fff;
+        background-color: $categoriesBackground;
+    }
 }
 
 @for $i from 1 through length($postMessageTagBackground) {
-    .custom-tags a:nth-child(#{$i}) {
-        background-color: nth($postMessageTagBackground, $i);
+    .message-tags a:nth-child(#{$i}) {
+        border-color: nth($postMessageTagBackground, $i);
     }
 }
 
-.custom-categories a {
-    background-color: $categoriesBackground;
+.message-bottom {
+    display: flex;
+    gap: 8px;
+    color: #999;
 }
 
-.custom-post-message-bottom {
-    color: #909090;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-@media screen and (max-width: 767px) {
-    .custom-post-message-top {
-        flex-direction: column;
-    }
-
-    .custom-categories,
-    .custom-tags {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
-    .custom-tags {
-        margin-left: 0;
-    }
-
-    .custom-categories a {
-        margin-left: 5px;
-    }
-
-    .custom-post-message-bottom {
-        margin: 5px 0;
-    }
+#EntryTag,
+#BlogPostCategory {
+    display: none;
 }

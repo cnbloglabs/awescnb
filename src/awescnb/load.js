@@ -11,7 +11,7 @@ function loadTheme(theme) {
 
 /**
  * 确保皮肤名称
- * @param {*} options
+ * @param {string} options
  */
 function ensureThemeName(themeName) {
     let theme = (themeName && themeName) || 'reacg'

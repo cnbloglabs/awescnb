@@ -1,8 +1,8 @@
 module.exports = {
-    themeName: 'silence',
+    themeName: 'geek',
     eslint: true,
     openBrowser: true,
-    openAnalyzer: true,
+    openAnalyzer: false,
     cssExtract: false,
 }
 
