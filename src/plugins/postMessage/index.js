@@ -27,7 +27,7 @@ function createCategoriesAndTags() {
             .addClass('message-categories')
             .text('📂')
         if (!$('#BlogPostCategory a').length) {
-            tags.append(`<a>未分类</a>`)
+            categories.append(`<a>未分类</a>`)
             return categories
         }
         $('#BlogPostCategory a').each(function() {
