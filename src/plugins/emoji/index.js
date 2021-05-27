@@ -13,7 +13,9 @@ import { isPostDetailsPage } from 'utils/cnblog'
  * @param {String} theme 皮肤 dark | light
  */
 function build(showRecents, recentsCount, showSearch, showPreview, theme) {
-    if ($('.emoji-picker').length) return
+    if ($('.emoji-button').length) return
+    if (!$('.commentbox_title_right').length) return
+
     const emojiConfig = {
         position: 'top-start',
         style: 'native', //native twemoji
@@ -56,6 +58,7 @@ function build(showRecents, recentsCount, showSearch, showPreview, theme) {
         },
     }
     const ele = `<span class='emoji-button'>🍺</span>`
+
     $('.commentbox_title_right').prepend(ele)
 
     const EmojiButton = window.EmojiButton
@@ -83,8 +86,6 @@ export default (_theme, devOptions) => {
 
     if (!enable) return
     if (!isPostDetailsPage()) return
-
-    //TODO: 博文禁用评论的情况
 
     const builder = () => {
         build(showRecents, recentsCount, showSearch, showPreview, theme)
