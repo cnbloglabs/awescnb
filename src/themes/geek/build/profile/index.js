@@ -1,5 +1,5 @@
 import './index.scss'
-// import toast from 'plugins/toast'
+import toast from 'plugins/toast'
 import { isOwner } from 'utils/cnblog'
 import { appWz, appQ, appGroup, appIng } from 'constants/links'
 import { getThemeOptions } from 'options/extra'
@@ -25,6 +25,7 @@ function createElements() {
     const age = getBlogAge()
     const fans = getFollowers()
     const focus = getFollowing()
+
     const { headerBackground } = getThemeOptions()
     const el = `
     <section class="profile">
@@ -65,11 +66,11 @@ function followAndUnfollow() {
         }
         const isUnfollowed = $('.followState').text() === '关注'
         if (isUnfollowed) {
-            // toast('感谢关注')
+            toast('关注成功')
             $('.followState').text('取消关注')
             follow()
         } else {
-            // toast('取消关注成功')
+            toast('取消关注')
             $('.followState').text('关注')
             unfollow()
         }

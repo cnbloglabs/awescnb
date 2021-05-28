@@ -247,13 +247,19 @@ export function unpass(show) {
  */
 export function poll(condition, callback) {
     if (condition) {
-        callback()
+        const res = callback()
+        if (typeof res === 'boolean' || typeof res === 'string') {
+            return res
+        }
         return true
     } else {
         let count = 1
         let intervalId = setInterval(() => {
             if (condition) {
-                callback()
+                const res = callback()
+                if (typeof res === 'boolean' || typeof res === 'string') {
+                    return res
+                }
                 clearInterval(intervalId)
                 return true
             }
