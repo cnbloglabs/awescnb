@@ -1,4 +1,3 @@
-import { poll } from 'utils/helpers'
 const { currentBlogApp } = window
 
 /**
@@ -24,20 +23,18 @@ export const openNews = () => !!$('#profile_block').length
  * @returns {String}
  */
 export function getBlogname() {
-    return poll($('#p_b_follow').length, () => {
-        if (openNews()) {
-            return $('#profile_block>a:nth-of-type(1)')
-                .html()
-                .trim()
-        }
-        const headerTitle = $('#Header1_HeaderTitle')
-            .text()
+    if (openNews()) {
+        return $('#profile_block>a:nth-of-type(1)')
+            .html()
             .trim()
-        if (headerTitle.length) {
-            return headerTitle
-        }
-        return currentBlogApp
-    })
+    }
+    const headerTitle = $('#Header1_HeaderTitle')
+        .text()
+        .trim()
+    if (headerTitle.length) {
+        return headerTitle
+    }
+    return currentBlogApp
 }
 
 /**
@@ -45,14 +42,12 @@ export function getBlogname() {
  * @returns {Number}
  */
 export function getFollowers() {
-    return poll($('#profile_block').length, () => {
-        const count = openNews()
-            ? $('#profile_block a:nth-of-type(3)')
-                  .text()
-                  .trim()
-            : '未知'
-        return count
-    })
+    const count = openNews()
+        ? $('#profile_block a:nth-of-type(3)')
+              .text()
+              .trim()
+        : '未知'
+    return count
 }
 
 /**
@@ -60,14 +55,12 @@ export function getFollowers() {
  * @returns {Number}
  */
 export function getFollowing() {
-    return poll($('#profile_block').length, () => {
-        const count = openNews()
-            ? $('#profile_block a:nth-of-type(4)')
-                  .text()
-                  .trim()
-            : '未知'
-        return count
-    })
+    const count = openNews()
+        ? $('#profile_block a:nth-of-type(4)')
+              .text()
+              .trim()
+        : '未知'
+    return count
 }
 
 /**
@@ -75,13 +68,11 @@ export function getFollowing() {
  * @returns {Boolean}
  */
 export function getFollowState() {
-    return poll($('#p_b_follow').length, () => {
-        return (
-            $('#p_b_follow')
-                .text()
-                .trim() === '-取消关注'
-        )
-    })
+    return (
+        $('#p_b_follow')
+            .text()
+            .trim() === '-取消关注'
+    )
 }
 
 /**
@@ -89,13 +80,11 @@ export function getFollowState() {
  * @returns {Number}
  */
 export function getBlogAge() {
-    return poll($('#profile_block a:nth-of-type(2)').length, () => {
-        return openNews()
-            ? $('#profile_block a:nth-of-type(2)')
-                  .text()
-                  .trim()
-            : '获取失败'
-    })
+    return openNews()
+        ? $('#profile_block a:nth-of-type(2)')
+              .text()
+              .trim()
+        : '请开启公告'
 }
 
 /**
@@ -178,7 +167,7 @@ export function isCategoryPage() {
 }
 
 /**
- * @description 返回当前页面名称
+ * @description 获取当前页面名称
  * @returns 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
  */
 export function getCurrentPage() {
@@ -230,11 +219,11 @@ export function likePost() {
  * @returns {Promise}
  */
 export function getUserInfo() {
-    return new Promise(resolve => {
-        $(document).ajaxComplete((event, xhr, settings) => {
-            if (settings.url === 'https://account.cnblogs.com/user/userinfo') {
-                resolve($.parseJSON(xhr.responseText))
-            }
-        })
-    })
+    // return new Promise(resolve => {
+    //     $(document).ajaxComplete((event, xhr, settings) => {
+    //         if (settings.url === 'https://account.cnblogs.com/user/userinfo') {
+    //             resolve($.parseJSON(xhr.responseText))
+    //         }
+    //     })
+    // })
 }
