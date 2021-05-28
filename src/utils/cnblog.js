@@ -24,16 +24,20 @@ export const openNews = () => !!$('#profile_block').length
  * @returns {String}
  */
 export function getBlogname() {
-    if (openNews()) {
-        return $('#profile_block>a:nth-of-type(1)')
-            .html()
+    return poll($('#p_b_follow').length, () => {
+        if (openNews()) {
+            return $('#profile_block>a:nth-of-type(1)')
+                .html()
+                .trim()
+        }
+        const headerTitle = $('#Header1_HeaderTitle')
+            .text()
             .trim()
-    }
-    const headerTitle = $('#Header1_HeaderTitle')
-        .text()
-        .trim()
-    if (headerTitle.length) return headerTitle
-    return currentBlogApp
+        if (headerTitle.length) {
+            return headerTitle
+        }
+        return currentBlogApp
+    })
 }
 
 /**
@@ -41,12 +45,14 @@ export function getBlogname() {
  * @returns {Number}
  */
 export function getFollowers() {
-    const count = openNews()
-        ? $('#profile_block a:nth-of-type(3)')
-              .text()
-              .trim()
-        : '未知'
-    return count
+    return poll($('#profile_block').length, () => {
+        const count = openNews()
+            ? $('#profile_block a:nth-of-type(3)')
+                  .text()
+                  .trim()
+            : '未知'
+        return count
+    })
 }
 
 /**
@@ -54,12 +60,14 @@ export function getFollowers() {
  * @returns {Number}
  */
 export function getFollowing() {
-    const count = openNews()
-        ? $('#profile_block a:nth-of-type(4)')
-              .text()
-              .trim()
-        : '未知'
-    return count
+    return poll($('#profile_block').length, () => {
+        const count = openNews()
+            ? $('#profile_block a:nth-of-type(4)')
+                  .text()
+                  .trim()
+            : '未知'
+        return count
+    })
 }
 
 /**
@@ -67,7 +75,7 @@ export function getFollowing() {
  * @returns {Boolean}
  */
 export function getFollowState() {
-    poll($('#p_b_follow').length, () => {
+    return poll($('#p_b_follow').length, () => {
         return (
             $('#p_b_follow')
                 .text()
@@ -81,12 +89,13 @@ export function getFollowState() {
  * @returns {Number}
  */
 export function getBlogAge() {
-    const age = openNews()
-        ? $('#profile_block a:nth-of-type(2)')
-              .text()
-              .trim()
-        : '未知'
-    return age
+    return poll($('#profile_block a:nth-of-type(2)').length, () => {
+        return openNews()
+            ? $('#profile_block a:nth-of-type(2)')
+                  .text()
+                  .trim()
+            : '获取失败'
+    })
 }
 
 /**
