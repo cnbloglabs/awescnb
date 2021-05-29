@@ -84,7 +84,7 @@ export function getBlogAge() {
         ? $('#profile_block a:nth-of-type(2)')
               .text()
               .trim()
-        : '请开启公告'
+        : '未知'
 }
 
 /**

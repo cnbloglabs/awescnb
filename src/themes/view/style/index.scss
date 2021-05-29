@@ -969,7 +969,7 @@ body {
             border-radius: 2px 2px 0 0;
             font-size: 12px;
             font-weight: 700;
-            color: var(--text-3);
+            color: var(--color-basic-900);
             &::before {
                 content: '\f56b';
             }
@@ -996,7 +996,7 @@ body {
                 margin-bottom: 10.8px !important;
                 height: 81px;
                 min-height: 135px;
-                color: var(--text-5);
+                color: var(--color-basic-800);
                 background: none;
                 font-size: 16px;
                 border-bottom: 1px dashed var(--color-basic-400);

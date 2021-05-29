@@ -1,12 +1,12 @@
 // plugin variables start
 $postSignature: (
     primary: var(--themeColor),
-    background: var(--background-e),
+    background: var(--color-basic-75),
     borderRadius: 2px,
 );
 
-$dragMenu: (
-    background: var(--background-e),
+$toolMenu: (
+    background: var(--color-basic-50),
 );
 
 $donation: (
@@ -23,7 +23,7 @@ $footer: (
 // );
 
 $player: (
-    bodyBackground: var(--background-e),
+    bodyBackground: var(--color-basic-75),
 );
 
 $postBottomimage: (
@@ -33,6 +33,7 @@ $postBottomimage: (
 $postMessage: (
     categoriesBackground: var(--themeColor),
     tagsBackground: #ff6b6b #fbc531 #22a6b3 #10ac84 #0097e6,
+    tagsColor: var(--color-basic-800),
 );
 
 $progress: (
@@ -88,12 +89,12 @@ $chart: (
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border-radius: 2px;
     margin-bottom: 16.2px;
-    color: var(--text-3);
+    color: var(--color-basic-900);
     h3 {
         display: flex;
         align-items: center;
         padding: 10.098px 14.418px;
-        background-color: var(--background-w);
+        background-color: var(--color-basic-50);
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
         .icon {
             width: 1.5em;
@@ -102,7 +103,7 @@ $chart: (
         }
     }
     ul {
-        background-color: var(--background-w);
+        background-color: var(--color-basic-50);
         max-height: 550px;
         padding: 10.098px 14.418px;
         overflow-y: scroll；;
@@ -168,7 +169,7 @@ $chart: (
     padding: 5.4px 5.4px;
     border-radius: 3px;
     transition: background 0.4s;
-    color: var(--text-a);
+    color: var(--color-basic-50);
 }
 
 // .catalog-sticky {

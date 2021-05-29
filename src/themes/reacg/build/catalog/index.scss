@@ -7,16 +7,16 @@
     overflow-x: hidden;
     word-wrap: nowrap;
     text-overflow: ellipsis;
-    background-color: var(--background-w);
+    background-color: var(--color-basic-50);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border-radius: 2px;
     margin-bottom: 16.2px;
-    color: var(--text-3);
+    color: var(--color-basic-900);
     .catalog-title {
         position: sticky;
         top: 0;
         padding: 10.098px 14.418px;
-        background-color: var(--background-w);
+        background-color: var(--color-basic-50);
         border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
     }
     ul {
@@ -55,7 +55,7 @@
     padding: 5.4px 5.4px;
     border-radius: 3px;
     transition: background 0.4s;
-    color: var(--text-a);
+    color: var(--color-basic-50);
 }
 .catalog-sticky {
     position: fixed;

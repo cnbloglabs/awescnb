@@ -3142,11 +3142,11 @@ code .matlab-comment span {
             background: none;
             margin-bottom: 0;
             padding: 7.56px 10.8px;
-            background-color: var(--background-e);
+            background-color: var(--color-basic-75);
             border-radius: 2px 2px 0 0;
             font-size: 12px;
             font-weight: 700;
-            color: var(--text-3);
+            color: var(--color-basic-900);
         }
         .comment_textarea {
             padding: 0;
@@ -3167,7 +3167,7 @@ code .matlab-comment span {
                 margin-bottom: 10.8px !important;
                 height: 81px;
                 min-height: 135px;
-                color: var(--text-5);
+                color: var(--color-basic-800);
                 background: none;
                 font-size: 16px;
             }
