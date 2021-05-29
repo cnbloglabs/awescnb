@@ -88,43 +88,21 @@
 
 .custom-gitee {
     span {
-        color: var(--text-3);
+        color: var(--color-basic-900);
     }
 }
-
-// .custom-gitee {
-//     display: flex;
-//     align-items: center;
-//     padding: 0 15.822px;
-//     color: #fff;
-//     &:hover {
-//         background-color: var(--themeColor);
-//         transition: all 0.3s;
-//     }
-//     .icon {
-//         width: 27px;
-//         margin-right: 5px;
-//     }
-//     span {
-//         font-weight: 700;
-//         text-shadow: 5px 0 10px var(--themeColor);
-//         color: var(--text-3);
-//         line-height: 100%;
-//     }
-// }
 
 #navList {
     .mode-change .icon {
         width: 40px;
         cursor: pointer;
-       
     }
     .custom-github .icon {
         width: 54px;
     }
 }
 
-.mode-change .icon { 
+.mode-change .icon {
     animation: changeModeRotate 20s linear infinite;
 }
 

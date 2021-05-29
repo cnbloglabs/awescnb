@@ -12,12 +12,12 @@
     #catalog {
         display: none;
     }
+    #main {
+        margin: 64px 12px 0;
+    }
     #mainContent {
         margin-left: 0;
         width: 73vw;
-    }
-    #sideBar {
-        width: 23vw;
     }
 }
 
@@ -98,9 +98,7 @@
     .feedbackCon .blog_comment_body {
         max-width: 324px;
     }
-    .forFlow
-        #blog-comments-placeholder
-        .feedbackListSubtitle {
+    .forFlow #blog-comments-placeholder .feedbackListSubtitle {
         font-size: 12px;
         line-height: 2em;
     }
@@ -108,10 +106,7 @@
         overflow: hidden;
         white-space: nowrap;
     }
-    .forFlow
-        #blog-comments-placeholder
-        .feedbackListSubtitle
-        > a:last-of-type {
+    .forFlow #blog-comments-placeholder .feedbackListSubtitle > a:last-of-type {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -126,7 +121,7 @@
         margin: 0;
         width: 100vw;
         max-width: 100vw;
-        background-color: var(--background-w);
+        background-color: var(--color-basic-50);
         overflow-y: scroll;
         // clip-path: circle(30px at calc(100%) 100%);
         z-index: 12;
