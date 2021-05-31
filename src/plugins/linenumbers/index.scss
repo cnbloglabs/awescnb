@@ -15,63 +15,7 @@ $linenumbersColor: map-get($linemubers, color);
     }
 }
 
-/* 富文本start */
-.cnblogs_code pre span[style='color: #008080;'] {
-    padding: 2px 0;
-    border: none;
-    text-align: center;
-    color: $linenumbersColor !important;
-    word-break: normal;
-    white-space: pre;
-}
-/* 富文本end */
-
-// #cnblogs_post_body pre {
-//     table tr,
-//     table td {
-//         background: none !important;
-//         border: none !important;
-//         padding: 0 !important;
-//     }
-//     code,
-//     table,
-//     tbody,
-//     table tr,
-//     .hljs-ln-numbers {
-//         background: inherit !important;
-//     }
-//     .hljs-ln-numbers {
-//         position: sticky;
-//         left: 0;
-//         padding: 2px 0;
-//         border: none;
-//         text-align: center;
-//         color: $linenumbersColor;
-//         word-break: normal;
-//         white-space: pre;
-//     }
-//     table {
-//         overflow-x: unset;
-//         border: none !important;
-//         .hljs-ln-numbers {
-//             padding: 0 !important;
-//             width: 30px !important;
-//         }
-//         .hljs-ln-code {
-//             padding: 0 2px 4.8516px;
-//         }
-//     }
-// }
-
-// .hljs-ln {
-//     padding-bottom: 10px;
-// }
-
-// .hljs-ln-n {
-//     padding: 0 10px;
-//     text-align: right;
-// }
-
+/* Markdown */
 #cnblogs_post_body {
     pre {
         display: flex;
@@ -82,9 +26,24 @@ $linenumbersColor: map-get($linemubers, color);
             li {
                 font-weight: normal;
                 color: $linenumbersColor;
-                list-style-type: none;
+                list-style: none;
                 text-align: right;
             }
+        }
+    }
+}
+
+/* 富文本 */
+#cnblogs_post_body .cnblogs_code {
+    pre {
+        display: block;
+        span[style='color: #008080;'] {
+            padding: 2px 0;
+            border: none;
+            text-align: center;
+            color: $linenumbersColor !important;
+            word-break: normal;
+            white-space: pre;
         }
     }
 }

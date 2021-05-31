@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'bilibiliv1',
+    themeName: 'reacg',
     eslint: true,
     openBrowser: true,
     openAnalyzer: false,
