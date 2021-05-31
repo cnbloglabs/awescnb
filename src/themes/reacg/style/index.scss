@@ -940,7 +940,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-
     color: #fff;
     border-radius: 3px;
     br {
@@ -950,7 +949,7 @@ body {
         filter: brightness(0.9);
         border-radius: 3px;
         margin-right: 0;
-        background-color: var(--color-basic-75);
+        background-color: var(--color-basic-50);
         color: var(--color-basic-900);
         @include text-over();
         &:not(:nth-child(1)) {

@@ -5,6 +5,7 @@
         }
     }
 }
+
 @media screen and (max-width: 1024px) {
     #header {
         padding-left: 2vw;
@@ -13,7 +14,7 @@
         display: none;
     }
     #main {
-        margin: 64px 12px 0;
+        margin: 60px 12px 0;
     }
     #mainContent {
         margin-left: 0;
@@ -22,19 +23,8 @@
 }
 
 @media screen and (max-width: 767px) {
-    .postBody {
-        padding: 0;
-    }
-    img {
-        max-width: 100% !important;
-    }
-    div.commentform textarea {
-        width: 100%;
-        height: 144.018px;
-    }
     #header {
         overflow: auto;
-        // padding-left: 2vw !important;
         word-break: keep-all;
         width: 100%;
         &::after {
@@ -44,11 +34,9 @@
             margin-right: 20px;
         }
     }
-    #main {
-        padding-top: 65px;
-        #mainContent {
-            width: 96vw;
-        }
+    #mainContent {
+        margin-right: 0;
+        width: 98vw;
     }
     .forFlow {
         #comment_form {
@@ -66,9 +54,6 @@
     }
     .postBody ul li {
         padding-top: 7.182px;
-    }
-    #mainContent {
-        width: 95%;
     }
     #green_channel a:nth-child(1),
     #green_channel a:nth-child(2),
@@ -159,5 +144,15 @@
                 padding: 2px 10px;
             }
         }
+    }
+    .postBody {
+        padding: 0;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    div.commentform textarea {
+        width: 100%;
+        height: 144.018px;
     }
 }
