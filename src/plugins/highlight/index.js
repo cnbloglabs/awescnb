@@ -1,4 +1,3 @@
-// 代码高亮
 import { highlightConfig } from 'options/plugins'
 import { getCurrentPage, isMd } from 'utils/cnblog'
 import themes from './themes.js'
@@ -23,26 +22,9 @@ function buildMarkdownHighlight(light, dark) {
     $('head').append(style)
 }
 
-/**
- * 调整 TinyMCE 代码块 padding
- */
-function AdjustTinyMCEPadding() {
-    if (isMd()) return
-    $('pre').each(function() {
-        const hasLineNumber =
-            $(this).find('span[style="color: #008080;"]').length !== 0
-        if (!hasLineNumber) {
-            $(this).css({
-                padding: '10px 14px',
-            })
-        }
-    })
-}
-
 export default (theme, devOptions) => {
     if (getCurrentPage() !== 'post') return
     if ($('pre').length === 0) return
     const { light, dark } = highlightConfig(devOptions)
     buildMarkdownHighlight(light, dark)
-    AdjustTinyMCEPadding()
 }

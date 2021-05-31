@@ -20,6 +20,7 @@ import {
     copyCode,
     codeLanguage,
     toolMenu,
+    notice,
 } from 'plugins/index'
 
 const theme = createTheme()
@@ -28,6 +29,7 @@ build()
 
 theme
     .use(highlight)
+    .use(notice)
     .use(linenumbers)
     .use(postMessage)
     .use(commentsAvatars)
