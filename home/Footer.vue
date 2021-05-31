@@ -1,5 +1,5 @@
 <template>
-    <footer>🥽 awescnb @{{ new Date().getFullYear() }}</footer>
+    <footer>awescnb @{{ new Date().getFullYear() }}</footer>
 </template>
 
 <style scoped>

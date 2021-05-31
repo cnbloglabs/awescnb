@@ -39,7 +39,7 @@ pre:hover,
     right: 10px;
     padding: 2px 8px;
     visibility: hidden;
-    color: $color;
+    color: $color !important;
     font-size: 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -48,7 +48,7 @@ pre:hover,
 }
 
 .copy-btns {
-    background-color: $bg;
+    background-color: $bg !important;
     &:active {
         background: $hover-bg;
         color: $hover-color;

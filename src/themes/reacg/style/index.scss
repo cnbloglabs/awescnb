@@ -132,6 +132,7 @@ body {
                 color: var(--themeColor);
                 border-radius: 2px;
                 font-size: 13px;
+                white-space: nowrap;
             }
         }
     }
@@ -737,6 +738,8 @@ body {
             padding: 0;
             .diggit,
             .buryit {
+                display: flex;
+                align-items: center;
                 width: auto;
                 height: auto;
                 margin-top: 0;
