@@ -3,12 +3,12 @@ $md: (
     hrColor: var(--md-hr-color),
     blockquoteBg: var(--md-blockquote-bg),
     blockquoteBorderColor: var(--md-blockquote-border-color),
-    summary: var(--md-summary-bg),
-    summaryOpen: #0984e3,
     markBg: var(--themeColor),
     kbdBg: #fafbfc,
     singleLineCoodeBg: var(--md-singlelinecode-bg),
     singleLineCoodeColor: #15a7a7,
+    detailsBg: var(--md-summary-bg),
+    detailsBorderColor: var(--md-blockquote-border-color),
 );
 
 @import 'style/markdown';

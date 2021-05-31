@@ -41,3 +41,5 @@ export const appQ = 'https://q.cnblogs.com/'
 export const appIng = 'https://ing.cnblogs.com/'
 // 小组
 export const appGroup = 'https://group.cnblogs.com/'
+// 消息
+export const message = 'https://msg.cnblogs.com/'
