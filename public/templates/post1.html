@@ -13,6 +13,60 @@
 </head>
 
 <body>
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg"></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/"
+                        onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/"
+                        onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/"
+                        onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/"
+                        onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/"
+                        onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3">
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/search.svg" alt="搜索">
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog"
+                        href="https://www.cnblogs.com/guangzan/" alt="我的博客" title="我的博客" style="display: inline;">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/"
+                        alt="短消息" title="短消息" style="display: inline;">
+                        <img id="msg_icon" class="navbar-icon" src="/images/message.svg" alt="短消息">
+                        <span id="msg_count">1</span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: block;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/u/guangzan">
+                            <img id="user_icon" class="navbar-avatar" src="/images/default-avatar.png" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://www.cnblogs.com/guangzan/">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/" style="display: none;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()"
+                        style="display: none;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div id="home">
         <div id="header">
             <div id="blogTitle">
