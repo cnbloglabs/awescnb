@@ -1,18 +1,25 @@
 import { getGithubOptions } from 'options/extra'
 import { avatar } from 'constants/cnblog'
-
+import { getMessageCount } from 'utils/cnblog'
+import { message } from 'constants/links'
 // 构建header昵称
-const headerNickname = () => {
+function headerNickname() {
     $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
 }
 
 // header头像
-const buildAva = () => {
+function buildAva() {
     $('#blogLogo').attr('src', `${avatar}`)
 }
 
+function buildMessageCount() {
+    $('#lnkBlogLogo')
+        .append(`<a class="message-count" href="${message}"><span>${getMessageCount()}</span>
+    </a>`)
+}
+
 // header移动端菜单
-const headerBtn = () => {
+function headerBtn() {
     const ele = `<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore">
       <span></span>
       <span></span>
@@ -28,13 +35,13 @@ const headerBtn = () => {
 }
 
 // 构建搜索框
-const buildSearchbar = () => {
+function buildSearchbar() {
     const ele = `<input id="q" class="custom-searchbar" type="search" placeholder="Search by pressing enter" onkeydown="return zzk_go_enter(event);"/>`
     $('#navigator').after(ele)
 }
 
 // GitHub 图标
-const buildGithub = () => {
+function buildGithub() {
     const { url } = getGithubOptions()
     const ele = `
     <li>
@@ -85,4 +92,5 @@ export default () => {
     // headerInnerPostTitle()
     buildSearchbar()
     buildGithub()
+    buildMessageCount()
 }

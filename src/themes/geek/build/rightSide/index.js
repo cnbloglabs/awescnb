@@ -2,7 +2,7 @@ import './index.scss'
 import { getMonth, getQuarter } from 'utils/helpers'
 import { index } from 'constants/links'
 import { getBlogname } from 'utils/cnblog'
-import { contact } from 'constants/links'
+import { contact, message } from 'constants/links'
 import { avatar } from 'constants/cnblog'
 
 function flat() {
@@ -20,7 +20,7 @@ function buildTopBtns() {
             </a>
         </button>
         <button class="account-button">
-            <a href="https://msg.cnblogs.com/" class='account-button-notice'>
+            <a href="${message}" class='account-button-notice'>
                 <li class="fas fa-bell"></li>
                 <span class="notice-count" ${!noticeCount &&
                     'style=display:none'}>${noticeCount}</span>

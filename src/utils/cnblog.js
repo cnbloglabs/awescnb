@@ -227,3 +227,11 @@ export function getUserInfo() {
     //     })
     // })
 }
+
+/**
+ * 获取消息数
+ * @returns {Number | undefined}
+ */
+export function getMessageCount() {
+    return $('#msg_count').text()
+}
