@@ -45,7 +45,7 @@ function createElements() {
         <div class="profile-msg">
             <p>
                 <a href="${index}"><span>${userName}</span></a>
-                <button class="followState${isOwner ? ' disabled' : ''}">${
+                <button class="followState${isOwner() ? ' disabled' : ''}">${
         followState ? '取消关注' : '关注'
     }</button>
             </p>
@@ -61,7 +61,7 @@ function createElements() {
 
 function followAndUnfollow() {
     $('.profile-msg button').click(function() {
-        if (isOwner) {
+        if (isOwner()) {
             return false
         }
         const isUnfollowed = $('.followState').text() === '关注'

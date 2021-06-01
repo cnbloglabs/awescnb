@@ -3,10 +3,19 @@ import { emojiConfig } from 'options/plugins'
 import { isPostDetailsPage } from 'utils/cnblog'
 import { isUrl } from 'utils/helpers'
 
+/**
+ * 创建按钮
+ * @returns {HTMLElement}
+ */
 function createEmojiButton() {
     return `<span class="qaq-btn" title="表情">🤩</span>`
 }
 
+/**
+ * 创建表情项
+ * @param {Object} itemData
+ * @returns
+ */
 function createEmojiItem(itemData) {
     const { value, label } = itemData
     const el = $('<div>').addClass('emoji-item')
@@ -20,13 +29,18 @@ function createEmojiItem(itemData) {
         el.append(`<div class="emoji emoji-text">${value}</div>`)
     }
 
-    if (typeof ilabel === 'string') {
+    if (typeof label === 'string') {
         el.attr('title', label)
     }
 
     return el
 }
 
+/**
+ * 创建表情列表
+ * @param {Array} emojiList
+ * @returns {JQuery Object}
+ */
 function createEmojiList(emojiList) {
     const $emoji = $(`<div class="emoji-list"></div>`)
 
@@ -38,14 +52,32 @@ function createEmojiList(emojiList) {
     return $emoji
 }
 
+/**
+ * 创建表情面板容器
+ * @returns {JQuery Object}
+ */
 function createEmojiContainer() {
-    return $(`<div class="qaq-wrap">`)
+    return $(`<div>`).addClass('qaq-wrap anim-scale-in')
 }
 
+/**
+ * 创建表情面板蒙层
+ * @returns @returns {JQuery Object}
+ */
+function createMask() {
+    return $(`<div>`).addClass('qaq-mask')
+}
+
+/**
+ * 打开或关闭表情面板
+ */
 function qaqToggle() {
     $('.qaq-wrap').toggle()
 }
 
+/**
+ * 选择表情
+ */
 function selectEmoji() {
     $('.emoji-item').click(function() {
         const $emoji = $(this).find('.emoji')
@@ -66,12 +98,17 @@ function selectEmoji() {
     })
 }
 
+/**
+ * 创建表情插件
+ * @param {Array} emojiData
+ */
 function createEmoji(emojiData) {
     const button = createEmojiButton()
     const emojiContainer = createEmojiContainer()
+    const mask = createMask()
     const emojiList = createEmojiList(emojiData)
 
-    emojiContainer.append(emojiList)
+    emojiContainer.append(emojiList).append(mask)
 
     $('.commentbox_title_right')
         .prepend(button)
@@ -79,9 +116,9 @@ function createEmoji(emojiData) {
 
     $('.qaq-btn')
         .after(emojiContainer)
-        .click(() => {
-            qaqToggle()
-        })
+        .click(() => qaqToggle())
+
+    $('.qaq-mask').click(() => qaqToggle())
 
     selectEmoji()
 }
