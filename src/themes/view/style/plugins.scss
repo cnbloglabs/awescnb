@@ -30,6 +30,14 @@ $signature: (
     fontSize: 1em,
 );
 
+$emoji: (
+    textEmojiColor: var(--color-basic-800),
+    bg: var(--emoji-bg),
+    borderColor: var(--color-basic-300),
+    hoverBg: var(--color-basic-100),
+    hoverBorderColor: var(--color-basic-200),
+);
+
 @import 'plugins/footer/index.scss';
 @import 'plugins/copyCode/index.scss';
 @import 'plugins/linenumbers/index.scss';
@@ -39,6 +47,7 @@ $signature: (
 @import 'plugins/mode/index.scss';
 @import 'plugins/highlight/index.scss';
 @import 'plugins/imagebox/index.scss';
+@import 'plugins/emoji/index.scss';
 
 .custom-toolbar {
     .toolbar-item i::before {

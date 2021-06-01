@@ -12,6 +12,7 @@
     --color-basic-900: #2c2c2c;
 
     --background-g: rgb(253, 230, 224);
+    --emoji-bg: var(--color-basic-50);
 }
 
 :root[theme='dark'] {
@@ -28,4 +29,5 @@
     --color-basic-900: #c2c2c2;
 
     --background-g: var(--color-basic-75);
+    --emoji-bg: var(--color-basic-200);
 }

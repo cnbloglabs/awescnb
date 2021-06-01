@@ -13,6 +13,7 @@
     --color-basic-900: #2c2c2c;
 
     --main-bg: #d1dee8;
+    --emoji-bg: var(--color-basic-50);
 }
 
 // variables in dark mode
@@ -30,4 +31,5 @@
     --color-basic-900: #c2c2c2;
 
     --main-bg: var(--color-basic-300);
+    --emoji-bg: var(--color-basic-200);
 }

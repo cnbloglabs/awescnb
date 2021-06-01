@@ -99,13 +99,155 @@ export function toolsConfig(devOptions) {
 }
 
 export function emojiConfig(devOptions) {
+    const emojiList = [
+        {
+            value: '🤣',
+            label: '笑哭',
+        },
+        {
+            value: '😃',
+            label: '大笑',
+        },
+        {
+            value: '😅',
+            label: '苦笑',
+        },
+        {
+            value: '😆',
+            label: '斜眼笑',
+        },
+        {
+            value: '😏',
+            label: '得意',
+        },
+        {
+            value: '😊',
+            label: '微笑',
+        },
+        {
+            value: '😎',
+            label: '酷！',
+        },
+        {
+            value: '😍',
+            label: '花痴',
+        },
+        {
+            value: '🙂',
+            label: '呵呵',
+        },
+        {
+            value: '🤩',
+            label: '好崇拜哦',
+        },
+        {
+            value: '🤔',
+            label: '思考',
+        },
+        {
+            value: '🙄',
+            label: '白眼',
+        },
+        {
+            value: '😜',
+            label: '略略略',
+        },
+        {
+            value: '😲',
+            label: '呆住',
+        },
+        {
+            value: '😭',
+            label: '大哭',
+        },
+        {
+            value: '🤯',
+            label: '头炸了',
+        },
+        {
+            value: '😰',
+            label: '冷汗',
+        },
+        {
+            value: '😱',
+            label: '吓死了',
+        },
+        {
+            value: '🤪',
+            label: '略略略',
+        },
+        {
+            value: '😵',
+            label: '晕',
+        },
+        {
+            value: '😡',
+            label: '愤怒',
+        },
+        {
+            value: '🥳',
+            label: '祝贺',
+        },
+        {
+            value: '🤡',
+            label: '小丑竟是我',
+        },
+        {
+            value: '🤫',
+            label: '嘘~',
+        },
+        {
+            value: '🐒',
+            label: '猴',
+        },
+        {
+            value: '🤭',
+            label: '笑笑不说话',
+        },
+        {
+            value: '🐂',
+            label: '牛',
+        },
+        {
+            value: '🍺',
+            label: '啤酒',
+        },
+        {
+            value: '(=・ω・=)',
+            label: '',
+        },
+        // {
+        //     value: '(｀・ω・´)',
+        //     label: '',
+        // },
+        // {
+        //     value: '(°∀°)ﾉ',
+        //     label: '',
+        // },
+        // {
+        //     value: '←_←',
+        //     label: '',
+        // },
+        // {
+        //     value: '→_→',
+        //     label: '',
+        // },
+        // {
+        //     value: 'Σ(ﾟдﾟ;)',
+        //     label: '',
+        // },
+        {
+            value: '(｡･ω･｡)',
+            label: '',
+        },
+        // {
+        //     value: '(-_-#)',
+        //     label: '',
+        // },
+    ]
     const defaultOptions = {
         enable: true,
-        showRecents: true,
-        showSearch: true,
-        showPreview: false,
-        recentsCount: 20,
-        theme: 'auto',
+        emojiList,
     }
     return mergeOptions(defaultOptions, userConfig.emoji, devOptions)
 }
