@@ -24,10 +24,10 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
 }
 
 .qaq-wrap {
+    display: none;
     position: absolute;
     top: 34px;
     left: -4%;
-    display: none;
     padding: 8px;
     background-color: $bg;
     border: 1px solid $borderColor;
@@ -69,6 +69,7 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
     overflow-y: auto;
     overflow-x: hidden;
     font-size: $fontEmojiSize;
+
     .emoji-item {
         display: flex;
         justify-content: center;
@@ -93,5 +94,36 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
                 transition: transform 0.15s cubic-bezier(0.2, 0, 0.13, 2);
             }
         }
+    }
+}
+
+.qaq-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    cursor: default;
+    content: ' ';
+    background: transparent;
+    z-index: -1;
+}
+
+.anim-scale-in {
+    animation-name: scale-in;
+    animation-duration: 0.15s;
+    animation-timing-function: cubic-bezier(0.2, 0, 0.13, 1.5);
+}
+
+@keyframes scale-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
