@@ -223,6 +223,7 @@ export function emojiConfig(devOptions) {
     ]
     const defaultOptions = {
         enable: true,
+        buttonIcon: '🍺',
         emojiList,
     }
     return mergeOptions(defaultOptions, userConfig.emoji, devOptions)
