@@ -429,3 +429,11 @@ export function userAgent() {
     const width = $(window).width()
     return width > 768 ? 'pc' : 'phone'
 }
+
+/**
+ * @description 判断字符串是否为 http 网址
+ * @returns {Boolean}
+ */
+export function isUrl(string) {
+    return new RegExp('http').test(string)
+}

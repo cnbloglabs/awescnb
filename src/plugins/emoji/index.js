@@ -1,18 +1,27 @@
 // 评论输入表情
 import { emojiConfig } from 'options/plugins'
 import { isPostDetailsPage } from 'utils/cnblog'
+import { isUrl } from 'utils/helpers'
 
 function createEmojiButton() {
     return `<span class="qaq-btn" title="表情">🤩</span>`
 }
 
 function createEmojiItem(itemData) {
+    const { value, label } = itemData
     const el = $('<div>').addClass('emoji-item')
 
-    el.append(`<div class="emoji">${itemData.value}</div>`)
+    if (isUrl(value)) {
+        const emoji = $('<img />')
+            .addClass('emoji emoji-img')
+            .attr('src', value)
+        el.append(emoji)
+    } else {
+        el.append(`<div class="emoji emoji-text">${value}</div>`)
+    }
 
-    if (typeof itemData.label === 'string') {
-        el.attr('title', itemData.label)
+    if (typeof ilabel === 'string') {
+        el.attr('title', label)
     }
 
     return el
@@ -39,10 +48,20 @@ function qaqToggle() {
 
 function selectEmoji() {
     $('.emoji-item').click(function() {
-        const emoji = $(this)
-            .find('.emoji')
-            .html()
-        document.querySelector('#tbCommentBody').value += emoji
+        const $emoji = $(this).find('.emoji')
+        let emojiValue
+
+        const isImgEmoji = $emoji.hasClass('emoji-img')
+
+        if (isImgEmoji) {
+            const url = $emoji.attr('src')
+            emojiValue = `![](${url})`
+        } else {
+            const textEmoji = $emoji.html()
+            emojiValue = textEmoji
+        }
+
+        document.querySelector('#tbCommentBody').value += emojiValue
         qaqToggle()
     })
 }
