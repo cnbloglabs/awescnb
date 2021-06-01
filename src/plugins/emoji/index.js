@@ -7,8 +7,8 @@ import { isUrl } from 'utils/helpers'
  * 创建按钮
  * @returns {HTMLElement}
  */
-function createEmojiButton() {
-    return `<span class="qaq-btn" title="表情">🤩</span>`
+function createEmojiButton(buttonIcon) {
+    return `<span class="qaq-btn" title="表情">${buttonIcon}</span>`
 }
 
 /**
@@ -102,8 +102,8 @@ function selectEmoji() {
  * 创建表情插件
  * @param {Array} emojiData
  */
-function createEmoji(emojiData) {
-    const button = createEmojiButton()
+function createEmoji(emojiData, buttonIcon) {
+    const button = createEmojiButton(buttonIcon)
     const emojiContainer = createEmojiContainer()
     const mask = createMask()
     const emojiList = createEmojiList(emojiData)
@@ -124,7 +124,7 @@ function createEmoji(emojiData) {
 }
 
 export default (_theme, devOptions) => {
-    const { enable, emojiList } = emojiConfig(devOptions)
+    const { enable, emojiList, buttonIcon } = emojiConfig(devOptions)
 
     if (!enable) return
     if (!isPostDetailsPage()) return
@@ -132,7 +132,7 @@ export default (_theme, devOptions) => {
     const builder = () => {
         if ($('.qaq-btn').length) return
         if (!$('.commentbox_title_right').length) return
-        createEmoji(emojiList)
+        createEmoji(emojiList, buttonIcon)
     }
 
     builder()
