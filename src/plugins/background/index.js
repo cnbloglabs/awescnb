@@ -1,7 +1,7 @@
 /**
  * 设置页面背景、内容透明度
  */
-import { userAgent } from 'utils/helpers'
+import { userAgent, isUrl } from 'utils/helpers'
 import { backgroundConfig } from 'options/plugins'
 
 /**
@@ -18,7 +18,8 @@ function setOpacity(opacity, opacitySelector) {
  * @param {Boolean} repeat 是否重复图片
  */
 function setBackground(value, repeat) {
-    const type = new RegExp('http').test(value) ? 'img' : 'color'
+    const type = isUrl(value) ? 'img' : 'color'
+    // const type =   new RegExp('http').test(value) ? 'img' : 'color'
     if (type === 'color') {
         $('body').css('background-color', `${value}`)
     }

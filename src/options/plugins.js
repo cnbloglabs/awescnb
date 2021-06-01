@@ -100,6 +100,11 @@ export function toolsConfig(devOptions) {
 
 export function emojiConfig(devOptions) {
     const emojiList = [
+        // {
+        //     value:
+        //         'https://images.cnblogs.com/cnblogs_com/gshang/1626876/o_20010505553714.png',
+        //     label: '笑哭',
+        // },
         {
             value: '🤣',
             label: '笑哭',
