@@ -74,6 +74,8 @@ export default (_theme, devOptions) => {
     if (!isPostDetailsPage()) return
 
     const builder = () => {
+        if ($('.qaq-btn').length) return
+        if (!$('.commentbox_title_right').length) return
         createEmoji(emojiList)
     }
 
