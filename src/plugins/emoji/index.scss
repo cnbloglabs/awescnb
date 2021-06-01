@@ -65,7 +65,7 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    max-height: 230px;
+    max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
     font-size: $fontEmojiSize;
