@@ -14,6 +14,7 @@ import {
     catalog,
     themeColor,
     imagebox,
+    emoji,
 } from 'plugins/index'
 
 export const theme = createTheme()
@@ -26,6 +27,7 @@ build()
 
 theme
     .use(footer)
+    .use(emoji)
     .use(imagebox)
     .use(copyCode)
     .use(linenumbers)

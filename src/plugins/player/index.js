@@ -11,7 +11,7 @@ import { getCurrentPage } from 'utils/cnblog'
  * @param {*} volume
  * @param {*} lrc
  */
-function build(autoplay, audio, volume, lrc) {
+function buildPlayer(autoplay, audio, volume, lrc) {
     $('body').append('<div id="player" class="aplayer music-APlayer"></div>')
 
     const ap = new APlayer({
@@ -66,6 +66,6 @@ export default (theme, devOptions) => {
     if (agent !== userAgent() && agent !== 'all') return
     addCss(aplayercss)
     cacheScript(aplayerjs, () => {
-        build(autoplay, audio, volume, lrc)
+        buildPlayer(autoplay, audio, volume, lrc)
     })
 }

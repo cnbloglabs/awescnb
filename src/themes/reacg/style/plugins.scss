@@ -49,6 +49,15 @@ $chart: (
     padding: 0 13.884px 16px,
 );
 
+$emoji: (
+    textEmojiColor: var(--color-basic-800),
+    bg: var(--emoji-bg),
+    borderColor: var(--color-basic-300),
+    hoverBg: var(--color-basic-100),
+    hoverBorderColor: var(--color-basic-200),
+    fontEmojiSize: 16px,
+);
+
 #sidebar_news .custom-signature {
     padding-top: 0;
 }

@@ -1,0 +1,372 @@
+$emoji: () !default;
+$emoji: map-merge(
+    (
+        picker-bg: #fff,
+        picker-border-color: #ccc,
+        color: #666,
+        tab-hover-bg: #e8f4f9,
+        tab-active-color: #fff,
+        tabTitle-color: #333,
+        emoji-hover-color: #e8f4f9,
+        primary: #4f81e5,
+    ),
+    $emoji
+);
+
+$picker-bg: map-get($emoji, picker-bg);
+$picker-border-color: map-get($emoji, picker-border-color);
+$color: map-get($emoji, color);
+$tab-hover-bg: map-get($emoji, tab-hover-bg);
+$tab-active-color: map-get($emoji, tab-active-color);
+$tabTitle-color: map-get($emoji, tabTitle-color);
+$emoji-hover-color: map-get($emoji, emoji-hover-color);
+$primary: map-get($emoji, primary);
+
+.emoji-button {
+    cursor: pointer;
+}
+
+.emoji-picker {
+    border: 1px solid $picker-border-color;
+    border-radius: 5px;
+    background: $picker-bg;
+    width: 322px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s;
+    overflow: hidden;
+}
+
+.emoji-picker.visible {
+    opacity: 1;
+}
+
+.emoji-picker__content {
+    padding: 0.5em;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.emoji-picker__preview {
+    height: 2em;
+    padding: 0.5em;
+    border-top: 1px solid $picker-border-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.emoji-picker__preview-emoji {
+    font-size: 2em;
+    margin-right: 0.25em;
+    font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Segoe UI',
+        'Apple Color Emoji', 'Twemoji Mozilla', 'Noto Color Emoji',
+        'EmojiOne Color', 'Android Emoji';
+}
+
+.emoji-picker__preview-emoji img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.1em;
+}
+
+.emoji-picker__preview-name {
+    color: $color;
+    font-size: 0.85em;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.emoji-picker__tabs {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.emoji-picker__tab {
+    font-size: 15.4px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    color: $color;
+    border-radius: 3px;
+    transition: background 0.25s;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.emoji-picker__tab:hover {
+    background: $tab-hover-bg;
+}
+
+.emoji-picker__tab svg {
+    padding: 7px;
+    box-sizing: content-box;
+}
+
+.emoji-picker__tab.active {
+    background: $primary;
+    color: $tab-active-color;
+}
+
+.emoji-picker__tab-body {
+    margin-top: 0.5em;
+    transform: translateX(350px);
+    transition: transform 0.25s;
+    position: absolute;
+}
+
+.emoji-picker__tab-body h2 {
+    font-size: 11.9px;
+    color: $tabTitle-color;
+    margin: 0;
+    text-align: left;
+}
+
+.emoji-picker__tab-body.active {
+    display: block;
+    transform: translateX(0);
+}
+
+.emoji-picker__emojis {
+    height: 231px;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: calc((25.2px * 1.5 * 8) + 7px);
+    margin: auto;
+}
+
+.emoji-picker__emojis.search-results {
+    height: 294px;
+}
+
+.emoji-picker__emoji {
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25.2px;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Segoe UI',
+        'Apple Color Emoji', 'Twemoji Mozilla', 'Noto Color Emoji',
+        'EmojiOne Color', 'Android Emoji';
+}
+
+.emoji-picker__emoji img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.1em;
+}
+
+.emoji-picker__emoji:focus,
+.emoji-picker__emoji:hover {
+    background: $emoji-hover-color;
+}
+
+.emoji-picker__search-container {
+    margin: 0.5em;
+    position: relative;
+    height: 2em;
+    display: flex;
+}
+
+.emoji-picker__search {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid $picker-border-color;
+    padding-right: 2em;
+    padding: 0.5em 2.25em 0.5em 0.5em;
+    font-size: 11.9px;
+    outline: none;
+}
+
+.emoji-picker__search:focus {
+    border: 1px solid $primary;
+}
+
+.emoji-picker__search-icon {
+    display: none;
+    position: relative;
+    // color: $color;
+    width: 1em;
+    height: 1em;
+    right: 0.75em;
+    top: calc(50% - 0.6em);
+}
+
+.emoji-picker__search-not-found {
+    color: $color;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.emoji-picker__search-not-found-icon {
+    font-size: 3em;
+}
+
+.emoji-picker__search-not-found h2 {
+    margin: 0.5em 0;
+    font-size: 1em;
+}
+
+.emoji-picker__variant-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 322px;
+    height: 385px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.emoji-picker__variant-popup {
+    background: #ffffff;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.emoji-picker__variant-popup-close-button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0.5em;
+    padding: 0;
+    top: calc(50% - 0.75em);
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 1.5em;
+}
+
+// .emoji-picker.dark .emoji-picker__preview {
+//     border-top-color: #666666;
+// }
+
+// .emoji-picker.dark .emoji-picker__preview-name {
+//     color: #ffffff;
+// }
+
+// .emoji-picker.dark .emoji-picker__tab {
+//     color: #cccccc;
+// }
+
+// .emoji-picker.dark .emoji-picker__tab:hover {
+//     color: #000000;
+// }
+
+// .emoji-picker.dark .emoji-picker__tab-body h2 {
+//     color: #ffffff;
+// }
+
+// .emoji-picker.dark .emoji-picker__emoji:focus,
+// .emoji-picker.dark .emoji-picker__emoji:hover {
+//     background: #666666;
+// }
+
+// .emoji-picker.dark .emoji-picker__search {
+//     background: #666666;
+//     color: #ffffff;
+//     border-color: #999999;
+// }
+
+// .emoji-picker.dark .emoji-picker__search::placeholder {
+//     color: #ffffff;
+// }
+
+// .emoji-picker.dark .emoji-picker__search:focus {
+//     border-color: #dbe5f9;
+// }
+
+// .emoji-picker.dark .emoji-picker__search-not-found {
+//     color: #999999;
+// }
+
+// .emoji-picker.dark .emoji-picker__variant-popup {
+//     background: #333333;
+// }
+
+// .emoji-picker.dark {
+//     background: #333333;
+//     color: #ffffff;
+//     border-color: #666666;
+// }
+
+// .emoji-picker.dark .emoji-picker__variant-popup-close-button {
+//     color: #666666;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//     .emoji-picker.auto {
+//         background: #333333;
+//         color: #ffffff;
+//         border-color: #666666;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__preview {
+//         border-top-color: #666666;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__preview-name {
+//         color: #ffffff;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__tab {
+//         color: #cccccc;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__tab:hover {
+//         color: #000000;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__tab-body h2 {
+//         color: #ffffff;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__emoji:focus,
+//     .emoji-picker.auto .emoji-picker__emoji:hover {
+//         background: #666666;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__search {
+//         background: #666666;
+//         color: #ffffff;
+//         border-color: #999999;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__search::placeholder {
+//         color: #ffffff;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__search:focus {
+//         border-color: #dbe5f9;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__search-not-found {
+//         color: #999999;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__variant-popup {
+//         background: #333333;
+//     }
+
+//     .emoji-picker.auto .emoji-picker__variant-popup-close-button {
+//         color: #666666;
+//     }
+// }

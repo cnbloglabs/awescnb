@@ -26,6 +26,14 @@ $postMessage: (
     tagsColor: var(--body-color),
 );
 
+$emoji: (
+    textEmojiColor: var(--body-color),
+    bg: var(--emoji-bg),
+    borderColor: var(--form-border-color),
+    hoverBg: var(--tags-bg),
+    hoverBorderColor: var(--postSignature-border-color),
+);
+
 @import 'plugins/highlight/index.scss';
 @import 'plugins/copyCode/index.scss';
 @import 'plugins/linenumbers/index.scss';
