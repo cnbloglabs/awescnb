@@ -100,11 +100,6 @@ export function toolsConfig(devOptions) {
 
 export function emojiConfig(devOptions) {
     const emojiList = [
-        // {
-        //     value:
-        //         'https://images.cnblogs.com/cnblogs_com/gshang/1626876/o_20010505553714.png',
-        //     label: '笑哭',
-        // },
         {
             value: '🤣',
             label: '笑哭',
@@ -221,34 +216,10 @@ export function emojiConfig(devOptions) {
             value: '(=・ω・=)',
             label: '',
         },
-        // {
-        //     value: '(｀・ω・´)',
-        //     label: '',
-        // },
-        // {
-        //     value: '(°∀°)ﾉ',
-        //     label: '',
-        // },
-        // {
-        //     value: '←_←',
-        //     label: '',
-        // },
-        // {
-        //     value: '→_→',
-        //     label: '',
-        // },
-        // {
-        //     value: 'Σ(ﾟдﾟ;)',
-        //     label: '',
-        // },
         {
             value: '(｡･ω･｡)',
             label: '',
         },
-        // {
-        //     value: '(-_-#)',
-        //     label: '',
-        // },
     ]
     const defaultOptions = {
         enable: true,

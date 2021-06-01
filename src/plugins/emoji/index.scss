@@ -33,7 +33,7 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
     border: 1px solid $borderColor;
     border-radius: 4px;
     width: 500px;
-    max-width: 276px;
+    max-width: 283px;
     z-index: 3;
     // inset: auto auto 0px 0px;
     &::before,
@@ -65,7 +65,7 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    max-height: 300px;
+    max-height: 230px;
     overflow-y: auto;
     overflow-x: hidden;
     font-size: $fontEmojiSize;
@@ -94,6 +94,20 @@ $fontEmojiSize: map-get($emoji, fontEmojiSize);
                 transition: transform 0.15s cubic-bezier(0.2, 0, 0.13, 2);
             }
         }
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #d2cfcf;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
     }
 }
 
