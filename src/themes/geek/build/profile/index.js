@@ -169,7 +169,7 @@ export default () => {
     $('#mainContent').prepend(container)
 
     followAndUnfollow()
-    poll($('#home #profile_block>a').length, insertMessage)
+    poll(() => $('#home #profile_block>a').length, insertMessage)
     setTimeout(() => {
         console.log($('#home #profile_block>a').length, 6666)
     }, 3000)

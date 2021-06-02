@@ -79,7 +79,7 @@ function listener() {
             window.imagebox()
         }
     })
-    poll($('.feedbackItem').length, build)
+    poll(() => $('.feedbackItem').length, build)
 }
 
 export default () => {

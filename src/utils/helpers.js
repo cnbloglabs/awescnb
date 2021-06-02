@@ -245,11 +245,9 @@ export function unpass(show) {
  * @param {func} 函数
  * @returns {Boolean} 是否完成 callback
  */
-export function poll(condition, callback) {
-    const fn = callback
-
-    if (condition) {
-        const res = fn()
+export function poll(conditionFn, callback) {
+    if (conditionFn()) {
+        const res = callback()
         if (typeof res === 'boolean' || typeof res === 'string') {
             return res
         }
@@ -257,9 +255,8 @@ export function poll(condition, callback) {
     } else {
         let count = 1
         let intervalId = setInterval(() => {
-            console.log(condition, count, fn)
-            if (condition) {
-                const res = fn()
+            if (conditionFn()) {
+                const res = callback()
                 if (typeof res === 'boolean' || typeof res === 'string') {
                     return res
                 }

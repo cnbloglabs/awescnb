@@ -26,5 +26,5 @@ function build() {
 
 export default () => {
     if (getCurrentPage() !== 'post') return
-    poll($('#green_channel_follow').length, build)
+    poll(() => $('#green_channel_follow').length, build)
 }

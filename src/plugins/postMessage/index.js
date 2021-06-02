@@ -84,7 +84,7 @@ export default () => {
     if (!isPostDetailsPage()) return
 
     poll(
-        $('#EntryTag a').length && $('#BlogPostCategory a').length,
+        () => $('#EntryTag a').length && $('#BlogPostCategory a').length,
         buildPostMessage,
     )
 }
