@@ -111,8 +111,12 @@ export function getBlogUserGuid() {
  * @returns {Boolean}
  */
 export const follow = () => {
-    window.follow(window.cb_blogUserGuid)
-    // $('#p_b_follow a').trigger('click')
+    const guid = window.cb_blogUserGuid
+    if (guid) {
+        window.follow(guid)
+    } else {
+        $('#p_b_follow>a').trigger('click')
+    }
 }
 
 /**
