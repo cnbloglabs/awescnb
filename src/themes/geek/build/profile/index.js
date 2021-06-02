@@ -1,6 +1,7 @@
 import './index.scss'
 import toast from 'plugins/toast'
-import { isOwner, getUserInfo } from 'utils/cnblog'
+import { isOwner } from 'utils/cnblog'
+import { poll } from 'utils/helpers'
 import { appWz, appQ, appGroup, appIng } from 'constants/links'
 import { getThemeOptions } from 'options/extra'
 import { avatar } from 'constants/cnblog'
@@ -25,10 +26,6 @@ function createElements() {
     const age = getBlogAge()
     const fans = getFollowers()
     const focus = getFollowing()
-
-    getUserInfo().then(res => {
-        console.log(res)
-    })
 
     const { headerBackground } = getThemeOptions()
     const el = `
@@ -81,7 +78,11 @@ function followAndUnfollow() {
     })
 }
 
-export default () => {
+function buildProfile() {
     createElements()
     followAndUnfollow()
+}
+
+export default () => {
+    poll($('#profile_block a:nth-of-type(2)').length, buildProfile)
 }

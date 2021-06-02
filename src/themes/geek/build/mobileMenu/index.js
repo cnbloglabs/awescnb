@@ -1,8 +1,4 @@
 import './index.scss'
-// import {
-//     // userAgent,
-//     // unpass
-// } from 'utils/helpers'
 
 /**
  * 构建移动端菜单
@@ -37,10 +33,7 @@ const buildHeaderTrigger = () => {
         })
 }
 
-function mobileMenu() {
-    // if (userAgent() !== 'phone') return
+export default () => {
     buildMobileMenu()
     buildHeaderTrigger()
 }
-
-export default mobileMenu

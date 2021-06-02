@@ -28,6 +28,7 @@ function buildPlayer(autoplay, audio, volume, lrc) {
         const audioTime = ap.audio.currentTime
         localStorage.audioTime = audioTime
     }
+
     window.onload = () => {
         ap.seek(localStorage.audioTime ? Number(localStorage.audioTime) : 0)
     }
@@ -36,14 +37,23 @@ function buildPlayer(autoplay, audio, volume, lrc) {
         $('.aplayer-lrc').show()
     }
 
-    if (lrc.enable) {
-        ap.on('play', () => {
-            $('.aplayer-lrc').show()
-        })
-        ap.on('pause', () => {
-            $('.aplayer-lrc').hide()
-        })
+    if (localStorage.playerState === 'on') {
+        ap.play()
     }
+
+    ap.on('play', () => {
+        localStorage.playerState = 'on'
+        if (lrc.enable) {
+            $('.aplayer-lrc').show()
+        }
+    })
+
+    ap.on('pause', () => {
+        localStorage.playerState = 'off'
+        if (lrc.enable) {
+            $('.aplayer-lrc').hide()
+        }
+    })
 
     if (lrc.enable && lrc.color !== '') {
         $('.aplayer-lrc').css('color', lrc.color)
