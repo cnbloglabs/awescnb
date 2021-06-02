@@ -4,27 +4,25 @@ import './index.scss'
  * 构建移动端菜单
  */
 const buildMobileMenu = () => {
-    const el = `
-        <div class="mobile-menu"></div>
-    `
-    $('body').append(el)
+    const el = $(`<div>`).addClass('mobile-menu')
+
     $('#left-side')
         .clone()
-        .appendTo('.mobile-menu')
+        .appendTo(el)
+
     $('#sideBar')
         .clone()
-        .appendTo('.mobile-menu')
+        .appendTo(el)
+
+    $('body').append(el)
+    $('.mobile-menu #catalog').remove()
 }
 
 /**
  * 构建头部菜单按钮
  */
 const buildHeaderTrigger = () => {
-    const el = `<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>`
+    const el = `<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore"><span></span> <span></span><span></span></div>`
     $(el)
         .appendTo('#custom-searchbar')
         .click(function() {

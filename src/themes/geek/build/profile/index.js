@@ -96,7 +96,8 @@ function createMessageElements() {
                 .append(
                     $('<button>')
                         .addClass('profile-followstate')
-                        .attr('href', index),
+                        .attr('href', index)
+                        .text('关注'),
                 ),
         )
         .append(
@@ -173,5 +174,5 @@ export default () => {
     $('#mainContent').prepend(container)
 
     followAndUnfollow()
-    poll($('#profile_block>a').length, insertMessage)
+    poll($('#home #profile_block>a').length, insertMessage)
 }
