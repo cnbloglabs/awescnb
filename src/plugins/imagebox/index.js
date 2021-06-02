@@ -77,9 +77,12 @@ export default (theme, devOptions) => {
     if ($('.custom-zoom').length) return
     buildGallery()
     cacheScript(mediaZoomJs, () => {
-        const condition =
-            $('.blog_comment_body').length || $('.' + customGalleryClass).length
-        poll(condition, build)
+        poll(
+            () =>
+                $('.blog_comment_body').length ||
+                $('.' + customGalleryClass).length,
+            build,
+        )
     })
     window.imagebox = build
 }

@@ -80,6 +80,6 @@ const addCalendarTitle = () => {
 export default () => {
     addCalendarTitle()
     setTimeout(() => {
-        poll($('#blog-sidecolumn').length, sideItemToggle)
+        poll(() => $('#blog-sidecolumn').length, sideItemToggle)
     }, 0)
 }

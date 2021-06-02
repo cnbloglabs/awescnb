@@ -196,7 +196,7 @@ function setSidebarIcon() {
     setTimeout(() => {
         insert()
     }, 300)
-    // poll($('#blog-sidecolumn').length, insert)
+    // poll(()=>$('#blog-sidecolumn').length, insert)
 }
 
 /**
