@@ -110,13 +110,18 @@ export function getBlogUserGuid() {
  * @description 关注
  * @returns {Boolean}
  */
-export const follow = () => window.follow()
+export const follow = () => {
+    window.follow(window.cb_blogUserGuid)
+    // $('#p_b_follow a').trigger('click')
+}
 
 /**
  * @description 取消关注
  * @returns {String}
  */
-export const unfollow = () => window.unfollow(getBlogUserGuid())
+export const unfollow = () => {
+    window.unfollow(window.cb_blogUserGuid)
+}
 
 /**
  * 文章是否打开了评论

@@ -170,7 +170,4 @@ export default () => {
 
     followAndUnfollow()
     poll(() => $('#home #profile_block>a').length, insertMessage)
-    setTimeout(() => {
-        console.log($('#home #profile_block>a').length, 6666)
-    }, 3000)
 }
