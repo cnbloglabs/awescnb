@@ -57,6 +57,9 @@ $tagsColor: map-get($postMessage, tagsColor);
     display: flex;
     gap: 8px;
     color: #999;
+    white-space: nowrap;
+    overflow: auto;
+    font-size: 13px;
 }
 
 #EntryTag,

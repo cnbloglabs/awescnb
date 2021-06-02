@@ -45,7 +45,7 @@ $footerBackground: map-get($footer, background);
 @media screen and (max-width: 767px) {
     #links {
         width: 90vw;
-        overflow: hidden;
+        overflow: auto;
         margin: 0 auto;
         white-space: nowrap;
     }

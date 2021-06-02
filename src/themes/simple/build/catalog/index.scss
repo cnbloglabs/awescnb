@@ -7,7 +7,7 @@
     word-wrap: nowrap;
     text-overflow: ellipsis;
     border-radius: 2px;
-    z-index: 20;
+    // z-index: 20;
     h3 {
         &::before {
             content: '\f022';
@@ -48,7 +48,7 @@
         li {
             margin-top: 3.618px;
             &:hover {
-                color: #3273dc;
+                font-weight: 700;
             }
             a {
                 display: inline-block;

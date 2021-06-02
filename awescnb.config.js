@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'view',
+    themeName: 'geek',
     eslint: true,
     openBrowser: true,
     openAnalyzer: false,

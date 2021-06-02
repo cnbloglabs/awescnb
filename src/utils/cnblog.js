@@ -219,13 +219,13 @@ export function likePost() {
  * @returns {Promise}
  */
 export function getUserInfo() {
-    // return new Promise(resolve => {
-    //     $(document).ajaxComplete((event, xhr, settings) => {
-    //         if (settings.url === 'https://account.cnblogs.com/user/userinfo') {
-    //             resolve($.parseJSON(xhr.responseText))
-    //         }
-    //     })
-    // })
+    return new Promise(resolve => {
+        $(document).ajaxComplete((event, xhr, settings) => {
+            if (settings.url === 'https://account.cnblogs.com/user/userinfo') {
+                resolve($.parseJSON(xhr.responseText))
+            }
+        })
+    })
 }
 
 /**

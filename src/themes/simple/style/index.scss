@@ -489,16 +489,6 @@ body {
 
         .blog_comment_body {
             background-color: #eee !important;
-            // color: #fff;
-            a:nth-child(1) {
-                color: #ffd257;
-                font-weight: 700;
-                font-size: 1.2rem;
-            }
-            a:not(:nth-child(1)):hover {
-                color: #3273dc;
-                transition: all 0.25s;
-            }
         }
 
         img {

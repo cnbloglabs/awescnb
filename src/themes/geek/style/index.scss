@@ -31,7 +31,7 @@ body {
 
 #home {
     display: grid;
-    grid-template-columns: 16vw 1fr 1fr 16vw;
+    grid-template-columns: 14vw 1fr 1fr 17.5vw;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         'left main main right'
@@ -216,6 +216,11 @@ body {
         padding: 0;
         color: var(--postDesc-color);
         text-align: center;
+        font-size: 13px;
+        text-transform: capitalize;
+        a {
+            text-transform: none;
+        }
     }
 }
 
@@ -433,7 +438,7 @@ h1.PostListTitle + .pager {
         justify-content: center;
         flex-wrap: wrap;
         align-items: baseline;
-        margin: 21.6px 0 10.8px;
+        margin: 20px 0 30px;
 
         #green_channel {
             @include center();
@@ -554,9 +559,10 @@ h1.PostListTitle + .pager {
             .diggit {
                 background-color: #ff6b81;
                 &::before {
-                    content: '\f004';
+                    content: '\f164';
                     color: #fff;
                     margin-right: 0;
+                    font-weight: 500
                 }
             }
 
@@ -564,9 +570,10 @@ h1.PostListTitle + .pager {
                 margin-left: 10.8px;
                 background-color: #ced6e0;
                 &::before {
-                    content: '\f004';
+                    content: '\f165';
                     color: #fff;
                     margin-right: 0;
+                    font-weight: 500
                 }
             }
 
@@ -854,9 +861,9 @@ h1.PostListTitle + .pager {
                 border-color: var(--themeColor);
             }
 
-            // .commentbox_title_left {
-            //     display: none;
-            // }
+            .commentbox_title_left {
+                display: none;
+            }
 
             // .commentbox_title_right {
             // }
