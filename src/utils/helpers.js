@@ -255,6 +255,8 @@ export function poll(condition, callback) {
     } else {
         let count = 1
         let intervalId = setInterval(() => {
+            console.log(123)
+
             if (condition) {
                 const res = callback()
                 if (typeof res === 'boolean' || typeof res === 'string') {
@@ -263,7 +265,7 @@ export function poll(condition, callback) {
                 clearInterval(intervalId)
                 return true
             }
-            if (count === 30) {
+            if (count === 50) {
                 clearInterval(intervalId)
                 return false
             }
