@@ -110,7 +110,7 @@ export function getBlogUserGuid() {
  * @description 关注
  * @returns {Boolean}
  */
-export const follow = () => window.follow(getBlogUserGuid())
+export const follow = () => window.follow()
 
 /**
  * @description 取消关注

@@ -1,5 +1,4 @@
 import './index.scss'
-import toast from 'plugins/toast'
 import { isOwner } from 'utils/cnblog'
 import { poll } from 'utils/helpers'
 import { appWz, appQ, appGroup, appIng } from 'constants/links'
@@ -108,16 +107,14 @@ function createMessageElements() {
                         .text('园龄：'),
                 )
                 .append(
-                    $('<span>')
+                    $('<a>')
                         .addClass('profile-followers')
-                        .append('<a>')
                         .attr('href', followersDetailsUrl)
                         .text('粉丝：'),
                 )
                 .append(
-                    $('<span>')
+                    $('<a>')
                         .addClass('profile-following')
-                        .append('<a>')
                         .attr('href', followingDetailsUrl)
                         .text('关注：'),
                 ),
@@ -145,11 +142,9 @@ function followAndUnfollow() {
         }
         const isUnfollowed = $('.profile-followstate').text() === '关注'
         if (isUnfollowed) {
-            toast('关注成功')
             $('.profile-followstate').text('取消关注')
             follow()
         } else {
-            toast('取消关注')
             $('.profile-followstate').text('关注')
             unfollow()
         }

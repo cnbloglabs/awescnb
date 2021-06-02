@@ -66,7 +66,6 @@ function createToolbarItem(item, translateY) {
     $item.on('click', item.callback)
 
     const icon = createIcon(item.icon)
-
     const $tip = createTooltip(item.tooltip)
 
     $item.append(icon)
