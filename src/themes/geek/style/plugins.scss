@@ -49,3 +49,7 @@ $emoji: (
 @import 'plugins/clickEffect/index.scss';
 @import 'plugins/player/index.scss';
 @import 'plugins/codeLanguage/index.scss';
+
+.custom-toolbar {
+    z-index: 9;
+}

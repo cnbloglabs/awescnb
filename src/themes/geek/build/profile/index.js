@@ -1,6 +1,6 @@
 import './index.scss'
 import toast from 'plugins/toast'
-import { isOwner } from 'utils/cnblog'
+import { isOwner, getUserInfo } from 'utils/cnblog'
 import { appWz, appQ, appGroup, appIng } from 'constants/links'
 import { getThemeOptions } from 'options/extra'
 import { avatar } from 'constants/cnblog'
@@ -25,6 +25,10 @@ function createElements() {
     const age = getBlogAge()
     const fans = getFollowers()
     const focus = getFollowing()
+
+    getUserInfo().then(res => {
+        console.log(res)
+    })
 
     const { headerBackground } = getThemeOptions()
     const el = `

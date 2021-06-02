@@ -28,16 +28,16 @@ $singleLineCoodeColor: map-get($md, singleLineCoodeColor);
 $detailsBg: map-get($md, detailsBg);
 $detailsBorderColor: map-get($md, detailsBorderColor);
 
-#cnblogs_post_body {
-    &:after {
-        content: '——— EOF ———';
-        display: block;
-        margin: 21.6px auto;
-        text-align: center;
-        color: var(--postDesc-color);
-        font-weight: normal;
-    }
-}
+// #cnblogs_post_body {
+//     &:after {
+//         content: '——— EOF ———';
+//         display: block;
+//         margin: 21.6px auto;
+//         text-align: center;
+//         color: var(--postDesc-color);
+//         font-weight: normal;
+//     }
+// }
 
 #cnblogs_post_body,
 .cnblogs-post-body,
