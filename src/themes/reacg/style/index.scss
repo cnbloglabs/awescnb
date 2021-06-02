@@ -445,10 +445,12 @@ body {
             .commentbox_title {
                 border-bottom-color: var(--themeColor);
             }
-            .commentbox_title_left {
-                display: none;
+            .commentbox_tab.active {
+                border-color: var(--themeColor);
             }
-
+            // .commentbox_title_left {
+            //     display: none;
+            // }
             .commentbox_footer {
                 display: none;
             }

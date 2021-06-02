@@ -850,9 +850,13 @@ h1.PostListTitle + .pager {
                 border-bottom-color: var(--form-border-color);
             }
 
-            .commentbox_title_left {
-                display: none;
+            .commentbox_tab.active {
+                border-color: var(--themeColor);
             }
+
+            // .commentbox_title_left {
+            //     display: none;
+            // }
 
             // .commentbox_title_right {
             // }
