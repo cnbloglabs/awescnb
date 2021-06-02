@@ -121,20 +121,6 @@ function createMessageElements() {
         )
 }
 
-function insertMessage() {
-    const followState = getFollowState()
-    const userName = getBlogname()
-    const age = getBlogAge()
-    const followers = getFollowers()
-    const following = getFollowing()
-
-    $('.profile-nickname').text(userName)
-    $('.profile-age').append(age)
-    $('.profile-followers').append(followers)
-    $('.profile-following').append(following)
-    $('.profile-followstate').text(followState ? '取消关注' : '关注')
-}
-
 function followAndUnfollow() {
     $('.profile-msg button').click(function() {
         if (isOwner()) {
@@ -149,6 +135,20 @@ function followAndUnfollow() {
             unfollow()
         }
     })
+}
+
+function insertMessage() {
+    const followState = getFollowState()
+    const userName = getBlogname()
+    const age = getBlogAge()
+    const followers = getFollowers()
+    const following = getFollowing()
+
+    $('.profile-nickname').text(userName)
+    $('.profile-age').append(age)
+    $('.profile-followers').append(followers)
+    $('.profile-following').append(following)
+    $('.profile-followstate').text(followState ? '取消关注' : '关注')
 }
 
 export default () => {
@@ -170,4 +170,7 @@ export default () => {
 
     followAndUnfollow()
     poll($('#home #profile_block>a').length, insertMessage)
+    setTimeout(() => {
+        console.log($('#home #profile_block>a').length, 6666)
+    }, 3000)
 }
