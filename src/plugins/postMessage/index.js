@@ -1,5 +1,5 @@
 import { poll } from 'utils/helpers'
-import { getCurrentPage } from 'utils/cnblog'
+import { isPostDetailsPage } from 'utils/cnblog'
 
 function getPostInfo() {
     const date = $('#post-date').text()
@@ -80,46 +80,11 @@ function buildPostMessage() {
     $('.post').prepend(container)
 }
 
-// function buildCategories() {
-//     const categories = $(`<div class='custom-categories'>📂</div>`)
-
-//     const hadBuildCategories = poll(
-//         $('#BlogPostCategory a').length,
-//         function() {
-//             $('#BlogPostCategory a').each(function() {
-//                 categories.append($(this).get(0))
-//             })
-//         },
-//     )
-
-//     if (!hadBuildCategories) {
-//         categories.append(`<a>未分类</a>`)
-//     }
-
-//     $('.custom-post-message-top').append(categories)
-// }
-
-// function buildTags() {
-//     const tags = $(`<div class='custom-tags'>🔖</div>`)
-//     const hadBuildTags = poll($('#EntryTag a').length, function() {
-//         $('#EntryTag a').each(function() {
-//             tags.append($(this).get(0))
-//         })
-//     })
-//     if (!hadBuildTags) {
-//         tags.append(`<a>无标签</a>`)
-//     }
-//     $('.custom-post-message-top').append(tags)
-// }
-
 export default () => {
-    if (getCurrentPage() !== 'post') return
-    const res = poll(
-        $('#EntryTag a').length || $('#BlogPostCategory a').length,
+    if (!isPostDetailsPage()) return
+
+    poll(
+        $('#EntryTag a').length && $('#BlogPostCategory a').length,
         buildPostMessage,
     )
-
-    if (!res) {
-        buildPostMessage()
-    }
 }

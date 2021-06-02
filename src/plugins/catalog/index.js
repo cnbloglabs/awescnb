@@ -1,8 +1,6 @@
 import { catalogConfig } from 'options/plugins'
-import { userAgent, getClientRect, throttle } from 'utils/helpers'
+import { userAgent, getClientRect, debounce } from 'utils/helpers'
 import { getCurrentPage, hasPostTitle } from 'utils/cnblog'
-
-// TODO: Convert to  Class Style plugin.
 
 /**
  * 构建目录容器
@@ -83,7 +81,7 @@ function buildCatalog(selector, fn, showTitle) {
  */
 function handleScroll(scrollContainer, updateNavigation) {
     $(scrollContainer).scroll(
-        throttle(
+        debounce(
             () => {
                 setActiveTitle()
                 autoScroll(scrollContainer, updateNavigation)
