@@ -18,7 +18,7 @@ import {
     player,
     mode,
     copyCode,
-    codeLanguage,
+    // codeLanguage,
     toolMenu,
     notice,
 } from 'plugins/index'
@@ -37,7 +37,7 @@ theme
     .use(imagebox)
     .use(postSignature)
     .use(titleFavicon)
-    .use(codeLanguage)
+    // .use(codeLanguage)
     .use(clickEffect, { enable: false })
     .use(themeColor, { color: '#1B86F9' })
     .use(player, { enable: false })
