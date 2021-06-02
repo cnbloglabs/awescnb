@@ -247,6 +247,8 @@ export function unpass(show) {
  */
 export function poll(condition, callback) {
     const fn = callback
+    console.log(fn)
+
     if (condition) {
         const res = fn()
         if (typeof res === 'boolean' || typeof res === 'string') {
@@ -264,7 +266,7 @@ export function poll(condition, callback) {
                 clearInterval(intervalId)
                 return true
             }
-            if (count === 50) {
+            if (count === 99999999999) {
                 clearInterval(intervalId)
                 return false
             }
