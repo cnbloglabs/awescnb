@@ -246,8 +246,9 @@ export function unpass(show) {
  * @returns {Boolean} 是否完成 callback
  */
 export function poll(condition, callback) {
+    const fn = callback
     if (condition) {
-        const res = callback()
+        const res = fn()
         if (typeof res === 'boolean' || typeof res === 'string') {
             return res
         }
@@ -255,10 +256,8 @@ export function poll(condition, callback) {
     } else {
         let count = 1
         let intervalId = setInterval(() => {
-            console.log(123)
-
             if (condition) {
-                const res = callback()
+                const res = fn()
                 if (typeof res === 'boolean' || typeof res === 'string') {
                     return res
                 }
@@ -270,7 +269,7 @@ export function poll(condition, callback) {
                 return false
             }
             count++
-        }, 200)
+        }, 300)
     }
 }
 
