@@ -271,7 +271,7 @@ export function poll(condition, callback) {
                 return false
             }
             count++
-        }, 300)
+        }, 500)
     }
 }
 
