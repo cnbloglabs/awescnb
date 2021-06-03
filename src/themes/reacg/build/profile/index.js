@@ -43,6 +43,6 @@ function buildInfo() {
 
 export default () => {
     buildAvatar()
-    buildInfo()
     hideFollowButton()
+    poll(() => $('#profile_block>a').length, buildInfo)
 }
