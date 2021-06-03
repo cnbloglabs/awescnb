@@ -6,6 +6,9 @@ import { __DEV__ } from 'constants/env'
  * 构建头像
  */
 function buildAvatars() {
+    if ($('.custom-comment-avatar').length) {
+        return
+    }
     $('.feedbackItem').each(function() {
         let avatar = $(this)
             .children('.feedbackCon')
