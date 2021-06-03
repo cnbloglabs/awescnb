@@ -70,7 +70,7 @@ export function getFollowing() {
  */
 export function getFollowState() {
     return (
-        $('#p_b_follow')
+        $('#p_b_follow>a')
             .text()
             .trim() === '-取消关注'
     )
