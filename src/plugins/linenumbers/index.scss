@@ -21,13 +21,14 @@ $linenumbersColor: map-get($linemubers, color);
         display: flex;
         .awes-linenumber {
             margin: 0;
-            padding: 16px 16px 0;
-            line-height: 1.34;
+            padding: 16px 16px 8px;
             li {
                 font-weight: normal;
                 color: $linenumbersColor;
                 list-style: none;
                 text-align: right;
+                line-height: 1.5;
+                font-size: 13px;
             }
         }
     }
