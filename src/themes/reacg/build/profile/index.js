@@ -1,6 +1,6 @@
 import './index.scss'
-import { avatar } from 'constants/cnblog'
-import { isOwner } from 'utils/cnblog'
+import { isOwner, getUserAvatar } from 'utils/cnblog'
+import { poll } from 'utils/helpers'
 import {
     followersDetailsUrl,
     followingDetailsUrl,
@@ -15,8 +15,14 @@ import {
 } from 'utils/cnblog'
 
 function buildAvatar() {
-    if (avatar === '' || $('#blog-news').length === 0) return
-    $('#blog-news').prepend(`<img class='custom-avatar' src='${avatar}' />`)
+    function buildAvatar() {
+        getUserAvatar().then(res => {
+            $('#blog-news').prepend(
+                `<img class='custom-avatar' src='${res}' />`,
+            )
+        })
+    }
+    poll(() => $('#blog-news').length, buildAvatar)
 }
 
 function hideFollowButton() {
