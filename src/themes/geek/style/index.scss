@@ -120,17 +120,14 @@ body {
 }
 
 .sidebar-block {
-    padding: 25px;
-    border-bottom: 1px solid var(--sidebarBlock-border-color);
+    padding: 20px 20px 0;
     h3 {
-        font-family: 'DM Sans', sans-serif;
         color: var(--sidebarTitle-color);
-        font-size: 15px;
-        font-weight: 600;
-        margin-bottom: 20px;
+        font-size: 16px;
+        margin-bottom: 16px;
+        font-weight: 500;
     }
     ul {
-        padding-top: 0.5rem;
         li {
             padding: 0.2rem 0.5rem;
             font-size: 12px;
@@ -148,12 +145,14 @@ body {
     ul {
         display: flex;
         flex-wrap: wrap;
+        gap: 8px;
         li {
-            margin-bottom: 0.5rem;
-            margin-right: 0.5rem;
-            padding: 0.2rem 0.4rem;
+            padding: 8px 16px;
             background-color: var(--tags-bg);
-            font-size: 12px;
+            font-size: 13px;
+            &:hover {
+                color: var(--themeColor);
+            }
         }
     }
 }
@@ -237,69 +236,19 @@ body {
 }
 
 // 分页器start
-.pager span.current {
-    background-color: inherit;
-    border: inherit;
-    color: inherit;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
-.topicListFooter {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-#homepage_top_pager {
-    display: none;
-}
-
-#homepage_bottom_pager {
-    .pager {
-        margin: 0;
-    }
-}
-
-.pager {
-    padding: 0.5rem 0;
-    border-radius: 4px;
-    a {
-        color: var(--themeColor);
-    }
-}
-
-h1.PostListTitle + .pager {
-    display: none;
-}
-
-#nav_next_page {
-    margin: 0 0 1rem;
-    font-weight: 700;
-    text-align: center;
-    a {
-        color: var(--themeColor);
-        padding: 0.5rem 0;
-        border-radius: 4px;
-        width: 100%;
-        background-color: var(--pager-bg);
-        display: block;
-        &:hover {
-            transition: all 0.3s;
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-                0 10px 10px rgba(0, 0, 0, 0.22);
-        }
-    }
-}
 
 .pager {
     display: flex;
     justify-content: center;
     grid-column-start: 1;
     grid-column-end: 5;
-    text-align: center;
     margin: 0 0 16px;
+    padding: 0.5rem 0;
     font-size: 14px;
+    text-align: center;
     background-color: var(--pager-bg);
+    color: var(--color-basic-700);
+    border-radius: 4px;
     a {
         margin: 0 16px;
         padding: 0 16px;
@@ -307,13 +256,56 @@ h1.PostListTitle + .pager {
         background-color: var(--pagerBtn-bg);
         border: none;
         white-space: nowrap;
+        color: var(--color-basic-900);
+        border: 1px solid var(--pagerBtn-bg);
         &:hover {
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-                0 10px 10px rgba(0, 0, 0, 0.22);
+            color: var(--themeColor);
+            border-color: var(--themeColor);
+        }
+    }
+    span.current {
+        background-color: inherit;
+        border: inherit;
+        color: inherit;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+h1.PostListTitle + .pager,
+#homepage_top_pager {
+    display: none;
+}
+
+#homepage_bottom_pager {
+    margin: 8px 0;
+}
+
+.topicListFooter {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#nav_next_page {
+    margin: 0 0 1rem;
+    text-align: center;
+    a {
+        padding: 0.5rem 0;
+        border-radius: 4px;
+        width: 100%;
+        background-color: var(--pager-bg);
+        display: block;
+        border: 1px solid var(--color-basic-200);
+        &:hover {
+            color: var(--themeColor);
+            border-color: var(--themeColor);
         }
     }
 }
+
 // 分页器end
+
 #post_detail {
     .postTitle {
         padding-left: 0;
@@ -562,7 +554,7 @@ h1.PostListTitle + .pager {
                     content: '\f164';
                     color: #fff;
                     margin-right: 0;
-                    font-weight: 500
+                    font-weight: 500;
                 }
             }
 
@@ -573,7 +565,7 @@ h1.PostListTitle + .pager {
                     content: '\f165';
                     color: #fff;
                     margin-right: 0;
-                    font-weight: 500
+                    font-weight: 500;
                 }
             }
 
