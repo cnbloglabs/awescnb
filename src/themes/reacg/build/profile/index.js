@@ -1,6 +1,6 @@
 import './index.scss'
-// import { avatar } from 'constants/cnblog'
-import { isOwner, getUserAvatar } from 'utils/cnblog'
+import { avatar } from 'constants/cnblog'
+import { isOwner } from 'utils/cnblog'
 import { poll } from 'utils/helpers'
 import {
     followersDetailsUrl,
@@ -17,11 +17,7 @@ import {
 
 function buildAvatar() {
     function buildAvatar() {
-        getUserAvatar().then(res => {
-            $('#blog-news').prepend(
-                `<img class='custom-avatar' src='${res}' />`,
-            )
-        })
+        $('#blog-news').prepend(`<img class='custom-avatar' src='${avatar}' />`)
     }
     poll(() => $('#profile_block>a').length, buildAvatar)
 }
