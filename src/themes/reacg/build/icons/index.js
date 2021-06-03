@@ -1,9 +1,17 @@
 import './index.scss'
-import { iconInSvg } from '../../utils/tools'
 import { fontUrl, icons, foodIcons } from './icons'
-import { randomProperty, cacheScript } from 'utils/helpers'
+import { randomProperty, cacheScript, poll } from 'utils/helpers'
 import { getCurrentPage } from 'utils/cnblog'
 import { getGiteeOptions, getGithubOptions } from 'options/extra'
+
+/**
+ * @description 指定icon插入svg
+ * @param {String} icon xlink:href 的值
+ * @returns svg标签
+ */
+function iconInSvg(icon) {
+    return `<svg class="icon" aria-hidden="true"><use xlink:href="${icon}"></use></svg>`
+}
 
 /**
  * 设置切换暗色模式 icon
@@ -193,10 +201,7 @@ function setSidebarIcon() {
         }
     }
 
-    setTimeout(() => {
-        insert()
-    }, 300)
-    // poll(()=>$('#blog-sidecolumn').length, insert)
+    poll(() => $('#blog-sidecolumn').length, insert)
 }
 
 /**
