@@ -1,4 +1,5 @@
 import './index.scss'
+// import { avatar } from 'constants/cnblog'
 import { isOwner, getUserAvatar } from 'utils/cnblog'
 import { poll } from 'utils/helpers'
 import {
@@ -22,7 +23,7 @@ function buildAvatar() {
             )
         })
     }
-    poll(() => $('#blog-news').length, buildAvatar)
+    poll(() => $('#profile_block>a').length, buildAvatar)
 }
 
 function hideFollowButton() {
