@@ -149,7 +149,7 @@ function insertMessage() {
     $('.profile-age').append(age)
     $('.profile-followers').append(followers)
     $('.profile-following').append(following)
-    $('.profile-followstate').text(followState ? '取消关注' : '关注')
+    $('.profile-followstate').text(followState ? '已关注' : '关注')
 }
 
 export default () => {
