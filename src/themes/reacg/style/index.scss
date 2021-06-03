@@ -723,27 +723,19 @@ body {
                 }
                 .diggnum,
                 .burynum {
+                    white-space: pre;
                     line-height: 1em !important;
+                    &:active {
+                        filter: brightness(0.8);
+                    }
                 }
             }
             .diggit {
                 background-color: #ff6b81;
-                &:hover {
-                    box-shadow: 0 0 4px #ff6b81;
-                    transition: all 0.2s;
-                }
-                &:active {
-                    filter: brightness(0.8);
-                }
             }
             .buryit {
                 margin-left: 10.8px;
                 background-color: #ced6e0;
-                &:hover {
-                    box-shadow: 0 0 4px #ced6e0;
-                    filter: brightness(0.8);
-                    transition: all 0.2s;
-                }
             }
             .diggit::before {
                 content: '👍';
