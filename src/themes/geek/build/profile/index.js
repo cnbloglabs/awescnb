@@ -126,12 +126,13 @@ function followAndUnfollow() {
         if (isOwner()) {
             return
         }
-        if ($('.profile-followstate').text() === '关注') {
+        const followButton = $('.profile-followstate')
+        if (followButton.text() === '关注') {
             follow()
-            $('.profile-followstate').text('取消关注')
+            followButton.text('取消关注')
         } else {
             unfollow()
-            $('.profile-followstate').text('关注')
+            followButton.text('关注')
         }
     })
 }
