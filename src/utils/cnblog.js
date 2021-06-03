@@ -1,3 +1,4 @@
+import { poll } from 'utils/helpers'
 const { currentBlogApp } = window
 
 /**
@@ -243,4 +244,22 @@ export function getUserInfo() {
  */
 export function getMessageCount() {
     return $('#msg_count').text()
+}
+
+/**
+ * 获取用户头像
+ * @returns {Promise}
+ */
+export function getUserAvatar() {
+    return new Promise(resolve => {
+        const res = poll(
+            () => $('#user_icon').length,
+            () => {
+                resolve($('#user_icon').attr('src'))
+            },
+        )
+        if (res === false) {
+            resolve('https://www.cnblogs.com/images/aggsite/avatar-default.svg')
+        }
+    })
 }
