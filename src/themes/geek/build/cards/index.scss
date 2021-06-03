@@ -12,7 +12,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    overflow: auto;
 }
 
 .entrylistTitle {
@@ -22,16 +21,11 @@
 .custom-card,
 .entrylistItem {
     background-color: var(--card-bg);
-    border-radius: 3px;
+    border-radius: 4px;
     box-sizing: border-box;
     flex-grow: 1;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     animation: content-in 0.5s ease-in 0s;
-    &:hover {
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-            0 10px 10px rgba(0, 0, 0, 0.22);
-    }
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 .custom-card {
@@ -50,21 +44,21 @@
 }
 
 .custom-card-title {
-    padding: 20px;
+    padding: 20px 20px 8px;
     font-weight: 700;
     &:before {
         content: '\f15c';
         font-weight: 400;
     }
+    &:hover {
+        color: var(--themeColor);
+    }
 }
 
 .custom-card-desc {
     color: #5c5e6e;
-    padding: 0 20px 20px;
+    padding: 0 20px 8px;
     flex-grow: 1;
-    .c_b_p_desc {
-        word-break: break-word;
-    }
     .MJXp-math {
         white-space: break-spaces;
     }
@@ -88,7 +82,7 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    border-top: 1px solid var(--sidebarBlock-border-color);
+    border-top: 1px solid var(--color-basic-200);
     div {
         display: flex;
         flex-wrap: wrap;
@@ -107,6 +101,9 @@
         margin-left: auto;
         @include btn(primary);
     }
+    li:before {
+        font-weight: 500;
+    }
 }
 
 @media screen and (min-width: 1920px) {
@@ -115,13 +112,13 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1175px) {
     .cards-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 908px) {
     .cards-list {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
