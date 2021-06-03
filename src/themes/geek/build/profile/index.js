@@ -16,7 +16,7 @@ import {
     getFollowers,
     getFollowing,
     follow,
-    unfollow,
+    // unfollow,
 } from 'utils/cnblog'
 
 function createContainer() {
@@ -129,11 +129,12 @@ function followAndUnfollow() {
         const followButton = $('.profile-followstate')
         if (followButton.text() === '关注') {
             follow()
-            followButton.text('取消关注')
-        } else {
-            unfollow()
-            followButton.text('关注')
+            followButton.text('已关注')
         }
+        // else {
+        //     unfollow()
+        //     followButton.text('关注')
+        // }
     })
 }
 
