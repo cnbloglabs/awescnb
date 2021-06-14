@@ -75,6 +75,7 @@ export function getFollowState() {
             .trim() === '-取消关注'
     )
 }
+3
 
 /**
  * @description 获取园龄

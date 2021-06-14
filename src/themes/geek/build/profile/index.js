@@ -170,5 +170,5 @@ export default () => {
     $('#mainContent').prepend(container)
 
     followAndUnfollow()
-    poll(() => $('#home #profile_block>a').length, insertMessage)
+    poll(() => $('#home #p_b_follow>a').length, insertMessage)
 }

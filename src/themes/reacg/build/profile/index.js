@@ -44,5 +44,5 @@ function buildInfo() {
 export default () => {
     buildAvatar()
     hideFollowButton()
-    poll(() => $('#profile_block>a').length, buildInfo)
+    poll(() => $('#p_b_follow>a').length, buildInfo)
 }

@@ -109,7 +109,7 @@ $detailsBorderColor: map-get($md, detailsBorderColor);
     img {
         margin: 10px auto;
         display: flex;
-        max-width: 100%;
+        max-width: 100% !important;
         border-radius: 2px;
     }
     table {
@@ -214,9 +214,6 @@ $detailsBorderColor: map-get($md, detailsBorderColor);
     //         }
     //     }
     // }
-    .hljs-ln-n:before {
-        font-weight: normal;
-    }
     mark {
         background-color: $markBg;
     }
