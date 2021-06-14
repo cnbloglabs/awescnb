@@ -10,7 +10,7 @@ const { themeName, openAnalyzer, cssExtract } = require('../awescnb.config')
 const entry = {
     // index: './src/awescnb/load.js',
     // [themeName]: `./src/themes/${themeName}/index.js`,
-    // demo: './src/themes/demo/index.js',
+    demo: './src/themes/demo/index.js',
     /* 同时构建所有皮肤 ↓ */
     bilibili: './src/themes/bilibili/index.js',
     csdn: './src/themes/csdn/index.js',
