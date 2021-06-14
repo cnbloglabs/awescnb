@@ -1,9 +1,9 @@
 module.exports = {
-    themeName: 'geek',
+    themeName: 'view',
     eslint: true,
     openBrowser: true,
     openAnalyzer: false,
-    cssExtract: false,
+    cssExtract: true,
 }
 
 // OPTIONS
