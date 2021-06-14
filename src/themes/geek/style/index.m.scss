@@ -13,10 +13,14 @@
         margin-right: 0;
     }
 
-    #blog-comments-placeholder,
-    #comment_form,
     #post_detail {
         padding: 1rem;
+    }
+
+    #blog-comments-placeholder,
+    #comment_form {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

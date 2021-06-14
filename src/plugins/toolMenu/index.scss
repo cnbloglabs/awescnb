@@ -90,6 +90,16 @@ $color: map-get($toolMenu, color);
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .toolbar-item {
+        &:hover {
+            .tooltip {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 767px) {
     .custom-tools-menu .menu-item:not(:last-child):hover {
         transform: none;

@@ -3,7 +3,7 @@ $postMessage: () !default;
 $postMessage: map-merge(
     (
         categoriesBackground: #ff6b6b,
-        tagsBackground: #22a6b3 #fbc531 #10ac84 #0097e6,
+        tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
         tagsColor: #333,
     ),
     $postMessage
@@ -17,33 +17,38 @@ $tagsColor: map-get($postMessage, tagsColor);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 4px;
     margin-bottom: 20px;
     width: 100%;
 }
 
 .message-top {
     display: flex;
-    gap: 16px;
-    .message-tags,
-    .message-categories {
+    flex-wrap: wrap;
+    .message-categories,
+    .message-tags {
         display: flex;
         align-items: center;
-        gap: 8px;
+        margin: 8px 0;
         a {
             padding: 4px 8px;
             font-size: 13px;
             line-height: 14px;
             border-radius: 2px;
+            margin: 0 0 0 8px;
         }
     }
-    .message-tags a {
-        border: 1px solid;
-        color: $tagsColor;
+    .message-categories {
+        margin: 0 16px 0 0;
+        a {
+            color: #fff;
+            background-color: $categoriesBackground;
+        }
     }
-    .message-categories a {
-        color: #fff;
-        background-color: $categoriesBackground;
+    .message-tags {
+        a {
+            border: 1px solid;
+            color: $tagsColor;
+        }
     }
 }
 

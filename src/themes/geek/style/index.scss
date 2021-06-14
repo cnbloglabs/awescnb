@@ -145,11 +145,12 @@ body {
     ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
         li {
-            padding: 8px 16px;
+            margin: 0 6px 6px 0;
+            padding: 2px 4px;
             background-color: var(--tags-bg);
             font-size: 13px;
+            border-radius: 2px;
             &:hover {
                 color: var(--themeColor);
             }
@@ -949,4 +950,3 @@ h1.PostListTitle + .pager,
 @import './markdown.scss';
 @import './index.m.scss';
 @import './plugins.scss';
-@import './coverPlugins.scss';

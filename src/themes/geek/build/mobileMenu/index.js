@@ -1,9 +1,10 @@
 import './index.scss'
+import { userAgent } from 'utils/helpers'
 
 /**
  * 构建移动端菜单
  */
-const buildMobileMenu = () => {
+function buildMobileMenu() {
     const el = $(`<div>`).addClass('mobile-menu')
 
     $('#left-side')
@@ -21,7 +22,7 @@ const buildMobileMenu = () => {
 /**
  * 构建头部菜单按钮
  */
-const buildHeaderTrigger = () => {
+function buildHeaderTrigger() {
     const el = `<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore"><span></span> <span></span><span></span></div>`
     $(el)
         .appendTo('#custom-searchbar')
@@ -32,6 +33,7 @@ const buildHeaderTrigger = () => {
 }
 
 export default () => {
+    if (userAgent() === 'pc') return
     buildMobileMenu()
     buildHeaderTrigger()
 }
