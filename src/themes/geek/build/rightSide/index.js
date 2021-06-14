@@ -1,8 +1,7 @@
 import './index.scss'
 import { getMonth, getQuarter } from 'utils/helpers'
-import { index } from 'constants/links'
 import { getBlogname } from 'utils/cnblog'
-import { contact, message } from 'constants/links'
+import { contact, message, index } from 'constants/links'
 import { avatar } from 'constants/cnblog'
 
 function flat() {
