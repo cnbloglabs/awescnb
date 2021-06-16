@@ -9,7 +9,6 @@ import { darkModeConfig } from 'options/plugins'
 function changeMode(mode, hasTransition = true) {
     if (mode === 'dark') {
         $('html').attr('theme', 'dark')
-        // toast('进入暗色模式', 'info', 1000)
         // setBackground('dark')
         localStorage.modeType = 'dark'
         if (hasTransition) {
@@ -20,7 +19,6 @@ function changeMode(mode, hasTransition = true) {
         }, 1200)
     } else {
         $('html').removeAttr('theme')
-        // toast('进入亮色模式', 'success', 1000)
         // setBackground('light')
         localStorage.modeType = 'light'
         if (hasTransition) {
@@ -69,19 +67,32 @@ function init(darkDefault, autoDark, autoLight) {
     const storage = localStorage.modeType
 
     const followStorage = () => {
-        storage === 'dark'
-            ? changeMode('dark', false)
-            : changeMode('light', false)
+        if (storage) {
+            storage === 'dark'
+                ? changeMode('dark', false)
+                : changeMode('light', false)
+            return
+        }
+
+        if (!storage) {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                changeMode('dark', false)
+            } else {
+                changeMode('light', false)
+            }
+        }
     }
 
-    if (!localStorage.getItem('modeType') && darkDefault) {
+    if (!storage && darkDefault) {
         changeMode('dark', false)
         return
     }
 
     if (isNight) {
         autoDark ? changeMode('dark', false) : followStorage()
-    } else {
+    }
+
+    if (!isNight) {
         autoLight ? changeMode('light', false) : followStorage()
     }
 }

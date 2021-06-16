@@ -9,18 +9,18 @@ const { themeName, openAnalyzer, cssExtract } = require('../awescnb.config')
 
 const entry = {
     // index: './src/awescnb/load.js',
-    // [themeName]: `./src/themes/${themeName}/index.js`,
+    [themeName]: `./src/themes/${themeName}/index.js`,
     /* 同时构建所有皮肤 ↓ */
-    demo: './src/themes/demo/index.js',
-    bilibili: './src/themes/bilibili/index.js',
-    csdn: './src/themes/csdn/index.js',
-    element: './src/themes/element/index.js',
-    geek: './src/themes/geek/index.js',
-    reacg: './src/themes/reacg/index.js',
-    silence: './src/themes/silence/index.js',
-    simple: './src/themes/simple/index.js',
-    view: './src/themes/view/index.js',
-    bilibiliv1: './src/themes/bilibiliv1/index.js',
+    // demo: './src/themes/demo/index.js',
+    // bilibili: './src/themes/bilibili/index.js',
+    // csdn: './src/themes/csdn/index.js',
+    // element: './src/themes/element/index.js',
+    // geek: './src/themes/geek/index.js',
+    // reacg: './src/themes/reacg/index.js',
+    // silence: './src/themes/silence/index.js',
+    // simple: './src/themes/simple/index.js',
+    // view: './src/themes/view/index.js',
+    // bilibiliv1: './src/themes/bilibiliv1/index.js',
 }
 
 let output = {
