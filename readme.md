@@ -1,15 +1,15 @@
 ### Awescnb
 
-🤞 **Awescnb**， awesome cnblog.
+🤞 **Awescnb**， awesome cnblogs.
 
--   安装：快速将 awescnb 集成到您的博客园中，体验多套皮肤任意切换；
+-   安装：快速将 awescnb 集成到你的博客园中，体验多套皮肤任意切换；
 -   创建：使用 awescnb 从零开始构建博客园皮肤；
--   迁移：将您的皮肤轻松迁移到 awescnb；
--   分享：将您构建的皮肤贡献给该项目，园友就能够切换到您的皮肤了。
+-   迁移：将你的皮肤轻松迁移到 awescnb；
+-   分享：将你构建的皮肤贡献给该项目，园友就能够切换到你的皮肤了。
 
 ### 文档
 
-安装皮肤到博客园、配置皮肤、构建皮肤等文档全部在这里，[点此查看](https://www.yuque.com/awescnb)。
+安装皮肤到博客园、配置皮肤、构建皮肤等文档全部在[这里](https://www.yuque.com/awescnb)。
 
 ### 交流
 
