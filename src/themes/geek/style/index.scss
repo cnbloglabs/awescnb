@@ -133,8 +133,7 @@ body {
             font-size: 12px;
             cursor: pointer;
             &:hover {
-                transition: all 0.2s;
-                color: var(--sidebarItem-hover-color);
+                color: var(--themeColor);
             }
         }
     }
@@ -151,9 +150,6 @@ body {
             background-color: var(--tags-bg);
             font-size: 13px;
             border-radius: 2px;
-            &:hover {
-                color: var(--themeColor);
-            }
         }
     }
 }

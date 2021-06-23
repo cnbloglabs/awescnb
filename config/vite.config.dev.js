@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import { injectHtml } from 'vite-plugin-html'
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 
-const { resolve } = require('path')
 const { themeName, openBrowser } = require('../awescnb.config')
 
 const injectHtmlOptions = {
