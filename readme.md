@@ -11,17 +11,13 @@
 
 安装皮肤到博客园、配置皮肤、构建皮肤等文档全部在[这里](https://www.yuque.com/awescnb)。
 
-### 交流
-
--   群：541802647 🐧 (活跃)
-
 ### 贡献
 
 1. fork 主仓库到自己账号成为副本仓库
 2. 在副本仓库完成代码贡献
 3. 将副本修改的内容给主仓库提交 Pull Requests
 
-### 贡献者
+### 感谢
 
 <div>
     <a href="https://www.cnblogs.com/guangzan/">
