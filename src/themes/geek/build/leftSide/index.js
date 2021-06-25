@@ -86,7 +86,7 @@ const removeHeaderToLeftside = () => {
         const item = $(`<a href="${url}" target="${target}">
             <li>
                 <span class="fas ${icon}"></span>
-                <span>${title}</span>
+                <span class="nav-item-text">${title}</span>
             </li>
         </a>`)
 

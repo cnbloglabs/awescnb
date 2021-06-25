@@ -128,13 +128,18 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 
 @media screen and (max-width: 1366px) {
     #cnblog-nav {
-        & span::before {
-            margin: 0;
+        .fas {
+            font-size: 22px;
+            margin-right: 0;
+        }
+        .nav-item-text {
+            display: none;
         }
         ul {
             a {
                 margin-bottom: 5px;
                 li {
+                    padding: 18px 0;
                     span:last-child {
                         margin-top: 10px;
                     }
