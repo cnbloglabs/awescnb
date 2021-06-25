@@ -1,6 +1,6 @@
 import { notationJs } from 'constants/libs'
 import { notationConfig } from 'options/plugins'
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { getCurrentPage } from 'utils/cnblog'
 
 const annotateList = []
@@ -49,7 +49,7 @@ export default (theme, devOptions, customList = annotateList) => {
     if (!enable) return
     if (!customList.length) return
 
-    cacheScript(notationJs, () => {
+    loadScript(notationJs, () => {
         const { annotate, annotationGroup } = window.RoughNotation
         buildNotation(annotate, annotationGroup, customList)
     })

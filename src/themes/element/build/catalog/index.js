@@ -1,4 +1,4 @@
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { isPostDetailsPage } from 'utils/cnblog'
 import { bootstrap } from '../../urls'
 
@@ -12,7 +12,7 @@ function toggleContent() {
 
 //开启滚动监听, 监听所有在.nav类下的li
 function scrollspy() {
-    cacheScript(bootstrap, function() {
+    loadScript(bootstrap, function() {
         $('body').scrollspy()
     })
 }

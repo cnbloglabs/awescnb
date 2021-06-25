@@ -5,7 +5,7 @@ $postSignature: (
 );
 
 $toolMenu: (
-    background: var(--color-basic-50),
+    background: var(--md-summary-bg),
     color: #fff,
 );
 
@@ -50,11 +50,14 @@ $emoji: (
 @import 'plugins/player/index.scss';
 @import 'plugins/codeLanguage/index.scss';
 
+// toolMenu
+
 .custom-toolbar {
     z-index: 9;
 }
 
 // comments avatars
+
 .custom-comment-avatar {
     position: relative;
     img {
@@ -80,30 +83,20 @@ $emoji: (
 }
 
 // postMessage
+
 .custom-categories a,
 .custom-tags a {
     box-shadow: none;
 }
 
-// emoji-button
-// .emoji-picker {
-//     background-color: #151728;
-//     border-color: #202234;
-//     .emoji-picker__search {
-//         background-color: #202234;
-//         border: none;
-//     }
-// }
-// .emoji-picker__emojis {
-//     height: 200px;
-// }
-
 // image box
+
 .medium-zoom-image--opened {
     z-index: 41;
 }
 
 // dragmenu
+
 .custom-drag-menu {
     z-index: 3;
 }
@@ -113,11 +106,135 @@ $emoji: (
 }
 
 // click
+
 #click-effects {
     z-index: 6;
 }
 
 // player
+
 body .aplayer.aplayer-fixed .aplayer-lrc {
     bottom: 30px;
+}
+
+// catalog
+
+#catalog {
+    padding: 25px;
+    font-size: 14px;
+    overflow-x: hidden;
+    word-wrap: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid var(--sidebarBlock-border-color);
+
+    .catalog-title {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        font-family: DM Sans, sans-serif;
+        color: #5c5e6e;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        &::after {
+            visibility: hidden;
+            content: '\f107';
+            font-weight: 700;
+            display: inline-block;
+            position: absolute;
+            right: 0.5rem;
+            margin: 0;
+        }
+
+        &.is-active::after {
+            transform: rotate(180deg);
+            transform-origin: center;
+            transition-duration: 86ms;
+            transition-property: transform;
+        }
+    }
+    ul {
+        border-left: 1px solid var(--sidebarBlock-border-color);
+
+        li {
+            margin-top: 3.618px;
+            color: var(--catalog-color);
+
+            &:hover {
+                color: var(--catalogList-hover);
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;
+
+                .icon {
+                    width: 1.2em;
+                    height: 1.8em;
+                }
+            }
+        }
+
+        .h1-list,
+        .h2-list {
+            &::before {
+                position: relative;
+                right: 4px;
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                content: '';
+                border-radius: 50%;
+                background-color: var(--themeColor);
+                margin-right: 4px;
+            }
+        }
+
+        .catalog-active {
+            color: var(--themeColor);
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .h1-list {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .h2-list {
+            display: flex;
+            align-items: center;
+        }
+        .h2-list {
+            font-size: 14px;
+        }
+        .h3-list,
+        .h4-list,
+        .h5-list,
+        .h6-list {
+            font-size: 12px;
+        }
+        .h1-list ~ .h2-list {
+            margin-left: 2em;
+            font-size: 14px;
+            &::before {
+                display: none;
+            }
+        }
+        .h2-list ~ .h3-list {
+            margin-left: 3em;
+        }
+        .h3-list ~ .h4-list {
+            margin-left: 4em;
+        }
+        .h4-list ~ .h5-list {
+            margin-left: 5em;
+        }
+        .h5-list ~ .h6-list {
+            margin-left: 6em;
+        }
+    }
 }

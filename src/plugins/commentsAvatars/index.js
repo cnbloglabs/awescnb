@@ -72,7 +72,7 @@ function listener() {
             option.url.indexOf('PostComment/Add') > -1 ||
             option.url.indexOf('DeleteComment') > -1
         ) {
-            new window.blogCommentManager().renderComments(0)
+            new blogCommentManager().renderComments(0)
         }
     })
     $(document).ajaxComplete(function(event, xhr, option) {

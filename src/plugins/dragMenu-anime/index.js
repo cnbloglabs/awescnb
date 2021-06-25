@@ -5,7 +5,7 @@ import {
     // jqueryui,
     animeJs,
 } from 'constants/libs'
-import { cacheScript, userAgent } from 'utils/helpers'
+import { loadScript, userAgent } from 'utils/helpers'
 import { getCurrentPage } from 'utils/cnblog'
 
 let anime
@@ -37,7 +37,7 @@ class Menu {
                 }
             })
             // if (draggable) {
-            //     cacheScript(jqueryui, () => {
+            //     loadScript(jqueryui, () => {
             //         item.$element.draggable(
             //             {
             //                 start() {
@@ -324,7 +324,7 @@ function dragMenu(theme, devOptions, pluginOptions = {}) {
 
     $.extend(true, extraOptions, pluginOptions)
 
-    cacheScript(animeJs, () => {
+    loadScript(animeJs, () => {
         anime = window.anime
         create(extraOptions, initialOpen)
     })

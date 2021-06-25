@@ -8,7 +8,7 @@ import { linenumbersConfig } from 'options/plugins'
  * @param {*} params
  */
 // function buildLineNumbersByUsingLib(params) {
-//     cacheScript(linenumbersjs, () => {
+//     loadScript(linenumbersjs, () => {
 //         hljs.initLineNumbersOnLoad({
 //             singleLine: true,
 //         })

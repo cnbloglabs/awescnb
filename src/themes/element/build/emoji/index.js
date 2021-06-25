@@ -1,4 +1,4 @@
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { isPostDetailsPage } from 'utils/cnblog'
 import { owo } from '../../urls'
 
@@ -13,7 +13,7 @@ function owoEmoji() {
 
 // load
 function load_face() {
-    new window.OwO({
+    new OwO({
         logo: '<i class="fa fa-smile-o" aria-hidden="true"></i>',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementById('tbCommentBody'),
@@ -29,5 +29,5 @@ function load_face() {
 export default function emoji() {
     if (!isPostDetailsPage()) return
     owoEmoji()
-    cacheScript(owo, load_face)
+    loadScript(owo, load_face)
 }

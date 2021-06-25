@@ -1,4 +1,4 @@
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { isPostDetailsPage } from 'utils/cnblog'
 import { fancybox } from '../../urls'
 
@@ -14,7 +14,7 @@ function build() {
 
 function fancyImgbox() {
     if (!isPostDetailsPage()) return
-    cacheScript(fancybox, build)
+    loadScript(fancybox, build)
 }
 
 export default fancyImgbox

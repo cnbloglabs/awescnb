@@ -8,7 +8,7 @@ const { merge } = require('webpack-merge')
 const { themeName, openAnalyzer, cssExtract } = require('../awescnb.config')
 
 const entry = {
-    // index: './src/awescnb/load.js',
+    // index: './src/awescnb/load.js', /* 入口文件 */
     [themeName]: `./src/themes/${themeName}/index.js`,
     /* 同时构建所有皮肤 ↓ */
     // demo: './src/themes/demo/index.js',

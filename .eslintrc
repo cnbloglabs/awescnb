@@ -16,9 +16,12 @@
         "SharedArrayBuffer": "readonly",
         "hljs": "readonly",
         "loadlive2d": "readonly",
-        "EmojiButton": true,
-        "APlayer": true,
-        "roughViz": true
+        "EmojiButton": "readonly",
+        "APlayer": "readonly",
+        "roughViz": "readonly",
+        "Typed": "readonly",
+        "blogCommentManager": "readonly",
+        "OwO": "readonly"
     },
     "parser": "babel-eslint",
     "parserOptions": {

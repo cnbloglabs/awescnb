@@ -1,5 +1,6 @@
 // 锁屏
-import Typed from 'typed.js'
+import { typedJs } from 'constants/libs'
+import { loadScript } from 'utils/helpers'
 import { randomImage } from 'constants/urls'
 import { lockConfig } from 'options/plugins'
 import { avatar } from 'constants/cnblog'
@@ -36,7 +37,7 @@ function setBackground(background) {
  * 打开锁屏
  * @param {*} strings
  */
-function open(strings) {
+function handleOpen(strings) {
     const typedOpts = {
         strings: strings.length ? strings : ['快去自定义你的个性签名吧~'],
         typeSpeed: 100,
@@ -51,7 +52,7 @@ function open(strings) {
 /**
  * 关闭锁屏
  */
-function close() {
+function handleClose() {
     $(document).on('click', '.lock-screen-close', () => {
         $('.lock-screen').css('top', '-100vh')
         typed.destroy()
@@ -66,6 +67,9 @@ export default (theme, devOptions) => {
     if (!enable) return
     build()
     setBackground(background)
-    open(strings)
-    close()
+
+    loadScript(typedJs, () => {
+        handleOpen(strings)
+        handleClose()
+    })
 }

@@ -1,4 +1,4 @@
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { isPostDetailsPage } from 'utils/cnblog'
 import { clipboard } from '../../urls'
 
@@ -42,7 +42,7 @@ function build() {
 
 function copy() {
     if (!isPostDetailsPage()) return
-    cacheScript(clipboard, build)
+    loadScript(clipboard, build)
 }
 
 export default copy

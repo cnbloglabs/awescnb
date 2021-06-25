@@ -13,14 +13,11 @@
         margin-right: 0;
     }
 
-    #post_detail {
-        padding: 1rem;
-    }
-
     #blog-comments-placeholder,
-    #comment_form {
-        padding-left: 0;
-        padding-right: 0;
+    #comment_form,
+    #post_detail {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -61,7 +58,7 @@
     }
 
     #blog_post_info_block #blog_post_info #div_digg {
-        margin-top: 1rem;
+        margin-top: 12px;
     }
 
     .comment_actions {
@@ -116,7 +113,7 @@
     #left-side {
         // display: none;
         grid-area: none;
-        margin: 0;
+        // margin: 0;
     }
 
     #left-side {
