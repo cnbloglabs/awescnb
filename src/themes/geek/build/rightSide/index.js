@@ -1,6 +1,6 @@
 import './index.scss'
 import { getMonth, getQuarter } from 'utils/helpers'
-import { getBlogname } from 'utils/cnblog'
+// import { getBlogname } from 'utils/cnblog'
 import { contact, message, index } from 'constants/links'
 import { avatar } from 'constants/cnblog'
 
@@ -9,7 +9,7 @@ function flat() {
 }
 
 function buildTopBtns() {
-    const nickname = getBlogname()
+    // const nickname = getBlogname()
     const noticeCount = $('#msg_count').text()
     const el = `
     <div class="account">
