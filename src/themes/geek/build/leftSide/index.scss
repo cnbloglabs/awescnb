@@ -1,5 +1,9 @@
 $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
 
+#left-side .fas {
+    margin-right: 8px;
+}
+
 .logo {
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
@@ -47,7 +51,7 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
         white-space: nowrap;
         li {
             text-decoration: none;
-            color: #9c9cab;
+            color: #777;
             display: flex;
             align-items: center;
             &:not(:last-child) {
@@ -187,17 +191,14 @@ $iconsColor: #3273dc #00d1b2 #e7339f #48c774 #ffd257 #00d1b2;
             padding-top: 60px;
             flex-direction: row;
             flex-wrap: wrap;
-            border-bottom: 1px solid
-                var(--sidebarBlock-border-color);
+            border-bottom: 1px solid var(--sidebarBlock-border-color);
             ul {
                 flex-direction: row;
                 a {
                     width: 20%;
                     li {
                         span:first-child {
-                            background-color: var(
-                                --tags-bg
-                            );
+                            background-color: var(--tags-bg);
                             border-radius: 50%;
                             display: flex;
                             justify-content: center;

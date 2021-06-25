@@ -13,25 +13,27 @@ function buildTopBtns() {
     const noticeCount = $('#msg_count').text()
     const el = `
     <div class="account">
-        <button class="account-button">
+        <button class="account-button email">
             <a href="${contact}" target="_bank">
                 <li class="fas fa-envelope"></li>
             </a>
         </button>
-        <button class="account-button">
+        <button class="account-button message">
             <a href="${message}" class='account-button-notice'>
                 <li class="fas fa-bell"></li>
                 <span class="notice-count" ${!noticeCount &&
                     'style=display:none'}>${noticeCount}</span>
             </a>
         </button>
-        <div class="account-nickname">${nickname}</div>
+
         <div class="account-avatar">
             <a href="${index}"><img src="${avatar}"></a>
         </div>
     </div>`
     $('#sideBarMain').prepend(el)
 }
+
+/* <div class="account-nickname">${nickname}</div> */
 
 function buildCalendar() {
     const quarter = getQuarter()

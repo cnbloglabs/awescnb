@@ -27,6 +27,7 @@ body {
     line-height: 1.5;
     font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
         Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+    overflow: hidden;
 }
 
 #home {
@@ -37,9 +38,11 @@ body {
         'left main main right'
         'left main main right'
         'left main main right';
-
     height: 100vh;
-    width: 100%;
+}
+
+.forFlow {
+    z-index: 2;
 }
 
 #header {
@@ -49,9 +52,8 @@ body {
 #main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 60px 1fr 30px;
+    grid-template-rows: 40px 1fr 30px;
     grid-template-columns: 1fr;
-    margin-top: 8px;
 }
 
 #mainContent {
@@ -69,17 +71,6 @@ body {
 }
 
 .postTitl2,
-.entrylistPosttitle,
-.postTitle {
-    font-weight: 600;
-    padding-bottom: 0.5rem;
-    &::before {
-        content: '\f15c';
-        font-weight: normal;
-    }
-}
-
-.postTitl2,
 .entrylistPosttitle {
     width: 100%;
 }
@@ -88,12 +79,6 @@ body {
 .postCon {
     color: var(--postDesc-color);
     font-size: 14px;
-}
-
-.postDesc2,
-.entrylistItemPostDesc,
-.postDesc {
-    padding-top: 0.5rem;
 }
 
 .entrylistItem {
@@ -109,7 +94,6 @@ body {
 
 #sideBar {
     grid-area: right;
-    margin: 8px 8px 0 0;
     background-color: var(--sidebar-bg);
     border-radius: 0 4px 0 0;
 }
@@ -129,7 +113,7 @@ body {
     }
     ul {
         li {
-            padding: 0.2rem 0.5rem;
+            padding: 4px 8px;
             font-size: 12px;
             cursor: pointer;
             &:hover {
@@ -166,7 +150,7 @@ body {
 
 #sidebar_recentcomments {
     .recent_comment_body {
-        padding: 1rem;
+        padding: 12px;
         &:hover {
             color: inherit;
         }
@@ -175,10 +159,8 @@ body {
 
 // rightside end
 
-// leftside start
 #left-side {
     grid-area: left;
-    margin: 8px 0 0 8px;
     border-right: 1px solid var(--sidebarBlock-border-color);
     display: flex;
     flex-direction: column;
@@ -187,8 +169,6 @@ body {
     border-radius: 4px 0 0 0;
 }
 
-// leftside end
-
 #footer {
     margin: 0;
     display: flex;
@@ -196,19 +176,22 @@ body {
     align-items: center;
     background-color: var(--footer-bg);
     color: var(--footer-color);
-    font-size: 14px;
+    font-size: 13px;
     #poweredby {
-        margin-left: 1rem;
+        margin-left: 12px;
     }
 }
 
 #post_detail {
     margin-top: 20px;
+    padding: 16px;
     animation: content-in 0.5s ease-in 0s;
     border-radius: 4px;
-    // color: #fff;
+    background-color: var(--form-bg);
+    overflow: hidden;
 
     #topics .postDesc {
+        margin: 0 0 20px;
         padding: 0;
         color: var(--postDesc-color);
         text-align: center;
@@ -218,18 +201,10 @@ body {
             text-transform: none;
         }
     }
-}
 
-#post_detail,
-#blog-comments-placeholder,
-#comment_form {
-    padding: 1.5rem 1.5rem 0;
-    background-color: var(--form-bg);
-    overflow: hidden;
-}
-
-#comment_form {
-    padding-bottom: 1.5rem;
+    .postTitle {
+        font-size: 30px;
+    }
 }
 
 // 分页器start
@@ -239,34 +214,36 @@ body {
     justify-content: center;
     grid-column-start: 1;
     grid-column-end: 5;
-    margin: 0 0 16px;
-    padding: 0.5rem 0;
+    padding: 8px 0;
+    margin: 24px 0 0;
     font-size: 14px;
     text-align: center;
     background-color: var(--pager-bg);
     color: var(--color-basic-700);
     border-radius: 4px;
-    a {
-        margin: 0 16px;
-        padding: 0 16px;
+    a,
+    span.current {
+        margin: 0 10px;
+        padding: 0 12px;
         border-radius: 4px;
         background-color: var(--pagerBtn-bg);
-        border: none;
-        white-space: nowrap;
-        color: var(--color-basic-900);
-        border: 1px solid var(--pagerBtn-bg);
         &:hover {
-            color: var(--themeColor);
-            border-color: var(--themeColor);
+            filter: brightness(0.98);
+        }
+        &:active {
+            filter: brightness(0.95);
         }
     }
+
+    a {
+        color: var(--color-basic-900);
+        border: 1px solid var(--form-border-color);
+    }
+
     span.current {
-        background-color: inherit;
-        border: inherit;
-        color: inherit;
-        font-weight: bold;
-        margin: 0;
-        padding: 0;
+        color: var(--themeColor);
+        font-weight: 500;
+        border: 1px solid var(--themeColor);
     }
 }
 
@@ -285,10 +262,10 @@ h1.PostListTitle + .pager,
 }
 
 #nav_next_page {
-    margin: 0 0 1rem;
+    margin: 0 0 12px;
     text-align: center;
     a {
-        padding: 0.5rem 0;
+        padding: 8px 0;
         border-radius: 4px;
         width: 100%;
         background-color: var(--pager-bg);
@@ -301,26 +278,14 @@ h1.PostListTitle + .pager,
     }
 }
 
-// 分页器end
-
-#post_detail {
-    .postTitle {
-        padding-left: 0;
-        padding-bottom: 1rem;
-        font-size: 1.2rem;
-    }
-}
-
-.forFlow {
-    z-index: 2;
-}
+// 分页器 end
 
 // 当前标签页,随笔分类
 #taglist_title,
 .custom-gallery h3,
 .entrylistTitle,
 .PostListTitle {
-    padding: 1rem 1rem;
+    padding: 12px 12px;
     border-bottom: 1px solid var(--listItemTitle-border-color);
     font-weight: 700;
     background-color: var(--listItemTitle-bg);
@@ -344,16 +309,16 @@ h1.PostListTitle + .pager,
     margin-left: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 12px;
 
     .PostList {
-        padding: 0.5rem;
+        padding: 8px;
         margin: 0;
         background-color: var(--listItem-bg);
         border-radius: 4px;
 
         .postTitl2 {
-            font-size: 1rem;
+            font-size: 12px;
             font-weight: normal;
         }
 
@@ -396,7 +361,7 @@ h1.PostListTitle + .pager,
         }
 
         td {
-            margin: 0.5rem;
+            margin: 8px;
             border-radius: 4px;
             background-color: var(--tags-bg);
         }
@@ -427,7 +392,7 @@ h1.PostListTitle + .pager,
         justify-content: center;
         flex-wrap: wrap;
         align-items: baseline;
-        margin: 20px 0 30px;
+        margin: 20px 0;
 
         #green_channel {
             @include center();
@@ -593,6 +558,9 @@ h1.PostListTitle + .pager,
 // 评论列表
 #blog-comments-placeholder {
     border-radius: 4px;
+    padding: 0 16px;
+    background-color: var(--form-bg);
+    overflow: hidden;
 
     .feedback_area_title {
         padding: 7.56px 10.8px;
@@ -604,6 +572,8 @@ h1.PostListTitle + .pager,
 
         &::before {
             content: '\f086';
+            margin-right: 4px;
+            font-weight: normal;
         }
     }
 
@@ -630,18 +600,9 @@ h1.PostListTitle + .pager,
             color: var(--commonBody-color);
             margin-right: 10px;
             margin-left: 0;
-            // @
             a:nth-child(1) {
-                // color: #ffd257;
-                // font-weight: 700;
-                // font-size: 1.2rem;
                 border-bottom: none;
             }
-
-            // a:not(:nth-child(1)):hover {
-            //     color: #3273dc;
-            //     transition: all 0.25s;
-            // }
         }
 
         // img {
@@ -794,6 +755,9 @@ h1.PostListTitle + .pager,
 
 // 发表评论
 #comment_form {
+    padding: 32px 16px 0;
+    background-color: var(--form-bg);
+    overflow: hidden;
     #divCommentShow,
     #ad_text_under_commentbox,
     #comment_nav,
@@ -829,6 +793,8 @@ h1.PostListTitle + .pager,
 
             &::before {
                 content: '\f4ad';
+                font-weight: normal;
+                margin-right: 4px;
             }
         }
 

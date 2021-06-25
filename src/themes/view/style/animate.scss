@@ -1,10 +1,6 @@
-@keyframes content-in {
-    from {
-        transform: translateY(10rem);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
+@keyframes fade-in {
+    100% {
         opacity: 1;
+        transform: none;
     }
 }

@@ -1,4 +1,4 @@
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { themeRepository } from 'constants/urls'
 
 /**
@@ -6,7 +6,7 @@ import { themeRepository } from 'constants/urls'
  * @param {string} theme 皮肤名称
  */
 function loadTheme(theme) {
-    cacheScript(`${themeRepository}/${theme}.js`)
+    loadScript(`${themeRepository}/${theme}.js`)
 }
 
 /**

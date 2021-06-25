@@ -2,6 +2,7 @@
  * 构建代码块复制按钮
  */
 import { isPostDetailsPage, isMd } from 'utils/cnblog'
+import toast from 'plugins/toast'
 
 /**
  * 构建复制按钮
@@ -36,12 +37,12 @@ function handleClickCopyButton() {
             .writeText(code)
             .then(() => {
                 $(this).text('copied')
+                toast('复制成功')
                 setTimeout(() => {
                     $(this).text('copy')
                 }, 1000)
             })
             .catch(err => {
-                // 如果用户没有授权，则抛出异常
                 console.error('无法复制', err)
             })
 

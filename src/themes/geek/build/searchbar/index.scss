@@ -1,24 +1,21 @@
-#custom-searchbar {
-    height: 60px;
+.custom-searchbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    border-bottom: 1px solid var(--color-basic-200);
     background-color: var(--searchbar-bg);
     z-index: 5;
-    position: relative;
-    // box-shadow: 0 14px 16px -14px var(--searchbar-bg);
-    border-bottom: 1px solid var(--color-basic-200);
+
     input {
-        height: 100%;
-        width: 100%;
-        display: block;
-        background-color: transparent;
-        border: none;
         padding: 0 54px;
+        border: none;
+        background-color: transparent;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3e%3cpath d='M508.9 478.7L360 330a201.6 201.6 0 0045.2-127.3C405.3 90.9 314.4 0 202.7 0S0 91 0 202.7s91 202.6 202.7 202.6c48.2 0 92.4-17 127.3-45.2L478.7 509c4.2 4.1 11 4.1 15 0l15.2-15.1c4.1-4.2 4.1-11 0-15zm-306.2-116c-88.3 0-160-71.8-160-160s71.7-160 160-160 160 71.7 160 160-71.8 160-160 160z' data-original='%23000000' class='active-path' data-old_color='%23000000' fill='%235C5D71'/%3e%3c/svg%3e");
         background-repeat: no-repeat;
         background-size: 16px;
         background-position: 25px 50%;
         color: var(--searchbar-color);
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 600;
+        font-size: 13px;
         outline: none;
     }
 }

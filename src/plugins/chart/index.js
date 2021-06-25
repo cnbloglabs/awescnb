@@ -1,4 +1,4 @@
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { chart } from 'constants/libs'
 import { chartConfig } from 'options/plugins'
 
@@ -54,7 +54,7 @@ export default (theme, devOptions, pluginOptions) => {
         pluginOptions,
     )
 
-    cacheScript(chart, () => {
+    loadScript(chart, () => {
         createChartContainer(mountedNode)
         createChart(labels, datasets)
     })

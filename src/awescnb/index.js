@@ -73,14 +73,14 @@ function createThemeAPI() {
  * 在创建皮肤之前初始化内容
  * @returns {Object} { createTheme }
  */
-function baseCreateAwescnb() {
-    init()
+function baseCreateAwescnb(options) {
+    init(options)
     return {
         createTheme: createThemeAPI(),
     }
 }
 
-export function createTheme() {
-    const theme = baseCreateAwescnb().createTheme()
+export function createTheme(options) {
+    const theme = baseCreateAwescnb(options).createTheme()
     return theme
 }

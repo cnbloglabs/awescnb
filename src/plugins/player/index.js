@@ -1,7 +1,7 @@
 // 音乐播放器
 import { aplayerjs, aplayercss } from 'constants/libs'
 import { musicPlayerConfig } from 'options/plugins'
-import { userAgent, cacheScript, addCss } from 'utils/helpers'
+import { userAgent, loadScript, loadLink } from 'utils/helpers'
 import { getCurrentPage } from 'utils/cnblog'
 
 /**
@@ -74,8 +74,8 @@ export default (theme, devOptions) => {
     if (!enable) return
     if (page !== getCurrentPage() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return
-    addCss(aplayercss)
-    cacheScript(aplayerjs, () => {
+    loadLink(aplayercss)
+    loadScript(aplayerjs, () => {
         buildPlayer(autoplay, audio, volume, lrc)
     })
 }

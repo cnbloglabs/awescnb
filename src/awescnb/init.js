@@ -24,8 +24,8 @@ function hideLoading() {
 /**
  * 控制台打印 awescnb 信息
  */
-function printInfo() {
-    const { log } = getThemeOptions()
+function printInfo(themeOptions) {
+    const { log } = getThemeOptions(themeOptions)
     if (!log) return
     if (__DEV__) return
     const logs = [
@@ -67,8 +67,8 @@ function printInfo() {
     }
 }
 
-export default () => {
+export default options => {
     setDevOptions()
     hideLoading()
-    printInfo()
+    printInfo(options)
 }

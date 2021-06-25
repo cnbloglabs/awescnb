@@ -3,7 +3,7 @@
  */
 import { animeJs } from 'constants/libs'
 import { clickConfig } from 'options/plugins'
-import { userAgent, cacheScript } from 'utils/helpers'
+import { userAgent, loadScript } from 'utils/helpers'
 
 /**
  * 构建点击特效
@@ -172,7 +172,7 @@ function build(options) {
 
 export default (theme, devOptions) => {
     const options = clickConfig(devOptions)
-    cacheScript(animeJs, () => {
+    loadScript(animeJs, () => {
         build(options)
     })
 }

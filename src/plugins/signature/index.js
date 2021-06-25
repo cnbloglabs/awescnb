@@ -1,6 +1,7 @@
-// 个性签名在侧边栏构建
-import Typed from 'typed.js'
+// 个性签名
 import { signatureConfig } from 'options/plugins'
+import { typedJs } from 'constants/libs'
+import { loadScript } from 'utils/helpers'
 
 /**
  * 构建容器
@@ -16,9 +17,11 @@ function build(selector) {
  * @param {*} contents
  */
 function typed(contents) {
-    new Typed('.custom-signature span', {
-        strings: contents,
-        typeSpeed: 70,
+    loadScript(typedJs, () => {
+        new Typed('.custom-signature span', {
+            strings: contents,
+            typeSpeed: 70,
+        })
     })
 }
 

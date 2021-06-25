@@ -67,7 +67,8 @@ body {
 }
 
 #post_detail {
-    animation: content-in 0.5s ease-in 0s;
+    animation: fade-in 0.8s ease-out forwards;
+    transform: translateY(1em);
     #topics .postDesc {
         text-align: center;
         padding: 0;

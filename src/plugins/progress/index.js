@@ -7,6 +7,7 @@ import { topProgressConfig } from 'options/plugins'
 
 export default (theme, devOptions) => {
     const { enable, page, agent } = topProgressConfig(devOptions)
+
     if (!enable) return
     if (page !== getCurrentPage() && page !== 'all') return
     if (agent !== userAgent() && agent !== 'all') return

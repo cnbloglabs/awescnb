@@ -1,6 +1,6 @@
 import './index.scss'
 import { fontUrl, icons, foodIcons } from './icons'
-import { randomProperty, cacheScript, poll } from 'utils/helpers'
+import { randomProperty, loadScript, poll } from 'utils/helpers'
 import { getCurrentPage } from 'utils/cnblog'
 import { getGiteeOptions, getGithubOptions } from 'options/extra'
 
@@ -265,7 +265,7 @@ function build() {
 
 // 加载i confont js
 function setIcons() {
-    cacheScript(fontUrl, build)
+    loadScript(fontUrl, build)
 }
 
 // -------- icon end ----

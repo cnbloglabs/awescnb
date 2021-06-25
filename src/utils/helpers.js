@@ -134,7 +134,7 @@ export function isElementInViewport(el) {
  * @description 创建link标签
  * @param {String} href
  */
-export function addCss(href) {
+export function loadLink(href) {
     $('head').append('<link>')
     const toolbarCss = $('head').children(':last')
     toolbarCss.attr({
@@ -277,7 +277,7 @@ export function poll(conditionFn, callback) {
  * @param {url} String
  * @param {callback} Function
  */
-export function cacheScript(url, callback = function() {}) {
+export function loadScript(url, callback = function() {}) {
     $.ajax({
         type: 'GET',
         dataType: 'script',

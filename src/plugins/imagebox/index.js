@@ -5,7 +5,7 @@
  */
 import { mediaZoomJs } from 'constants/libs'
 import { imageboxConfig } from 'options/plugins'
-import { poll, mousewheel, cacheScript } from 'utils/helpers'
+import { poll, mousewheel, loadScript } from 'utils/helpers'
 import { isPostDetailsPage, isMd, isAlbumPage } from 'utils/cnblog'
 
 const customGalleryClass = 'custom-gallery'
@@ -76,7 +76,7 @@ export default (theme, devOptions) => {
     if (!isMd() && !isAlbumPage() && !isPostDetailsPage()) return
     if ($('.custom-zoom').length) return
     buildGallery()
-    cacheScript(mediaZoomJs, () => {
+    loadScript(mediaZoomJs, () => {
         poll(
             () =>
                 $('.blog_comment_body').length ||

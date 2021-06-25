@@ -1,7 +1,7 @@
 import live2dModels from './live2dModels'
 import { live2d, live2djs } from 'constants/libs'
 import { live2dConfig } from 'options/plugins'
-import { userAgent, cacheScript, randomProperty } from 'utils/helpers'
+import { userAgent, loadScript, randomProperty } from 'utils/helpers'
 import { getCurrentPage } from 'utils/cnblog'
 
 /**
@@ -36,7 +36,7 @@ function loadModel(model) {
             : live2dModels[model]
 
     const url = `${live2d.url}@${live2d.version}/${live2dModel}`
-    cacheScript(live2djs, () => {
+    loadScript(live2djs, () => {
         loadlive2d('model', url)
     })
 }

@@ -1,7 +1,7 @@
 // 使用 plugin/emoji 代替
 import { emojijs } from 'constants/libs'
 import { emojiConfig } from 'options/plugins'
-import { cacheScript, userAgent } from 'utils/helpers'
+import { loadScript, userAgent } from 'utils/helpers'
 import { isPostDetailsPage } from 'utils/cnblog'
 
 /**
@@ -91,6 +91,6 @@ export default (_theme, devOptions) => {
         build(showRecents, recentsCount, showSearch, showPreview, theme)
     }
 
-    cacheScript(emojijs, builder)
+    loadScript(emojijs, builder)
     window.buildEmojis = builder
 }

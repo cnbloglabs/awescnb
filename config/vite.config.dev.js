@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite'
 import { injectHtml } from 'vite-plugin-html'
-import vue from '@vitejs/plugin-vue'
+import { themeName, openBrowser } from '../awescnb.config'
 import { resolve } from 'path'
-
-const { themeName, openBrowser } = require('../awescnb.config')
 
 const injectHtmlOptions = {
     injectData: {
@@ -28,17 +26,9 @@ export default defineConfig({
             ...injectHtml(injectHtmlOptions),
             apply: 'serve',
         },
-        {
-            ...vue(),
-            apply: 'serve',
-        },
     ],
     server: {
         port: 3000,
         open: openBrowser,
-        fsServe: {
-            strict: false,
-            root: '../home',
-        },
     },
 })

@@ -1,8 +1,8 @@
 // 顶部按钮 start
 .account {
-    height: 60px;
     display: flex;
     align-items: center;
+    height: 60px;
     position: sticky;
     top: 0;
     background-color: var(--account-bg);
@@ -17,16 +17,11 @@
     padding: 0;
     cursor: pointer;
     position: relative;
+    margin-left: 20px;
     .fas::before {
         font-size: 20px;
+        font-weight: 500;
     }
-}
-
-.account-button:nth-child(1) {
-    margin-left: 0.5em;
-}
-.account-button:nth-child(2) {
-    margin-right: 0.5em;
 }
 
 .fa-bell:before {
@@ -38,10 +33,10 @@
     .notice-count {
         display: inline-block;
         position: absolute;
-        bottom: -3px;
-        right: -6px;
-        width: 11px;
-        height: 11px;
+        top: -7px;
+        right: -5px;
+        width: 14px;
+        height: 14px;
         line-height: 11px;
         border-radius: 50%;
         color: #fff;
@@ -49,21 +44,12 @@
         font-size: 8px;
         text-align: center;
         white-space: nowrap;
+        border: 2px solid var(--account-bg);
     }
-}
-.account-nickname {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 auto;
-    color: #64677a;
-    font-weight: 600;
-    // white-space: nowrap;
-    width: auto;
-    max-width: 133px;
-    font-size: 13px;
 }
 
 .account-avatar {
+    margin-left: auto;
     img {
         width: 28px;
         height: 28px;

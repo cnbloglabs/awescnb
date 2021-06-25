@@ -1,6 +1,6 @@
 // 消息弹窗
 import './index.css'
-import { cacheScript } from 'utils/helpers'
+import { loadScript } from 'utils/helpers'
 import { isPostDetailsPage } from 'utils/cnblog'
 import { notiflix } from '../../urls'
 
@@ -14,5 +14,5 @@ function build() {
 }
 
 export default function toast() {
-    cacheScript(notiflix, build)
+    loadScript(notiflix, build)
 }
