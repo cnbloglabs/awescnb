@@ -285,10 +285,13 @@ h1.PostListTitle + .pager,
 .custom-gallery h3,
 .entrylistTitle,
 .PostListTitle {
-    padding: 12px 12px;
-    border-bottom: 1px solid var(--listItemTitle-border-color);
+    margin: 20px 0 0;
+    padding: 12px;
+    border: 1px solid var(--listItemTitle-border-color);
     font-weight: 700;
     background-color: var(--listItemTitle-bg);
+    border-radius: 4px;
+    text-align: center;
 }
 
 .PostListTitle {
@@ -316,9 +319,10 @@ h1.PostListTitle + .pager,
         margin: 0;
         background-color: var(--listItem-bg);
         border-radius: 4px;
+        box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 
         .postTitl2 {
-            font-size: 12px;
+            font-size: 16px;
             font-weight: normal;
         }
 
@@ -331,11 +335,6 @@ h1.PostListTitle + .pager,
         .postText2 {
             display: none;
         }
-        &:hover {
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-                0 10px 10px rgba(0, 0, 0, 0.22);
-        }
     }
 }
 
@@ -347,6 +346,7 @@ h1.PostListTitle + .pager,
     }
 
     #taglist {
+        margin-top: 20px;
         table,
         tbody,
         tr,
@@ -354,16 +354,42 @@ h1.PostListTitle + .pager,
             display: block;
         }
 
-        tbody,
+        tbody {
+        }
+
         tr {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 8px;
+            width: 100%;
+            margin-bottom: 8px;
         }
 
         td {
-            margin: 8px;
-            border-radius: 4px;
-            background-color: var(--tags-bg);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 4px 16px;
+                width: 100%;
+                border-radius: 4px;
+                background-color: var(--btn-bg-color);
+                border: 1px solid var(--btn-border-color);
+                &:hover {
+                    background: var(--btn-bg-hover-color);
+                }
+                &:active {
+                    background: var(--btn-bg-active-color);
+                }
+            }
+            span {
+                position: absolute;
+                right: 4px;
+                top: 0;
+            }
         }
     }
 }
