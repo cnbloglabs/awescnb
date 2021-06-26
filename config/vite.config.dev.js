@@ -1,7 +1,7 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import { injectHtml } from 'vite-plugin-html'
 import { themeName, openBrowser } from '../awescnb.config'
-import { resolve } from 'path'
 
 const injectHtmlOptions = {
     injectData: {
