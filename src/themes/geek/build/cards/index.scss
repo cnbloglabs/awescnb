@@ -38,6 +38,7 @@
                 content: '\f004';
                 font-weight: 700;
                 color: #f14668;
+                margin-right: 8px;
             }
         }
     }
@@ -49,6 +50,7 @@
     &:before {
         content: '\f15c';
         font-weight: 400;
+        margin-right: 8px;
     }
     &:hover {
         color: var(--themeColor);
@@ -90,7 +92,7 @@
         align-items: center;
         margin-right: 10px;
         li::before {
-            margin-right: 0.2em;
+            margin-right: 4px;
         }
     }
     a:first-of-type {
