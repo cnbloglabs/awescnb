@@ -37,7 +37,7 @@ function createThemeAPI() {
             set config(v) {
                 if (__DEV__) {
                     console.warn(
-                        `app.config cannot be replaced. Modify individual options instead.`,
+                        `theme.config cannot be replaced. Modify individual options instead.`,
                     )
                 }
             },
