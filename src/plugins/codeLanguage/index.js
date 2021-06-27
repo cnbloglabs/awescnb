@@ -21,9 +21,18 @@ function createCodeLangContainer(lang) {
  */
 function buildCodeWrapLanguage() {
     $('pre code').each(function() {
-        const lang = $(this)[0].classList[0]
+        let lang = $(this)[0].classList[0]
         if (lang !== undefined) {
-            const container = createCodeLangContainer(lang.substring(9))
+            lang = lang.substring(9)
+
+            if (lang === '') {
+                lang = $(this)[0].classList[1]
+                if (lang === undefined || lang === '') {
+                    return
+                }
+            }
+
+            const container = createCodeLangContainer(lang)
             $(this).before(container)
         }
     })
