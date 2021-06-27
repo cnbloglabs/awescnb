@@ -6,16 +6,25 @@ import { isPostDetailsPage, isMd } from 'utils/cnblog'
 import { linenumbersConfig } from 'options/plugins'
 
 /**
+ * 创建代码语言容器
+ * @param {string} code language
+ * @returns {object} JQuery Object
+ */
+function createCodeLangContainer(lang) {
+    return $('<div>')
+        .addClass('awes-lang')
+        .text(lang)
+}
+
+/**
  * 构建代码块语言
  */
 function buildCodeWrapLanguage() {
     $('pre code').each(function() {
-        const lang = $(this)[0].classList[1]
+        const lang = $(this)[0].classList[0]
         if (lang !== undefined) {
-            const languageContainer = $('<div>')
-                .addClass('awes-lang')
-                .text(lang)
-            $(this).before(languageContainer)
+            const container = createCodeLangContainer(lang.substring(9))
+            $(this).before(container)
         }
     })
 }

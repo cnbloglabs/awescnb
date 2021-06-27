@@ -13,7 +13,7 @@ function createCopyButtons() {
     if (!pres.length) return
     const fn = isMd() ? 'prepend' : 'before'
     pres.each((index, pre) => {
-        $(pre)[fn](`<div class="copy-btns">copy</div>`)
+        $(pre)[fn](`<div class="copy-btns">复制代码</div>`)
     })
     handleClickCopyButton()
 }
@@ -25,8 +25,6 @@ function handleClickCopyButton() {
     const __MD__ = isMd()
     const position = __MD__ ? 'pre' : '.cnblogs_code'
     $(position).on('click', '.copy-btns', function() {
-        console.log()
-
         const codeAreaTagName = __MD__ ? 'code' : 'pre'
 
         const code = $(this)
@@ -36,10 +34,10 @@ function handleClickCopyButton() {
         navigator.clipboard
             .writeText(code)
             .then(() => {
-                $(this).text('copied')
+                $(this).text('复制成功')
                 toast('复制成功')
                 setTimeout(() => {
-                    $(this).text('copy')
+                    $(this).text('复制代码')
                 }, 1000)
             })
             .catch(err => {
