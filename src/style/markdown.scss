@@ -4,6 +4,7 @@ $md: map-merge(
         linkColor: #ccc,
         hrColor: #ddd,
         blockquoteBg: #f6f8fa,
+        color-blockquote: #f6f8fa,
         blockquoteBorderColor: #ccc,
         markBg: yellow,
         kbdBg: #fafbfc,
@@ -20,6 +21,7 @@ $md: map-merge(
 $linkColor: map-get($md, linkColor);
 $hrColor: map-get($md, hrColor);
 $blockquoteBg: map-get($md, blockquoteBg);
+$color-blockquote: map-get($md, color-blockquote);
 $blockquoteBorderColor: map-get($md, blockquoteBorderColor);
 $markBg: map-get($md, markBg);
 $kbdBg: map-get($md, kbdBg);
@@ -137,7 +139,7 @@ $iframe-height: map-get($md, iframe-height);
         blockquote {
             margin: 22px 0;
             padding: 1px 22px;
-            color: #666;
+            color: $color-blockquote;
             background: $blockquoteBg;
             border-left: 4px solid $blockquoteBorderColor;
             &::after {
