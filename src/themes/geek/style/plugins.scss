@@ -125,7 +125,6 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
     overflow-x: hidden;
     word-wrap: nowrap;
     text-overflow: ellipsis;
-    border-bottom: 1px solid var(--sidebarBlock-border-color);
 
     .catalog-title {
         display: flex;
@@ -192,12 +191,6 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
             }
         }
 
-        .catalog-active {
-            color: var(--themeColor);
-            font-weight: 700;
-            transition: all 0.3s;
-        }
-
         .h1-list {
             display: flex;
             align-items: center;
@@ -225,16 +218,21 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
             }
         }
         .h2-list ~ .h3-list {
-            margin-left: 3em;
+            margin-left: 2em;
         }
         .h3-list ~ .h4-list {
-            margin-left: 4em;
+            margin-left: 3em;
         }
         .h4-list ~ .h5-list {
-            margin-left: 5em;
+            margin-left: 4em;
         }
         .h5-list ~ .h6-list {
-            margin-left: 6em;
+            margin-left: 5em;
         }
+    }
+    .catalog-active {
+        color: var(--themeColor);
+        font-weight: 700;
+        transition: all 0.3s;
     }
 }
