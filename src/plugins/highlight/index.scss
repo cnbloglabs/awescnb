@@ -10,8 +10,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
     monospace;
 
 // Markdown
-#blog-comments-placeholder,
-#cnblogs_post_body {
+#mainContent .cnblogs-markdown {
     pre {
         position: relative;
         padding: 24px 0 10px;

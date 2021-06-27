@@ -6,7 +6,6 @@
 @import './animate.scss';
 @import './icons.scss';
 @import './mixins.scss';
-@import './catalog.scss';
 
 *::selection {
     background: var(--theme-primary-4);
@@ -643,7 +642,7 @@ h1.PostListTitle + .pager,
             content: '';
             display: block;
             position: absolute;
-            right: -24.84px;
+            right: -18.84px;
             top: 5.4px;
             width: 6.258px;
             height: 0;
