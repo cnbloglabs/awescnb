@@ -31,6 +31,5 @@ export const mediaZoomJs =
     'https://cdn.bootcdn.net/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js'
 export const notationJs =
     'https://unpkg.com/rough-notation@0.4.0/lib/rough-notation.iife.js'
-export const typedJs = 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12'
-export const MetingJs =
-    'https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js'
+export const typedJs =
+    'https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js'

@@ -1,14 +1,10 @@
 /**
  * 将字符串复制到剪贴板
  * @param {string} text - 要复制的字符串
+ * @returns {Promise}
  */
-export function copyToClipboard(text) {
-    const dummy = document.createElement('textarea')
-    document.body.appendChild(dummy)
-    dummy.value = text
-    dummy.select()
-    document.execCommand('copy')
-    document.body.removeChild(dummy)
+export function copyToClipboard(str) {
+    return navigator.clipboard.writeText(str)
 }
 
 /**
