@@ -62,10 +62,11 @@ $color: map-get($toolMenu, color);
         z-index: 9;
         &:after {
             position: absolute;
-            right: -11px;
+            right: -5px;
             content: '';
             width: 0;
             height: 0;
+            margin: 0;
             border-bottom: 6px solid transparent;
             border-top: 6px solid transparent;
             border-left: 6px solid #333;
