@@ -232,6 +232,14 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
 }
 // copy code
 
+.cnblogs_code,
+.cnblogs_Highlighter {
+    position: relative;
+    .copy-btns {
+        z-index: 1;
+    }
+}
+
 .copy-btns {
     position: absolute;
     right: 8px;

@@ -3,71 +3,86 @@
  */
 import { isPostDetailsPage, isMd } from 'utils/cnblog'
 import toast from 'plugins/toast'
+import { copyToClipboard } from 'utils/helpers'
 
 /**
- * 构建复制按钮
+ * 创建复制按钮
  */
 function createCopyButtons() {
-    // $('#cnblogs_post_body, #blog-comments-placeholder')
-    const pres = $('#cnblogs_post_body').find('pre')
-    if (!pres.length) return
-    const fn = isMd() ? 'prepend' : 'before'
-    pres.each((index, pre) => {
-        $(pre)[fn](`<div class="copy-btns">复制代码</div>`)
-    })
-    handleClickCopyButton()
+    return `<div class="copy-btns">复制代码</div>`
 }
 
 /**
- * 点击复制按钮
+ * 将代码复制到剪切板
+ * @param {string} code - 代码字符串
+ */
+function handleCopyCode(code) {
+    copyToClipboard(code)
+        .then(() => {
+            toast('复制成功')
+        })
+        .catch(err => {
+            console.error('无法复制', err)
+        })
+}
+
+/**
+ * 处理复制按钮点击事件
  */
 function handleClickCopyButton() {
     const __MD__ = isMd()
     const position = __MD__ ? 'pre' : '.cnblogs_code'
-    $(position).on('click', '.copy-btns', function() {
-        const codeAreaTagName = __MD__ ? 'code' : 'pre'
+    const selector = `${position},.cnblogs_Highlighter`
 
-        const code = $(this)
-            .siblings(codeAreaTagName)
-            .text()
+    $(selector).on('click', '.copy-btns', function() {
+        let code
 
-        navigator.clipboard
-            .writeText(code)
-            .then(() => {
-                $(this).text('复制成功')
-                toast('复制成功')
-                setTimeout(() => {
-                    $(this).text('复制代码')
-                }, 1000)
-            })
-            .catch(err => {
-                console.error('无法复制', err)
-            })
+        if (
+            $(this)
+                .parent()
+                .hasClass('cnblogs_Highlighter')
+        ) {
+            code = $(this)
+                .siblings()
+                .find('code')
+                .text()
+        } else {
+            const codeBlockTagName = __MD__ ? 'code' : 'pre'
+            code = $(this)
+                .siblings(codeBlockTagName)
+                .text()
+        }
 
-        // const sel = window.getSelection()
-        // const range = document.createRange()
-        // const codeArea = __MD__ ? 'code' : 'pre'
-
-        // sel.removeAllRanges()
-        // range.selectNode($(this).siblings(codeArea)[0])
-        // sel.addRange(range)
-
-        // const code = sel.anchorNode.innerText
-        // const area = $('<textarea></textarea>')
-
-        // area.val(code)
-        // area[0].select()
-
-        // document.execCommand('copy')
-
-        // $(this).text('copied')
-        // setTimeout(() => {
-        //     $(this).text('copy')
-        // }, 1000)
+        handleCopyCode(code)
     })
+}
+
+/**
+ * 在代码块挂载复制按钮
+ */
+function mountButtons() {
+    const __MD__ = isMd()
+    const copyBtn = createCopyButtons()
+    const pres = $('#cnblogs_post_body').find('pre')
+
+    if (pres.length) {
+        const fn = __MD__ ? 'prepend' : 'before'
+        pres.each((index, item) => {
+            $(item)[fn](copyBtn)
+        })
+    }
+
+    if (!__MD__) {
+        const highlighters = $('.cnblogs_Highlighter')
+        if (!highlighters.length) return
+        highlighters.each((index, item) => {
+            $(item).prepend(copyBtn)
+        })
+    }
 }
 
 export default () => {
     if (!isPostDetailsPage()) return
-    createCopyButtons()
+    mountButtons()
+    handleClickCopyButton()
 }
