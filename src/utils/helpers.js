@@ -1,6 +1,6 @@
 /**
  * 将字符串复制到剪贴板
- * @param text 要复制的字符串
+ * @param {string} text - 要复制的字符串
  */
 export function copyToClipboard(text) {
     const dummy = document.createElement('textarea')
@@ -13,8 +13,8 @@ export function copyToClipboard(text) {
 
 /**
  * 监听 DOM 变化
- * @param {*} selector Dom selector
- * @param {*} callback retun Promise
+ * @param {string} selector Dom selector
+ * @param {callback} callback a function retun Promise
  */
 export function createMutationObserve(selector, callback) {
     const observer = new MutationObserver(() => {
@@ -30,8 +30,8 @@ export function createMutationObserve(selector, callback) {
 }
 
 /**
- * HTML反转义
- * @param {String} string
+ * HTML 反转义
+ * @param {string} str HTML 字符串
  */
 export function HTMLDecode(str) {
     return $('<textarea/>')
@@ -40,8 +40,8 @@ export function HTMLDecode(str) {
 }
 
 /**
- * 插入css
- * @param {String} stylesheet
+ * 插入 css
+ * @param {string} css 字符串
  */
 export function insertStyle(style) {
     let styleElement = document.createElement('style')
@@ -51,8 +51,8 @@ export function insertStyle(style) {
 
 /**
  * 监听鼠标滚轮
- * @param {Function} upCallback 向上滚动回调
- * @param {Function} downCallback 向下滚动回调
+ * @param {function} upCallback 向上滚动回调
+ * @param {function} downCallback 向下滚动回调
  */
 export function mousewheel(upCallback, downCallback) {
     if (!downCallback) downCallback = upCallback
@@ -77,6 +77,7 @@ export function mousewheel(upCallback, downCallback) {
 
 /**
  * 获取季节
+ * @returns {string} 季节英文单词
  */
 export function getQuarter() {
     let month = new Date().getMonth()
@@ -85,15 +86,15 @@ export function getQuarter() {
     } else if (month < 6) {
         return 'Summer'
     } else if (month < 9) {
-        return 'autumn'
+        return 'Autumn'
     } else if (month < 12) {
         return 'Winter'
     }
 }
 
 /**
- * 获取引文月份
- * @returns {String} Month
+ * 获取英文月份
+ * @returns {string} 英文月份单词
  */
 export function getMonth() {
     const monthsInEng = [
@@ -115,8 +116,9 @@ export function getMonth() {
 }
 
 /**
- * @description 元素是否在视口范围内
- * @param {el} Object
+ * 判断元素是否在视口范围内
+ * @param {object} el - DOM selector
+ * @returns {boolean} 元素是否在视口范围内
  */
 export function isElementInViewport(el) {
     let rect = el.getBoundingClientRect()
@@ -131,13 +133,13 @@ export function isElementInViewport(el) {
 }
 
 /**
- * @description 创建link标签
- * @param {String} href
+ * 创建 link 标签
+ * @param {string} href - css 链接
  */
 export function loadLink(href) {
     $('head').append('<link>')
-    const toolbarCss = $('head').children(':last')
-    toolbarCss.attr({
+    const link = $('head').children(':last')
+    link.attr({
         rel: 'stylesheet',
         type: 'text/css',
         href,
@@ -145,7 +147,8 @@ export function loadLink(href) {
 }
 
 /**
- * @description 是否为夜间
+ * 判断当前是否为夜间
+ * @returns {boolean} 是否为夜间
  */
 export function isNight() {
     const nowHour = new Date().getHours()
@@ -154,17 +157,17 @@ export function isNight() {
 }
 
 /**
- * @description prettier console.log
- * @param {str} String
- * @param {color} String
+ * 支持颜色的控制台打印函数
+ * @param {string} str - 要打印的字符串
+ * @param {string} color - 打印颜色
  */
 export function prettyLog(str, color = '#ffb3cc') {
     console.log(`%c  ${str}`, `color: ${color}; font-weight: bold;`)
 }
 
 /**
- * @description 获取当前日期
- * @returns {String} today
+ * 获取今天的日期，格式： yyyy-MM-dd
+ * @returns {string} 今天的日期
  */
 export function getDate() {
     const time = new Date()
@@ -179,10 +182,10 @@ export function getDate() {
 }
 
 /**
- * @description 获取数组中随机元素
- * @param {arr} Array
- * @param {count} Number
- * @returns {any}
+ * 获取数组中随机元素
+ * @param {array} arr - 任意数组
+ * @param {number} count - 要获取的随机元素的数量
+ * @returns {any} 可能是数组中的任意指定数量的元素
  */
 export function randomArrayElements(arr, count = 1) {
     let shuffled = arr.slice(0),
@@ -200,17 +203,18 @@ export function randomArrayElements(arr, count = 1) {
 }
 
 /**
- * @description sleep
- * @param {time} Number await time
+ * sleep
+ * @param {number} time await time
  * @returns {Promise}
  */
 export async function sleep(time) {
     return new Promise(res => setTimeout(res, time))
 }
 
-// 获取一个随机image url
-// 使用内置的 imagehost url
-// 无需参数
+/**
+ * 获取一个随机图片 url
+ * @returns {string} 随机图片 url
+ */
 export function randomImgurl() {
     const animeImages = 'https://api.mz-moe.cn/img'
     const random = Math.floor(Math.random() * 950)
@@ -219,8 +223,8 @@ export function randomImgurl() {
 }
 
 /**
- * @description 滚动穿透处理
- * @param {show} Boolean
+ * 滚动穿透处理
+ * @param {boolean} show - 蒙层是否已经显示
  */
 export function unpass(show) {
     if (show) {
@@ -240,10 +244,10 @@ export function unpass(show) {
 }
 
 /**
- * @description 轮询
- * @param {condition} 条件
- * @param {func} 函数
- * @returns {Boolean} 是否完成 callback
+ * 轮询
+ * @param {function} 返回指定条件的函数
+ * @param {pollCallback} 回调函数
+ * @returns {boolean} 是否完成 pollCallback
  */
 export function poll(conditionFn, callback) {
     if (conditionFn()) {
@@ -273,9 +277,9 @@ export function poll(conditionFn, callback) {
 }
 
 /**
- * @description add a script and cache it
- * @param {url} String
- * @param {callback} Function
+ * 加载 script
+ * @param {string} url - script 链接
+ * @param {function} callback - 加载成功后要执行的回调函数
  */
 export function loadScript(url, callback = function() {}) {
     $.ajax({
@@ -290,11 +294,11 @@ export function loadScript(url, callback = function() {}) {
 }
 
 /**
- * @description 防抖
- * @param {Function} func 传入的函数
- * @param {Number} wait 等待
- * @param {Boolean} immediate 立即
- * @returns Function 返回的函数
+ * 防抖
+ * @param {function} func - 执行函数
+ * @param {number} wait - 时间间隔
+ * @param {boolean} immediate - 立即
+ * @returns {function}
  */
 export function debounce(func, wait, immediate) {
     let timeout
@@ -314,9 +318,9 @@ export function debounce(func, wait, immediate) {
 
 /**
  * 节流
- * @param {*} func
- * @param {*} wait
- * @param {*} mustRun
+ * @param {function} func
+ * @param {number} wait
+ * @param {number} mustRun
  */
 export function throttle(func, wait, mustRun) {
     let timeout,
@@ -339,8 +343,8 @@ export function throttle(func, wait, mustRun) {
 }
 
 /**
- * @description 随机对象属性
- * @param {Object} obj javascript对象
+ * 获取对象的随机属性
+ * @param {object} obj - JS 对象
  * @returns 对象的随机属性
  */
 export function randomProperty(obj) {
@@ -351,9 +355,9 @@ export function randomProperty(obj) {
 }
 
 /**
- * @description 获取随机颜色
- * @param {String} type rgba 16
- * @returns 颜色值
+ * 获取随机颜色
+ * @param {string} type - 返回的颜色值类型 "rgba" | "16"
+ * @returns 随机颜色值
  */
 export function randomColor(type) {
     let res = ''
@@ -387,9 +391,9 @@ export function randomColor(type) {
 }
 
 /**
- * @description 获取元素相对与浏览器视口的位置
- * @param {Object} client document对象
- * @returns top, bottom, left, right, height, width
+ * 获取元素相对与浏览器视口的位置
+ * @param {object} el - DOM 对象
+ * @returns {object} "top", "bottom", "left", "right", "height", "width"
  */
 export function getClientRect(el) {
     const {
@@ -411,9 +415,9 @@ export function getClientRect(el) {
 }
 
 /**
- * @description 生成随机数 []
- * @param {Number} max 最大值
- * @param {Number} min 最小值
+ * 生成随机数
+ * @param {number} max - 最大值
+ * @param {number} min - 最小值
  * @returns 介于最大值与最小值闭区间的随机数
  */
 export function randomNum(max, min) {
@@ -422,8 +426,8 @@ export function randomNum(max, min) {
 }
 
 /**
- * @description 返回用户设备
- * @returns 'pc' | 'phone'
+ * 返回用户设备类型
+ * @returns {string} 'pc' | 'phone'
  */
 export function userAgent() {
     const width = $(window).width()
@@ -431,8 +435,8 @@ export function userAgent() {
 }
 
 /**
- * @description 判断字符串是否为 http 网址
- * @returns {Boolean}
+ * 判断字符串是否为 http 网址
+ * @returns {boolean} 是否为 http 网址
  */
 export function isUrl(string) {
     return new RegExp('http').test(string)
