@@ -1,27 +1,26 @@
-import { poll } from 'utils/helpers'
 const { currentBlogApp } = window
 
 /**
- * @description 访问者是否为博主
- * @returns {Boolean}
+ * 判断访问者是否为博主
+ * @returns {boolean} boolean - 是否为博主
  */
 export const isOwner = () => window.isBlogOwner
 
 /**
- * @description 获取用户登录状态
- * @returns {Boolean}
+ * 判断用户登录是否登录
+ * @returns {boolean} 是否登录
  */
 export const getLoginState = () => window.isLogined
 
 /**
- * @description 是否开启公告
- * @returns {Boolean}
+ * 判断是否开启公告
+ * @returns {boolean} 是否开启公告
  */
 export const openNews = () => !!$('#profile_block').length
 
 /**
- * @description 获取博客园昵称
- * @returns {String}
+ * 获取博客园昵称
+ * @returns {string} 博客园昵称
  */
 export function getBlogname() {
     if (openNews()) {
@@ -39,8 +38,8 @@ export function getBlogname() {
 }
 
 /**
- * @description 获取粉丝数
- * @returns {Number}
+ * 获取粉丝数
+ * @returns {number} 粉丝数
  */
 export function getFollowers() {
     const count = openNews()
@@ -52,8 +51,8 @@ export function getFollowers() {
 }
 
 /**
- * @description 获取关注的人数
- * @returns {Number}
+ * 获取关注的人数
+ * @returns {number} 关注的人数
  */
 export function getFollowing() {
     const count = openNews()
@@ -65,8 +64,8 @@ export function getFollowing() {
 }
 
 /**
- * @description 是否已经关注
- * @returns {Boolean}
+ * 判断是否已经关注
+ * @returns {boolean} 是否已经关注
  */
 export function getFollowState() {
     return (
@@ -75,11 +74,10 @@ export function getFollowState() {
             .trim() === '-取消关注'
     )
 }
-3
 
 /**
- * @description 获取园龄
- * @returns {Number}
+ * 获取园龄
+ * @returns {string} 园龄
  */
 export function getBlogAge() {
     return openNews()
@@ -90,8 +88,8 @@ export function getBlogAge() {
 }
 
 /**
- * @description 获取当前随笔链接
- * @returns {String}
+ * 获取当前博文链接
+ * @returns {string} 当前博文链接
  */
 export function getCurrentPostUrl() {
     return location.href.indexOf('#') === -1
@@ -100,7 +98,7 @@ export function getCurrentPostUrl() {
 }
 
 /**
- * @description 获取博客园 user guid
+ * 获取博客园 user guid
  */
 export function getBlogUserGuid() {
     const strValue = $('body>script:last').text()
@@ -109,8 +107,7 @@ export function getBlogUserGuid() {
 }
 
 /**
- * @description 关注
- * @returns {Boolean}
+ * 关注
  */
 export const follow = () => {
     const guid = window.cb_blogUserGuid
@@ -122,21 +119,21 @@ export const follow = () => {
 }
 
 /**
- * @description 取消关注
- * @returns {String}
+ * 取消关注
  */
 export const unfollow = () => {
     window.unfollow(window.cb_blogUserGuid)
 }
 
 /**
- * 文章是否打开了评论
- * @returns {Boolean}
+ * 判断文章是否打开了评论
+ * @returns {boolean} 文章是否打开了评论
  */
 export const IsCommentTurnedOn = () => !!$('#tbCommentBody').length
 
 /**
- * 是否为随笔详情页
+ * 判断是否为博文详情页
+ * @returns {boolean} 是否为博文详情页
  */
 export function isPostDetailsPage() {
     return !!$('#post_detail').length
@@ -144,6 +141,7 @@ export function isPostDetailsPage() {
 
 /**
  * 是否为首页
+ * @returns {boolean} 是否为首页
  */
 export function isHomePage() {
     return !!$('.day').length
@@ -151,35 +149,39 @@ export function isHomePage() {
 
 /**
  * 是否为标签列表页
+ * @returns {boolean} 是否为标签列表页
  */
 export function isTagListPage() {
     return !!$('#taglist_main').length
 }
 
 /**
- * 是否为随笔详情页
+ * 是否为博文详情页
+ * @returns {boolean} 是否为博文详情页
  */
 export function isEntrylistPage() {
     return !!$('.entrylistPosttitle').length
 }
 
 /**
- * 是否相册页
+ * 判断是否为相册页
+ * @returns {boolean} 是否为相册页
  */
 export function isAlbumPage() {
     return !!$('.gallery').length
 }
 
 /**
- * 是否为随笔分类页
+ * 判断是否为博文分类页
+ * @returns {boolean} 是否为博文分类页
  */
 export function isCategoryPage() {
     return !!$('.entrylistItem').length
 }
 
 /**
- * @description 获取当前页面名称
- * @returns 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
+ * 获取当前页面名称
+ * @returns {string} 'post' | 'index' | 'tag' | 'list' | 'tag' | 'taglist'
  */
 export function getCurrentPage() {
     return $('#post_detail').length
@@ -196,16 +198,16 @@ export function getCurrentPage() {
 }
 
 /**
- * @description 获编辑器类型是否为md
- * @retuens Boolean
+ * 判断编辑器类型是否为 md
+ * @returns {boolean}
  */
 export function isMd() {
     return $('#cnblogs_post_body').hasClass('cnblogs-markdown')
 }
 
 /**
- * 文章内容是否存在标题
- * @returns {Boolean}
+ * 判断文章内容是否存在标题
+ * @returns {boolean} 文章内容是否存在标题
  */
 export function hasPostTitle() {
     return !!$(
@@ -215,9 +217,8 @@ export function hasPostTitle() {
 
 /**
  * 推荐博文
- * 博客园过滤机制 `windown.votePost`
+ * 博客园过滤机制禁止调用 `windown.votePost`
  * https://group.cnblogs.com/topic/115024.html
- * @returns {Boolean}
  */
 export function likePost() {
     // const id = window.location.href.match(/p\/(\S*).html/)[1]
@@ -227,7 +228,8 @@ export function likePost() {
 
 /**
  * 获取用户信息
- * @returns {Promise}
+ * 仅当用户代码放到页脚 HTML 中才有效
+ * @returns {Promise} 表示用户信息的 Promise 对象
  */
 export function getUserInfo() {
     return new Promise(resolve => {
@@ -241,26 +243,8 @@ export function getUserInfo() {
 
 /**
  * 获取消息数
- * @returns {Number | undefined}
+ * @returns {(number|undefined)} 消息数
  */
 export function getMessageCount() {
     return $('#msg_count').text()
-}
-
-/**
- * 获取用户头像
- * @returns {Promise}
- */
-export function getUserAvatar() {
-    return new Promise(resolve => {
-        const res = poll(
-            () => $('#user_icon').length,
-            () => {
-                resolve($('#user_icon').attr('src'))
-            },
-        )
-        if (res === false) {
-            resolve('https://www.cnblogs.com/images/aggsite/avatar-default.svg')
-        }
-    })
 }

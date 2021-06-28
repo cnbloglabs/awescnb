@@ -1,4 +1,5 @@
-import { mergeOptions, userConfig } from './helper'
+import { mergeOptions } from './helper'
+import { userConfig } from './base'
 
 export function backgroundConfig(devOptions) {
     const defaultOptions = {

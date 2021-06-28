@@ -1,8 +1,8 @@
 /**
  * 插件以外的配置
  */
-import { mergeOptions, userConfig } from './helper'
-
+import { mergeOptions } from './helper'
+import { userConfig } from './base'
 /**
  * 皮肤基本配置
  * @param {*} devOptions
