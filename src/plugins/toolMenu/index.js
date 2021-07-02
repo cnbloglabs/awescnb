@@ -1,10 +1,11 @@
 import toast from 'plugins/toast'
 import { toolsConfig } from 'options/plugins'
 import { getCurrentPage, likePost } from 'utils/cnblog'
+import { isPhone } from 'utils/helpers'
 
 /**
  * 创建 toolbar 容器
- * @returns {Jquery Object}
+ * @returns {object}
  */
 function createToolbarContainer() {
     return $('<div class="custom-toolbar">')
@@ -12,7 +13,7 @@ function createToolbarContainer() {
 
 /**
  * 创建按钮项中的图标
- * @returns {Jquery Object}
+ * @returns {object}
  */
 function createIcon(icon) {
     const $icon = $('<i>')
@@ -22,7 +23,7 @@ function createIcon(icon) {
 
 /**
  * 创建按钮项中的工具提示
- * @returns {Jquery Object}
+ * @returns {object}
  */
 function createTooltip(text, className) {
     const ele = $(`<div class="tooltip">${text}</div>`)
@@ -34,25 +35,25 @@ function createTooltip(text, className) {
 
 /**
  * 创建 toggle 按钮
- * @param {*} customItemLength  toolbar item length
- * @returns {Jquery Object}
+ * @param {string} menuIcon  icon
+ * @returns {object}
  */
 function createToggleItem(menuIcon) {
-    // const translateY = -itemLength * 40
     const ele = $(`<div class="toolbar-item toolbar-item-toggle"></div>`)
-
     const icon = createIcon(menuIcon)
     const tooltip = createTooltip('展开', ' tooltip-toggle')
+
     ele.append(icon)
     ele.append(tooltip)
+
     return ele
 }
 
 /**
  * 创建 toolbar 按钮项
- * @param {Object} item
- * @param {Number} translateY
- * @returns {Jquery Object}
+ * @param {object} item
+ * @param {number} translateY
+ * @returns {object} toolbar 按钮的 jq 对象
  */
 function createToolbarItem(item, translateY) {
     const $item = $(
@@ -101,55 +102,48 @@ function createToolbar(finalPluginOptions) {
 
     $toolbar.append($toggleItem)
     $('body').append($toolbar)
+    $('.toolbar-item-toggle').click(handleToggle)
 }
 
 /**
- * toolbar 展开和收起
- * @param {Boolean} initialOpen
+ * 处理展开和收起
  */
-function toggleToolbar(initialOpen) {
-    const handleToggle = function() {
-        $('.toolbar-item-toggle').toggleClass('extend')
+function handleToggle() {
+    $('.toolbar-item-toggle').toggleClass('extend')
 
-        const transformed = translateY => {
-            let _translateY = translateY
-            $('.toolbar-item:not(.toolbar-item-toggle)').each(function(
-                index,
-                item,
-            ) {
-                $(item).css({
-                    transform: `translateY(${_translateY}px)`,
-                })
-                _translateY += translateY - 40
+    const transformed = translateY => {
+        let _translateY = translateY
+        $('.toolbar-item:not(.toolbar-item-toggle)').each(function(
+            index,
+            item,
+        ) {
+            $(item).css({
+                transform: `translateY(${_translateY}px)`,
             })
-        }
-
-        const toggleExtend = isExtend => {
-            const getArrow = isExtend => {
-                const arrow = isExtend ? 'down' : 'up'
-                return arrow
-            }
-            const text = isExtend ? '展开' : '收起'
-            const translateY = isExtend ? 90 : -50
-
-            $('.toolbar-item-toggle')
-                .find('i')
-                .removeClass(`fa-angle-${getArrow(isExtend)}`)
-                .addClass(`fa-angle-${getArrow(!isExtend)}`)
-            $('.tooltip-toggle').text(text)
-            transformed(translateY)
-        }
-
-        $('.toolbar-item-toggle').hasClass('extend')
-            ? toggleExtend(false)
-            : toggleExtend(true)
+            _translateY += translateY - 40
+        })
     }
 
-    if (initialOpen) {
-        handleToggle()
+    const toggleExtend = isExtend => {
+        const text = isExtend ? '展开' : '收起'
+        const translateY = isExtend ? 90 : -50
+        const getArrow = isExtend => {
+            const arrow = isExtend ? 'down' : 'up'
+            return arrow
+        }
+
+        $('.toolbar-item-toggle')
+            .find('i')
+            .removeClass(`fa-angle-${getArrow(isExtend)}`)
+            .addClass(`fa-angle-${getArrow(!isExtend)}`)
+
+        $('.tooltip-toggle').text(text)
+        transformed(translateY)
     }
 
-    $('.toolbar-item-toggle').click(handleToggle)
+    $('.toolbar-item-toggle').hasClass('extend')
+        ? toggleExtend(false)
+        : toggleExtend(true)
 }
 
 export default (theme, devOptions, pluginOptions) => {
@@ -234,5 +228,5 @@ export default (theme, devOptions, pluginOptions) => {
     )
 
     createToolbar(finalPluginOptions)
-    toggleToolbar(initialOpen)
+    if (!isPhone() && initialOpen) handleToggle()
 }

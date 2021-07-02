@@ -63,7 +63,7 @@ theme
         {},
         {
             opacitySelector:
-                '#left-side,#sideBar,#mainContent, #footer,#custom-searchbar',
+                '#left-side,#sideBar,#mainContent, #footer,.custom-searchbar',
         },
     )
     .use(

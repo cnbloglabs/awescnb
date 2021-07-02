@@ -56,6 +56,7 @@ export default (theme, devOptions) => {
 
     if (!enable) return
     if (getCurrentPage() !== 'post') return
+    if ($('#MySignature').children().length) return
 
     buildContainer()
     buildLicense(enableLicense, licenseName, licenseLink)

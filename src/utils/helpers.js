@@ -431,6 +431,15 @@ export function userAgent() {
 }
 
 /**
+ * 判断当前设备是否为手机
+ * @returns {boolean} 当前设备是否为手机
+ */
+export function isPhone() {
+    const width = $(window).width()
+    return width <= 768
+}
+
+/**
  * 判断字符串是否为 http 网址
  * @returns {boolean} 是否为 http 网址
  */

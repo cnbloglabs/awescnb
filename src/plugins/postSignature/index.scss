@@ -23,6 +23,8 @@ $psignatureBorderRadius: map-get($postSignature, borderRadius);
             margin: 0;
             font-size: 14px;
             line-height: 1.6em;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         a {
