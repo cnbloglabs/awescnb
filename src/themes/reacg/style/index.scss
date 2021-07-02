@@ -412,6 +412,14 @@ body {
             border: none;
             .commentbox_title {
                 border-bottom-color: var(--themeColor);
+                .commentbox_tab {
+                    border: none;
+                    font-size: 14px;
+                    color: var(--color-basic-600);
+                    &.active {
+                        color: var(--color-basic-900);
+                    }
+                }
             }
             .commentbox_tab.active {
                 border-color: var(--themeColor);
@@ -596,16 +604,6 @@ body {
 .PostList {
     margin-left: 0;
     padding: 4px 12px;
-}
-
-#cnblogs_post_body {
-    &:after {
-        content: '——— EOF ———';
-        display: block;
-        margin: 21.6px auto;
-        text-align: center;
-        color: var(--color-basic-600);
-    }
 }
 
 #blog_post_info_block {
