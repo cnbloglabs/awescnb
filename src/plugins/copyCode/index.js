@@ -20,6 +20,10 @@ function handleCopyCode(code) {
     copyToClipboard(code)
         .then(() => {
             toast('复制成功')
+            $('.copy-btns').text('复制成功')
+            setTimeout(() => {
+                $('.copy-btns').text('复制代码')
+            }, 1500)
         })
         .catch(err => {
             console.error('无法复制', err)
