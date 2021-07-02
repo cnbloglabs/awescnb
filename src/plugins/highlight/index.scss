@@ -17,7 +17,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
         border-radius: 4px;
         background: $background;
         font-family: $codeFontFamily !important;
-        overflow: inherit;
+        // overflow: inherit;
         &::before {
             content: '';
             display: block;
