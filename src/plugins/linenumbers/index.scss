@@ -21,7 +21,7 @@ $linenumbersColor: map-get($linemubers, color);
         display: flex;
         .awes-linenumber {
             margin: 0;
-            padding: 16px 16px 8px;
+            padding: 16px 0px 8px 16px;
             li {
                 font-weight: normal;
                 color: $linenumbersColor;

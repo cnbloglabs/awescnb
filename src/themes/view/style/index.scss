@@ -70,8 +70,10 @@ body {
     animation: fade-in 0.8s ease-out forwards;
     transform: translateY(1em);
     #topics .postDesc {
+        margin: 20px 0 30px;
         text-align: center;
         padding: 0;
+        font-size: 13px;
         color: var(--color-basic-700);
     }
 }
@@ -230,13 +232,26 @@ body {
     width: 100%;
     border-radius: 3px;
     color: inherit;
+    span.current,
     a {
         margin: 0 10px;
-        padding: 4px 16px;
         border: none;
-        background-color: var(--color-basic-200);
         color: inherit;
         border-radius: 2px;
+        padding: 0 10px;
+        background-color: var(--color-basic-50);
+        color: var(--color-basic-900);
+        border: 2px solid var(--color-basic-500);
+    }
+    a:hover {
+        color: var(--themeColor);
+        border-color: var(--themeColor);
+        box-shadow: 2px 2px 0 var(--themeColor);
+        transition: all ease-out 0.2s;
+    }
+    span.current {
+        color: var(--themeColor);
+        border-color: var(--themeColor);
     }
 }
 
@@ -614,10 +629,9 @@ body {
     @include center(h);
     flex-direction: column;
     margin: 0;
-    #BlogPostCategory {
-        margin-bottom: 5.4px;
-        font-size: 16px;
-        order: 1;
+    #BlogPostCategory,
+    #EntryTag {
+        display: none;
     }
     #EntryTag {
         margin-bottom: 5.4px;
@@ -642,7 +656,7 @@ body {
             span {
                 background: none;
                 font-size: 14px;
-                border-radius: 3px;
+                border-radius: 2px;
                 box-shadow: none;
                 font-weight: normal;
                 text-shadow: none;
@@ -652,18 +666,15 @@ body {
                 &:nth-child(2),
                 &:nth-child(3) {
                     padding: 4px 10px;
+                    background-color: var(--color-basic-50);
+                    color: var(--color-basic-900) !important;
+                    border: 2px solid var(--color-basic-700) !important;
                     &:hover {
-                        filter: brightness(0.8);
+                        color: var(--themeColor) !important;
+                        border-color: var(--themeColor) !important;
+                        box-shadow: 2px 2px 0 var(--themeColor);
+                        transition: all ease-out 0.2s;
                     }
-                }
-                &:nth-child(1) {
-                    background-color: #ff6b81;
-                }
-                &:nth-child(2) {
-                    background-color: #0984e3;
-                }
-                &:nth-child(3) {
-                    background-color: #ffa502;
                 }
             }
 
@@ -702,40 +713,35 @@ body {
             padding: 0;
             .diggit,
             .buryit {
-                width: auto;
-                height: auto;
-                margin-top: 0;
+                display: flex;
+                align-items: center;
+                height: auto !important;
+                width: auto !important;
                 padding: 4px 10px;
                 background: none;
-                background-color: var(--themeColor);
-                border-radius: 3px;
-                font-size: 14px;
-                span {
-                    color: #fff;
+                background-color: var(--color-basic-50);
+                color: var(--color-basic-900) !important;
+                border: 2px solid var(--color-basic-700) !important;
+                &:hover {
+                    color: var(--themeColor) !important;
+                    border-color: var(--themeColor) !important;
+                    box-shadow: 2px 2px 0 var(--themeColor);
+                    transition: all ease-out 0.2s;
                 }
-                .diggnum,
                 .burynum {
-                    line-height: 1em !important;
+                    line-height: inherit !important;
                 }
             }
             .diggit {
-                background-color: #ff6b81;
-                &:hover {
-                    filter: brightness(0.8);
-                }
                 &::before {
-                    content: '\f004';
+                    content: '👍';
                     color: #fff;
                 }
             }
             .buryit {
-                margin-left: 10.8px;
-                background-color: #ced6e0;
-                &:hover {
-                    filter: brightness(0.8);
-                }
+                margin-left: 10px;
                 &::before {
-                    content: '\f7a9';
+                    content: '👎';
                     color: #fff;
                 }
             }
@@ -812,8 +818,6 @@ body {
         }
         .layer {
             padding: 0 5.4px;
-            background-color: #fa745e;
-            color: #fff;
             border-radius: 3px;
             margin-right: 5.4px;
             order: 0;
@@ -822,7 +826,7 @@ body {
         .feedbackManage {
             order: 3;
             .comment_actions {
-                border-bottom: 1px solid #3273dc;
+                border-bottom: 1px solid var(--themeColor);
             }
         }
         .comment_vote {
@@ -838,28 +842,13 @@ body {
         align-items: baseline;
         margin-top: 5px;
         .blog_comment_body {
-            position: relative;
-            bottom: 12px;
-            margin-left: 10px;
-            padding: 0 10.8px;
-            background-color: var(--color-basic-100);
-            border-radius: 3px;
+            margin: 20px 0 0 12px;
+            padding: 2px 12px;
+            border-radius: 8px;
             font-size: 14px;
             max-width: 540px;
             line-height: 1.6;
-            padding: 5.4px 10.8px;
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                left: -24.84px;
-                top: 5.4px;
-                width: 12.258px;
-                height: 0;
-                border-right: solid 12.96px var(--color-basic-100);
-                border-top: solid 3.24px rgba(0, 0, 0, 0);
-                border-bottom: solid 7.182px rgba(0, 0, 0, 0);
-            }
+            border: 2px solid var(--color-basic-600);
         }
         .avatar {
             border: 1px solid #eee;
@@ -873,41 +862,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
     .louzhu {
-        color: #f14668;
+        color: var(--themeColor);
+    }
+    img {
+        margin-left: 10.8px;
     }
 
     .blog_comment_body {
-        // a:nth-child(1) {
-        //     // color: #3273dc;
-        // }
         a:not(:nth-child(1)):hover {
             color: #3273dc;
             transition: all 0.25s;
         }
     }
-
-    img {
-        margin-left: 10.8px;
-    }
-
     .blog_comment_body::before {
         display: none;
     }
 
-    .blog_comment_body::after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: -30px;
-        top: 5.4px;
-        width: 12.258px;
-        height: 0;
-        border-left: solid 12.96px var(--color-basic-100);
-        border-top: solid 3.24px rgba(0, 0, 0, 0);
-        border-bottom: solid 7.182px rgba(0, 0, 0, 0);
-    }
     .feedbackManage {
         order: 0;
     }
@@ -1023,17 +994,20 @@ body {
                 right: 10.8px;
                 width: 75.6px;
                 height: 32.4px;
-                color: var(--text-a);
-                border-radius: 4px;
+                padding: 4px 10px;
+                border-radius: 2px;
                 border: none;
-                background-color: #00a1d6;
-                user-select: none;
                 outline: none;
                 cursor: pointer;
                 font-size: 12px;
-                color: #fff;
+                background-color: var(--color-basic-50);
+                color: var(--color-basic-900);
+                border: 2px solid var(--color-basic-700);
                 &:hover {
-                    background-color: #0593c2;
+                    color: var(--themeColor);
+                    border-color: var(--themeColor);
+                    box-shadow: 2px 2px 0 var(--themeColor);
+                    transition: all ease-out 0.2s;
                 }
             }
         }
