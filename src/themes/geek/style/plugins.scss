@@ -136,23 +136,29 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
         font-size: 15px;
         font-weight: 600;
         margin-bottom: 20px;
-
-        &::after {
-            visibility: hidden;
-            content: '\f107';
-            font-weight: 700;
-            display: inline-block;
-            position: absolute;
-            right: 0.5rem;
-            margin: 0;
-        }
     }
+
     ul {
         border-left: 1px solid var(--color-catalog-border);
-
         li {
-            margin-top: 3.618px;
             color: var(--catalog-color);
+            display: flex;
+            align-items: center;
+            border-left: 1px solid var(--color-catalog-border);
+            line-height: 1.8;
+            &::before {
+                position: relative;
+                right: 5px;
+                display: block;
+                width: 7px;
+                height: 7px;
+                content: '';
+                border-radius: 50%;
+                border: 1px solid var(--themeColor);
+                background-color: var(--sidebar-bg);
+                margin-right: 4px;
+                transition: transform 0.2s;
+            }
             &:hover {
                 color: var(--catalogList-hover);
             }
@@ -166,30 +172,9 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
             }
         }
 
-        .h2-list {
-            &::before {
-                position: relative;
-                right: 5px;
-                display: inline-block;
-                width: 7px;
-                height: 7px;
-                content: '';
-                border-radius: 50%;
-                border: 1px solid var(--themeColor);
-                background-color: var(--sidebar-bg);
-                margin-right: 4px;
-                transition: transform 0.2s;
-            }
-        }
         .h1-list {
-            display: flex;
-            align-items: center;
             font-weight: 700;
             font-size: 16px;
-        }
-        .h2-list {
-            display: flex;
-            align-items: center;
         }
         .h2-list {
             font-size: 14px;
@@ -203,9 +188,6 @@ body .aplayer.aplayer-fixed .aplayer-lrc {
         .h1-list ~ .h2-list {
             margin-left: 2em;
             font-size: 14px;
-            &::before {
-                display: none;
-            }
         }
         .h2-list ~ .h3-list {
             margin-left: 2em;
