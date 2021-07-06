@@ -199,11 +199,18 @@ export function getCurrentPage() {
 
 /**
  * 判断编辑器类型是否为 md
- * @returns {boolean}
+ * @returns {boolean} 编辑器类型是否为 md
  */
 export function isMd() {
     return $('#cnblogs_post_body').hasClass('cnblogs-markdown')
 }
+
+//TODO
+/**
+ * 判断编辑器类型是否为 tinymce 5
+ * @returns {boolean} 辑器类型是否为 tinymce 5
+ */
+export function isTinymce5() {}
 
 /**
  * 判断文章内容是否存在标题

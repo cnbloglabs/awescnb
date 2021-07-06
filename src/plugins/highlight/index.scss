@@ -9,10 +9,13 @@ $functions: var(--hl-hue-2);
 $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
     monospace;
 
+// tinymce5
 // Markdown
+#cnblogs_post_body.blogpost-body-html,
 #mainContent .cnblogs-markdown {
     pre {
         position: relative;
+        margin-top: 8px;
         padding: 24px 0 10px;
         border-radius: 4px;
         background: $background;
@@ -49,7 +52,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
         color: var(--hl-mono-1) !important;
         background: $background !important;
         border: none !important;
-        padding: 16px 10px 8px !important;
+        padding: 16px 10px 8px 26px !important;
         font-weight: normal;
     }
     .hljs-comment,
@@ -115,7 +118,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
     }
 }
 
-// *TinyMCE
+// tinymce
 #cnblogs_post_body {
     .cnblogs_code {
         border: none;
