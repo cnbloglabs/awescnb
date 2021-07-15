@@ -176,6 +176,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
 }
 
 .syntaxhighlighter {
+    background: $background !important;
     .line.alt1,
     .line.alt2 {
         background-color: $background !important;
@@ -184,6 +185,15 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
 
 #cnblogs_post_body {
     .cnblogs_Highlighter {
+        table {
+            tbody {
+                width: 100% !important;
+            }
+            .gutter {
+                padding-bottom: 0 !important;
+            }
+        }
+
         code {
             background-color: $background !important;
         }

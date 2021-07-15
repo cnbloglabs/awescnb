@@ -10,7 +10,7 @@ function buildCopyright() {
 
     const el = `<div id='copyright'>
                     <span>Copyright © ${new Date().getFullYear()} ${nickName}</span>
-                    <span> Powered by you 🧦 Theme in ${'awescnb'.link(
+                    <span> Powered by you 🌊 Theme in ${'awescnb'.link(
                         '#',
                     )}</span>
                 </div>`

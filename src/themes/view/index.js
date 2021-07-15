@@ -15,6 +15,7 @@ import {
     themeColor,
     imagebox,
     emoji,
+    codeLanguage,
 } from 'plugins/index'
 
 export const theme = createTheme()
@@ -30,8 +31,9 @@ theme
     .use(emoji)
     .use(imagebox)
     .use(copyCode)
+    .use(codeLanguage)
     .use(linenumbers)
-    .use(postSignature, { enable: false })
+    .use(postSignature, { enable: true })
     .use(commentsAvatars)
     .use(highlight)
     .use(

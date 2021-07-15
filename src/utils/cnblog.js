@@ -250,8 +250,18 @@ export function getUserInfo() {
 
 /**
  * 获取消息数
- * @returns {(number|undefined)} 消息数
+ * @returns {(string|undefined)} 消息数
  */
 export function getMessageCount() {
     return $('#msg_count').text()
+}
+
+/**
+ * 获取博客访问总量
+ * @returns {(string)} 博客访问总量
+ */
+export function getViewCount() {
+    return $('#stats-total-view-count>span')
+        .text()
+        .trim()
 }

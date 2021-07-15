@@ -33,7 +33,7 @@ $tagsColor: map-get($postMessage, tagsColor);
             padding: 4px 8px;
             font-size: 13px;
             line-height: 14px;
-            border-radius: 2px;
+            border-radius: 4px;
             margin: 0 0 0 8px;
         }
     }
@@ -42,6 +42,7 @@ $tagsColor: map-get($postMessage, tagsColor);
         a {
             color: #fff;
             background-color: $categoriesBackground;
+            border: 1px solid $categoriesBackground;
         }
     }
     .message-tags {

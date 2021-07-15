@@ -3,7 +3,7 @@ module.exports = {
     eslint: true,
     openBrowser: true,
     openAnalyzer: false,
-    cssExtract: false,
+    cssExtract: true,
 }
 
 // OPTIONS

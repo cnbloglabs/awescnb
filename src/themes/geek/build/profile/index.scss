@@ -32,6 +32,8 @@
     background-repeat: no-repeat;
     overflow: hidden;
     .profile-signature {
+        position: relative;
+        bottom: 24px;
         max-width: 60%;
         text-align: center;
         white-space: wrap;

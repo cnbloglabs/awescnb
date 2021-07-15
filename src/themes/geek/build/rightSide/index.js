@@ -3,13 +3,13 @@ import { getMonth, getQuarter } from 'utils/helpers'
 // import { getBlogname } from 'utils/cnblog'
 import { contact, message, index } from 'constants/links'
 import { avatar } from 'constants/cnblog'
+import { getViewCount } from 'utils/cnblog'
 
 function flat() {
     $('#sideBar').appendTo($('#home'))
 }
 
 function buildTopBtns() {
-    // const nickname = getBlogname()
     const noticeCount = $('#msg_count').text()
     const el = `
     <div class="account">
@@ -25,15 +25,13 @@ function buildTopBtns() {
                     'style=display:none'}>${noticeCount}</span>
             </a>
         </button>
-
+        <div class="view-count">${getViewCount()}</div>
         <div class="account-avatar">
             <a href="${index}"><img src="${avatar}"></a>
         </div>
     </div>`
     $('#sideBarMain').prepend(el)
 }
-
-/* <div class="account-nickname">${nickname}</div> */
 
 function buildCalendar() {
     const quarter = getQuarter()
