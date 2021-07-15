@@ -21,6 +21,7 @@ import {
     codeLanguage,
     toolMenu,
     notice,
+    live2d,
 } from 'plugins/index'
 
 const theme = createTheme()
@@ -41,6 +42,9 @@ theme
     .use(clickEffect, { enable: false })
     .use(themeColor, { color: '#1B86F9' })
     .use(player, { enable: false })
+    .use(live2d, {
+        enable: false,
+    })
     .use(mode, {
         enable: true,
         darkDefault: true,

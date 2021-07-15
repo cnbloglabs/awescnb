@@ -15,7 +15,7 @@ function buildContainer() {
                     <p>本文作者：${author}</p>
                     <p>本文链接：${href}</p>
                 </div>`
-    $('#cnblogs_post_body').append(el)
+    $('#blog_post_info_block').before(el)
 }
 
 /**

@@ -12,10 +12,10 @@ export function getThemeOptions(devOptions) {
         name: 'reacg',
         color: '#FFB3CC',
         title: '',
-        avatar: 'https://api.uomg.com/api/rand.avatar',
+        avatar: '',
         favicon: '',
         contentSize: 'mid', // disabled
-        headerBackground: 'https://api.uomg.com/api/rand.avatar',
+        headerBackground: '',
         log: true,
     }
     return mergeOptions(defaultOptions, userConfig.theme, devOptions)

@@ -628,7 +628,7 @@ body {
 #blog_post_info_block {
     @include center(h);
     flex-direction: column;
-    margin: 0;
+    margin: 60px 0;
     #BlogPostCategory,
     #EntryTag {
         display: none;
@@ -644,7 +644,6 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         align-items: baseline;
-        margin: 21.6px 0 10.8px;
         #green_channel {
             @include center();
             flex-wrap: wrap;
@@ -1056,66 +1055,6 @@ body {
 // new nav
 .under-comment-nav {
     display: none;
-}
-
-#catalog {
-    position: sticky;
-    top: 6em;
-    margin: 0 8px;
-    width: 260px;
-    height: max-content;
-    max-height: 80vh;
-    overflow: auto;
-    .catalog-title {
-        font-size: 130%;
-    }
-    li {
-        font-size: 0.85em;
-        cursor: pointer;
-        color: var(--color-basic-600);
-        display: block;
-        margin-left: 0.75em;
-        margin-top: 0.8em;
-        padding-right: 10px;
-        &:hover {
-            color: var(--themeColor);
-        }
-        &::before {
-            content: ' ';
-            border-radius: 100%;
-            width: 5px;
-            height: 5px;
-            display: inline-block;
-            border: 1px solid var(--color-basic-600);
-            margin-right: 6px;
-        }
-        &.catalog-active {
-            color: var(--themeColor);
-            font-weight: bold;
-            &::before {
-                content: ' ';
-                border-radius: 100%;
-                width: 5px;
-                height: 5px;
-                display: inline-block;
-                border: 1px solid var(--themeColor);
-                margin-right: 6px;
-                background-color: var(--themeColor);
-            }
-        }
-    }
-    .h2-list ~ .h3-list {
-        margin-left: 3em;
-    }
-    .h3-list ~ .h4-list {
-        margin-left: 4em;
-    }
-    .h4-list ~ .h5-list {
-        margin-left: 5em;
-    }
-    .h5-list ~ .h6-list {
-        margin-left: 6em;
-    }
 }
 
 @import './markdown.scss';
