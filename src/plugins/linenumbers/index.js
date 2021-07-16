@@ -52,9 +52,6 @@ function getRow(container) {
 function buildLinenumbers() {
     $('pre code').each(function() {
         const linenumberContainer = $('<ul/>').addClass('awes-linenumber')
-
-        console.log(6666, $(this).clone(), getRow($(this)))
-
         const lines =
             $(this)
                 .text()

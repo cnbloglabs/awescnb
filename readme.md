@@ -1,5 +1,7 @@
 ### Awescnb
 
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/awescnb/awescnb)
+
 🤞 **Awescnb**， awesome cnblogs.
 
 -   安装：快速将 awescnb 集成到你的博客园中，体验多套皮肤任意切换
