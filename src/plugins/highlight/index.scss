@@ -1,3 +1,5 @@
+// https://highlightjs.readthedocs.io/en/latest/theme-guide.html
+
 $background: var(--hl-base);
 $keyword: var(--hl-hue-3);
 $string: var(--hl-hue-4);
@@ -5,7 +7,6 @@ $plain: var(--hl-mono-1);
 $comments: var(--hl-mono-3);
 $variable: var(--hl-mono-1);
 $functions: var(--hl-hue-2);
-
 $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
     monospace;
 
@@ -37,7 +38,7 @@ $codeFontFamily: Consolas, Lucida Console, Monaco, Andale Mono, Ubuntu Mono,
     // 单行代码及代码块
     code {
         font-family: $codeFontFamily !important;
-        font-size: 13px !important;
+        font-size: 15px !important;
         margin: 0;
         word-break: break-word !important;
         border: none !important;
