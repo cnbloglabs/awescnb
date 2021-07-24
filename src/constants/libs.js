@@ -1,14 +1,11 @@
 /**
  * 第三方库
  */
-
 export const live2d = {
     url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
     version: '1.7',
 }
 export const chart = 'https://cdn.jsdelivr.net/npm/chart.js'
-// export const chart =
-//     'https://guangzan.gitee.io/imagehost/awescnb/js/rough-viz.js'
 export const emojijs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js'
 export const live2djs =
