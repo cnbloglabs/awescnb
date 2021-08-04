@@ -1,19 +1,25 @@
-import avator from './avator'
-import init from './init'
-import SideFloatBtns from './SideFloatBtns'
-import catalog from './catalog'
+import button from './button'
+import comments from './comments'
 import emoji from './emoji'
-import toast from './toast'
-import copy from './copy'
-import fancyImgbox from './fancyImgbox'
+import login from './login'
+import logo from './logo'
+import post from './post'
+import runScript from './runScript'
+import smoothRoll from './smoothRoll'
+import theme from './theme'
+import title from './title'
+import toggle from './toggle'
 
 export default () => {
-    avator()
-    init()
-    fancyImgbox()
-    copy()
-    SideFloatBtns()
-    catalog()
+    button()
+    comments()
     emoji()
-    toast()
+    login()
+    logo()
+    post()
+    runScript()
+    smoothRoll()
+    theme()
+    title()
+    toggle()
 }
