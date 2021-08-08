@@ -257,8 +257,41 @@ export function getMessageCount() {
 }
 
 /**
+ * 获取随笔数量
+ * @returns {string} 随笔数量
+ */
+export function getPostCount() {
+    return $('#stats_post_count')
+        .text()
+        .trim()
+        .replace(/[^0-9]/gi, '')
+}
+
+/**
+ * 获取文章数量
+ * @returns {string} 文章数量
+ */
+export function getArticleCount() {
+    return $('#stats_article_count')
+        .text()
+        .trim()
+        .replace(/[^0-9]/gi, '')
+}
+
+/**
+ * 获取评论数量
+ * @returns {string} 评论数量
+ */
+export function getCommentCount() {
+    return $('#stats-comment_count')
+        .text()
+        .trim()
+        .replace(/[^0-9]/gi, '')
+}
+
+/**
  * 获取博客访问总量
- * @returns {(string)} 博客访问总量
+ * @returns {string} 博客访问总量
  */
 export function getViewCount() {
     return $('#stats-total-view-count>span')
