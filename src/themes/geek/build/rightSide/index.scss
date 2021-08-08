@@ -48,6 +48,32 @@
     }
 }
 
+.account-button.stats {
+    position: relative;
+    .stat-list {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        padding: 8px 12px;
+        border-radius: 4px;
+        background: var(--body-bg);
+        opacity: 0;
+        li {
+            display: flex;
+            white-space: nowrap;
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--tags-color);
+        }
+    }
+    &:hover .stat-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(24px);
+        transition: all 0.3s;
+    }
+}
+
 .view-count {
     flex: 1;
     text-align: center;

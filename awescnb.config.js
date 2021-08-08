@@ -1,5 +1,5 @@
 module.exports = {
-    themeName: 'element',
+    themeName: 'geek',
     eslint: true,
     openBrowser: true,
     openAnalyzer: false,
