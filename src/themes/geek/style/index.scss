@@ -540,6 +540,9 @@ h1.PostListTitle + .pager,
             font-weight: 500;
         }
     }
+    .diggword {
+        display: none;
+    }
 }
 
 #post_next_prev {
