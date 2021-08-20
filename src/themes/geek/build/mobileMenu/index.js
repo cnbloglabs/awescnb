@@ -25,7 +25,7 @@ function buildMobileMenu() {
 function buildHeaderTrigger() {
     const el = `<div id="navbarBurger" class="navbar-burger burger" data-target="navMenuMore"><span></span> <span></span><span></span></div>`
     $(el)
-        .appendTo('#custom-searchbar')
+        .appendTo('.custom-searchbar')
         .click(function() {
             $(this).toggleClass('is-active')
             $('.mobile-menu').toggleClass('is-active')
@@ -34,6 +34,7 @@ function buildHeaderTrigger() {
 
 export default () => {
     if (userAgent() === 'pc') return
+    console.log(123)
     buildMobileMenu()
     buildHeaderTrigger()
 }
