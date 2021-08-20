@@ -31,8 +31,7 @@
     #left-side {
         .favourite {
             padding: 30px;
-            border-bottom: 1px solid
-                var(--sidebarBlock-border-color);
+            border-bottom: 1px solid var(--sidebarBlock-border-color);
             h3 {
                 display: block;
                 padding-left: 0;
@@ -130,11 +129,11 @@
     .navbar-burger {
         cursor: pointer;
         display: block;
-        width: 60px;
-        height: 60px;
+        width: 39px;
+        height: 39px;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 4px;
         margin-left: auto;
         z-index: 5;
         span {
@@ -145,8 +144,7 @@
             position: absolute;
             transform-origin: center;
             transition-duration: 86ms;
-            transition-property: background-color, opacity,
-                transform;
+            transition-property: background-color, opacity, transform;
             transition-timing-function: ease-out;
             width: 16px;
             &:nth-child(1) {
@@ -168,8 +166,7 @@
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: translateY(-5px)
-                        rotate(-45deg);
+                    transform: translateY(-5px) rotate(-45deg);
                 }
             }
         }

@@ -2,7 +2,7 @@
  * 第三方库
  */
 export const live2d = {
-    url: 'https://cdn.jsdelivr.net/gh/github923665892/awesCnb-live2dModels',
+    url: 'https://cdn.jsdelivr.net/gh/guangzan/awesCnb-live2dModels',
     version: '1.7',
 }
 export const chart = 'https://cdn.jsdelivr.net/npm/chart.js'
@@ -11,9 +11,9 @@ export const emojijs =
 export const live2djs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js'
 export const aplayerjs =
-    'https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js'
+    'https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js'
 export const aplayercss =
-    'https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css'
+    'https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css'
 export const materialize =
     'https://cdn.bootcdn.net/ajax/libs/materialize/0.98.0/js/materialize.min.js'
 export const linenumbersjs =
