@@ -43,7 +43,7 @@ theme
     .use(themeColor, { color: '#1B86F9' })
     .use(player, { enable: false })
     .use(live2d, {
-        enable: false,
+        enable: true,
     })
     .use(mode, {
         enable: true,
