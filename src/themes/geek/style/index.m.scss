@@ -19,6 +19,15 @@
         padding-left: 12px;
         padding-right: 12px;
     }
+
+    #taglist_main {
+        #taglist {
+            tr {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 8px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
