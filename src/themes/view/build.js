@@ -2,6 +2,7 @@ import { getGithubOptions } from 'options/extra'
 import { avatar } from 'constants/cnblog'
 import { getMessageCount } from 'utils/cnblog'
 import { message } from 'constants/links'
+
 // 构建header昵称
 function headerNickname() {
     $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
