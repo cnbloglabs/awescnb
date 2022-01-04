@@ -1,5 +1,7 @@
 ### Awescnb
 
+我们的项目已经全部迁移到 Github 组织 [acnblogs](https://github.com/orgs/acnblogs/) 下，本仓库中的核心 API、工具、公共样式、插件、公共配置、皮肤都通过单独的仓库来维护。
+
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/awescnb/awescnb)
 
 🤞 **Awescnb**， awesome cnblogs.
