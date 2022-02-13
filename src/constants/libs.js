@@ -3,15 +3,16 @@
  */
 export const live2dBase =
     'https://cdn.jsdelivr.net/gh/guangzan/awesCnb-live2dModels'
-export const chart = 'https://cdn.jsdelivr.net/npm/chart.js'
+export const chart =
+    'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Chart.js/3.5.1/chart.min.js'
 export const emojijs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/emoji.min.js'
 export const live2djs =
     'https://guangzan.gitee.io/imagehost/awescnb/js/live2d.min.js'
 export const aplayerjs =
-    'https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js'
+    'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js'
 export const aplayercss =
-    'https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css'
+    'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css'
 export const materialize =
     'https://cdn.bootcdn.net/ajax/libs/materialize/0.98.0/js/materialize.min.js'
 export const linenumbersjs =
@@ -23,8 +24,8 @@ export const clipboard =
 export const animeJs =
     'https://cdn.bootcdn.net/ajax/libs/animejs/3.2.0/anime.min.js'
 export const mediaZoomJs =
-    'https://cdn.bootcdn.net/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js'
+    'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/medium-zoom/1.0.6/medium-zoom.min.js'
 export const notationJs =
-    'https://unpkg.com/rough-notation@0.4.0/lib/rough-notation.iife.js'
+    'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/rough-notation/0.5.1/rough-notation.iife.min.js'
 export const typedJs =
-    'https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js'
+    'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.11/typed.min.js'
