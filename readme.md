@@ -1,7 +1,5 @@
 ### Awescnb
 
-我们的项目已经全部迁移到 Github 组织 [Cnblog Labs](https://github.com/cnbloglabs/) 下，核心 API、工具、公共样式、插件、公共配置、皮肤都通过单独的仓库来维护。
-
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/awescnb/awescnb)
 
 🤞 **Awescnb**， awesome cnblogs.
@@ -10,6 +8,8 @@
 -   创建：使用 awescnb 从零开始构建博客园皮肤
 -   迁移：将你的皮肤轻松迁移到 awescnb
 -   分享：将你构建的皮肤贡献给该项目，园友就能够切换到你的皮肤了
+
+> [Github](https://github.com/cnbloglabs/)
 
 ### 文档
 
