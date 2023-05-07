@@ -4315,9 +4315,9 @@ nanocolors@^0.2.2, nanocolors@^0.2.8:
   integrity sha1-pxLfTTwb8S2bT7i1qmG1ujEzdQM=
 
 nanoid@^3.1.25:
-  version "3.1.28"
-  resolved "https://registry.npmmirror.com/nanoid/download/nanoid-3.1.28.tgz?cache=0&sync_timestamp=1632645277090&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fnanoid%2Fdownload%2Fnanoid-3.1.28.tgz#3c01bac14cb6c5680569014cc65a2f26424c6bd4"
-  integrity sha1-PAG6wUy2xWgFaQFMxlovJkJMa9Q=
+  version "3.3.6"
+  resolved "https://registry.npmmirror.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
+  integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
 nanomatch@^1.2.9:
   version "1.2.13"
