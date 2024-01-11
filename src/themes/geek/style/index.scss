@@ -6,6 +6,7 @@
 @import './animate.scss';
 @import './icons.scss';
 @import './mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
 
 *::selection {
     background: var(--theme-primary-4);
@@ -24,8 +25,7 @@ body {
     color: var(--body-color);
     font-size: 1em;
     line-height: 1.5;
-    font-family: UbuntuMono, 'Varela Round', 'PingFang SC', 'Microsoft YaHei',
-        Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+    font-family: 'Varela Round', 'Ubuntu Mono', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', 'Cascadia Code', Menlo, Consolas, monospace, sans-serif;
     overflow: hidden;
 }
 
