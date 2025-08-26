@@ -1,0 +1,226 @@
+$postSignature: (
+  primary: var(--color-primary),
+  background: var(--geek-color-2),
+  borderRadius: 2px,
+);
+$toolMenu: (
+  background: var(--geek-color-2),
+  color: #fff,
+);
+$signature: (
+  padding: 1rem 14px,
+  fontSize: 1em,
+);
+$imagebox: (
+  background: var(--geek-color-2),
+);
+$player: (
+  bodyBackground: var(--geek-color-6),
+);
+$postMessage: (
+  categoriesBackground: #f13a3a,
+  tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
+  colorTags: var(--geek-color-10),
+  colorMessage: var(--geek-color-8),
+  colorCategories: #fff,
+);
+$emoji: (
+  textEmojiColor: var(--geek-color-6),
+  bg: var(--geek-color-1),
+  borderColor: var(--geek-color-2),
+  hoverBg: var(--geek-color-3),
+  hoverBorderColor: var(--color-primary),
+);
+
+@import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/signature/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/emoji/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/imagePreview/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/notice/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/license/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/tools/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
+@import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
+
+// comments avatars
+.custom-comment-avatar {
+  position: relative;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.custom-comments-author {
+  .custom-comment-avatar::after {
+    position: absolute;
+    bottom: 11px;
+    right: 5px;
+    content: '\f058';
+    color: #4ac7ff;
+    background-color: #fff;
+    line-height: 1em;
+    border-radius: 50%;
+    margin-right: 0;
+    font-size: 80%;
+  }
+}
+
+// postMessage
+.message-top {
+  .message-categories a,
+  .message-tags a {
+    border-radius: 2px;
+    box-shadow: none;
+  }
+}
+
+// image box
+.medium-zoom-image--opened {
+  z-index: 41;
+}
+
+// toolMenu
+.custom-toolbar {
+  z-index: 9;
+}
+
+.rocket-rotate {
+  position: relative;
+  top: 12px;
+  transform: rotate(-45deg);
+}
+
+.toolbar-item {
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 20%);
+}
+
+.custom-drag-menu {
+  z-index: 3;
+}
+
+.medium-zoom-overlay {
+  z-index: 2;
+}
+
+// click
+#click-effects {
+  z-index: 6;
+}
+
+// player
+body .aplayer.aplayer-fixed .aplayer-lrc {
+  bottom: 30px;
+}
+
+// catalog
+#catalog {
+  padding: 25px;
+  font-size: 14px;
+  overflow-x: hidden;
+  word-wrap: nowrap;
+  text-overflow: ellipsis;
+
+  .catalog-title {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: var(--geek-color-9);
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  ul {
+    border-left: 1px solid var(--geek-color-2);
+
+    li {
+      color: var(--geek-color-10);
+      display: flex;
+      align-items: center;
+      line-height: 1.8;
+
+      &::before {
+        position: relative;
+        right: 5px;
+        display: block;
+        width: 7px;
+        height: 7px;
+        content: '';
+        border-radius: 50%;
+        border: 1px solid var(--color-primary);
+        background-color: var(--geek-color-1);
+        margin-right: 4px;
+        transition: transform 0.2s;
+      }
+
+      &:hover {
+        color: var(--geek-color-10);
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+
+        .icon {
+          width: 1.2em;
+          height: 1.8em;
+        }
+      }
+    }
+
+    .h1-list {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .h2-list {
+      font-size: 14px;
+    }
+
+    .h3-list,
+    .h4-list,
+    .h5-list,
+    .h6-list {
+      font-size: 12px;
+    }
+
+    .h1-list ~ .h2-list {
+      margin-left: 1em;
+      font-size: 14px;
+    }
+
+    .h2-list ~ .h3-list {
+      margin-left: 2em;
+    }
+
+    .h3-list ~ .h4-list {
+      margin-left: 3em;
+    }
+
+    .h4-list ~ .h5-list {
+      margin-left: 4em;
+    }
+
+    .h5-list ~ .h6-list {
+      margin-left: 5em;
+    }
+
+    .catalog-active {
+      color: var(--color-primary);
+      transition: all 0.3s;
+
+      &::before {
+        transform: scale(1) translateX(0);
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}

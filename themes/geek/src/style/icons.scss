@@ -1,0 +1,16 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+.copy-btns::before,
+.custom-comment-avatar::after,
+#commentform_title::before,
+.diggit::before,
+.feedback_area_title::before,
+.buryit::before,
+#green_channel_favorite::before,
+#green_channel_follow::before,
+.custom-card-title::before,
+[class^='fa-']::before,
+[class^='fa-']::after {
+  font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
+  font-weight: 700;
+}

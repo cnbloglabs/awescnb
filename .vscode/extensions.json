@@ -1,8 +1,6 @@
 {
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "redjue.git-commit-plugin"
-    ],
-    "unwantedRecommendations": []
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "antfu.pnpm-catalog-lens"
+  ]
 }

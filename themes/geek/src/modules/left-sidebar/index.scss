@@ -1,0 +1,250 @@
+$iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
+
+#left-side .fas {
+  margin-right: 8px;
+}
+
+.logo {
+  font-size: 15px;
+  color: var(--geek-color-10);
+  font-weight: bold;
+  text-align: center;
+  height: 60px;
+  line-height: 68px;
+  letter-spacing: 4px;
+  position: sticky;
+  top: 0;
+  background: var(--geek-color-1);
+}
+
+#cnblog-nav {
+  ul {
+    a {
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+  }
+
+  @for $i from 1 through length($iconsColor) {
+    a:nth-child(#{$i}) span::before {
+      color: nth($iconsColor, $i);
+    }
+  }
+}
+
+.left-side-wrapper {
+  padding-left: 30px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    white-space: nowrap;
+
+    li {
+      text-decoration: none;
+      color: var(--geek-color-9);
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        color: var(--geek-color-10);
+      }
+    }
+  }
+
+  &.links {
+    margin-top: 30px;
+
+    a {
+      font-size: 13px;
+    }
+  }
+}
+
+.left-sidebar_bottom {
+  margin-top: auto;
+}
+
+.links {
+  overflow-y: auto;
+
+  h3 {
+    position: sticky;
+    top: 0;
+    background-color: var(--geek-color-1);
+  }
+}
+
+.follow-me {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+  color: #9c9cab;
+  padding: 0 20px;
+  height: 52px;
+  border-top: 1px solid var(--border-sidebar-block);
+  position: relative;
+
+  .follow-text {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+  }
+
+  .developer {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    display: flex;
+    transition: 0.3s;
+    padding: 0 20px;
+    align-items: center;
+    background-color: var(--geek-color-1);
+    width: 100%;
+    height: 100%;
+
+    img {
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+  }
+
+  &:hover {
+    .follow-text {
+      transform: translateY(100%);
+    }
+
+    .developer {
+      top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #cnblog-nav {
+    .fas {
+      font-size: 22px;
+      margin-right: 0;
+    }
+
+    .nav-item-text {
+      display: none;
+    }
+
+    ul {
+      a {
+        margin-bottom: 5px;
+
+        li {
+          padding: 18px 0;
+
+          span:last-child {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .left-side-wrapper {
+    padding: 60px 0 0;
+
+    h3 {
+      display: none;
+    }
+
+    ul {
+      li {
+        padding: 10px 0 5px;
+        flex-direction: column;
+        font-size: 12px;
+
+        a {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .logo,
+  .links,
+  .developer span,
+  .follow-text span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home {
+    #sideBar,
+    #left-side {
+      display: none;
+    }
+  }
+
+  #blog_nav_rss,
+  #blog_nav_newpost {
+    display: block;
+  }
+
+  .left-side-wrapper {
+    padding: 20px 10px 0;
+
+    h3 {
+      padding-left: 22px;
+      position: relative;
+    }
+  }
+
+  #left-side {
+    #cnblog-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border-sidebar-block);
+
+      ul {
+        flex-direction: row;
+
+        a {
+          width: 20%;
+
+          li {
+            span:first-child {
+              background-color: var(--geek-color-6);
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 10vw;
+              height: 10vw;
+
+              &::before {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .links {
+      display: block;
+    }
+  }
+}

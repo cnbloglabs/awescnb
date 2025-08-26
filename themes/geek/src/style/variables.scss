@@ -1,0 +1,29 @@
+:root {
+  --color-primary: var(--themeColor);
+}
+
+:root {
+  --geek-color-1: #f7f8fa;
+  --geek-color-2: #f2f3f5;
+  --geek-color-3: #e5e6eb;
+  --geek-color-4: #c9cdd4;
+  --geek-color-5: #a9aeb8;
+  --geek-color-6: #86909c;
+  --geek-color-7: #6b7785;
+  --geek-color-8: #4e5969;
+  --geek-color-9: #272e3b;
+  --geek-color-10: #1d2129;
+}
+
+:root[theme='dark'] {
+  --geek-color-1: rgb(32, 35, 62);
+  --geek-color-2: rgb(44, 48, 83);
+  --geek-color-3: rgb(55, 60, 105);
+  --geek-color-4: rgb(66, 72, 126);
+  --geek-color-5: rgb(77, 85, 148);
+  --geek-color-6: rgb(89, 97, 169);
+  --geek-color-7: rgb(100, 110, 191);
+  --geek-color-8: rgb(111, 122, 212);
+  --geek-color-9: rgb(123, 134, 234);
+  --geek-color-10: rgb(183, 189, 250);
+}

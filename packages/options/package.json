@@ -1,0 +1,59 @@
+{
+  "name": "@acnb/options",
+  "version": "0.2.9",
+  "description": "",
+  "author": {
+    "name": "guangzan",
+    "url": "https://www.cnblogs.com/guangzan",
+    "email": "guangzan1999@outlook.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/cnbloglabs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnbloglabs/options.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cnbloglabs/options/issues"
+  },
+  "keywords": [
+    "博客园"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "rimraf dist && unbuild"
+  },
+  "dependencies": {
+    "@acnb/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:types",
+    "eslint": "catalog:dev",
+    "rimraf": "catalog:dev",
+    "unbuild": "catalog:prod",
+    "vite": "catalog:prod",
+    "vitest": "catalog:dev"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@acnb/plugins",
+  "version": "0.5.5",
+  "description": "",
+  "author": {
+    "name": "guangzan",
+    "url": "https://www.cnblogs.com/guangzan",
+    "email": "guangzan1999@outlook.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/acnblogs/acnb-plugins#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acnblogs/acnb-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/acnblogs/acnb-plugins/issues"
+  },
+  "keywords": [
+    "博客园"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@acnb/core": "workspace:*",
+    "@acnb/options": "workspace:*",
+    "notyf": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:types",
+    "sass": "catalog:dev",
+    "vite": "catalog:prod",
+    "vite-plugin-html": "catalog:prod",
+    "vite-plugin-singlefile": "catalog:prod"
+  }
+}

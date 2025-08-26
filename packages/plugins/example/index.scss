@@ -1,0 +1,23 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css);
+@import '../src/plugins/codeTrafficLight/index.scss';
+@import '../src/plugins/codeHighlight/index.scss';
+@import '../src/plugins/codeLinenumbers/index.scss';
+@import '../src/plugins/tools/index.scss';
+@import '../src/plugins/darkMode/index.scss';
+@import '../src/plugins/license/index.scss';
+@import '../src/plugins/emoji/index.scss';
+
+.copy-btns::before,
+.custom-comment-avatar::after,
+#commentform_title::before,
+.diggit::before,
+.feedback_area_title::before,
+.buryit::before,
+#green_channel_favorite::before,
+#green_channel_follow::before,
+.custom-card-title::before,
+[class^='fa-']::before,
+[class^='fa-']::after {
+  font-family: 'Font Awesome 5 free', 'Font Awesome 5 Brands';
+  font-weight: 700;
+}

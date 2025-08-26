@@ -1,0 +1,14 @@
+{
+  "name": "@acnb/shared-assets",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "Shared static assets for all themes",
+  "author": "guangzan",
+  "license": "MIT",
+  "keywords": [
+    "博客园"
+  ],
+  "files": [
+    "public"
+  ]
+}
