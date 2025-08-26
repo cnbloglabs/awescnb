@@ -1,2 +1,2 @@
 * text=auto eol=lf
-*.html linguist-generated=true
+packages/shared-assets/** linguist-vendored
