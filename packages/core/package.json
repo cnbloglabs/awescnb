@@ -1,0 +1,46 @@
+{
+  "name": "@acnb/core",
+  "version": "1.0.8",
+  "description": "",
+  "author": {
+    "name": "guangzan",
+    "url": "https://www.cnblogs.com/guangzan",
+    "email": "guangzan1999@outlook.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/acnblogs/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acnblogs/core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/acnblogs/core/issues"
+  },
+  "keywords": [
+    "博客园"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp ./src/index.d.ts dist/"
+  },
+  "devDependencies": {
+    "@types/jquery": "catalog:types",
+    "@vitest/ui": "catalog:dev",
+    "jsdom": "catalog:dev",
+    "vite": "catalog:prod",
+    "vitest": "catalog:dev"
+  }
+}

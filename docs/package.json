@@ -1,0 +1,30 @@
+{
+  "name": "docs",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress --port 3333 --open",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "preview": "pnpm run build && serve .vitepress/dist"
+  },
+  "dependencies": {
+    "@vue/theme": "catalog:frontend",
+    "@vueuse/core": "catalog:frontend",
+    "canvas-confetti": "catalog:frontend",
+    "vue": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "catalog:frontend",
+    "@types/node": "catalog:types",
+    "@unocss/reset": "catalog:frontend",
+    "@vitejs/plugin-vue": "catalog:prod",
+    "esno": "catalog:dev",
+    "fast-glob": "catalog:dev",
+    "https-localhost": "catalog:dev",
+    "unocss": "catalog:frontend",
+    "unplugin-vue-components": "catalog:prod",
+    "vite-plugin-pwa": "catalog:prod",
+    "vitepress": "catalog:docs",
+    "workbox-window": "catalog:prod"
+  }
+}

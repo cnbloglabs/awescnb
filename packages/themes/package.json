@@ -1,0 +1,25 @@
+{
+  "name": "acnb-themes-data",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "📦 acnb theme list.",
+  "author": "awescnb",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://hub.fastgit.org/awescnb/acnb-themes-data.git"
+  },
+  "keywords": [
+    "博客园",
+    "皮肤",
+    "cnblog",
+    "theme"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build && node convert.js"
+  },
+  "devDependencies": {
+    "vite": "catalog:prod"
+  }
+}

@@ -1,0 +1,24 @@
+$postBottomimage: () !default;
+$postBottomimage: map-merge(
+  (
+    imageHeight: 200px,
+  ),
+  $postBottomimage
+);
+
+$bottomImageHeight: map-get($postBottomimage, imageHeight);
+
+#custom-post-bottomimage {
+  width: 100%;
+  height: $bottomImageHeight;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  #custom-post-bottomimage {
+    height: 130px;
+  }
+}

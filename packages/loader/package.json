@@ -1,0 +1,24 @@
+{
+  "name": "loader",
+  "version": "1.0.0",
+  "description": "Loading theme js file",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://hub.fastgit.org/awescnb/loader.git"
+  },
+  "keywords": [
+    "博客园",
+    "皮肤"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/jquery": "catalog:types",
+    "vite": "catalog:prod",
+    "vitest": "catalog:dev"
+  }
+}

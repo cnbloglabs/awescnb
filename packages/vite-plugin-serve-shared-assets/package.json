@@ -1,0 +1,45 @@
+{
+  "name": "@acnb/vite-plugin-serve-shared-assets",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "A Vite plugin to serve shared assets from a directory during development",
+  "author": {
+    "name": "guangzan",
+    "url": "https://www.cnblogs.com/guangzan",
+    "email": "guangzan1999@outlook.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/acnblogs/awescnb#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acnblogs/awescnb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/acnblogs/awescnb/issues"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "shared-assets"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./dist/serve-shared-assets-plugin.mjs",
+      "require": "./dist/serve-shared-assets-plugin.js"
+    }
+  },
+  "main": "./dist/serve-shared-assets-plugin.js",
+  "module": "./dist/serve-shared-assets-plugin.mjs",
+  "types": "./src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "catalog:prod"
+  }
+}

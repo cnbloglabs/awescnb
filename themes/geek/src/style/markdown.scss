@@ -1,0 +1,15 @@
+$md: (
+  hrColor: var(--geek-color-4),
+  blockquoteBg: var(--geek-color-3),
+  color-blockquote: var(--geek-color-9),
+  blockquoteBorderColor: var(--color-primary),
+  markBg: var(--color-primary),
+  kbdBg: #fafbfc,
+  singleLineCoodeBg: var(--geek-color-2),
+  singleLineCoodeColor: #15a7a7,
+  detailsBg: var(--geek-color-2),
+  detailsBorderColor: var(--geek-color-3),
+  detailsActiveBorderColor: var(--geek-color-3),
+);
+
+@import './common/markdown.scss';

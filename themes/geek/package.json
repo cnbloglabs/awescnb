@@ -1,0 +1,20 @@
+{
+  "author": "guangzan",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@acnb/core": "workspace:*",
+    "@acnb/options": "workspace:*",
+    "@acnb/plugins": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/jquery": "catalog:types",
+    "@types/node": "catalog:types",
+    "sass": "catalog:dev",
+    "terser": "catalog:dev",
+    "vite": "catalog:prod"
+  }
+}

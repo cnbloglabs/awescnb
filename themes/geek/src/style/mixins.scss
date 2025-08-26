@@ -1,0 +1,90 @@
+@mixin btn($type: neutral) {
+  $neutral: (
+    color: #131313,
+    bgDefault: #fff,
+    borderColorDefault: #c1ccd9,
+    shadowDefault: none,
+    bgHover: #fff,
+    borderColorHover: #c1ccd9,
+    shadowFocus: #e4e7eb,
+    shadowFocusLighter: rgba(166, 176, 187, 0.2),
+    bgActive: #f5f6f6,
+    borderColorActive: #c1ccd9,
+  );
+  $primary: (
+    color: #fff,
+    bgDefault: var(--color-primary),
+    borderColorDefault: var(--color-primary),
+    shadowDefault: var(--theme-primary-4),
+    bgHover: var(--theme-primary-8),
+    borderColorHover: var(--theme-primary-8),
+    shadowFocus: var(--theme-primary-4),
+    shadowFocusLighter: var(--theme-primary-4),
+    bgActive: var(--color-primary),
+    borderColorActive: var(--color-primary),
+  );
+  $success: (
+    color: #fff,
+    bgDefault: #07d85b,
+    borderColorDefault: #07d85b,
+    shadowDefault: rgba(7, 216, 91, 0.4),
+    bgHover: #2fde75,
+    borderColorHover: #2fde75,
+    shadowFocus: rgba(7, 216, 91, 0.4),
+    shadowFocusLighter: rgba(7, 216, 91, 0.2),
+    bgActive: #06b54c,
+    borderColorActive: #06b54c,
+  );
+  $danger: (
+    color: #fff,
+    bgDefault: #f93155,
+    borderColorDefault: #f93155,
+    shadowDefault: rgba(249, 49, 85, 0.4),
+    bgHover: #fa5270,
+    borderColorHover: #fa5270,
+    shadowFocus: rgba(249, 49, 85, 0.4),
+    shadowFocusLighter: rgba(249, 49, 85, 0.2),
+    bgActive: #f80e38,
+    borderColorActive: #f80e38,
+  );
+  $it-map: $primary;
+
+  @if $type==neutral {
+    $it-map: $neutral;
+  }
+
+  @if $type ==danger {
+    $it-map: $danger;
+  }
+
+  @if $type ==success {
+    $it-map: $success;
+  }
+
+  padding: 4px 12px;
+  background-color: map-get($it-map, bgDefault);
+  outline: none;
+  border: 1px solid map-get($it-map, borderColorDefault);
+  color: map-get($it-map, color);
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: map-get($it-map, bgHover);
+    border: 1px solid map-get($it-map, borderColorHover);
+  }
+
+  &:active {
+    background-color: map-get($it-map, bgActive);
+    border: 1px solid map-get($it-map, borderColorActive);
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow:
+      0 2px 4px map-get($it-map, shadowFocus),
+      0 0 0 3px map-get($it-map, shadowFocusLighter);
+  }
+}

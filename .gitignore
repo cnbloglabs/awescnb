@@ -1,12 +1,40 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
 node_modules
+.pnp
+.pnp.js
 
-npm-debug.log
-yarn-error.log
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# ide
-.idea
+# Testing
+coverage
 
-# Mac General
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Build Outputs
+.next/
+out/
+build
+dist
+
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
 .DS_Store
-.AppleDouble
-.LSOverride
+*.pem
+
+.eslintcache

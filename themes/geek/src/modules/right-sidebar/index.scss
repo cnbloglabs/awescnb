@@ -1,0 +1,243 @@
+.account {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  background-color: var(--geek-color-1);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.account-button {
+  border: 0;
+  background: 0;
+  color: var(--geek-color-10);
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+
+  .fas::before {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.fa-bell:before {
+  margin-right: 0;
+}
+
+.account-button-notice {
+  position: relative;
+
+  .notice-count {
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    width: 14px;
+    height: 14px;
+    line-height: 12px;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--color-primary);
+    font-size: 8px;
+    text-align: center;
+    white-space: nowrap;
+    border: 2px solid var(--geek-color-1);
+  }
+}
+
+.account-button.stats {
+  position: relative;
+
+  .stat-list {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background: var(--geek-color-2);
+    opacity: 0;
+    border: 1px solid var(--geek-color-3);
+
+    li {
+      display: flex;
+      white-space: nowrap;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--geek-color-9);
+    }
+  }
+
+  &:hover .stat-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(24px);
+    transition: all 0.3s;
+  }
+}
+
+.view-count {
+  flex: 1;
+  text-align: center;
+}
+
+.account-avatar {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+// 顶部按钮 end
+
+// 日历 start
+#custom-calendar {
+  padding: 0 18px 0 18px;
+}
+
+.event-wrapper {
+  background-color: var(--geek-color-2);
+}
+
+#blog-calendar {
+  position: relative;
+  padding: 20px 20px 0;
+
+  #blogCalendar {
+    table,
+    tbody,
+    tr,
+    td {
+      display: block;
+    }
+
+    // .CalWeekendDay {
+    //     color: var(--geek-color-5);
+    // }
+
+    .CalOtherMonthDay {
+      color: var(--geek-color-5);
+    }
+
+    .CalNextPrev {
+      color: var(--geek-color-7);
+    }
+
+    .CalTodayDay {
+      border-radius: 2px;
+      font-size: 0.7em;
+      border: 1px solid var(--color-primary);
+      border-radius: 50%;
+      background-color: var(--theme-primary-2);
+    }
+
+    tr {
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > td:first-of-type {
+          width: 100%;
+
+          td {
+            width: auto;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        padding: 0 3.24px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--geek-color-2);
+      }
+
+      &:not(:nth-child(1)) {
+        display: flex;
+        justify-content: space-between;
+
+        td {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      th,
+      td {
+        font-size: 12px;
+        padding: 0.2rem;
+        font-weight: normal;
+      }
+    }
+
+    u {
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        left: 50%;
+        background-color: var(--color-primary);
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.event-wrapper {
+  position: relative;
+  padding: 20px 8px 8px;
+  border-radius: 0 0 2px 2px;
+
+  img {
+    width: 90%;
+    display: block;
+    border-radius: 2px 2px 0 0;
+    margin: 0 auto;
+  }
+
+  .event-title {
+    color: var(--geek-color-9);
+    margin: 8px 0 0;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .event-subtitle {
+    color: var(--geek-color-10);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 14px;
+  }
+}
+
+// 日历 end
+@media screen and (max-width: 767px) {
+  .event-wrapper {
+    padding-top: 20px;
+
+    img {
+      padding-bottom: 12px;
+    }
+  }
+
+  #home {
+    #sideBar {
+      display: none;
+    }
+  }
+}

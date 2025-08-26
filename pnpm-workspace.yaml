@@ -1,0 +1,58 @@
+packages:
+  - packages/*
+  - themes/*
+  - docs
+catalogs:
+  dev:
+    '@antfu/eslint-config': ^5.2.1
+    '@clack/prompts': ^0.11.0
+    '@vitest/ui': ^3.2.4
+    bumpp: ^10.2.3
+    chalk: ^5.6.0
+    eslint: ^9.34.0
+    eslint-plugin-format: ^1.0.1
+    esno: ^0.14.1
+    fast-glob: ^3.3.3
+    https-localhost: ^4.7.1
+    jsdom: ^26.1.0
+    lint-staged: ^16.1.5
+    picocolors: ^1.1.1
+    rimraf: ^6.0.1
+    sass: ^1.90.0
+    simple-git-hooks: ^2.13.1
+    taze: ^19.3.0
+    terser: ^5.43.1
+    tsdown: ^0.13.5
+    tsx: ^4.20.5
+    typescript: ^5.9.2
+    vitest: ^3.2.4
+  docs:
+    vitepress: ^1.6.4
+  frontend:
+    '@iconify-json/carbon': ^1.2.13
+    '@unocss/reset': ^0.28.3
+    '@vue/theme': ^2.3.0
+    '@vueuse/core': ^8.9.4
+    canvas-confetti: ^1.9.3
+    notyf: ^3.10.0
+    prettier: ^3.6.2
+    unocss: ^0.28.3
+    vue: ^3.5.20
+  prod:
+    '@antfu/ni': ^25.0.0
+    '@vitejs/plugin-vue': ^2.3.4
+    unbuild: ^3.6.1
+    unplugin-vue-components: ^0.18.5
+    vite: ^7.1.3
+    vite-plugin-html: ^3.2.2
+    vite-plugin-pwa: ^0.11.13
+    vite-plugin-singlefile: ^2.3.0
+    workbox-window: ^6.6.1
+  types:
+    '@types/jquery': ^3.5.33
+    '@types/node': ^24.3.0
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild
+  - simple-git-hooks
+  - vue-demi

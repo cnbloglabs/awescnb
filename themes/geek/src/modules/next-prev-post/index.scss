@@ -1,0 +1,99 @@
+#post_next_prev {
+  display: none;
+}
+
+.custom-next-prev-post {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: var(--geek-color-10);
+  border-radius: 2px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+
+  .prev-post,
+  .next-post {
+    padding: 4px 8px;
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    li {
+      color: var(--geek-color-8);
+    }
+
+    span:nth-child(2) {
+      max-width: 80%;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &:hover {
+      li,
+      span:nth-child(2) {
+        color: #47a1f6;
+        transition: color 0.2s;
+      }
+
+      li {
+        animation: lr 0.3s ease-in 0s infinite alternate;
+      }
+    }
+  }
+
+  span:nth-child(2) {
+    margin-left: 4px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .custom-next-prev-post {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .prev-post,
+    .next-post {
+      width: 50%;
+    }
+
+    .prev-post {
+      a {
+        justify-content: flex-start;
+      }
+
+      li {
+        order: -1;
+      }
+
+      span:nth-child(1) {
+        margin-left: 8px;
+        margin-right: 4px;
+      }
+
+      span:nth-child(2) {
+        margin: 0;
+      }
+    }
+
+    .next-post {
+      a {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@keyframes lr {
+  from {
+    transform: translateX(-4px);
+  }
+
+  to {
+    transform: translateX(4px);
+  }
+}

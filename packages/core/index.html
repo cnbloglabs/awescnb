@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>core</title>
+  </head>
+  <body>
+    <div
+      id="loading"
+      style="width: 100vw; height: 100vh; background: #f00"
+    ></div>
+
+    <script type="module">
+      import { createTheme, defineOptions } from '../src/index'
+      window.opts = {
+        myPluginAlias: {
+          enable: false,
+        },
+      }
+
+      console.log('user config:', window.opts)
+
+      const myPlugin = () => {
+        const usePluginOption = defineOptions(['myPlugin1', 'myPluginAlias'], {
+          enable: true,
+        })
+
+        console.log('final plugin config:', usePluginOption())
+      }
+
+      const theme = createTheme()
+
+      theme.use(myPlugin)
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2"></script>
+    <script type="module" src="./test/index.ts"></script>
+  </body>
+</html>

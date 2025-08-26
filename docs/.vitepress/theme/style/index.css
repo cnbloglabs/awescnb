@@ -1,0 +1,12 @@
+@import './transition.css';
+
+:root {
+  --primary: #ff5caa;
+  --green: #42b983;
+  --purple: #7b80ea;
+  --yellow: #ffc517;
+}
+
+.container .VPNavBarTitle {
+  display: none;
+}
