@@ -25,6 +25,8 @@
     "@acnb/plugins": "workspace:*"
   },
   "devDependencies": {
+    "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
+    "@types/jquery": "catalog:types",
     "@types/node": "catalog:types",
     "sass": "catalog:dev",
     "terser": "catalog:dev",
