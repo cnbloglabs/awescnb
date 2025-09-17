@@ -6,6 +6,7 @@ export default defineConfig({
       formats: ['es'],
       name: 'themes',
       entry: './src/index.ts',
+      fileName: 'acnb-themes-data.es',
     },
   },
 })
