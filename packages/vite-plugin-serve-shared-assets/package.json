@@ -24,22 +24,25 @@
   ],
   "exports": {
     ".": {
-      "types": "./src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/serve-shared-assets-plugin.mjs",
       "require": "./dist/serve-shared-assets-plugin.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "main": "./dist/serve-shared-assets-plugin.js",
   "module": "./dist/serve-shared-assets-plugin.mjs",
-  "types": "./src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && tsc",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "typescript": "catalog:dev",
     "vite": "catalog:prod"
   }
 }
