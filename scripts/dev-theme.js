@@ -14,7 +14,17 @@ const themesDir = path.join(__dirname, '../themes')
 const themes = fs.readdirSync(themesDir).filter(file => fs.statSync(path.join(themesDir, file)).isDirectory())
 
 async function main() {
-  let selectedTheme = process.argv[2]
+  // 解析命令行参数，支持 --theme 参数或直接传入主题名
+  let selectedTheme = null
+
+  // 检查是否使用了 --theme 参数
+  const themeIndex = process.argv.indexOf('--theme')
+  if (themeIndex !== -1 && themeIndex + 1 < process.argv.length) {
+    selectedTheme = process.argv[themeIndex + 1]
+  } else if (process.argv[2] && !process.argv[2].startsWith('--')) {
+    // 支持直接传入主题名作为位置参数
+    selectedTheme = process.argv[2]
+  }
 
   // 如果没有通过参数指定主题，则显示菜单供用户选择
   if (!selectedTheme) {
