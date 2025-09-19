@@ -24,7 +24,6 @@
     "unocss": "catalog:frontend",
     "unplugin-vue-components": "catalog:prod",
     "vite-plugin-pwa": "catalog:prod",
-    "vitepress": "catalog:docs",
-    "workbox-window": "catalog:prod"
+    "vitepress": "catalog:docs"
   }
 }
