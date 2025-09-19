@@ -1,4 +1,4 @@
-import { expect } from 'vitest'
+import { expect, it } from 'vitest'
 import { defineOptions } from '../src/index'
 
 it('plugin configuration with string key', () => {

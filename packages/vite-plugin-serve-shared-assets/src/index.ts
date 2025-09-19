@@ -2,6 +2,9 @@
 import type { Plugin, ViteDevServer } from 'vite'
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 interface MimeTypes {
   [key: string]: string
@@ -10,7 +13,7 @@ interface MimeTypes {
 interface ServeSharedAssetsOptions {
   /**
    * The path to the shared assets directory
-   * @default path.join(__dirname, '..', '..', 'shared-assets', 'public')
+   * @default `path.join(__dirname, '..', '..', 'shared-assets', 'public')`
    */
   sharedAssetsPath?: string
 }

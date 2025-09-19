@@ -42,8 +42,8 @@
     "dist"
   ],
   "scripts": {
-    "dev": "unbuild --stub",
-    "build": "rimraf dist && unbuild"
+    "dev": "tsdown --watch",
+    "build": "tsdown"
   },
   "dependencies": {
     "@acnb/core": "workspace:*"
@@ -52,8 +52,7 @@
     "@types/node": "catalog:types",
     "eslint": "catalog:dev",
     "rimraf": "catalog:dev",
-    "unbuild": "catalog:prod",
-    "vite": "catalog:prod",
+    "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
   }
 }

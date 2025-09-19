@@ -1,3 +1,0 @@
-window.highlighter = {
-  setTheme() { },
-}
