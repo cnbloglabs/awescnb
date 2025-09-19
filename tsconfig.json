@@ -26,7 +26,10 @@
     "./docs/**/*.ts",
     "./packages/**/*.ts",
     "./themes/**/*.ts",
-    "./test/**/*.ts"
+    "./test/**/*.ts",
+    "packages/plugins/vite.config.mts",
+    "packages/stylelint-one-utility-class-per-line/src/utils.mjs",
+    "packages/stylelint-one-utility-class-per-line/src/index.mts"
   ],
   "exclude": ["**/dist/**", "**/node_modules/**"]
 }

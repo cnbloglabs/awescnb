@@ -9,7 +9,6 @@
     "@acnb/core": "workspace:*",
     "@acnb/options": "workspace:*",
     "@acnb/plugins": "workspace:*"
-
   },
   "devDependencies": {
     "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
