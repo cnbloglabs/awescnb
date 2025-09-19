@@ -1,11 +1,14 @@
+import { ServeSharedAssetsPlugin } from '@acnb/vite-plugin-serve-shared-assets'
 import { defineConfig } from 'vite'
-import { injectHtml } from 'vite-plugin-html'
 
 export default defineConfig({
   server: {
     open: true,
     port: 3000,
   },
+  plugins: [
+    ServeSharedAssetsPlugin(),
+  ],
   build: {
     // cssCodeSplit: true,
     // emptyOutDir: true,
@@ -22,14 +25,4 @@ export default defineConfig({
     //   },
     // },
   },
-  plugins: [
-    {
-      ...injectHtml({
-        injectData: {
-          injectScript: '<script type="module" src="../../example/index.js"></script>',
-        },
-      }),
-      apply: 'serve',
-    },
-  ],
 })

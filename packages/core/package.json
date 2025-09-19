@@ -33,14 +33,14 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && cp ./src/index.d.ts dist/"
+    "dev": "tsdown --watch",
+    "build": "tsdown && cp ./src/index.d.ts dist/"
   },
   "devDependencies": {
     "@types/jquery": "catalog:types",
     "@vitest/ui": "catalog:dev",
     "jsdom": "catalog:dev",
-    "vite": "catalog:prod",
+    "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
   }
 }

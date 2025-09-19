@@ -17,9 +17,10 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "vite build && node convert.js"
+    "build": "tsdown && node convert.js",
+    "dev": "tsdown --watch"
   },
   "devDependencies": {
-    "vite": "catalog:prod"
+    "tsdown": "catalog:dev"
   }
 }

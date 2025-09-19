@@ -1,5 +1,6 @@
 {
   "name": "loader",
+  "type": "module",
   "version": "1.0.0",
   "description": "Loading theme js file",
   "author": "",
@@ -14,11 +15,12 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "vite build"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
   },
   "devDependencies": {
     "@types/jquery": "catalog:types",
-    "vite": "catalog:prod",
+    "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
   }
 }

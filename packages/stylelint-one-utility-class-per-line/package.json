@@ -1,0 +1,35 @@
+{
+  "name": "@acnb/stylelint-one-utility-class-per-line",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Stylelint plugin for AWES CNB themes",
+  "author": "AWES CNB Team",
+  "license": "MIT",
+  "keywords": [
+    "stylelint",
+    "plugin",
+    "tailwindcss",
+    "awescnb"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "node --test __tests__/index.test.mjs"
+  },
+  "peerDependencies": {
+    "stylelint": "^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "catalog:dev",
+    "tsdown": "catalog:dev"
+  }
+}

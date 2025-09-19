@@ -7,6 +7,4 @@ declare global {
     theme: any
     currentBlogApp: string
   }
-
-  const $: JQueryStatic
 }
