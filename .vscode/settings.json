@@ -1,11 +1,8 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "files.associations": {
-    "*.css": "postcss"
-  },
-  "unocss.root": [
-    "packages/client"
-  ],
+  "css.validate": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
   // Enable the flat config support
   "eslint.useFlatConfig": true,
