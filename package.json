@@ -2,7 +2,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.17.0",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -19,7 +19,7 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@acnb/vite-plugin-serve-shared-assets": "workspace:^",
+    "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
     "@antfu/eslint-config": "catalog:dev",
     "@antfu/ni": "catalog:prod",
     "@clack/prompts": "catalog:dev",
