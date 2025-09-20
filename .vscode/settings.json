@@ -3,6 +3,7 @@
   "css.validate": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "tailwindCSS.classFunctions": ["cva", "cx"],
 
   // Enable the flat config support
   "eslint.useFlatConfig": true,
@@ -14,7 +15,8 @@
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "never",
+    "source.fixAll.stylelint": "explicit"
   },
 
   // Silent the stylistic rules in you IDE, but still auto fix them
