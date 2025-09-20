@@ -1111,7 +1111,8 @@
                   <div class="RecentCommentBlock">
                     <ul>
                       <li class="recent_comment_title">
-                        <a href="https://www.cnblogs.com/guangzan/p/12892420.html">1. Re:Lorem, ipsum dolor sit amet consectetur adipisicing elit</a>
+                        <a href="https://www.cnblogs.com/guangzan/p/12892420.html">1. Re:Lorem, ipsum dolor sit amet
+                          consectetur adipisicing elit</a>
                       </li>
                       <li class="recent_comment_body">
                         @kin02 请使用 Markdown 编辑器，注意 Markdown
@@ -1119,7 +1120,8 @@
                       </li>
                       <li class="recent_comment_author">--guangzan</li>
                       <li class="recent_comment_title">
-                        <a href="https://www.cnblogs.com/guangzan/p/12892420.html">2. Re:Lorem, ipsum dolor sit amet consectetur adipisicing elit</a>
+                        <a href="https://www.cnblogs.com/guangzan/p/12892420.html">2. Re:Lorem, ipsum dolor sit amet
+                          consectetur adipisicing elit</a>
                       </li>
                       <li class="recent_comment_body">
                         <p>白天模式正常😓</p>
@@ -1260,6 +1262,13 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/mockAPI.js"></script>
   <script type="module" src="../src/main.js"></script>
+  <script>
+    document.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+    });
+  </script>
 </body>
 
 </html>
