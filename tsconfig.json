@@ -29,7 +29,9 @@
     "./test/**/*.ts",
     "packages/plugins/vite.config.mts",
     "packages/stylelint-one-utility-class-per-line/src/utils.mjs",
-    "packages/stylelint-one-utility-class-per-line/src/index.mts"
+    "packages/stylelint-one-utility-class-per-line/src/index.mts",
+    "themes/scribe/src/modules/demo/index.tsx",
+    "themes/scribe/src/modules/back-to-top/index.tsx"
   ],
   "exclude": ["**/dist/**", "**/node_modules/**"]
 }
