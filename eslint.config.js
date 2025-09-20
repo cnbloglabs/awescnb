@@ -1,15 +1,18 @@
 import antfu from '@antfu/eslint-config'
 
-export default antfu({
-  pnpm: true,
-  formatters: {
-    markdown: true,
-    css: true,
+export default antfu(
+  {
+    react: true,
+    pnpm: true,
+    formatters: {
+      markdown: true,
+      css: true,
+    },
+    ignores: [
+      './docs/.vitepress',
+    ],
   },
-  ignores: [
-    './docs/.vitepress',
-  ],
-})
+)
   .overrideRules({
     'style/brace-style': ['error', '1tbs', {
       allowSingleLine: true,
