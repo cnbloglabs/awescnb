@@ -1,0 +1,788 @@
+@import "tailwindcss" source("../../src");
+@import "tw-animate-css";
+@import "./shadcn/themes.css";
+@import "./shadcn/globals.css";
+@import "./hide.css";
+
+/* 基础样式重置 */
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background
+    text-foreground
+    font-sans
+    motion-safe:scroll-smooth
+    dark:bg-neutral-950
+    dark:text-white;
+}
+
+/* 导航栏样式 */
+#top_nav {
+  @apply bg-card
+    border-b
+    border-border
+    shadow-sm;
+}
+
+.navbar-main {
+  @apply container
+    mx-auto
+    px-4;
+}
+
+.navbar-list {
+  @apply flex
+    items-center
+    space-x-6;
+}
+
+.navbar-list a {
+  @apply text-muted-foreground
+    hover:text-foreground
+    transition-colors;
+}
+
+.navbar-branding img {
+  @apply h-7
+    w-auto;
+}
+
+.navbar-search {
+  @apply bg-muted
+    rounded-lg
+    px-3
+    py-2;
+}
+
+.navbar-search input {
+  @apply bg-transparent
+    text-sm
+    placeholder:text-muted-foreground
+    outline-none;
+}
+
+.navbar-search button {
+  @apply text-muted-foreground
+    hover:text-foreground;
+}
+
+.navbar-avatar {
+  @apply h-8
+    w-8
+    rounded-full
+    border
+    border-border;
+}
+
+.dropdown-menu {
+  @apply bg-popover
+    border
+    border-border
+    rounded-lg
+    shadow-lg;
+}
+
+.dropdown-menu a {
+  @apply block
+    px-4
+    py-2
+    text-sm
+    text-popover-foreground
+    hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+.blogStats {
+  @apply text-sm
+    text-muted-foreground
+    text-center
+    pb-4
+    flex
+    justify-center
+    items-center
+    space-x-6;
+}
+
+.blogStats span {
+  @apply flex
+    items-center
+    space-x-1;
+}
+
+.blogStats span::before {
+  @apply content-['']
+    w-1.5
+    h-1.5
+    bg-primary/60
+    rounded-full;
+}
+
+/* 主要内容区域 */
+#main {
+  @apply container
+    mx-auto
+    px-4
+    py-8;
+}
+
+#mainContent {
+  @apply max-w-4xl
+    mx-auto;
+}
+
+/* 文章卡片 */
+.day {
+  @apply bg-card
+    rounded-lg
+    border
+    border-border
+    shadow-sm
+    mb-4
+    overflow-hidden
+    hover:shadow-lg
+    hover:border-primary/30
+    hover:-translate-y-1
+    transition-all
+    duration-500
+    ease-out;
+}
+
+.dayTitle {
+  @apply bg-muted
+    px-6
+    py-3
+    border-b
+    border-border;
+}
+
+.dayTitle a {
+  @apply text-sm
+    font-medium
+    text-muted-foreground
+    hover:text-foreground;
+}
+
+.postTitle {
+  @apply px-6
+    pt-6;
+}
+
+.postTitle2 {
+  @apply text-2xl
+    font-bold
+    text-foreground
+    hover:text-primary
+    transition-colors;
+}
+
+.postCon {
+  @apply px-6
+    py-4;
+}
+
+.c_b_p_desc {
+  @apply text-muted-foreground
+    leading-relaxed;
+}
+
+.c_b_p_desc_readmore {
+  @apply text-primary
+    hover:text-primary/80
+    font-medium
+    ml-2;
+}
+
+.postDesc {
+  @apply px-6
+    pb-6
+    text-sm
+    text-muted-foreground;
+}
+
+.post-view-count,
+.post-comment-count,
+.post-digg-count {
+  @apply inline-block
+    mr-4;
+}
+
+.postDesc a {
+  @apply text-muted-foreground
+    hover:text-foreground;
+}
+
+/* 侧边栏 */
+#sideBar {
+  @apply w-80
+    space-y-6;
+}
+
+.sidebar-block {
+  @apply bg-card
+    rounded-xl
+    border
+    border-border
+    p-6
+    mb-4;
+}
+
+.sidebar-block h3 {
+  @apply text-[15px]
+    font-semibold
+    text-foreground
+    leading-none
+    mb-6;
+}
+
+.sidebar-block ul {
+    @apply m-0
+      text-sm;
+}
+
+/* 页脚 */
+#footer {
+  @apply bg-card
+    border-t
+    border-border
+    mt-12;
+}
+
+/* 暗色主题支持 */
+.dark .day {
+  @apply bg-card;
+}
+
+.dark .navbar-search {
+  @apply bg-muted;
+}
+
+/* 博客统计信息 popover 样式 */
+.blog-stats-popover {
+  @apply absolute
+    top-full
+    right-0
+    mt-2
+    w-64
+    bg-popover
+    border
+    border-border
+    rounded-lg
+    shadow-xl
+    opacity-0
+    invisible
+    hover:opacity-100
+    hover:visible
+    transition-all
+    duration-200
+    transform
+    hover:translate-y-0
+    translate-y-2
+    z-50;
+}
+
+.blog-stats-popover::before {
+  @apply content-['']
+    absolute
+    -top-2
+    right-4
+    w-4
+    h-4
+    bg-popover
+    border-l
+    border-t
+    border-border
+    transform
+    rotate-45;
+}
+
+.blog-stats-button {
+  @apply bg-card
+    border
+    border-border
+    rounded-full
+    p-3
+    shadow-lg
+    hover:shadow-xl
+    transition-all
+    duration-200
+    hover:scale-110
+    relative;
+}
+
+.blog-stats-pulse {
+  @apply absolute
+    -top-1
+    -right-1
+    w-3
+    h-3
+    bg-primary
+    rounded-full
+    animate-pulse;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .navbar-list {
+    @apply space-x-4;
+  }
+
+  #navList {
+    @apply space-x-1
+      px-2;
+  }
+
+  #navList .menu {
+    @apply px-3
+      py-2
+      text-sm
+      whitespace-nowrap;
+  }
+
+  #blogTitle h1 {
+    @apply text-3xl;
+  }
+
+  .day {
+    @apply mb-4;
+  }
+
+  .postTitle2 {
+    @apply text-xl;
+  }
+}
+
+/* 链接样式 */
+a {
+    @apply transition-colors
+      underline-offset-4
+      hover:underline;
+}
+
+/* 清除浮动 */
+.clear {
+  @apply clear-both;
+}
+
+/* 暗色模式切换按钮样式 */
+.dark-mode-toggle {
+  @apply fixed
+    top-4
+    right-4
+    z-50
+    p-2
+    rounded-full
+    bg-card
+    border
+    border-border
+    shadow-sm
+    transition-all
+    duration-200;
+}
+
+/* 阅读进度条 */
+.reading-progress {
+  @apply fixed
+    top-0
+    left-0
+    h-1
+    bg-primary
+    z-50
+    transition-all
+    duration-300;
+}
+
+/* 文章卡片增强样式 - 已合并到基础样式中 */
+
+/* 标签和分类样式 */
+.post-tags {
+  @apply flex
+    flex-wrap
+    gap-2
+    mt-4;
+}
+
+.post-tag {
+  @apply inline-flex
+    items-center
+    px-2
+    py-1
+    rounded-full
+    text-xs
+    font-medium
+    bg-secondary
+    text-secondary-foreground
+    hover:bg-secondary/80
+    transition-colors;
+}
+
+/* 按钮样式 */
+.btn {
+  @apply inline-flex
+    items-center
+    justify-center
+    rounded-md
+    text-sm
+    font-medium
+    transition-colors
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-ring
+    focus-visible:ring-offset-2
+    disabled:opacity-50
+    disabled:pointer-events-none
+    ring-offset-background;
+}
+
+.btn-primary {
+  @apply bg-primary
+    text-primary-foreground
+    hover:bg-primary/90;
+}
+
+.btn-secondary {
+  @apply bg-secondary
+    text-secondary-foreground
+    hover:bg-secondary/80;
+}
+
+.btn-outline {
+  @apply border
+    border-input
+    hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+.btn-ghost {
+  @apply hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+
+/* 响应式布局调整 */
+@media (max-width: 1024px) {
+  #main {
+    @apply flex
+      flex-col;
+  }
+
+  #mainContent {
+    @apply w-full
+      mb-8;
+  }
+
+  #sideBar {
+    @apply w-full;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+
+  #blogTitle {
+    @apply py-6;
+  }
+
+  #blogTitle h1 {
+    @apply text-2xl;
+  }
+
+  .day {
+    @apply mb-4;
+  }
+
+  .postTitle2 {
+    @apply text-lg;
+  }
+
+  .navbar-search {
+    @apply hidden;
+  }
+}
+
+/* 动画效果 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 代码高亮样式 */
+pre {
+  @apply bg-muted
+    rounded-lg
+    p-4
+    overflow-x-auto;
+}
+
+code {
+  @apply text-sm;
+}
+
+/* 表格样式 */
+table {
+  @apply w-full
+    border-collapse
+    border
+    overflow-hidden;
+}
+
+th {
+  @apply bg-muted
+    text-foreground
+    font-medium
+    p-3
+    text-left;
+}
+
+td {
+  @apply p-3
+    border-t
+    border-border;
+}
+
+/* 引用样式 */
+blockquote {
+  @apply border-l-4
+    border-primary
+    bg-muted
+    p-4
+    my-4
+    rounded-r-lg;
+}
+
+/* 列表样式 */
+ul,
+ol {
+  @apply my-4
+    ml-6;
+}
+
+li {
+  @apply my-2;
+}
+
+/* 输入框样式 */
+input,
+textarea,
+select {
+  @apply bg-background
+    border
+    border-input
+    rounded-md
+    px-3
+    py-2
+    text-sm
+    placeholder:text-muted-foreground
+    focus:outline-none
+    focus:ring-2
+    focus:ring-ring
+    focus:ring-offset-2;
+}
+
+#blog-calendar {
+   @apply mb-4;
+}
+
+/* 日历组件样式 - 参考 shadcn 设计风格 */
+.calendar-table {
+  @apply w-full
+    border-collapse
+    border-spacing-0
+    bg-card
+    rounded-xl
+    border
+    border-border
+    shadow-sm
+    overflow-hidden;
+}
+
+.calendar-header {
+  @apply bg-muted
+    px-4
+    py-3
+    border-b
+    border-border;
+}
+
+.calendar-header table {
+  @apply w-full;
+}
+
+.calendar-header td {
+  @apply px-2
+    py-1;
+}
+
+.calendar-header td[align="center"] {
+  @apply text-center
+    text-sm
+    font-semibold
+    text-foreground;
+}
+
+.calendar-day-header {
+  @apply px-2
+    py-3
+    text-xs
+    font-medium
+    text-muted-foreground
+    text-center
+    bg-muted/50
+    border-b
+    border-border;
+}
+
+.calendar-day,
+.calendar-weekend,
+.calendar-other-month {
+  @apply w-10
+    h-10
+    text-center
+    text-sm
+    cursor-pointer
+    transition-all
+    duration-200
+    rounded-md
+    mx-1
+    my-1;
+}
+
+.calendar-day {
+  @apply text-foreground
+    hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+.calendar-weekend {
+  @apply text-muted-foreground
+    hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+.calendar-other-month {
+  @apply text-muted-foreground/50
+    hover:bg-accent/50
+    hover:text-muted-foreground;
+}
+
+.calendar-today {
+  @apply bg-primary
+    text-primary-foreground
+    font-semibold
+    rounded-full
+    shadow-sm
+    hover:bg-primary/90
+    hover:text-primary-foreground;
+}
+
+.calendar-day a,
+.calendar-weekend a,
+.calendar-today a {
+  @apply w-full
+    h-full
+    flex
+    items-center
+    justify-center
+    hover:no-underline
+    transition-colors;
+}
+
+.calendar-nav {
+  @apply inline-flex
+    items-center
+    justify-center
+    w-8
+    h-8
+    rounded-md
+    text-sm
+    font-medium
+    transition-colors
+    hover:bg-accent
+    hover:text-accent-foreground
+    disabled:opacity-50
+    disabled:pointer-events-none
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-ring
+    focus-visible:ring-offset-2;
+}
+
+/* 日历响应式设计 */
+@media (max-width: 640px) {
+  .calendar-day,
+  .calendar-weekend,
+  .calendar-other-month,
+  .calendar-today {
+    @apply w-8
+      h-8
+      text-xs;
+  }
+  
+  .calendar-day-header {
+    @apply text-xs
+      py-2;
+  }
+  
+  .calendar-header {
+    @apply px-2
+      py-2;
+  }
+}
+
+/* 暗色模式下的日历样式 */
+.dark .calendar-table {
+  @apply bg-card
+    border-border;
+}
+
+.dark .calendar-header {
+  @apply bg-muted
+    border-border;
+}
+
+.dark .calendar-day-header {
+  @apply bg-muted/30
+    text-muted-foreground;
+}
+
+.dark .calendar-day {
+  @apply text-foreground
+    hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+.dark .calendar-weekend {
+  @apply text-muted-foreground
+    hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+.dark .calendar-other-month {
+  @apply text-muted-foreground/50
+    hover:bg-accent/50;
+}
+
+.dark .calendar-today {
+  @apply bg-primary
+    text-primary-foreground;
+}
+
+.dark .calendar-nav {
+  @apply hover:bg-accent
+    hover:text-accent-foreground;
+}
+
+#sidebar_news {
+    @apply mb-4;
+}
+
