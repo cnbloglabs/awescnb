@@ -25,6 +25,7 @@
     "@acnb/plugins": "workspace:*"
   },
   "devDependencies": {
+    "@acnb/vite-plugin-dynamic-script-extension": "workspace:*",
     "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
     "@types/jquery": "catalog:types",
     "@types/node": "catalog:types",
