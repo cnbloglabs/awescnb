@@ -48,12 +48,10 @@ catalogs:
     '@vueuse/core': ^8.9.4
     canvas-confetti: ^1.9.3
     class-variance-authority: ^0.7.1
-    lit: ^3.3.1
     lucide: ^0.544.0
     lucide-preact: ^0.544.0
     notyf: ^3.10.0
     preact: ^10.26.9
-    preact-custom-element: ^4.5.1
     prettier: ^3.6.2
     unocss: ^0.28.3
     vue: ^3.5.21
