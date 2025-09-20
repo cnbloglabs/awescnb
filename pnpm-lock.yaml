@@ -109,6 +109,10 @@ catalogs:
     vitepress:
       specifier: ^1.6.4
       version: 1.6.4
+  docs:
+    vitepress:
+      specifier: ^1.6.4
+      version: 1.6.4
   frontend:
     '@iconify-json/carbon':
       specifier: ^1.2.13
@@ -169,6 +173,9 @@ catalogs:
       specifier: ^2.3.0
       version: 2.3.0
   types:
+    '@types/jquery':
+      specifier: ^3.5.33
+      version: 3.5.33
     '@types/jquery':
       specifier: ^3.5.33
       version: 3.5.33
@@ -5594,6 +5601,10 @@ packages:
 
   tinyglobby@0.2.14:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
+    engines: {node: '>=12.0.0'}
+
+  tinyglobby@0.2.15:
+    resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
     engines: {node: '>=12.0.0'}
 
   tinyglobby@0.2.15:
@@ -12045,6 +12056,11 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
 
+  tinyglobby@0.2.15:
+    dependencies:
+      fdir: 6.5.0(picomatch@4.0.3)
+      picomatch: 4.0.3
+
   tinypool@1.1.1: {}
 
   tinyrainbow@2.0.0: {}
@@ -12399,6 +12415,7 @@ snapshots:
       picomatch: 4.0.3
       postcss: 8.5.6
       rollup: 4.48.1
+      tinyglobby: 0.2.15
       tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 24.5.2
