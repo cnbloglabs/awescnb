@@ -1,0 +1,46 @@
+{
+  "name": "@acnb/theme-scribe",
+  "version": "1.0.0",
+  "description": "A modern, clean theme for cnblogs with shadcn ui style design, featuring card-based layout, responsive design, and elegant typography.",
+  "author": "guangzan",
+  "license": "MIT",
+  "keywords": [
+    "cnblogs",
+    "theme",
+    "shadcn",
+    "modern",
+    "clean",
+    "responsive"
+  ],
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vite build",
+    "build:full": "node build.js"
+  },
+  "dependencies": {
+    "@acnb/core": "workspace:*",
+    "@acnb/options": "workspace:*",
+    "@acnb/plugins": "workspace:*",
+    "class-variance-authority": "catalog:frontend",
+    "lucide": "catalog:frontend",
+    "lucide-preact": "catalog:frontend",
+    "preact": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@acnb/stylelint-one-utility-class-per-line": "workspace:*",
+    "@acnb/vite-plugin-dynamic-script-extension": "workspace:*",
+    "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
+    "@preact/preset-vite": "catalog:dev",
+    "@tailwindcss/vite": "catalog:dev",
+    "@types/node": "catalog:types",
+    "stylelint": "catalog:dev",
+    "stylelint-config-standard": "catalog:dev",
+    "stylelint-order": "catalog:dev",
+    "stylelint-selector-bem-pattern": "catalog:dev",
+    "tailwindcss": "catalog:dev",
+    "terser": "catalog:dev",
+    "tw-animate-css": "catalog:dev",
+    "vite": "catalog:prod",
+    "vite-bundle-analyzer": "catalog:dev"
+  }
+}

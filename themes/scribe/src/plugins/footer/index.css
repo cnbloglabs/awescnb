@@ -1,0 +1,5 @@
+@reference "../../styles/globals.css";
+
+#footer {
+ @apply hidden;
+}
