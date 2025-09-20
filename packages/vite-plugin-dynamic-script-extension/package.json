@@ -1,0 +1,59 @@
+{
+  "name": "@acnb/vite-plugin-dynamic-script-extension",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Vite plugin for dynamic script extension",
+  "author": {
+    "name": "guangzan",
+    "url": "https://www.cnblogs.com/guangzan",
+    "email": "guangzan1999@outlook.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/cnbloglabs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnbloglabs/awescnb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cnbloglabs/awescnb/issues"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "dynamic-script",
+    "博客园"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:types",
+    "eslint": "catalog:dev",
+    "rimraf": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "vitest": "catalog:dev"
+  }
+}
