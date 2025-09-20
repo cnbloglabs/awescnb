@@ -1,27 +1,25 @@
 ## 通用
 
-- 不要总结做了哪些修改！一个字都不要说！！！！
-- 禁止输出工作步骤描述！少废话！！！
-- 禁止打开预览！
-- 我不需要你验证，你改完就任务完成了！
-- 注意 tailwindcss 版本是 V4
-- 禁止执行 npm run dev！
-- 所有文件、目录命名方式统一采用中划线,如 file-name
-- 包管理器统一使用 pnpm
+- 禁止总结做了哪些修改！一个字都不要说！除非明确要求
+- 禁止输出工作步骤描述！少废话！除非明确要求
+- 禁止预览 Web 页面！禁止预览 Web 页面！禁止预览 Web 页面！除非明确要求
+- 禁止执行 npm run dev！除非明确要求
+- 禁止执行验证操作！除非明确要求
+- 已明确 tailwindcss 版本是 V4
+- 统一所有文件、目录命名方式为中划线命名,如 file-name
+- 统一使用包管理器 pnpm
 
 ## 运行原理
 
-packages/shared-assets 放置了博客页面默认模板，包含预定义的 html、默认样式等，不可修改 shared-assets 下的任何文件！
+packages/shared-assets 放置了博客页面默认模板，包含预定义的 html、默认样式等，shared-assets 下的任何文件不可修改！
 
-实现功能前， 你可能需要先查看 packages/shared-assets/public/templates、packages/shared-assets/public/css， 以了解基础模板的 html 结构、样式。
+实现功能前，你可能需要先查看 packages/shared-assets/public/templates、packages/shared-assets/public/css， 以了解基础模板的 html 结构、样式。
 
-`themes/*` 为皮肤所在位置，如 `themes/scribe` - scribe 主题。
-
-运行 dev server 时，会自动注入 vite index.html 以及 packages/shared-assets，所有皮肤都基于博客页面默认模板实现。
+运行 dev server 时，会通过 vite 插件自动注入 vite index.html 以及 packages/shared-assets，所有皮肤都基于博客页面默认模板实现。
 
 你可以通过皮肤的 js 文件调整默认模板元素，或者根据模板中元素已有的选择器编写皮肤的 css。
 
-启动 dev server 后，默认打开的是一个导航页，你如果需要查看博客皮肤的样式，你应该进入:
+`themes/*` 为皮肤所在位置，如 `themes/scribe` 放置 scribe 主题实现代码。启动 dev server 后，默认打开的是一个导航页面，你如果需要查看相关页面，应该进入:
 
 - /templates/home.html 首页
 - /templates/post-markdown.html 文章内容页（markdown）
@@ -34,40 +32,24 @@ packages/shared-assets 放置了博客页面默认模板，包含预定义的 ht
 - /templates/tags.html 标签列表页
 - /templates/postarchive.html 随笔档案分类页
 
-## 风格指南
-
 ## themes/scribe
 
-themes/scribe 是 shadcn ui 默认风格的博客皮肤。
+themes/scribe 是 shadcn ui （默认主题）风格的博客皮肤。
 
-如果要实现的功能，是独立的，比如 back-to-top，通过 preact 组件实现，样式统一使用 tailwind V4 实现，对于复杂的 class，使用 class-variance-authority。 如：
+如果要实现的功能，如果是独立且复杂的，比如 back-to-top，通过 preact 组件实现。样式统一使用 tailwind V4 实现，对于复杂的 class，使用 class-variance-authority 进行组织。如：`themes/scribe/src/plugins/top-nav-bar`
 
-```tsx
-// modules/feature/index.tsx
-import register from 'preact-custom-element'
-
-function MyComponent(props: { name: string }) {
-  return (
-    <div className="text-red-500 text-4xl">
-      我的名字叫
-      {props.name}
-      。
-    </div>
-  )
-}
-
-register(MyComponent, 'my-component', ['name'], { shadow: false })
-
-export default function () {
-  const container = document.body
-  container.innerHTML += `<my-component name="张三"></my-component>`
-}
+```md
+top-nav-bar
+├── component.tsx // preact 组件，从零实现一个功能
+├── data.ts // 从模板 html 获取数据
+├── index.css // 功能相关样式， 一般用于隐藏模板元素
+└── index.tsx // 插件入口，渲染获取 data 并渲染组件
 ```
 
-如果要实现的功能，需要操作 dom，比如修改默认 html 模板，使用纯 ts 实现，使用原生 dom api 操作 dom。在编写对应的样式时， 禁止使用 css 属性，统一使用 tailwind @apply 编写 css 属性, 如：
+如果要实现的功能，简单操作模板 dom 就可完成，使用纯 ts 实现，使用原生 dom api 操作 dom。在编写对应的样式时， 禁止使用 CSS 属性，统一使用 tailwind @apply 编写 css 属性, 如：
 
 ```ts
-// modules/feature/index.tsx
+// plugin-name/index.tsx
 
 export default function () {
   const el = document.querySelector('#element-id')
@@ -75,14 +57,17 @@ export default function () {
 }
 ```
 
+> 即使功能简单，你也应该优先考虑使用 preact 组件方式实现。
+
 ```css
-/* modules/feature/index.css */
+/* plugin-name/index.css */
+
 .btn {
   @apply text-2xl font-bold text-red-500;
 }
 ```
 
-## 本地开发
+本地开发
 
 ```sh
 npm run dev scribe
@@ -103,5 +88,5 @@ const MoonIcon = createElement(Moon)
 ```tsx
 import { ChevronUp } from 'lucide-preact'
 
-<ChevronUp className="w-5 h-5" />
+<ChevronUp />
 ```
