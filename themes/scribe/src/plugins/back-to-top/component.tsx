@@ -3,7 +3,7 @@ import { ChevronUp } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
 
 const backToTopVariants = cva(
-  'fixed bottom-8 right-8 z-50 rounded-full shadow-lg border-none cursor-pointer transition-all duration-300 ease-in-out',
+  'fixed bottom-8 right-8 z-50 rounded-full border-none cursor-pointer transition-all duration-300 ease-in-out p-3 bg-transparent hover:bg-primary hover:text-primary-foreground',
   {
     variants: {
       visible: {
@@ -38,12 +38,10 @@ export function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="回到顶部"
-      className={backToTopVariants({ visible: isVisible })}
+      className={`${backToTopVariants({ visible: isVisible })}`}
       type="button"
     >
-      <div className="w-12 h-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full flex items-center justify-center">
-        <ChevronUp className="w-5 h-5" />
-      </div>
+      <ChevronUp className="w-5 h-5" />
     </button>
   )
 }
