@@ -5,12 +5,18 @@ export default antfu(
     react: true,
     pnpm: true,
     formatters: {
-      markdown: true,
       css: true,
+      html: true,
+      markdown: true,
     },
     ignores: [
       './docs/.vitepress',
     ],
+    stylistic: {
+      indent: 2,
+      quotes: 'single',
+      semi: false,
+    },
   },
 )
   .overrideRules({

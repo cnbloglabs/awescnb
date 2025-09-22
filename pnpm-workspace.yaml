@@ -72,3 +72,5 @@ onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
   - vue-demi
+catalog:
+  vite-plugin-svgr: ^4.5.0

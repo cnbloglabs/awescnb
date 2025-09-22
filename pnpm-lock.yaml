@@ -92,7 +92,7 @@ catalogs:
       version: 5.44.0
     tsdown:
       specifier: latest
-      version: 0.15.3
+      version: 0.15.4
     tsx:
       specifier: ^4.20.5
       version: 4.20.5
@@ -105,10 +105,6 @@ catalogs:
     vitest:
       specifier: ^3.2.4
       version: 3.2.4
-  docs:
-    vitepress:
-      specifier: ^1.6.4
-      version: 1.6.4
   docs:
     vitepress:
       specifier: ^1.6.4
@@ -173,9 +169,6 @@ catalogs:
       specifier: ^2.3.0
       version: 2.3.0
   types:
-    '@types/jquery':
-      specifier: ^3.5.33
-      version: 3.5.33
     '@types/jquery':
       specifier: ^3.5.33
       version: 3.5.33
@@ -250,7 +243,7 @@ importers:
         version: 19.6.0
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
       tsx:
         specifier: catalog:dev
         version: 4.20.5
@@ -326,7 +319,7 @@ importers:
         version: 26.1.0
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
       vitest:
         specifier: catalog:dev
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.5.2)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
@@ -335,7 +328,7 @@ importers:
     devDependencies:
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
 
   packages/loader:
     devDependencies:
@@ -344,7 +337,7 @@ importers:
         version: 3.5.33
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
       vitest:
         specifier: catalog:dev
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.5.2)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
@@ -366,7 +359,7 @@ importers:
         version: 6.0.1
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
       vitest:
         specifier: catalog:dev
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.5.2)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
@@ -408,7 +401,7 @@ importers:
         version: 16.23.1(typescript@5.9.2)
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
 
   packages/vite-plugin-dynamic-script-extension:
     devDependencies:
@@ -423,7 +416,7 @@ importers:
         version: 6.0.1
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
       vitest:
         specifier: catalog:dev
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.5.2)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@26.1.0)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
@@ -432,7 +425,7 @@ importers:
     devDependencies:
       tsdown:
         specifier: catalog:dev
-        version: 0.15.3(typescript@5.9.2)
+        version: 0.15.4(typescript@5.9.2)
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
@@ -577,6 +570,9 @@ importers:
       vite-bundle-analyzer:
         specifier: catalog:dev
         version: 1.2.3
+      vite-plugin-svgr:
+        specifier: ^4.5.0
+        version: 4.5.0(rollup@4.48.1)(typescript@5.9.2)(vite@7.1.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
 
 packages:
 
@@ -1989,6 +1985,15 @@ packages:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
 
+  '@rollup/pluginutils@5.3.0':
+    resolution: {integrity: sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
   '@rollup/rollup-android-arm-eabi@4.48.1':
     resolution: {integrity: sha512-rGmb8qoG/zdmKoYELCBwu7vt+9HxZ7Koos3pD0+sH5fR3u3Wb/jGcpnqxcnWsPEKDUyzeLSqksN8LJtgXjqBYw==}
     cpu: [arm]
@@ -2121,6 +2126,74 @@ packages:
 
   '@surma/rollup-plugin-off-main-thread@2.2.3':
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
+
+  '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
+    resolution: {integrity: sha512-b9MIk7yhdS1pMCZM8VeNfUlSKVRhsHZNMl5O9SfaX0l0t5wjdgu4IDzGB8bpnGBBOjGST3rRFVsaaEtI4W6f7g==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-remove-jsx-attribute@8.0.0':
+    resolution: {integrity: sha512-BcCkm/STipKvbCl6b7QFrMh/vx00vIP63k2eM66MfHJzPr6O2U0jYEViXkHJWqXqQYjdeA9cuCl5KWmlwjDvbA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-remove-jsx-empty-expression@8.0.0':
+    resolution: {integrity: sha512-5BcGCBfBxB5+XSDSWnhTThfI9jcO5f0Ai2V24gZpG+wXF14BzwxxdDb4g6trdOux0rhibGs385BeFMSmxtS3uA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-replace-jsx-attribute-value@8.0.0':
+    resolution: {integrity: sha512-KVQ+PtIjb1BuYT3ht8M5KbzWBhdAjjUPdlMtpuw/VjT8coTrItWX6Qafl9+ji831JaJcu6PJNKCV0bp01lBNzQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-svg-dynamic-title@8.0.0':
+    resolution: {integrity: sha512-omNiKqwjNmOQJ2v6ge4SErBbkooV2aAWwaPFs2vUY7p7GhVkzRkJ00kILXQvRhA6miHnNpXv7MRnnSjdRjK8og==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-svg-em-dimensions@8.0.0':
+    resolution: {integrity: sha512-mURHYnu6Iw3UBTbhGwE/vsngtCIbHE43xCRK7kCw4t01xyGqb2Pd+WXekRRoFOBIY29ZoOhUCTEweDMdrjfi9g==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-transform-react-native-svg@8.1.0':
+    resolution: {integrity: sha512-Tx8T58CHo+7nwJ+EhUwx3LfdNSG9R2OKfaIXXs5soiy5HtgoAEkDay9LIimLOcG8dJQH1wPZp/cnAv6S9CrR1Q==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-plugin-transform-svg-component@8.0.0':
+    resolution: {integrity: sha512-DFx8xa3cZXTdb/k3kfPeaixecQLgKh5NVBMwD0AQxOzcZawK4oo1Jh9LbrcACUivsCA7TLG8eeWgrDXjTMhRmw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/babel-preset@8.1.0':
+    resolution: {integrity: sha512-7EYDbHE7MxHpv4sxvnVPngw5fuR6pw79SkcrILHJ/iMpuKySNCl5W1qcwPEpU+LgyRXOaAFgH0KhwD18wwg6ug==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@svgr/core@8.1.0':
+    resolution: {integrity: sha512-8QqtOQT5ACVlmsvKOJNEaWmRPmcojMOzCz4Hs2BGG/toAp/K38LcsMRyLp349glq5AzJbCEeimEoxaX6v/fLrA==}
+    engines: {node: '>=14'}
+
+  '@svgr/hast-util-to-babel-ast@8.0.0':
+    resolution: {integrity: sha512-EbDKwO9GpfWP4jN9sGdYwPBU0kdomaPIL2Eu4YwmgP+sJeXT+L7bMwJUBnhzfH8Q2qMBqZ4fJwpCyYsAN3mt2Q==}
+    engines: {node: '>=14'}
+
+  '@svgr/plugin-jsx@8.1.0':
+    resolution: {integrity: sha512-0xiIyBsLlr8quN+WyuxooNW9RJ0Dpr8uOnH/xrCVO8GLUcwHISwj1AG0k+LFzteTkAA0GbX0kj9q6Dk70PTiPA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@svgr/core': '*'
 
   '@tailwindcss/node@4.1.13':
     resolution: {integrity: sha512-eq3ouolC1oEFOAvOMOBAmfCIqZBJuvWvvYWh5h5iOYfe1HFC6+GZ6EIL0JdM3/niGRJmnrOc+8gl9/HGUaaptw==}
@@ -2847,6 +2920,10 @@ packages:
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
 
+  camelcase@6.3.0:
+    resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
+    engines: {node: '>=10'}
+
   caniuse-lite@1.0.30001737:
     resolution: {integrity: sha512-BiloLiXtQNrY5UyF0+1nSJLXUENuhka2pzy2Fx5pGxqavdrxSCW4U6Pn/PoG3Efspi2frRbHpBV2XsrPE6EDlw==}
 
@@ -3023,6 +3100,15 @@ packages:
   cors@2.8.5:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
     engines: {node: '>= 0.10'}
+
+  cosmiconfig@8.3.6:
+    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      typescript: ^5.9.2
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
@@ -5161,8 +5247,8 @@ packages:
     engines: {node: 20 || >=22}
     hasBin: true
 
-  rolldown-plugin-dts@0.16.6:
-    resolution: {integrity: sha512-OPQKAft45efpjU3ppcI9GyRHAT0otTIdMv0gcoBlcR9B3QssZvTFH6zbT3Ij5x+7ymX5TCPyHb+VIkRYTJrTaA==}
+  rolldown-plugin-dts@0.16.7:
+    resolution: {integrity: sha512-9iDzS4MHXMyieisFbWxuz96i/idGJNpvWILqCH06mrEZvn8Q2el3Q63xxjOt7HJjTOUNFhB1isvZFy4dA87lPQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       '@ts-macro/tsc': ^0.3.6
@@ -5348,6 +5434,9 @@ packages:
   slice-ansi@7.1.0:
     resolution: {integrity: sha512-bSiSngZ/jWeX93BqeIAbImyTbEihizcwNjFoRUIY/T1wWQsfsm2Vw1agPKylXvQTU7iASGdHhyqRlqQzfz+Htg==}
     engines: {node: '>=18'}
+
+  snake-case@3.0.4:
+    resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -5538,6 +5627,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  svg-parser@2.0.4:
+    resolution: {integrity: sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==}
+
   svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
 
@@ -5601,10 +5693,6 @@ packages:
 
   tinyglobby@0.2.14:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
-    engines: {node: '>=12.0.0'}
-
-  tinyglobby@0.2.15:
-    resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
     engines: {node: '>=12.0.0'}
 
   tinyglobby@0.2.15:
@@ -5678,8 +5766,8 @@ packages:
   ts-pattern@5.8.0:
     resolution: {integrity: sha512-kIjN2qmWiHnhgr5DAkAafF9fwb0T5OhMVSWrm8XEdTFnX6+wfXwYOFjeF86UZ54vduqiR7BfqScFmXSzSaH8oA==}
 
-  tsdown@0.15.3:
-    resolution: {integrity: sha512-51p2z1F3GBAG9+9J+BNo6rYCvajZ9TAGtFMq/hCwjhvxFbzJ/Py4SHmLNltbraR4QFepW694cZwab33Nb7H2Ew==}
+  tsdown@0.15.4:
+    resolution: {integrity: sha512-aoFE8disBg8BgYcOgradr/5Yd+QDBRQ+6z8mXo/Ib7+GIaJwJsI5l/ppve05CZGcSDqwdhF4gdrA0HPHBtbBqA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -5898,6 +5986,11 @@ packages:
     engines: {node: '>18.0.0'}
     peerDependencies:
       rollup: ^4.44.1
+      vite: ^7.1.6
+
+  vite-plugin-svgr@4.5.0:
+    resolution: {integrity: sha512-W+uoSpmVkSmNOGPSsDCWVW/DDAyv+9fap9AZXBvWiQqrboJ08j2vh0tFxTD/LjwqwAd3yYSVJgm54S/1GhbdnA==}
+    peerDependencies:
       vite: ^7.1.6
 
   vite-prerender-plugin@0.5.12:
@@ -7795,6 +7888,14 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 2.3.1
 
+  '@rollup/pluginutils@5.3.0(rollup@4.48.1)':
+    dependencies:
+      '@types/estree': 1.0.8
+      estree-walker: 2.0.2
+      picomatch: 4.0.3
+    optionalDependencies:
+      rollup: 4.48.1
+
   '@rollup/rollup-android-arm-eabi@4.48.1':
     optional: true
 
@@ -7911,6 +8012,76 @@ snapshots:
       json5: 2.2.3
       magic-string: 0.25.9
       string.prototype.matchall: 4.0.12
+
+  '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-remove-jsx-attribute@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-remove-jsx-empty-expression@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-replace-jsx-attribute-value@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-svg-dynamic-title@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-svg-em-dimensions@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-transform-react-native-svg@8.1.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-plugin-transform-svg-component@8.0.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+
+  '@svgr/babel-preset@8.1.0(@babel/core@7.28.3)':
+    dependencies:
+      '@babel/core': 7.28.3
+      '@svgr/babel-plugin-add-jsx-attribute': 8.0.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-remove-jsx-attribute': 8.0.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-remove-jsx-empty-expression': 8.0.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-replace-jsx-attribute-value': 8.0.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-svg-dynamic-title': 8.0.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-svg-em-dimensions': 8.0.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-transform-react-native-svg': 8.1.0(@babel/core@7.28.3)
+      '@svgr/babel-plugin-transform-svg-component': 8.0.0(@babel/core@7.28.3)
+
+  '@svgr/core@8.1.0(typescript@5.9.2)':
+    dependencies:
+      '@babel/core': 7.28.3
+      '@svgr/babel-preset': 8.1.0(@babel/core@7.28.3)
+      camelcase: 6.3.0
+      cosmiconfig: 8.3.6(typescript@5.9.2)
+      snake-case: 3.0.4
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@svgr/hast-util-to-babel-ast@8.0.0':
+    dependencies:
+      '@babel/types': 7.28.4
+      entities: 4.5.0
+
+  '@svgr/plugin-jsx@8.1.0(@svgr/core@8.1.0(typescript@5.9.2))':
+    dependencies:
+      '@babel/core': 7.28.3
+      '@svgr/babel-preset': 8.1.0(@babel/core@7.28.3)
+      '@svgr/core': 8.1.0(typescript@5.9.2)
+      '@svgr/hast-util-to-babel-ast': 8.0.0
+      svg-parser: 2.0.4
+    transitivePeerDependencies:
+      - supports-color
 
   '@tailwindcss/node@4.1.13':
     dependencies:
@@ -8780,6 +8951,8 @@ snapshots:
       pascal-case: 3.1.2
       tslib: 2.8.1
 
+  camelcase@6.3.0: {}
+
   caniuse-lite@1.0.30001737: {}
 
   canvas-confetti@1.9.3: {}
@@ -8936,6 +9109,15 @@ snapshots:
     dependencies:
       object-assign: 4.1.1
       vary: 1.1.2
+
+  cosmiconfig@8.3.6(typescript@5.9.2):
+    dependencies:
+      import-fresh: 3.3.1
+      js-yaml: 4.1.0
+      parse-json: 5.2.0
+      path-type: 4.0.0
+    optionalDependencies:
+      typescript: 5.9.2
 
   cosmiconfig@9.0.0(typescript@5.9.2):
     dependencies:
@@ -11444,7 +11626,7 @@ snapshots:
       glob: 11.0.3
       package-json-from-dist: 1.0.1
 
-  rolldown-plugin-dts@0.16.6(rolldown@1.0.0-beta.38)(typescript@5.9.2):
+  rolldown-plugin-dts@0.16.7(rolldown@1.0.0-beta.38)(typescript@5.9.2):
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.4
@@ -11717,6 +11899,11 @@ snapshots:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 5.0.0
 
+  snake-case@3.0.4:
+    dependencies:
+      dot-case: 3.0.4
+      tslib: 2.8.1
+
   source-map-js@1.2.1: {}
 
   source-map-support@0.5.21:
@@ -11969,6 +12156,8 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+  svg-parser@2.0.4: {}
+
   svg-tags@1.0.0: {}
 
   symbol-tree@3.2.4: {}
@@ -12056,11 +12245,6 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
 
-  tinyglobby@0.2.15:
-    dependencies:
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
-
   tinypool@1.1.1: {}
 
   tinyrainbow@2.0.0: {}
@@ -12112,7 +12296,7 @@ snapshots:
 
   ts-pattern@5.8.0: {}
 
-  tsdown@0.15.3(typescript@5.9.2):
+  tsdown@0.15.4(typescript@5.9.2):
     dependencies:
       ansis: 4.1.0
       cac: 6.7.14
@@ -12122,7 +12306,7 @@ snapshots:
       empathic: 2.0.0
       hookable: 5.5.3
       rolldown: 1.0.0-beta.38
-      rolldown-plugin-dts: 0.16.6(rolldown@1.0.0-beta.38)(typescript@5.9.2)
+      rolldown-plugin-dts: 0.16.7(rolldown@1.0.0-beta.38)(typescript@5.9.2)
       semver: 7.7.2
       tinyexec: 1.0.1
       tinyglobby: 0.2.15
@@ -12398,6 +12582,17 @@ snapshots:
       rollup: 4.48.1
       vite: 7.1.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
 
+  vite-plugin-svgr@4.5.0(rollup@4.48.1)(typescript@5.9.2)(vite@7.1.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)):
+    dependencies:
+      '@rollup/pluginutils': 5.3.0(rollup@4.48.1)
+      '@svgr/core': 8.1.0(typescript@5.9.2)
+      '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.9.2))
+      vite: 7.1.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - typescript
+
   vite-prerender-plugin@0.5.12(vite@7.1.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(sass@1.92.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)):
     dependencies:
       kolorist: 1.8.0
@@ -12415,7 +12610,6 @@ snapshots:
       picomatch: 4.0.3
       postcss: 8.5.6
       rollup: 4.48.1
-      tinyglobby: 0.2.15
       tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 24.5.2
