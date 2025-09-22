@@ -14,19 +14,19 @@ export function queryData(): ComponentProps<typeof Component>['data'] {
       const text = link.textContent?.trim() || ''
       const href = link.getAttribute('href') || '#'
 
-      let icon = ''
-      if (id.includes('home'))
-        icon = 'home'
-      else if (id.includes('newpost'))
-        icon = 'pen'
-      else if (id.includes('contact'))
-        icon = 'mail'
-      else if (id.includes('rss'))
-        icon = 'rss'
-      else if (id.includes('admin'))
-        icon = 'settings'
+      // let icon = ''
+      // if (id.includes('home'))
+      //   icon = 'home'
+      // else if (id.includes('newpost'))
+      //   icon = 'pen'
+      // else if (id.includes('contact'))
+      //   icon = 'mail'
+      // else if (id.includes('rss'))
+      //   icon = 'rss'
+      // else if (id.includes('admin'))
+      //   icon = 'settings'
 
-      navItems.push({ id, text, href, icon })
+      navItems.push({ id, text, href, icon: '' })
     })
   }
 

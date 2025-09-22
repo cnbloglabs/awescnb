@@ -4,6 +4,7 @@
 @import "./shadcn/globals.css";
 @import "./hide.css";
 
+
 /* 基础样式重置 */
 * {
   @apply border-border;
@@ -127,10 +128,6 @@ body {
     py-8;
 }
 
-#mainContent {
-  @apply max-w-4xl
-    mx-auto;
-}
 
 /* 文章卡片 */
 .day {
@@ -465,11 +462,6 @@ a {
   #main {
     @apply flex
       flex-col;
-  }
-
-  #mainContent {
-    @apply w-full
-      mb-8;
   }
 
   #sideBar {

@@ -41,6 +41,7 @@
     "terser": "catalog:dev",
     "tw-animate-css": "catalog:dev",
     "vite": "catalog:prod",
-    "vite-bundle-analyzer": "catalog:dev"
+    "vite-bundle-analyzer": "catalog:dev",
+    "vite-plugin-svgr": "catalog:"
   }
 }
