@@ -5,6 +5,7 @@ import preact from '@preact/preset-vite'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import { analyzer } from 'vite-bundle-analyzer'
+import svgr from 'vite-plugin-svgr'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -16,6 +17,7 @@ export default defineConfig({
     analyzer({
       enabled: false,
     }),
+    svgr(),
   ],
   css: {
     preprocessorOptions: {

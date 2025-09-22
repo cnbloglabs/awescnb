@@ -1,5 +1,9 @@
 @reference "../../styles/globals.css";
 
+#sideBar {
+    @apply hidden;
+}
+
 .blogStats {
     @apply hidden;
 }

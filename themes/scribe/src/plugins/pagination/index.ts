@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight, createElement } from 'lucide'
+import './index.css'
 
 const ChevronLeftIcon = createElement(ChevronLeft)
 const ChevronRightIcon = createElement(ChevronRight)
@@ -38,7 +39,7 @@ function addArrowIcons() {
   })
 }
 
-export function install() {
+export function pagination() {
   wrapCurrentPageNumber()
   addArrowIcons()
 }
