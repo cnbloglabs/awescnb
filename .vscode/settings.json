@@ -4,51 +4,11 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "tailwindCSS.classFunctions": ["cva", "cx"],
-
-  // Enable the flat config support
-  "eslint.useFlatConfig": true,
-
-  // Disable the default formatter
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-
+  "editor.defaultFormatter": "biomejs.biome",
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never",
     "source.fixAll.stylelint": "explicit"
-  },
-
-  // Silent the stylistic rules in you IDE, but still auto fix them
-  "eslint.rules.customizations": [
-    { "rule": "@stylistic/*", "severity": "off" },
-    { "rule": "style*", "severity": "off" },
-    { "rule": "*-indent", "severity": "off" },
-    { "rule": "*-spacing", "severity": "off" },
-    { "rule": "*-spaces", "severity": "off" },
-    { "rule": "*-order", "severity": "off" },
-    { "rule": "*-dangle", "severity": "off" },
-    { "rule": "*-newline", "severity": "off" },
-    { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
-  ],
-
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml"
-  ],
-  "vitest.disableWorkspaceWarning": true,
-  "slidev.include": [
-    "**/slides.md",
-    "packages/vscode/syntax/slidev.example.md"
-  ],
-  "vue.server.hybridMode": "typeScriptPluginOnly"
+  }
 }
