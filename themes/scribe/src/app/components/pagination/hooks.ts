@@ -1,10 +1,5 @@
 import { useQueryDOM } from '@acnb/hooks'
-
-export interface PaginationItem {
-  type: 'link' | 'text' | 'current'
-  text: string
-  href?: string
-}
+import type { PaginationItem } from './types'
 
 export function usePaginationItems() {
   return useQueryDOM({

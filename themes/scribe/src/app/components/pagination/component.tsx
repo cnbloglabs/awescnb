@@ -1,15 +1,6 @@
 import { cva } from 'class-variance-authority'
 import { ChevronLeft, ChevronRight } from 'lucide-preact'
-
-interface PaginationItem {
-  type: 'link' | 'text' | 'current'
-  text: string
-  href?: string
-}
-
-interface PaginationProps {
-  items: PaginationItem[]
-}
+import type { PaginationItem } from './types'
 
 const paginationItemVariants = cva(
   'no-underline! inline-flex items-center justify-center gap-1 rounded-md px-4 py-2 font-medium text-sm',
@@ -32,6 +23,10 @@ const paginationItemVariants = cva(
     },
   },
 )
+
+interface PaginationProps {
+  items: PaginationItem[]
+}
 
 export function Pagination({ items }: PaginationProps) {
   const getItemContent = (item: PaginationItem) => {
