@@ -1,8 +1,9 @@
 // Vite plugin to serve shared assets in dev server
-import type { Plugin, ViteDevServer } from 'vite'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import type { Plugin, ViteDevServer } from 'vite'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -18,7 +19,9 @@ interface ServeSharedAssetsOptions {
   sharedAssetsPath?: string
 }
 
-export function ServeSharedAssetsPlugin(options: ServeSharedAssetsOptions = {}): Plugin {
+export function ServeSharedAssetsPlugin(
+  options: ServeSharedAssetsOptions = {},
+): Plugin {
   const { sharedAssetsPath } = options
 
   return {
@@ -26,7 +29,9 @@ export function ServeSharedAssetsPlugin(options: ServeSharedAssetsOptions = {}):
 
     configureServer(server: ViteDevServer) {
       // Default path to shared assets
-      const assetsPath = sharedAssetsPath || path.join(__dirname, '..', '..', 'shared-assets', 'public')
+      const assetsPath =
+        sharedAssetsPath ||
+        path.join(__dirname, '..', '..', 'shared-assets', 'public')
 
       // Serve static files from shared-assets/public directory
       server.middlewares.use((req, res, next) => {
@@ -36,24 +41,53 @@ export function ServeSharedAssetsPlugin(options: ServeSharedAssetsOptions = {}):
         if (req.url?.startsWith('/public/')) {
           // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
-          filePath = path.join(assetsPath, urlWithoutQuery!.replace('/public/', ''))
-        } else if (req.url?.startsWith('/templates/')) { // Also handle /templates/ requests
+          filePath = path.join(
+            assetsPath,
+            urlWithoutQuery!.replace('/public/', ''),
+          )
+        } else if (req.url?.startsWith('/templates/')) {
+          // Also handle /templates/ requests
           // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
-          filePath = path.join(assetsPath, 'templates', urlWithoutQuery!.replace('/templates/', ''))
-        } else if (req.url?.startsWith('/js/')) { // Also handle /js/ requests
+          filePath = path.join(
+            assetsPath,
+            'templates',
+            urlWithoutQuery!.replace('/templates/', ''),
+          )
+        } else if (req.url?.startsWith('/js/')) {
+          // Also handle /js/ requests
           // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
-          filePath = path.join(assetsPath, 'js', urlWithoutQuery!.replace('/js/', ''))
-        } else if (req.url?.startsWith('/css/')) { // Also handle /css/ requests
+          filePath = path.join(
+            assetsPath,
+            'js',
+            urlWithoutQuery!.replace('/js/', ''),
+          )
+        } else if (req.url?.startsWith('/css/')) {
+          // Also handle /css/ requests
           // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
-          filePath = path.join(assetsPath, 'css', urlWithoutQuery!.replace('/css/', ''))
-        } else if (req.url?.startsWith('/images/')) { // Also handle /images/ requests
+          filePath = path.join(
+            assetsPath,
+            'css',
+            urlWithoutQuery!.replace('/css/', ''),
+          )
+        } else if (req.url?.startsWith('/images/')) {
+          // Also handle /images/ requests
           // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
-          filePath = path.join(assetsPath, 'images', urlWithoutQuery!.replace('/images/', ''))
-        } else if (req.url === '/' || req.url?.startsWith('/?') || req.url === '/index.html' || req.url?.startsWith('/index.html?')) { // Handle root and index.html requests
+          filePath = path.join(
+            assetsPath,
+            'images',
+            urlWithoutQuery!.replace('/images/', ''),
+          )
+        } else if (
+          req.url === '/' ||
+          req.url?.startsWith('/?') ||
+          req.url === '/index.html' ||
+          req.url?.startsWith('/index.html?')
+        ) {
+          // Handle root and index.html requests
           filePath = path.join(assetsPath, 'index.html')
         }
 

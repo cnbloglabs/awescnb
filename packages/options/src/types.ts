@@ -164,128 +164,128 @@ interface WebsiteTagOptions {
 interface CodeTrafficLightOptions {
   enable: boolean
 }
-type GenericUseFn<T> = (arg: Partial<T>) => T
+type GenericGetFn<T> = (arg: Partial<T>) => T
 /**
  * 主题基本配置
  */
-export type UseThemeOptions = GenericUseFn<ThemeOptions>
+export type GetThemeOptions = GenericGetFn<ThemeOptions>
 /**
  * 背景配置
  */
-export type UseBackgroundOptions = GenericUseFn<BackgroundOptions>
+export type GetBackgroundOptions = GenericGetFn<BackgroundOptions>
 /**
  * 弹幕配置
  */
-export type UseBarragesOptions = GenericUseFn<BarragesOptions>
+export type GetBarragesOptions = GenericGetFn<BarragesOptions>
 /**
  * 博文目录配置
  */
-export type UseCatalogOptions = GenericUseFn<CatalogOptions>
+export type GetCatalogOptions = GenericGetFn<CatalogOptions>
 /**
  * 图表配置
  */
-export type UseChartsOptions = GenericUseFn<ChartsOptions>
+export type GetChartsOptions = GenericGetFn<ChartsOptions>
 /**
  * 点击特效配置
  */
-export type UseClickEffectsOptions = GenericUseFn<ClickEffectsOptions>
+export type GetClickEffectsOptions = GenericGetFn<ClickEffectsOptions>
 /**
  * 代码块复制配置
  */
-export type UseCodeCopyOptions = GenericUseFn<CodeCopyOptions>
+export type GetCodeCopyOptions = GenericGetFn<CodeCopyOptions>
 /**
  * 代码块高亮主题配置
  */
-export type UseCodeHighlightOptions = GenericUseFn<CodeHighlightOptions>
+export type GetCodeHighlightOptions = GenericGetFn<CodeHighlightOptions>
 /**
  * 代码块语言配置
  */
-export type UseCodeLangOptions = GenericUseFn<CodeLangOptions>
+export type GetCodeLangOptions = GenericGetFn<CodeLangOptions>
 /**
  * 代码块行号配置
  */
-export type UseCodeLinenumbersOptions = GenericUseFn<CodeLinenumbersOptions>
+export type GetCodeLinenumbersOptions = GenericGetFn<CodeLinenumbersOptions>
 /**
  * 捐赠配置
  */
-export type UseDonationOptions = GenericUseFn<DonationOptions>
+export type GetDonationOptions = GenericGetFn<DonationOptions>
 /**
  * 表情输入配置
  */
-export type UseEmojiOptions = GenericUseFn<EmojiOptions>
+export type GetEmojiOptions = GenericGetFn<EmojiOptions>
 /**
  * 自定义链接配置
  */
-export type UseLinksOptions = GenericUseFn<LinksOptions>
+export type GetLinksOptions = GenericGetFn<LinksOptions>
 /**
  * 图片查看配置
  */
-export type UseImagePreviewOptions = GenericUseFn<ImagePreviewOptions>
+export type GetImagePreviewOptions = GenericGetFn<ImagePreviewOptions>
 /**
  * live2d 配置
  */
-export type UseLive2dOptions = GenericUseFn<Live2dOptions>
+export type GetLive2dOptions = GenericGetFn<Live2dOptions>
 /**
  * 锁屏配置
  */
-export type UseLockScreenOptions = GenericUseFn<LockScreenOptions>
+export type GetLockScreenOptions = GenericGetFn<LockScreenOptions>
 /**
  * 深色模式配置
  */
-export type UseDarkModeOptions = GenericUseFn<DarkModeOptions>
+export type GetDarkModeOptions = GenericGetFn<DarkModeOptions>
 /**
  * 音乐播放器配置
  */
-export type UseMusicPlayerOptions = GenericUseFn<MusicPlayerOptions>
+export type GetMusicPlayerOptions = GenericGetFn<MusicPlayerOptions>
 /**
  * 笔注配置
  */
-export type UseNotationOptions = GenericUseFn<NotationOptions>
+export type GetNotationOptions = GenericGetFn<NotationOptions>
 /**
  * 公告配置
  */
-export type UseNoticeOptions = GenericUseFn<NoticeOptions>
+export type GetNoticeOptions = GenericGetFn<NoticeOptions>
 /**
  * 博文底部图片配置
  */
-export type UsePostBottomImageOptions = GenericUseFn<PostBottomImageOptions>
+export type GetPostBottomImageOptions = GenericGetFn<PostBottomImageOptions>
 /**
  * 版权配置
  */
-export type UseLicenseOptions = GenericUseFn<LicenseOptions>
+export type GetLicenseOptions = GenericGetFn<LicenseOptions>
 /**
  * 博文顶部图片配置
  */
-export type UsePostTopImageOptions = GenericUseFn<PostTopImageOptions>
+export type GetPostTopImageOptions = GenericGetFn<PostTopImageOptions>
 /**
  * 二维码配置
  */
-export type UseQrcodeOptions = GenericUseFn<QrcodeOptions>
+export type GetQrcodeOptions = GenericGetFn<QrcodeOptions>
 /**
  * 个性签名配置
  */
-export type UseSignatureOptions = GenericUseFn<SignatureOptions>
+export type GetSignatureOptions = GenericGetFn<SignatureOptions>
 /**
  * 工具栏配置
  */
-export type UseToolsOptions = GenericUseFn<ToolsOptions>
+export type GetToolsOptions = GenericGetFn<ToolsOptions>
 /**
  * Github 配置
  */
-export type UseGithubOptions = GenericUseFn<GithubOptions>
+export type GetGithubOptions = GenericGetFn<GithubOptions>
 /**
  * Gitee 配置
  */
-export type UseGiteeOptions = GenericUseFn<GiteeOptions>
+export type GetGiteeOptions = GenericGetFn<GiteeOptions>
 /**
  * 博文列表图片配置
  */
-export type UsePostListImageOptions = GenericUseFn<PostListImageOptions>
+export type GetPostListImageOptions = GenericGetFn<PostListImageOptions>
 /**
  * 站点标签配置
  */
-export type UseWebsiteTagOptions = GenericUseFn<WebsiteTagOptions>
+export type GetWebsiteTagOptions = GenericGetFn<WebsiteTagOptions>
 /**
  * 代码块红绿灯
  */
-export type UseCodeTrafficLightOptions = GenericUseFn<CodeTrafficLightOptions>
+export type GetCodeTrafficLightOptions = GenericGetFn<CodeTrafficLightOptions>

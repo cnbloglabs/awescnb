@@ -1,5 +1,5 @@
 // 设置网站图标和标题
-import { useWebsiteTagOptions } from '@acnb/options'
+import { getWebsiteTagOptions } from '@acnb/options'
 
 /**
  * 构建网页标题
@@ -30,8 +30,8 @@ function setFavicon(favicon) {
   }
 }
 
-export function webTag(theme, devOptions) {
-  const { enable, title, favicon } = useWebsiteTagOptions(devOptions)
+export function webTag(_, devOptions) {
+  const { enable, title, favicon } = getWebsiteTagOptions(devOptions)
   if (!enable) {
     return
   }

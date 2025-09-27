@@ -9,9 +9,9 @@ npm i @acnb/options
 ```
 
 ```js
-import { useBackgroundOptions } from '@acnb/options'
+import { getBackgroundOptions } from '@acnb/options'
 
-const backgroundOptions = useBackgroundOptions()
+const backgroundOptions = getBackgroundOptions()
 console.log(backgroundOptions)
 // {
 //   enable: false,
@@ -22,7 +22,7 @@ console.log(backgroundOptions)
 ```
 
 ```js
-const backgroundOptions = useBackgroundOptions({
+const backgroundOptions = getBackgroundOptions({
   enable: true,
 })
 console.log(backgroundOptions)

@@ -3,12 +3,12 @@ import { extend, isArray } from './utils/shared'
 type MergeOptionsFn = <A extends object, B extends object, C extends object>(
   def?: A,
   user?: B,
-  dev?: C
+  dev?: C,
 ) => A & B & C
 
 type DefineOptionsFn = <F extends object, D extends object, U extends object>(
   userOptionName: string | Array<string>,
-  defaultOptions: F
+  defaultOptions: F,
 ) => (devOptions?: D) => F & U & D
 
 const mergeOptions: MergeOptionsFn = (def, user, dev) => {
@@ -19,7 +19,7 @@ const mergeOptions: MergeOptionsFn = (def, user, dev) => {
 
 function getValue(valueKeys = [], obj = {}) {
   const keys = Object.keys(obj)
-  const key = keys.find(key => valueKeys.includes(key))
+  const key = keys.find((key) => valueKeys.includes(key))
   return key ? obj[key] : null
 }
 

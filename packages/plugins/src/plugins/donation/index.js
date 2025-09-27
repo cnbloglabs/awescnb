@@ -1,4 +1,4 @@
-import { useDonationOptions } from '@acnb/options'
+import { getDonationOptions } from '@acnb/options'
 import { getCurrentPage } from '../../utils/cnblog'
 import { poll } from '../../utils/helpers'
 
@@ -14,8 +14,8 @@ function qrcodeToggle() {
   })
 }
 
-export function donation(theme, devOptions) {
-  const { enable, qrcodes } = useDonationOptions(devOptions)
+export function donation(_, devOptions) {
+  const { enable, qrcodes } = getDonationOptions(devOptions)
 
   if (!enable) {
     return

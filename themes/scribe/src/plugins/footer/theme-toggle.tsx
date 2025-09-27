@@ -3,12 +3,13 @@ import { Monitor, Moon, Sun } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
 
 const themeToggleVariants = cva(
-  'rounded-full p-1.5 *:size-4 cursor-pointer transition-all duration-200',
+  'cursor-pointer rounded-full p-1.5 transition-all duration-200 *:size-4',
   {
     variants: {
       active: {
         true: 'bg-primary text-primary-foreground shadow-sm',
-        false: 'text-muted-foreground hover:text-foreground hover:bg-primary/10',
+        false:
+          'text-muted-foreground hover:bg-primary/10 hover:text-foreground',
       },
     },
     defaultVariants: {
@@ -32,7 +33,9 @@ export function ThemeToggle() {
       } else if (theme === 'light') {
         document.documentElement.classList.remove('dark')
       } else {
-        const shouldBeDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        const shouldBeDark = window.matchMedia(
+          '(prefers-color-scheme: dark)',
+        ).matches
         if (shouldBeDark) {
           document.documentElement.classList.add('dark')
         } else {
@@ -57,30 +60,30 @@ export function ThemeToggle() {
   }
 
   return (
-    <div className="relative z-0 inline-grid grid-cols-3 gap-0.5 rounded-full bg-muted p-0.75">
+    <div className='relative z-0 inline-grid grid-cols-3 gap-0.5 rounded-full bg-muted p-0.75'>
       <button
         onClick={() => setThemeAndSave('system')}
-        aria-label="系统主题"
+        aria-label='系统主题'
         className={themeToggleVariants({ active: theme === 'system' })}
-        type="button"
+        type='button'
       >
-        <Monitor className="w-5 h-5" stroke-width={1} />
+        <Monitor className='h-5 w-5' stroke-width={1} />
       </button>
       <button
         onClick={() => setThemeAndSave('light')}
-        aria-label="浅色主题"
+        aria-label='浅色主题'
         className={themeToggleVariants({ active: theme === 'light' })}
-        type="button"
+        type='button'
       >
-        <Sun className="w-5 h-5" stroke-width={1} />
+        <Sun className='h-5 w-5' stroke-width={1} />
       </button>
       <button
         onClick={() => setThemeAndSave('dark')}
-        aria-label="深色主题"
+        aria-label='深色主题'
         className={themeToggleVariants({ active: theme === 'dark' })}
-        type="button"
+        type='button'
       >
-        <Moon className="w-5 h-5" stroke-width={1} />
+        <Moon className='h-5 w-5' stroke-width={1} />
       </button>
     </div>
   )

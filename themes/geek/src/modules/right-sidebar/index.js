@@ -1,4 +1,4 @@
-import { useGithubOptions } from '@acnb/options'
+import { getGithubOptions } from '@acnb/options'
 import { contact, message } from '../../constants/links'
 import {
   getArticleCount,
@@ -25,7 +25,8 @@ function buildTopBtns() {
         <div class="account-button message">
             <a href="${message}" class='account-button-notice'>
                 <li class="fas fa-bell"></li>
-                <span class="notice-count" ${!noticeCount && 'style=display:none'
+                <span class="notice-count" ${
+                  !noticeCount && 'style=display:none'
                 }>${noticeCount}</span>
             </a>
         </div>
@@ -39,7 +40,7 @@ function buildTopBtns() {
 }
 
 function buildGithubIcon() {
-  const { enable, url } = useGithubOptions({ enable: true })
+  const { enable, url } = getGithubOptions({ enable: true })
   if (!enable) {
     return
   }
@@ -54,10 +55,8 @@ function buildStatistics() {
     () => {
       return !Number.isNaN(
         Number.parseInt(
-          $('#stats_post_count')
-            .text()
-            .trim()
-            .replace(/\D/g, ''),
+          $('#stats_post_count').text().trim().replace(/\D/g, ''),
+          10,
         ),
       )
     },
@@ -76,17 +75,18 @@ function buildStatistics() {
 function buildCalendar() {
   const quarter = getQuarter()
   const imageUrlPrefix = 'https://images.cnblogs.com/cnblogs_com/guangzan'
-  const quarterImg = (() => ({
-    Spring: `${imageUrlPrefix}/1894231/o_230626114104_spring.png`,
-    Summer: `${imageUrlPrefix}/1894231/o_230626114104_summer.png`,
-    Autumn: `${imageUrlPrefix}/1894231/o_230626114105_autumn.png`,
-    Winter: `${imageUrlPrefix}/1894231/o_230626114104_winter.png`,
-  }[quarter]))()
+  const quarterImg = (() =>
+    ({
+      Spring: `${imageUrlPrefix}/1894231/o_230626114104_spring.png`,
+      Summer: `${imageUrlPrefix}/1894231/o_230626114104_summer.png`,
+      Autumn: `${imageUrlPrefix}/1894231/o_230626114105_autumn.png`,
+      Winter: `${imageUrlPrefix}/1894231/o_230626114104_winter.png`,
+    })[quarter])()
   const month = getMonth()
   const instance = new Date()
   const year = instance.getFullYear()
-  const date
-    = instance.getDate() < 10 ? `0${instance.getDate()}` : instance.getDate()
+  const date =
+    instance.getDate() < 10 ? `0${instance.getDate()}` : instance.getDate()
   const el = `
     <div id="custom-calendar" class="sidebar-block">
         <div class="event-wrapper">

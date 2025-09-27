@@ -1,4 +1,4 @@
-import { useCatalogOptions } from '@acnb/options'
+import { getCatalogOptions } from '@acnb/options'
 import { getCurrentPage, hasPostTitle } from '../../utils/cnblog'
 import { debounce, getClientRect, userAgent } from '../../utils/helpers'
 
@@ -8,7 +8,7 @@ import { debounce, getClientRect, userAgent } from '../../utils/helpers'
 function buildCatalogContainer(showTitle) {
   const container = $('<nav id="catalog"></nav>')
   if (showTitle) {
-    container.append('<h3 class=\'catalog-title\'>目录</h3>')
+    container.append("<h3 class='catalog-title'>目录</h3>")
   }
   return container
 }
@@ -31,14 +31,14 @@ function buildCatalogList() {
       let id
 
       if (mathNode.length) {
-        text
-          = mathNode.prop('outerHTML')
-            + $(this)
-              .contents()
-              .filter(function () {
-                return this.nodeType === 3
-              })
-              .text()
+        text =
+          mathNode.prop('outerHTML') +
+          $(this)
+            .contents()
+            .filter(function () {
+              return this.nodeType === 3
+            })
+            .text()
       } else {
         text = $(this).text()
       }
@@ -116,9 +116,9 @@ function autoScroll(scrollContainer, updateNavigation) {
     const navigationMatch = $(`a[href="#${sectionName}"]`, navigation)
 
     if (
-      $(this).offset().top - $(window).height() / 2 < $(window).scrollTop()
-      && $(this).offset().top + $(this).height() - $(window).height() / 2
-      > $(window).scrollTop()
+      $(this).offset().top - $(window).height() / 2 < $(window).scrollTop() &&
+      $(this).offset().top + $(this).height() - $(window).height() / 2 >
+        $(window).scrollTop()
     ) {
       const position = navigationMatch.position().top + navigation.scrollTop()
 
@@ -181,7 +181,7 @@ function setScrollbar(showScrollbar) {
   }
 }
 
-export function catalog(theme, devOptions, pluginOptions = {}) {
+export function catalog(_, devOptions, pluginOptions = {}) {
   const extraOptions = {
     mountedNode: 'body',
     fn: 'append',
@@ -192,13 +192,13 @@ export function catalog(theme, devOptions, pluginOptions = {}) {
   }
   $.extend(true, extraOptions, pluginOptions)
 
-  const { enable } = useCatalogOptions(devOptions)
+  const { enable } = getCatalogOptions(devOptions)
 
   if (
-    enable
-    && hasPostTitle()
-    && getCurrentPage() === 'post'
-    && userAgent() === 'pc'
+    enable &&
+    hasPostTitle() &&
+    getCurrentPage() === 'post' &&
+    userAgent() === 'pc'
   ) {
     buildCatalog(
       extraOptions.mountedNode,

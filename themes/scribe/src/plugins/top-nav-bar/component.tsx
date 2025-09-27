@@ -24,40 +24,40 @@ export function Component({ data }: Props) {
   const getNavIcon = (iconName: string) => {
     switch (iconName) {
       case 'home':
-        return <Home className="w-4 h-4" />
+        return <Home className='h-4 w-4' />
       case 'pen':
-        return <Pen className="w-4 h-4" />
+        return <Pen className='h-4 w-4' />
       case 'mail':
-        return <Mail className="w-4 h-4" />
+        return <Mail className='h-4 w-4' />
       case 'rss':
-        return <Rss className="w-4 h-4" />
+        return <Rss className='h-4 w-4' />
       case 'settings':
-        return <Settings className="w-4 h-4" />
+        return <Settings className='h-4 w-4' />
       default:
         return null
     }
   }
 
   return (
-    <nav className="bg-background sticky top-0 z-50">
-      <div className="px-4 sm:px-6 lg:px-6">
-        <div className="flex items-center h-14 justify-end">
+    <nav className='bg-background'>
+      <div className='px-4 sm:px-6 lg:px-6'>
+        <div className='flex h-14 items-center justify-end'>
           {/* signature.svg 图标 */}
-          <div className="flex items-center mr-auto">
-            <Signature className="text-foreground h-14 w-14"></Signature>
+          <div className='mr-auto flex items-center'>
+            <Signature className='h-14 w-14 text-foreground'></Signature>
           </div>
 
           {/* 左侧 Logo、标题和导航菜单 */}
-          <div className="flex items-center gap-4 ">
+          <div className='flex items-center gap-4'>
             {/* 导航菜单 */}
-            <div className="flex items-center gap-1">
-              {navData.navItems.map(item => (
+            <div className='flex items-center gap-1'>
+              {navData.navItems.map((item) => (
                 <a
                   key={item.id}
                   href={item.href}
-                  className="px-4 py-2 rounded-lg text-sm/6 text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all duration-200 relative hover:!no-underline"
+                  className='hover:!no-underline relative rounded-lg px-4 py-2 text-muted-foreground text-sm/6 transition-all duration-200 hover:bg-primary/10 hover:text-foreground'
                 >
-                  <div className="flex items-center gap-2">
+                  <div className='flex items-center gap-2'>
                     {item.icon && getNavIcon(item.icon)}
                     <span>{item.text}</span>
                   </div>
@@ -68,15 +68,15 @@ export function Component({ data }: Props) {
 
           {/* 右侧 GitHub 图标 */}
           {navData.githubUrl && (
-            <div className="flex items-center ml-1">
+            <div className='ml-1 flex items-center'>
               <a
                 href={navData.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all duration-200"
-                aria-label="GitHub"
+                target='_blank'
+                rel='noopener noreferrer'
+                className='rounded-lg p-2 text-muted-foreground transition-all duration-200 hover:bg-primary/10 hover:text-foreground'
+                aria-label='GitHub'
               >
-                <Github className="w-5 h-5" />
+                <Github className='h-5 w-5' />
               </a>
             </div>
           )}

@@ -3,7 +3,7 @@
  * 1. 随笔详情页图片灯箱已移除，博客园已拥有此功能
  * 2. 相册查看图像
  */
-import { useImagePreviewOptions } from '@acnb/options'
+import { getImagePreviewOptions } from '@acnb/options'
 import { mediaZoomJs } from '../../constants/cdn'
 import { isAlbumPage, isMd, isPostDetailsPage } from '../../utils/cnblog'
 import { loadScript, mousewheel, poll } from '../../utils/helpers'
@@ -73,8 +73,8 @@ function build() {
   removeImageOuterHref()
 }
 
-export function imagePreview(theme, devOptions) {
-  const { enable } = useImagePreviewOptions(devOptions)
+export function imagePreview(_, devOptions) {
+  const { enable } = getImagePreviewOptions(devOptions)
 
   if (!enable) {
     return

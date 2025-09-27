@@ -1,5 +1,5 @@
 // 构建随笔签名
-import { useLicenseOptions } from '@acnb/options'
+import { getLicenseOptions } from '@acnb/options'
 import {
   getBlogname,
   getCurrentPage,
@@ -28,8 +28,7 @@ function buildContainer() {
  * @param {string} licenseLink
  */
 function buildLicense(enableLicense, licenseName, licenseLink) {
-  if (!enableLicense)
-    return
+  if (!enableLicense) return
   const agreement = licenseName.length
     ? licenseName
     : '知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆'
@@ -49,16 +48,13 @@ function buildContent(content) {
   $(`#${containerId}`).append(el)
 }
 
-export function license(theme, devOptions) {
-  const { enable, license, licenseName, licenseLink, contents }
-    = useLicenseOptions(devOptions)
+export function license(_, devOptions) {
+  const { enable, license, licenseName, licenseLink, contents } =
+    getLicenseOptions(devOptions)
 
-  if (!enable)
-    return
-  if (getCurrentPage() !== 'post')
-    return
-  if ($('#MySignature').children().length)
-    return
+  if (!enable) return
+  if (getCurrentPage() !== 'post') return
+  if ($('#MySignature').children().length) return
 
   buildContainer()
   buildLicense(license, licenseName, licenseLink)

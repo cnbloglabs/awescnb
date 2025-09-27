@@ -1,5 +1,5 @@
 // 构建代码行号
-import { useCodeLangOptions } from '@acnb/options'
+import { getCodeLangOptions } from '@acnb/options'
 import { isMd, isPostDetailsPage } from '../../utils/cnblog'
 
 /**
@@ -18,8 +18,8 @@ function buildLinenumbers() {
   })
 }
 
-export function codeLinenumbers(theme, devOptions) {
-  const { enable } = useCodeLangOptions(devOptions)
+export function codeLinenumbers(_, devOptions) {
+  const { enable } = getCodeLangOptions(devOptions)
   if (!isPostDetailsPage) {
     return
   }

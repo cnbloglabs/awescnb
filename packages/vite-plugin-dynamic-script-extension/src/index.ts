@@ -1,7 +1,7 @@
-import type { Plugin } from 'vite'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import type { Plugin } from 'vite'
 
 export interface DynamicScriptExtensionOptions {
   /**
@@ -19,11 +19,10 @@ export interface DynamicScriptExtensionOptions {
 /**
  * Vite plugin for dynamic script extension - automatically detects and uses main.ts or main.js files
  */
-export default function dynamicScriptExtension(options: DynamicScriptExtensionOptions = {}): Plugin {
-  const {
-    defaultScriptSrc = '/src/main.js',
-    baseDir = process.cwd(),
-  } = options
+export default function dynamicScriptExtension(
+  options: DynamicScriptExtensionOptions = {},
+): Plugin {
+  const { defaultScriptSrc = '/src/main.js', baseDir = process.cwd() } = options
 
   return {
     name: 'vite-plugin-dynamic-script-extension',

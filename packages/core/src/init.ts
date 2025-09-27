@@ -1,4 +1,5 @@
 import { __DEV__ } from './constants/env'
+import type { CreateThemeConfig } from './createThemeApi'
 
 function setDevOptions() {
   if (__DEV__) {
@@ -13,7 +14,7 @@ function hideLoading() {
   }
 }
 
-export default () => {
+export default (_?: CreateThemeConfig) => {
   setDevOptions()
   hideLoading()
 }

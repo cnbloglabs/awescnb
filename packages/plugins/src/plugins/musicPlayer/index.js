@@ -1,5 +1,5 @@
 // 音乐播放器
-import { useMusicPlayerOptions } from '@acnb/options'
+import { getMusicPlayerOptions } from '@acnb/options'
 import { APlayerCss, APlayerJs } from '../../constants/cdn'
 import { getCurrentPage } from '../../utils/cnblog'
 import { loadLink, loadScript, userAgent } from '../../utils/helpers'
@@ -61,9 +61,9 @@ function buildPlayer(autoplay, audio, volume, lrc) {
   }
 }
 
-export function musicPlayer(theme, devOptions) {
-  const { enable, page, agent, autoplay, audio, volume, lrc }
-    = useMusicPlayerOptions(devOptions)
+export function musicPlayer(_, devOptions) {
+  const { enable, page, agent, autoplay, audio, volume, lrc } =
+    getMusicPlayerOptions(devOptions)
 
   if (!enable) {
     return

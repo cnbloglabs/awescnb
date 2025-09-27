@@ -1,10 +1,10 @@
 // 在随笔详情页顶部随笔生成一个文章头图
-import { usePostTopImageOptions } from '@acnb/options'
+import { getPostTopImageOptions } from '@acnb/options'
 import { isPostDetailsPage } from '../../utils/cnblog'
 import { randomArrayElements, randomImgUrl } from '../../utils/helpers'
 
-export function postTopImage(theme, devOptions) {
-  const { enable, imgs, fixed } = usePostTopImageOptions(devOptions)
+export function postTopImage(_, devOptions) {
+  const { enable, imgs, fixed } = getPostTopImageOptions(devOptions)
 
   if (!enable) {
     return
@@ -13,8 +13,8 @@ export function postTopImage(theme, devOptions) {
     return
   }
 
-  const url
-    = imgs.length === 0 ? randomImgUrl() : randomArrayElements(imgs, 1)[0]
+  const url =
+    imgs.length === 0 ? randomImgUrl() : randomArrayElements(imgs, 1)[0]
   const ele = `<a  href="${url}" target="blank"><div id="custom-post-topimage"></div></a>`
   const style = {
     'background-image': `url(${url})`,

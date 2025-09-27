@@ -4,6 +4,8 @@ export const LEGACY_THEME = {
   bilibiliv1: 'bilibili',
 }
 export const BASE_URL = (() => {
-  const src = (document.currentScript as HTMLScriptElement).getAttribute('src') as string
+  const src = (document.currentScript as HTMLScriptElement).getAttribute(
+    'src',
+  ) as string
   return src.substring(0, src.lastIndexOf('/'))
 })()

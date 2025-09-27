@@ -1,5 +1,5 @@
 // 锁屏
-import { useLockScreenOptions } from '@acnb/options'
+import { getLockScreenOptions } from '@acnb/options'
 import { typedJs } from '../../constants/cdn'
 import { loadScript } from '../../utils/helpers'
 
@@ -62,8 +62,8 @@ function handleClose() {
   })
 }
 
-export function lock(theme, devOptions) {
-  const { enable, background, strings } = useLockScreenOptions(devOptions)
+export function lock(_, devOptions) {
+  const { enable, background, strings } = getLockScreenOptions(devOptions)
   if (!enable) {
     return
   }

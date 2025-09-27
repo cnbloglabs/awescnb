@@ -227,7 +227,7 @@ export function likePost() {
  */
 export function getUserInfo() {
   return new Promise((resolve) => {
-    $(document).ajaxComplete((event, xhr, settings) => {
+    $(document).ajaxComplete((_, xhr, settings) => {
       if (settings.url === 'https://account.cnblogs.com/user/userinfo') {
         resolve($.parseJSON(xhr.responseText))
       }
@@ -248,10 +248,7 @@ export function getMessageCount() {
  * @returns {string} 随笔数量
  */
 export function getPostCount() {
-  return $('#stats_post_count')
-    .text()
-    .trim()
-    .replace(/\D/g, '')
+  return $('#stats_post_count').text().trim().replace(/\D/g, '')
 }
 
 /**
@@ -259,10 +256,7 @@ export function getPostCount() {
  * @returns {string} 文章数量
  */
 export function getArticleCount() {
-  return $('#stats_article_count')
-    .text()
-    .trim()
-    .replace(/\D/g, '')
+  return $('#stats_article_count').text().trim().replace(/\D/g, '')
 }
 
 /**
@@ -270,10 +264,7 @@ export function getArticleCount() {
  * @returns {string} 评论数量
  */
 export function getCommentCount() {
-  return $('#stats-comment_count')
-    .text()
-    .trim()
-    .replace(/\D/g, '')
+  return $('#stats-comment_count').text().trim().replace(/\D/g, '')
 }
 
 /**

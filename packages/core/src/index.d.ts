@@ -16,9 +16,9 @@ export interface ThemeContext {
 
 export type PluginInstallFunction = (theme: Theme, ...options: any[]) => any
 
-export type Plugin
-  = | (PluginInstallFunction & { install?: PluginInstallFunction })
-    | {
+export type Plugin =
+  | (PluginInstallFunction & { install?: PluginInstallFunction })
+  | {
       install: PluginInstallFunction
     }
 
@@ -34,5 +34,5 @@ export declare const defineOptions: <
   U extends object,
 >(
   userOptionName: string | Array<string>,
-  defaultOptions: F
+  defaultOptions: F,
 ) => (devOptions?: D) => F & U & D

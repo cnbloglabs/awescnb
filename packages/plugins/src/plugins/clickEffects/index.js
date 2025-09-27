@@ -1,4 +1,4 @@
-import { useClickEffectsOptions } from '@acnb/options'
+import { getClickEffectsOptions } from '@acnb/options'
 
 function ColorBall(params) {
   const defaultParams = {
@@ -19,8 +19,8 @@ function getOneRandom(arr) {
 function _run(ball) {
   const randomXFlag = Math.random() > 0.5
   const randomYFlag = Math.random() > 0.5
-  let randomX = Number.parseInt(Math.random() * 160)
-  let randomY = Number.parseInt(Math.random() * 160)
+  let randomX = Number.parseInt(Math.random() * 160, 10)
+  let randomY = Number.parseInt(Math.random() * 160, 10)
   if (randomXFlag) {
     randomX = randomX * -1
   }
@@ -47,7 +47,7 @@ ColorBall.prototype.fly = function (x, y, playCount, loopTimer = 300) {
   let loop = 0
 
   for (let i = 0; i < ballNum; i++) {
-    const curLoop = Number.parseInt(i / this.params.maxCount)
+    const curLoop = Number.parseInt(i / this.params.maxCount, 10)
     const ball = document.createElement('i')
     ball.className = `color-ball ball-loop-${curLoop}`
     let blurX = Math.random() * 10
@@ -79,7 +79,7 @@ ColorBall.prototype.fly = function (x, y, playCount, loopTimer = 300) {
     ballElements.push(ball)
 
     if (curLoop !== loop) {
-      (function (num) {
+      ;((num) => {
         setTimeout(
           () => {
             const loopBalls = document.getElementsByClassName(
@@ -131,7 +131,7 @@ function build(options) {
   })
 }
 
-export function clickEffects(theme, devOptions) {
-  const options = useClickEffectsOptions(devOptions)
+export function clickEffects(_, devOptions) {
+  const options = getClickEffectsOptions(devOptions)
   options.enable && build(options)
 }

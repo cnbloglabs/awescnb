@@ -1,5 +1,5 @@
 // 二维码
-import { useQrcodeOptions } from '@acnb/options'
+import { getQrcodeOptions } from '@acnb/options'
 
 /**
  * 构建二维码图片
@@ -27,8 +27,8 @@ function buildDesc(desc) {
   $('.custom-qrcode').after(ele)
 }
 
-export function qrcode(theme, devOptions) {
-  const { enable, img, desc } = useQrcodeOptions(devOptions)
+export function qrcode(_, devOptions) {
+  const { enable, img, desc } = getQrcodeOptions(devOptions)
 
   if ($('#blog-news').length === 0) {
     return

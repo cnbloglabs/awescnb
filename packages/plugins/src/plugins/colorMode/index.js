@@ -2,7 +2,7 @@
  * 设置皮肤色
  * 需要皮肤使用相关 css 自定义属性
  */
-import { useThemeOptions } from '@acnb/options'
+import { getThemeOptions } from '@acnb/options'
 import { randomColor } from '../../utils/helpers'
 
 /**
@@ -29,7 +29,10 @@ function hexToRgba(hex, opacity) {
   // Remove the # and handle 3-digit hex shorthand
   let hexValue = hex.slice(1)
   if (hexValue.length === 3) {
-    hexValue = hexValue.split('').map(char => char + char).join('')
+    hexValue = hexValue
+      .split('')
+      .map((char) => char + char)
+      .join('')
   }
 
   const red = Number.parseInt(hexValue.slice(0, 2), 16)
@@ -72,7 +75,7 @@ function insertStyle(color) {
   )
 }
 
-export function colorMode(theme, devOptions) {
-  const { color } = useThemeOptions(devOptions)
+export function colorMode(_, devOptions) {
+  const { color } = getThemeOptions(devOptions)
   insertStyle(color)
 }

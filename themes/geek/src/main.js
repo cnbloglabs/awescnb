@@ -19,9 +19,11 @@ import {
 } from '@acnb/plugins'
 import './style/index.scss'
 
-Object
-  .values(import.meta.glob('./modules/**/*.js', { eager: true }))
-  .forEach(i => i.install())
+Object.values(import.meta.glob('./modules/**/*.js', { eager: true })).forEach(
+  (i) => {
+    i.install()
+  },
+)
 
 createTheme()
   .use(clickEffects, { enable: false })
@@ -50,7 +52,10 @@ createTheme()
   .use(
     background,
     { enable: false },
-    { opacitySelector: '#left-side,#sideBar,#mainContent,#footer,.custom-searchbar' },
+    {
+      opacitySelector:
+        '#left-side,#sideBar,#mainContent,#footer,.custom-searchbar',
+    },
   )
   .use(
     catalog,

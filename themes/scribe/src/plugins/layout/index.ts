@@ -1,8 +1,7 @@
 // 优化页面布局结构
 function optimizeLayout() {
   const main = document.querySelector('#main')
-  if (!main)
-    return
+  if (!main) return
 
   // 创建响应式布局容器
   const container = document.createElement('div')

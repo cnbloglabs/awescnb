@@ -1,6 +1,6 @@
-import type { IOptions } from './types'
 import { BASE_URL, DEFAULT_THEME_NAME, LEGACY_THEME } from './constants'
 import { isURL, loadScript } from './helpers'
+import type { IOptions } from './types'
 
 function mountOptions(options: IOptions) {
   window.opts = options

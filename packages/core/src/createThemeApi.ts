@@ -20,9 +20,9 @@ export interface ThemeContext {
 
 export type PluginInstallFunction = (theme: Theme, ...options: any[]) => any
 
-export type Plugin
-  = | (PluginInstallFunction & { install?: PluginInstallFunction })
-    | {
+export type Plugin =
+  | (PluginInstallFunction & { install?: PluginInstallFunction })
+  | {
       install: PluginInstallFunction
     }
 
@@ -44,7 +44,7 @@ function createThemeAPI() {
     const context = createThemeContext()
     const installedPlugins = new Set()
 
-    const theme: Theme = (context.theme = {
+    const themeObject = {
       _context: context,
       version: '3.0',
 
@@ -52,7 +52,7 @@ function createThemeAPI() {
         return context.config
       },
 
-      set config(v) {
+      set config(_) {
         if (__DEV__) {
           console.warn(
             `theme.config cannot be replaced. Modify individual options instead.`,
@@ -62,29 +62,32 @@ function createThemeAPI() {
 
       use(plugin: Plugin, ...options: Array<any>) {
         if (installedPlugins.has(plugin)) {
-          __DEV__
-          && console.warn(`Plugin has already been applied to target theme.`)
+          __DEV__ &&
+            console.warn(`Plugin has already been applied to target theme.`)
         } else if (plugin && isFunction(plugin.install)) {
           installedPlugins.add(plugin)
-          plugin.install(theme, ...options)
+          plugin.install(themeObject, ...options)
         } else if (isFunction(plugin)) {
           installedPlugins.add(plugin)
-          plugin(theme, ...options)
+          plugin(themeObject, ...options)
         } else if (__DEV__) {
           console.warn(
-            `A plugin must either be a function or an object with an "install" `
-            + `function.`,
+            `A plugin must either be a function or an object with an "install" ` +
+              `function.`,
           )
         }
-        return theme
+        return themeObject
       },
-    })
+    }
+
+    const theme: Theme = themeObject
+    context.theme = themeObject
 
     return theme
   }
 }
 
-function baseCreateTheme(options) {
+function baseCreateTheme(options?: CreateThemeConfig) {
   init(options)
   return {
     createTheme: createThemeAPI(),

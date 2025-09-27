@@ -1,1 +1,1 @@
-export * from './use-query-dom';
+export * from './use-query-dom'

@@ -8,4 +8,6 @@ interface ServeSharedAssetsOptions {
   sharedAssetsPath?: string
 }
 
-export function ServeSharedAssetsPlugin(options?: ServeSharedAssetsOptions): Plugin
+export function ServeSharedAssetsPlugin(
+  options?: ServeSharedAssetsOptions,
+): Plugin

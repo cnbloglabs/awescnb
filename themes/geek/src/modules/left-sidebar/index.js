@@ -1,4 +1,4 @@
-import { useLinksOptions } from '@acnb/options'
+import { getLinksOptions } from '@acnb/options'
 import {
   admin,
   cnblogHome,
@@ -12,12 +12,12 @@ import { isOwner } from '../../utils/cnblog'
 import './index.scss'
 
 function buildLeftSidebarContainer() {
-  const el = $('<div id=\'left-side\'></div>')
+  const el = $("<div id='left-side'></div>")
   $('#home').append(el)
 }
 
 function buildLogo() {
-  const el = $('<div class=\'logo\'></div>')
+  const el = $("<div class='logo'></div>")
   $('#left-side').append(el)
 }
 
@@ -32,7 +32,7 @@ function buildCustomLinks() {
    */
   function isOldConfig(userConfig) {
     for (const [key] of Object.entries(userConfig)) {
-      if (!Number.isNaN(Number.parseInt(key))) {
+      if (!Number.isNaN(Number.parseInt(key, 10))) {
         return true
       }
     }
@@ -40,11 +40,11 @@ function buildCustomLinks() {
   }
 
   let links
-  const userConfig = useLinksOptions()
+  const userConfig = getLinksOptions()
   if (isOldConfig(userConfig)) {
     links = []
     for (const [key, value] of Object.entries(userConfig)) {
-      if (!Number.isNaN(Number.parseInt(key))) {
+      if (!Number.isNaN(Number.parseInt(key, 10))) {
         links.push(value)
       }
     }
@@ -127,8 +127,8 @@ function removeHeaderToLeftSidebar() {
     if (title === '订阅') {
       item.removeAttr('target').attr({
         'data-rss': url,
-        'href': 'javascript:void(0)',
-        'onclick': '$("#blog_nav_rss").trigger("click");',
+        href: 'javascript:void(0)',
+        onclick: '$("#blog_nav_rss").trigger("click");',
       })
     }
 
