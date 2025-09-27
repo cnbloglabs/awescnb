@@ -5,10 +5,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "tailwindCSS.classFunctions": ["cva", "cx"],
   "editor.defaultFormatter": "biomejs.biome",
-  // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never",
+    "source.fixAll.biome": "explicit",
     "source.fixAll.stylelint": "explicit"
   }
 }
