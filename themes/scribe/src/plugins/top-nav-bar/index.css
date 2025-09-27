@@ -1,6 +1,0 @@
-@reference "../../styles/globals.css";
-
-/* 隐藏原始头部元素 */
-#header {
-  @apply hidden;
-}

@@ -1,7 +1,7 @@
-import { useQueryDom } from '@acnb/hooks'
+import { useQueryDOM } from '@acnb/hooks'
 
 export function useBlogStats() {
-  return useQueryDom({
+  return useQueryDOM({
     selector: '.blogStats',
     queryFn: (el) => {
       if (!el) {

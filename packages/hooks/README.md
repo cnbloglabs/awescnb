@@ -11,5 +11,5 @@ npm install @acnb/hooks
 ## 使用
 
 ```javascript
-import { useQueryDom } from '@acnb/hooks'
+import { useQueryDOM } from '@acnb/hooks'
 ```
