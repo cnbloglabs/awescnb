@@ -90,3 +90,8 @@ import { ChevronUp } from 'lucide-preact'
 
 <ChevronUp />
 ```
+
+
+## TypeScript
+
+- 禁止使用 any
