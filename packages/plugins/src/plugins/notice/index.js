@@ -1,4 +1,4 @@
-import { useNoticeOptions } from '@acnb/options'
+import { getNoticeOptions } from '@acnb/options'
 import { toast } from '../toast'
 
 function shoot(contents) {
@@ -8,8 +8,8 @@ function shoot(contents) {
   }
 }
 
-export function notice(theme, devOptions) {
-  const { enable, contents } = useNoticeOptions(devOptions)
+export function notice(_, devOptions) {
+  const { enable, contents } = getNoticeOptions(devOptions)
   if (!enable && contents.length) {
     return
   }

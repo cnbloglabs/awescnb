@@ -10,7 +10,8 @@
     "types": [
       "vite",
       "vite/client",
-      "node"
+      "node",
+      "jquery"
     ],
     "allowImportingTsExtensions": true,
     "strict": true,

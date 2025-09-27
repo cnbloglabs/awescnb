@@ -3,10 +3,7 @@ import { ServeSharedAssetsPlugin } from '@acnb/vite-plugin-serve-shared-assets'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  plugins: [
-    dynamicScriptExtension(),
-    ServeSharedAssetsPlugin(),
-  ],
+  plugins: [dynamicScriptExtension(), ServeSharedAssetsPlugin()],
   css: {
     preprocessorOptions: {
       scss: {

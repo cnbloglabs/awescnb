@@ -1,7 +1,6 @@
 export function install() {
   const calendarElement = document.getElementById('blog-calendar')
-  if (!calendarElement)
-    return
+  if (!calendarElement) return
 
   // 创建更现代化的日历头部
   const calendarTitle = calendarElement.querySelector('.CalTitle')

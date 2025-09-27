@@ -1,5 +1,5 @@
 import { render } from 'preact'
-import { LeftSidebar } from './components/left-sidebar'
+import { LeftSidebar } from './left-sidebar'
 import './index.css'
 
 export function leftSidebar() {

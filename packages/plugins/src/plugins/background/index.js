@@ -1,4 +1,4 @@
-import { useBackgroundOptions } from '@acnb/options'
+import { getBackgroundOptions } from '@acnb/options'
 import { isUrl, userAgent } from '../../utils/helpers'
 
 /**
@@ -35,11 +35,10 @@ function setBackground(value, repeat) {
   }
 }
 
-export function background(theme, devOptions, pluginOptions) {
-  const { enable, opacity, value, repeat } = useBackgroundOptions(devOptions)
+export function background(_, devOptions, pluginOptions) {
+  const { enable, opacity, value, repeat } = getBackgroundOptions(devOptions)
 
-  if (!enable)
-    return
+  if (!enable) return
 
   const { opacitySelector } = {
     opacitySelector: '#main,#navigator',

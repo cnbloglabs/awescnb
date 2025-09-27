@@ -1,4 +1,4 @@
-import { useToolsOptions } from '@acnb/options'
+import { getToolsOptions } from '@acnb/options'
 import { getCurrentPage, likePost } from '../../utils/cnblog'
 import { isPhone } from '../../utils/helpers'
 import { toast } from '../toast'
@@ -105,16 +105,12 @@ function createToolbarItem(item, translateY, finalPluginOptions) {
  * 创建按钮插件
  */
 function createToolbar(finalPluginOptions) {
-  const { toolbarItems, menuIcon, menuActiveIcon, menuIconType }
-    = finalPluginOptions
+  const { toolbarItems, menuIcon, menuActiveIcon, menuIconType } =
+    finalPluginOptions
 
   const $toolbar = createToolbarContainer()
   const $toggleItem = createToggleItem(menuIcon, menuIconType, false)
-  const $toggleActiveItem = createToggleItem(
-    menuActiveIcon,
-    menuIconType,
-    true,
-  )
+  const $toggleActiveItem = createToggleItem(menuActiveIcon, menuIconType, true)
 
   const pageCondition = (page) => {
     return page === getCurrentPage() || page === 'all'
@@ -144,7 +140,7 @@ function createToolbar(finalPluginOptions) {
 function handleToggle() {
   const transformed = (translateY) => {
     let _translateY = translateY
-    $('.toolbar-item:not(.toolbar-item-toggle)').each((index, item) => {
+    $('.toolbar-item:not(.toolbar-item-toggle)').each((_, item) => {
       $(item).css({
         transform: `translateY(${_translateY}px)`,
       })
@@ -174,8 +170,8 @@ function handleToggle() {
     : toggleExtend(true)
 }
 
-export function tools(theme, devOptions, pluginOptions) {
-  const { enable, initialOpen } = useToolsOptions(devOptions)
+export function tools(_, devOptions, pluginOptions) {
+  const { enable, initialOpen } = getToolsOptions(devOptions)
   if (!enable) {
     return
   }
@@ -192,7 +188,7 @@ export function tools(theme, devOptions, pluginOptions) {
         icon: '🚀',
         iconType: 'html',
         tooltip: '回顶',
-        callback: config => scrollToTop(config.scrollContainer),
+        callback: (config) => scrollToTop(config.scrollContainer),
       },
       {
         enable: false,
@@ -241,16 +237,12 @@ export function tools(theme, devOptions, pluginOptions) {
         icon: '💬',
         iconType: 'html',
         tooltip: '评论',
-        callback: config => scrollToComment(config.scrollContainer),
+        callback: (config) => scrollToComment(config.scrollContainer),
       },
     ],
   }
 
-  const finalPluginOptions = $.extend(
-    true,
-    pluginDefaultOptions,
-    pluginOptions,
-  )
+  const finalPluginOptions = $.extend(true, pluginDefaultOptions, pluginOptions)
 
   createToolbar(finalPluginOptions)
   if (!isPhone() && initialOpen) {

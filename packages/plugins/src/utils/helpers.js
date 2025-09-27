@@ -112,11 +112,11 @@ export function getMonth() {
 export function isElementInViewport(el) {
   const rect = el.getBoundingClientRect()
   return (
-    rect.top >= 0
-    && rect.left >= 0
-    && rect.bottom
-    <= (window.innerHeight || document.documentElement.clientHeight)
-    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   )
 }
 
@@ -195,7 +195,7 @@ export function randomArrayElements(arr, count = 1) {
  * sleep
  */
 export async function sleep(time) {
-  return new Promise(res => setTimeout(res, time))
+  return new Promise((res) => setTimeout(res, time))
 }
 
 /**
@@ -219,12 +219,12 @@ export function unpass(show) {
     body.style.position = ''
     const top = body.style.top
 
-    document.body.scrollTop = document.documentElement.scrollTop
-      = -Number.parseInt(top)
+    document.body.scrollTop = document.documentElement.scrollTop =
+      -Number.parseInt(top, 10)
     body.style.top = ''
   } else {
-    const scrollTop
-      = document.body.scrollTop || document.documentElement.scrollTop
+    const scrollTop =
+      document.body.scrollTop || document.documentElement.scrollTop
     document.body.style.cssText += `position:fixed;width:100%;top:-${scrollTop}px;`
   }
 }
@@ -263,7 +263,7 @@ export function poll(conditionFn, callback) {
  * @param {string} url - script 链接
  * @param {Function} callback - 加载成功后要执行的回调函数
  */
-export function loadScript(url, callback = function () {}) {
+export function loadScript(url, callback = () => {}) {
   $.ajax({
     type: 'GET',
     dataType: 'script',
@@ -278,18 +278,17 @@ export function loadScript(url, callback = function () {}) {
 export function debounce(func, wait, immediate) {
   let timeout
   return function (...args) {
-    const context = this
-    const later = function () {
+    const later = () => {
       timeout = null
       if (!immediate) {
-        func.apply(context, args)
+        func.apply(this, args)
       }
     }
     const callNow = immediate && !timeout
     clearTimeout(timeout)
     timeout = setTimeout(later, wait)
     if (callNow) {
-      func.apply(context, args)
+      func.apply(this, args)
     }
   }
 }
@@ -299,16 +298,15 @@ export function throttle(func, wait, mustRun) {
   let startTime = new Date()
 
   return function (...args) {
-    const context = this
     const curTime = new Date()
 
     clearTimeout(timeout)
 
     if (curTime - startTime >= mustRun) {
-      func.apply(context, args)
+      func.apply(this, args)
       startTime = curTime
     } else {
-      timeout = setTimeout(() => func.apply(context, args), wait)
+      timeout = setTimeout(() => func.apply(this, args), wait)
     }
   }
 }
@@ -343,7 +341,7 @@ export function randomColor(type) {
     const a = 0.6
     res = `rgba(${r},${g},${b},${a})`
   } else if (type === '16') {
-    res = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
+    res = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`
   } else {
     const colors = type || [
       '#FE0302',
@@ -371,8 +369,7 @@ export function randomColor(type) {
  * @returns {object} "top", "bottom", "left", "right", "height", "width"
  */
 export function getClientRect(el) {
-  const { top, bottom, left, right, height, width }
-    = el.getBoundingClientRect()
+  const { top, bottom, left, right, height, width } = el.getBoundingClientRect()
   return {
     top,
     bottom,

@@ -1,4 +1,4 @@
-import { useDarkModeOptions } from '@acnb/options'
+import { getDarkModeOptions } from '@acnb/options'
 
 /**
  * 覆盖自定义背景色
@@ -45,7 +45,8 @@ function changeMode(mode, withTransition = true) {
   $('html').attr('theme', mode)
   localStorage.modeType = mode
 
-  const transitionClassName = mode === 'dark' ? 'light-to-dark' : 'dark-to-light'
+  const transitionClassName =
+    mode === 'dark' ? 'light-to-dark' : 'dark-to-light'
 
   if (withTransition) {
     $('body').addClass(transitionClassName)
@@ -102,9 +103,9 @@ function listenToggleButtonClick() {
   })
 }
 
-export function darkMode(theme, devOptions) {
-  const { enable, darkDefault, autoDark, autoLight }
-    = useDarkModeOptions(devOptions)
+export function darkMode(_, devOptions) {
+  const { enable, darkDefault, autoDark, autoLight } =
+    getDarkModeOptions(devOptions)
 
   if (!enable) {
     return

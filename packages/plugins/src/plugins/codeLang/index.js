@@ -2,7 +2,7 @@
  * 构建代码块语言
  * 仅在 Markdown 博文中生效
  */
-import { useCodeLangOptions } from '@acnb/options'
+import { getCodeLangOptions } from '@acnb/options'
 import { isMd, isPostDetailsPage } from '../../utils/cnblog'
 
 /**
@@ -34,8 +34,8 @@ function buildCodeWrapLanguage() {
   })
 }
 
-export function codeLang(theme, devOptions) {
-  const { enable } = useCodeLangOptions(devOptions)
+export function codeLang(_, devOptions) {
+  const { enable } = getCodeLangOptions(devOptions)
 
   if (!enable) {
     return

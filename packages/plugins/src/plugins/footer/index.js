@@ -1,4 +1,4 @@
-import { useLinksOptions } from '@acnb/options'
+import { getLinksOptions } from '@acnb/options'
 
 /**
  * 构建 copyright
@@ -18,7 +18,7 @@ function buildCopyright() {
  * 构建自定义链接
  */
 function buildCustomLinks(devOptions) {
-  const config = useLinksOptions(devOptions)
+  const config = getLinksOptions(devOptions)
 
   if (config.links.length) {
     const $links = $('<ul id="links"></ul>')
@@ -29,7 +29,7 @@ function buildCustomLinks(devOptions) {
   }
 }
 
-export function footer(theme, devOptions) {
+export function footer(_, devOptions) {
   buildCopyright()
   buildCustomLinks(devOptions)
 }

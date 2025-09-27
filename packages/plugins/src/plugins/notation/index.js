@@ -1,4 +1,4 @@
-import { useNotationOptions } from '@acnb/options'
+import { getNotationOptions } from '@acnb/options'
 import { notationJs } from '../../constants/cdn'
 import { getCurrentPage } from '../../utils/cnblog'
 import { loadScript } from '../../utils/helpers'
@@ -54,11 +54,11 @@ function buildNotation(annotate, annotationGroup, customList) {
   }, 2000)
 }
 
-export function notation(theme, devOptions, customList = annotateList) {
+export function notation(_, devOptions, customList = annotateList) {
   if (getCurrentPage() !== 'post') {
     return
   }
-  const { enable } = useNotationOptions(devOptions)
+  const { enable } = getNotationOptions(devOptions)
   if (!enable) {
     return
   }

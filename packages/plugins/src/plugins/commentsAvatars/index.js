@@ -55,16 +55,16 @@ function build() {
  */
 function listener() {
   window.renderCommentsAvatars = build
-  $(document).ajaxComplete((event, xhr, option) => {
+  $(document).ajaxComplete((_, __, option) => {
     if (
-      option.url.includes('PostComment/Add')
-      || option.url.includes('DeleteComment')
+      option.url.includes('PostComment/Add') ||
+      option.url.includes('DeleteComment')
     ) {
       // eslint-disable-next-line new-cap
       new window.blogCommentManager().renderComments(0)
     }
   })
-  $(document).ajaxComplete((event, xhr, option) => {
+  $(document).ajaxComplete((_, __, option) => {
     if (option.url.includes('GetComments')) {
       window.renderCommentsAvatars()
       window.buildEmojis()

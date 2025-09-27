@@ -23,7 +23,7 @@ function buildNextPrevPost() {
   const elements = (() => {
     const wrap = $('<div>').addClass('custom-next-prev-post')
     const createElements = (data, type) => {
-      const typeMap = ({
+      const typeMap = {
         prev: {
           className: 'prev-post',
           extraText: '上一篇',
@@ -34,19 +34,19 @@ function buildNextPrevPost() {
           extraText: '下一篇',
           icon: 'fa-arrow-right',
         },
-      })[type]
+      }[type]
 
-      return (
-        $('<div>')
-          .addClass(typeMap.className)
-          .append(
-            $('<a>').append(
+      return $('<div>')
+        .addClass(typeMap.className)
+        .append(
+          $('<a>')
+            .append(
               $('<span>').text(typeMap.extraText),
               $('<span>').text(data.title),
               $('<li>').addClass(`fas ${typeMap.icon}`),
-            ).attr('href', data.url),
-          )
-      )
+            )
+            .attr('href', data.url),
+        )
     }
 
     wrap.append(createElements(getData(1), 'prev'))

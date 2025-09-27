@@ -1,5 +1,5 @@
 // 弹幕
-import { useBarragesOptions } from '@acnb/options'
+import { getBarragesOptions } from '@acnb/options'
 import {
   getClientRect,
   randomColor,
@@ -16,7 +16,7 @@ async function shootBarrage(textList, enable, opacity, colors, fontSize) {
     return
   }
   if (!document.querySelector('#barrage-wrap')) {
-    $('body').append('<div id=\'barrage-wrap\'></div>')
+    $('body').append("<div id='barrage-wrap'></div>")
   }
 
   const $wrap = document.querySelector('#barrage-wrap')
@@ -49,7 +49,7 @@ async function shootBarrage(textList, enable, opacity, colors, fontSize) {
     $wrap.appendChild($barrage)
 
     const roll = (timer) => {
-      const now = Number(new Date())
+      const now = Date.now()
       const rect = getClientRect($barrage)
       let left = $barrage.offsetLeft
 
@@ -74,9 +74,9 @@ async function shootBarrage(textList, enable, opacity, colors, fontSize) {
   }
 }
 
-export function barrage(theme, devOptions) {
-  const { enable, opacity, colors, fontSize, barrages }
-    = useBarragesOptions(devOptions)
+export function barrage(_, devOptions) {
+  const { enable, opacity, colors, fontSize, barrages } =
+    getBarragesOptions(devOptions)
 
   if (barrages.length) {
     setTimeout(

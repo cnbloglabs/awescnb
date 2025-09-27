@@ -1,7 +1,7 @@
 /**
  * 构建代码块复制按钮
  */
-import { useCodeCopyOptions } from '@acnb/options'
+import { getCodeCopyOptions } from '@acnb/options'
 import { isMd, isPostDetailsPage } from '../../utils/cnblog'
 import { copyToClipboard } from '../../utils/helpers'
 import { toast } from '../toast'
@@ -63,7 +63,7 @@ function mountButtons() {
 
   if (pres.length) {
     const fn = __MD__ ? 'prepend' : 'before'
-    pres.each((index, item) => {
+    pres.each((_, item) => {
       $(item)[fn](copyBtn)
     })
   }
@@ -73,14 +73,14 @@ function mountButtons() {
     if (!highlighters.length) {
       return
     }
-    highlighters.each((index, item) => {
+    highlighters.each((_, item) => {
       $(item).prepend(copyBtn)
     })
   }
 }
 
-export function codeCopy(theme, devOptions) {
-  const { enable } = useCodeCopyOptions(devOptions)
+export function codeCopy(_, devOptions) {
+  const { enable } = getCodeCopyOptions(devOptions)
 
   if (!enable) {
     return

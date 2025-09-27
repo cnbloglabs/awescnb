@@ -1,5 +1,5 @@
 // 个性签名
-import { useSignatureOptions } from '@acnb/options'
+import { getSignatureOptions } from '@acnb/options'
 import { typedJs } from '../../constants/cdn'
 import { loadScript } from '../../utils/helpers'
 
@@ -8,7 +8,7 @@ import { loadScript } from '../../utils/helpers'
  * @param {*} selector
  */
 function build(selector) {
-  const el = '<div class=\'custom-signature\'><span></span></div>'
+  const el = "<div class='custom-signature'><span></span></div>"
   $(selector).append(el)
 }
 
@@ -26,8 +26,8 @@ function typed(contents) {
   })
 }
 
-export function signature(theme, devOptions, pluginOptions) {
-  const { enable, contents } = useSignatureOptions(devOptions)
+export function signature(_, devOptions, pluginOptions) {
+  const { enable, contents } = getSignatureOptions(devOptions)
   if (!enable) {
     return
   }

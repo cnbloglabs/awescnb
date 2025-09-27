@@ -1,11 +1,11 @@
-import { useLive2dOptions } from '@acnb/options'
+import { getLive2dOptions } from '@acnb/options'
 import { getCurrentPage } from '../../utils/cnblog'
 import { loadScript, randomProperty, userAgent } from '../../utils/helpers'
 import { live2dModels } from './live2d-models'
 
 const live2dBase = 'https://cdn.jsdelivr.net/gh/guangzan/awesCnb-live2dModels'
-const live2djs
-  = 'https://files.cnblogs.com/files/guangzan/live2d.min.js?t=1688786567&download=true'
+const live2djs =
+  'https://files.cnblogs.com/files/guangzan/live2d.min.js?t=1688786567&download=true'
 
 /**
  * 构建模型容器
@@ -35,8 +35,8 @@ function setGap(position, gap) {
  * @param {string} model
  */
 function loadModel(model) {
-  const live2dModel
-    = model === 'random'
+  const live2dModel =
+    model === 'random'
       ? live2dModels[randomProperty(live2dModels)]
       : live2dModels[model]
 
@@ -47,9 +47,9 @@ function loadModel(model) {
   })
 }
 
-export function live2d(theme, devOptions) {
-  const { enable, page, agent, model, position, gap, width, height }
-    = useLive2dOptions(devOptions)
+export function live2d(_, devOptions) {
+  const { enable, page, agent, model, position, gap, width, height } =
+    getLive2dOptions(devOptions)
 
   if (!enable) {
     return

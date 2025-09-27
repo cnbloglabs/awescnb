@@ -1,3 +1,3 @@
 window.highlighter = {
-  setTheme() { },
+  setTheme() {},
 }

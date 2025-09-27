@@ -27,7 +27,7 @@ Returns a generic configuration object.
 ```js
 import { defineOptions } from '@acnb/core'
 
-const useBackgroundOptions = defineOptions('bodyBackground', {
+const getBackgroundOptions = defineOptions('bodyBackground', {
   enable: false,
   value: '',
   opacity: 0.85,
@@ -53,7 +53,7 @@ Using configuration aliases:
 ```javascript
 import { defineOptions } from '@acnb/core'
 
-const useBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
+const getBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
   enable: false,
   value: '',
   opacity: 0.85,
@@ -68,14 +68,14 @@ const useBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
 import { defineOptions } from '@acnb/core'
 
 export function backgroundPlugin(theme, devOptions, pluginOptions) {
-  const useBackgroundOptions = defineOptions('bodyBackground', {
+  const getBackgroundOptions = defineOptions('bodyBackground', {
     enable: false,
     value: '',
     opacity: 0.85,
     repeat: false,
   })
 
-  const { enable, value, opacity, repeat } = useBackgroundOptions(devOptions)
+  const { enable, value, opacity, repeat } = getBackgroundOptions(devOptions)
 
   if (!enable)
     return

@@ -39,6 +39,12 @@
             "functions": ["clsx", "cva", "tw", "tw.*"]
           }
         }
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off"
       }
     },
     "domains": {
@@ -52,7 +58,7 @@
       "bracketSameLine": false,
       "jsxQuoteStyle": "single",
       "quoteProperties": "asNeeded",
-      "semicolons": "always",
+      "semicolons": "asNeeded",
       "quoteStyle": "single",
       "trailingCommas": "all"
     }

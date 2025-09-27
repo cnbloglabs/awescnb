@@ -1,4 +1,4 @@
-import { useThemeOptions } from '@acnb/options'
+import { getThemeOptions } from '@acnb/options'
 import {
   appGroup,
   appIng,
@@ -30,7 +30,7 @@ function createSignature() {
 }
 
 function createBackground() {
-  const { headerBackground } = useThemeOptions()
+  const { headerBackground } = getThemeOptions()
   const signatureWrap = createSignature()
   return $('<div>')
     .addClass('profile-banner')
@@ -72,26 +72,21 @@ function createMenu() {
 }
 
 function createBlur() {
-  const { headerBackground } = useThemeOptions()
+  const { headerBackground } = getThemeOptions()
   return $('<div>')
     .addClass('profile-blur')
     .css('backgroundImage', `url(${headerBackground})`)
 }
 
 function createAvatar() {
-  const { avatar } = useThemeOptions()
-  const avatarElement
-    = $('<div>')
-      .addClass('avatar')
-      .css({ background: `center / cover url("${avatar}") no-repeat` })
+  const { avatar } = getThemeOptions()
+  const avatarElement = $('<div>')
+    .addClass('avatar')
+    .css({ background: `center / cover url("${avatar}") no-repeat` })
 
   return $('<div>')
     .addClass('profile-avatar')
-    .append(
-      $('<a>')
-        .attr('href', index)
-        .append(avatarElement),
-    )
+    .append($('<a>').attr('href', index).append(avatarElement))
 }
 
 function createMessageElements() {

@@ -1,4 +1,4 @@
-import { useChartsOptions } from '@acnb/options'
+import { getChartsOptions } from '@acnb/options'
 import { chartJs } from '../../constants/cdn'
 import { loadScript } from '../../utils/helpers'
 
@@ -42,8 +42,8 @@ function createChart(labels, datasets) {
   new _Chart(document.getElementById('myChart'), config)
 }
 
-export function charts(theme, devOptions, pluginOptions) {
-  const { enable, labels, datasets } = useChartsOptions(devOptions)
+export function charts(_, devOptions, pluginOptions) {
+  const { enable, labels, datasets } = getChartsOptions(devOptions)
   if (!enable) {
     return
   }

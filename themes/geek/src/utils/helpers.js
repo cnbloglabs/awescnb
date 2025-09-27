@@ -87,11 +87,11 @@ export function getMonth() {
 export function isElementInViewport(el) {
   const rect = el.getBoundingClientRect()
   return (
-    rect.top >= 0
-    && rect.left >= 0
-    && rect.bottom
-    <= (window.innerHeight || document.documentElement.clientHeight)
-    && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   )
 }
 
@@ -119,8 +119,8 @@ export function prettyLog(str, color = '#ffb3cc') {
 export function getDate() {
   const time = new Date()
   const year = time.getFullYear()
-  const month = (`0${time.getMonth() + 1}`).slice(-2)
-  const day = (`0${time.getDate()}`).slice(-2)
+  const month = `0${time.getMonth() + 1}`.slice(-2)
+  const day = `0${time.getDate()}`.slice(-2)
   // const hour = ('0' + time.getHours()).slice(-2)
   // const minute = ('0' + time.getMinutes()).slice(-2)
   // const second = ('0' + time.getSeconds()).slice(-2)
@@ -144,7 +144,7 @@ export function randomArrayElements(arr, count = 1) {
 }
 
 export async function sleep(time) {
-  return new Promise(resolve => setTimeout(resolve, time))
+  return new Promise((resolve) => setTimeout(resolve, time))
 }
 
 export function randomImgurl() {
@@ -159,14 +159,13 @@ export function unpass(show) {
     const body = document.body
     body.style.position = ''
     const top = body.style.top
-    document.body.scrollTop = document.documentElement.scrollTop
-      = -Number.parseInt(top)
+    document.body.scrollTop = document.documentElement.scrollTop =
+      -Number.parseInt(top, 10)
     body.style.top = ''
   } else {
-    const scrollTop
-      = document.body.scrollTop || document.documentElement.scrollTop
-    document.body.style.cssText
-      += `position:fixed;width:100%;top:-${scrollTop}px;`
+    const scrollTop =
+      document.body.scrollTop || document.documentElement.scrollTop
+    document.body.style.cssText += `position:fixed;width:100%;top:-${scrollTop}px;`
   }
 }
 
@@ -199,7 +198,7 @@ export function poll(conditionFn, callback) {
   }
 }
 
-export function loadScript(url, callback = function () {}) {
+export function loadScript(url, callback = () => {}) {
   $.ajax({
     type: 'GET',
     dataType: 'script',
@@ -214,18 +213,17 @@ export function loadScript(url, callback = function () {}) {
 export function debounce(func, wait, immediate) {
   let timeout
   return function (...args) {
-    const context = this
-    const later = function () {
+    const later = () => {
       timeout = null
       if (!immediate) {
-        func.apply(context, args)
+        func.apply(this, args)
       }
     }
     const callNow = immediate && !timeout
     clearTimeout(timeout)
     timeout = setTimeout(later, wait)
     if (callNow) {
-      func.apply(context, args)
+      func.apply(this, args)
     }
   }
 }
@@ -235,16 +233,15 @@ export function throttle(func, wait, mustRun) {
   let startTime = new Date()
 
   return function (...args) {
-    const context = this
     const curTime = new Date()
 
     clearTimeout(timeout)
 
     if (curTime - startTime >= mustRun) {
-      func.apply(context, args)
+      func.apply(this, args)
       startTime = curTime
     } else {
-      timeout = setTimeout(() => func.apply(context, args), wait)
+      timeout = setTimeout(() => func.apply(this, args), wait)
     }
   }
 }
@@ -269,7 +266,7 @@ export function randomColor(type) {
     const a = 0.6
     res = `rgba(${r},${g},${b},${a})`
   } else if (type === '16') {
-    res = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
+    res = `#${Math.floor(Math.random() * 0xffffff).toString(16)}`
   } else {
     const colors = type || [
       '#FE0302',

@@ -1,4 +1,4 @@
-import { createTheme } from '@acnb/core';
+import { createTheme } from '@acnb/core'
 import {
   background,
   catalog,
@@ -22,9 +22,9 @@ import {
   signature,
   tools,
   webTag,
-} from '@acnb/plugins';
-import build from './build';
-import './style/index.scss';
+} from '@acnb/plugins'
+import build from './build'
+import './style/index.scss'
 
 createTheme()
   .use(build)
@@ -107,4 +107,4 @@ createTheme()
       mountedNode: '#main',
       fn: 'prepend',
     },
-  );
+  )

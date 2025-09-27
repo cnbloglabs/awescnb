@@ -1,5 +1,5 @@
 // 评论输入表情
-import { useEmojiOptions } from '@acnb/options'
+import { getEmojiOptions } from '@acnb/options'
 import { isPostDetailsPage } from '../../utils/cnblog'
 import { isUrl } from '../../utils/helpers'
 
@@ -143,7 +143,7 @@ function createEmoji(emojiData, buttonIcon) {
 }
 
 export function emoji(_theme, devOptions) {
-  const { enable, emojiList, buttonIcon } = useEmojiOptions(devOptions)
+  const { enable, emojiList, buttonIcon } = getEmojiOptions(devOptions)
 
   if (!enable) {
     return

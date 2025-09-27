@@ -1,4 +1,4 @@
-import { useCodeHighlightOptions } from '@acnb/options'
+import { getCodeHighlightOptions } from '@acnb/options'
 import { getCurrentPage, isMd } from '../../utils/cnblog'
 import { themes } from './themes.js'
 
@@ -22,7 +22,7 @@ function buildMarkdownHighlight(light, dark) {
   $('head').append(style)
 }
 
-export function codeHighlight(theme, devOptions) {
+export function codeHighlight(_, devOptions) {
   if (getCurrentPage() !== 'post') {
     return
   }
@@ -30,6 +30,6 @@ export function codeHighlight(theme, devOptions) {
     return
   }
 
-  const { light, dark } = useCodeHighlightOptions(devOptions)
+  const { light, dark } = getCodeHighlightOptions(devOptions)
   buildMarkdownHighlight(light, dark)
 }

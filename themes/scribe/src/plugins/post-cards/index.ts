@@ -1,7 +1,12 @@
 function addPostCardHover() {
   const postCards = document.querySelectorAll('.day')
   postCards.forEach((card) => {
-    card.classList.add('transition-all', 'duration-200', 'hover:shadow-md', 'hover:border-primary/20')
+    card.classList.add(
+      'transition-all',
+      'duration-200',
+      'hover:shadow-md',
+      'hover:border-primary/20',
+    )
   })
 }
 
@@ -17,7 +22,8 @@ function enhancePostCards() {
 
       // 添加渐变背景
       const gradient = document.createElement('div')
-      gradient.className = 'absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent'
+      gradient.className =
+        'absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent'
       header.appendChild(gradient)
     }
 
@@ -36,12 +42,9 @@ function enhancePostCards() {
       const stats = postDesc.querySelectorAll('span')
       stats.forEach((stat) => {
         let icon = ''
-        if (stat.classList.contains('post-view-count'))
-          icon = '👁️ '
-        if (stat.classList.contains('post-comment-count'))
-          icon = '💬 '
-        if (stat.classList.contains('post-digg-count'))
-          icon = '👍 '
+        if (stat.classList.contains('post-view-count')) icon = '👁️ '
+        if (stat.classList.contains('post-comment-count')) icon = '💬 '
+        if (stat.classList.contains('post-digg-count')) icon = '👍 '
 
         if (icon) {
           stat.innerHTML = icon + stat.innerHTML
@@ -71,7 +74,8 @@ function addTimelineEffect() {
     const dayTitle = day.querySelector('.dayTitle') as HTMLElement
     if (dayTitle) {
       const timeMarker = document.createElement('div')
-      timeMarker.className = 'w-3 h-3 bg-primary rounded-full absolute -left-6 top-1/2 transform -translate-y-1/2'
+      timeMarker.className =
+        'w-3 h-3 bg-primary rounded-full absolute -left-6 top-1/2 transform -translate-y-1/2'
       dayTitle.style.position = 'relative'
       dayTitle.appendChild(timeMarker)
     }
