@@ -1,6 +1,6 @@
 import { ThemeToggle } from './theme-toggle'
 
-export function Component() {
+export function Footer() {
   return (
     <footer className='mt-16 border-border border-t bg-card'>
       <div className='mx-auto max-w-7xl px-4 pt-6 pb-24 sm:px-6 lg:px-8'>

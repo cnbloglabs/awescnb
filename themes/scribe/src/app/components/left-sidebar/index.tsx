@@ -1,4 +1,4 @@
-import { BlogStatsCard } from './blog-stats'
+import { BlogStatsCard } from './blog-stats-card'
 
 export function LeftSidebar() {
   return (
