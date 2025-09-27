@@ -1,4 +1,4 @@
-import { createTheme } from '@acnb/core'
+import { createTheme } from '@acnb/core';
 import {
   background,
   catalog,
@@ -22,133 +22,73 @@ import {
   signature,
   tools,
   webTag,
-} from '@acnb/plugins'
-import build from './build'
-import './style/index.scss'
+} from '@acnb/plugins';
+import build from './build';
+import './style/index.scss';
 
 createTheme()
   .use(build)
-  .use(
-    colorMode,
-    {
-      enable: true,
-      color: '#FB7299',
-    },
-  )
-  .use(
-    tools,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    imagePreview,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    live2d,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    musicPlayer,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    clickEffects,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    webTag,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    commentsAvatars,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    signature,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    license,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    emoji,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    lock,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    postMessage,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    postTopImage,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    postBottomImage,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    qrcode,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    charts,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    donation,
-    {
-      enable: false,
-    },
-  )
-  .use(
-    notice,
-    {
-      enable: true,
-    },
-  )
-  .use(
-    darkMode,
-    {
-      enable: true,
-    },
-  )
+  .use(colorMode, {
+    enable: true,
+    color: '#FB7299',
+  })
+  .use(tools, {
+    enable: true,
+  })
+  .use(imagePreview, {
+    enable: true,
+  })
+  .use(live2d, {
+    enable: true,
+  })
+  .use(musicPlayer, {
+    enable: true,
+  })
+  .use(clickEffects, {
+    enable: true,
+  })
+  .use(webTag, {
+    enable: false,
+  })
+  .use(commentsAvatars, {
+    enable: true,
+  })
+  .use(signature, {
+    enable: false,
+  })
+  .use(license, {
+    enable: true,
+  })
+  .use(emoji, {
+    enable: true,
+  })
+  .use(lock, {
+    enable: false,
+  })
+  .use(postMessage, {
+    enable: false,
+  })
+  .use(postTopImage, {
+    enable: false,
+  })
+  .use(postBottomImage, {
+    enable: false,
+  })
+  .use(qrcode, {
+    enable: false,
+  })
+  .use(charts, {
+    enable: false,
+  })
+  .use(donation, {
+    enable: false,
+  })
+  .use(notice, {
+    enable: true,
+  })
+  .use(darkMode, {
+    enable: true,
+  })
   .use(
     background,
     {
@@ -167,4 +107,4 @@ createTheme()
       mountedNode: '#main',
       fn: 'prepend',
     },
-  )
+  );

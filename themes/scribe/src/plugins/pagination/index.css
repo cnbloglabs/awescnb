@@ -20,7 +20,6 @@
     text-sm
     font-medium
     rounded-md
-    transition-colors
     gap-1;
 }
 
@@ -49,7 +48,6 @@
     rounded-md
     text-sm
     font-medium
-    transition-all
     shrink-0
     outline-none
     focus-visible:border-ring

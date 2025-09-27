@@ -21,6 +21,7 @@
     "@acnb/core": "workspace:*",
     "@acnb/options": "workspace:*",
     "@acnb/plugins": "workspace:*",
+    "@acnb/hooks": "workspace:*",
     "class-variance-authority": "catalog:frontend",
     "lucide": "catalog:frontend",
     "lucide-preact": "catalog:frontend",
@@ -42,6 +43,6 @@
     "tw-animate-css": "catalog:dev",
     "vite": "catalog:prod",
     "vite-bundle-analyzer": "catalog:dev",
-    "vite-plugin-svgr": "catalog:"
+    "vite-plugin-svgr": "catalog:build"
   }
 }

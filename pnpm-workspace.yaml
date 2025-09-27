@@ -5,18 +5,12 @@ packages:
 
 catalogs:
   dev:
-    '@antfu/eslint-config': ^5.3.0
     '@clack/prompts': ^0.11.0
-    '@eslint-react/eslint-plugin': ^1.53.1
     '@preact/preset-vite': ^2.10.2
     '@tailwindcss/vite': ^4.1.13
     '@vitest/ui': ^3.2.4
     bumpp: ^10.2.3
     chalk: ^5.6.2
-    eslint: ^9.35.0
-    eslint-plugin-format: ^1.0.1
-    eslint-plugin-react-hooks: ^5.2.0
-    eslint-plugin-react-refresh: ^0.4.20
     esno: ^0.14.1
     fast-glob: ^3.3.3
     https-localhost: ^4.7.1
@@ -66,11 +60,11 @@ catalogs:
   types:
     '@types/jquery': ^3.5.33
     '@types/node': ^24.5.2
+  build:
+    vite-plugin-svgr: ^4.5.0
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - '@tailwindcss/oxide'
   - esbuild
   - simple-git-hooks
   - vue-demi
-catalog:
-  vite-plugin-svgr: ^4.5.0
