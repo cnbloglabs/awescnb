@@ -11,8 +11,6 @@
     "build:pkg": "pnpm -r --filter=./packages/** --parallel run build",
     "docs:dev": "pnpm -C docs run dev",
     "docs:build": "pnpm run --filter {./docs}... build && pnpm demo:build",
-    "lint": "eslint . --cache",
-    "lint:fix": "nr lint --fix",
     "typecheck": "vue-tsc --noEmit",
     "release": "bumpp package.json packages/*/package.json docs/package.json --all -x \"zx scripts/update-versions.mjs\"",
     "test": "vitest test",
@@ -20,21 +18,15 @@
   },
   "devDependencies": {
     "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
-    "@antfu/eslint-config": "catalog:dev",
     "@antfu/ni": "catalog:prod",
+    "@biomejs/biome": "^2.2.4",
     "@clack/prompts": "catalog:dev",
-    "@eslint-react/eslint-plugin": "catalog:dev",
     "@types/node": "catalog:types",
     "bumpp": "catalog:dev",
     "chalk": "catalog:dev",
-    "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev",
-    "eslint-plugin-react-hooks": "catalog:dev",
-    "eslint-plugin-react-refresh": "catalog:dev",
     "lint-staged": "catalog:dev",
     "picocolors": "catalog:dev",
     "preact": "catalog:frontend",
-    "prettier": "catalog:frontend",
     "rimraf": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
     "taze": "catalog:dev",
@@ -53,7 +45,7 @@
   },
   "lint-staged": {
     "**/*.{js,ts,vue,json}": [
-      "eslint --fix --cache"
+      "biome check --write"
     ]
   }
 }

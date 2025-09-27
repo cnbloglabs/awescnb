@@ -51,7 +51,6 @@
   },
   "devDependencies": {
     "@types/node": "catalog:types",
-    "eslint": "catalog:dev",
     "rimraf": "catalog:dev",
     "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
