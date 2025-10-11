@@ -30,16 +30,20 @@ export function ThemeToggle() {
     const applyTheme = () => {
       if (theme === 'dark') {
         document.documentElement.classList.add('dark')
+        document.documentElement.style.setProperty('color-scheme', 'dark')
       } else if (theme === 'light') {
         document.documentElement.classList.remove('dark')
+        document.documentElement.style.setProperty('color-scheme', 'light')
       } else {
         const shouldBeDark = window.matchMedia(
           '(prefers-color-scheme: dark)',
         ).matches
         if (shouldBeDark) {
           document.documentElement.classList.add('dark')
+          document.documentElement.style.setProperty('color-scheme', 'dark')
         } else {
           document.documentElement.classList.remove('dark')
+          document.documentElement.style.setProperty('color-scheme', 'light')
         }
       }
     }

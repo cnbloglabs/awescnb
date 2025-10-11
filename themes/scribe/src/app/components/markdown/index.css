@@ -1,0 +1,214 @@
+@reference "../../../styles/globals.css";
+@reference "tailwindcss";
+
+.custom-markdown {
+  @apply text-[1.05rem]
+    sm:text-[15px]
+    w-full
+    flex-1
+    *:data-[slot=alert]:first:mt-0;
+}
+
+.custom-markdown h1 {
+  @apply scroll-m-20
+    text-4xl
+    font-semibold
+    tracking-tight
+    sm:text-3xl
+    xl:text-4xl;
+}
+
+.custom-markdown h2 {
+  @apply mt-10
+    scroll-m-28
+    text-xl
+    font-medium
+    tracking-tight
+    first:mt-0
+    lg:mt-16
+    [&+.steps]:!mt-0
+    [&+.steps>h3]:!mt-4
+    [&+h3]:!mt-6
+    [&+p]:!mt-4;
+}
+
+.custom-markdown h3 {
+    @apply mt-12
+      scroll-m-28
+      text-lg
+      font-medium
+      tracking-tight
+      [&+p]:!mt-4
+      *:[code]:text-xl
+}
+
+.custom-markdown h4 {
+  @apply mt-8
+    scroll-m-28
+    text-base
+    font-medium
+    tracking-tight;
+}
+
+.custom-markdown h5 {
+  @apply mt-8
+    scroll-m-28
+    text-base
+    font-medium
+    tracking-tight
+}
+
+.custom-markdown h6 {
+  @apply mt-8
+    scroll-m-28
+    text-base
+    font-medium
+    tracking-tight
+}
+
+.custom-markdown a {
+  @apply font-medium
+    underline
+    underline-offset-4;
+}
+
+.custom-markdown p{
+  @apply leading-relaxed
+    [&:not(:first-child)]:mt-6;
+}
+
+.custom-markdown strong {
+  @apply font-medium
+}
+
+.custom-markdown ul {
+  @apply my-6
+    ml-6
+    list-disc;
+}
+
+
+.custom-markdown ol {
+  @apply my-6
+    ml-6
+    list-decimal;
+}
+
+
+.custom-markdown li {
+  @apply mt-2;
+}
+
+
+.custom-markdown blockquote {
+  @apply relative
+    rounded-lg
+    px-4
+    py-3
+    text-sm
+    bg-background
+    text-foreground
+    mt-6
+    w-auto
+    border
+    md:-mx-1;
+}
+
+.custom-markdown img {
+  @apply rounded-md;
+}
+
+.custom-markdown hr {
+  @apply my-4
+    md:my-8;
+}
+
+.custom-markdown table {
+  @apply relative
+    w-full
+    overflow-hidden
+    border-none
+    text-sm
+    [&_tbody_tr:last-child]:border-b-0;
+}
+
+
+.custom-markdown tr {
+  @apply m-0
+    border-b;
+}
+
+.custom-markdown th {
+  @apply px-4
+    py-2
+    text-left
+    font-bold
+    [&[align=center]]:text-center
+    [&[align=right]]:text-right;
+}
+
+.custom-markdown td {
+  @apply px-4
+    py-2
+    text-left
+    whitespace-nowrap
+    [&[align=center]]:text-center
+    [&[align=right]]:text-right;
+}
+
+.custom-markdown pre {
+  @apply no-scrollbar
+    min-w-0
+    overflow-x-auto
+    px-4
+    py-3.5
+    outline-none
+    has-[[data-highlighted-line]]:px-0
+    has-[[data-line-numbers]]:px-0
+    has-[[data-slot=tabs]]:p-0;
+}
+
+.custom-markdown figcaption {
+  @apply text-code-foreground
+    [&_svg]:text-code-foreground
+    flex
+    items-center
+    gap-2
+    [&_svg]:size-4
+    [&_svg]:opacity-70;
+}
+
+.custom-markdown code {
+  @apply bg-muted
+    relative
+    rounded-md
+    px-[0.3rem]
+    py-[0.2rem]
+    font-mono
+    text-[0.8rem]
+    break-words
+    outline-none;
+}
+
+.custom-markdown kbd {
+  @apply bg-muted
+    text-muted-foreground
+    pointer-events-none
+    inline-flex
+    h-5
+    w-fit
+    min-w-5
+    items-center
+    justify-center
+    gap-1
+    rounded-sm
+    px-1
+    font-sans
+    text-xs
+    font-medium
+    select-none
+    [&_svg:not([class*='size-'])]:size-3
+    [[data-slot=tooltip-content]_&]:bg-background/20
+    [[data-slot=tooltip-content]_&]:text-background
+    dark:[[data-slot=tooltip-content]_&]:bg-background/10;
+}

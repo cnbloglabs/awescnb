@@ -1,4 +1,4 @@
-
+/* stylelint-disable */
 @custom-variant dark (&:is(.dark *));
 
 @custom-variant fixed (&:is(.layout-fixed *));
@@ -140,10 +140,12 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border
+      outline-ring/50;
   }
   ::selection {
-    @apply bg-selection text-selection-foreground;
+    @apply bg-selection
+      text-selection-foreground;
   }
   html {
     @apply scroll-smooth;
@@ -161,16 +163,22 @@
 
   a:active,
   button:active {
-    @apply opacity-60 md:opacity-100;
+    @apply opacity-60
+      md:opacity-100;
   }
 }
 
 @utility border-grid {
-  @apply border-border/50 dark:border-border;
+  @apply border-border/50
+    dark:border-border;
 }
 
 @utility section-soft {
-  @apply from-background to-surface/40 dark:bg-background 3xl:fixed:bg-none bg-gradient-to-b;
+  @apply from-background
+    to-surface/40
+    dark:bg-background
+    3xl:fixed:bg-none
+    bg-gradient-to-b;
 }
 
 @utility theme-container {
@@ -178,11 +186,18 @@
 }
 
 @utility container-wrapper {
-  @apply 3xl:fixed:max-w-[calc(var(--breakpoint-2xl)+2rem)] mx-auto w-full px-2;
+  @apply 3xl:fixed:max-w-[calc(var(--breakpoint-2xl)+2rem)]
+    mx-auto
+    w-full
+    px-2;
 }
 
 @utility container {
-  @apply 3xl:max-w-screen-2xl mx-auto max-w-[1400px] px-4 lg:px-8;
+  @apply 3xl:max-w-screen-2xl
+    mx-auto
+    max-w-[1400px]
+    px-4
+    lg:px-8;
 }
 
 @utility no-scrollbar {
@@ -195,7 +210,13 @@
 }
 
 @utility border-ghost {
-  @apply after:border-border relative after:absolute after:inset-0 after:border after:mix-blend-darken dark:after:mix-blend-lighten;
+  @apply after:border-border
+    relative
+    after:absolute
+    after:inset-0
+    after:border
+    after:mix-blend-darken
+    dark:after:mix-blend-lighten;
 }
 
 @utility step {
@@ -203,14 +224,30 @@
   @apply relative;
 
   &:before {
-    @apply text-muted-foreground right-0 mr-2 hidden size-7 items-center justify-center rounded-full text-center -indent-px font-mono text-sm font-medium md:absolute;
+    @apply text-muted-foreground
+      right-0
+      mr-2
+      hidden
+      size-7
+      items-center
+      justify-center
+      rounded-full
+      text-center
+      -indent-px
+      font-mono
+      text-sm
+      font-medium
+      md:absolute;
     content: counter(step);
   }
 }
 
 @utility extend-touch-target {
   @media (pointer: coarse) {
-    @apply relative touch-manipulation after:absolute after:-inset-2;
+    @apply relative
+      touch-manipulation
+      after:absolute
+      after:-inset-2;
   }
 }
 
@@ -244,7 +281,8 @@
     font-size: var(--text-sm);
     outline: none;
     position: relative;
-    @apply -mx-1 md:-mx-1;
+    @apply -mx-1
+      md:-mx-1;
 
     &:has([data-rehype-pretty-code-title]) [data-slot="copy-button"] {
       top: calc(var(--spacing) * 1.5) !important;

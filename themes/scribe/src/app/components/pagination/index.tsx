@@ -1,12 +1,10 @@
-import { Pagination } from './component'
-import { usePaginationItems } from './hooks'
+import { PaginationComponent } from './pagination-component'
+import { Visible } from './visible'
 
-export function PaginationComponent() {
-  const { data: items } = usePaginationItems()
-
-  if (!items || items.length === 0) {
-    return null
-  }
-
-  return <Pagination items={items} />
+export function Pagination() {
+  return (
+    <Visible>
+      <PaginationComponent></PaginationComponent>
+    </Visible>
+  )
 }

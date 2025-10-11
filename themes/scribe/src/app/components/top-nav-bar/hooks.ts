@@ -13,8 +13,9 @@ export function useNavItems() {
       if (el) {
         const navLinks = el.querySelectorAll('li a.menu')
         navLinks.forEach((link) => {
-          const id = link.id || ''
           const text = link.textContent?.trim() || ''
+          if (text === '博客园') return
+          const id = link.id || ''
           const href = link.getAttribute('href') || '#'
           navItems.push({ id, text, href })
         })
