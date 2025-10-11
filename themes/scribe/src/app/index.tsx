@@ -1,15 +1,13 @@
 import { BackToTop } from './components/back-to-top'
 import { Footer } from './components/footer'
-import { PaginationComponent } from './components/pagination'
+import { Main } from './components/main'
 import { TopNavBar } from './components/top-nav-bar'
 
 export function App() {
   return (
     <div className='flex flex-col'>
       <TopNavBar></TopNavBar>
-      <main className='flex flex-col'>
-        <PaginationComponent></PaginationComponent>
-      </main>
+      <Main></Main>
       <Footer></Footer>
       <BackToTop></BackToTop>
     </div>

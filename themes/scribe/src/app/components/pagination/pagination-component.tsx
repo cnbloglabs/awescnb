@@ -1,19 +1,20 @@
 import { cva } from 'class-variance-authority'
 import { ChevronLeft, ChevronRight } from 'lucide-preact'
+import { usePaginationItems } from './hooks'
 import type { PaginationItem } from './types'
 
 const paginationItemVariants = cva(
-  'no-underline! inline-flex items-center justify-center gap-1 rounded-md px-4 py-2 font-medium text-sm',
+  'no-underline! inline-flex items-center justify-center gap-1 rounded-md px-2 py-2 font-medium text-xs sm:px-4 sm:text-sm',
   {
     variants: {
       variant: {
         link: 'border-transparent border-none text-foreground hover:border-primary/30 hover:bg-muted',
         current:
-          'size-9 shrink-0 cursor-pointer select-none whitespace-nowrap border bg-background text-foreground shadow-xs outline-none hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:border-input dark:bg-input/30 dark:aria-invalid:ring-destructive/40 dark:hover:bg-input/50',
+          'size-7 shrink-0 cursor-pointer select-none whitespace-nowrap border bg-background text-foreground shadow-xs outline-none hover:bg-accent hover:text-accent-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 sm:size-9 dark:border-input dark:bg-input/30 dark:aria-invalid:ring-destructive/40 dark:hover:bg-input/50',
         text: '',
       },
       isArrow: {
-        true: 'gap-2',
+        true: 'gap-1 sm:gap-2',
         false: '',
       },
     },
@@ -24,11 +25,9 @@ const paginationItemVariants = cva(
   },
 )
 
-interface PaginationProps {
-  items: PaginationItem[]
-}
+export function PaginationComponent() {
+  const { data: items } = usePaginationItems()
 
-export function Pagination({ items }: PaginationProps) {
   const getItemContent = (item: PaginationItem) => {
     if (item.text === '上一页') {
       return (
@@ -49,6 +48,10 @@ export function Pagination({ items }: PaginationProps) {
     }
 
     return <span>{item.text}</span>
+  }
+
+  if (!items || items.length === 0) {
+    return null
   }
 
   return (
