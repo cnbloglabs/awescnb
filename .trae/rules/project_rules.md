@@ -42,7 +42,7 @@ themes/scribe 是 shadcn ui （默认主题）风格的博客皮肤。
 top-nav-bar
 ├── component.tsx // preact 组件，从零实现一个功能
 ├── data.ts // 从模板 html 获取数据
-├── index.css // 功能相关样式， 一般用于隐藏模板元素
+├── index.css // 可选，功能相关样式， 一般用于隐藏模板元素
 └── index.tsx // 插件入口，渲染获取 data 并渲染组件
 ```
 
@@ -57,8 +57,6 @@ export default function () {
 }
 ```
 
-> 即使功能简单，你也应该优先考虑使用 preact 组件方式实现。
-
 ```css
 /* plugin-name/index.css */
 
@@ -66,6 +64,8 @@ export default function () {
   @apply text-2xl font-bold text-red-500;
 }
 ```
+
+> 即使功能简单，也应该优先考虑使用 preact 组件方式实现。
 
 本地开发
 
