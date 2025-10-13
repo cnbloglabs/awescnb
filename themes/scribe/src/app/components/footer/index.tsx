@@ -8,7 +8,7 @@ export function Footer() {
           <div className='flex justify-center md:justify-start'>
             <ThemeToggle />
           </div>
-          <div className='w-full text-center text-muted-foreground text-sm leading-loose sm:text-sm'>
+          <div className='text-center text-muted-foreground text-sm leading-loose sm:text-sm'>
             Built by{' '}
             <a
               href='https://github.com/guangzan'
