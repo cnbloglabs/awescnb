@@ -12,8 +12,9 @@ export function useComments() {
         const commentElements = el.querySelectorAll('.feedbackItem')
 
         commentElements.forEach((commentEl) => {
-          const id =
-            commentEl.querySelector('a[name]')?.getAttribute('name') || ''
+          const id = Number(
+            commentEl.querySelector('a[name]')?.getAttribute('name'),
+          )
           const authorEl = commentEl.querySelector('a[id^="a_comment_author_"]')
           const author = authorEl?.textContent?.trim() || ''
           const authorUrl = authorEl?.getAttribute('href') || ''
@@ -51,6 +52,21 @@ export function useComments() {
             }
           }
 
+          // 获取回复参数
+          let replyToId = ''
+          const replyButton = commentEl.querySelector(
+            'a[onclick*="ReplyComment"]',
+          )
+          if (replyButton) {
+            const onclickAttr = replyButton.getAttribute('onclick') || ''
+            const match = onclickAttr.match(
+              /ReplyComment\((\d+),\s*'([^']+)'\)/,
+            )
+            if (match?.[2]) {
+              replyToId = match[2]
+            }
+          }
+
           if (id && author) {
             comments.push({
               id,
@@ -64,6 +80,7 @@ export function useComments() {
               supportCount,
               opposeCount,
               replyTo,
+              replyToId,
             })
           }
         })
@@ -130,7 +147,7 @@ export function useCommentPaginationItems() {
   })
 }
 
-export function useCommentInputHTML() {
+export function useCommentFormHTML() {
   return useQueryDOM({
     selector: '#comment_form_container',
     observe: true,

@@ -1,5 +1,5 @@
 export interface CommentItem {
-  id: string
+  id: number
   author: string
   authorUrl: string
   avatar?: string
@@ -13,6 +13,7 @@ export interface CommentItem {
     id: string
     author: string
   }
+  replyToId: string
 }
 
 export interface CommentPaginationItem {
