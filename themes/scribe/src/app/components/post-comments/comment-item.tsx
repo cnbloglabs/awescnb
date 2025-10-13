@@ -1,22 +1,6 @@
-import { cva } from 'class-variance-authority'
 import { MessageSquare, ThumbsDown, ThumbsUp, User } from 'lucide-preact'
 import { Markdown } from '../markdown'
 import type { CommentItem } from './types'
-
-const commentItemVariants = cva(
-  'rounded-lg border bg-card p-4 transition-all duration-200',
-  {
-    variants: {
-      isOwner: {
-        true: 'border-primary/20 bg-primary/1',
-        false: 'border-border',
-      },
-    },
-    defaultVariants: {
-      isOwner: false,
-    },
-  },
-)
 
 interface CommentItemProps {
   comment: CommentItem
@@ -24,7 +8,7 @@ interface CommentItemProps {
 
 export function CommentItemComponent({ comment }: CommentItemProps) {
   return (
-    <article className={commentItemVariants({ isOwner: comment.isOwner })}>
+    <article className='rounded-lg border border-primary/20 bg-primary/1 p-4'>
       <div className='mb-3 flex items-start justify-between'>
         <div className='flex items-center gap-3'>
           {comment.avatar ? (
@@ -106,11 +90,7 @@ export function CommentItemComponent({ comment }: CommentItemProps) {
           type='button'
           className='rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
           onClick={() => {
-            window.DelComment(
-              comment.id,
-              document.createDocumentFragment,
-              window.currentPostId,
-            )
+            window.DelComment(comment.id, $(), window.currentPostId)
           }}
         >
           删除
@@ -127,6 +107,15 @@ export function CommentItemComponent({ comment }: CommentItemProps) {
         <button
           type='button'
           className='ml-auto flex items-center gap-1 rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+          onClick={() => {
+            const mockVoteDom = document.createElement('div')
+            mockVoteDom.innerHTML = `
+              <span class="comment_digg">支持(${comment.supportCount})</span>
+              <span class="comment_bury">反对(${comment.opposeCount})</span>
+              <span class="comment_error"></span>
+            `
+            window.voteComment(comment.id, 'Bury', mockVoteDom, false)
+          }}
         >
           <ThumbsDown className='h-3 w-3' />
           <span>{comment.opposeCount}</span>
@@ -134,6 +123,15 @@ export function CommentItemComponent({ comment }: CommentItemProps) {
         <button
           type='button'
           className='flex items-center gap-1 rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+          onClick={() => {
+            const mockVoteDom = document.createElement('div')
+            mockVoteDom.innerHTML = `
+              <span class="comment_digg">支持(${comment.supportCount})</span>
+              <span class="comment_bury">反对(${comment.opposeCount})</span>
+              <span class="comment_error"></span>
+            `
+            window.voteComment(comment.id, 'Digg', mockVoteDom, false)
+          }}
         >
           <ThumbsUp className='h-3 w-3' />
           <span>{comment.supportCount}</span>

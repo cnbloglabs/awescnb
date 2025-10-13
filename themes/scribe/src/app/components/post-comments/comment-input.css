@@ -3,8 +3,12 @@
 .under-comment-nav.under-comment-box-nav,
 .custom-comment-input>p:last-of-type,
 #commentform_title ,
+#commentbox_opt>:nth-child(3),
+#comment_form_container>p:last-of-type,
+#tip_comment,
+#tip_comment2,
 .commentbox_footer {
-    @apply hidden;
+    @apply !hidden;
 }
 
 .commentbox_main.comment_textarea {
@@ -26,7 +30,17 @@
 
 .commentbox_tab:hover {
     @apply border-none
+      text-inherit;
 }
+
+.comment_svg {
+        @apply fill-muted-foreground;
+}
+
+.comment_svg:hover {
+    @apply fill-inherit;
+}
+
 
 
 .commentbox_title {
@@ -69,6 +83,9 @@
       flex-row-reverse;
 }
 
+#commentbox_opt a {
+    @apply pl-0;
+}
 
 #commentbox_opt>:nth-child(1){
      @apply inline-flex
@@ -101,10 +118,6 @@
        px-4
        py-2
        has-[>svg]:px-3;
-}
-
-#commentbox_opt>:nth-child(3) {
-    @apply !hidden;
 }
 
 #commentbox_opt>:nth-child(2), 
@@ -149,4 +162,20 @@
 
 #commentbox_opt>:not(:last-child) {
     @apply ml-2;
+}
+
+
+
+.commentbox_title_right, .commentbox_title_left {
+    @apply !justify-start
+      w-auto;
+}
+
+.comment_icon {
+    @apply ml-0
+      space-x-2; 
+}
+
+.commentbox_title_right {
+    @apply gap-4; 
 }

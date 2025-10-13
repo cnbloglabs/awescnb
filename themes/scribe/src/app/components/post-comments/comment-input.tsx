@@ -1,13 +1,19 @@
+import { useEffect, useRef } from 'preact/hooks'
 import './comment-input.css'
-import { RichText } from '../rich-text'
-import { useCommentFormHTML } from './hooks'
 
 export function CommentInput() {
-  const { data: HTML } = useCommentFormHTML()
+  const containerRef = useRef<HTMLDivElement>(null)
 
-  if (!HTML) {
-    return null
-  }
+  useEffect(() => {
+    const commentFormContainer = document.getElementById(
+      'comment_form_container',
+    )
+    const container = containerRef.current
 
-  return <RichText className='custom-comment-input mt-4' html={HTML} />
+    if (commentFormContainer && container) {
+      container.appendChild(commentFormContainer)
+    }
+  }, [])
+
+  return <div ref={containerRef} className='custom-comment-input mt-4' />
 }
