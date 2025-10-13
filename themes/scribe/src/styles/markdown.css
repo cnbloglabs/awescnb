@@ -1,4 +1,4 @@
-@reference "../../../styles/globals.css";
+
 
 .custom-markdown {
   @apply text-[1.05rem]
@@ -109,6 +109,7 @@
     text-foreground
     mt-6
     w-auto
+    border-2
     border-border
     md:-mx-1;
 }
@@ -156,7 +157,7 @@
 }
 
 .custom-markdown pre {
-  @apply no-scrollbar
+  @apply rounded-lg
     min-w-0
     overflow-x-auto
     px-4
@@ -178,9 +179,7 @@
 }
 
 .custom-markdown code {
-  @apply bg-muted
-    relative
-    rounded-md
+  @apply  relative
     px-[0.3rem]
     py-[0.2rem]
     font-mono

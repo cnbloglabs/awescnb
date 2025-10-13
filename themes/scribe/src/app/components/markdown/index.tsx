@@ -1,5 +1,4 @@
 import { RichText } from '../rich-text'
-import './index.css'
 
 interface RichTextProps {
   html: string
