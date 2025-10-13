@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "./shadcn/themes.css";
 @import "./shadcn/globals.css";
+@import "./markdown.css";
 
 :root {
     -webkit-font-smoothing: antialiased;
