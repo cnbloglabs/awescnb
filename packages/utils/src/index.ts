@@ -318,3 +318,12 @@ export function getCommentCount(): string {
 export function getViewCount(): string {
   return $('#stats-total-view-count>span').text().trim()
 }
+
+export function setCodeTheme(mode: 'dark' | 'light') {
+  const theme =
+    mode === 'dark'
+      ? window.darkModeCodeHighlightTheme
+      : window.codeHighlightTheme
+
+  window.highlighter.setTheme(theme)
+}
