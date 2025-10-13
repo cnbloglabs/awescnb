@@ -11,41 +11,56 @@ interface UseQueryDomResult<T> {
   isPending: boolean
 }
 
-export function useQueryDOM<T>(
-  options: UseQueryDomOptions<T>,
-): UseQueryDomResult<T> {
-  const { selector, observe = false, queryFn } = options
+export function useQueryDOM<T>({
+  selector,
+  observe = false,
+  queryFn,
+}: UseQueryDomOptions<T>): UseQueryDomResult<T> {
   const [data, setData] = useState<T | null>(null)
-  const [isPending, setIsPending] = useState<boolean>(true)
+  const [isPending, setIsPending] = useState(true)
   const queryFnRef = useRef(queryFn)
+  const observerRef = useRef<MutationObserver | null>(null)
 
-  // 更新 ref 值当 queryFn 改变时
+  // 保持 queryFn 最新引用
   useEffect(() => {
     queryFnRef.current = queryFn
   }, [queryFn])
 
-  const getData = useCallback(() => {
+  const queryElement = useCallback(() => {
     const element = document.querySelector(selector)
-    const newData = queryFnRef.current(element)
-    const newIsPending = element === null
-    setData(newData)
-    setIsPending(newIsPending)
+    const nextData = queryFnRef.current(element)
+    const pending = !element
+
+    setIsPending(pending)
+    setData((prev) => {
+      // 避免相同数据触发无意义渲染
+      if (Object.is(prev, nextData)) return prev
+      return nextData
+    })
   }, [selector])
 
   useEffect(() => {
-    getData()
-    if (observe) {
-      const observer = new MutationObserver(() => {
-        getData()
-      })
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-      })
-      return () => observer.disconnect()
+    queryElement()
+
+    if (!observe) return
+
+    const element = document.querySelector(selector)
+    const targetNode = element?.parentElement || document.body
+
+    const observer = new MutationObserver(queryElement)
+    observerRef.current = observer
+
+    observer.observe(targetNode, {
+      childList: true,
+      subtree: true,
+      characterData: false,
+    })
+
+    return () => {
+      observer.disconnect()
+      observerRef.current = null
     }
-  }, [getData, observe])
+  }, [observe, queryElement, selector])
 
   return { data, isPending }
 }
