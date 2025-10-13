@@ -143,6 +143,7 @@
     py-2
     text-left
     font-bold
+    !border-none
     [&[align=center]]:text-center
     [&[align=right]]:text-right;
 }
@@ -151,6 +152,7 @@
   @apply px-4
     py-2
     text-left
+    !border-none
     whitespace-nowrap
     [&[align=center]]:text-center
     [&[align=right]]:text-right;
@@ -209,4 +211,13 @@
     [[data-slot=tooltip-content]_&]:bg-background/20
     [[data-slot=tooltip-content]_&]:text-background
     dark:[[data-slot=tooltip-content]_&]:bg-background/10;
+}
+
+
+.custom-markdown .table-wrapper {
+  @apply my-6
+    w-full
+    overflow-y-auto
+    rounded-lg
+    border;
 }
