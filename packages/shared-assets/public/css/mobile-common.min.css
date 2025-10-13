@@ -3,11 +3,31 @@ body {
     -webkit-text-size-adjust: none
 }
 
-.skin-codinglife .bannerbar-mobile {
+.skin-codinglife .bannerbar-mobile,.skin-codinglife .imagebar-mobile {
     margin-bottom: -10px
 }
 
-#bannerbar img {
+.skin-codinglife .bannerbar-text-mobile,.skin-codinglife .imagebar-text-mobile {
+    margin-bottom: 0
+}
+
+.bannerbar-text-mobile,.imagebar-text-mobile {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ede9f2
+}
+
+.bannerbar-text-mobile a:link,.bannerbar-text-mobile a:hover,.bannerbar-text-mobile a:active,.bannerbar-text-mobile a:visited,.imagebar-text-mobile a:link,.imagebar-text-mobile a:hover,.imagebar-text-mobile a:active,.imagebar-text-mobile a:visited {
+    color: #369;
+    font-size: 14px;
+    text-decoration: none
+}
+
+.bannerbar-text-mobile a:hover,.imagebar-text-mobile a:hover {
+    text-decoration: underline
+}
+
+#bannerbar img,#imagebar img {
     width: 100% !important;
     max-width: 100% !important;
     max-height: 70px
@@ -33,8 +53,18 @@ body {
     display: none !important
 }
 
-.cnblogs-post-body img,.blog_comment_body img {
+.blogpost-body img,.blog_comment_body img {
     max-width: 300px !important;
+    height: auto
+}
+
+.blogpost-body p>img {
+    display: block;
+    margin: auto
+}
+
+.blogpost-body iframe {
+    max-width: 100% !important;
     height: auto
 }
 
@@ -55,7 +85,7 @@ div.commentform textarea {
     height: auto !important
 }
 
-#sidebar_search_box input[type=text] {
+#sidebar_search_box input[type="text"] {
     width: 260px
 }
 
@@ -87,12 +117,12 @@ div.commentform textarea {
     background-color: #555
 }
 
-#cnblogs_c1,#cnblogs_c2 {
+#blog_c1,#cnblogs_c2 {
     text-align: center;
     margin: 10px auto 0 auto
 }
 
-#cnblogs_c1 {
+#blog_c1 {
     width: 300px
 }
 
@@ -106,7 +136,7 @@ div.commentform textarea {
 }
 
 .commentbox_tab {
-    width: 100%
+    /* width:100%; */
 }
 
 .comment_textarea {
@@ -118,9 +148,9 @@ div.commentform textarea {
 }
 
 .commentbox_title_right,.commentbox_title_left {
-    width: 100%;
-    max-width: 100%;
-    justify-content: space-between
+    /* width: auto; */
+    /* max-width:100%; */
+    /* justify-content:space-between; */
 }
 
 .commentbox_title_right {
@@ -131,6 +161,66 @@ div.commentform textarea {
     display: none
 }
 
+.cnblogs-markdown :not(pre,div,td)>code,.blogpost-body :not(pre,div,td)>code {
+    white-space: pre-wrap
+}
+
 .category-link-list {
     grid-template-columns: repeat(2,minmax(0,1fr))
+}
+
+body.skin-lessismore {
+    min-width: auto
+}
+
+.skin-lessismore #home {
+    width: 100%
+}
+
+.skin-lessismore #mainContent {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.skin-lessismore #sideBarMain {
+    width: 100%
+}
+
+.skin-lessismore .forFlow {
+    margin: 10px
+}
+
+.skin-lessismore #green_channel {
+    width: 80%
+}
+
+.skin-lessismore #tbCommentBody {
+    width: 100%
+}
+
+.skin-simplememory #mainContent {
+    float: none;
+    margin-left: 0
+}
+
+.skin-simplememory #main {
+    padding: 10px
+}
+
+.skin-simplememory .forFlow {
+    margin: 0 10px
+}
+
+.skin-simplememory #sideBarMain {
+    width: 100%;
+    float: none;
+    padding: 10px;
+    margin-right: 0
+}
+
+.skin-custom #mainContent {
+    float: none;
+    margin-left: 0
 }

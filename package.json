@@ -47,6 +47,7 @@
   "lint-staged": {
     "**/*.{js,ts,vue,json}": [
       "biome check --write"
-    ]
+    ],
+    "**/*.min.js": []
   }
 }

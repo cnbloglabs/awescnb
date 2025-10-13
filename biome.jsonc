@@ -9,6 +9,7 @@
   "files": {
     "ignoreUnknown": false,
     "includes": [
+      "*.{js,ts,tsx,json}",
       "packages/**/*.{js,ts,tsx}",
       "scripts/**/*.{js,ts,tsx}",
       "themes/**/*.{js,ts,tsx}",
