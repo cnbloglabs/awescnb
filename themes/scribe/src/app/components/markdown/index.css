@@ -1,5 +1,4 @@
 @reference "../../../styles/globals.css";
-@reference "tailwindcss";
 
 .custom-markdown {
   @apply text-[1.05rem]
