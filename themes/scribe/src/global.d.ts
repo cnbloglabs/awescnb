@@ -1,9 +1,15 @@
 declare global {
   interface Window {
-    GetCommentBody: (id: number) => void
-    ReplyComment: (id: number, replyTo: string) => void
-    QuoteComment: (id: number, replyTo: string) => void
-    DelComment: (d: number, this: any, parentId: number) => void
+    GetCommentBody: (commentId: number) => void
+    ReplyComment: (commentId: number, replyTo: string) => void
+    QuoteComment: (commentId: number, replyTo: string) => void
+    DelComment: (commentId: number, this: any, parentId: number) => void
+    voteComment(
+      commentId: number,
+      voteType: 'Digg' | 'Bury',
+      parentElement: any,
+      isAbandoned: boolean,
+    )
     currentPostId: number
   }
 }
