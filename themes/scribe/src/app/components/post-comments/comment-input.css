@@ -1,0 +1,152 @@
+@reference "../../../styles/globals.css";
+
+.under-comment-nav.under-comment-box-nav,
+.custom-comment-input>p:last-of-type,
+#commentform_title ,
+.commentbox_footer {
+    @apply hidden;
+}
+
+.commentbox_main.comment_textarea {
+    @apply rounded-lg
+      bg-background
+      border-primary/20
+      w-full;
+}
+
+.commentbox_tab {
+    @apply text-sm
+      text-muted-foreground;
+}
+
+.commentbox_tab.active {
+    @apply border-none
+      text-inherit;
+}
+
+.commentbox_tab:hover {
+    @apply border-none
+}
+
+
+.commentbox_title {
+    @apply border-none
+}
+
+#tbCommentBody {
+    @apply border-input
+      mt-2
+      mb-2
+      h-36
+      placeholder:text-muted-foreground
+      focus-visible:border-ring
+      focus-visible:ring-ring/50
+      aria-invalid:ring-destructive/20
+      dark:aria-invalid:ring-destructive/40
+      aria-invalid:border-destructive
+      dark:bg-input/30
+      flex
+      field-sizing-content
+      min-h-16
+      w-full
+      rounded-lg
+      border
+      bg-transparent
+      px-3
+      py-2
+      text-sm
+      shadow-xs
+      transition-[color,box-shadow]
+      outline-none
+      focus-visible:ring-[3px]
+      disabled:cursor-not-allowed
+      disabled:opacity-50
+      md:text-sm;
+}
+
+#commentbox_opt {
+    @apply flex
+      flex-row-reverse;
+}
+
+
+#commentbox_opt>:nth-child(1){
+     @apply inline-flex
+       w-auto
+       items-center
+       justify-center
+       gap-2
+       whitespace-nowrap
+       rounded-md
+       text-sm
+       font-medium
+       transition-all
+       disabled:pointer-events-none
+       disabled:opacity-50
+       [&_svg]:pointer-events-none
+       [&_svg:not([class*='size-'])]:size-4
+       shrink-0
+       [&_svg]:shrink-0
+       outline-none
+       focus-visible:border-ring
+       focus-visible:ring-ring/50
+       focus-visible:ring-[3px]
+       aria-invalid:ring-destructive/20
+       dark:aria-invalid:ring-destructive/40
+       aria-invalid:border-destructive
+       bg-primary
+       text-primary-foreground
+       hover:bg-primary/90
+       h-9
+       px-4
+       py-2
+       has-[>svg]:px-3;
+}
+
+#commentbox_opt>:nth-child(3) {
+    @apply !hidden;
+}
+
+#commentbox_opt>:nth-child(2), 
+#commentbox_opt>:nth-child(3), 
+#commentbox_opt>:nth-child(4) {
+     @apply inline-flex
+       items-center
+       justify-center
+       gap-2
+       whitespace-nowrap
+       rounded-md
+       text-sm
+       font-medium
+       transition-all
+       disabled:pointer-events-none
+       disabled:opacity-50
+       [&_svg]:pointer-events-none
+       [&_svg:not([class*='size-'])]:size-4
+       shrink-0
+       [&_svg]:shrink-0
+       outline-none
+       focus-visible:border-ring
+       focus-visible:ring-ring/50
+       focus-visible:ring-[3px]
+       aria-invalid:ring-destructive/20
+       dark:aria-invalid:ring-destructive/40
+       aria-invalid:border-destructive
+       border
+       bg-background
+       shadow-xs
+       hover:bg-accent
+       hover:text-accent-foreground
+       dark:bg-input/30
+       dark:border-input
+       dark:hover:bg-input/50
+       h-9
+       px-4
+       py-2
+       has-[>svg]:px-3
+       cursor-default;
+}
+
+#commentbox_opt>:not(:last-child) {
+    @apply ml-2;
+}
