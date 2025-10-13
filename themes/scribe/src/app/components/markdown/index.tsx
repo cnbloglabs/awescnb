@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: <explanation> */
+import { RichText } from '../rich-text'
 import './index.css'
 
 interface RichTextProps {
@@ -28,9 +28,6 @@ export function Markdown({ html, className = '' }: RichTextProps) {
   const processedHtml = wrapTables(html)
 
   return (
-    <div
-      className={`custom-markdown ${className}`}
-      dangerouslySetInnerHTML={{ __html: processedHtml }}
-    />
+    <RichText className={`custom-markdown ${className}`} html={processedHtml} />
   )
 }
