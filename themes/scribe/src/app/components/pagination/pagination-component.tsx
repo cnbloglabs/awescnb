@@ -56,7 +56,7 @@ export function PaginationComponent() {
 
   return (
     <nav aria-label='pagination' className='mx-auto flex w-full justify-center'>
-      <ul className='mt-8 mb-4 flex items-center justify-center space-x-2'>
+      <ul className='my-4 flex items-center justify-center space-x-2'>
         {items.map((item) => (
           <li key={item.text} className=''>
             <a
