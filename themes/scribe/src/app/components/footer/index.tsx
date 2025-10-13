@@ -3,7 +3,7 @@ import { ThemeToggle } from '../theme-toggle'
 export function Footer() {
   return (
     <footer className='mt-8 border-border border-t bg-card'>
-      <div className='mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-4 pt-6 pb-36 sm:px-6 lg:px-8'>
         <div className='flex flex-col gap-4 md:flex-row md:items-center md:justify-between'>
           <div className='flex justify-center md:justify-start'>
             <ThemeToggle />
