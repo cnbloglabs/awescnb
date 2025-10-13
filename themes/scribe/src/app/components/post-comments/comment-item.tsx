@@ -23,11 +23,6 @@ interface CommentItemProps {
 }
 
 export function CommentItemComponent({ comment }: CommentItemProps) {
-  const handleReply = () => {
-    // TODO 根据模板中的回复功能实现，需要调用 GetCommentBody 并传入 id
-    window.GetCommentBody()
-  }
-
   return (
     <article className={commentItemVariants({ isOwner: comment.isOwner })}>
       <div className='mb-3 flex items-start justify-between'>
@@ -88,30 +83,61 @@ export function CommentItemComponent({ comment }: CommentItemProps) {
         </div>
       </div>
 
-      <div className='flex items-center justify-between'>
-        <div className='flex items-center gap-4'>
-          <button
-            type='button'
-            className='flex items-center gap-1 rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
-          >
-            <ThumbsUp className='h-3 w-3' />
-            <span>{comment.supportCount}</span>
-          </button>
-          <button
-            type='button'
-            className='flex items-center gap-1 rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
-          >
-            <ThumbsDown className='h-3 w-3' />
-            <span>{comment.opposeCount}</span>
-          </button>
-          <button
-            type='button'
-            className='rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
-            onClick={handleReply}
-          >
-            回复
-          </button>
-        </div>
+      <div className='flex items-center gap-2'>
+        <button
+          type='button'
+          className='rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+          onClick={() => {
+            window.GetCommentBody(comment.id)
+          }}
+        >
+          修改
+        </button>
+        <button
+          type='button'
+          className='rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+          onClick={() => {
+            window.ReplyComment(comment.id, comment.replyToId)
+          }}
+        >
+          回复
+        </button>
+        <button
+          type='button'
+          className='rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+          onClick={() => {
+            window.DelComment(
+              comment.id,
+              document.createDocumentFragment,
+              window.currentPostId,
+            )
+          }}
+        >
+          删除
+        </button>
+        <button
+          type='button'
+          className='rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+          onClick={() => {
+            window.QuoteComment(comment.id, comment.replyToId)
+          }}
+        >
+          引用
+        </button>
+        <button
+          type='button'
+          className='ml-auto flex items-center gap-1 rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+        >
+          <ThumbsDown className='h-3 w-3' />
+          <span>{comment.opposeCount}</span>
+        </button>
+        <button
+          type='button'
+          className='flex items-center gap-1 rounded-md px-2 py-1 text-muted-foreground text-xs transition-colors hover:bg-muted hover:text-foreground'
+        >
+          <ThumbsUp className='h-3 w-3' />
+          <span>{comment.supportCount}</span>
+        </button>
       </div>
     </article>
   )

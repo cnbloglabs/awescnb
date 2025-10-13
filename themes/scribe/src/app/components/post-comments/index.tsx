@@ -4,7 +4,7 @@ import { CommentPagination } from './comment-pagination'
 
 export function PostComments() {
   return (
-    <div class='flex flex-col space-y-6'>
+    <div class='flex flex-col'>
       <CommentList />
       <CommentPagination />
       <CommentInput />
