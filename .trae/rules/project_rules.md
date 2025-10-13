@@ -8,6 +8,7 @@
 - 已明确 tailwindcss 版本是 V4
 - 统一所有文件、目录命名方式为中划线命名,如 file-name
 - 统一使用包管理器 pnpm
+- 禁止使用 switch case
 
 ## 运行原理
 
