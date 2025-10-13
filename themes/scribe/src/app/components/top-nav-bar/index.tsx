@@ -1,4 +1,4 @@
-import { Github } from 'lucide-preact'
+// import { Github } from 'lucide-preact'
 import { NavItems } from './nav-items'
 import Signature from './signature.svg?react'
 
@@ -13,7 +13,7 @@ export function TopNavBar() {
           <nav className='flex items-center gap-4'>
             <NavItems />
           </nav>
-          <div className='ml-1 flex items-center'>
+          {/* <div className='ml-1 flex items-center'>
             <a
               href={'https://github.com/cnbloglabs/awescnb'}
               target='_blank'
@@ -23,7 +23,7 @@ export function TopNavBar() {
             >
               <Github className='h-5 w-5' />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
