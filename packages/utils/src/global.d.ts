@@ -10,6 +10,11 @@ declare global {
     follow: (guid: string) => void
     unfollow: (guid: string) => void
     opts: Record<string, unknown>
+    highlighter: {
+      setTheme: (theme: string) => void
+    }
+    darkModeCodeHighlightTheme: string
+    codeHighlightTheme: string
   }
 }
 

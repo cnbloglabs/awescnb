@@ -1,3 +1,4 @@
+import { setCodeTheme } from '@acnb/utils'
 import { cva } from 'class-variance-authority'
 import { Monitor, Moon, Sun } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
@@ -31,9 +32,11 @@ export function ThemeToggle() {
       if (theme === 'dark') {
         document.documentElement.classList.add('dark')
         document.documentElement.style.setProperty('color-scheme', 'dark')
+        setCodeTheme('dark')
       } else if (theme === 'light') {
         document.documentElement.classList.remove('dark')
         document.documentElement.style.setProperty('color-scheme', 'light')
+        setCodeTheme('light')
       } else {
         const shouldBeDark = window.matchMedia(
           '(prefers-color-scheme: dark)',
@@ -41,9 +44,11 @@ export function ThemeToggle() {
         if (shouldBeDark) {
           document.documentElement.classList.add('dark')
           document.documentElement.style.setProperty('color-scheme', 'dark')
+          setCodeTheme('dark')
         } else {
           document.documentElement.classList.remove('dark')
           document.documentElement.style.setProperty('color-scheme', 'light')
+          setCodeTheme('light')
         }
       }
     }
