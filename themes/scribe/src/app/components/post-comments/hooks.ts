@@ -146,11 +146,3 @@ export function useCommentPaginationItems() {
     },
   })
 }
-
-export function useCommentFormHTML() {
-  return useQueryDOM({
-    selector: '#comment_form_container',
-    observe: true,
-    queryFn: (el) => el?.innerHTML ?? '',
-  })
-}
