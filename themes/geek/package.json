@@ -13,10 +13,10 @@
   "devDependencies": {
     "@acnb/vite-plugin-dynamic-script-extension": "workspace:*",
     "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
-    "@types/jquery": "catalog:types",
-    "@types/node": "catalog:types",
-    "sass": "catalog:dev",
-    "terser": "catalog:dev",
-    "vite": "catalog:prod"
+    "@types/jquery": "catalog:",
+    "@types/node": "catalog:",
+    "sass": "catalog:",
+    "terser": "catalog:",
+    "vite": "catalog:"
   }
 }

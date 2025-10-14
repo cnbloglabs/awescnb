@@ -37,9 +37,9 @@
     "build": "tsdown"
   },
   "devDependencies": {
-    "tsdown": "catalog:dev"
+    "tsdown": "catalog:"
   },
   "peerDependencies": {
-    "preact": "catalog:frontend"
+    "preact": "catalog:"
   }
 }

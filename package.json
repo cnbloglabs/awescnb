@@ -19,27 +19,27 @@
   },
   "devDependencies": {
     "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
-    "@antfu/ni": "catalog:prod",
-    "@biomejs/biome": "^2.2.4",
-    "@clack/prompts": "catalog:dev",
-    "@types/node": "catalog:types",
-    "bumpp": "catalog:dev",
-    "chalk": "catalog:dev",
-    "lint-staged": "catalog:dev",
-    "picocolors": "catalog:dev",
-    "preact": "catalog:frontend",
-    "rimraf": "catalog:dev",
-    "simple-git-hooks": "catalog:dev",
-    "taze": "catalog:dev",
-    "tsdown": "catalog:dev",
-    "tsx": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vite": "catalog:prod",
-    "vitest": "catalog:dev"
+    "@antfu/ni": "catalog:",
+    "@biomejs/biome": "catalog:",
+    "@clack/prompts": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "chalk": "catalog:",
+    "lint-staged": "catalog:",
+    "picocolors": "catalog:",
+    "preact": "catalog:",
+    "rimraf": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "taze": "catalog:",
+    "tsdown": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
   },
   "resolutions": {
-    "typescript": "catalog:dev",
-    "vite": "catalog:prod"
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

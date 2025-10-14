@@ -49,9 +49,9 @@
     "@acnb/core": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "catalog:types",
-    "rimraf": "catalog:dev",
-    "tsdown": "catalog:dev",
-    "vitest": "catalog:dev"
+    "@types/node": "catalog:",
+    "rimraf": "catalog:",
+    "tsdown": "catalog:",
+    "vitest": "catalog:"
   }
 }

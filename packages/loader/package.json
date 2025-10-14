@@ -19,8 +19,8 @@
     "dev": "tsdown --watch"
   },
   "devDependencies": {
-    "@types/jquery": "catalog:types",
-    "tsdown": "catalog:dev",
-    "vitest": "catalog:dev"
+    "@types/jquery": "catalog:",
+    "tsdown": "catalog:",
+    "vitest": "catalog:"
   }
 }

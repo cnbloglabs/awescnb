@@ -37,10 +37,10 @@
     "build": "tsdown && cp ./src/index.d.ts dist/"
   },
   "devDependencies": {
-    "@types/jquery": "catalog:types",
-    "@vitest/ui": "catalog:dev",
-    "jsdom": "catalog:dev",
-    "tsdown": "catalog:dev",
-    "vitest": "catalog:dev"
+    "@types/jquery": "catalog:",
+    "@vitest/ui": "catalog:",
+    "jsdom": "catalog:",
+    "tsdown": "catalog:",
+    "vitest": "catalog:"
   }
 }

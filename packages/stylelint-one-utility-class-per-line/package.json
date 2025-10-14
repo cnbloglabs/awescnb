@@ -29,7 +29,7 @@
     "stylelint": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "stylelint": "catalog:dev",
-    "tsdown": "catalog:dev"
+    "stylelint": "catalog:",
+    "tsdown": "catalog:"
   }
 }
