@@ -8,22 +8,22 @@
     "preview": "pnpm run build && serve .vitepress/dist"
   },
   "dependencies": {
-    "@vue/theme": "catalog:frontend",
-    "@vueuse/core": "catalog:frontend",
-    "canvas-confetti": "catalog:frontend",
-    "vue": "catalog:frontend"
+    "@vue/theme": "catalog:",
+    "@vueuse/core": "catalog:",
+    "canvas-confetti": "catalog:",
+    "vue": "catalog:"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "catalog:frontend",
-    "@types/node": "catalog:types",
-    "@unocss/reset": "catalog:frontend",
-    "@vitejs/plugin-vue": "catalog:prod",
-    "esno": "catalog:dev",
-    "fast-glob": "catalog:dev",
-    "https-localhost": "catalog:dev",
-    "unocss": "catalog:frontend",
-    "unplugin-vue-components": "catalog:prod",
-    "vite-plugin-pwa": "catalog:prod",
-    "vitepress": "catalog:docs"
+    "@iconify-json/carbon": "catalog:",
+    "@types/node": "catalog:",
+    "@unocss/reset": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "esno": "catalog:",
+    "fast-glob": "catalog:",
+    "https-localhost": "catalog:",
+    "unocss": "catalog:",
+    "unplugin-vue-components": "catalog:",
+    "vite-plugin-pwa": "catalog:",
+    "vitepress": "catalog:"
   }
 }

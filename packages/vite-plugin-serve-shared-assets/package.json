@@ -38,8 +38,8 @@
     "dev": "tsdown --watch"
   },
   "devDependencies": {
-    "tsdown": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vite": "catalog:prod"
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   }
 }

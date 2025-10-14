@@ -38,13 +38,13 @@
   "dependencies": {
     "@acnb/core": "workspace:*",
     "@acnb/options": "workspace:*",
-    "notyf": "catalog:frontend"
+    "notyf": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "catalog:types",
-    "sass": "catalog:dev",
-    "vite": "catalog:prod",
-    "vite-plugin-html": "catalog:prod",
-    "vite-plugin-singlefile": "catalog:prod"
+    "@types/node": "catalog:",
+    "sass": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-html": "catalog:",
+    "vite-plugin-singlefile": "catalog:"
   }
 }
