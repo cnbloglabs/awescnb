@@ -95,6 +95,7 @@ export function useComments() {
 export function useCommentPaginationItems() {
   return useQueryDOM({
     selector: '#comment_pager_bottom .pager',
+    observe: true,
     queryFn: (el) => {
       const items: CommentPaginationItem[] = []
 
@@ -111,10 +112,26 @@ export function useCommentPaginationItems() {
               const text = element.textContent?.trim() || ''
               const href = element.getAttribute('href') || '#'
 
+              // 提取 onclick 事件中的参数
+              const onclick = element.getAttribute('onclick') || ''
+              let pageNumber = 1
+              let pageSize = 50
+
+              // 解析 commentManager.renderComments(pageNumber, pageSize) 格式
+              const match = onclick.match(
+                /commentManager\.renderComments\((\d+),\s*(\d+)\)/,
+              )
+              if (match) {
+                pageNumber = parseInt(match[1], 10)
+                pageSize = parseInt(match[2], 10)
+              }
+
               items.push({
                 type: 'link',
                 text,
                 href,
+                pageNumber,
+                pageSize,
               })
             } else if (element.tagName === 'SPAN') {
               const text = element.textContent?.trim() || ''

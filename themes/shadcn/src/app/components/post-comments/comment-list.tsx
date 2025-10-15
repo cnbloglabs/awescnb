@@ -1,7 +1,7 @@
 import { toast } from 'sonner'
 import { CommentEmpty } from './comment-empty'
 import { CommentItemComponent } from './comment-item'
-import { CommentLoading } from './comment-loading'
+import { CommentSkeleton } from './comment-skeleton'
 import { useComments } from './hooks'
 
 $(document).ajaxComplete((_, __, option) => {
@@ -23,7 +23,12 @@ $(document).ajaxComplete((_, jqXHR, option) => {
       isSuccess: boolean
       message: string
     }
-    resp.isSuccess ? toast.success('投票成功') : toast.error('不能给自己投票');
+    if (resp.isSuccess) {
+      toast.success('投票成功')
+      new window.blogCommentManager().renderComments(0)
+      return
+    }
+    toast.error(resp.message)
   }
 })
 
@@ -32,7 +37,7 @@ export function CommentList() {
   const { data: comments, isPending } = useComments()
 
   if (isPending) {
-    return <CommentLoading />
+    return <CommentSkeleton count={comments?.length || 3} />
   }
 
   if (!comments || comments.length === 0) {

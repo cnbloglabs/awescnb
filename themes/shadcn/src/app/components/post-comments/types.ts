@@ -20,4 +20,6 @@ export interface CommentPaginationItem {
   type: 'link' | 'text' | 'current'
   text: string
   href?: string
+  pageNumber?: number
+  pageSize?: number
 }
