@@ -174,10 +174,10 @@ export function getCurrentPage():
   | 'home'
   | 'post'
   | 'tags'
-  | 'postarchive'
+  | 'post-archive'
   | 'category'
   | 'photos'
-  | 'photoview'
+  | 'photo-view'
   | 'unknown' {
   // 首页
   if (document.querySelectorAll('.day').length) {
@@ -200,7 +200,7 @@ export function getCurrentPage():
   if (
     document.querySelector('.entrylistTitle')?.textContent?.includes('档案')
   ) {
-    return 'postarchive'
+    return 'post-archive'
   }
 
   // 随笔分类页
@@ -223,7 +223,7 @@ export function getCurrentPage():
     document.querySelector('.gallery') &&
     document.querySelector('#ViewPicture1_GalleryImage')
   ) {
-    return 'photoview'
+    return 'photo-view'
   }
 
   return 'unknown'
