@@ -14,6 +14,9 @@ declare global {
     blogCommentManager: new () => {
       renderComments: (postId: number) => void
     }
+    commentManager: {
+      renderComments: (page: number, pageSize: number) => void
+    }
   }
 }
 
