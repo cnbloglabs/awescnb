@@ -69,7 +69,8 @@ themes/shadcn 是 shadcn ui （默认主题）风格的博客皮肤。
 
 ```md
 component-name
-├── hooks.ts // useQueryDOM hook
+├── hooks.ts // react hooks
+├── dom-hooks.ts // useQueryDOM hooks
 ├── utils.ts // 工具函数
 ├── types.ts // ts 类型
 └── index.tsx // preact 组件，从零实现一个功能
