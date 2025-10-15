@@ -5,6 +5,7 @@ export function useComments() {
   return useQueryDOM({
     selector: '#blog-comments-placeholder',
     observe: true,
+    ajaxUrl: '/ajax/comments-block',
     queryFn: (el) => {
       const comments: CommentItem[] = []
 
