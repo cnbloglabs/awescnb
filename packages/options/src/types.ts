@@ -164,6 +164,16 @@ interface WebsiteTagOptions {
 interface CodeTrafficLightOptions {
   enable: boolean
 }
+interface DomRewriteRule {
+  selector: string
+  action?: 'hide' | 'remove' | 'replace' | 'modify' | 'addClass' | 'removeClass'
+  content?: string
+  style?: Record<string, string>
+}
+interface DomRewriteOptions {
+  enable: boolean
+  rules: DomRewriteRule[]
+}
 type GenericGetFn<T> = (arg: Partial<T>) => T
 /**
  * 主题基本配置
@@ -289,3 +299,7 @@ export type GetWebsiteTagOptions = GenericGetFn<WebsiteTagOptions>
  * 代码块红绿灯
  */
 export type GetCodeTrafficLightOptions = GenericGetFn<CodeTrafficLightOptions>
+/**
+ * DOM 重写配置
+ */
+export type GetDomRewriteOptions = GenericGetFn<DomRewriteOptions>

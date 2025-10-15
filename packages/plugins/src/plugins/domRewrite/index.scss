@@ -1,0 +1,32 @@
+/**
+ * DOM 重写插件样式
+ * 包含隐藏元素的默认样式
+ */
+
+// 默认隐藏元素的样式
+.dom-rewrite-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// 被替换元素的容器样式
+.dom-rewrite-replaced {
+  overflow: hidden;
+}
+
+// 过渡动画样式
+.dom-rewrite-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+// 广告容器的通用隐藏样式
+#ad_sidebar,
+#sidebar_c3,
+.sidebar-ad,
+.cnblogs-ad,
+.blog_ad,
+.ad-container {
+  &.dom-rewrite-hidden {
+    display: none !important;
+  }
+}

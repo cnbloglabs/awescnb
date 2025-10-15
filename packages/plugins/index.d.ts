@@ -13,6 +13,7 @@ declare module '@acnb/plugins' {
   export function colorMode(theme: any, devOptions?: any): void
   export function commentsAvatars(theme: any, devOptions?: any): void
   export function darkMode(theme: any, devOptions?: any): void
+  export function domRewrite(theme: any, devOptions?: any): void
   export function donation(theme: any, devOptions?: any): void
   export function emoji(theme: any, devOptions?: any): void
   export function footer(theme: any, devOptions?: any): void

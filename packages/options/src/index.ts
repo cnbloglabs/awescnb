@@ -11,6 +11,7 @@ import type {
   GetCodeLinenumbersOptions,
   GetCodeTrafficLightOptions,
   GetDarkModeOptions,
+  GetDomRewriteOptions,
   GetDonationOptions,
   GetEmojiOptions,
   GetGiteeOptions,
@@ -131,6 +132,13 @@ export const getCodeTrafficLightOptions: GetCodeTrafficLightOptions =
   defineOptions('codeTrafficLight', {
     enable: false,
   })
+export const getDomRewriteOptions: GetDomRewriteOptions = defineOptions(
+  'domRewrite',
+  {
+    enable: false,
+    rules: [],
+  },
+)
 export const getDonationOptions: GetDonationOptions = defineOptions(
   'donation',
   {

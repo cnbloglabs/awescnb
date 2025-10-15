@@ -6,6 +6,7 @@ import {
   colorMode,
   commentsAvatars,
   darkMode,
+  domRewrite,
   emoji,
   imagePreview,
   license,
@@ -29,6 +30,13 @@ createTheme()
   .use(clickEffects, { enable: false })
   .use(commentsAvatars, { enable: true })
   .use(colorMode, { enable: true, color: '#2F63FF' })
+  .use(domRewrite, {
+    enable: true,
+    rules: [
+      { selector: '#sidebar_c3', action: 'hide' },
+      { selector: '.ad-banner', action: 'remove' },
+    ],
+  })
   .use(emoji, { enable: true })
   .use(imagePreview, { enable: true })
   .use(license, { enable: true })
