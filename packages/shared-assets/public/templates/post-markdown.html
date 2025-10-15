@@ -10,7 +10,7 @@
 
     <style>
       :not(.cnblogs_code):not(.cnblogs_Highlighter)
-        > pre:not([highlighted]):not([class*="brush:"])
+        > pre:not([highlighted]):not([class*='brush:'])
         code:not(.hljs) {
         background: rgb(40, 44, 52);
         padding: 13px;
@@ -36,37 +36,37 @@
     </style>
 
     <script>
-      var currentBlogId = 466832;
-      var currentBlogApp = "guangzan";
-      var isLogined = true;
-      var isBlogOwner = true;
-      var skinName = "Custom";
-      var visitorUserId = "adce83c6-a022-414e-4369-08d6259d0de2";
-      var hasCustomScript = false;
+      var currentBlogId = 466832
+      var currentBlogApp = 'guangzan'
+      var isLogined = true
+      var isBlogOwner = true
+      var skinName = 'Custom'
+      var visitorUserId = 'adce83c6-a022-414e-4369-08d6259d0de2'
+      var hasCustomScript = false
       try {
         if (
           hasCustomScript &&
           document.referrer &&
-          document.referrer.indexOf("baidu.com") >= 0
+          document.referrer.indexOf('baidu.com') >= 0
         ) {
-          Object.defineProperty(document, "referrer", { value: "" });
-          Object.defineProperty(Document.prototype, "referrer", {
+          Object.defineProperty(document, 'referrer', { value: '' })
+          Object.defineProperty(Document.prototype, 'referrer', {
             get: function () {
-              return "";
+              return ''
             },
-          });
+          })
         }
       } catch (error) {}
-      window.cb_enable_mathjax = false;
-      window.mathEngine = 1;
-      window.codeHighlightEngine = 1;
-      window.enableCodeLineNumber = true;
-      window.codeHighlightTheme = "atom-one-dark";
-      window.darkModeCodeHighlightTheme = "atom-one-dark";
-      window.isDarkCodeHighlightTheme = true;
-      window.isDarkModeCodeHighlightThemeDark = true;
-      window.isDisableCodeHighlighter = false;
-      window.enableCodeThemeTypeFollowSystem = false;
+      window.cb_enable_mathjax = false
+      window.mathEngine = 1
+      window.codeHighlightEngine = 1
+      window.enableCodeLineNumber = true
+      window.codeHighlightTheme = 'atom-one-dark'
+      window.darkModeCodeHighlightTheme = 'atom-one-dark'
+      window.isDarkCodeHighlightTheme = true
+      window.isDarkModeCodeHighlightThemeDark = true
+      window.isDisableCodeHighlighter = false
+      window.enableCodeThemeTypeFollowSystem = false
     </script>
   </head>
 
@@ -2773,11 +2773,11 @@
     <script src="../js/mockAPI.js"></script>
     <script type="module" src="../src/main.js"></script>
     <script>
-      document.querySelectorAll("a").forEach((a) => {
-        a.addEventListener("click", (e) => {
-          e.preventDefault();
-        });
-      });
+      document.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault()
+        })
+      })
     </script>
   </body>
 </html>
