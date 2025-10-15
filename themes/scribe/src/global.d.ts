@@ -11,6 +11,9 @@ declare global {
       isAbandoned: boolean,
     )
     currentPostId: number
+    blogCommentManager: new () => {
+      renderComments: (postId: number) => void
+    }
   }
 }
 
