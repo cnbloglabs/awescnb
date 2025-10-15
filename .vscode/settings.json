@@ -12,5 +12,5 @@
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  "cSpell.words": ["acnb", "shadcn"]
+  "cSpell.words": ["acnb", "shadcn", "trae"]
 }
