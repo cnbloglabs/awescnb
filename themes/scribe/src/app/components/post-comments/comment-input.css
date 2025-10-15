@@ -41,8 +41,6 @@
     @apply fill-inherit;
 }
 
-
-
 .commentbox_title {
     @apply border-none
 }
@@ -163,8 +161,6 @@
 #commentbox_opt>:not(:last-child) {
     @apply ml-2;
 }
-
-
 
 .commentbox_title_right, .commentbox_title_left {
     @apply !justify-start
