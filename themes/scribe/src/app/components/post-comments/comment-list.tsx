@@ -3,6 +3,15 @@ import { CommentItemComponent } from './comment-item'
 import { CommentLoading } from './comment-loading'
 import { useComments } from './hooks'
 
+$(document).ajaxComplete((_, __, option) => {
+  if (
+    option?.url?.includes('PostComment/Add') ||
+    option?.url?.includes('DeleteComment')
+  ) {
+    new window.blogCommentManager().renderComments(0)
+  }
+})
+
 export function CommentList() {
   const { data: comments, isPending } = useComments()
 
