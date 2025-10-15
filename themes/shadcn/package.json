@@ -23,6 +23,7 @@
     "@acnb/plugins": "workspace:*",
     "@acnb/hooks": "workspace:*",
     "@acnb/utils": "workspace:*",
+    "@acnb/ui": "workspace:*",
     "class-variance-authority": "catalog:",
     "lucide": "catalog:",
     "lucide-preact": "catalog:",
