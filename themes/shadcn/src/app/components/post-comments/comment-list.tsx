@@ -1,3 +1,4 @@
+import { toast } from 'sonner'
 import { CommentEmpty } from './comment-empty'
 import { CommentItemComponent } from './comment-item'
 import { CommentLoading } from './comment-loading'
@@ -11,6 +12,21 @@ $(document).ajaxComplete((_, __, option) => {
     new window.blogCommentManager().renderComments(0)
   }
 })
+
+$(document).ajaxComplete((_, jqXHR, option) => {
+  if (
+    option?.url?.includes('/ajax/vote/comment')
+  ) {
+    const resp = jqXHR.responseJSON as {
+      data: null | string
+      id: number
+      isSuccess: boolean
+      message: string
+    }
+    resp.isSuccess ? toast.success('投票成功') : toast.error('不能给自己投票');
+  }
+})
+
 
 export function CommentList() {
   const { data: comments, isPending } = useComments()

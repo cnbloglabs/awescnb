@@ -49,5 +49,8 @@
       "biome check --write"
     ],
     "**/*.min.js": []
+  },
+  "dependencies": {
+    "sonner": "^2.0.7"
   }
 }
