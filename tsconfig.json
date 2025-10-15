@@ -7,12 +7,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "types": [
-      "vite",
-      "vite/client",
-      "node",
-      "jquery"
-    ],
+    "types": ["vite", "vite/client", "node", "jquery"],
     "allowImportingTsExtensions": true,
     "strict": true,
     "strictNullChecks": true,
