@@ -12,5 +12,20 @@
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  "cSpell.words": ["acnb", "Digg", "shadcn", "trae"]
+  "cSpell.words": [
+    "acnb",
+    "biomejs",
+    "buryit",
+    "Digg",
+    "diggit",
+    "jquery",
+    "picocolors",
+    "rimraf",
+    "shadcn",
+    "singlefile",
+    "trae",
+    "vite",
+    "Wechat",
+    "Weibo"
+  ]
 }
