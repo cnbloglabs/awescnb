@@ -64,3 +64,5 @@ catalog:
     '@types/node': ^24.5.2
     vite-plugin-svgr: ^4.5.0
     "@biomejs/biome": "^2.2.4"
+    "clsx": "^2.0.0"
+    "tailwind-merge": "^2.0.0"
