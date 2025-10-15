@@ -20,7 +20,7 @@ packages/shared-assets 放置了博客页面默认模板，包含预定义的 ht
 
 你可以通过皮肤的 js 文件调整默认模板元素，或者根据模板中元素已有的选择器编写皮肤的 css。
 
-`themes/*` 为皮肤所在位置，如 `themes/scribe` 放置 scribe 主题实现代码。启动 dev server 后，默认打开的是一个导航页面，你如果需要查看相关页面，应该进入:
+`themes/*` 为皮肤所在位置，如 `themes/shadcn` 放置 shadcn 主题实现代码。启动 dev server 后，默认打开的是一个导航页面，你如果需要查看相关页面，应该进入:
 
 - /templates/home.html 首页
 - /templates/post-markdown.html 文章内容页（markdown）
@@ -33,11 +33,11 @@ packages/shared-assets 放置了博客页面默认模板，包含预定义的 ht
 - /templates/tags.html 标签列表页
 - /templates/postarchive.html 随笔档案分类页
 
-## themes/scribe
+## themes/shadcn
 
-themes/scribe 是 shadcn ui （默认主题）风格的博客皮肤。
+themes/shadcn 是 shadcn ui （默认主题）风格的博客皮肤。
 
-如果要实现的功能，如果是独立且复杂的，比如 back-to-top，通过 preact 组件实现。样式统一使用 tailwind V4 实现，对于复杂的 class，使用 class-variance-authority 进行组织。如：`themes/scribe/src/plugins/top-nav-bar`
+如果要实现的功能，如果是独立且复杂的，比如 back-to-top，通过 preact 组件实现。样式统一使用 tailwind V4 实现，对于复杂的 class，使用 class-variance-authority 进行组织。如：`themes/shadcn/src/plugins/top-nav-bar`
 
 ```md
 top-nav-bar
@@ -71,7 +71,7 @@ export default function () {
 本地开发
 
 ```sh
-npm run dev scribe
+npm run dev shadcn
 ```
 
 ## 图标

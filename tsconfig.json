@@ -7,12 +7,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "types": [
-      "vite",
-      "vite/client",
-      "node",
-      "jquery"
-    ],
+    "types": ["vite", "vite/client", "node", "jquery"],
     "allowImportingTsExtensions": true,
     "strict": true,
     "strictNullChecks": true,
@@ -31,9 +26,9 @@
     "packages/plugins/vite.config.mts",
     "packages/stylelint-one-utility-class-per-line/src/utils.mjs",
     "packages/stylelint-one-utility-class-per-line/src/index.mts",
-    "themes/scribe/src/modules/demo/index.tsx",
-    "themes/scribe/src/modules/back-to-top/index.tsx",
-    "themes/scribe/src/plugins/top-nav-bar/index.tsx"
+    "themes/shadcn/src/modules/demo/index.tsx",
+    "themes/shadcn/src/modules/back-to-top/index.tsx",
+    "themes/shadcn/src/plugins/top-nav-bar/index.tsx"
   ],
   "exclude": ["**/dist/**", "**/node_modules/**"]
 }

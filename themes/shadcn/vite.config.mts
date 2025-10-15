@@ -47,13 +47,13 @@ export default defineConfig({
     lib: {
       formats: ['iife'],
       entry: resolve(__dirname, 'src/main.js'),
-      name: 'scribe',
-      fileName: () => 'scribe.js',
+      name: 'shadcn',
+      fileName: () => 'shadcn.js',
     },
     outDir: './dist',
     rollupOptions: {
       output: {
-        assetFileNames: 'scribe.[ext]',
+        assetFileNames: 'shadcn.[ext]',
       },
     },
   },
