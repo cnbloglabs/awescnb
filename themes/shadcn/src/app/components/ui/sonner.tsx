@@ -12,18 +12,21 @@ const Toaster = ({ ...props }: ToasterProps) => {
     <Sonner
       className='toaster group'
       icons={{
-        success: <CircleCheckIcon className='size-4' />,
-        info: <InfoIcon className='size-4' />,
-        warning: <TriangleAlertIcon className='size-4' />,
-        error: <OctagonXIcon className='size-4' />,
-        close: <XIcon className='size-4' />,
+        success: <CircleCheckIcon />,
+        info: <InfoIcon />,
+        warning: <TriangleAlertIcon />,
+        error: <OctagonXIcon />,
+        close: <XIcon />,
       }}
       style={
         {
           '--sonner-bg': 'var(--popover)',
           '--sonner-text': 'var(--popover-foreground)',
+          '--sonner-text-muted': 'var(--muted-foreground)',
           '--sonner-border': 'var(--border)',
           '--sonner-radius': 'var(--radius)',
+          '--sonner-action-bg': 'var(--primary)',
+          '--sonner-action-text': 'var(--primary-foreground)',
         } as Record<string, string>
       }
       {...props}
