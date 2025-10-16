@@ -16,14 +16,12 @@ catalog:
     '@tailwindcss/vite': ^4.1.13
     '@vitest/ui': ^3.2.4
     bumpp: ^10.2.3
-    chalk: ^5.6.2
     esno: ^0.14.1
     fast-glob: ^3.3.3
     https-localhost: ^4.7.1
     jsdom: ^26.1.0
     lint-staged: ^16.1.6
     picocolors: ^1.1.1
-    rimraf: ^6.0.1
     sass: ^1.92.1
     simple-git-hooks: ^2.13.1
     stylelint: 16.23.1
@@ -34,7 +32,6 @@ catalog:
     taze: ^19.6.0
     terser: ^5.44.0
     tsdown: latest
-    tsx: ^4.20.5
     tw-animate-css: ^1.3.8
     typescript: ^5.9.2
     vite-bundle-analyzer: latest
@@ -53,7 +50,6 @@ catalog:
     prettier: ^3.6.2
     unocss: ^0.28.3
     vue: ^3.5.21
-    '@antfu/ni': ^25.0.0
     '@vitejs/plugin-vue': ^2.3.4
     unplugin-vue-components: ^0.18.5
     vite: ^7.1.6
