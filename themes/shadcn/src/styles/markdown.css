@@ -1,5 +1,3 @@
-
-
 .custom-markdown {
   @apply text-[1.05rem]
     sm:text-[15px]
@@ -32,13 +30,13 @@
 }
 
 .custom-markdown h3 {
-    @apply mt-12
-      scroll-m-28
-      text-lg
-      font-medium
-      tracking-tight
-      [&+p]:!mt-4
-      *:[code]:text-xl
+  @apply mt-12
+    scroll-m-28
+    text-lg
+    font-medium
+    tracking-tight
+    [&+p]:!mt-4
+    *:[code]:text-xl;
 }
 
 .custom-markdown h4 {
@@ -54,7 +52,7 @@
     scroll-m-28
     text-base
     font-medium
-    tracking-tight
+    tracking-tight;
 }
 
 .custom-markdown h6 {
@@ -62,7 +60,7 @@
     scroll-m-28
     text-base
     font-medium
-    tracking-tight
+    tracking-tight;
 }
 
 .custom-markdown a {
@@ -71,13 +69,13 @@
     underline-offset-4;
 }
 
-.custom-markdown p{
+.custom-markdown p {
   @apply leading-relaxed
     [&:not(:first-child)]:mt-6;
 }
 
 .custom-markdown strong {
-  @apply font-medium
+  @apply font-medium;
 }
 
 .custom-markdown ul {
@@ -86,18 +84,15 @@
     list-disc;
 }
 
-
 .custom-markdown ol {
   @apply my-6
     ml-6
     list-decimal;
 }
 
-
 .custom-markdown li {
   @apply mt-2;
 }
-
 
 .custom-markdown blockquote {
   @apply relative
@@ -131,7 +126,6 @@
     text-sm
     [&_tbody_tr:last-child]:border-b-0;
 }
-
 
 .custom-markdown tr {
   @apply m-0
@@ -181,7 +175,7 @@
 }
 
 .custom-markdown code {
-  @apply  relative
+  @apply relative
     px-[0.3rem]
     py-[0.2rem]
     font-mono
@@ -213,11 +207,18 @@
     dark:[[data-slot=tooltip-content]_&]:bg-background/10;
 }
 
-
 .custom-markdown .table-wrapper {
   @apply my-6
     w-full
     overflow-y-auto
     rounded-lg
     border;
+}
+
+.custom-markdown pre,
+.custom-markdown pre code,
+.custom-markdown pre code table,
+.custom-markdown .hljs-engine pre,
+.custom-markdown .hljs-engine pre code {
+  @apply transition-none;
 }
