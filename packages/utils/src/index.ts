@@ -23,21 +23,6 @@ export function openNews(): boolean {
 }
 
 /**
- * 获取博客园昵称
- * @returns {string} 博客园昵称
- */
-export function getBlogName(): string {
-  if (openNews()) {
-    return $('#profile_block>a:nth-of-type(1)').html().trim()
-  }
-  const headerTitle = $('#Header1_HeaderTitle').text().trim()
-  if (headerTitle.length) {
-    return headerTitle
-  }
-  return window.currentBlogApp
-}
-
-/**
  * 获取粉丝数
  * @returns {string} 粉丝数
  */
@@ -87,12 +72,10 @@ export function getCurrentPostUrl(): string {
 
 /**
  * 获取博客园 user guid
+ * @example '144690cc-79e2-4508-aa7f-08d6a1e9eeef'
  */
 export function getBlogUserGuid(): string {
-  const strValue = $('body>script:last').text()
-  const regex = /'([^"']*)'/
-  const match = regex.exec(strValue)
-  return match ? match[1] : ''
+  return window.cb_blogUserGuid
 }
 
 /**
@@ -326,4 +309,119 @@ export function setCodeTheme(mode: 'dark' | 'light') {
       : window.codeHighlightTheme
 
   window.highlighter.setTheme(theme)
+}
+
+export function getCurrentBlogId(): string {
+  return window.currentBlogId
+}
+
+export function getCurrentBlogApp(): string {
+  return window.currentBlogApp
+}
+
+export function checkIsLogin(): boolean {
+  return window.isLogined
+}
+
+export function checkIsOwner(): boolean {
+  return window.isBlogOwner
+}
+
+export function getSkinName(): string {
+  return window.skinName
+}
+
+export function getVisitorUserId(): string {
+  return window.visitorUserId
+}
+
+export function checkHasCustomScript(): boolean {
+  return window.hasCustomScript
+}
+
+export function checkEnableMathjax(): boolean {
+  return window.cb_enable_mathjax
+}
+
+export function getMathEngine(): number {
+  return window.mathEngine
+}
+
+export function getCodeHighlightEngine(): number {
+  return window.codeHighlightEngine
+}
+
+export function checkEnableCodeLineNumber(): boolean {
+  return window.enableCodeLineNumber
+}
+
+export function getCodeHighlightTheme(): string {
+  return window.codeHighlightTheme
+}
+
+export function getDarkModeCodeHighlightTheme(): string {
+  return window.darkModeCodeHighlightTheme
+}
+
+export function checkIsDarkCodeHighlightTheme(): boolean {
+  return window.isDarkCodeHighlightTheme
+}
+
+export function checkIsDarkModeCodeHighlightThemeDark(): boolean {
+  return window.isDarkModeCodeHighlightThemeDark
+}
+
+export function checkIsDisableCodeHighlighter(): boolean {
+  return window.isDisableCodeHighlighter
+}
+
+export function checkEnableCodeThemeTypeFollowSystem(): boolean {
+  return window.enableCodeThemeTypeFollowSystem
+}
+
+export function checkEnableMacStyleCodeBlock(): boolean {
+  return window.enableMacStyleCodeBlock
+}
+
+export function getCurrentPostId(): number | undefined {
+  return window.currentPostId
+}
+
+export function getCurrentPostDateAdded(): string | undefined {
+  return window.currentPostDateAdded
+}
+
+export function getAntiforgeryToken(): string | undefined {
+  return (
+    document.querySelector(
+      'input[name="antiforgery_token"]',
+    ) as HTMLInputElement
+  )?.value
+}
+
+export function getNickname(): string | undefined {
+  const title = document.title
+
+  if (!title) {
+    return undefined
+  }
+
+  // 匹配模式：提取标题中最后一个 "- 博客园" 之前的部分
+  // 如果包含多个 "-"，取最后一个 "- 博客园" 前面的内容作为用户昵称
+  const parts = title.split(' - ')
+
+  if (parts.length >= 2 && parts[parts.length - 1] === '博客园') {
+    // 移除最后的 "博客园" 部分，剩余部分重新组合
+    const withoutBlogCn = parts.slice(0, -1).join(' - ')
+
+    // 如果还有 "-"，取最后一部分作为用户昵称
+    if (withoutBlogCn.includes(' - ')) {
+      const nicknameParts = withoutBlogCn.split(' - ')
+      return nicknameParts[nicknameParts.length - 1].trim()
+    }
+
+    return withoutBlogCn.trim()
+  }
+
+  return undefined
 }
