@@ -385,18 +385,9 @@ importers:
 
   packages/ui:
     dependencies:
-      class-variance-authority:
-        specifier: 'catalog:'
-        version: 0.7.1
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
       preact:
         specifier: '>=10.0.0'
         version: 10.27.1
-      tailwind-merge:
-        specifier: 'catalog:'
-        version: 2.6.0
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -547,6 +538,9 @@ importers:
       class-variance-authority:
         specifier: 'catalog:'
         version: 0.7.1
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
       lucide:
         specifier: 'catalog:'
         version: 0.544.0
@@ -556,6 +550,9 @@ importers:
       preact:
         specifier: 'catalog:'
         version: 10.27.1
+      tailwind-merge:
+        specifier: 'catalog:'
+        version: 2.6.0
     devDependencies:
       '@acnb/stylelint-one-utility-class-per-line':
         specifier: workspace:*

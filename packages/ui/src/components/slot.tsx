@@ -1,5 +1,5 @@
-import { forwardRef, isValidElement, cloneElement } from "preact/compat"
-import type { ComponentChildren, Ref } from "preact"
+import type { ComponentChildren, Ref } from 'preact'
+import { cloneElement, forwardRef, isValidElement } from 'preact/compat'
 
 /**
  * Slot 组件用于将 props 传递给子组件，类似于 Radix UI 的 Slot 组件
@@ -28,7 +28,7 @@ export const Slot = forwardRef<HTMLElement, SlotProps>(
           ref: forwardedRef
             ? composeRefs(forwardedRef, (children as any).ref)
             : (children as any).ref,
-        } as any
+        } as any,
       )
     }
 
@@ -37,10 +37,10 @@ export const Slot = forwardRef<HTMLElement, SlotProps>(
         {children}
       </div>
     )
-  }
+  },
 )
 
-Slot.displayName = "Slot"
+Slot.displayName = 'Slot'
 
 /**
  * 合并 props，子组件的 props 优先级更高
@@ -63,14 +63,14 @@ function mergeProps(parentProps: any, childProps: any) {
       } else if (parentPropValue) {
         overrideProps[propName] = parentPropValue
       }
-    } else if (propName === "style") {
+    } else if (propName === 'style') {
       // 对于 style，需要合并对象
       overrideProps[propName] = { ...parentPropValue, ...childPropValue }
-    } else if (propName === "className") {
+    } else if (propName === 'className') {
       // 对于 className，需要合并字符串
       overrideProps[propName] = [parentPropValue, childPropValue]
         .filter(Boolean)
-        .join(" ")
+        .join(' ')
     }
   }
 
@@ -83,7 +83,7 @@ function mergeProps(parentProps: any, childProps: any) {
 function composeRefs<T>(...refs: (Ref<T> | undefined)[]): Ref<T> {
   return (node: T | null) => {
     refs.forEach((ref) => {
-      if (typeof ref === "function") {
+      if (typeof ref === 'function') {
         ref(node)
       } else if (ref != null) {
         ; (ref as any).current = node

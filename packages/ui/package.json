@@ -47,11 +47,6 @@
     "dev": "tsdown --watch",
     "build": "tsdown"
   },
-  "dependencies": {
-    "class-variance-authority": "catalog:",
-    "clsx": "catalog:",
-    "tailwind-merge": "catalog:"
-  },
   "devDependencies": {
     "@types/node": "catalog:",
     "rimraf": "catalog:",

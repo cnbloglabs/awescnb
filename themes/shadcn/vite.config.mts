@@ -10,6 +10,11 @@ import svgr from 'vite-plugin-svgr'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, 'src'),
+    },
+  },
   plugins: [
     preact(),
     ServeSharedAssetsPlugin(),

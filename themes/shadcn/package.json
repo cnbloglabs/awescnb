@@ -27,7 +27,9 @@
     "class-variance-authority": "catalog:",
     "lucide": "catalog:",
     "lucide-preact": "catalog:",
-    "preact": "catalog:"
+    "preact": "catalog:",
+    "clsx": "catalog:",
+    "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@acnb/stylelint-one-utility-class-per-line": "workspace:*",
