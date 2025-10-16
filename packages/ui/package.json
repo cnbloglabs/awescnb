@@ -49,7 +49,6 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "rimraf": "catalog:",
     "tsdown": "catalog:",
     "vitest": "catalog:"
   },

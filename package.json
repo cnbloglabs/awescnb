@@ -19,27 +19,17 @@
   },
   "devDependencies": {
     "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
-    "@antfu/ni": "catalog:",
     "@biomejs/biome": "catalog:",
     "@clack/prompts": "catalog:",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
-    "chalk": "catalog:",
     "lint-staged": "catalog:",
     "picocolors": "catalog:",
-    "preact": "catalog:",
-    "rimraf": "catalog:",
     "simple-git-hooks": "catalog:",
     "taze": "catalog:",
-    "tsdown": "catalog:",
-    "tsx": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:"
-  },
-  "resolutions": {
-    "typescript": "catalog:",
-    "vite": "catalog:"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -49,8 +39,5 @@
       "biome check --write"
     ],
     "**/*.min.js": []
-  },
-  "dependencies": {
-    "sonner": "^2.0.7"
   }
 }
