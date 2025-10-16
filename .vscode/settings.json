@@ -5,6 +5,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "tailwindCSS.classFunctions": ["cva", "cx"],
   "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit",
     "source.fixAll.stylelint": "explicit"
