@@ -54,7 +54,6 @@ class ToastState {
     this.toasts.push(newToast)
     this.notify()
 
-    // Auto remove after duration (default 3000ms)
     const duration = toast.duration || 3000
     if (duration > 0) {
       setTimeout(() => {
@@ -228,22 +227,4 @@ export const Toaster = (props: ToasterProps = {} as ToasterProps) => {
       }),
     ),
   )
-}
-
-// Auto-mount toaster if not already mounted
-let toasterMounted = false
-
-export const mountToaster = (container?: HTMLElement) => {
-  if (toasterMounted) return
-
-  const target = container || document.body
-  const toasterElement = createElement(Toaster, {} as ToasterProps)
-
-  render(toasterElement, target)
-  toasterMounted = true
-}
-
-// Auto-mount on import
-if (typeof window !== 'undefined') {
-  mountToaster()
 }
