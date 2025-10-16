@@ -1,14 +1,12 @@
 packages:
   - packages/*
   - themes/*
-  - docs
 
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - '@tailwindcss/oxide'
   - esbuild
   - simple-git-hooks
-  - vue-demi
 
 catalog:
     '@clack/prompts': ^0.11.0
@@ -17,8 +15,6 @@ catalog:
     '@vitest/ui': ^3.2.4
     bumpp: ^10.2.3
     esno: ^0.14.1
-    fast-glob: ^3.3.3
-    https-localhost: ^4.7.1
     jsdom: ^26.1.0
     lint-staged: ^16.1.6
     picocolors: ^1.1.1
@@ -36,11 +32,7 @@ catalog:
     typescript: ^5.9.2
     vite-bundle-analyzer: latest
     vitest: ^3.2.4
-    vitepress: ^1.6.4
     '@iconify-json/carbon': ^1.2.13
-    '@unocss/reset': ^0.28.3
-    '@vue/theme': ^2.3.0
-    '@vueuse/core': ^8.9.4
     canvas-confetti: ^1.9.3
     class-variance-authority: ^0.7.1
     lucide: ^0.544.0
@@ -62,3 +54,5 @@ catalog:
     "@biomejs/biome": "^2.2.4"
     "clsx": "^2.0.0"
     "tailwind-merge": "^2.0.0"
+    "sonner": "^2.0.7"
+    "lefthook": "^1.13.6"
