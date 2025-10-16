@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/jquery": "catalog:",
     "@vitest/ui": "catalog:",
-    "jsdom": "catalog:",
+    "happy-dom": "catalog:",
     "tsdown": "catalog:",
     "vitest": "catalog:"
   }
