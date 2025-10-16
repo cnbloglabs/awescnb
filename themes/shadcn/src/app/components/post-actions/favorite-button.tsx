@@ -1,7 +1,7 @@
-import { Star, Loader2 } from 'lucide-preact'
+import { Loader2, Star } from 'lucide-preact'
+import { Button } from '@/components/ui/button'
 import { useFavoriteAction } from './dom-hooks'
 import { triggerFavorite } from './utils'
-import { Button } from '@acnb/ui'
 
 export function FavoriteButton() {
   const { data, isPending } = useFavoriteAction()
@@ -12,7 +12,14 @@ export function FavoriteButton() {
       disabled={data?.isFavorite || isPending}
       variant='outline'
     >
-      {isPending ? <Loader2 size={18} className="animate-spin" /> : <Star size={18} className={data?.isFavorite ? 'fill-yellow-500 text-yellow-500' : ''} />}
+      {isPending ? (
+        <Loader2 size={18} className='animate-spin' />
+      ) : (
+        <Star
+          size={18}
+          className={data?.isFavorite ? 'fill-yellow-500 text-yellow-500' : ''}
+        />
+      )}
       <span>{data?.isFavorite ? '已收藏' : '收藏'}</span>
     </Button>
   )

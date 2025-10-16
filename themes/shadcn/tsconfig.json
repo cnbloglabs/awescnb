@@ -3,16 +3,28 @@
     "target": "ES2022",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "moduleDetection": "force",
     "useDefineForClassFields": false,
     "experimentalDecorators": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "paths": {
-      "react": ["./node_modules/preact/compat/"],
-      "react-dom": ["./node_modules/preact/compat/"]
+      "react": [
+        "./node_modules/preact/compat/"
+      ],
+      "react-dom": [
+        "./node_modules/preact/compat/"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
     },
+    "baseUrl": ".",
     "allowImportingTsExtensions": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
@@ -24,5 +36,8 @@
     "skipLibCheck": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["node_modules/vite/client.d.ts", "**/*"]
+  "include": [
+    "node_modules/vite/client.d.ts",
+    "**/*"
+  ]
 }
