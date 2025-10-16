@@ -12,15 +12,6 @@ export const triggerBury = () => {
   }
 }
 
-export const triggerFollow = () => {
-  const followElement = document.getElementById(
-    'green_channel_follow',
-  ) as HTMLElement
-  if (followElement) {
-    followElement.click()
-  }
-}
-
 export const triggerFavorite = () => {
   const favoriteElement = document.getElementById(
     'green_channel_favorite',

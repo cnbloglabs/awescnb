@@ -4,8 +4,6 @@ import { PostDetails } from '../post-details'
 import { PostTitle } from '../post-title'
 
 export function Post() {
-  console.log(PostActions);
-
   return (
     <div className='h-full w-full'>
       <div className='flex items-stretch text-[1.05rem] sm:text-[15px] xl:w-full'>

@@ -1,9 +1,24 @@
 import { Loader2, ThumbsUp } from 'lucide-preact'
+import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { useDiggAction } from './dom-hooks'
 import { triggerDigg } from './utils'
 
-export function DiggButton() {
+$(document).ajaxComplete((_, jqXHR, option) => {
+  if (option?.url?.includes('/ajax/vote/blogpost')) {
+    const resp = jqXHR.responseJSON as {
+      data: null | string
+      id: number
+      isSuccess: boolean
+      message: string
+    }
+    if (!resp.isSuccess) {
+      toast.error(resp.message)
+    }
+  }
+})
+
+export function UpvoteButton() {
   const { data, isPending } = useDiggAction()
 
   return (
@@ -13,7 +28,7 @@ export function DiggButton() {
       ) : (
         <ThumbsUp size={18} />
       )}
-      <span>{`推荐 ${data?.diggCount || 0}`}</span>
+      <span>{`${data?.diggCount || 0} 推荐`}</span>
     </Button>
   )
 }
