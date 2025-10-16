@@ -54,5 +54,4 @@ catalog:
     "@biomejs/biome": "^2.2.4"
     "clsx": "^2.0.0"
     "tailwind-merge": "^2.0.0"
-    "sonner": "^2.0.7"
     "lefthook": "^1.13.6"

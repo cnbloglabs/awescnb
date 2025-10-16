@@ -1,8 +1,9 @@
-import { Toaster } from 'sonner'
 import { BackToTop } from './components/back-to-top'
 import { Footer } from './components/footer'
 import { Main } from './components/main'
 import { TopNavBar } from './components/top-nav-bar'
+import { Toaster } from './components/ui/sonner'
+import '@acnb/sonner/dist/index.css'
 
 export function App() {
   return (

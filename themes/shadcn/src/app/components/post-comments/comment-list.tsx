@@ -1,4 +1,4 @@
-import { toast } from 'sonner'
+import { toast } from '@acnb/sonner'
 import { CommentEmpty } from './comment-empty'
 import { CommentItemComponent } from './comment-item'
 import { CommentSkeleton } from './comment-skeleton'
@@ -14,9 +14,7 @@ $(document).ajaxComplete((_, __, option) => {
 })
 
 $(document).ajaxComplete((_, jqXHR, option) => {
-  if (
-    option?.url?.includes('/ajax/vote/comment')
-  ) {
+  if (option?.url?.includes('/ajax/vote/comment')) {
     const resp = jqXHR.responseJSON as {
       data: null | string
       id: number
@@ -31,7 +29,6 @@ $(document).ajaxComplete((_, jqXHR, option) => {
     toast.error(resp.message)
   }
 })
-
 
 export function CommentList() {
   const { data: comments, isPending } = useComments()

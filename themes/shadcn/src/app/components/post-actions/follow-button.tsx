@@ -1,6 +1,6 @@
 import { follow, unfollow } from '@acnb/utils'
 import { Heart, Loader2 } from 'lucide-preact'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 import { useFollowAction } from './dom-hooks'
 
 export function FollowButton() {

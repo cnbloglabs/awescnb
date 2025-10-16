@@ -29,7 +29,7 @@
     "lucide-preact": "catalog:",
     "preact": "catalog:",
     "clsx": "catalog:",
-    "sonner": "catalog:",
+    "@acnb/sonner": "workspace:*",
     "tailwind-merge": "catalog:"
   },
   "devDependencies": {
