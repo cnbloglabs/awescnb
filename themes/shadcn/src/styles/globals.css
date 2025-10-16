@@ -20,11 +20,8 @@ body {
     dark:text-white;
 }
 
-
-#top_nav {
-  @apply hidden;
-}
-
-#home {
+#top_nav,
+#home,
+#imagebar {
   @apply hidden;
 }
