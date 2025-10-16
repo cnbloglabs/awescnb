@@ -15,7 +15,7 @@ catalog:
     '@vitest/ui': ^3.2.4
     bumpp: ^10.2.3
     esno: ^0.14.1
-    happy-dom: ^15.11.6
+    happy-dom: ^20.0.2
     lint-staged: ^16.1.6
     picocolors: ^1.1.1
     sass: ^1.92.1
