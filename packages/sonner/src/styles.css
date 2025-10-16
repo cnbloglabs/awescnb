@@ -1,0 +1,152 @@
+/* Sonner Toast Styles */
+.sonner-toaster {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 356px;
+  width: 100%;
+  padding: 16px;
+}
+
+.sonner-toaster-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.sonner-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+  max-width: 356px;
+  width: 100%;
+  animation: sonner-slide-in 0.3s ease-out;
+}
+
+.sonner-toast[data-mounted="true"] {
+  animation: sonner-slide-in 0.3s ease-out;
+}
+
+.sonner-toast-success {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.sonner-toast-error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.sonner-toast-warning {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.sonner-toast-info {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.sonner-toast-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+.sonner-toast-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sonner-toast-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.sonner-toast-description {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.sonner-toast-action {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sonner-toast-action:hover {
+  background: #2563eb;
+}
+
+.sonner-toast-close {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sonner-toast-close:hover {
+  color: #6b7280;
+}
+
+/* Animations */
+@keyframes sonner-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sonner-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .sonner-toaster {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .sonner-toast {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

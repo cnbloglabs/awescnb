@@ -1,6 +1,6 @@
+import { toast } from '@acnb/sonner'
 import { Loader2, ThumbsUp } from 'lucide-preact'
-import { toast } from 'sonner'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/app/components/ui/button'
 import { useDiggAction } from './dom-hooks'
 import { triggerDigg } from './utils'
 
