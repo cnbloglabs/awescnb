@@ -1,4 +1,4 @@
-import { createElement, render } from 'preact'
+import { createElement } from 'preact'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 import './styles.css'
 
