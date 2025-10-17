@@ -16,5 +16,5 @@ export function Main() {
     }
   }
 
-  return <main className='flex flex-col px-2'>{renderComponent()}</main>
+  return <main className='flex flex-1 flex-col px-2'>{renderComponent()}</main>
 }
