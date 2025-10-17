@@ -244,7 +244,17 @@ export function hasPostTitle(): boolean {
  * https://group.cnblogs.com/topic/115024.html
  */
 export function likePost(): void {
-  $('.diggit').trigger('click')
+  const diggElement = document.querySelector('.diggit') as HTMLElement
+  if (diggElement) {
+    diggElement.click()
+  }
+}
+
+export function unLikePost(): void {
+  const diggElement = document.querySelector('.digg_gray') as HTMLElement
+  if (diggElement) {
+    diggElement.click()
+  }
 }
 
 /**
