@@ -7,7 +7,7 @@ import '@acnb/sonner/dist/index.css'
 
 export function App() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex min-h-screen flex-col'>
       <TopNavBar></TopNavBar>
       <Main></Main>
       <Footer></Footer>
