@@ -1,36 +1,38 @@
+import { useAjaxComplete } from '@acnb/hooks'
 import { toast } from '@acnb/sonner'
 import { CommentEmpty } from './comment-empty'
 import { CommentItemComponent } from './comment-item'
 import { CommentSkeleton } from './comment-skeleton'
 import { useComments } from './hooks'
 
-$(document).ajaxComplete((_, __, option) => {
-  if (
-    option?.url?.includes('PostComment/Add') ||
-    option?.url?.includes('DeleteComment')
-  ) {
-    new window.blogCommentManager().renderComments(0)
-  }
-})
+export function CommentList() {
+  useAjaxComplete({
+    urlPattern: ['PostComment/Add', 'DeleteComment'],
+    onSuccess: () => {
+      new window.blogCommentManager().renderComments(0)
+    },
+  })
 
-$(document).ajaxComplete((_, jqXHR, option) => {
-  if (option?.url?.includes('/ajax/vote/comment')) {
-    const resp = jqXHR.responseJSON as {
+  useAjaxComplete({
+    urlPattern: '/ajax/vote/comment',
+    onSuccess: (resp: {
       data: null | string
       id: number
       isSuccess: boolean
       message: string
-    }
-    if (resp.isSuccess) {
-      toast.success('投票成功')
-      new window.blogCommentManager().renderComments(0)
-      return
-    }
-    toast.error(resp.message)
-  }
-})
+    }) => {
+      if (resp.isSuccess) {
+        toast.success('投票成功')
+        new window.blogCommentManager().renderComments(0)
+      } else {
+        toast.error(resp.message)
+      }
+    },
+    onError: () => {
+      toast.error('投票失败')
+    },
+  })
 
-export function CommentList() {
   const { data: comments, isPending } = useComments()
 
   if (isPending) {

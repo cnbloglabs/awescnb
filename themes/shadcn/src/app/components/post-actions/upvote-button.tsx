@@ -1,24 +1,28 @@
+import { useAjaxComplete } from '@acnb/hooks'
 import { toast } from '@acnb/sonner'
 import { Loader2, ThumbsUp } from 'lucide-preact'
 import { Button } from '@/app/components/ui/button'
 import { useDiggAction } from './dom-hooks'
 import { triggerDigg } from './utils'
 
-$(document).ajaxComplete((_, jqXHR, option) => {
-  if (option?.url?.includes('/ajax/vote/blogpost')) {
-    const resp = jqXHR.responseJSON as {
+export function UpvoteButton() {
+  useAjaxComplete({
+    urlPattern: '/ajax/vote/blogpost',
+    onSuccess: (resp: {
       data: null | string
       id: number
       isSuccess: boolean
       message: string
-    }
-    if (!resp.isSuccess) {
-      toast.error(resp.message)
-    }
-  }
-})
+    }) => {
+      if (!resp.isSuccess) {
+        toast.error(resp.message)
+      }
+    },
+    onError: () => {
+      toast.error('推荐失败')
+    },
+  })
 
-export function UpvoteButton() {
   const { data, isPending } = useDiggAction()
 
   return (
