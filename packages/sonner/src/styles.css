@@ -36,9 +36,9 @@
   border-radius: var(--sonner-radius);
 }
 
-.sonner-toast[data-mounted="true"] {
+/* .sonner-toast[data-mounted="true"] {
   animation: sonner-slide-in 0.3s ease-out;
-}
+} */
 
 .sonner-toast-icon {
   flex-shrink: 0;
@@ -107,8 +107,7 @@
   color: #6b7280;
 }
 
-/* Animations */
-@keyframes sonner-slide-in {
+/* @keyframes sonner-slide-in {
   from {
     opacity: 0;
     transform: translateX(100%);
@@ -117,9 +116,8 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 
-/* Mobile responsive */
 @media (max-width: 640px) {
   .sonner-toaster {
     padding: 12px;
