@@ -18,7 +18,7 @@ export function useFollowAction() {
   })
 }
 
-export function useDiggAction() {
+export function useVoteAction() {
   return useQueryDOM({
     selector: '#div_digg',
     ajaxUrl: '/ajax/vote/blogpost',
@@ -27,12 +27,14 @@ export function useDiggAction() {
       const diggCountElement = el?.querySelector('#digg_count')
       const diggCount = parseInt(diggCountElement?.textContent || '0', 10)
       const tipsText = el?.querySelector('#digg_tips')?.textContent
-      const isDigged =
-        tipsText?.includes('您已推荐过') || tipsText?.includes('支持成功')
+
+      // 注意这里要判断 '支持成功 撤回' 而不是 '支持成功'，因为取消支持的 textContent 是 ‘取消支持成功’
+      const isLiked =
+        tipsText?.includes('您已推荐过') || tipsText?.includes('支持成功 撤回')
 
       return {
         diggCount,
-        isDigged,
+        isLiked,
       }
     },
   })

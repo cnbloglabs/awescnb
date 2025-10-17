@@ -1,10 +1,3 @@
-export const triggerDigg = () => {
-  const diggElement = document.querySelector('.diggit') as HTMLElement
-  if (diggElement) {
-    diggElement.click()
-  }
-}
-
 export const triggerBury = () => {
   const buryElement = document.querySelector('.buryit') as HTMLElement
   if (buryElement) {
