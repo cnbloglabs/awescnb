@@ -54,13 +54,11 @@ import { ChevronUp } from 'lucide-preact'
 ```
 
 ### 图标属性规范
-
 - 统一使用 `stroke-width={1}` 设置线条粗细
 - 图标尺寸使用 `size-4`、`size-5` 等 Tailwind 类名
 - 避免使用内联样式设置图标属性
 
 ## TypeScript 规范
-
 - 禁止使用 `any` 类型
 - 所有函数参数和返回值必须明确类型
 - 使用 `interface` 定义对象类型，`type` 定义联合类型
@@ -69,47 +67,32 @@ import { ChevronUp } from 'lucide-preact'
 - 优先使用 `const assertions` 和 `as const`
 - 禁止使用 `@ts-ignore` 和 `@ts-expect-error`，除非绝对必要
 
-## themes/shadcn 样式规范
+## 代码质量规范
 
-themes/shadcn 是 shadcn ui 风格的博客皮肤，采用现代化的设计语言。
+### 性能优化
+- 合理使用 `useMemo` 和 `useCallback` 优化组件性能
+- 避免在渲染过程中进行复杂计算
 
-- 使用 Tailwind CSS V4 作为主要样式框架
-- 禁止使用原生 CSS 属性，统一使用 Tailwind 类名
-- 对于复杂的样式变体，使用 `class-variance-authority` (cva) 进行组织
-- 使用 `cn()` 工具函数合并类名，避免样式冲突
-- 响应式设计优先使用移动端优先的断点策略
-- 暗色模式支持通过 `dark:` 前缀实现
-- 动画使用 `tw-animate-css` 提供的预设动画
+### 错误处理
+- 所有异步操作必须包含错误处理
+- 使用 Error Boundary 捕获组件错误
+- 提供有意义的错误信息和用户反馈
 
-### 组件实现规范
+### 测试规范
+- 工具函数必须包含单元测试
+- 使用 vitest 进行测试
+- 测试覆盖率不低于 80%
 
-对于独立且复杂的功能，优先使用 Preact 组件实现。
+### 文档规范
+- 所有公共 API 必须包含 JSDoc 注释
+- 组件 props 必须提供类型和默认值说明
+- 复杂逻辑必须包含行内注释
 
-#### 组件目录结构
-
-```md
-component-name/
-├── hooks.ts          # React hooks 逻辑
-├── dom-hooks.ts      # useQueryDOM hooks
-├── utils.ts          # 工具函数
-├── types.ts          # TypeScript 类型定义
-└── index.tsx         # 主组件实现
-```
-
-#### 组件实现要求
-
-- 使用函数式组件，禁止使用类组件
-- 组件必须支持 TypeScript 类型检查
-- 使用 `cva` 管理样式变体，避免硬编码类名
-- 组件 props 必须定义明确的接口
-- 使用 `forwardRef` 支持 ref 传递
-- 组件必须支持无障碍访问 (a11y)
-
-### 插件实现规范
+## 插件实现规范
 
 对于简单的 DOM 操作功能，可以通过编写插件实现。
 
-#### 插件目录结构
+### 插件目录结构
 
 ```md
 plugin-name/
@@ -119,7 +102,7 @@ plugin-name/
 └── index.tsx         # 插件入口
 ```
 
-#### 插件实现要求
+### 插件实现要求
 
 - 使用原生 DOM API 进行操作
 - 样式统一使用 Tailwind `@apply` 指令编写
@@ -128,7 +111,7 @@ plugin-name/
 - 插件应该具有可配置性和可扩展性
 - 使用事件委托优化性能
 
-#### 插件示例
+### 插件示例
 
 ```ts
 // plugin-name/index.tsx
@@ -146,31 +129,6 @@ export default function () {
   @apply text-2xl font-bold text-red-500;
 }
 ```
-
-### 开发优先级
-
-> 针对 themes/shadcn 皮肤，即使功能简单，也应该优先考虑使用 Preact 组件方式实现，插件仅作为补充方案。
-
-## 代码质量规范
-
-### 性能优化
-- 使用 `useMemo` 和 `useCallback` 优化组件性能
-- 避免在渲染过程中进行复杂计算
-
-### 错误处理
-- 所有异步操作必须包含错误处理
-- 使用 Error Boundary 捕获组件错误
-- 提供有意义的错误信息和用户反馈
-
-### 测试规范
-- 工具函数必须包含单元测试
-- 使用 vitest 进行测试
-- 测试覆盖率不低于 80%
-
-### 文档规范
-- 所有公共 API 必须包含 JSDoc 注释
-- 组件 props 必须提供类型和默认值说明
-- 复杂逻辑必须包含行内注释
 
 ## 项目特定规范
 
@@ -218,7 +176,50 @@ export default function () {
 - 支持 Tree Shaking
 
 ### 开发体验
-- 配置热重载和快速刷新
 - 提供开发工具和调试信息
 - 支持 TypeScript 严格模式
 - 配置路径别名简化导入
+
+## 皮肤特定规范
+
+### themes/shadcn
+
+#### 样式规范
+
+themes/shadcn 是 shadcn ui 风格的博客皮肤，采用现代化的设计语言。
+
+- 使用 Tailwind CSS V4 作为主要样式框架
+- 禁止使用原生 CSS 属性，统一使用 Tailwind 类名
+- 对于复杂的样式变体，使用 `class-variance-authority` (cva) 进行组织
+- 使用 `cn()` 工具函数合并类名，避免样式冲突
+- 响应式设计优先使用移动端优先的断点策略
+- 暗色模式支持通过 `dark:` 前缀实现
+- 动画使用 `tw-animate-css` 提供的预设动画
+
+#### 组件实现规范
+
+ 对于  themes/shadcn 皮肤，优先考虑使用 Preact 组件方式实现功能与 UI，插件仅作为补充方案。
+
+#### 组件目录结构
+
+```md
+component-name/
+├── hooks.ts          # React hooks 逻辑
+├── dom-hooks.ts      # useQueryDOM hooks
+├── utils.ts          # 工具函数
+├── types.ts          # TypeScript 类型定义
+└── index.tsx         # 主组件实现
+```
+
+#### 组件实现要求
+
+- 使用函数式组件，禁止使用类组件
+- 组件必须支持 TypeScript 类型检查
+- 使用 `cva` 管理样式变体，避免硬编码类名
+- 组件 props 必须定义明确的接口
+- 使用 `forwardRef` 支持 ref 传递
+- 组件必须支持无障碍访问 (a11y)
+
+### themes/geek
+
+- 使用插件实现功能
