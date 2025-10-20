@@ -157,6 +157,10 @@
        cursor-default;
 }
 
+#commentbox_opt > a:nth-child(5) {
+  @apply !hidden;
+}
+
 #commentbox_opt>:not(:last-child) {
     @apply ml-2;
 }
