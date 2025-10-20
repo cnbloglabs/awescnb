@@ -25,6 +25,8 @@ export function VoteButton() {
 
   const { data, isPending } = useVoteAction()
 
+  console.log(1231)
+
   const handleClick = () => {
     const action = data?.isLiked ? unLikePost : likePost
     action()
