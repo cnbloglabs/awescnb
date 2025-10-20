@@ -129,7 +129,6 @@
        rounded-md
        text-sm
        font-medium
-       transition-all
        disabled:pointer-events-none
        disabled:opacity-50
        [&_svg]:pointer-events-none
