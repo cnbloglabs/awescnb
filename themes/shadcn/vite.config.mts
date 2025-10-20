@@ -38,7 +38,7 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     minify: 'terser',
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     emptyOutDir: true,
     terserOptions: {
       format: {
