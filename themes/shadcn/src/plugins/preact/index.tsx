@@ -1,7 +1,7 @@
 import { render } from 'preact'
-import { App } from '../app'
+import { App } from '../../app'
 
-export function app() {
+export function preact() {
   const frag = document.createDocumentFragment()
   render(<App />, frag)
   document.body.prepend(frag)
