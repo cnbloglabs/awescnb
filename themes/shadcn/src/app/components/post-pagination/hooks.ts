@@ -3,11 +3,28 @@ import type { PaginationItem } from './types'
 
 export function usePaginationItems() {
   return useQueryDOM({
-    selector: '.pager',
+    selector: '.pager, #nav_next_page',
     queryFn: (el) => {
       const items: PaginationItem[] = []
 
       if (el) {
+        // 处理 #nav_next_page 元素（第一页只有下一页按钮）
+        if (el.id === 'nav_next_page') {
+          const link = el.querySelector('a')
+          if (link) {
+            const text = link.textContent?.trim() || ''
+            const href = link.getAttribute('href') || '#'
+
+            items.push({
+              type: 'link',
+              text,
+              href,
+            })
+          }
+          return items
+        }
+
+        // 处理 .pager 元素（完整分页）
         const childNodes = el.childNodes
 
         for (let i = 0; i < childNodes.length; i++) {
