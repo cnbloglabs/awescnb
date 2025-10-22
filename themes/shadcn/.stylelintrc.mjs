@@ -28,19 +28,22 @@ export default {
     'stylelint-selector-bem-pattern',
     '@acnb/stylelint-one-utility-class-per-line',
   ],
+  ignoreFiles: ['dist/**/*'],
   rules: {
     // Enforces Element IDs to be camelCase
     // 'selector-id-pattern': ONLY_ALLOW_CAMEL_CASE_SELECTORS,
     'selector-class-pattern': [
       '^([a-z][a-z0-9]*(-[a-z0-9]+)*|[a-z][a-zA-Z0-9]+|[A-Z][a-zA-Z0-9]+|[a-z][a-z0-9]*(_[a-z0-9]+)*)$',
       {
-        message: 'Expected class selector to be kebab-case or lowerCamelCase or UpperCamelCase or snake_case',
+        message:
+          'Expected class selector to be kebab-case or lowerCamelCase or UpperCamelCase or snake_case',
       },
     ],
     'selector-id-pattern': [
       '^([a-z][a-z0-9]*(-[a-z0-9]+)*|[a-z][a-zA-Z0-9]+|[A-Z][a-zA-Z0-9]+|[a-z][a-z0-9]*(_[a-z0-9]+)*)$',
       {
-        message: 'Expected id selector to be kebab-case or lowerCamelCase or UpperCamelCase or snake_case',
+        message:
+          'Expected id selector to be kebab-case or lowerCamelCase or UpperCamelCase or snake_case',
       },
     ],
     // Allow Tailwind-based CSS Rules

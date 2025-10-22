@@ -181,7 +181,8 @@
     font-mono
     text-[0.8rem]
     break-words
-    outline-none;
+    outline-none
+    transition-none;
 }
 
 .custom-markdown kbd {
