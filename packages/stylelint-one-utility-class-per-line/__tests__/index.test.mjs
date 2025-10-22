@@ -5,7 +5,7 @@ import {
   applyIndentation,
   cleanClassNames,
   indentClassNames,
-} from '../utils.mjs'
+} from '../src/utils.mjs'
 
 describe('cleanClassNames', () => {
   it('removes newlines and extra spaces', () => {
@@ -55,7 +55,7 @@ describe('indentClassNames', () => {
 
     const result = indentClassNames({ ...rule })
     const expectedParams = ['text-xl', '   font-bold', '   text-center'].join(
-      '\n',
+      '\n'
     )
 
     assert.deepEqual(result, {

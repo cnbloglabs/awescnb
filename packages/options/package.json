@@ -43,7 +43,9 @@
   ],
   "scripts": {
     "dev": "tsdown --watch",
-    "build": "tsdown"
+    "build": "tsdown",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@acnb/core": "workspace:*"

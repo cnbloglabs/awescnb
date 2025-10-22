@@ -164,7 +164,7 @@ interface WebsiteTagOptions {
 interface CodeTrafficLightOptions {
   enable: boolean
 }
-type GenericGetFn<T> = (arg: Partial<T>) => T
+type GenericGetFn<T> = (arg?: Partial<T>) => T
 /**
  * 主题基本配置
  */
