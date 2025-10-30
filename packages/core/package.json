@@ -34,7 +34,7 @@
   ],
   "scripts": {
     "dev": "tsdown --watch",
-    "build": "tsdown && cp ./src/index.d.ts dist/",
+    "build": "tsdown",
     "test": "vitest",
     "test:run": "vitest run"
   },
