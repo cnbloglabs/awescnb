@@ -9,7 +9,7 @@ export function PostList() {
   }
 
   return (
-    <div className='mx-auto w-full max-w-2xl px-4 py-4 lg:py-16'>
+    <div className='fade-in-0 slide-in-from-top-2 mx-auto w-full max-w-2xl animate-in px-4 py-4 duration-300 lg:py-16'>
       {items.map((item) => (
         <PostListItem key={`${item.href}-${item.title}`} item={item} />
       ))}
