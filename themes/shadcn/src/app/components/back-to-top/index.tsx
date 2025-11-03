@@ -1,3 +1,4 @@
+import { getCurrentPage } from '@acnb/utils'
 import { cva } from 'class-variance-authority'
 import { ChevronUp } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
@@ -17,7 +18,7 @@ const backToTopVariants = cva(
   },
 )
 
-export function BackToTop() {
+function Component() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -44,4 +45,12 @@ export function BackToTop() {
       <ChevronUp className='h-5 w-5' />
     </button>
   )
+}
+
+export function BackToTop() {
+  const currentPage = getCurrentPage()
+  if (currentPage === 'post') {
+    return null
+  }
+  return <Component />
 }

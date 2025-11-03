@@ -30,7 +30,9 @@
     "preact": "catalog:",
     "clsx": "catalog:",
     "@acnb/sonner": "workspace:*",
-    "tailwind-merge": "catalog:"
+    "tailwind-merge": "catalog:",
+    "@preact/signals": "catalog:",
+    "es-toolkit": "catalog:"
   },
   "devDependencies": {
     "@acnb/stylelint-one-utility-class-per-line": "workspace:*",
