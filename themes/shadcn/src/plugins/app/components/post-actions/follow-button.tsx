@@ -2,7 +2,7 @@ import { useAjaxComplete } from '@acnb/hooks'
 import { toast } from '@acnb/sonner'
 import { follow, unfollow } from '@acnb/utils'
 import { Heart, Loader2 } from 'lucide-preact'
-import { Button } from '@/app/components/ui/button'
+import { Button } from '@/plugins/app/components/ui/button'
 import { useFollowAction } from './dom-hooks'
 
 export function FollowButton() {

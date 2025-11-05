@@ -2,7 +2,7 @@ import { useAjaxComplete } from '@acnb/hooks'
 import { toast } from '@acnb/sonner'
 import { likePost, unLikePost } from '@acnb/utils'
 import { Loader2, ThumbsUp } from 'lucide-preact'
-import { Button } from '@/app/components/ui/button'
+import { Button } from '@/plugins/app/components/ui/button'
 import { useVoteAction } from './dom-hooks'
 
 export function VoteButton() {
