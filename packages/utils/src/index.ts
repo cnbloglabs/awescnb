@@ -393,15 +393,15 @@ export function checkEnableMacStyleCodeBlock(): boolean {
   return window.enableMacStyleCodeBlock
 }
 
-export function getCurrentPostId(): number | undefined {
-  return window.currentPostId
+export function getCurrentPostId(): number | null {
+  return window.currentPostId || null
 }
 
-export function getCurrentPostDateAdded(): string | undefined {
-  return window.currentPostDateAdded
+export function getCurrentPostDateAdded(): string | null {
+  return window.currentPostDateAdded || null
 }
 
-export function getAntiforgeryToken(): string | undefined {
+export function getAntiforgeryToken(): string | null {
   return (
     document.querySelector(
       'input[name="antiforgery_token"]',
@@ -409,11 +409,11 @@ export function getAntiforgeryToken(): string | undefined {
   )?.value
 }
 
-export function getNickname(): string | undefined {
+export function getNickname(): string | null {
   const title = document.title
 
   if (!title) {
-    return undefined
+    return null
   }
 
   // 匹配模式：提取标题中最后一个 "- 博客园" 之前的部分
@@ -433,5 +433,5 @@ export function getNickname(): string | undefined {
     return withoutBlogCn.trim()
   }
 
-  return undefined
+  return null
 }
