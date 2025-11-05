@@ -36,37 +36,28 @@
     </style>
 
     <script>
-      var currentBlogId = 466832
-      var currentBlogApp = 'guangzan'
+      var currentBlogId = 793160
+      var currentBlogApp = 'seatunnel'
       var isLogined = true
-      var isBlogOwner = true
-      var skinName = 'Custom'
+      var isBlogOwner = false
+      var skinName = 'SimpleBlue'
       var visitorUserId = 'adce83c6-a022-414e-4369-08d6259d0de2'
       var hasCustomScript = false
-      try {
-        if (
-          hasCustomScript &&
-          document.referrer &&
-          document.referrer.indexOf('baidu.com') >= 0
-        ) {
-          Object.defineProperty(document, 'referrer', { value: '' })
-          Object.defineProperty(Document.prototype, 'referrer', {
-            get: function () {
-              return ''
-            },
-          })
-        }
-      } catch (error) {}
       window.cb_enable_mathjax = false
       window.mathEngine = 1
       window.codeHighlightEngine = 1
-      window.enableCodeLineNumber = true
-      window.codeHighlightTheme = 'atom-one-dark'
-      window.darkModeCodeHighlightTheme = 'atom-one-dark'
-      window.isDarkCodeHighlightTheme = true
+      window.enableCodeLineNumber = false
+      window.codeHighlightTheme = 'cnblogs'
+      window.darkModeCodeHighlightTheme = 'vs2015'
+      window.isDarkCodeHighlightTheme = false
       window.isDarkModeCodeHighlightThemeDark = true
       window.isDisableCodeHighlighter = false
       window.enableCodeThemeTypeFollowSystem = false
+      window.enableMacStyleCodeBlock = false
+    </script>
+    <script>
+      window.currentPostId = 19193687
+      window.currentPostDateAdded = '2025-11-05 15:01'
     </script>
   </head>
 
