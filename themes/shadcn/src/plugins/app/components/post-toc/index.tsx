@@ -34,7 +34,7 @@ function LineTocWrapper() {
 
 export const PostToc = memo(() => {
   return (
-    <div className={cn('fixed top-24 right-0 h-full w-[100px]')}>
+    <div className={'fixed top-24 right-0 hidden h-full w-[100px] md:block'}>
       <LineTocWrapper />
       <BackTopIndicator />
     </div>
