@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'preact/compat'
-import { cn } from '@/lib/utils'
+import { cn } from '@/plugins/app/lib/utils'
 import { BackTopIndicator } from './back-top-indicator'
 import { useScrollTracking } from './hooks/use-scroll-tracking'
 import { useTocItems } from './hooks/use-toc-items'

@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks'
-import { cn } from '@/lib/utils'
+import { cn } from '@/plugins/app/lib/utils'
 import { HoverCard } from './hover-card'
 import { MemoedItem } from './memoed-toc-item'
 import type { TocDataItem } from './toc-item'

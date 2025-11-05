@@ -1,18 +1,8 @@
-import { BackToTop } from './components/back-to-top'
-import { Footer } from './components/footer'
-import { Main } from './components/main'
-import { TopNavBar } from './components/top-nav-bar'
-import { Toaster } from './components/ui/sonner'
-import '@acnb/sonner/dist/index.css'
+import { render } from 'preact'
+import { App } from './app'
 
-export function App() {
-  return (
-    <div className='flex min-h-screen flex-col'>
-      <TopNavBar></TopNavBar>
-      <Main></Main>
-      <Footer></Footer>
-      <BackToTop></BackToTop>
-      <Toaster />
-    </div>
-  )
+export function app() {
+  const frag = document.createDocumentFragment()
+  render(<App />, frag)
+  document.body.prepend(frag)
 }
