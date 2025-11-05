@@ -1,6 +1,6 @@
 import { ArrowUpCircle } from 'lucide-preact'
 import { memo } from 'preact/compat'
-import { cn } from '@/lib/utils'
+import { cn } from '@/plugins/app/lib/utils'
 import { CircleProgress } from '../ui/icons/progress'
 import { useReadPercent } from './hooks/use-read-percent'
 

@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { memo, useCallback, useRef } from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from '@/plugins/app/lib/utils'
 
 export interface TocDataItem {
   depth: number

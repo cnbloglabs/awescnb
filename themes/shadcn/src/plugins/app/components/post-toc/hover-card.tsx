@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/plugins/app/lib/utils'
 import type { TocDataItem } from './toc-item'
 
 interface Props {
