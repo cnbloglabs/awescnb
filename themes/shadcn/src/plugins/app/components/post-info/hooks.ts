@@ -19,8 +19,8 @@ function calculateReadingTime(text: string): number {
   // 非中文字符数量（去除空格和标点）
   const englishChars = text.replace(/[\u4e00-\u9fa5\s\p{P}]/gu, '').length
 
-  const chineseTime = chineseChars / 400
-  const englishTime = englishChars / 300
+  const chineseTime = chineseChars / 500
+  const englishTime = englishChars / 600
 
   return Math.max(1, Math.ceil(chineseTime + englishTime))
 }
