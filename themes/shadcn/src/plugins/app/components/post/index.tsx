@@ -1,9 +1,28 @@
+import { useCallback, useState } from 'preact/hooks'
 import { PostActions } from '../post-actions'
 import { PostComments } from '../post-comments'
 import { PostDetails } from '../post-details'
 import { PostInfo } from '../post-info'
 import { PostTitle } from '../post-title'
 import { PostToc } from '../post-toc'
+
+function PostContent() {
+  const [isDetailsReady, setIsDetailsReady] = useState(false)
+
+  return (
+    <>
+      <PostDetails
+        onReady={useCallback(() => setIsDetailsReady(true), [])}
+      ></PostDetails>
+      {isDetailsReady && (
+        <>
+          <PostActions></PostActions>
+          <PostComments></PostComments>
+        </>
+      )}
+    </>
+  )
+}
 
 export function Post() {
   return (
@@ -13,9 +32,7 @@ export function Post() {
           <div className='mx-auto flex w-full min-w-0 max-w-3xl flex-col gap-8 px-4 py-6 text-neutral-800 md:px-0 lg:py-8 dark:text-neutral-300'>
             <PostTitle></PostTitle>
             <PostInfo></PostInfo>
-            <PostDetails></PostDetails>
-            <PostActions></PostActions>
-            <PostComments></PostComments>
+            <PostContent></PostContent>
             <PostToc></PostToc>
           </div>
         </div>

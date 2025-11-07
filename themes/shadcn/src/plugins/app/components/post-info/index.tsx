@@ -1,7 +1,8 @@
 import { Calendar, Clock } from 'lucide-preact'
+import { memo } from 'preact/compat'
 import { usePostInfo } from './hooks'
 
-export function PostInfo() {
+export const PostInfo = memo(() => {
   const { data } = usePostInfo()
 
   if (!data) {
@@ -34,4 +35,4 @@ export function PostInfo() {
       )}
     </div>
   )
-}
+})
