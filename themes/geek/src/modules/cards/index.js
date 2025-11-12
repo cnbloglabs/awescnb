@@ -1,4 +1,4 @@
-import { isCategoryPage, isHomePage } from '../../utils/cnblog'
+import { isCategoryPage, isHomePage, isOwner } from '../../utils/cnblog'
 import './index.scss'
 
 /**
@@ -24,6 +24,9 @@ function createCard(
 ) {
   const cardClass = top ? 'custom-card top' : 'custom-card'
 
+  const editButton =
+    editUrl && isOwner() ? `<a href="${editUrl}"><button>编辑</button></a>` : ''
+
   const el = `
         <div class="${cardClass}">
             <a href="${detailUrl}">
@@ -43,7 +46,7 @@ function createCard(
                   <i class="far fa-thumbs-up"></i>
                   <span>${diggCount}</span>
                 </div>
-                <a href="${editUrl}"><button>编辑</button></a>
+                ${editButton}
                 <a href="${detailUrl}"><button>阅读</button></a>
             </div>
         </div>
