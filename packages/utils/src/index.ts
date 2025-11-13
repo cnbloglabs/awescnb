@@ -240,7 +240,7 @@ export function hasPostTitle(): boolean {
 
 /**
  * 推荐博文
- * 博客园过滤机制禁止调用 `windown.votePost`
+ * 博客园过滤机制禁止调用 `window.votePost`
  * https://group.cnblogs.com/topic/115024.html
  */
 export function likePost(): void {
@@ -434,4 +434,105 @@ export function getNickname(): string | null {
   }
 
   return null
+}
+
+const { currentBlogApp } = window
+const home = 'https://home.cnblogs.com'
+const cnblog = 'https://www.cnblogs.com'
+const iCnblog = 'https://i.cnblogs.com'
+const msg = 'https://msg.cnblogs.com'
+
+/* 用户详情页 */
+export function getDetailUrl(): string {
+  return `${home}/u/${currentBlogApp}`
+}
+
+/* 粉丝 */
+export function getFollowersUrl(): string {
+  return `${home}/u/${currentBlogApp}/followers`
+}
+
+/* 我的关注 */
+export function getFolloweesUrl(): string {
+  return `${home}/u/${currentBlogApp}/followees`
+}
+
+/* 博客园首页 */
+export function getCnblogHomeUrl(): string {
+  return cnblog
+}
+
+/* 订阅 */
+export function getRssUrl(): string {
+  return `${cnblog}/${currentBlogApp}/rss`
+}
+
+/* 用户博客首页 */
+export function getIndexUrl(): string {
+  return `${cnblog}/${currentBlogApp}`
+}
+
+/* 我赞 */
+export function getMydiggedUrl(): string {
+  return `${cnblog}/aggsite/mydigged`
+}
+
+/* 我评 */
+export function getCommentedUrl(): string {
+  return `${cnblog}/aggsite/mycommented`
+}
+
+/* 关注园友最新博文 */
+export function getFollowingUrl(): string {
+  return `${cnblog}/following`
+}
+
+/* 新随笔 */
+export function getNewPostUrl(): string {
+  return `${iCnblog}/posts/edit`
+}
+
+/* 联系 */
+export function getSendUrl(): string {
+  return $('#blog_nav_contact').attr('href') || ''
+}
+
+/* 管理 */
+export function getAdminUrl(): string {
+  return iCnblog
+}
+
+/* 消息 */
+export function getMessageUrl(): string {
+  return `${msg}`
+}
+
+/* 联系博主 */
+export function getContactUrl(): string {
+  return `${msg}/send/${currentBlogApp}`
+}
+
+/* 收藏 */
+export function getAppWzUrl(): string {
+  return 'https://wz.cnblogs.com'
+}
+
+/* 博问 */
+export function getAppQUrl(): string {
+  return 'https://q.cnblogs.com'
+}
+
+/* 闪存 */
+export function getAppIngUrl(): string {
+  return 'https://ing.cnblogs.com'
+}
+
+/* 小组 */
+export function getAppGroupUrl(): string {
+  return 'https://group.cnblogs.com'
+}
+
+/* 草稿箱 */
+export function getDraftBoxUrl(): string {
+  return 'https://i.cnblogs.com/posts'
 }
