@@ -19,6 +19,7 @@
   },
   "include": [
     "./*.ts",
+    "./scripts/**/*.ts",
     "./docs/**/*.ts",
     "./packages/**/*.ts",
     "./themes/**/*.ts",
