@@ -15,9 +15,9 @@ const themes = fs
   .readdirSync(themesDir)
   .filter((file) => fs.statSync(path.join(themesDir, file)).isDirectory())
 
-async function main() {
+async function main(): Promise<void> {
   // 解析命令行参数，支持 --theme 参数或直接传入主题名
-  let selectedTheme = null
+  let selectedTheme: string | null = null
 
   // 检查是否使用了 --theme 参数
   const themeIndex = process.argv.indexOf('--theme')
@@ -30,7 +30,8 @@ async function main() {
 
   // 如果没有通过参数指定主题，则显示菜单供用户选择
   if (!selectedTheme) {
-    selectedTheme = await showMenu()
+    const result = await showMenu()
+    selectedTheme = result
 
     // 检查用户是否取消了选择
     if (isCancel(selectedTheme)) {
@@ -40,7 +41,7 @@ async function main() {
   }
 
   // 验证主题选择
-  if (!themes.includes(selectedTheme)) {
+  if (!selectedTheme || !themes.includes(selectedTheme)) {
     console.error(pc.red(`无效的主题选择: ${selectedTheme}`))
     console.log(pc.yellow('可用主题:'))
     themes.forEach((theme) => {
@@ -49,15 +50,15 @@ async function main() {
     process.exit(1)
   }
 
-  // 启动选定主题
-  await startTheme(selectedTheme)
+  // 构建选定主题
+  await buildTheme(selectedTheme)
 }
 
 main()
 
 // 显示主题选择菜单
-async function showMenu() {
-  console.log(pc.blue('请选择要启动的主题:'))
+async function showMenu(): Promise<string | symbol> {
+  console.log(pc.blue('请选择要构建的主题:'))
 
   const selected = await select({
     message: '请选择一个主题:',
@@ -70,45 +71,38 @@ async function showMenu() {
   return selected
 }
 
-// 启动选定主题
-async function startTheme(themeName) {
+// 构建选定主题
+async function buildTheme(themeName: string): Promise<void> {
   const s = spinner()
-  s.start(pc.blue(`正在启动主题: ${themeName}`))
+  s.start(pc.blue(`正在构建主题: ${themeName}`))
 
   try {
-    // 使用 pnpm 启动选定主题的 dev 脚本
-    const child = exec(`pnpm --dir themes/${themeName} dev`, {
+    // 使用 pnpm 构建选定主题的 build 脚本
+    const child = exec(`pnpm --dir themes/${themeName} build`, {
       cwd: process.cwd(),
       env: process.env,
     })
 
-    let isReady = false
-
-    child.stdout?.on('data', (data) => {
-      if (data.includes('ready in')) {
-        isReady = true
-        s.stop(pc.green(`主题 ${themeName} 启动成功!`))
-      }
-
-      // 始终显示 stdout 内容，但服务器启动后不再显示启动信息
-      if (!isReady || !data.includes('ready in')) {
-        process.stdout.write(data)
-      }
+    child.stdout?.on('data', (data: string) => {
+      process.stdout.write(data)
     })
 
-    child.stderr?.on('data', (data) => {
+    child.stderr?.on('data', (data: string) => {
       // 始终显示 stderr 内容（错误信息）
       process.stderr.write(data)
     })
 
-    child.on('close', (code) => {
-      if (code !== 0 && !isReady) {
-        s.stop(pc.red(`启动主题时出错，退出码: ${code}`))
+    child.on('close', (code: number | null) => {
+      if (code === 0) {
+        s.stop(pc.green(`主题 ${themeName} 构建成功!`))
+      } else {
+        s.stop(pc.red(`构建主题时出错，退出码: ${code}`))
         process.exit(1)
       }
     })
   } catch (error) {
-    s.stop(pc.red(`启动主题时出错: ${error.message}`))
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    s.stop(pc.red(`构建主题时出错: ${errorMessage}`))
     process.exit(1)
   }
 }

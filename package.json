@@ -7,7 +7,8 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "node scripts/dev-theme.js",
+    "dev": "node scripts/dev-theme.ts",
+    "build": "node scripts/build-theme.ts",
     "build:pkg": "pnpm -r --filter=./packages/** --parallel run build",
     "docs:dev": "pnpm -C docs run dev",
     "docs:build": "pnpm run --filter {./docs}... build && pnpm demo:build",

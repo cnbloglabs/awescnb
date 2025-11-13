@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "dev": "vite --force",
-    "build": "vite build",
-    "build:full": "node build.js"
+    "build": "vite build"
   },
   "dependencies": {
     "@acnb/core": "workspace:*",
