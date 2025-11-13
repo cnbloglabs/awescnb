@@ -16,7 +16,7 @@ const themes = fs
   .filter((file) => fs.statSync(path.join(themesDir, file)).isDirectory())
 
 async function main(): Promise<void> {
-  // 解析命令行参数，支持 --theme 参数或直接传入主题名
+  // 解析命令行参数，支持 --theme 参数或直接传入皮肤名
   let selectedTheme: string | null = null
 
   // 检查是否使用了 --theme 参数
@@ -24,11 +24,11 @@ async function main(): Promise<void> {
   if (themeIndex !== -1 && themeIndex + 1 < process.argv.length) {
     selectedTheme = process.argv[themeIndex + 1]
   } else if (process.argv[2] && !process.argv[2].startsWith('--')) {
-    // 支持直接传入主题名作为位置参数
+    // 支持直接传入皮肤名作为位置参数
     selectedTheme = process.argv[2]
   }
 
-  // 如果没有通过参数指定主题，则显示菜单供用户选择
+  // 如果没有通过参数指定皮肤，则显示菜单供用户选择
   if (!selectedTheme) {
     const result = await showMenu()
     selectedTheme = result
@@ -40,28 +40,28 @@ async function main(): Promise<void> {
     }
   }
 
-  // 验证主题选择
+  // 验证皮肤选择
   if (!selectedTheme || !themes.includes(selectedTheme)) {
-    console.error(pc.red(`无效的主题选择: ${selectedTheme}`))
-    console.log(pc.yellow('可用主题:'))
+    console.error(pc.red(`无效的皮肤选择: ${selectedTheme}`))
+    console.log(pc.yellow('可用皮肤:'))
     themes.forEach((theme) => {
       console.log(pc.yellow(`  - ${theme}`))
     })
     process.exit(1)
   }
 
-  // 构建选定主题
+  // 构建选定皮肤
   await buildTheme(selectedTheme)
 }
 
 main()
 
-// 显示主题选择菜单
+// 显示皮肤选择菜单
 async function showMenu(): Promise<string | symbol> {
-  console.log(pc.blue('请选择要构建的主题:'))
+  console.log(pc.blue('请选择要构建的皮肤:'))
 
   const selected = await select({
-    message: '请选择一个主题:',
+    message: '请选择一个皮肤:',
     options: themes.map((theme) => ({
       value: theme,
       label: theme,
@@ -71,13 +71,13 @@ async function showMenu(): Promise<string | symbol> {
   return selected
 }
 
-// 构建选定主题
+// 构建选定皮肤
 async function buildTheme(themeName: string): Promise<void> {
   const s = spinner()
-  s.start(pc.blue(`正在构建主题: ${themeName}`))
+  s.start(pc.blue(`正在构建皮肤: ${themeName}`))
 
   try {
-    // 使用 pnpm 构建选定主题的 build 脚本
+    // 使用 pnpm 构建选定皮肤的 build 脚本
     const child = exec(`pnpm --dir themes/${themeName} build`, {
       cwd: process.cwd(),
       env: process.env,
@@ -94,15 +94,15 @@ async function buildTheme(themeName: string): Promise<void> {
 
     child.on('close', (code: number | null) => {
       if (code === 0) {
-        s.stop(pc.green(`主题 ${themeName} 构建成功!`))
+        s.stop(pc.green(`皮肤 ${themeName} 构建成功!`))
       } else {
-        s.stop(pc.red(`构建主题时出错，退出码: ${code}`))
+        s.stop(pc.red(`构建皮肤时出错，退出码: ${code}`))
         process.exit(1)
       }
     })
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error)
-    s.stop(pc.red(`构建主题时出错: ${errorMessage}`))
+    s.stop(pc.red(`构建皮肤时出错: ${errorMessage}`))
     process.exit(1)
   }
 }

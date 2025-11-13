@@ -166,7 +166,7 @@ interface CodeTrafficLightOptions {
 }
 type GenericGetFn<T> = (arg?: Partial<T>) => T
 /**
- * 主题基本配置
+ * 皮肤基本配置
  */
 export type GetThemeOptions = GenericGetFn<ThemeOptions>
 /**
@@ -194,7 +194,7 @@ export type GetClickEffectsOptions = GenericGetFn<ClickEffectsOptions>
  */
 export type GetCodeCopyOptions = GenericGetFn<CodeCopyOptions>
 /**
- * 代码块高亮主题配置
+ * 代码块高亮皮肤配置
  */
 export type GetCodeHighlightOptions = GenericGetFn<CodeHighlightOptions>
 /**

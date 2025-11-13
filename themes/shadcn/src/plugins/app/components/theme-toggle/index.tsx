@@ -72,7 +72,7 @@ export function ThemeToggle() {
     <div className='relative z-0 inline-grid grid-cols-3 gap-0.5 rounded-full bg-muted p-0.75'>
       <button
         onClick={() => setThemeAndSave('system')}
-        aria-label='系统主题'
+        aria-label='跟随系统'
         className={themeToggleVariants({ active: theme === 'system' })}
         type='button'
       >
@@ -80,7 +80,7 @@ export function ThemeToggle() {
       </button>
       <button
         onClick={() => setThemeAndSave('light')}
-        aria-label='浅色主题'
+        aria-label='浅色外观'
         className={themeToggleVariants({ active: theme === 'light' })}
         type='button'
       >
@@ -88,7 +88,7 @@ export function ThemeToggle() {
       </button>
       <button
         onClick={() => setThemeAndSave('dark')}
-        aria-label='深色主题'
+        aria-label='深色外观'
         className={themeToggleVariants({ active: theme === 'dark' })}
         type='button'
       >

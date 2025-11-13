@@ -20,7 +20,7 @@ packages/shared-assets 放置了博客页面默认模板，包含预定义的 ht
 
 运行 dev server 时，vite 会通过插件自动注入 vite index.html 以及 packages/shared-assets，所有皮肤都基于博客页面默认模板实现。
 
-`themes/*` 为皮肤所在位置，如 `themes/shadcn` 放置 shadcn 主题实现代码。启动 dev server 后，默认打开的是一个导航页面，你如果需要查看相关页面，应该进入:
+`themes/*` 为皮肤所在位置，如 `themes/shadcn` 放置 shadcn 皮肤实现代码。启动 dev server 后，默认打开的是一个导航页面，你如果需要查看相关页面，应该进入:
 
 - /templates/home.html 首页
 - /templates/post-markdown.html 文章内容页（markdown）
@@ -132,8 +132,8 @@ export default function () {
 
 ## 项目特定规范
 
-### 博客主题开发
-- 所有主题必须支持响应式设计
+### 博客皮肤开发
+- 所有皮肤必须支持响应式设计
 - 必须兼容主流浏览器（Chrome、Firefox、Safari、Edge）
 - 支持暗色模式和浅色模式切换
 - 遵循无障碍访问标准（WCAG 2.1 AA）

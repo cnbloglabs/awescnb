@@ -26,7 +26,7 @@ describe('集成测试', () => {
     vi.clearAllMocks()
   })
 
-  describe('主题创建与配置系统集成', () => {
+  describe('皮肤创建与配置系统集成', () => {
     it('应该支持插件使用 defineOptions 进行配置', () => {
       const theme = createTheme()
 
