@@ -52,8 +52,8 @@ describe('Options 配置测试', () => {
     window.opts = {}
   })
 
-  describe('主题配置测试', () => {
-    it('应该返回默认主题配置', () => {
+  describe('皮肤配置测试', () => {
+    it('应该返回默认皮肤配置', () => {
       const options = getThemeOptions()
 
       expect(options).toEqual({
@@ -64,7 +64,7 @@ describe('Options 配置测试', () => {
       })
     })
 
-    it('应该合并用户主题配置', () => {
+    it('应该合并用户皮肤配置', () => {
       window.opts = {
         theme: {
           name: 'custom-theme',

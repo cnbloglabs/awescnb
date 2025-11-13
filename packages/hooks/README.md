@@ -1,6 +1,6 @@
 # @acnb/hooks
 
-博客园主题开发用的 React Hooks 工具库。
+博客园皮肤开发用的 React Hooks 工具库。
 
 ## 安装
 

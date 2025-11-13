@@ -23,7 +23,7 @@ describe('createTheme', () => {
   })
 
   describe('基础功能测试', () => {
-    it('应该创建一个主题实例', () => {
+    it('应该创建一个皮肤实例', () => {
       const theme = createTheme()
 
       expect(theme).toBeDefined()
@@ -33,7 +33,7 @@ describe('createTheme', () => {
       expect(typeof theme.use).toBe('function')
     })
 
-    it('应该正确初始化主题配置', () => {
+    it('应该正确初始化皮肤配置', () => {
       const theme = createTheme()
 
       expect(theme.config.globalProperties).toEqual({})
@@ -142,7 +142,7 @@ describe('createTheme', () => {
     })
   })
 
-  describe('主题配置测试', () => {
+  describe('皮肤配置测试', () => {
     it('应该允许修改 globalProperties', () => {
       const theme = createTheme()
 
@@ -164,7 +164,7 @@ describe('createTheme', () => {
   })
 
   describe('上下文测试', () => {
-    it('应该正确设置主题上下文', () => {
+    it('应该正确设置皮肤上下文', () => {
       const theme = createTheme()
 
       expect(theme._context.theme).toBe(theme)
