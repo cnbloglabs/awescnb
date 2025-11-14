@@ -1,4 +1,5 @@
 import { useQueryDOM } from '@acnb/hooks'
+import { isOwner } from '@acnb/utils'
 import {
   Bell,
   Edit3,
@@ -35,17 +36,27 @@ export function useNavItems() {
 
       const navLinks = el.querySelectorAll('li a.menu')
 
-      navLinks.forEach((link) => {
+      for (const link of navLinks) {
         const text = link.textContent?.trim() || ''
         const id = link.id || ''
         const href = link.getAttribute('href')
+
+        if (isOwner() && (text === '订阅' || text === '联系')) {
+          continue
+        }
+
+        if (!isOwner() && (text === '管理' || text === '新随笔')) {
+          continue
+        }
+
         navItems.push({
           id,
           text,
           icon: iconMap[text as keyof typeof iconMap],
           onClick: () => {
             if (href) {
-              window.open(href, '_blank')
+              const target = text === '首页' ? '_self' : '_blank'
+              window.open(href, target)
               return
             }
             if (text === '订阅') {
@@ -53,7 +64,7 @@ export function useNavItems() {
             }
           },
         })
-      })
+      }
 
       return navItems
     },
