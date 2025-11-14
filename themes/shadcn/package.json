@@ -18,20 +18,20 @@
   },
   "dependencies": {
     "@acnb/core": "workspace:*",
+    "@acnb/hooks": "workspace:*",
     "@acnb/options": "workspace:*",
     "@acnb/plugins": "workspace:*",
-    "@acnb/hooks": "workspace:*",
-    "@acnb/utils": "workspace:*",
+    "@acnb/sonner": "workspace:*",
     "@acnb/ui": "workspace:*",
+    "@acnb/utils": "workspace:*",
+    "@preact/signals": "catalog:",
     "class-variance-authority": "catalog:",
+    "clsx": "catalog:",
+    "es-toolkit": "catalog:",
     "lucide": "catalog:",
     "lucide-preact": "catalog:",
     "preact": "catalog:",
-    "clsx": "catalog:",
-    "@acnb/sonner": "workspace:*",
-    "tailwind-merge": "catalog:",
-    "@preact/signals": "catalog:",
-    "es-toolkit": "catalog:"
+    "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@acnb/stylelint-one-utility-class-per-line": "workspace:*",
