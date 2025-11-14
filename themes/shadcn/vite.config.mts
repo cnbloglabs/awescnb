@@ -46,13 +46,13 @@ export default defineConfig({
         comments: false,
       },
       compress: {
-        // drop_console: true,
-        // drop_debugger: true,
+        drop_console: true,
+        drop_debugger: true,
       },
     },
     lib: {
       formats: ['iife'],
-      entry: resolve(__dirname, 'src/main.js'),
+      entry: resolve(__dirname, 'src/main.ts'),
       name: 'shadcn',
       fileName: () => 'shadcn.js',
     },
