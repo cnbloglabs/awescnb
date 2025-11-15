@@ -1,9 +1,8 @@
-import dynamicScriptExtension from '@acnb/vite-plugin-dynamic-script-extension'
-import { ServeSharedAssetsPlugin } from '@acnb/vite-plugin-serve-shared-assets'
+import tona from '@tona/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  plugins: [dynamicScriptExtension(), ServeSharedAssetsPlugin()],
+  plugins: [tona()],
   css: {
     preprocessorOptions: {
       scss: {

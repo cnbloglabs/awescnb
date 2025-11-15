@@ -1,7 +1,6 @@
-// Vite plugin to serve shared assets in dev server
-
 import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import type { Plugin, ViteDevServer } from 'vite'
 
@@ -11,43 +10,72 @@ interface MimeTypes {
   [key: string]: string
 }
 
-interface ServeSharedAssetsOptions {
+export interface TonaPluginOptions {
+  /**
+   * Default script source path when neither main.ts nor main.js exists
+   * @default '/src/main.js'
+   */
+  defaultScriptSrc?: string
+  /**
+   * Base directory to resolve main files from
+   * @default process.cwd()
+   */
+  baseDir?: string
   /**
    * The path to the shared assets directory
-   * @default `path.join(__dirname, '..', '..', 'shared-assets', 'public')`
+   * @default path.join(__dirname, '..', 'public')
    */
   sharedAssetsPath?: string
 }
 
-export function ServeSharedAssetsPlugin(
-  options: ServeSharedAssetsOptions = {},
-): Plugin {
-  const { sharedAssetsPath } = options
+/**
+ * Vite plugin for awescnb themes - combines dynamic script extension and shared assets serving
+ */
+export default function tona(options: TonaPluginOptions = {}): Plugin {
+  const {
+    defaultScriptSrc = '/src/main.js',
+    baseDir = process.cwd(),
+    sharedAssetsPath,
+  } = options
+
+  // Default path to shared assets
+  const assetsPath = sharedAssetsPath || path.join(__dirname, '..', 'public')
 
   return {
-    name: 'serve-shared-assets',
+    name: 'vite-plugin-tona',
+
+    transformIndexHtml(html) {
+      // Dynamic script extension: check main.ts or main.js exists
+      const jsPath = path.resolve(baseDir, 'src/main.js')
+      const tsPath = path.resolve(baseDir, 'src/main.ts')
+      let scriptSrc = defaultScriptSrc
+
+      if (fs.existsSync(tsPath)) {
+        scriptSrc = '/src/main.ts'
+      } else if (fs.existsSync(jsPath)) {
+        scriptSrc = '/src/main.js'
+      }
+
+      // Replace script src in HTML
+      return html.replace(
+        /<script type="module" src="[^"]*"><\/script>/,
+        `<script type="module" src="${scriptSrc}"></script>`,
+      )
+    },
 
     configureServer(server: ViteDevServer) {
-      // Default path to shared assets
-      const assetsPath =
-        sharedAssetsPath ||
-        path.join(__dirname, '..', '..', 'shared-assets', 'public')
-
       // Serve static files from shared-assets/public directory
       server.middlewares.use((req, res, next) => {
         let filePath: string | null = null
 
         // Check if the request is for a file in /public (which will be served from shared-assets)
         if (req.url?.startsWith('/public/')) {
-          // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
           filePath = path.join(
             assetsPath,
             urlWithoutQuery!.replace('/public/', ''),
           )
         } else if (req.url?.startsWith('/templates/')) {
-          // Also handle /templates/ requests
-          // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
           filePath = path.join(
             assetsPath,
@@ -55,8 +83,6 @@ export function ServeSharedAssetsPlugin(
             urlWithoutQuery!.replace('/templates/', ''),
           )
         } else if (req.url?.startsWith('/js/')) {
-          // Also handle /js/ requests
-          // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
           filePath = path.join(
             assetsPath,
@@ -64,8 +90,6 @@ export function ServeSharedAssetsPlugin(
             urlWithoutQuery!.replace('/js/', ''),
           )
         } else if (req.url?.startsWith('/css/')) {
-          // Also handle /css/ requests
-          // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
           filePath = path.join(
             assetsPath,
@@ -73,8 +97,6 @@ export function ServeSharedAssetsPlugin(
             urlWithoutQuery!.replace('/css/', ''),
           )
         } else if (req.url?.startsWith('/images/')) {
-          // Also handle /images/ requests
-          // Remove query parameters
           const urlWithoutQuery = req.url.split('?')[0]
           filePath = path.join(
             assetsPath,
@@ -87,7 +109,6 @@ export function ServeSharedAssetsPlugin(
           req.url === '/index.html' ||
           req.url?.startsWith('/index.html?')
         ) {
-          // Handle root and index.html requests
           filePath = path.join(assetsPath, 'index.html')
         }
 

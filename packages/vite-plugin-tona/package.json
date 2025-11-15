@@ -1,8 +1,8 @@
 {
-  "name": "@acnb/vite-plugin-dynamic-script-extension",
+  "name": "@tona/vite",
   "type": "module",
   "version": "0.1.0",
-  "description": "Vite plugin for dynamic script extension",
+  "description": "Vite plugin for awescnb themes - combines dynamic script extension and shared assets serving",
   "author": {
     "name": "guangzan",
     "url": "https://www.cnblogs.com/guangzan",
@@ -21,6 +21,7 @@
     "vite",
     "plugin",
     "dynamic-script",
+    "shared-assets",
     "博客园"
   ],
   "sideEffects": false,
@@ -32,7 +33,7 @@
     }
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -43,11 +44,15 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "public"
   ],
   "scripts": {
     "dev": "tsdown --watch",
     "build": "tsdown"
+  },
+  "dependencies": {
+    "vite": "catalog:"
   },
   "devDependencies": {
     "@types/node": "catalog:",
