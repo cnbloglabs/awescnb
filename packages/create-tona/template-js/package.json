@@ -1,0 +1,16 @@
+{
+  "name": "tona-typescript-starter",
+  "version": "1.0.0",
+  "description": "A modern, clean Tona theme with TypeScript starter template.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "tona": "latest"
+  },
+  "devDependencies": {
+    "vite": "latest",
+    "tona-vite": "latest"
+  }
+}
