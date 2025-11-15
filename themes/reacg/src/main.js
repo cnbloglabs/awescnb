@@ -1,4 +1,3 @@
-import { createTheme } from '@tona/core'
 import {
   background,
   catalog,
@@ -23,6 +22,7 @@ import {
   tools,
   webTag,
 } from '@tona/plugins'
+import { createTheme } from 'tona'
 import build from './build'
 import './style/index.scss'
 

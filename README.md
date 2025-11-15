@@ -14,29 +14,86 @@
   <a href="https://github.com/guangzan/tona/commits"><img src="https://img.shields.io/github/commit-activity/m/guangzan/tona?style=flat-square" alt="Commits"></a>
 </p>
 
-## 特性
+## 使用皮肤
 
-- 🎨 **丰富的皮肤库** - 提供多个精心设计的皮肤，支持自定义配置
-- 🔌 **强大的插件系统** - 内置 30+ 实用插件，轻松扩展皮肤功能
-- 📦 **模块化架构** - 核心功能封装为独立包，便于复用和维护
-- 🛠️ **完善的开发工具** - 基于 Vite 的快速开发体验，支持热更新
-- 🎯 **TypeScript 支持** - 完整的类型定义，提供更好的开发体验
-- 📱 **响应式设计** - 所有皮肤均支持桌面、平板和移动设备
-- 🌗 **深色模式** - 内置深色/浅色模式切换支持
-- ⚡ **性能优化** - 代码分割、懒加载等优化策略
+在博客园中使用皮肤请查看此[文档](https://www.yuque.com/r/awescnb/books)。
 
-## 🤝 贡献
+### Shadcn(WIP)
+
+现代化的 shadcn UI 风格皮肤，采用 Preact + Tailwind CSS 构建。
+
+### Geek
+
+功能丰富的皮肤，保留博客园原生体验。
+
+### Reacg
+
+早期皮肤。
+
+## 开发皮肤
+
+初始化 Vite 项目
+
+```bash
+pnpm create vite my-cnblog-theme --template vanilla
+```
+
+添加 Tona Vite 插件
+
+```bash
+pnpm add -D @tona/vite
+```
+
+修改 Vite 配置
+
+```tsx
+import { defineConfig } from 'vite'
+import tona from '@tona/vite'
+
+export default defineConfig({
+  plugins: [
+    tona(),
+  ],
+})
+```
+
+安装 Tona
+
+```bash
+pnpm add tona
+```
+
+修改 src/main.ts
+
+```ts
+import { createTheme } from 'tona'
+import './index.css'
+
+function myPlugin() {
+  console.log("Hello Tona!")
+}
+
+createTheme().use(myPlugin)
+```
+
+本地开发
+
+```sh
+pnpm dev
+```
+
+构建
+
+```sh
+pnpm build
+```
+
+## 贡献
 
 欢迎贡献代码、报告问题或提出建议！
-
-### 贡献流程
 
 1. Fork 本项目
 2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
 3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 开启 Pull Request
-
-## 🙏 致谢
-
-感谢所有为这个项目做出贡献的开发者和用户！

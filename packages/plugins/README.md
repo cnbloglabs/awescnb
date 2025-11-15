@@ -5,7 +5,7 @@ Plugins for Tona theme.
 ## Usage
 
 ```bash
-npm i @tona/core
+npm i tona
 ```
 
 ```bash
@@ -13,7 +13,7 @@ npm i @tona/plugins
 ```
 
 ```js
-import { createTheme } from '@tona/core'
+import { createTheme } from 'tona'
 import { background } from '@tona/plugins'
 
 createTheme().use(background)
@@ -22,7 +22,7 @@ createTheme().use(background)
 Configure the default behavior of the plugin in your Theme
 
 ```js
-import { createTheme } from '@tona/core'
+import { createTheme } from 'tona'
 import { background } from '@tona/plugins'
 
 createTheme().use(background, {
@@ -34,7 +34,7 @@ createTheme().use(background, {
 Configure background plugin
 
 ```js
-import { createTheme } from '@tona/core'
+import { createTheme } from 'tona'
 import { background } from '@tona/plugins'
 
 createTheme().use(

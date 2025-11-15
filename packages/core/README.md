@@ -1,11 +1,11 @@
-# @tona/core
+# Tona
 
 API for creating cnblog theme.
 
 ## Install
 
 ```shell
-npm i @tona/core
+npm i tona
 ```
 
 ## API
@@ -15,7 +15,7 @@ npm i @tona/core
 Returns a theme instance that provides a theme context.
 
 ```js
-import { createTheme } from '@tona/core'
+import { createTheme } from 'tona'
 
 const theme = createTheme()
 ```
@@ -25,7 +25,7 @@ const theme = createTheme()
 Returns a generic configuration object.
 
 ```js
-import { defineOptions } from '@tona/core'
+import { defineOptions } from 'tona'
 
 const getBackgroundOptions = defineOptions('bodyBackground', {
   enable: false,
@@ -51,7 +51,7 @@ const opts = {
 Using configuration aliases:
 
 ```javascript
-import { defineOptions } from '@tona/core'
+import { defineOptions } from 'tona'
 
 const getBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
   enable: false,
@@ -65,7 +65,7 @@ const getBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
 
 ```js
 // plugin.js
-import { defineOptions } from '@tona/core'
+import { defineOptions } from 'tona'
 
 export function backgroundPlugin(theme, devOptions, pluginOptions) {
   const getBackgroundOptions = defineOptions('bodyBackground', {
@@ -95,7 +95,7 @@ export function backgroundPlugin(theme, devOptions, pluginOptions) {
 
 ```js
 // theme/index.js
-import { createTheme } from '@tona/core'
+import { createTheme } from 'tona'
 import { backgroundPlugin } from './plugin'
 
 const theme = createTheme()

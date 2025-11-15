@@ -198,7 +198,7 @@ importers:
 
   packages/options:
     dependencies:
-      '@tona/core':
+      tona:
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -214,15 +214,15 @@ importers:
 
   packages/plugins:
     dependencies:
-      '@tona/core':
-        specifier: workspace:*
-        version: link:../core
       '@tona/options':
         specifier: workspace:*
         version: link:../options
       notyf:
         specifier: 'catalog:'
         version: 3.10.0
+      tona:
+        specifier: workspace:*
+        version: link:../core
     devDependencies:
       '@tona/vite':
         specifier: workspace:*
@@ -320,15 +320,15 @@ importers:
 
   themes/geek:
     dependencies:
-      '@tona/core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@tona/options':
         specifier: workspace:*
         version: link:../../packages/options
       '@tona/plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
+      tona:
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tona/vite':
         specifier: workspace:*
@@ -351,15 +351,15 @@ importers:
 
   themes/reacg:
     dependencies:
-      '@tona/core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@tona/options':
         specifier: workspace:*
         version: link:../../packages/options
       '@tona/plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
+      tona:
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tona/vite':
         specifier: workspace:*
@@ -385,9 +385,6 @@ importers:
       '@preact/signals':
         specifier: 'catalog:'
         version: 2.5.0(preact@10.27.2)
-      '@tona/core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@tona/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
@@ -427,6 +424,9 @@ importers:
       tailwind-merge:
         specifier: 'catalog:'
         version: 2.6.0
+      tona:
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@preact/preset-vite':
         specifier: 'catalog:'
