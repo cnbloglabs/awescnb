@@ -29,7 +29,8 @@
     "packages/stylelint-one-utility-class-per-line/src/index.mts",
     "themes/shadcn/src/modules/demo/index.tsx",
     "themes/shadcn/src/modules/back-to-top/index.tsx",
-    "themes/shadcn/src/plugins/top-nav-bar/index.tsx"
+    "themes/shadcn/src/plugins/top-nav-bar/index.tsx",
+    "packages/create-tona/template-js/src/main.js"
   ],
   "exclude": ["**/dist/**", "**/node_modules/**"]
 }
