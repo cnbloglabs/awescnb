@@ -1,4 +1,4 @@
-import { getIndexUrl } from '@tona/utils'
+import { getIndexUrl } from 'tona-utils'
 import { NavItems } from './nav-items'
 import Signature from './signature.svg?react'
 

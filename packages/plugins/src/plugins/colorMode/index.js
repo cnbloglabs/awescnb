@@ -2,7 +2,7 @@
  * 设置皮肤色
  * 需要皮肤使用相关 css 自定义属性
  */
-import { getThemeOptions } from '@tona/options'
+import { getThemeOptions } from 'tona-options'
 import { randomColor } from '../../utils/helpers'
 
 /**

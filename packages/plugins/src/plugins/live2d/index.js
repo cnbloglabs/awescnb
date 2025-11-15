@@ -1,4 +1,4 @@
-import { getLive2dOptions } from '@tona/options'
+import { getLive2dOptions } from 'tona-options'
 import { getCurrentPage } from '../../utils/cnblog'
 import { loadScript, randomProperty, userAgent } from '../../utils/helpers'
 import { live2dModels } from './live2d-models'

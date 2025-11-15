@@ -29,14 +29,14 @@ pnpm create vite my-cnblog-theme --template vanilla
 添加 Tona Vite 插件
 
 ```sh
-pnpm add -D @tona/vite
+pnpm add -D tona-vite
 ```
 
 修改 Vite 配置
 
 ```tsx
 import { defineConfig } from 'vite'
-import tona from '@tona/vite'
+import tona from 'tona-vite'
 
 export default defineConfig({
   plugins: [

@@ -1,7 +1,7 @@
-import { useAjaxComplete } from '@tona/hooks'
-import { toast } from '@tona/sonner'
-import { likePost, unLikePost } from '@tona/utils'
 import { Loader2, ThumbsUp } from 'lucide-preact'
+import { useAjaxComplete } from 'tona-hooks'
+import { toast } from 'tona-sonner'
+import { likePost, unLikePost } from 'tona-utils'
 import { Button } from '@/plugins/app/components/ui/button'
 import { useVoteAction } from './dom-hooks'
 

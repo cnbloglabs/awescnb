@@ -1,4 +1,4 @@
-import { useQueryDOM } from '@tona/hooks'
+import { useQueryDOM } from 'tona-hooks'
 
 export function useBlogStats() {
   return useQueryDOM({

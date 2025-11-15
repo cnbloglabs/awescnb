@@ -1,4 +1,4 @@
-# @tona/sonner
+# tona-sonner
 
 Preact toast notification component inspired by sonner.
 
@@ -16,13 +16,13 @@ Preact toast notification component inspired by sonner.
 ## Installation
 
 ```bash
-npm install @tona/sonner
+npm install tona-sonner
 ```
 
 ## Usage
 
 ```tsx
-import { Toaster, toast } from '@tona/sonner'
+import { Toaster, toast } from 'tona-sonner'
 
 function App() {
   return (
@@ -112,7 +112,7 @@ interface ToastT {
 The toaster will automatically mount to the document body when imported. You can also manually mount it:
 
 ```tsx
-import { mountToaster } from '@tona/sonner'
+import { mountToaster } from 'tona-sonner'
 
 // Mount to document body
 mountToaster()

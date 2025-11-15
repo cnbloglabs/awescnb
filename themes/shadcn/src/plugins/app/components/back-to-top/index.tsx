@@ -1,7 +1,7 @@
-import { getCurrentPage } from '@tona/utils'
 import { cva } from 'class-variance-authority'
 import { ChevronUp } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
+import { getCurrentPage } from 'tona-utils'
 
 const backToTopVariants = cva(
   'fixed right-8 bottom-8 z-50 cursor-pointer rounded-full border-none bg-transparent p-3 transition-all duration-300 ease-in-out hover:bg-primary hover:text-primary-foreground',

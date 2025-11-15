@@ -125,7 +125,7 @@ importers:
       '@clack/prompts':
         specifier: 'catalog:'
         version: 0.11.0
-      '@tona/vite':
+      'tona-vite':
         specifier: workspace:*
         version: link:packages/vite-plugin-tona
       '@types/node':
@@ -214,7 +214,7 @@ importers:
 
   packages/plugins:
     dependencies:
-      '@tona/options':
+      'tona-options':
         specifier: workspace:*
         version: link:../options
       notyf:
@@ -224,7 +224,7 @@ importers:
         specifier: workspace:*
         version: link:../core
     devDependencies:
-      '@tona/vite':
+      'tona-vite':
         specifier: workspace:*
         version: link:../vite-plugin-tona
       '@types/node':
@@ -320,17 +320,17 @@ importers:
 
   themes/geek:
     dependencies:
-      '@tona/options':
+      'tona-options':
         specifier: workspace:*
         version: link:../../packages/options
-      '@tona/plugins':
+      'tona-plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
       tona:
         specifier: workspace:*
         version: link:../../packages/core
     devDependencies:
-      '@tona/vite':
+      'tona-vite':
         specifier: workspace:*
         version: link:../../packages/vite-plugin-tona
       '@types/jquery':
@@ -351,17 +351,17 @@ importers:
 
   themes/reacg:
     dependencies:
-      '@tona/options':
+      'tona-options':
         specifier: workspace:*
         version: link:../../packages/options
-      '@tona/plugins':
+      'tona-plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
       tona:
         specifier: workspace:*
         version: link:../../packages/core
     devDependencies:
-      '@tona/vite':
+      'tona-vite':
         specifier: workspace:*
         version: link:../../packages/vite-plugin-tona
       '@types/jquery':
@@ -385,22 +385,22 @@ importers:
       '@preact/signals':
         specifier: 'catalog:'
         version: 2.5.0(preact@10.27.2)
-      '@tona/hooks':
+      'tona-hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@tona/options':
+      'tona-options':
         specifier: workspace:*
         version: link:../../packages/options
-      '@tona/plugins':
+      'tona-plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
-      '@tona/sonner':
+      'tona-sonner':
         specifier: workspace:*
         version: link:../../packages/sonner
-      '@tona/ui':
+      'tona-ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@tona/utils':
+      'tona-utils':
         specifier: workspace:*
         version: link:../../packages/utils
       class-variance-authority:
@@ -434,10 +434,10 @@ importers:
       '@tailwindcss/vite':
         specifier: 'catalog:'
         version: 4.1.17(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.94.0)(terser@5.44.1)(tsx@4.20.5)(yaml@2.8.1))
-      '@tona/stylelint-one-utility-class-per-line':
+      'tona-stylelint-one-utility-class-per-line':
         specifier: workspace:*
         version: link:../../packages/stylelint-one-utility-class-per-line
-      '@tona/vite':
+      'tona-vite':
         specifier: workspace:*
         version: link:../../packages/vite-plugin-tona
       '@types/node':

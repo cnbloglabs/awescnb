@@ -1,4 +1,4 @@
-import { useQueryDOM } from '@tona/hooks'
+import { useQueryDOM } from 'tona-hooks'
 import type { CommentItem, CommentPaginationItem } from './types'
 
 export function useComments() {

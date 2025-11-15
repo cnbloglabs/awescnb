@@ -1,4 +1,4 @@
-import tona from '@tona/vite'
+import tona from 'tona-vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({

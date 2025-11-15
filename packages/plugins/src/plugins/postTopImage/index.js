@@ -1,5 +1,5 @@
 // 在随笔详情页顶部随笔生成一个文章头图
-import { getPostTopImageOptions } from '@tona/options'
+import { getPostTopImageOptions } from 'tona-options'
 import { isPostDetailsPage } from '../../utils/cnblog'
 import { randomArrayElements, randomImgUrl } from '../../utils/helpers'
 

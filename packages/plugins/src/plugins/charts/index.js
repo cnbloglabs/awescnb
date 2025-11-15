@@ -1,4 +1,4 @@
-import { getChartsOptions } from '@tona/options'
+import { getChartsOptions } from 'tona-options'
 import { chartJs } from '../../constants/cdn'
 import { loadScript } from '../../utils/helpers'
 

@@ -1,5 +1,5 @@
 // 锁屏
-import { getLockScreenOptions } from '@tona/options'
+import { getLockScreenOptions } from 'tona-options'
 import { typedJs } from '../../constants/cdn'
 import { loadScript } from '../../utils/helpers'
 

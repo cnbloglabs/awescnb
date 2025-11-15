@@ -9,12 +9,12 @@ npm i tona
 ```
 
 ```bash
-npm i @tona/plugins
+npm i tona-plugins
 ```
 
 ```js
 import { createTheme } from 'tona'
-import { background } from '@tona/plugins'
+import { background } from 'tona-plugins'
 
 createTheme().use(background)
 ```
@@ -23,7 +23,7 @@ Configure the default behavior of the plugin in your Theme
 
 ```js
 import { createTheme } from 'tona'
-import { background } from '@tona/plugins'
+import { background } from 'tona-plugins'
 
 createTheme().use(background, {
   // The default configuration of the Theme
@@ -35,7 +35,7 @@ Configure background plugin
 
 ```js
 import { createTheme } from 'tona'
-import { background } from '@tona/plugins'
+import { background } from 'tona-plugins'
 
 createTheme().use(
   background,

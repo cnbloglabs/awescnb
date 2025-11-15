@@ -1,5 +1,5 @@
 {
-  "name": "@tona/sonner",
+  "name": "tona-sonner",
   "version": "0.1.0",
   "description": "Preact toast notification component based on sonner",
   "author": {

@@ -1,4 +1,4 @@
-import { getCurrentPage } from '@tona/utils'
+import { getCurrentPage } from 'tona-utils'
 
 export function checkCommentPaginationShouldVisible() {
   const current = getCurrentPage()

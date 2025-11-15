@@ -1,7 +1,7 @@
 /**
  * 博客园相关常量
  */
-import { getThemeOptions } from '@tona/options'
+import { getThemeOptions } from 'tona-options'
 
 /* 当前使用的博客园官方皮肤名称 */
 export const skinName = window.skinName

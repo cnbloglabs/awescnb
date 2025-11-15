@@ -1,4 +1,4 @@
-import { getLinksOptions } from '@tona/options'
+import { getLinksOptions } from 'tona-options'
 
 /**
  * 构建 copyright

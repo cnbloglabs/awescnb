@@ -1,5 +1,5 @@
 // 弹幕
-import { getBarragesOptions } from '@tona/options'
+import { getBarragesOptions } from 'tona-options'
 import {
   getClientRect,
   randomColor,
