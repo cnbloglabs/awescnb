@@ -20,7 +20,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@tona/core": "workspace:*",
+    "tona": "workspace:*",
     "@tona/options": "workspace:*",
     "@tona/plugins": "workspace:*"
   },

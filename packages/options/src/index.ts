@@ -1,4 +1,4 @@
-import { defineOptions } from '@tona/core'
+import { defineOptions } from 'tona'
 import type {
   GetBackgroundOptions,
   GetBarragesOptions,

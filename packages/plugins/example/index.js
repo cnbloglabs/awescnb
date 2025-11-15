@@ -1,4 +1,4 @@
-import { createTheme } from '@tona/core'
+import { createTheme } from 'tona'
 import {
   clickEffects,
   codeHighlight,

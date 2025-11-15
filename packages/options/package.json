@@ -48,7 +48,7 @@
     "test:run": "vitest run"
   },
   "dependencies": {
-    "@tona/core": "workspace:*"
+    "tona": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:",

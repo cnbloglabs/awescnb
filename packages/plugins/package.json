@@ -36,7 +36,7 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@tona/core": "workspace:*",
+    "tona": "workspace:*",
     "@tona/options": "workspace:*",
     "notyf": "catalog:"
   },
