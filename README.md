@@ -4,7 +4,7 @@
 
 <div align="center">
   <h1>Tona</h1>
-  <p><em>Tona 是一个专为博客园（CNBlogs）设计的皮肤开发框架，提供了完整的皮肤开发工具链和丰富的插件生态。通过模块化的架构设计，开发者可以快速创建美观、功能丰富的博客皮肤。</em></p>
+  <p>Tona 是一个专为博客园（CNBlogs）设计的皮肤开发框架，提供了完整的皮肤开发工具链和丰富的插件生态。通过模块化的架构设计，开发者可以快速创建美观、功能丰富的博客皮肤。</p>
 </div>
 
 <p align="center">
@@ -18,29 +18,17 @@
 
 在博客园中使用皮肤请查看此[文档](https://www.yuque.com/r/awescnb/books)。
 
-### Shadcn(WIP)
-
-现代化的 shadcn UI 风格皮肤，采用 Preact + Tailwind CSS 构建。
-
-### Geek
-
-功能丰富的皮肤，保留博客园原生体验。
-
-### Reacg
-
-早期皮肤。
-
 ## 开发皮肤
 
 初始化 Vite 项目
 
-```bash
+```sh
 pnpm create vite my-cnblog-theme --template vanilla
 ```
 
 添加 Tona Vite 插件
 
-```bash
+```sh
 pnpm add -D @tona/vite
 ```
 
@@ -59,7 +47,7 @@ export default defineConfig({
 
 安装 Tona
 
-```bash
+```sh
 pnpm add tona
 ```
 
