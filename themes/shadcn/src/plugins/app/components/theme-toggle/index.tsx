@@ -1,7 +1,7 @@
-import { setCodeTheme } from '@tona/utils'
 import { cva } from 'class-variance-authority'
 import { Monitor, Moon, Sun } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
+import { setCodeTheme } from 'tona-utils'
 
 const themeToggleVariants = cva(
   'cursor-pointer rounded-full p-1.5 transition-all duration-200 *:size-4',

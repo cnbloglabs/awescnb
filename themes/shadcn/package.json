@@ -1,5 +1,5 @@
 {
-  "name": "@tona/theme-shadcn",
+  "name": "tona-theme-shadcn",
   "version": "1.0.0",
   "description": "A modern, clean theme for cnblogs with shadcn ui style design, featuring card-based layout, responsive design, and elegant typography.",
   "author": "guangzan",
@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "tona": "workspace:*",
-    "@tona/hooks": "workspace:*",
-    "@tona/options": "workspace:*",
-    "@tona/plugins": "workspace:*",
-    "@tona/sonner": "workspace:*",
-    "@tona/ui": "workspace:*",
-    "@tona/utils": "workspace:*",
+    "tona-hooks": "workspace:*",
+    "tona-options": "workspace:*",
+    "tona-plugins": "workspace:*",
+    "tona-sonner": "workspace:*",
+    "tona-ui": "workspace:*",
+    "tona-utils": "workspace:*",
     "@preact/signals": "catalog:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
@@ -34,8 +34,8 @@
     "tailwind-merge": "catalog:"
   },
   "devDependencies": {
-    "@tona/stylelint-one-utility-class-per-line": "workspace:*",
-    "@tona/vite": "workspace:*",
+    "tona-stylelint-one-utility-class-per-line": "workspace:*",
+    "tona-vite": "workspace:*",
     "@preact/preset-vite": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",

@@ -1,4 +1,4 @@
-import { getCatalogOptions } from '@tona/options'
+import { getCatalogOptions } from 'tona-options'
 import { getCurrentPage, hasPostTitle } from '../../utils/cnblog'
 import { debounce, getClientRect, userAgent } from '../../utils/helpers'
 

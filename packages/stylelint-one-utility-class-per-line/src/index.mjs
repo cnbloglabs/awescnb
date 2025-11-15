@@ -7,7 +7,7 @@ const {
   utils: { report, ruleMessages },
 } = stylelint
 
-const name = '@tona/stylelint-one-utility-class-per-line'
+const name = 'tona-stylelint-one-utility-class-per-line'
 
 const messages = ruleMessages(name, {
   className: (classNames) =>

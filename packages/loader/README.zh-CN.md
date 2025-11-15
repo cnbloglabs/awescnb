@@ -1,4 +1,4 @@
-# @tona/loader
+# tona-loader
 
 **中文** | [English](./README.md)
 

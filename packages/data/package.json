@@ -1,5 +1,5 @@
 {
-  "name": "@tona/themes",
+  "name": "tona-themes",
   "type": "module",
   "version": "0.0.1",
   "description": "tona theme list.",

@@ -1,4 +1,4 @@
-import { getCodeTrafficLightOptions } from '@tona/options'
+import { getCodeTrafficLightOptions } from 'tona-options'
 import { isPostDetailsPage } from '../../utils/cnblog'
 import { insertStyle } from '../../utils/helpers'
 

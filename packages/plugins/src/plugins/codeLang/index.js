@@ -2,7 +2,7 @@
  * 构建代码块语言
  * 仅在 Markdown 博文中生效
  */
-import { getCodeLangOptions } from '@tona/options'
+import { getCodeLangOptions } from 'tona-options'
 import { isMd, isPostDetailsPage } from '../../utils/cnblog'
 
 /**

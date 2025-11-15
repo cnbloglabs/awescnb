@@ -14,11 +14,11 @@
 
 ## 运行原理
 
-packages/shared-assets 放置了博客页面默认模板，包含预定义的 html、默认样式等，shared-assets 下的任何文件不可修改！
+packages/vite-plugin-tona/public 放置了博客页面默认模板，包含预定义的 html、默认样式等，vite-plugin-tona/public 下的任何文件不可修改！
 
-实现功能前，你可能需要先查看 packages/shared-assets/public/templates、packages/shared-assets/public/css， 以了解基础模板的 html 结构、样式。
+实现功能前，你可能需要先查看 packages/vite-plugin-tona/public/templates、packages/vite-plugin-tona/public/css， 以了解基础模板的 html 结构、样式。
 
-运行 dev server 时，vite 会通过插件自动注入 vite index.html 以及 packages/shared-assets，所有皮肤都基于博客页面默认模板实现。
+运行 dev server 时，vite 会通过 `tona-vite` 插件自动注入 vite index.html 以及共享资源，所有皮肤都基于博客页面默认模板实现。`tona-vite` 插件集成了动态脚本扩展和共享资源服务功能。
 
 `themes/*` 为皮肤所在位置，如 `themes/shadcn` 放置 shadcn 皮肤实现代码。启动 dev server 后，默认打开的是一个导航页面，你如果需要查看相关页面，应该进入:
 
@@ -107,7 +107,7 @@ plugin-name/
 - 使用原生 DOM API 进行操作
 - 样式统一使用 Tailwind `@apply` 指令编写
 - 插件必须支持 TypeScript 类型检查
-- 避免直接修改 shared-assets 中的模板文件
+- 避免直接修改 vite-plugin-tona/public 中的模板文件
 - 插件应该具有可配置性和可扩展性
 - 使用事件委托优化性能
 

@@ -1,5 +1,3 @@
-import { useQueryDOM } from '@tona/hooks'
-import { isOwner } from '@tona/utils'
 import {
   Bell,
   Edit3,
@@ -8,6 +6,8 @@ import {
   Settings,
   User,
 } from 'lucide-preact'
+import { useQueryDOM } from 'tona-hooks'
+import { isOwner } from 'tona-utils'
 
 interface NavItem {
   id: string

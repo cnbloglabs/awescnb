@@ -1,5 +1,5 @@
 {
-  "name": "@tona/loader",
+  "name": "tona-loader",
   "type": "module",
   "version": "1.0.0",
   "description": "Loading theme js file",

@@ -1,3 +1,4 @@
+import { createTheme } from 'tona'
 import {
   background,
   catalog,
@@ -15,8 +16,7 @@ import {
   signature,
   tools,
   webTag,
-} from '@tona/plugins'
-import { createTheme } from 'tona'
+} from 'tona-plugins'
 import './style/index.scss'
 
 Object.values(import.meta.glob('./modules/**/*.js', { eager: true })).forEach(

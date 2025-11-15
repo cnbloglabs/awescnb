@@ -5,13 +5,13 @@ Vite plugin for Tona themes - combines dynamic script extension and shared asset
 ## Installation
 
 ```bash
-npm install @tona/vite
+npm install tona-vite
 ```
 
 ## Usage
 
 ```ts
-import tona from '@tona/vite'
+import tona from 'tona-vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({

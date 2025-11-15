@@ -19,7 +19,7 @@
     "prepare": "lefthook install"
   },
   "devDependencies": {
-    "@tona/vite": "workspace:*",
+    "tona-vite": "workspace:*",
     "@biomejs/biome": "catalog:",
     "@clack/prompts": "catalog:",
     "@types/node": "catalog:",

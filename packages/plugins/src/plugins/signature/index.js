@@ -1,5 +1,5 @@
 // 个性签名
-import { getSignatureOptions } from '@tona/options'
+import { getSignatureOptions } from 'tona-options'
 import { typedJs } from '../../constants/cdn'
 import { loadScript } from '../../utils/helpers'
 

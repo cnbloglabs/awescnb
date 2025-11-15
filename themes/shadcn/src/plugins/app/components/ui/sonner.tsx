@@ -1,4 +1,3 @@
-import { Toaster as Sonner, type ToasterProps } from '@tona/sonner'
 import {
   CircleCheckIcon,
   InfoIcon,
@@ -6,6 +5,7 @@ import {
   TriangleAlertIcon,
   XIcon,
 } from 'lucide-preact'
+import { Toaster as Sonner, type ToasterProps } from 'tona-sonner'
 
 const Toaster = ({ ...props }: ToasterProps) => {
   return (

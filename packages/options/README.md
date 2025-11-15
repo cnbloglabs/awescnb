@@ -1,15 +1,15 @@
-# @tona/options
+# tona-options
 
 Collection of Option Utilities for Tona.
 
 ## Usage
 
 ```bash
-npm i @tona/options
+npm i tona-options
 ```
 
 ```js
-import { getBackgroundOptions } from '@tona/options'
+import { getBackgroundOptions } from 'tona-options'
 
 const backgroundOptions = getBackgroundOptions()
 console.log(backgroundOptions)

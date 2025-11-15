@@ -1,5 +1,5 @@
 // 构建代码行号
-import { getCodeLangOptions } from '@tona/options'
+import { getCodeLangOptions } from 'tona-options'
 import { isMd, isPostDetailsPage } from '../../utils/cnblog'
 
 /**

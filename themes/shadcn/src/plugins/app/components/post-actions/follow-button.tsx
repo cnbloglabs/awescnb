@@ -1,7 +1,7 @@
-import { useAjaxComplete } from '@tona/hooks'
-import { toast } from '@tona/sonner'
-import { follow, unfollow } from '@tona/utils'
 import { Heart, Loader2 } from 'lucide-preact'
+import { useAjaxComplete } from 'tona-hooks'
+import { toast } from 'tona-sonner'
+import { follow, unfollow } from 'tona-utils'
 import { Button } from '@/plugins/app/components/ui/button'
 import { useFollowAction } from './dom-hooks'
 

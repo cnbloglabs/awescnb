@@ -1,5 +1,5 @@
 {
-  "name": "@tona/plugins",
+  "name": "tona-plugins",
   "version": "0.5.5",
   "description": "",
   "author": {
@@ -37,11 +37,11 @@
   },
   "dependencies": {
     "tona": "workspace:*",
-    "@tona/options": "workspace:*",
+    "tona-options": "workspace:*",
     "notyf": "catalog:"
   },
   "devDependencies": {
-    "@tona/vite": "workspace:*",
+    "tona-vite": "workspace:*",
     "@types/node": "catalog:",
     "sass": "catalog:",
     "vite": "catalog:",

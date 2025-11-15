@@ -1,4 +1,4 @@
-import { getCodeHighlightOptions } from '@tona/options'
+import { getCodeHighlightOptions } from 'tona-options'
 import { getCurrentPage, isMd } from '../../utils/cnblog'
 import { themes } from './themes.js'
 
