@@ -41,6 +41,7 @@
     "notyf": "catalog:"
   },
   "devDependencies": {
+    "@tona/vite": "workspace:*",
     "@types/node": "catalog:",
     "sass": "catalog:",
     "vite": "catalog:",

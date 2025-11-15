@@ -35,8 +35,7 @@
   },
   "devDependencies": {
     "@acnb/stylelint-one-utility-class-per-line": "workspace:*",
-    "@acnb/vite-plugin-dynamic-script-extension": "workspace:*",
-    "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
+    "@tona/vite": "workspace:*",
     "@preact/preset-vite": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",

@@ -1,4 +1,4 @@
-import { ServeSharedAssetsPlugin } from '@acnb/vite-plugin-serve-shared-assets'
+import tona from '@tona/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -6,9 +6,7 @@ export default defineConfig({
     open: true,
     port: 3000,
   },
-  plugins: [
-    ServeSharedAssetsPlugin(),
-  ],
+  plugins: [tona()],
   build: {
     // cssCodeSplit: true,
     // emptyOutDir: true,

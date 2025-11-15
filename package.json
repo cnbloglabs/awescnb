@@ -19,7 +19,7 @@
     "prepare": "lefthook install"
   },
   "devDependencies": {
-    "@acnb/vite-plugin-serve-shared-assets": "workspace:*",
+    "@tona/vite": "workspace:*",
     "@biomejs/biome": "catalog:",
     "@clack/prompts": "catalog:",
     "@types/node": "catalog:",

@@ -1,6 +1,6 @@
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { ServeSharedAssetsPlugin } from '@acnb/vite-plugin-serve-shared-assets'
+import tona from '@tona/vite'
 import preact from '@preact/preset-vite'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
@@ -18,7 +18,7 @@ export default defineConfig({
   },
   plugins: [
     preact(),
-    ServeSharedAssetsPlugin(),
+    tona(),
     tailwindcss(),
     analyzer({
       enabled: false,
