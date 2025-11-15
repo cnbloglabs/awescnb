@@ -1,7 +1,7 @@
 {
   "name": "tona-vite",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vite plugin for Tona themes - combines dynamic script extension and shared assets serving",
   "author": {
     "name": "guangzan",
@@ -51,12 +51,13 @@
     "dev": "tsdown --watch",
     "build": "tsdown"
   },
-  "dependencies": {
-    "vite": "catalog:"
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
   },
   "devDependencies": {
     "@types/node": "catalog:",
     "tsdown": "catalog:",
+    "vite": "catalog:",
     "vitest": "catalog:"
   }
 }
