@@ -6,12 +6,12 @@
   <h1>Tona</h1>
   <p>Tona 是一个专为博客园（CNBlogs）设计的皮肤开发框架，提供了完整的皮肤开发工具链和丰富的插件生态。通过模块化的架构设计，开发者可以快速创建美观、功能丰富的博客皮肤。</p>
 </div>
-
+ 
 <p align="center">
-  <a href="https://github.com/guangzan/tona/stargazers"><img src="https://img.shields.io/github/stars/guangzan/tona?style=flat-square" alt="Stars"></a>
-  <a href="https://github.com/guangzan/tona/releases"><img src="https://img.shields.io/github/v/tag/guangzan/tona?label=version&style=flat-square" alt="Version"></a>
+  <a href="https://github.com/cnbloglabs/tona/stargazers"><img src="https://img.shields.io/github/stars/cnbloglabs/tona?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/cnbloglabs/tona/releases"><img src="https://img.shields.io/github/v/tag/cnbloglabs/tona?label=version&style=flat-square" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
-  <a href="https://github.com/guangzan/tona/commits"><img src="https://img.shields.io/github/commit-activity/m/guangzan/tona?style=flat-square" alt="Commits"></a>
+  <a href="https://github.com/cnbloglabs/tona/commits"><img src="https://img.shields.io/github/commit-activity/m/cnbloglabs/tona?style=flat-square" alt="Commits"></a>
 </p>
 
 ## 使用皮肤
