@@ -20,48 +20,10 @@
 
 ## 开发皮肤
 
-初始化 Vite 项目
+初始化项目
 
 ```sh
-pnpm create vite my-cnblog-theme --template vanilla
-```
-
-添加 Tona Vite 插件
-
-```sh
-pnpm add -D tona-vite
-```
-
-修改 Vite 配置
-
-```tsx
-import { defineConfig } from 'vite'
-import tona from 'tona-vite'
-
-export default defineConfig({
-  plugins: [
-    tona(),
-  ],
-})
-```
-
-安装 Tona
-
-```sh
-pnpm add tona
-```
-
-修改 src/main.ts
-
-```ts
-import { createTheme } from 'tona'
-import './index.css'
-
-function myPlugin() {
-  console.log("Hello Tona!")
-}
-
-createTheme().use(myPlugin)
+pnpm create tona
 ```
 
 本地开发
