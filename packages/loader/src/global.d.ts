@@ -5,6 +5,7 @@ declare global {
     opts: any
     acnb: () => void
     theme: any
+    tona: any
     currentBlogApp: string
   }
 }

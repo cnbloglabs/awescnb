@@ -1,11 +1,11 @@
-# @acnb/ui
+# @tona/ui
 
-awescnb 项目的 UI 组件库，提供可复用的 Preact 组件。
+Tona UI 组件库，提供可复用的 Preact 组件。
 
 ## 安装
 
 ```bash
-pnpm add @acnb/ui
+pnpm add @tona/ui
 ```
 
 ## 组件
@@ -15,7 +15,7 @@ pnpm add @acnb/ui
 按钮组件，支持多种变体和尺寸。
 
 ```tsx
-import { Button } from '@acnb/ui'
+import { Button } from '@tona/ui'
 
 // 基础用法
 <Button>点击我</Button>
@@ -41,7 +41,7 @@ import { Button } from '@acnb/ui'
 Slot 组件用于将 props 传递给子组件，类似于 Radix UI 的 Slot 组件。
 
 ```tsx
-import { Slot } from '@acnb/ui'
+import { Slot } from '@tona/ui'
 
 // 基础用法
 <Slot className="custom-class">
@@ -59,7 +59,7 @@ import { Slot } from '@acnb/ui'
 工具函数，用于合并 CSS 类名。
 
 ```tsx
-import { cn } from '@acnb/ui'
+import { cn } from '@tona/ui'
 
 const className = cn('base-class', 'conditional-class', {
   'active-class': isActive

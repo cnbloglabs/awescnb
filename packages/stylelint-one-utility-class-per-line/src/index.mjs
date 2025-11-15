@@ -7,17 +7,17 @@ const {
   utils: { report, ruleMessages },
 } = stylelint
 
-const name = '@acnb/stylelint-one-utility-class-per-line'
+const name = '@tona/stylelint-one-utility-class-per-line'
 
 const messages = ruleMessages(name, {
-  className: classNames =>
+  className: (classNames) =>
     `Each line should contain only one Tailwind utility class; "${classNames}"`,
-  spacing: classNames =>
+  spacing: (classNames) =>
     `Each utility class used with @apply should be indented by 2 spaces on a new line; ${classNames}`,
 })
 
 const meta = {
-  url: 'https://github.com/cnbloglabs/awescnb/blob/main/packages/stylelint-one-utility-class-per-line/README.md',
+  url: 'https://github.com/cnbloglabs/tona/blob/main/packages/stylelint-one-utility-class-per-line/README.md',
   fixable: true,
 }
 
@@ -26,7 +26,7 @@ function rule() {
   return (root, result) => {
     root.walkAtRules('apply', (rule) => {
       if (!rule.params.includes(' ')) {
-      // If there are no spaces in the params, we don't need to check anything
+        // If there are no spaces in the params, we don't need to check anything
         return
       }
 

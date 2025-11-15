@@ -29,7 +29,7 @@ export function Footer() {
             </a>
             . The source code is available on{' '}
             <a
-              href='https://github.com/cnbloglabs/awescnb'
+              href='https://github.com/cnbloglabs/tona'
               target='_blank'
               className='underline transition-colors hover:text-foreground'
               rel='noreferrer noopener'

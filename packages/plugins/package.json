@@ -1,5 +1,5 @@
 {
-  "name": "@acnb/plugins",
+  "name": "@tona/plugins",
   "version": "0.5.5",
   "description": "",
   "author": {
@@ -8,13 +8,13 @@
     "email": "guangzan1999@outlook.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/acnblogs/acnb-plugins#readme",
+  "homepage": "https://github.com/acnblogs/tona#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acnblogs/acnb-plugins.git"
+    "url": "git+https://github.com/acnblogs/tona.git"
   },
   "bugs": {
-    "url": "https://github.com/acnblogs/acnb-plugins/issues"
+    "url": "https://github.com/acnblogs/tona/issues"
   },
   "keywords": [
     "博客园"
@@ -36,8 +36,8 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@acnb/core": "workspace:*",
-    "@acnb/options": "workspace:*",
+    "@tona/core": "workspace:*",
+    "@tona/options": "workspace:*",
     "notyf": "catalog:"
   },
   "devDependencies": {

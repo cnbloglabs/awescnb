@@ -2,7 +2,7 @@
   "name": "@tona/vite",
   "type": "module",
   "version": "0.1.0",
-  "description": "Vite plugin for awescnb themes - combines dynamic script extension and shared assets serving",
+  "description": "Vite plugin for Tona themes - combines dynamic script extension and shared assets serving",
   "author": {
     "name": "guangzan",
     "url": "https://www.cnblogs.com/guangzan",
@@ -12,10 +12,10 @@
   "homepage": "https://github.com/cnbloglabs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnbloglabs/awescnb.git"
+    "url": "git+https://github.com/cnbloglabs/tona.git"
   },
   "bugs": {
-    "url": "https://github.com/cnbloglabs/awescnb/issues"
+    "url": "https://github.com/cnbloglabs/tona/issues"
   },
   "keywords": [
     "vite",

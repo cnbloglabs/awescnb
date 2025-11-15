@@ -1,5 +1,5 @@
 {
-  "name": "loader",
+  "name": "@tona/loader",
   "type": "module",
   "version": "1.0.0",
   "description": "Loading theme js file",
@@ -7,7 +7,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://hub.fastgit.org/awescnb/loader.git"
+    "url": "https://hub.fastgit.org/cnbloglabs/loader.git"
   },
   "keywords": [
     "博客园",

@@ -1,5 +1,5 @@
 // 评论输入表情
-import { getEmojiOptions } from '@acnb/options'
+import { getEmojiOptions } from '@tona/options'
 import { isPostDetailsPage } from '../../utils/cnblog'
 import { isUrl } from '../../utils/helpers'
 

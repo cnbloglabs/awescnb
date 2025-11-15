@@ -1,5 +1,5 @@
-import { useQueryDOM } from '@acnb/hooks'
-import { getCurrentPostDateAdded } from '@acnb/utils'
+import { useQueryDOM } from '@tona/hooks'
+import { getCurrentPostDateAdded } from '@tona/utils'
 
 interface PostInfo {
   publishTime: string | null

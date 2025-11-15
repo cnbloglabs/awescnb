@@ -1,4 +1,4 @@
-import { useEventCallback } from '@acnb/hooks'
+import { useEventCallback } from '@tona/hooks'
 import { throttle } from 'es-toolkit'
 import type { DebouncedFuncLeading } from 'node_modules/es-toolkit/dist/compat/function/debounce.d.mts'
 import { useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'

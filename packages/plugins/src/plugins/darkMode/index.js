@@ -1,4 +1,4 @@
-import { getDarkModeOptions } from '@acnb/options'
+import { getDarkModeOptions } from '@tona/options'
 
 /**
  * 覆盖自定义背景色

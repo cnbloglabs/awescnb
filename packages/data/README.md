@@ -1,6 +1,6 @@
-# acnb-themes-data
+# tona-themes-data
 
-📦 acnb 公共皮肤列表数据。
+📦 Tona 公共皮肤列表数据。
 
 ## 运行构建
 
@@ -12,7 +12,7 @@ npm run build
 
 ## 贡献
 
-如果你使用 acnb 构建了皮肤，欢迎将你的皮肤贡献给社区。打开 src/themes.ts，添加你的皮肤文件链接。
+如果你使用 Tona 构建了皮肤，欢迎将你的皮肤贡献给社区。打开 src/themes.ts，添加你的皮肤文件链接。
 
 1. 欢迎 fork！
 2. 创建你的特性分支：git checkout -b your-new-feature

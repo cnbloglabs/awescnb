@@ -1,4 +1,4 @@
-import { createTheme } from '@acnb/core'
+import { createTheme } from '@tona/core'
 import {
   background,
   catalog,
@@ -16,7 +16,7 @@ import {
   signature,
   tools,
   webTag,
-} from '@acnb/plugins'
+} from '@tona/plugins'
 import './style/index.scss'
 
 Object.values(import.meta.glob('./modules/**/*.js', { eager: true })).forEach(

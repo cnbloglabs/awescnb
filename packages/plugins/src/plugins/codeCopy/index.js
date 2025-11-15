@@ -1,7 +1,7 @@
 /**
  * 构建代码块复制按钮
  */
-import { getCodeCopyOptions } from '@acnb/options'
+import { getCodeCopyOptions } from '@tona/options'
 import { isMd, isPostDetailsPage } from '../../utils/cnblog'
 import { copyToClipboard } from '../../utils/helpers'
 import { toast } from '../toast'

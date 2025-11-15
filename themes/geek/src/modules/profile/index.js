@@ -1,4 +1,4 @@
-import { getThemeOptions } from '@acnb/options'
+import { getThemeOptions } from '@tona/options'
 import {
   appGroup,
   appIng,

@@ -1,4 +1,4 @@
-import { Toaster as Sonner, type ToasterProps } from '@acnb/sonner'
+import { Toaster as Sonner, type ToasterProps } from '@tona/sonner'
 import {
   CircleCheckIcon,
   InfoIcon,

@@ -1,5 +1,5 @@
 // 音乐播放器
-import { getMusicPlayerOptions } from '@acnb/options'
+import { getMusicPlayerOptions } from '@tona/options'
 import { APlayerCss, APlayerJs } from '../../constants/cdn'
 import { getCurrentPage } from '../../utils/cnblog'
 import { loadLink, loadScript, userAgent } from '../../utils/helpers'

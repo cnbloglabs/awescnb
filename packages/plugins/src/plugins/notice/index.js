@@ -1,4 +1,4 @@
-import { getNoticeOptions } from '@acnb/options'
+import { getNoticeOptions } from '@tona/options'
 import { toast } from '../toast'
 
 function shoot(contents) {

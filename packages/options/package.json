@@ -1,5 +1,5 @@
 {
-  "name": "@acnb/options",
+  "name": "@tona/options",
   "version": "0.2.9",
   "description": "",
   "author": {
@@ -48,7 +48,7 @@
     "test:run": "vitest run"
   },
   "dependencies": {
-    "@acnb/core": "workspace:*"
+    "@tona/core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:",

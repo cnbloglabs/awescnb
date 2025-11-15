@@ -1,4 +1,4 @@
-import { getNotationOptions } from '@acnb/options'
+import { getNotationOptions } from '@tona/options'
 import { notationJs } from '../../constants/cdn'
 import { getCurrentPage } from '../../utils/cnblog'
 import { loadScript } from '../../utils/helpers'

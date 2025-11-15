@@ -1,4 +1,4 @@
-declare module '@acnb/plugins' {
+declare module '@tona/plugins' {
   export function musicPlayer(theme: any, devOptions?: any): void
   export function background(theme: any, devOptions?: any): void
   export function barrage(theme: any, devOptions?: any): void

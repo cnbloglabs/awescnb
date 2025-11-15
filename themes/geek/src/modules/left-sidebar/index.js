@@ -1,4 +1,4 @@
-import { getLinksOptions } from '@acnb/options'
+import { getLinksOptions } from '@tona/options'
 import {
   admin,
   cnblogHome,

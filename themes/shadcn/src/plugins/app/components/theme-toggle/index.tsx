@@ -1,4 +1,4 @@
-import { setCodeTheme } from '@acnb/utils'
+import { setCodeTheme } from '@tona/utils'
 import { cva } from 'class-variance-authority'
 import { Monitor, Moon, Sun } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'

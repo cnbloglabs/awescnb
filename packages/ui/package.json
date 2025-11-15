@@ -1,7 +1,7 @@
 {
-  "name": "@acnb/ui",
+  "name": "@tona/ui",
   "version": "0.2.9",
-  "description": "UI components for awescnb",
+  "description": "UI components for Tona",
   "author": {
     "name": "guangzan",
     "url": "https://www.cnblogs.com/guangzan",
@@ -11,10 +11,10 @@
   "homepage": "https://github.com/cnbloglabs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnbloglabs/awescnb.git"
+    "url": "git+https://github.com/cnbloglabs/tona.git"
   },
   "bugs": {
-    "url": "https://github.com/cnbloglabs/awescnb/issues"
+    "url": "https://github.com/cnbloglabs/tona/issues"
   },
   "keywords": [
     "ui",

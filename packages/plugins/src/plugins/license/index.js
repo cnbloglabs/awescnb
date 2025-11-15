@@ -1,5 +1,5 @@
 // 构建随笔签名
-import { getLicenseOptions } from '@acnb/options'
+import { getLicenseOptions } from '@tona/options'
 import {
   getBlogname,
   getCurrentPage,

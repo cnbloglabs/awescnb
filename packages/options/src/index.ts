@@ -1,4 +1,4 @@
-import { defineOptions } from '@acnb/core'
+import { defineOptions } from '@tona/core'
 import type {
   GetBackgroundOptions,
   GetBarragesOptions,
@@ -195,10 +195,10 @@ export const getMusicPlayerOptions: GetMusicPlayerOptions = defineOptions(
     },
     audio: [
       {
-        name: '404 not found',
-        artist: 'REOL',
-        url: 'https://guangzan.gitee.io/imagehost/awescnb/music/demo4.mp3',
-        cover: 'https://guangzan.gitee.io/imagehost/awescnb/music/demo.jpg',
+        name: '',
+        artist: '',
+        url: '',
+        cover: '',
         lrc: '',
       },
     ],

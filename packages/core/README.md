@@ -1,11 +1,11 @@
-# acnb-core
+# @tona/core
 
 API for creating cnblog theme.
 
 ## Install
 
 ```shell
-npm i @acnb/core
+npm i @tona/core
 ```
 
 ## API
@@ -15,7 +15,7 @@ npm i @acnb/core
 Returns a theme instance that provides a theme context.
 
 ```js
-import { createTheme } from '@acnb/core'
+import { createTheme } from '@tona/core'
 
 const theme = createTheme()
 ```
@@ -25,7 +25,7 @@ const theme = createTheme()
 Returns a generic configuration object.
 
 ```js
-import { defineOptions } from '@acnb/core'
+import { defineOptions } from '@tona/core'
 
 const getBackgroundOptions = defineOptions('bodyBackground', {
   enable: false,
@@ -51,7 +51,7 @@ const opts = {
 Using configuration aliases:
 
 ```javascript
-import { defineOptions } from '@acnb/core'
+import { defineOptions } from '@tona/core'
 
 const getBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
   enable: false,
@@ -65,7 +65,7 @@ const getBackgroundOptions = defineOptions(['bodyBackground', 'background'], {
 
 ```js
 // plugin.js
-import { defineOptions } from '@acnb/core'
+import { defineOptions } from '@tona/core'
 
 export function backgroundPlugin(theme, devOptions, pluginOptions) {
   const getBackgroundOptions = defineOptions('bodyBackground', {
@@ -95,7 +95,7 @@ export function backgroundPlugin(theme, devOptions, pluginOptions) {
 
 ```js
 // theme/index.js
-import { createTheme } from '@acnb/core'
+import { createTheme } from '@tona/core'
 import { backgroundPlugin } from './plugin'
 
 const theme = createTheme()

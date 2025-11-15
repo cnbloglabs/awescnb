@@ -1,5 +1,5 @@
 {
-  "name": "@acnb/sonner",
+  "name": "@tona/sonner",
   "version": "0.1.0",
   "description": "Preact toast notification component based on sonner",
   "author": {
@@ -8,13 +8,13 @@
     "email": "guangzan1999@outlook.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/cnbloglabs/awescnb",
+  "homepage": "https://github.com/cnbloglabs/tona",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnbloglabs/awescnb.git"
+    "url": "git+https://github.com/cnbloglabs/tona.git"
   },
   "bugs": {
-    "url": "https://github.com/cnbloglabs/awescnb/issues"
+    "url": "https://github.com/cnbloglabs/tona/issues"
   },
   "keywords": [
     "preact",

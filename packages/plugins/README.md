@@ -1,20 +1,20 @@
 # plugins
 
-Plugins for acnb.
+Plugins for Tona theme.
 
 ## Usage
 
 ```bash
-npm i @acnb/core
+npm i @tona/core
 ```
 
 ```bash
-npm i @acnb/plugins
+npm i @tona/plugins
 ```
 
 ```js
-import { createTheme } from '@acnb/core'
-import { background } from '@acnb/plugins'
+import { createTheme } from '@tona/core'
+import { background } from '@tona/plugins'
 
 createTheme().use(background)
 ```
@@ -22,8 +22,8 @@ createTheme().use(background)
 Configure the default behavior of the plugin in your Theme
 
 ```js
-import { createTheme } from '@acnb/core'
-import { background } from '@acnb/plugins'
+import { createTheme } from '@tona/core'
+import { background } from '@tona/plugins'
 
 createTheme().use(background, {
   // The default configuration of the Theme
@@ -34,8 +34,8 @@ createTheme().use(background, {
 Configure background plugin
 
 ```js
-import { createTheme } from '@acnb/core'
-import { background } from '@acnb/plugins'
+import { createTheme } from '@tona/core'
+import { background } from '@tona/plugins'
 
 createTheme().use(
   background,
