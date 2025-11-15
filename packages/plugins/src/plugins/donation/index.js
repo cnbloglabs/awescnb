@@ -1,4 +1,4 @@
-import { getDonationOptions } from '@acnb/options'
+import { getDonationOptions } from '@tona/options'
 import { getCurrentPage } from '../../utils/cnblog'
 import { poll } from '../../utils/helpers'
 

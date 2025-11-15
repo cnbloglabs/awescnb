@@ -32,18 +32,18 @@ $emoji: (
   hoverBorderColor: var(--color-primary),
 );
 
-@import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/signature/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/emoji/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/imagePreview/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/notice/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/license/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/tools/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/codeTrafficLight/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/postMessage/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/commentsAvatars/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/signature/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/emoji/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/imagePreview/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/notice/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/license/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/tools/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/darkMode/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/clickEffects/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/musicPlayer/index.scss';
 
 // comments avatars
 .custom-comment-avatar {

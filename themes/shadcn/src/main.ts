@@ -1,4 +1,4 @@
-import { createTheme } from '@acnb/core'
+import { createTheme } from '@tona/core'
 import './styles/globals.css'
 import { app } from './plugins/app'
 import { smoothScroll } from './plugins/smooth-scroll'

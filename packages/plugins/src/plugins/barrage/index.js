@@ -1,5 +1,5 @@
 // 弹幕
-import { getBarragesOptions } from '@acnb/options'
+import { getBarragesOptions } from '@tona/options'
 import {
   getClientRect,
   randomColor,
@@ -42,7 +42,12 @@ async function shootBarrage(textList, enable, opacity, colors, fontSize) {
   for (let i = 0; i < textList.length; i++) {
     const text = textList[i]
     const $barrage = document.createElement('span')
-    const barrageStyle = `left: ${wrapWidth}px;top: ${randomNum(wrapHeight - 30, 1)}px;color: ${randomColor(colors.length ? colors : defaultColors)};opacity: ${opacity};font-size: ${fontSize};`
+    const barrageStyle = `left: ${wrapWidth}px;top: ${randomNum(
+      wrapHeight - 30,
+      1,
+    )}px;color: ${randomColor(
+      colors.length ? colors : defaultColors,
+    )};opacity: ${opacity};font-size: ${fontSize};`
 
     $barrage.style.cssText = barrageStyle
     $barrage.textContent = text

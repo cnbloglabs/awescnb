@@ -1,4 +1,4 @@
-import { Slot } from '@acnb/ui'
+import { Slot } from '@tona/ui'
 import { cva, type VariantProps } from 'class-variance-authority'
 import type { ComponentChildren } from 'preact'
 

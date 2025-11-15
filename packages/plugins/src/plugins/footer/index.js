@@ -1,4 +1,4 @@
-import { getLinksOptions } from '@acnb/options'
+import { getLinksOptions } from '@tona/options'
 
 /**
  * 构建 copyright
@@ -8,7 +8,7 @@ function buildCopyright() {
 
   const el = `<div id='copyright'>
                     <span>Copyright © ${new Date().getFullYear()} ${nickName}</span>
-                    <span> Powered by you 🌊 Theme in ${'acnb'.link('#')}</span>
+                    <span> Powered by you 🌊 Theme in ${'tona'.link('#')}</span>
                 </div>`
 
   $('#footer').empty().append(el)

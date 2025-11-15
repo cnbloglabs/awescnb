@@ -1,4 +1,4 @@
-import { useQueryDOM } from '@acnb/hooks'
+import { useQueryDOM } from '@tona/hooks'
 import type { ProfileData, SocialLinkItem } from './types'
 
 function extractSocials(root: Element | null): SocialLinkItem[] {

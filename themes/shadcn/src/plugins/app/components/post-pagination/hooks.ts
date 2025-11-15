@@ -1,4 +1,4 @@
-import { useQueryDOM } from '@acnb/hooks'
+import { useQueryDOM } from '@tona/hooks'
 import type { PaginationItem } from './types'
 
 export function usePaginationItems() {

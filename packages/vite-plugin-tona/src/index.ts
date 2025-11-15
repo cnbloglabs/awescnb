@@ -29,7 +29,7 @@ export interface TonaPluginOptions {
 }
 
 /**
- * Vite plugin for awescnb themes - combines dynamic script extension and shared assets serving
+ * Vite plugin for Tona themes - combines dynamic script extension and shared assets serving
  */
 export default function tona(options: TonaPluginOptions = {}): Plugin {
   const {

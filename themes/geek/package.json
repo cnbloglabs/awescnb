@@ -6,9 +6,9 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@acnb/core": "workspace:*",
-    "@acnb/options": "workspace:*",
-    "@acnb/plugins": "workspace:*"
+    "@tona/core": "workspace:*",
+    "@tona/options": "workspace:*",
+    "@tona/plugins": "workspace:*"
   },
   "devDependencies": {
     "@tona/vite": "workspace:*",

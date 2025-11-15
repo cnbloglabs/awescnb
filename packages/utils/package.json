@@ -1,5 +1,5 @@
 {
-  "name": "@acnb/utils",
+  "name": "@tona/utils",
   "version": "1.0.8",
   "type": "module",
   "description": "",
@@ -9,13 +9,13 @@
     "email": "guangzan1999@outlook.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/acnblogs/utils#readme",
+  "homepage": "https://github.com/acnblogs/tona#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acnblogs/utils.git"
+    "url": "git+https://github.com/acnblogs/tona.git"
   },
   "bugs": {
-    "url": "https://github.com/acnblogs/utils/issues"
+    "url": "https://github.com/acnblogs/tona/issues"
   },
   "keywords": [
     "博客园"

@@ -1,6 +1,6 @@
 # vite-plugin-tona
 
-Vite plugin for awescnb themes - combines dynamic script extension and shared assets serving.
+Vite plugin for Tona themes - combines dynamic script extension and shared assets serving.
 
 ## Installation
 

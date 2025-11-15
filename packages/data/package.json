@@ -1,13 +1,13 @@
 {
-  "name": "acnb-themes-data",
+  "name": "@tona/themes",
   "type": "module",
   "version": "0.0.1",
-  "description": "📦 acnb theme list.",
-  "author": "awescnb",
+  "description": "tona theme list.",
+  "author": "guangzan",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://hub.fastgit.org/awescnb/acnb-themes-data.git"
+    "url": "https://hub.fastgit.org/cnbloglabs/tona.git"
   },
   "keywords": [
     "博客园",

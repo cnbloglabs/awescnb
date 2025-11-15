@@ -1,8 +1,8 @@
-# acnb-loader
+# @tona/loader
 
 **中文** | [English](./README.md)
 
-🚀 awescnb 博客园皮肤加载器。
+🚀 Tona 博客园皮肤加载器。
 
 Loader 接收一个配置对象，将该对象挂载到窗口，然后根据传入的配置对象中的 `configurationObject.theme` 加载相应的皮肤文件。
 
@@ -19,7 +19,7 @@ Loader 接收一个配置对象，将该对象挂载到窗口，然后根据传�
     },
     // 其他配置
   };
-  $.awesCnb(opts);
+  $.tona(opts);
 </script>
 ```
 
@@ -30,10 +30,10 @@ Loader 接收一个配置对象，将该对象挂载到窗口，然后根据传�
 <script>
   const opts = {
     theme: {
-      name: "https://guangzan.gitee.io/awescnb/reacg.js",
+      name: "https://blog-static.cnblogs.com/files/guangzan/reacg.js",
     },
     // 其他配置
   };
-  $.awesCnb(opts);
+  $.tona(opts);
 </script>
 ```

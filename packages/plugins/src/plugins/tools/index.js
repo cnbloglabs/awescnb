@@ -1,4 +1,4 @@
-import { getToolsOptions } from '@acnb/options'
+import { getToolsOptions } from '@tona/options'
 import { getCurrentPage, likePost } from '../../utils/cnblog'
 import { isPhone } from '../../utils/helpers'
 import { toast } from '../toast'

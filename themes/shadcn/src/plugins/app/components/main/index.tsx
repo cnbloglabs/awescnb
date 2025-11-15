@@ -1,4 +1,4 @@
-import { getCurrentPage } from '@acnb/utils'
+import { getCurrentPage } from '@tona/utils'
 import { Home } from '../home'
 import { Post } from '../post'
 

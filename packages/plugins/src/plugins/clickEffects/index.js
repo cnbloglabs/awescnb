@@ -1,4 +1,4 @@
-import { getClickEffectsOptions } from '@acnb/options'
+import { getClickEffectsOptions } from '@tona/options'
 
 function ColorBall(params) {
   const defaultParams = {

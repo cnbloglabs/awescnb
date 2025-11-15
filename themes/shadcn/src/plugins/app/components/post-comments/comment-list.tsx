@@ -1,5 +1,5 @@
-import { useAjaxComplete } from '@acnb/hooks'
-import { toast } from '@acnb/sonner'
+import { useAjaxComplete } from '@tona/hooks'
+import { toast } from '@tona/sonner'
 import { CommentEmpty } from './comment-empty'
 import { CommentItemComponent } from './comment-item'
 import { CommentSkeleton } from './comment-skeleton'

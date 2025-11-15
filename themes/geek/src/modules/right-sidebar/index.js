@@ -1,4 +1,4 @@
-import { getGithubOptions } from '@acnb/options'
+import { getGithubOptions } from '@tona/options'
 import { contact, message } from '../../constants/links'
 import {
   getArticleCount,

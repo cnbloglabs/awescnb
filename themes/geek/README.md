@@ -6,10 +6,6 @@
 
 支持所有现代浏览器，Internet Explorer 11 +。
 
-## 在博客园安装
-
-请 [点击这里](https://www.yuque.com/awescnb) 查看文档进行安装。
-
 ## 特性
 
 - 💻 兼容桌面、平板、手机

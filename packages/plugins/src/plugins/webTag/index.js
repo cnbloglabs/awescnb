@@ -1,5 +1,5 @@
 // 设置网站图标和标题
-import { getWebsiteTagOptions } from '@acnb/options'
+import { getWebsiteTagOptions } from '@tona/options'
 
 /**
  * 构建网页标题

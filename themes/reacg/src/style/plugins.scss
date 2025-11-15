@@ -47,28 +47,28 @@ $emoji: (
   fontEmojiSize: 16px,
 );
 
-@import '/node_modules/@acnb/plugins/src/plugins/background/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/charts/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/clickEffects/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/codeTrafficLight/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/colorMode/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/commentsAvatars/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/darkMode/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/donation/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/emoji/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/imagePreview/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/license/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/live2d/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/lock/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/musicPlayer/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/notice/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/postBottomImage/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/postMessage/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/postTopImage/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/qrcode/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/signature/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/tools/index.scss';
-@import '/node_modules/@acnb/plugins/src/plugins/webTag/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/background/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/charts/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/clickEffects/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/codeTrafficLight/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/colorMode/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/commentsAvatars/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/darkMode/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/donation/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/emoji/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/imagePreview/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/license/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/live2d/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/lock/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/musicPlayer/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/notice/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/postBottomImage/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/postMessage/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/postTopImage/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/qrcode/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/signature/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/tools/index.scss';
+@import '/node_modules/@tona/plugins/src/plugins/webTag/index.scss';
 
 #sidebar_news .custom-signature {
   padding-top: 0;
@@ -135,9 +135,7 @@ $emoji: (
         &::after {
           content: '';
           opacity: 1;
-          transition:
-            transform 0.2s,
-            opacity 0.2s;
+          transition: transform 0.2s, opacity 0.2s;
           transform: scale(1) translateX(0);
         }
       }

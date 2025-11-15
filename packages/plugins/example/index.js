@@ -1,4 +1,4 @@
-import { createTheme } from '@acnb/core'
+import { createTheme } from '@tona/core'
 import {
   clickEffects,
   codeHighlight,

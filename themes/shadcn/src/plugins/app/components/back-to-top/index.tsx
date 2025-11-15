@@ -1,4 +1,4 @@
-import { getCurrentPage } from '@acnb/utils'
+import { getCurrentPage } from '@tona/utils'
 import { cva } from 'class-variance-authority'
 import { ChevronUp } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'

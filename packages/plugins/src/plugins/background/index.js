@@ -1,4 +1,4 @@
-import { getBackgroundOptions } from '@acnb/options'
+import { getBackgroundOptions } from '@tona/options'
 import { isUrl, userAgent } from '../../utils/helpers'
 
 /**

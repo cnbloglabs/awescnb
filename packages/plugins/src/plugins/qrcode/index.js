@@ -1,5 +1,5 @@
 // 二维码
-import { getQrcodeOptions } from '@acnb/options'
+import { getQrcodeOptions } from '@tona/options'
 
 /**
  * 构建二维码图片

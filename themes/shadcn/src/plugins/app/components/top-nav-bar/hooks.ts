@@ -1,5 +1,5 @@
-import { useQueryDOM } from '@acnb/hooks'
-import { isOwner } from '@acnb/utils'
+import { useQueryDOM } from '@tona/hooks'
+import { isOwner } from '@tona/utils'
 import {
   Bell,
   Edit3,

@@ -1,4 +1,4 @@
-import { getCurrentPage } from '@acnb/utils'
+import { getCurrentPage } from '@tona/utils'
 
 export function checkShouldVisible() {
   const current = getCurrentPage()
