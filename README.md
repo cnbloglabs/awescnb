@@ -48,19 +48,12 @@ pnpm build
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 开启 Pull Request
 
-## 特别鸣谢
-
-<a href="https://github.com/GShang2018">
-  <img src="https://github.com/GShang2018.png" width="50" height="50" alt="GShang2018" style="border-radius: 50%;" />
-</a>
-
-
 ### 特别鸣谢
 
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://www.cnblogs.com/gshang"><img src="https://www.cnblogs.com/skins/custom/images/logo.gif" width="80" alt=""/><br />GShang</a></td>
+      <td align="center"><a href="https://www.cnblogs.com/gshang"><img src="https://avatars.githubusercontent.com/u/40145789?v=4" width="60" alt=""/><br />GShang</a></td>
     </tr>
   </tbody>
 </table>
