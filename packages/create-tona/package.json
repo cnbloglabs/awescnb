@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnbloglabs/tona.git",
+    "url": "git+https://github.com/guangzan/tona.git",
     "directory": "packages/create-tona"
   },
   "bugs": {
-    "url": "https://github.com/cnbloglabs/tona/issues"
+    "url": "https://github.com/guangzan/tona/issues"
   },
-  "homepage": "https://github.com/cnbloglabs/tona/tree/main/packages/create-tona#readme",
-  "funding": "https://github.com/cnbloglabs/tona?sponsor=1",
+  "homepage": "https://github.com/guangzan/tona/tree/main/packages/create-tona#readme",
+  "funding": "https://github.com/guangzan/tona?sponsor=1",
   "devDependencies": {
     "@clack/prompts": "catalog:",
     "@types/cross-spawn": "catalog:",
