@@ -8,10 +8,10 @@
 </div>
  
 <p align="center">
-  <a href="https://github.com/cnbloglabs/tona/stargazers"><img src="https://img.shields.io/github/stars/cnbloglabs/tona?style=flat-square" alt="Stars"></a>
-  <a href="https://github.com/cnbloglabs/tona/releases"><img src="https://img.shields.io/github/v/tag/cnbloglabs/tona?label=version&style=flat-square" alt="Version"></a>
+  <a href="https://github.com/guangzan/tona/stargazers"><img src="https://img.shields.io/github/stars/guangzan/tona?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/guangzan/tona/releases"><img src="https://img.shields.io/github/v/tag/guangzan/tona?label=version&style=flat-square" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
-  <a href="https://github.com/cnbloglabs/tona/commits"><img src="https://img.shields.io/github/commit-activity/m/cnbloglabs/tona?style=flat-square" alt="Commits"></a>
+  <a href="https://github.com/guangzan/tona/commits"><img src="https://img.shields.io/github/commit-activity/m/guangzan/tona?style=flat-square" alt="Commits"></a>
 </p>
 
 ## 使用皮肤
@@ -47,3 +47,20 @@ pnpm build
 3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 开启 Pull Request
+
+## 特别鸣谢
+
+<a href="https://github.com/GShang2018">
+  <img src="https://github.com/GShang2018.png" width="50" height="50" alt="GShang2018" style="border-radius: 50%;" />
+</a>
+
+
+### 特别鸣谢
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://www.cnblogs.com/gshang"><img src="https://www.cnblogs.com/skins/custom/images/logo.gif" width="80" alt=""/><br />GShang</a></td>
+    </tr>
+  </tbody>
+</table>
