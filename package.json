@@ -19,13 +19,14 @@
     "prepare": "lefthook install"
   },
   "devDependencies": {
-    "tona-vite": "workspace:*",
     "@biomejs/biome": "catalog:",
     "@clack/prompts": "catalog:",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "catalog:",
     "bumpp": "catalog:",
     "lefthook": "catalog:",
     "picocolors": "catalog:",
+    "tona-vite": "workspace:*",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:"

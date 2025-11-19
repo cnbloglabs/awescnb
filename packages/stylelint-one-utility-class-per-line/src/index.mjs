@@ -17,7 +17,7 @@ const messages = ruleMessages(name, {
 })
 
 const meta = {
-  url: 'https://github.com/cnbloglabs/tona/blob/main/packages/stylelint-one-utility-class-per-line/README.md',
+  url: 'https://github.com/guangzan/tona/blob/main/packages/stylelint-one-utility-class-per-line/README.md',
   fixable: true,
 }
 

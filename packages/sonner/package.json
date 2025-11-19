@@ -8,13 +8,13 @@
     "email": "guangzan1999@outlook.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/cnbloglabs/tona",
+  "homepage": "https://github.com/guangzan/tona",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnbloglabs/tona.git"
+    "url": "git+https://github.com/guangzan/tona.git"
   },
   "bugs": {
-    "url": "https://github.com/cnbloglabs/tona/issues"
+    "url": "https://github.com/guangzan/tona/issues"
   },
   "keywords": [
     "preact",

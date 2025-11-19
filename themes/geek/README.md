@@ -1,6 +1,6 @@
 # Geek
 
-这是一个博客园皮肤，它来自 [Cnblog Labs](https://github.com/cnbloglabs)，欢迎使用！
+这是一个博客园皮肤，欢迎使用！
 
 ## 浏览器支持
 

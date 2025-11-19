@@ -14,11 +14,11 @@
   <a href="https://github.com/guangzan/tona/commits"><img src="https://img.shields.io/github/commit-activity/m/guangzan/tona?style=flat-square" alt="Commits"></a>
 </p>
 
-## 使用皮肤
+### 使用皮肤
 
 在博客园中使用皮肤请查看此[文档](https://www.yuque.com/r/awescnb/books)。
 
-## 开发皮肤
+### 开发皮肤
 
 初始化项目
 
@@ -38,7 +38,7 @@ pnpm dev
 pnpm build
 ```
 
-## 贡献
+### 贡献
 
 欢迎贡献代码、报告问题或提出建议！
 

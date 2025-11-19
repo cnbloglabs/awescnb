@@ -8,13 +8,13 @@
     "email": "guangzan1999@outlook.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/cnbloglabs",
+  "homepage": "https://github.com/guangzan",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cnbloglabs/options.git"
+    "url": "git+https://github.com/guangzan/options.git"
   },
   "bugs": {
-    "url": "https://github.com/cnbloglabs/options/issues"
+    "url": "https://github.com/guangzan/options/issues"
   },
   "keywords": [
     "博客园"
