@@ -23,11 +23,9 @@ import {
   tools,
   webTag,
 } from 'tona-plugins'
-import build from './build'
 import './style/index.scss'
 
 createTheme()
-  .use(build)
   .use(colorMode, {
     enable: true,
     color: '#FB7299',
