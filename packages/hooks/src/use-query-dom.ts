@@ -4,7 +4,11 @@ interface UseQueryDomOptions<T> {
   selector: string
   observe?: boolean
   queryFn: (el: Element | null) => T | null
-  ajaxUrl?: string | string[] // 监听的 AJAX 请求 URL
+
+  /**
+   * 监听的 selector 的 DOM 相关的 AJAX 请求 URL
+   */
+  ajaxUrl?: string | string[]
 }
 
 interface UseQueryDomResult<T> {
