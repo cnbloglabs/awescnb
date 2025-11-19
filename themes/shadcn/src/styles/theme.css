@@ -1,0 +1,538 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@custom-variant supports-timeline-scroll {
+  @supports (animation-timeline: scroll()) {
+    @slot;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover-border: var(--popover-border);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-edge: var(--edge);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-info: var(--info);
+  --color-success: var(--success);
+  --color-destructive: var(--destructive);
+  --color-link: var(--link);
+  --color-code: var(--code);
+  --color-code-foreground: var(--code-foreground);
+  --color-code-number: var(--code-number);
+  --color-code-highlight: var(--code-highlight);
+  --color-selection: var(--selection);
+  --color-selection-foreground: var(--selection-foreground);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --shadow-popover: var(--shadow-popover);
+
+  --animate-fade-in: fade-in var(--tw-duration, 200ms) ease-out;
+  --animate-fade-out: fade-out var(--tw-duration, 200ms) ease-out;
+
+  --animate-collapsible-fade-down:
+    collapsible-down var(--tw-duration, 200ms) ease-out,
+    fade-in var(--tw-duration, 200ms) ease-out;
+
+  --animate-collapsible-fade-up:
+    collapsible-up var(--tw-duration, 200ms) ease-out,
+    fade-out var(--tw-duration, 200ms) ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility link {
+  @apply font-medium underline underline-offset-4;
+}
+
+@utility screen-line-before {
+  @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-1 before:h-px before:w-[200vw] before:bg-edge;
+}
+
+@utility screen-line-after {
+  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw] after:bg-edge;
+}
+
+@utility step {
+  counter-increment: step;
+  &::before {
+    @apply mr-2 inline-flex size-7 items-center justify-center rounded-full border border-muted-foreground/15 bg-muted text-center -indent-px text-sm font-medium text-muted-foreground ring-1 ring-edge ring-offset-1 ring-offset-background md:absolute md:-mt-0.5 md:-ml-11.5 md:size-8;
+    content: counter(step);
+  }
+}
+
+:root {
+  /* white */
+  --background: oklch(1 0 0);
+
+  /* zinc-950 */
+  --foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-950 */
+  --primary: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --primary-foreground: oklch(0.985 0 0);
+
+  /* zinc-100 */
+  --secondary: oklch(0.967 0.001 286.375);
+
+  /* zinc-950 */
+  --secondary-foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-100 */
+  --muted: oklch(0.967 0.001 286.375);
+
+  /* zinc-500 */
+  --muted-foreground: oklch(0.552 0.016 285.938);
+
+  /* white */
+  --card: oklch(1 0 0);
+
+  /* zinc-950 */
+  --card-foreground: oklch(0.141 0.005 285.823);
+
+  /* white */
+  --popover: oklch(1 0 0);
+
+  /* zinc-950 */
+  --popover-foreground: oklch(0.141 0.005 285.823);
+
+  --popover-border: color-mix(in oklab, var(--color-black) 15%, transparent);
+
+  /* zinc-100 */
+  --accent: oklch(0.967 0.001 286.375);
+
+  --accent2: color-mix(in oklab, var(--accent) 50%, transparent);
+
+  /* zinc-900 */
+  --accent-foreground: oklch(0.21 0.006 285.885);
+
+  /* zinc-200 */
+  --border: oklch(0.92 0.004 286.32);
+
+  /* color-mix */
+  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+
+  /* zinc-200 */
+  --input: oklch(0.92 0.004 286.32);
+
+  /* zinc-400 */
+  --ring: oklch(0.705 0.015 286.067);
+
+  --info: oklch(0.67 0.17 244.98);
+
+  /* green-500 */
+  --success: oklch(0.723 0.219 149.579);
+
+  /* red-600 */
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /* blue-700 */
+  --link: oklch(0.488 0.243 264.376);
+
+  /* zinc-50 */
+  --code: oklch(0.985 0 0);
+
+  /* zinc-950 */
+  --code-foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-400 */
+  --code-number: oklch(0.705 0.015 286.067);
+
+  /* zinc-100 */
+  --code-highlight: oklch(0.967 0.001 286.375);
+
+  /* zinc-950 */
+  --selection: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --selection-foreground: oklch(0.985 0 0);
+
+  --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+  /* zinc-950 */
+  --background: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --foreground: oklch(0.985 0 0);
+
+  /* zinc-50 */
+  --primary: oklch(0.985 0 0);
+
+  /* zinc-950 */
+  --primary-foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-800 */
+  --secondary: oklch(0.274 0.006 286.033);
+
+  /* zinc-50 */
+  --secondary-foreground: oklch(0.985 0 0);
+
+  /* zinc-800 */
+  --muted: oklch(0.274 0.006 286.033);
+
+  /* zinc-400 */
+  --muted-foreground: oklch(0.705 0.015 286.067);
+
+  /* zinc-900 */
+  --card: oklch(0.21 0.006 285.885);
+
+  /* zinc-50 */
+  --card-foreground: oklch(0.985 0 0);
+
+  /* zinc-900 */
+  --popover: oklch(0.21 0.006 285.885);
+
+  /* zinc-50 */
+  --popover-foreground: oklch(0.985 0 0);
+
+  /* zinc-700 */
+  --popover-border: oklch(0.37 0.013 285.805);
+
+  /* zinc-800 */
+  --accent: oklch(0.274 0.006 286.033);
+
+  --accent2: color-mix(in oklab, var(--accent) 20%, transparent);
+
+  /* zinc-50 */
+  --accent-foreground: oklch(0.985 0 0);
+
+  /* zinc-800 */
+  --border: oklch(0.274 0.006 286.033);
+
+  /* --edge: color-mix(in oklab, var(--border) 64%, var(--background)); */
+
+  /* zinc-800 */
+  --input: oklch(0.274 0.006 286.033);
+
+  /* zinc-500 */
+  --ring: oklch(0.552 0.016 285.938);
+
+  /* green-500 */
+  --success: oklch(0.723 0.219 149.579);
+
+  /* red-700 */
+  --destructive: oklch(0.505 0.213 27.518);
+
+  /* blue-500 */
+  --link: oklch(0.623 0.214 259.815);
+
+  /* zinc-900 */
+  --code: oklch(0.21 0.006 285.885);
+
+  /* zinc-50 */
+  --code-foreground: oklch(0.985 0 0);
+
+  /* zinc-500 */
+  --code-number: oklch(0.552 0.016 285.938);
+
+  /* zinc-800 */
+  --code-highlight: oklch(0.274 0.006 286.033);
+
+  /* zinc-50 */
+  --selection: oklch(0.985 0 0);
+
+  /* zinc-950 */
+  --selection-foreground: oklch(0.141 0.005 285.823);
+
+  --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    @apply border-border outline-ring/50;
+  }
+
+  ::selection {
+    @apply bg-selection text-selection-foreground;
+  }
+
+  /* Temporarily disabled scroll-smooth (added/changed in Next.js 16) because it prevents the page from scrolling fully to the top during client-side navigation. Re-enable once the upstream behavior is fixed or when navigation/transition handling is adjusted. */
+  /* html {
+    @apply motion-safe:scroll-smooth;
+  } */
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom scrollbar styling. Thanks @shadcn-ui */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  [id] {
+    @apply scroll-mt-18;
+  }
+
+  /* Thanks https://theme-toggle.rdsx.dev */
+  /* polygon */
+  /* ::view-transition-group(root) {
+    animation-duration: 0.8s;
+    animation-timing-function: linear(
+      0 0%,
+      0.1684 2.66%,
+      0.3165 5.49%,
+      0.446 8.52%,
+      0.5581 11.78%,
+      0.6535 15.29%,
+      0.7341 19.11%,
+      0.8011 23.3%,
+      0.8557 27.93%,
+      0.8962 32.68%,
+      0.9283 38.01%,
+      0.9529 44.08%,
+      0.9711 51.14%,
+      0.9833 59.06%,
+      0.9915 68.74%,
+      1 100%
+    );
+  }
+  ::view-transition-new(root) {
+    animation-name: reveal-light;
+  }
+  ::view-transition-old(root),
+  .dark::view-transition-old(root) {
+    animation: none;
+    z-index: -1;
+  }
+  .dark::view-transition-new(root) {
+    animation-name: reveal-dark;
+  }
+  @keyframes reveal-dark {
+    from {
+      clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+    }
+    to {
+      clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+    }
+  }
+  @keyframes reveal-light {
+    from {
+      clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+    }
+    to {
+      clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+    }
+  } */
+
+  @keyframes show-top-mask {
+    to {
+      --top-mask-height: var(--mask-height);
+    }
+  }
+
+  @keyframes hide-bottom-mask {
+    to {
+      --bottom-mask-height: 0px;
+    }
+  }
+
+  @keyframes show-left-mask {
+    to {
+      --left-mask-width: var(--mask-width);
+    }
+  }
+
+  @keyframes hide-right-mask {
+    to {
+      --right-mask-width: 0px;
+    }
+  }
+}
+
+@layer components {
+  [data-rehype-pretty-code-figure] {
+    @apply relative my-[1.25em] rounded-xl bg-code text-code-foreground;
+
+    pre {
+      @apply overflow-x-auto overscroll-x-none px-4 py-4 has-data-line-numbers:px-0;
+      /* @apply supports-timeline-scroll:scroll-fade-x supports-timeline-scroll:[--mask-offset-right:-1px] supports-timeline-scroll:[--mask-width:24px] supports-timeline-scroll:has-data-line-numbers:[--mask-offset-left:calc(var(--spacing)*16-4px)]; */
+    }
+
+    code {
+      @apply font-mono text-sm;
+    }
+  }
+
+  [data-line] {
+    @apply py-0.5;
+  }
+
+  [data-line] span {
+    @apply text-(--shiki-light) dark:text-(--shiki-dark);
+  }
+
+  [data-rehype-pretty-code-title] {
+    @apply flex items-center gap-3 border-b px-4 py-2.5 text-sm text-muted-foreground [&_svg]:size-4 [&_svg]:text-muted-foreground;
+  }
+
+  [data-line-numbers] {
+    counter-reset: line;
+  }
+
+  [data-line-numbers] > [data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+    @apply sticky left-0 inline-block w-16 bg-code pr-6 text-right text-sm text-code-number;
+  }
+
+  [data-line-numbers] [data-highlighted-line][data-line]::before {
+    @apply bg-code-highlight;
+  }
+
+  [data-highlighted-line] {
+    @apply bg-code-highlight;
+  }
+}
+
+@property --top-mask-height {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+
+@property --bottom-mask-height {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 80px;
+}
+
+@property --left-mask-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+
+@property --right-mask-width {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 80px;
+}
+
+@utility scroll-fade-y {
+  --mask-height: 64px;
+  --scroll-buffer: 2rem;
+
+  /* Set up the mask layers */
+  mask-image:
+    linear-gradient(to top, transparent, var(--foreground) 90%),
+    linear-gradient(to bottom, transparent 0%, var(--foreground) 100%),
+    linear-gradient(var(--background), var(--background));
+
+  mask-size:
+    100% var(--top-mask-height),
+    100% var(--bottom-mask-height),
+    100% 100%;
+  mask-repeat: no-repeat, no-repeat, no-repeat;
+  mask-position:
+    0 0,
+    0 100%,
+    0 0;
+  /* Exclude the gradient areas from the solid mask */
+  mask-composite: exclude;
+
+  animation-name: show-top-mask, hide-bottom-mask;
+  animation-timeline: scroll(self), scroll(self);
+  animation-range:
+    0 var(--scroll-buffer),
+    calc(100% - var(--scroll-buffer)) 100%;
+  animation-fill-mode: both;
+}
+
+@utility scroll-fade-x {
+  --mask-width: 64px;
+  --mask-offset-left: 0px;
+  --mask-offset-right: 0px;
+  --scroll-buffer: 2rem;
+
+  mask-image:
+    linear-gradient(to left, transparent, var(--foreground) 90%),
+    linear-gradient(to right, transparent 0%, var(--foreground) 100%),
+    linear-gradient(var(--background), var(--background));
+
+  mask-size:
+    var(--left-mask-width) 100%,
+    var(--right-mask-width) 100%,
+    100% 100%;
+  mask-repeat: no-repeat, no-repeat, no-repeat;
+  mask-position:
+    var(--mask-offset-left) 0,
+    calc(100% - var(--mask-offset-right)) 0,
+    0 0;
+  mask-composite: exclude;
+
+  animation-name: show-left-mask, hide-right-mask;
+  animation-timeline: scroll(self inline), scroll(self inline);
+  animation-range:
+    0 var(--scroll-buffer),
+    calc(100% - var(--scroll-buffer)) 100%;
+  animation-fill-mode: both;
+}

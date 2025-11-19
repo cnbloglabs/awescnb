@@ -1,41 +1,30 @@
 import { Heart, Loader2 } from 'lucide-preact'
-import { useAjaxComplete } from 'tona-hooks'
-import { toast } from 'tona-sonner'
-import { follow, unfollow } from 'tona-utils'
-import { Button } from '@/plugins/app/components/ui/button'
-import { useFollowAction } from './dom-hooks'
+import { Button } from '@/components/ui/button'
+import { useFollow } from '@/plugins/app/hooks/use-follow'
 
 export function FollowButton() {
-  useAjaxComplete({
-    urlPattern: '/ajax/Follow/FollowBlogger',
-    onSuccess: (resp: string) => {
-      if (resp === '关注失败') {
-        toast.error('关注失败')
-      }
-    },
-    onError: () => {
-      toast.error('关注失败')
-    },
-  })
+  const { onToggleFollow, isPending, isFollowed } = useFollow()
 
-  const { data, isPending } = useFollowAction()
+  const buttonText = (() => {
+    if (isPending) return '加载中'
+    if (isFollowed) return '取消关注'
+    return '关注'
+  })()
 
-  const handleClick = () => {
-    const action = data?.isFollowed ? unfollow : follow
-    action()
-  }
+  const icon = (() => {
+    if (isPending) return <Loader2 size={18} className='animate-spin' />
+    return (
+      <Heart
+        size={18}
+        className={isFollowed ? 'fill-red-500 text-red-500' : ''}
+      />
+    )
+  })()
 
   return (
-    <Button onClick={handleClick} disabled={isPending} variant='outline'>
-      {isPending ? (
-        <Loader2 size={18} className='animate-spin' />
-      ) : (
-        <Heart
-          size={18}
-          className={data?.isFollowed ? 'fill-red-500 text-red-500' : ''}
-        />
-      )}
-      <span>{data?.isFollowed ? '取消关注' : '关注'}</span>
+    <Button onClick={onToggleFollow} disabled={isPending} variant='outline'>
+      {icon}
+      <span>{buttonText}</span>
     </Button>
   )
 }

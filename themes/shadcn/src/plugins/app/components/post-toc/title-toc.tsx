@@ -1,4 +1,4 @@
-import { cn } from '@/plugins/app/lib/utils'
+import { cn } from '@/lib/utils'
 import { MemoedItem } from './memoed-toc-item'
 import type { TocDataItem } from './toc-item'
 

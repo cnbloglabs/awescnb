@@ -1,5 +1,7 @@
 import { useAjaxComplete } from 'tona-hooks'
 import { toast } from 'tona-sonner'
+import { Panel, PanelContent, PanelHeader, PanelTitle } from '../panel'
+import { Separator } from '../separator'
 import { CommentEmpty } from './comment-empty'
 import { CommentItemComponent } from './comment-item'
 import { CommentSkeleton } from './comment-skeleton'
@@ -44,17 +46,20 @@ export function CommentList() {
   }
 
   return (
-    <div className='space-y-4'>
-      <div className='flex items-center justify-between'>
-        <h2 className='font-semibold text-foreground text-lg'>
-          评论 ({comments.length})
-        </h2>
-      </div>
-      <div className='space-y-4'>
-        {comments.map((comment) => (
-          <CommentItemComponent key={comment.id} comment={comment} />
+    <Panel id='comments'>
+      <PanelHeader>
+        <PanelTitle>评论</PanelTitle>
+      </PanelHeader>
+      <PanelContent className='p-0'>
+        {comments.map((comment, index) => (
+          <>
+            <CommentItemComponent key={comment.id} comment={comment} />
+            {index < comments.length - 1 && (
+              <Separator className='screen-line-after border-none' />
+            )}
+          </>
         ))}
-      </div>
-    </div>
+      </PanelContent>
+    </Panel>
   )
 }

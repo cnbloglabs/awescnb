@@ -1,4 +1,4 @@
-import { cn } from '@/plugins/app/lib/utils'
+import { cn } from '@/lib/utils'
 import type { TocDataItem } from './toc-item'
 
 interface Props {
@@ -25,7 +25,7 @@ export function HoverCard({
   return (
     <ul
       className={cn(
-        '-mt-1 fixed top-24 right-0 z-10 rounded-xl border',
+        '-mt-1 fixed top-24 right-0 z-1000 rounded-xl border',
         'px-3 py-1 text-xs',
         'bg-background shadow-context-menu backdrop-blur-background',
         'scrollbar-none max-h-[calc(100svh-4rem)] overflow-auto',

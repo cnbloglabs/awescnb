@@ -1,13 +1,17 @@
+import { Separator } from '../separator'
+
 export function CommentSkeleton({ count }: { count: number }) {
   return (
     <div className='space-y-4'>
       <div className='flex items-center justify-between'>
         <div className='h-6 w-20 animate-pulse rounded bg-muted' />
       </div>
-      <div className='space-y-4'>
-        {/* 渲染 3 个骨架评论项 */}
-        {Array.from({ length: count }).map((i) => (
-          <CommentSkeletonItem key={i} />
+      <div>
+        {Array.from({ length: count }).map((i, index) => (
+          <>
+            <CommentSkeletonItem key={i} />
+            {index < count - 1 && <Separator />}
+          </>
         ))}
       </div>
     </div>
@@ -16,7 +20,7 @@ export function CommentSkeleton({ count }: { count: number }) {
 
 function CommentSkeletonItem() {
   return (
-    <article className='rounded-lg border border-primary/20 bg-primary/1 p-4'>
+    <article className='screen-line-before screen-line-after border-edge border-x p-4'>
       <div className='mb-3 flex items-start justify-between'>
         <div className='flex items-center gap-3'>
           {/* 头像骨架 */}

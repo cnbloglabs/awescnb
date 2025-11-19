@@ -1,44 +1,72 @@
+import { RssIcon } from 'lucide-preact'
+import { cn } from '@/lib/utils'
 import { ThemeToggle } from '../theme-toggle'
 
-export function Footer() {
+interface Props extends React.ComponentProps<'footer'> {
+  containerClassName?: string
+}
+
+export function Footer({ containerClassName, ...props }: Props) {
   return (
-    <footer className='mt-8 border-border border-t bg-card'>
-      <div className='mx-auto max-w-7xl px-4 pt-6 pb-36 sm:px-6 lg:px-8'>
-        <div className='flex flex-col gap-4 md:flex-row md:items-center md:justify-between'>
-          <div className='flex justify-center md:justify-start'>
-            <ThemeToggle />
-          </div>
-          <div className='text-center text-muted-foreground text-sm leading-loose sm:text-sm'>
-            Built by{' '}
-            <a
-              href='https://github.com/guangzan'
-              target='_blank'
-              className='underline transition-colors hover:text-foreground'
-              rel='noreferrer noopener'
-            >
-              zane
-            </a>
-            . Powered by{' '}
-            <a
-              href='https://www.cnblogs.com'
-              target='_blank'
-              className='underline transition-colors hover:text-foreground'
-              rel='noreferrer noopener'
-            >
-              博客园
-            </a>
-            . The source code is available on{' '}
-            <a
-              href='https://github.com/cnbloglabs/tona'
-              target='_blank'
-              className='underline transition-colors hover:text-foreground'
-              rel='noreferrer noopener'
-            >
-              GitHub
-            </a>
-            .
-          </div>
+    <footer className='max-w-screen overflow-x-hidden px-2' {...props}>
+      <div
+        className={cn(
+          'screen-line-before mx-auto border-edge border-x py-4 md:max-w-3xl',
+          containerClassName,
+        )}
+      >
+        <p className='mb-1 text-balance px-4 text-center font-mono text-muted-foreground text-sm'>
+          Built by{' '}
+          <a
+            href='https://github.com/guangzan'
+            target='_blank'
+            className='underline transition-colors hover:text-foreground'
+            rel='noreferrer noopener'
+          >
+            Zane
+          </a>
+          . Powered by{' '}
+          <a
+            href='https://www.cnblogs.com'
+            target='_blank'
+            className='underline transition-colors hover:text-foreground'
+            rel='noreferrer noopener'
+          >
+            博客园
+          </a>
+          .
+        </p>
+
+        <p className='text-balance px-4 text-center font-mono text-muted-foreground text-sm'>
+          The source code is available on{' '}
+          <a
+            href='https://github.com/guangzan/tona'
+            target='_blank'
+            className='underline transition-colors hover:text-foreground'
+            rel='noreferrer noopener'
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
+      <div className='screen-line-before screen-line-after flex w-full before:z-1 after:z-1'>
+        <div className='mx-auto flex items-center justify-center gap-3 border-edge border-x bg-background px-4'>
+          <ThemeToggle />
+          <div className='flex h-11 w-px bg-edge' />
+          <a
+            className='flex items-center text-muted-foreground transition-colors hover:text-foreground'
+            href={`https://feed.cnblogs.com/blog/u/466832/rss/`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <RssIcon className='size-4' />
+            <span className='sr-only'>RSS</span>
+          </a>
         </div>
+      </div>
+      <div className='pb-[env(safe-area-inset-bottom,0px)]'>
+        <div className='flex h-2' />
       </div>
     </footer>
   )

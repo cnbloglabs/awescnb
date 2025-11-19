@@ -5,7 +5,6 @@ export function CustomCommentInput() {
 
   const handleSubmit = () => {
     if (comment.trim()) {
-      console.log('提交评论:', comment)
       setComment('')
     }
   }

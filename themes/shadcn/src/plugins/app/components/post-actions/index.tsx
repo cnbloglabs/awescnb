@@ -4,7 +4,7 @@ import { VoteButton } from './vote-button'
 
 export function PostActions() {
   return (
-    <div className='flex flex-wrap items-center justify-center gap-4 py-6'>
+    <div className='screen-line-before flex flex-wrap items-center justify-center gap-4 border-edge border-x py-6 md:max-w-5xl'>
       <VoteButton></VoteButton>
       <FollowButton></FollowButton>
       <FavoriteButton></FavoriteButton>

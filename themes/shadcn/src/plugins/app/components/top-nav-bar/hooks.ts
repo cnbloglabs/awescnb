@@ -1,8 +1,8 @@
 import {
-  Bell,
   Edit3,
   Home,
   type LucideIcon,
+  RssIcon,
   Settings,
   User,
 } from 'lucide-preact'
@@ -20,7 +20,7 @@ const iconMap = {
   首页: Home,
   新随笔: Edit3,
   联系: User,
-  订阅: Bell,
+  订阅: RssIcon,
   管理: Settings,
 }
 

@@ -8,7 +8,7 @@ interface CommentItemProps {
 
 export function CommentItemComponent({ comment }: CommentItemProps) {
   return (
-    <article className='rounded-lg border border-primary/20 bg-primary/1 p-4'>
+    <article className='not-last:screen-line-after p-4'>
       <div className='mb-3 flex items-start justify-between'>
         <div className='flex items-center gap-3'>
           {comment.avatar ? (
@@ -46,7 +46,6 @@ export function CommentItemComponent({ comment }: CommentItemProps) {
           </div>
         </div>
       </div>
-
       <div className='mb-4'>
         {comment.replyTo && (
           <div className='mb-2 rounded-md bg-muted/50 px-3 py-2'>
@@ -66,7 +65,6 @@ export function CommentItemComponent({ comment }: CommentItemProps) {
           <Markdown html={comment.content} />
         </div>
       </div>
-
       <div className='flex items-center gap-2'>
         <button
           type='button'

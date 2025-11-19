@@ -1,10 +1,10 @@
 import { Loader2, Star } from 'lucide-preact'
-import { Button } from '@/plugins/app/components/ui/button'
-import { useFavoriteAction } from './dom-hooks'
+import { Button } from '@/components/ui/button'
+import { useFavoriteStatus } from './hooks'
 import { triggerFavorite } from './utils'
 
 export function FavoriteButton() {
-  const { data, isPending } = useFavoriteAction()
+  const { data, isPending } = useFavoriteStatus()
 
   return (
     <Button

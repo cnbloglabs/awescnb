@@ -42,7 +42,7 @@ export function usePostList() {
             href,
             description,
             author: authorMatch?.[1] || '',
-            postTime: postTimeMatch?.[1] || '',
+            postTime: postTimeMatch?.[1]?.replaceAll('-', '.') || '',
             viewCount: viewCountMatch?.[1] || '0',
             commentCount: commentCountMatch?.[1] || '0',
             diggCount: diggCountMatch?.[1] || '0',

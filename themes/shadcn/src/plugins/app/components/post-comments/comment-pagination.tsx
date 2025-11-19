@@ -61,7 +61,10 @@ export function CommentPagination() {
   }
 
   return (
-    <nav aria-label='评论分页' className='mx-auto flex w-full justify-center'>
+    <nav
+      aria-label='评论分页'
+      className='screen-line-after mx-auto flex w-full justify-center border-x'
+    >
       <ul className='mt-4 mb-4 flex items-center justify-center space-x-2'>
         {items.map((item) => (
           <li key={item.text}>

@@ -1,24 +1,6 @@
 import { useQueryDOM } from 'tona-hooks'
 
-export function useFollowAction() {
-  return useQueryDOM({
-    selector: '#author_profile_follow',
-    ajaxUrl: ['/ajax/Follow/FollowBlogger', '/ajax/Follow/RemoveFollow'],
-    observe: true,
-    queryFn: (el) => {
-      const tipsText = el?.textContent
-      const isFollowed = !!(
-        tipsText?.includes('我在关注他') || tipsText?.includes('关注成功')
-      )
-
-      return {
-        isFollowed,
-      }
-    },
-  })
-}
-
-export function useVoteAction() {
+export function useVoteStatus() {
   return useQueryDOM({
     selector: '#div_digg',
     ajaxUrl: '/ajax/vote/blogpost',
@@ -40,7 +22,7 @@ export function useVoteAction() {
   })
 }
 
-export function useFavoriteAction() {
+export function useFavoriteStatus() {
   return useQueryDOM({
     selector: '#green_channel_favorite',
     // observe: true,

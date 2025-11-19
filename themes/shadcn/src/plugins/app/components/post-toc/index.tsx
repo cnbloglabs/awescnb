@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'preact/compat'
-import { cn } from '@/plugins/app/lib/utils'
+import { cn } from '@/lib/utils'
 import { BackTopIndicator } from './back-top-indicator'
 import { useScrollTracking } from './hooks/use-scroll-tracking'
 import { useTocItems } from './hooks/use-toc-items'
@@ -34,7 +34,9 @@ function LineTocWrapper() {
 
 export const PostToc = memo(() => {
   return (
-    <div className={'fixed top-24 right-0 hidden h-full w-[100px] md:block'}>
+    <div
+      className={'fixed top-24 right-0 z-1000 hidden h-full w-[100px] md:block'}
+    >
       <LineTocWrapper />
       <BackTopIndicator />
     </div>

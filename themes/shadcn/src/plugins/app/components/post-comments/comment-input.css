@@ -11,11 +11,22 @@
     @apply !hidden;
 }
 
+.custom-comment-input {
+      @apply  screen-line-after
+      border-x
+      border-edge
+      pb-4;
+}
+
 .commentbox_main.comment_textarea {
-    @apply rounded-lg
+    @apply rounded-none
+      transition-none
       bg-background
-      border-primary/20
-      w-full;
+      w-full
+      border-none
+      mt-1
+      mb-0
+      border-edge;
 }
 
 .commentbox_tab {
@@ -61,13 +72,11 @@
       field-sizing-content
       min-h-16
       w-full
-      rounded-lg
       border
       bg-transparent
       px-3
       py-2
       text-sm
-      shadow-xs
       transition-[color,box-shadow]
       outline-none
       focus-visible:ring-[3px]
@@ -78,7 +87,8 @@
 
 #commentbox_opt {
     @apply flex
-      flex-row-reverse;
+      flex-row-reverse
+      pr-3;
 }
 
 #commentbox_opt a {

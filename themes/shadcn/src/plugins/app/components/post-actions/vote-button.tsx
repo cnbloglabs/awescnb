@@ -2,8 +2,8 @@ import { Loader2, ThumbsUp } from 'lucide-preact'
 import { useAjaxComplete } from 'tona-hooks'
 import { toast } from 'tona-sonner'
 import { likePost, unLikePost } from 'tona-utils'
-import { Button } from '@/plugins/app/components/ui/button'
-import { useVoteAction } from './dom-hooks'
+import { Button } from '@/components/ui/button'
+import { useVoteStatus } from './hooks'
 
 export function VoteButton() {
   useAjaxComplete({
@@ -23,7 +23,7 @@ export function VoteButton() {
     },
   })
 
-  const { data, isPending } = useVoteAction()
+  const { data, isPending } = useVoteStatus()
 
   const handleClick = () => {
     const action = data?.isLiked ? unLikePost : likePost

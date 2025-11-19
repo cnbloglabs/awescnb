@@ -12,7 +12,7 @@ export const PostInfo = memo(() => {
   const { publishTime, updateTime, readingTime } = data
 
   return (
-    <div className='flex flex-wrap items-center gap-4 text-neutral-600 text-sm dark:text-neutral-400'>
+    <div className='mt-2 flex flex-wrap items-center gap-4 text-neutral-600 text-sm dark:text-neutral-400'>
       {publishTime && (
         <div className='flex items-center gap-1.5'>
           <Calendar size={16} strokeWidth={1} />

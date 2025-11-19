@@ -30,11 +30,13 @@ export function ThemeToggle() {
   useEffect(() => {
     const applyTheme = () => {
       if (theme === 'dark') {
+        document.documentElement.classList.remove('light')
         document.documentElement.classList.add('dark')
         document.documentElement.style.setProperty('color-scheme', 'dark')
         setCodeTheme('dark')
       } else if (theme === 'light') {
         document.documentElement.classList.remove('dark')
+        document.documentElement.classList.add('light')
         document.documentElement.style.setProperty('color-scheme', 'light')
         setCodeTheme('light')
       } else {
@@ -42,11 +44,13 @@ export function ThemeToggle() {
           '(prefers-color-scheme: dark)',
         ).matches
         if (shouldBeDark) {
+          document.documentElement.classList.remove('light')
           document.documentElement.classList.add('dark')
           document.documentElement.style.setProperty('color-scheme', 'dark')
           setCodeTheme('dark')
         } else {
           document.documentElement.classList.remove('dark')
+          document.documentElement.classList.add('light')
           document.documentElement.style.setProperty('color-scheme', 'light')
           setCodeTheme('light')
         }

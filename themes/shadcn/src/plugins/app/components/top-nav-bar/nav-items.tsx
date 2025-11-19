@@ -1,6 +1,7 @@
+import { memo } from 'preact/compat'
 import { useNavItems } from './hooks'
 
-export function NavItems() {
+export const NavItems = memo(() => {
   const { data } = useNavItems()
 
   return (
@@ -8,7 +9,7 @@ export function NavItems() {
       {data?.map((item) => (
         <li
           key={item.id}
-          className='relative cursor-default select-none rounded-lg px-4 py-2 text-muted-foreground text-sm/6 transition-all duration-200 hover:bg-primary/10 hover:text-foreground'
+          className='relative cursor-default cursor-pointer select-none rounded-lg px-4 py-2 font-medium text-muted-foreground text-sm/6 transition-all duration-200 hover:text-foreground'
           onClick={item.onClick}
         >
           <div className='flex items-center gap-2'>
@@ -19,4 +20,4 @@ export function NavItems() {
       ))}
     </ul>
   )
-}
+})
