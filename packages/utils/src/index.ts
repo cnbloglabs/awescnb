@@ -75,26 +75,44 @@ export function getCurrentPostUrl(): string {
  * @example '144690cc-79e2-4508-aa7f-08d6a1e9eeef'
  */
 export function getBlogUserGuid(): string {
-  return window.cb_blogUserGuid
+  if (window.cb_blogUserGuid) {
+    return window.cb_blogUserGuid
+  }
+
+  const followElement = document.querySelector('#p_b_follow')
+  const scriptElement = followElement?.nextElementSibling
+  if (scriptElement?.tagName === 'SCRIPT' && scriptElement.textContent) {
+    const match = scriptElement.textContent.match(
+      /getFollowStatus\(['"]([^'"]+)['"]\)/,
+    )
+    if (match?.[1]) {
+      return match[1]
+    }
+  }
+
+  return ''
 }
 
 /**
  * 关注
  */
 export function follow(): void {
-  const guid = window.cb_blogUserGuid
-  if (guid) {
-    window.follow(guid)
-  } else {
-    $('#p_b_follow>a').trigger('click')
+  if (isOwner()) {
+    return
   }
+  const guid = getBlogUserGuid()
+  window.follow(guid)
 }
 
 /**
  * 取消关注
  */
 export function unfollow(): void {
-  window.unfollow(window.cb_blogUserGuid)
+  if (isOwner()) {
+    return
+  }
+  const guid = getBlogUserGuid()
+  window.unfollow(guid)
 }
 
 /**
