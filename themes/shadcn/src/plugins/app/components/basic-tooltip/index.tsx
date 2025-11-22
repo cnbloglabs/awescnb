@@ -1,6 +1,7 @@
 import {
   Tooltip,
   TooltipContent,
+  TooltipPositioner,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 
@@ -14,7 +15,9 @@ export function BasicTooltip({
   return (
     <Tooltip>
       <TooltipTrigger>{children}</TooltipTrigger>
-      <TooltipContent>{title}</TooltipContent>
+      <TooltipPositioner>
+        <TooltipContent>{title}</TooltipContent>
+      </TooltipPositioner>
     </Tooltip>
   )
 }
