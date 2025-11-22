@@ -66,7 +66,7 @@ export function Footer({ containerClassName, ...props }: Props) {
         </div>
       </div>
       <div className='pb-[env(safe-area-inset-bottom,0px)]'>
-        <div className='flex h-2' />
+        <div className='flex h-4' />
       </div>
     </footer>
   )
