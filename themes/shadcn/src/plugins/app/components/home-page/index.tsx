@@ -7,6 +7,7 @@ import { PostList } from './post-list'
 import { ProfileCover } from './profile-cover'
 import { ProfileHeader } from './profile-header'
 import { TechStack } from './tech-stack'
+import { Tools } from './tools'
 
 export function HomePage() {
   return (
@@ -20,6 +21,9 @@ export function HomePage() {
           <Separator />
 
           <TechStack />
+          <Separator />
+
+          <Tools />
           <Separator />
 
           <About />
