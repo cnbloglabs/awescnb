@@ -1,6 +1,38 @@
+import { memo } from 'preact/compat'
 import { BasicTooltip } from '../../basic-tooltip'
 import { Panel, PanelContent, PanelHeader, PanelTitle } from '../../panel'
 import { TECH_STACK } from './constants'
+
+interface TechIconProps {
+  title: string
+  lightIcon: string
+  darkIcon?: string
+}
+
+const TechIcon = memo(({ title, lightIcon, darkIcon }: TechIconProps) => {
+  return (
+    <>
+      <img
+        src={lightIcon}
+        alt={`${title} light icon`}
+        width={32}
+        height={32}
+        loading='eager'
+        decoding='async'
+        className='!size-8 hidden [html.light_&]:block'
+      />
+      <img
+        src={darkIcon ?? lightIcon}
+        alt={`${title} dark icon`}
+        width={32}
+        height={32}
+        loading='eager'
+        decoding='async'
+        className='!size-8 hidden [html.dark_&]:block'
+      />
+    </>
+  )
+})
 
 export function TechStack() {
   return (
@@ -20,19 +52,10 @@ export function TechStack() {
                   aria-label={tech.title}
                   className='block size-8'
                 >
-                  <img
-                    src={tech.lightIcon}
-                    alt={`${tech.title} light icon`}
-                    width={32}
-                    height={32}
-                    className='!size-8 hidden [html.light_&]:block'
-                  />
-                  <img
-                    src={tech.darkIcon ?? tech.lightIcon}
-                    alt={`${tech.title} dark icon`}
-                    width={32}
-                    height={32}
-                    className='!size-8 hidden [html.dark_&]:block'
+                  <TechIcon
+                    title={tech.title}
+                    lightIcon={tech.lightIcon}
+                    darkIcon={tech.darkIcon}
                   />
                   <span className='sr-only'>{tech.title}</span>
                 </a>

@@ -1,6 +1,38 @@
+import { memo } from 'preact/compat'
 import { BasicTooltip } from '../../basic-tooltip'
 import { Panel, PanelContent, PanelHeader, PanelTitle } from '../../panel'
 import { TOOLS } from './constants'
+
+interface ToolIconProps {
+  title: string
+  lightIcon: string
+  darkIcon?: string
+}
+
+const ToolIcon = memo(({ title, lightIcon, darkIcon }: ToolIconProps) => {
+  return (
+    <>
+      <img
+        src={lightIcon}
+        alt={`${title} light icon`}
+        width={32}
+        height={32}
+        loading='eager'
+        decoding='async'
+        className='!size-8 hidden [html.light_&]:block'
+      />
+      <img
+        src={darkIcon ?? lightIcon}
+        alt={`${title} dark icon`}
+        width={32}
+        height={32}
+        loading='eager'
+        decoding='async'
+        className='!size-8 hidden [html.dark_&]:block'
+      />
+    </>
+  )
+})
 
 export function Tools() {
   return (
@@ -20,19 +52,10 @@ export function Tools() {
                   aria-label={tool.title}
                   className='block size-8'
                 >
-                  <img
-                    src={tool.lightIcon}
-                    alt={`${tool.title} light icon`}
-                    width={32}
-                    height={32}
-                    className='!size-8 hidden [html.light_&]:block'
-                  />
-                  <img
-                    src={tool.darkIcon ?? tool.lightIcon}
-                    alt={`${tool.title} dark icon`}
-                    width={32}
-                    height={32}
-                    className='!size-8 hidden [html.dark_&]:block'
+                  <ToolIcon
+                    title={tool.title}
+                    lightIcon={tool.lightIcon}
+                    darkIcon={tool.darkIcon}
                   />
                   <span className='sr-only'>{tool.title}</span>
                 </a>
