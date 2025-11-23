@@ -5,6 +5,7 @@ import { PostComments } from '../post-comments'
 import { PostDetails } from '../post-details'
 import { PostHero } from '../post-hero'
 import { PostToc } from '../post-toc'
+import { Separator } from '../separator'
 import { TopNavBar } from '../top-nav-bar'
 
 function PostContent() {
@@ -18,10 +19,11 @@ function PostContent() {
       {isDetailsReady && (
         <>
           <PostActions></PostActions>
+          <Separator />
           <PostComments></PostComments>
+          <Separator />
         </>
       )}
-      <div className='h-8 border-edge border-x md:max-w-5xl'></div>
     </>
   )
 }

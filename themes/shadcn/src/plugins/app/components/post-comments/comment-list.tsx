@@ -55,7 +55,7 @@ export function CommentList() {
           <>
             <CommentItemComponent key={comment.id} comment={comment} />
             {index < comments.length - 1 && (
-              <Separator className='screen-line-after border-none' />
+              <Separator className='screen-line-after h-4 border-none' plain />
             )}
           </>
         ))}
