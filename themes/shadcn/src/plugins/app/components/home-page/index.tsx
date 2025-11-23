@@ -20,13 +20,13 @@ export function HomePage() {
           <ProfileHeader />
           <Separator />
 
+          <About />
+          <Separator />
+
           <TechStack />
           <Separator />
 
           <Tools />
-          <Separator />
-
-          <About />
           <Separator />
 
           <PostList />
