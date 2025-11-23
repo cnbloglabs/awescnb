@@ -1,5 +1,7 @@
+@use 'sass:map';
+
 $toolMenu: () !default;
-$toolMenu: map-merge(
+$toolMenu: map.merge(
   (
     background: #fff,
     color: #fff,
@@ -7,8 +9,8 @@ $toolMenu: map-merge(
   $toolMenu
 );
 
-$background: map-get($toolMenu, background);
-$color: map-get($toolMenu, color);
+$background: map.get($toolMenu, background);
+$color: map.get($toolMenu, color);
 
 .custom-toolbar {
   position: fixed;

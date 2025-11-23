@@ -1,12 +1,14 @@
+@use 'sass:map';
+
 $footer: () !default;
-$footer: map-merge(
+$footer: map.merge(
   (
     background: #232323,
   ),
   $footer
 );
 
-$footerBackground: map-get($footer, background);
+$footerBackground: map.get($footer, background);
 
 #footer {
   margin: 54px 0 0;

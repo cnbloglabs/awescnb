@@ -1,6 +1,9 @@
+@use 'sass:map';
+@use 'sass:list';
+
 $postMessage: () !default;
 
-$postMessage: map-merge(
+$postMessage: map.merge(
   (
     categoriesBackground: #ff6b6b,
     tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
@@ -11,11 +14,11 @@ $postMessage: map-merge(
   $postMessage
 );
 
-$color-categories: map-get($postMessage, colorCategories);
-$color-tags: map-get($postMessage, colorTags);
-$color-message: map-get($postMessage, colorMessage);
-$postMessageTagBackground: map-get($postMessage, tagsBackground);
-$categoriesBackground: map-get($postMessage, categoriesBackground);
+$color-categories: map.get($postMessage, colorCategories);
+$color-tags: map.get($postMessage, colorTags);
+$color-message: map.get($postMessage, colorMessage);
+$postMessageTagBackground: map.get($postMessage, tagsBackground);
+$categoriesBackground: map.get($postMessage, categoriesBackground);
 
 .post-message {
   display: flex;
@@ -57,9 +60,9 @@ $categoriesBackground: map-get($postMessage, categoriesBackground);
   }
 }
 
-@for $i from 1 through length($postMessageTagBackground) {
+@for $i from 1 through list.length($postMessageTagBackground) {
   .message-tags a:nth-child(#{$i}) {
-    border-color: nth($postMessageTagBackground, $i);
+    border-color: list.nth($postMessageTagBackground, $i);
   }
 }
 

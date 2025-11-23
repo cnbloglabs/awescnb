@@ -1,6 +1,7 @@
-// 切换蒙层过渡样式
+@use 'sass:map';
+
 $mode: () !default;
-$mode: map-merge(
+$mode: map.merge(
   (
     bg-light: #fff,
     bg-dark: #252528,
@@ -8,8 +9,8 @@ $mode: map-merge(
   $mode
 );
 
-$bg-light: map-get($mode, bg-light);
-$bg-dark: map-get($mode, bg-dark);
+$bg-light: map.get($mode, bg-light);
+$bg-dark: map.get($mode, bg-dark);
 
 .dark-to-light:after {
   content: '';

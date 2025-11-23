@@ -1,5 +1,7 @@
+@use 'sass:map';
+
 $emoji: () !default;
-$emoji: map-merge(
+$emoji: map.merge(
   (
     textEmojiColor: #666,
     bg: #fff,
@@ -11,12 +13,12 @@ $emoji: map-merge(
   $emoji
 );
 
-$textEmojiColor: map-get($emoji, textEmojiColor);
-$bg: map-get($emoji, bg);
-$borderColor: map-get($emoji, borderColor);
-$hoverBg: map-get($emoji, hoverBg);
-$hoverBorderColor: map-get($emoji, hoverBorderColor);
-$fontEmojiSize: map-get($emoji, fontEmojiSize);
+$textEmojiColor: map.get($emoji, textEmojiColor);
+$bg: map.get($emoji, bg);
+$borderColor: map.get($emoji, borderColor);
+$hoverBg: map.get($emoji, hoverBg);
+$hoverBorderColor: map.get($emoji, hoverBorderColor);
+$fontEmojiSize: map.get($emoji, fontEmojiSize);
 
 .qaq-btn {
   user-select: none;

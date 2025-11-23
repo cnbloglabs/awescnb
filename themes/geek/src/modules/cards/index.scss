@@ -1,5 +1,5 @@
-@import '../../style/mixins.scss';
-@import '../../style/common/animate.scss';
+@use '../../style/mixins.scss' as *;
+@use '../../style/common/animate.scss' as *;
 
 .day,
 .c_b_p_desc_readmore {

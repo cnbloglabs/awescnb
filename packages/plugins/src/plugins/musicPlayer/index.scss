@@ -1,13 +1,15 @@
+@use 'sass:map';
+
 $player: () !default;
 
-$player: map-merge(
+$player: map.merge(
   (
     bodyBackground: #fff,
   ),
   $player
 );
 
-$playerBodyBackground: map-get($player, bodyBackground);
+$playerBodyBackground: map.get($player, bodyBackground);
 
 #player.aplayer {
   background: none;

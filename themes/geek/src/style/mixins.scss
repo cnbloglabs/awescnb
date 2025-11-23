@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @mixin btn($type: neutral) {
   $neutral: (
     color: #131313,
@@ -62,29 +64,29 @@
   }
 
   padding: 4px 12px;
-  background-color: map-get($it-map, bgDefault);
+  background-color: map.get($it-map, bgDefault);
   outline: none;
-  border: 1px solid map-get($it-map, borderColorDefault);
-  color: map-get($it-map, color);
+  border: 1px solid map.get($it-map, borderColorDefault);
+  color: map.get($it-map, color);
   border-radius: 4px;
   cursor: pointer;
   box-sizing: border-box;
   white-space: nowrap;
 
   &:hover {
-    background-color: map-get($it-map, bgHover);
-    border: 1px solid map-get($it-map, borderColorHover);
+    background-color: map.get($it-map, bgHover);
+    border: 1px solid map.get($it-map, borderColorHover);
   }
 
   &:active {
-    background-color: map-get($it-map, bgActive);
-    border: 1px solid map-get($it-map, borderColorActive);
+    background-color: map.get($it-map, bgActive);
+    border: 1px solid map.get($it-map, borderColorActive);
     box-shadow: none;
   }
 
   &:focus {
     box-shadow:
-      0 2px 4px map-get($it-map, shadowFocus),
-      0 0 0 3px map-get($it-map, shadowFocusLighter);
+      0 2px 4px map.get($it-map, shadowFocus),
+      0 0 0 3px map.get($it-map, shadowFocusLighter);
   }
 }

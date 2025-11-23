@@ -1,74 +1,75 @@
-$postSignature: (
-  primary: var(--themeColor),
-  background: var(--color-basic-75),
-  borderRadius: 2px,
+@use '/node_modules/tona-plugins/src/plugins/background/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/charts/index.scss' with (
+  $chart: (
+    padding: 0 13.884px 16px,
+  )
 );
-
-$toolMenu: (
-  background: var(--color-basic-50),
+@use '/node_modules/tona-plugins/src/plugins/clickEffects/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/codeTrafficLight/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/colorMode/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/commentsAvatars/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/darkMode/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/donation/index.scss' as * with (
+  $donation: (
+    btnColors: #10ac84,
+    qrcodeBackground: var(--themeColor),
+  )
 );
-
-$donation: (
-  btnColors: #10ac84,
-  qrcodeBackground: var(--themeColor),
+@use '/node_modules/tona-plugins/src/plugins/emoji/index.scss' as * with (
+  $emoji: (
+    textEmojiColor: var(--color-basic-800),
+    bg: var(--emoji-bg),
+    borderColor: var(--color-basic-300),
+    hoverBg: var(--color-basic-100),
+    hoverBorderColor: var(--color-basic-200),
+    fontEmojiSize: 16px,
+  )
 );
-
-$player: (
-  bodyBackground: var(--color-basic-75),
+@use '/node_modules/tona-plugins/src/plugins/imagePreview/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/license/index.scss' as * with (
+  $postSignature: (
+    primary: var(--themeColor),
+    background: var(--color-basic-75),
+    borderRadius: 2px,
+  )
 );
-
-$postBottomimage: (
-  imageHeight: 200px,
+@use '/node_modules/tona-plugins/src/plugins/live2d/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/lock/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/musicPlayer/index.scss' as * with (
+  $player: (
+    bodyBackground: var(--color-basic-75),
+  )
 );
-
-$postMessage: (
-  categoriesBackground: #f13a3a,
-  tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
-  colorTags: var(--color-basic-700),
-  colorMessage: var(--color-basic-600),
-  colorCategories: #fff,
+@use '/node_modules/tona-plugins/src/plugins/notice/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/postBottomImage/index.scss' as *
+  with (
+  $postBottomimage: (
+    imageHeight: 200px,
+  )
 );
-
-$signature: (
-  padding: 1rem 14px,
-  fontSize: 1em,
+@use '/node_modules/tona-plugins/src/plugins/postMessage/index.scss' as * with (
+  $postMessage: (
+    categoriesBackground: #f13a3a,
+    tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
+    colorTags: var(--color-basic-700),
+    colorMessage: var(--color-basic-600),
+    colorCategories: #fff,
+  )
 );
-
-$chart: (
-  padding: 0 13.884px 16px,
+@use '/node_modules/tona-plugins/src/plugins/postTopImage/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/qrcode/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/signature/index.scss' as * with (
+  $signature: (
+    padding: 1rem 14px,
+    fontSize: 1em,
+  )
 );
-
-$emoji: (
-  textEmojiColor: var(--color-basic-800),
-  bg: var(--emoji-bg),
-  borderColor: var(--color-basic-300),
-  hoverBg: var(--color-basic-100),
-  hoverBorderColor: var(--color-basic-200),
-  fontEmojiSize: 16px,
+@use '/node_modules/tona-plugins/src/plugins/tools/index.scss' as * with (
+  $toolMenu: (
+    background: var(--color-basic-50),
+  )
 );
-
-@import '/node_modules/tona-plugins/src/plugins/background/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/charts/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/clickEffects/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/codeTrafficLight/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/colorMode/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/commentsAvatars/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/darkMode/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/donation/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/emoji/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/imagePreview/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/license/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/live2d/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/lock/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/musicPlayer/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/notice/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/postBottomImage/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/postMessage/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/postTopImage/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/qrcode/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/signature/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/tools/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/webTag/index.scss';
+@use '/node_modules/tona-plugins/src/plugins/webTag/index.scss' as *;
 
 #sidebar_news .custom-signature {
   padding-top: 0;

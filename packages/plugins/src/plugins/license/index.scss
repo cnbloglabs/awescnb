@@ -1,12 +1,14 @@
+@use 'sass:map';
+
 $postSignature: (
   primary: #fa745e,
   background: #f6f8fa,
   borderRadius: 2px,
 ) !default;
 
-$psignaturePrimary: map-get($postSignature, primary);
-$psignatureBackground: map-get($postSignature, background);
-$psignatureBorderRadius: map-get($postSignature, borderRadius);
+$psignaturePrimary: map.get($postSignature, primary);
+$psignatureBackground: map.get($postSignature, background);
+$psignatureBorderRadius: map.get($postSignature, borderRadius);
 
 #mainContent {
   #post-signature {

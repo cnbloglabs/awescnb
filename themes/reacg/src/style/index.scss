@@ -1,10 +1,11 @@
-@import '../common/style/reset.scss';
-@import '../common/style/hide.scss';
-@import './variables.scss';
-@import './tools.scss';
-@import './markdown.scss';
-@import './plugins.scss';
-@import './scroll.scss';
+@use '../common/style/reset.scss' as *;
+@use '../common/style/hide.scss' as *;
+@use './variables.scss' as *;
+@use './tools.scss' as *;
+@use './markdown.scss' as *;
+@use './plugins.scss' as *;
+@use './scroll.scss' as *;
+@use './response.scss' as *;
 
 html {
   font-family:
@@ -1070,5 +1071,3 @@ body {
 #HistoryToday {
   display: none;
 }
-
-@import './response.scss';

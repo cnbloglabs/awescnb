@@ -1,12 +1,14 @@
+@use 'sass:map';
+
 $postTopimage: () !default;
-$postTopimage: map-merge(
+$postTopimage: map.merge(
   (
     height: 400px,
   ),
   $postTopimage
 );
 
-$height: map-get($postTopimage, height);
+$height: map.get($postTopimage, height);
 
 #custom-post-topimage {
   width: 100%;

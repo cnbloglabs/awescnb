@@ -1,12 +1,14 @@
+@use 'sass:map';
+
 $lineNumbers: () !default;
-$lineNumbers: map-merge(
+$lineNumbers: map.merge(
   (
     color: #999999,
   ),
   $lineNumbers
 );
 
-$lineNumbersColor: map-get($lineNumbers, color);
+$lineNumbersColor: map.get($lineNumbers, color);
 
 /* 覆盖博客园bundle css*/
 @media screen and (max-width: 767px) {

@@ -1,13 +1,14 @@
-@import './common/reset.scss';
-@import './common/animate.scss';
-@import './common/hide.scss';
-@import './common/tools.scss';
-@import './variables.scss';
-@import './mixins.scss';
-@import './markdown.scss';
-@import './scroll.scss';
-@import './icons.scss';
-@import './plugins.scss';
+@use './common/reset.scss' as *;
+@use './common/animate.scss' as *;
+@use './common/hide.scss' as *;
+@use './common/tools.scss' as *;
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+@use './markdown.scss' as *;
+@use './scroll.scss' as *;
+@use './icons.scss' as *;
+@use './plugins.scss' as *;
+@use './index.m.scss' as *;
 
 *::selection {
   background: var(--theme-primary-4);
@@ -941,5 +942,3 @@ h1.PostListTitle + .pager,
 .clear {
   display: none;
 }
-
-@import './index.m.scss';

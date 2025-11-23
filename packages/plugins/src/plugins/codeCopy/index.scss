@@ -1,5 +1,7 @@
+@use 'sass:map';
+
 $copy: () !default;
-$copy: map-merge(
+$copy: map.merge(
   (
     bg: rgba(0, 0, 0, 0.6),
     color: rgb(241, 239, 239),
@@ -9,10 +11,10 @@ $copy: map-merge(
   $copy
 );
 
-$bg: map-get($copy, bg);
-$color: map-get($copy, color);
-$hover-bg: map-get($copy, hover-bg);
-$hover-color: map-get($copy, hover-color);
+$bg: map.get($copy, bg);
+$color: map.get($copy, color);
+$hover-bg: map.get($copy, hover-bg);
+$hover-color: map.get($copy, hover-color);
 
 #cnblogs_post_body pre {
   position: relative;

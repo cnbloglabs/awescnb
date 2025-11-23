@@ -1,15 +1,15 @@
-$md: (
-  hrColor: var(--color-basic-200),
-  blockquoteBg: var(--color-basic-100),
-  color-blockquote: var(--color-basic-600),
-  blockquoteBorderColor: var(--color-basic-400),
-  markBg: var(--themeColor),
-  kbdBg: #fafbfc,
-  singleLineCoodeBg: var(--color-basic-200),
-  singleLineCoodeColor: #d83b64,
-  detailsBg: var(--color-basic-100),
-  detailsBorderColor: var(--color-basic-200),
-  detailsActiveBorderColor: var(--color-basic-200),
+@use '../common/style/markdown.scss' as * with (
+  $md: (
+    hrColor: var(--color-basic-200),
+    blockquoteBg: var(--color-basic-100),
+    color-blockquote: var(--color-basic-600),
+    blockquoteBorderColor: var(--color-basic-400),
+    markBg: var(--themeColor),
+    kbdBg: #fafbfc,
+    singleLineCoodeBg: var(--color-basic-200),
+    singleLineCoodeColor: #d83b64,
+    detailsBg: var(--color-basic-100),
+    detailsBorderColor: var(--color-basic-200),
+    detailsActiveBorderColor: var(--color-basic-200),
+  )
 );
-
-@import '../common/style/markdown.scss';

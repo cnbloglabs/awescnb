@@ -1,5 +1,7 @@
+@use 'sass:map';
+
 $md: () !default;
-$md: map-merge(
+$md: map.merge(
   (
     hrColor: #ddd,
     blockquoteBg: #f6f8fa,
@@ -18,19 +20,19 @@ $md: map-merge(
   $md
 );
 
-$color-hr: map-get($md, hrColor);
-$color-blockquote-bg: map-get($md, blockquoteBg);
-$color-blockquote: map-get($md, color-blockquote);
-$color-blockquote-border: map-get($md, blockquoteBorderColor);
-$color-mark-bg: map-get($md, markBg);
-$color-kbd-bg: map-get($md, kbdBg);
-$color-singlelinecode-bg: map-get($md, singleLineCoodeBg);
-$color-singlelinecode: map-get($md, singleLineCoodeColor);
-$color-details-bg: map-get($md, detailsBg);
-$details-border-color: map-get($md, detailsBorderColor);
-$details-active-border-color: map-get($md, detailsActiveBorderColor);
-$font-code: map-get($md, code-font);
-$height-iframe: map-get($md, iframe-height);
+$color-hr: map.get($md, hrColor);
+$color-blockquote-bg: map.get($md, blockquoteBg);
+$color-blockquote: map.get($md, color-blockquote);
+$color-blockquote-border: map.get($md, blockquoteBorderColor);
+$color-mark-bg: map.get($md, markBg);
+$color-kbd-bg: map.get($md, kbdBg);
+$color-singlelinecode-bg: map.get($md, singleLineCoodeBg);
+$color-singlelinecode: map.get($md, singleLineCoodeColor);
+$color-details-bg: map.get($md, detailsBg);
+$details-border-color: map.get($md, detailsBorderColor);
+$details-active-border-color: map.get($md, detailsActiveBorderColor);
+$font-code: map.get($md, code-font);
+$height-iframe: map.get($md, iframe-height);
 
 // tinymce5
 // Markdown

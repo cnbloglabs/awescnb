@@ -1,49 +1,55 @@
-$postSignature: (
-  primary: var(--color-primary),
-  background: var(--geek-color-2),
-  borderRadius: 2px,
+@use '/node_modules/tona-plugins/src/plugins/codeTrafficLight/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/postMessage/index.scss' as * with (
+  $postMessage: (
+    categoriesBackground: #f13a3a,
+    tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
+    colorTags: var(--geek-color-10),
+    colorMessage: var(--geek-color-8),
+    colorCategories: #fff,
+  )
 );
-$toolMenu: (
-  background: var(--geek-color-2),
-  color: #fff,
+@use '/node_modules/tona-plugins/src/plugins/commentsAvatars/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/signature/index.scss' as * with (
+  $signature: (
+    padding: 1rem 14px,
+    fontSize: 1em,
+  )
 );
-$signature: (
-  padding: 1rem 14px,
-  fontSize: 1em,
+@use '/node_modules/tona-plugins/src/plugins/emoji/index.scss' as * with (
+  $emoji: (
+    textEmojiColor: var(--geek-color-6),
+    bg: var(--geek-color-1),
+    borderColor: var(--geek-color-2),
+    hoverBg: var(--geek-color-3),
+    hoverBorderColor: var(--color-primary),
+  )
 );
-$imagebox: (
-  background: var(--geek-color-2),
+@use '/node_modules/tona-plugins/src/plugins/imagePreview/index.scss' as * with (
+  $imagebox: (
+    background: var(--geek-color-2),
+  )
 );
-$player: (
-  bodyBackground: var(--geek-color-6),
+@use '/node_modules/tona-plugins/src/plugins/notice/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/license/index.scss' as * with (
+  $postSignature: (
+    primary: var(--color-primary),
+    background: var(--geek-color-2),
+    borderRadius: 2px,
+  )
 );
-$postMessage: (
-  categoriesBackground: #f13a3a,
-  tagsBackground: #22a6b3 #0097e6 #fbc531 #10ac84,
-  colorTags: var(--geek-color-10),
-  colorMessage: var(--geek-color-8),
-  colorCategories: #fff,
+@use '/node_modules/tona-plugins/src/plugins/tools/index.scss' as * with (
+  $toolMenu: (
+    background: var(--geek-color-2),
+    color: #fff,
+  )
 );
-$emoji: (
-  textEmojiColor: var(--geek-color-6),
-  bg: var(--geek-color-1),
-  borderColor: var(--geek-color-2),
-  hoverBg: var(--geek-color-3),
-  hoverBorderColor: var(--color-primary),
+@use '/node_modules/tona-plugins/src/plugins/darkMode/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/clickEffects/index.scss' as *;
+@use '/node_modules/tona-plugins/src/plugins/musicPlayer/index.scss' as * with (
+  $player: (
+    bodyBackground: var(--geek-color-6),
+  )
 );
-
-@import '/node_modules/tona-plugins/src/plugins/codeTrafficLight/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/postMessage/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/commentsAvatars/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/signature/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/emoji/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/imagePreview/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/notice/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/license/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/tools/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/darkMode/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/clickEffects/index.scss';
-@import '/node_modules/tona-plugins/src/plugins/musicPlayer/index.scss';
 
 // comments avatars
 .custom-comment-avatar {

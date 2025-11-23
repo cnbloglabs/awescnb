@@ -1,5 +1,7 @@
+@use 'sass:map';
+
 $codeLanguage: () !default;
-$codeLanguage: map-merge(
+$codeLanguage: map.merge(
   (
     color: #999999,
     backgroundColor: var(--hl-base),
@@ -7,8 +9,8 @@ $codeLanguage: map-merge(
   $codeLanguage
 );
 
-$color: map-get($codeLanguage, color);
-$backgroundColor: map-get($codeLanguage, backgroundColor);
+$color: map.get($codeLanguage, color);
+$backgroundColor: map.get($codeLanguage, backgroundColor);
 
 #cnblogs_post_body pre {
   margin: 24px 0;

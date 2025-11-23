@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
 
 #left-side .fas {
@@ -25,9 +27,9 @@ $iconsColor: #0984e3 #00d1b2 #ff6b81 #10ac84 #ffd257 #00d1b2 #48c774;
     }
   }
 
-  @for $i from 1 through length($iconsColor) {
+  @for $i from 1 through list.length($iconsColor) {
     a:nth-child(#{$i}) span::before {
-      color: nth($iconsColor, $i);
+      color: list.nth($iconsColor, $i);
     }
   }
 }

@@ -1,12 +1,14 @@
+@use 'sass:map';
+
 $postBottomimage: () !default;
-$postBottomimage: map-merge(
+$postBottomimage: map.merge(
   (
     imageHeight: 200px,
   ),
   $postBottomimage
 );
 
-$bottomImageHeight: map-get($postBottomimage, imageHeight);
+$bottomImageHeight: map.get($postBottomimage, imageHeight);
 
 #custom-post-bottomimage {
   width: 100%;

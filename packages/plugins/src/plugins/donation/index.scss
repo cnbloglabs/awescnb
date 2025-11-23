@@ -1,6 +1,8 @@
+@use 'sass:map';
+
 $donation: () !default;
 
-$donation: map-merge(
+$donation: map.merge(
   (
     btnColors: #10ac84,
     qrcodeBackground: #fff,
@@ -8,8 +10,8 @@ $donation: map-merge(
   $donation
 ) !default;
 
-$donationBtnColors: map-get($donation, btnColors);
-$donationQrcodeBackground: map-get($donation, qrcodeBackground);
+$donationBtnColors: map.get($donation, btnColors);
+$donationQrcodeBackground: map.get($donation, qrcodeBackground);
 
 #custom-donation-btn {
   background-color: $donationBtnColors !important;
