@@ -1,9 +1,7 @@
-// import { getIndexUrl } from 'tona-utils'
 import { cn } from '@/lib/utils'
+import { Logo } from '../logo'
 import { HeaderWrapper } from './header-wrapper'
 import { NavItems } from './nav-items'
-
-// import Signature from './signature.svg?react'
 
 interface Props extends React.ComponentProps<typeof HeaderWrapper> {
   containerClassName?: string
@@ -19,9 +17,7 @@ export function TopNavBar({ containerClassName, ...props }: Props) {
           containerClassName,
         )}
       >
-        {/* <a href={getIndexUrl()} className="flex items-center">
-          <Signature className="h-12 w-12 text-foreground"></Signature>
-        </a> */}
+        <Logo />
         <nav className='ml-auto flex items-center gap-4'>
           <NavItems />
         </nav>
