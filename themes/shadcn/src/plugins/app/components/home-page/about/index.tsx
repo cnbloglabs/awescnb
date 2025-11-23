@@ -2,8 +2,19 @@ import { SimpleMarkdown } from '../../../../../components/ui/simple-markdown'
 import { ProseMono } from '../../../../../components/ui/typography'
 import { Panel, PanelContent, PanelHeader, PanelTitle } from '../../panel'
 
+function calculateWorkYears(startDate: string): number {
+  const start = new Date(startDate)
+  const now = new Date()
+  const diffTime = now.getTime() - start.getTime()
+  const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365.25)
+  return Math.floor(diffYears)
+}
+
+const WORK_START_DATE = '2022-06-01'
+const workYears = calculateWorkYears(WORK_START_DATE)
+
 const about = `
-- 我是一名**前端工程师**，拥有**3年以上从业经验**，极致把控细节，可以像素级精准实现 UI。
+- 我是一名**前端工程师**，拥有**${workYears}年以上从业经验**，极致把控细节，可以像素级精准实现 UI。
 - 熟悉 **Next.js**、**Umi**、**React**、**TypeScript**​ 等前端技术，能够构建高质量、以用户为中心的应用。
 - 相信**长期主义**，对炒作概念的技术网红圈不太感冒。
 - 博客园是我唯一沉淀技术的地方，我在这里分享一些技术文章、生活感悟、个人见解。
